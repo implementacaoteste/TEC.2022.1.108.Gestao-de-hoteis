@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelss
 {
-    internal class Funcionario
+    public class Funcionario
     {
     }
 }
