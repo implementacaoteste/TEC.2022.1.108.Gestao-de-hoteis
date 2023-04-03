@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace Models1
 {
-    public class FuncionarioDAL
+    public class GrupoFuncionario
     {
     }
 }

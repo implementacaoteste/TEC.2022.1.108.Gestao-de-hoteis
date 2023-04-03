@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace BLL
 {
-    public class FuncionarioDAL
+    public class FuncionarioBLL
     {
     }
 }
