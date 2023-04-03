@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DALL
 {
-    internal class Conexao
+    public class Conexao
     {
     }
 }

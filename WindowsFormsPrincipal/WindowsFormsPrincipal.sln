@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsPrincipal1", "WindowsFormsPrincipal1\WindowsFormsPrincipal1.csproj", "{311AD0E3-B1D1-4828-9FD9-50B58FB8561B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsPrincipal", "WindowsFormsPrincipal1\WindowsFormsPrincipal.csproj", "{311AD0E3-B1D1-4828-9FD9-50B58FB8561B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelss", "Modelss\Modelss.csproj", "{794F5B7F-8322-4A16-9EF2-E359A1C722BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Modelss\Models.csproj", "{794F5B7F-8322-4A16-9EF2-E359A1C722BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DALL\DAL.csproj", "{CAD003A9-8BF3-41C7-BA98-5F94FBC098BC}"
 EndProject
