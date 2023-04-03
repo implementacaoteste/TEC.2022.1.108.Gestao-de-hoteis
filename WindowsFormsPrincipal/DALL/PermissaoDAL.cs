@@ -8,5 +8,6 @@ namespace DAL
 {
     public class PermissaoDAL
     {
+
     }
 }
