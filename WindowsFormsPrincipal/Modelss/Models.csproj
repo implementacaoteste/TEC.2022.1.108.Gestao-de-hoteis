@@ -50,6 +50,7 @@
     <Compile Include="GrupoFuncionario.cs" />
     <Compile Include="Permissao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sexo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
