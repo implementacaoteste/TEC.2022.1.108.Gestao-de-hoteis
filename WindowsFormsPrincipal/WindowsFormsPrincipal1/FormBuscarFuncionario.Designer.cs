@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarFuncionario));
+            this.SuspendLayout();
+            // 
+            // FormBuscarFuncionario
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormBuscarFuncionario";
+            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormBuscarFuncionario";
+            this.Text = "HOTELOGIX - Consulta de Funcionários";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
