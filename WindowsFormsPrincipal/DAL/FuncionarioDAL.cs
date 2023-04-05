@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,7 +37,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um Usuario no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir um funcionario no Banco de Dados", ex);
             }
             finally
             {
@@ -70,7 +71,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um Usuario no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar um funcionario no Banco de Dados", ex);
             }
             finally
             {
@@ -88,7 +89,7 @@ namespace DAL
                 Funcionario funcionario = new Funcionario();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO,CELULAR 
-                                           From Usuario
+                                           From FUNCIONARIO
                                        where ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -108,7 +109,7 @@ namespace DAL
                         funcionario.Senha = rd["SENHA"].ToString();
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
-
+                        funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
 
                     }
 
@@ -119,7 +120,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuario na buscar", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar  os funcionario na buscar por id", ex);
             }
             finally
             {
@@ -127,14 +128,82 @@ namespace DAL
             }
         }
 
-        public void BuscarPorNomeFuncionario(string nome)
+        public Funcionario BuscarPorNomeFuncionario(string _nome, Funcionario funcionarios)
         {
-            throw new NotImplementedException();
+            List<Funcionario> Funcionarios = new List<Funcionario>();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+                Funcionario funcionario = new Funcionario();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+              
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO,CELULAR 
+                                           From FUNCIONARIO
+                                       where NOME_USUARIO like @NomeUsuario";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@NomeUsuario", " % "+ _nome + " % ");
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+
+                        funcionario.Id = Convert.ToInt32(rd["ID"]);
+                        funcionario.Nome = rd["NOME"].ToString();
+                        funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
+                        funcionario.Email = rd["EMAIL"].ToString();
+                        funcionario.CPF = rd["CPF"].ToString();
+                        funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
+                        funcionario.Senha = rd["SENHA"].ToString();
+                        funcionario.Endereco = rd["ENDERECO"].ToString();
+                        funcionario.Celular = rd["CELULAR"].ToString();
+                        funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
+                        Funcionarios.Add(funcionario);
+                    }
+
+                }
+                return funcionarios;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os funcionario na buscar por Nome usuario", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        public void Excluir(int id)
+        public void Excluir(int _id)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM FUNCIONARIO 
+                                    WHERE Id= @ID";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar excluir um FUNCIONARIO no Banco de Dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
 
