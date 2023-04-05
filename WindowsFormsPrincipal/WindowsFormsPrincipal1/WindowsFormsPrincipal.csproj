@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationIcon>Hotelogix.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,6 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBuscarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarFuncionario.Designer.cs">
+      <DependentUpon>FormBuscarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarGrupoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarGrupoFuncionario.Designer.cs">
+      <DependentUpon>FormBuscarGrupoFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroDeFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBuscarFuncionario.resx">
+      <DependentUpon>FormBuscarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarGrupoFuncionario.resx">
+      <DependentUpon>FormBuscarGrupoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroDeFuncionario.resx">
       <DependentUpon>FormCadastroDeFuncionario.cs</DependentUpon>
     </EmbeddedResource>

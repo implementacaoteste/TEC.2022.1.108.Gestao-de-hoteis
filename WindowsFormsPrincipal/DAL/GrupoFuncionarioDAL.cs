@@ -135,6 +135,7 @@ namespace DAL
                     {
                         grupofuncionario.Id = Convert.ToInt32(rd["ID"]);
                         grupofuncionario.NomeGrupo = rd["NOME_GRUPO"].ToString();
+                        gpfuncionario.Add(grupofuncionario);
                     }
                 }
                 return gpfuncionario;
