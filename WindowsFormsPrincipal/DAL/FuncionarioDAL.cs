@@ -37,7 +37,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um Usuario no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir um funcionario no Banco de Dados", ex);
             }
             finally
             {
@@ -71,7 +71,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um Usuario no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar um funcionario no Banco de Dados", ex);
             }
             finally
             {
@@ -120,7 +120,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuario na buscar", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar  os funcionario na buscar por id", ex);
             }
             finally
             {
@@ -171,7 +171,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuario na buscar", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os funcionario na buscar por Nome usuario", ex);
             }
             finally
             {
@@ -179,9 +179,31 @@ namespace DAL
             }
         }
 
-        public void Excluir(int id)
+        public void Excluir(int _id)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM FUNCIONARIO 
+                                    WHERE Id= @ID";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar excluir um FUNCIONARIO no Banco de Dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
 
