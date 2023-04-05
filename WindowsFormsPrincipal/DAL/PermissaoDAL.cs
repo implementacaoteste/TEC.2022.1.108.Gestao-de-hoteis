@@ -99,7 +99,7 @@ namespace DAL
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(Ler["Id"]);
                         permissao.Descricao = Convert.ToString(Ler["Descricao"]);
-                        permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
+                        //permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
                         permissaos.Add(permissao);
                     }
                 }
@@ -136,7 +136,7 @@ namespace DAL
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(Ler["Id"]);
                         permissao.Descricao = Convert.ToString(Ler["Descricao"]);
-                        permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
+                        //permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
                     }
                 }
                 return permissaos;
@@ -168,7 +168,7 @@ namespace DAL
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(Ler["Id"]);
                         permissao.Descricao = Convert.ToString(Ler["Descricao"]);
-                        permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
+                        //permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
                     }
                 }
                 return permissaos;
