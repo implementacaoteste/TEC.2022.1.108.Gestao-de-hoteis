@@ -26,11 +26,11 @@ namespace BLL
         {
             return new PermissaoDAL().BuscarTodos();
         }
-        public Permissao BuscarProId(int _id)
+        public List<Permissao> BuscarPorId(int _id)
         {
             return new PermissaoDAL().BuscarPorId(_id);
         }
-        public Permissao BuscarPorDescricao(string _descricao)
+        public List<Permissao> BuscarPorDescricao(string _descricao)
         {
             return new PermissaoDAL().BuscarPorDescricao(_descricao);
         }

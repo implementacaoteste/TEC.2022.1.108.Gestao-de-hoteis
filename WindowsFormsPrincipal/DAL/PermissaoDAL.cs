@@ -102,7 +102,8 @@ namespace DAL
                         permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
                         permissaos.Add(permissao);
                     }
-                } 
+                }
+                return permissaos;
             }
             catch(Exception ex)
             {
@@ -112,12 +113,12 @@ namespace DAL
             {
                 cn.Close();
             }
-            throw new NotImplementedException();
         }
 
-        public Permissao BuscarPorId(int _id)
+        public List<Permissao> BuscarPorId(int _id)
         {
             Permissao permissao = new Permissao();
+            List<Permissao> permissaos = new List<Permissao>();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
@@ -138,6 +139,7 @@ namespace DAL
                         permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
                     }
                 }
+                return permissaos;
             }
             catch(Exception ex)
             {
@@ -148,9 +150,10 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Permissao BuscarPorDescricao(string _descricao)
+        public List<Permissao> BuscarPorDescricao(string _descricao)
         {
-            Permissao permissao = new Permissao();
+            List<Permissao> permissaos = new List<Permissao>();
+            Permissao permissao;
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -168,6 +171,7 @@ namespace DAL
                         permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
                     }
                 }
+                return permissaos;
             }
             catch(Exception ex)
             {
