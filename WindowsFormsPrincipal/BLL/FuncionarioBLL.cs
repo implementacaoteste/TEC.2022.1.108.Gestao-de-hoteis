@@ -11,13 +11,13 @@ namespace BLL
 {
     public class FuncionarioBLL
     {
-        public void Inserir(Funcionario _usuario)
+        public void Inserir(Funcionario _funcionario)
         {
-            new FuncionarioDAL().Alterar(_usuario);
+            new FuncionarioDAL().Inserir(_funcionario);
         }
-        public void Alterar(Funcionario _usuario)
+        public void Alterar(Funcionario _funcionario)
         {
-            new FuncionarioDAL().Alterar(_usuario);
+            new FuncionarioDAL().Alterar(_funcionario);
         }
         public void Excluir(int _Id)
         {
@@ -37,3 +37,4 @@ namespace BLL
 
     }
 }
+
