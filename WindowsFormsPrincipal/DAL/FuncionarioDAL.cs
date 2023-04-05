@@ -128,11 +128,12 @@ namespace DAL
             }
         }
 
-        public Funcionario BuscarPorNomeFuncionario(string _nome )
-        {
 
+        public Funcionario BuscarPorNomeFuncionario(string _nome)
+        {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            Funcionario funcionario= new Funcionario();
+               Funcionario funcionario = new Funcionario();
+
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -161,7 +162,7 @@ namespace DAL
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
                         funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
-                      
+
                     }
 
                 }

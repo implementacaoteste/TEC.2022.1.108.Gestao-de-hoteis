@@ -1,4 +1,6 @@
 ﻿using System;
+using BLL;
+using Models;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,20 @@ namespace WindowsFormsPrincipal1
         public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void buttonEntrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBoxUsuario.Text == null || textBoxSenha.Text == null)
+                    throw new Exception("Campo nulos encontrados. Preencha todos os campos");
+                new FuncionarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

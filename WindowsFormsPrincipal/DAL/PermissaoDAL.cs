@@ -71,7 +71,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao 'Excluir' um dado do banco. Favor, verificar conexao");
+                throw new Exception("Ocorreu um erro ao 'Excluir' um dado do banco. Favor, verificar conexao",ex);
             }
             finally 
             {
@@ -107,7 +107,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro na busca de dados em 'Permissão'. Por favor verifique sua conexão");
+                throw new Exception("Ocorreu um erro na busca de dados em 'Permissão'. Por favor verifique sua conexão",ex);
             }
             finally
             {
@@ -143,7 +143,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao buscar os dados no banco. favor, verificar conexao");
+                throw new Exception("Ocorreu um erro ao buscar os dados no banco. favor, verificar conexao", ex);
             }
             finally
             {
@@ -160,7 +160,7 @@ namespace DAL
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"SELECT Id,Descricao FROM Permissao WHERE Descricao LIKE @descricao";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@descricao",_descricao);
+                cmd.Parameters.AddWithValue("@descricao","%"+_descricao+"%");
                 using (SqlDataReader Ler = cmd.ExecuteReader())
                 {
                     while (Ler.Read())
@@ -175,7 +175,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar os dados no banco. Favor verificar conexão");
+                throw new Exception("Ocorreu um erro ao tentar buscar os dados no banco. Favor verificar conexão", ex);
             }
             finally
             {

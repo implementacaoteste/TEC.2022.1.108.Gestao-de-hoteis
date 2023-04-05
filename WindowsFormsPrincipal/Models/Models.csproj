@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constante.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="GrupoFuncionario.cs" />
     <Compile Include="Permissao.cs" />
