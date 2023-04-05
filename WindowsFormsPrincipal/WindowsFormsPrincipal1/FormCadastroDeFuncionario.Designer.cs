@@ -35,7 +35,7 @@
             this.labelCPF = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelCadastroDeFuncionario = new System.Windows.Forms.Label();
             this.textBoxCelular = new System.Windows.Forms.TextBox();
             this.labelCelular = new System.Windows.Forms.Label();
             this.textBoxEndereço = new System.Windows.Forms.TextBox();
@@ -49,6 +49,10 @@
             this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.labelSenha = new System.Windows.Forms.Label();
             this.checkBoxAtivo = new System.Windows.Forms.CheckBox();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelConfirmarSenha = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxNome
@@ -99,16 +103,16 @@
             this.labelEmail.TabIndex = 2;
             this.labelEmail.Text = "E-mail";
             // 
-            // label2
+            // labelCadastroDeFuncionario
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(800, 65);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Cadastro de funcionário";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelCadastroDeFuncionario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelCadastroDeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCadastroDeFuncionario.Location = new System.Drawing.Point(0, 0);
+            this.labelCadastroDeFuncionario.Name = "labelCadastroDeFuncionario";
+            this.labelCadastroDeFuncionario.Size = new System.Drawing.Size(792, 65);
+            this.labelCadastroDeFuncionario.TabIndex = 25;
+            this.labelCadastroDeFuncionario.Text = "Cadastro de funcionário";
+            this.labelCadastroDeFuncionario.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBoxCelular
             // 
@@ -180,7 +184,7 @@
             // 
             this.textBoxSexo.Location = new System.Drawing.Point(269, 303);
             this.textBoxSexo.Name = "textBoxSexo";
-            this.textBoxSexo.Size = new System.Drawing.Size(136, 22);
+            this.textBoxSexo.Size = new System.Drawing.Size(63, 22);
             this.textBoxSexo.TabIndex = 26;
             // 
             // labelSexo
@@ -195,15 +199,15 @@
             // 
             // textBoxSenha
             // 
-            this.textBoxSenha.Location = new System.Drawing.Point(411, 303);
+            this.textBoxSenha.Location = new System.Drawing.Point(338, 303);
             this.textBoxSenha.Name = "textBoxSenha";
-            this.textBoxSenha.Size = new System.Drawing.Size(253, 22);
+            this.textBoxSenha.Size = new System.Drawing.Size(120, 22);
             this.textBoxSenha.TabIndex = 26;
             // 
             // labelSenha
             // 
             this.labelSenha.AutoSize = true;
-            this.labelSenha.Location = new System.Drawing.Point(408, 284);
+            this.labelSenha.Location = new System.Drawing.Point(335, 284);
             this.labelSenha.Name = "labelSenha";
             this.labelSenha.Size = new System.Drawing.Size(46, 16);
             this.labelSenha.TabIndex = 27;
@@ -219,22 +223,65 @@
             this.checkBoxAtivo.TabIndex = 28;
             this.checkBoxAtivo.Text = "Ativo";
             this.checkBoxAtivo.UseVisualStyleBackColor = true;
+            this.checkBoxAtivo.CheckedChanged += new System.EventHandler(this.checkBoxAtivo_CheckedChanged);
+            // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.Location = new System.Drawing.Point(601, 400);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvar.TabIndex = 29;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(682, 400);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.TabIndex = 29;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(464, 301);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 22);
+            this.textBox1.TabIndex = 26;
+            // 
+            // labelConfirmarSenha
+            // 
+            this.labelConfirmarSenha.AutoSize = true;
+            this.labelConfirmarSenha.Location = new System.Drawing.Point(461, 282);
+            this.labelConfirmarSenha.Name = "labelConfirmarSenha";
+            this.labelConfirmarSenha.Size = new System.Drawing.Size(102, 16);
+            this.labelConfirmarSenha.TabIndex = 27;
+            this.labelConfirmarSenha.Text = "Confirme Senha";
+            this.labelConfirmarSenha.Click += new System.EventHandler(this.label1_Click);
             // 
             // FormCadastroDeFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(792, 441);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.checkBoxAtivo);
+            this.Controls.Add(this.labelConfirmarSenha);
             this.Controls.Add(this.labelSenha);
             this.Controls.Add(this.labelSexo);
             this.Controls.Add(this.labelDataDeNascimento);
             this.Controls.Add(this.labelNomeDeUsuario);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxSenha);
             this.Controls.Add(this.textBoxSexo);
             this.Controls.Add(this.textBoxDataDeNascimento);
             this.Controls.Add(this.textBoxNomeDeUsuario);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelCadastroDeFuncionario);
             this.Controls.Add(this.labelEndereco);
             this.Controls.Add(this.labelCelular);
             this.Controls.Add(this.labelEmail);
@@ -264,7 +311,7 @@
         private System.Windows.Forms.Label labelCPF;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelCadastroDeFuncionario;
         private System.Windows.Forms.TextBox textBoxCelular;
         private System.Windows.Forms.Label labelCelular;
         private System.Windows.Forms.TextBox textBoxEndereço;
@@ -278,5 +325,9 @@
         private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.Label labelSenha;
         private System.Windows.Forms.CheckBox checkBoxAtivo;
+        private System.Windows.Forms.Button buttonSalvar;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelConfirmarSenha;
     }
 }

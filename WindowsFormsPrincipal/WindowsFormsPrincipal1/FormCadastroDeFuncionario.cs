@@ -26,5 +26,20 @@ namespace WindowsFormsPrincipal1
         {
 
         }
+
+        private void checkBoxAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
