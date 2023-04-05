@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroDeFuncionario));
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.labelNome = new System.Windows.Forms.Label();
             this.textBoxCPF = new System.Windows.Forms.TextBox();
@@ -244,10 +245,11 @@
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBoxCPF);
             this.Controls.Add(this.textBoxNome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroDeFuncionario";
-            this.ShowIcon = false;
+            this.Text = "Cadastro de funcionários";
             this.Load += new System.EventHandler(this.FormCadastroDeFuncionario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
