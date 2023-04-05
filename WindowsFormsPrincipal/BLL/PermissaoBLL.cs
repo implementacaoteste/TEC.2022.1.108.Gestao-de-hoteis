@@ -24,7 +24,7 @@ namespace BLL
         }
         public List<Permissao> BuscarTodos()
         {
-            return new List<Permissao>().BuscarTodos();
+            return new PermissaoDAL().BuscarTodos();
         }
         public Permissao BuscarProId(int _id)
         {
