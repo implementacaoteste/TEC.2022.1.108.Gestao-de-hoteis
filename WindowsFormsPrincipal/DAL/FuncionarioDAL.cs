@@ -37,7 +37,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um Usuario no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir um funcionario no Banco de Dados", ex);
             }
             finally
             {
@@ -71,7 +71,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um Usuario no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar um funcionario no Banco de Dados", ex);
             }
             finally
             {
@@ -120,7 +120,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuario na buscar", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar  os funcionario na buscar por id", ex);
             }
             finally
             {
@@ -169,7 +169,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuario na buscar", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os funcionario na buscar por Nome usuario", ex);
             }
             finally
             {
@@ -177,7 +177,7 @@ namespace DAL
             }
         }
 
-        public void Excluir(int id)
+        public void Excluir(int _id)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
