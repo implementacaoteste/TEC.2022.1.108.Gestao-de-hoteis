@@ -70,11 +70,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DALL\DAL.csproj">
+    <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{cad003a9-8bf3-41c7-ba98-5f94fbc098bc}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modelss\Models.csproj">
+    <ProjectReference Include="..\Models\Models.csproj">
       <Project>{794f5b7f-8322-4a16-9ef2-e359a1c722ba}</Project>
       <Name>Models</Name>
     </ProjectReference>
