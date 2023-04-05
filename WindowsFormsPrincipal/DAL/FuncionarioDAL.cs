@@ -128,11 +128,11 @@ namespace DAL
             }
         }
 
-        public Funcionario BuscarPorNomeFuncionario(string _nome, Funcionario funcionarios)
+        public Funcionario BuscarPorNomeFuncionario(string _nome )
         {
-            List<Funcionario> Funcionarios = new List<Funcionario>();
+
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-                Funcionario funcionario = new Funcionario();
+            Funcionario funcionario= new Funcionario();
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -150,7 +150,7 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-
+                        funcionario = new Funcionario();
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
@@ -161,11 +161,11 @@ namespace DAL
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
                         funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
-                        Funcionarios.Add(funcionario);
+                      
                     }
 
                 }
-                return funcionarios;
+                return funcionario;
 
             }
             catch (Exception ex)
@@ -206,7 +206,63 @@ namespace DAL
             }
         }
 
+            public List<Funcionario> BuscarTodos()
+            {
+
+                List<Funcionario> funcionarios = new List<Funcionario>();
+            Funcionario funcionario;
+                SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+                try
+                {
+                    SqlCommand cmd = new SqlCommand();
+
+
+                    cmd.Connection = cn;
+                    cmd.CommandText = "SELECT Id, Nome, NomeUsuario, Email,Senha ,CPF, Ativo From FUNCIONARIO";
+
+
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cn.Open();
+                    using (SqlDataReader rd = cmd.ExecuteReader())
+                    {
+                   
+                        while (rd.Read())
+                        {
+                        funcionario = new Funcionario();
+                        funcionario.Id = Convert.ToInt32(rd["ID"]);
+                            funcionario.Nome = rd["NOME"].ToString();
+                            funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
+                            funcionario.Email = rd["EMAIL"].ToString();
+                            funcionario.CPF = rd["CPF"].ToString();
+                            funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
+                            funcionario.Senha = rd["SENHA"].ToString();
+                            funcionario.Endereco = rd["ENDERECO"].ToString();
+                            funcionario.Celular = rd["CELULAR"].ToString();
+                            funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
+                            
+
+
+
+                        }
+
+                    }
+                    return funcionarios;
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Ocorreu um erro ao tentar buscar todos os usuario na buscar", ex);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
+
 
     }
-}
+
+      
+    }
 

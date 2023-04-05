@@ -31,10 +31,13 @@ namespace BLL
 
         public void BuscarPorNomeFuncionario(string _nome)
         {
-            new FuncionarioDAL().BuscarPorNomeFuncionario(_nome, Funcionarios);
+             new FuncionarioDAL().BuscarPorNomeFuncionario(_nome);
         }
 
-
+        public List<Funcionario> BuscarTodos()
+        {
+            return new FuncionarioDAL().BuscarTodos();
+        }
     }
 }
 
