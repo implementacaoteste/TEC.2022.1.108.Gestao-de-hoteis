@@ -25,7 +25,7 @@ namespace BLL
         {
             return new GrupoFuncionarioDAL().BuscarTodos();
         }
-        public GrupoFuncionario BuscarPorId(int _id)
+        public List<GrupoFuncionario> BuscarPorId(int _id)
         {
             return new GrupoFuncionarioDAL().BuscarPorId(_id);
         }
