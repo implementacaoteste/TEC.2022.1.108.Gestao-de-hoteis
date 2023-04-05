@@ -128,11 +128,10 @@ namespace DAL
             }
         }
 
-        public Funcionario BuscarPorNomeFuncionario(string _nome, Funcionario funcionarios)
+        public Funcionario BuscarPorNomeFuncionario(string _nome)
         {
-            List<Funcionario> Funcionarios = new List<Funcionario>();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-                Funcionario funcionario = new Funcionario();
+               Funcionario funcionario = new Funcionario();
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -161,11 +160,10 @@ namespace DAL
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
                         funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
-                        Funcionarios.Add(funcionario);
                     }
 
                 }
-                return funcionarios;
+                return funcionario;
 
             }
             catch (Exception ex)
@@ -181,7 +179,29 @@ namespace DAL
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM FUNCIONARIO 
+                                    WHERE Id= @ID";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar excluir um FUNCIONARIO no Banco de Dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
 
