@@ -11,7 +11,6 @@
                         Data Source=.\SQLEXPRESS2019;
                         Password=Senailab02";
             }
-
         }   
     }
 }
