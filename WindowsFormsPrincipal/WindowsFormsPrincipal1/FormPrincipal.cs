@@ -35,5 +35,34 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void cadastroFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroDeFuncionario frm = new FormCadastroDeFuncionario())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void cadastroGrupoDeFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultaFuncionárioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (FormBuscarFuncionario frm = new FormBuscarFuncionario())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void consultagrupoDeFuncionárioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
