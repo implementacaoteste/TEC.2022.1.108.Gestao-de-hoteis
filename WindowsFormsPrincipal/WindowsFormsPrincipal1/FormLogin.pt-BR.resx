@@ -117,46 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft New Tai Lue, 28.14545pt, style=Bold</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>582, 94</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>HOTELOGIX</value>
-  </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAmQAAAGYCAYAAADsqf5DAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAmmJJREFUeF7tnQeYlNXVx9+Z2SlLs/fEGKPpifliTExibEjbOn0B6b2zfdpO2V1A
+        DgAACw4BQL7hQQAAmmJJREFUeF7tnQeYlNXVx9+Z2SlLs/fEGKPpifliTExibEjbOn0B6b2zfdpO2V1A
         EZUq0hRBmoJUC02kCUiRKr13WHoV2/nOeec1sYyJSpuZ/f+e5//M7OzuzDvvbefee+45CgAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAqEYcP7k3dtW3jLRtXrb53+ZIlD8ybPbv2O1OnOiaPH//k+DFjmk8aN7rpiFdHdxg2
@@ -818,204 +783,28 @@
         M4dhZQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 97</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 126</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="textBoxUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 256</value>
-  </data>
-  <data name="textBoxUsuario.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBoxUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 26</value>
-  </data>
-  <data name="textBoxUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsuario.Name" xml:space="preserve">
-    <value>textBoxUsuario</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsuario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsuario.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsuario.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textBoxSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 300</value>
-  </data>
-  <data name="textBoxSenha.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxSenha.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 26</value>
-  </data>
   <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Name" xml:space="preserve">
-    <value>textBoxSenha</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15.70909pt</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 253</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 29</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Usuário</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15.70909pt</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 298</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 29</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Senha</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="buttonEntrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.78182pt, style=Bold</value>
-  </data>
-  <data name="buttonEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 376</value>
-  </data>
-  <data name="buttonEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 36</value>
-  </data>
-  <data name="buttonEntrar.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="buttonEntrar.Text" xml:space="preserve">
-    <value>Entrar</value>
-  </data>
-  <data name="&gt;&gt;buttonEntrar.Name" xml:space="preserve">
-    <value>buttonEntrar</value>
-  </data>
-  <data name="&gt;&gt;buttonEntrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonEntrar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonEntrar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="buttonCancelar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.78182pt, style=Bold</value>
-  </data>
-  <data name="buttonCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 376</value>
-  </data>
-  <data name="buttonCancelar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 36</value>
+  <data name="buttonEntrar.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="buttonCancelar.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>6</value>
   </data>
-  <data name="buttonCancelar.Text" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="&gt;&gt;buttonCancelar.Name" xml:space="preserve">
-    <value>buttonCancelar</value>
-  </data>
-  <data name="&gt;&gt;buttonCancelar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCancelar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonCancelar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAy
-        BwAAAk1TRnQBSQFMAwEBAAFEAQABRAEAARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMA
+        BwAAAk1TRnQBSQFMAwEBAAEYAQABGAEAARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMA
         ARADAAEBAQABIAYAARAeAAMLAQ4DDAEPAwwBDwMMAQ8DDAEPAwwBDwMMAQ8DDAEPAwwBDwMMAQ8DAgED
         zAADBQEGAckBpAFxAfcB4AGtAXcB/wHgAa0BdwH/AeABrQF3Af8B4AGtAXcB/wHgAa0BdwH/AeABrQF3
         Af8B4AGtAXcB/wHgAa0BdwH/AeABrQF3Af8B4AGtAXcB/wHgAa0BdwH/AUsBSgFJAYTIAAFfAVsBVwGp
@@ -1047,15 +836,6 @@
         BwABPgMAASgDAAFAAwABEAMAAQEBAAEBBQABgBcAA/8BAAHgAQMGAAGAAQEGAAGABwABgAcAAYAHAAGA
         BwABgAcAAYAHAAGABwABgAcAAYAHAAGABwABgAcAAYABAQYAAcABAQYAAv8GAAs=
 </value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>582, 456</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1133,22 +913,7 @@
         AAAAAAAAAAAAAAAAAACAAAABgAAAAeAAAAc=
 </value>
   </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>600, 500</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
-    <value>imageList1</value>
-  </data>
-  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormLogin</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

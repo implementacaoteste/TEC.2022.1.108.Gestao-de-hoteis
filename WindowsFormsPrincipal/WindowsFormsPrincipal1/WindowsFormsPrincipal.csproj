@@ -93,6 +93,9 @@
     <EmbeddedResource Include="FormCadastroDeFuncionario.resx">
       <DependentUpon>FormCadastroDeFuncionario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.pt-BR.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +126,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hotelogix.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{61de0591-d0ba-4ba3-a567-e6db3fcf5981}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{794f5b7f-8322-4a16-9ef2-e359a1c722ba}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

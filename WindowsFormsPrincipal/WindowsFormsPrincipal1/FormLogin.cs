@@ -14,23 +14,30 @@ namespace WindowsFormsPrincipal1
 {
     public partial class FormLogin : Form
     {
+        public bool Logou;
         public FormLogin()
         {
             InitializeComponent();
+            Logou = false;
         }
 
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (textBoxUsuario.Text == null || textBoxSenha.Text == null)
-                    throw new Exception("Campo nulos encontrados. Preencha todos os campos");
-                new FuncionarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
+                new FuncionarioBLL().Altenticar(textBoxUsuario.Text,textBoxSenha.Text);
+                Logou = true;
+                Close();
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               MessageBox.Show(ex.Message);
             }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
