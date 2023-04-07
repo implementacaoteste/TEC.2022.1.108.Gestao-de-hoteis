@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonEntrar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,23 +75,19 @@
             // 
             // buttonEntrar
             // 
+            this.buttonEntrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             resources.ApplyResources(this.buttonEntrar, "buttonEntrar");
             this.buttonEntrar.Name = "buttonEntrar";
-            this.buttonEntrar.UseVisualStyleBackColor = true;
+            this.buttonEntrar.UseVisualStyleBackColor = false;
             this.buttonEntrar.Click += new System.EventHandler(this.buttonEntrar_Click);
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(152)))));
             resources.ApplyResources(this.buttonCancelar, "buttonCancelar");
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Hotelogix.ico");
             // 
             // FormLogin
             // 
@@ -108,6 +102,7 @@
             this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "FormLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -125,6 +120,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonEntrar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.ImageList imageList1;
     }
 }

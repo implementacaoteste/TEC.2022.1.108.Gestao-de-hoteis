@@ -38,14 +38,16 @@ namespace BLL
         public void Altenticar(string _NomeUsuario, string _Senha)
         {
             Funcionario funcionario = new FuncionarioDAL().BuscarPorNomeFuncionario(_NomeUsuario);
+            
             if (_Senha==funcionario.Senha && funcionario.Ativo)
             {
                 Constante.IdLogado = funcionario.Id;
             }
             else
             {
-                MessageBox.Show("Usuário ou senha incorreto");
+                throw new Exception("Usuário ou senha incorreto");
             }
+            return;
         }
 
     }
