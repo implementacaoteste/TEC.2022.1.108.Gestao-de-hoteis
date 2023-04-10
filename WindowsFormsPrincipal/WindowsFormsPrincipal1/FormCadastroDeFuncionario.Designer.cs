@@ -53,6 +53,8 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelConfirmarSenha = new System.Windows.Forms.Label();
+            this.buttonSalvarFuncionario = new System.Windows.Forms.Button();
+            this.buttonCancelarCadastro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxNome
@@ -269,11 +271,32 @@
             this.labelConfirmarSenha.Text = "Confirme Senha";
             this.labelConfirmarSenha.Click += new System.EventHandler(this.label1_Click);
             // 
+            // buttonSalvarFuncionario
+            // 
+            this.buttonSalvarFuncionario.Location = new System.Drawing.Point(592, 374);
+            this.buttonSalvarFuncionario.Name = "buttonSalvarFuncionario";
+            this.buttonSalvarFuncionario.Size = new System.Drawing.Size(85, 23);
+            this.buttonSalvarFuncionario.TabIndex = 30;
+            this.buttonSalvarFuncionario.Text = "SALVAR";
+            this.buttonSalvarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonSalvarFuncionario.Click += new System.EventHandler(this.buttonSalvarFuncionario_Click);
+            // 
+            // buttonCancelarCadastro
+            // 
+            this.buttonCancelarCadastro.Location = new System.Drawing.Point(693, 374);
+            this.buttonCancelarCadastro.Name = "buttonCancelarCadastro";
+            this.buttonCancelarCadastro.Size = new System.Drawing.Size(89, 23);
+            this.buttonCancelarCadastro.TabIndex = 30;
+            this.buttonCancelarCadastro.Text = "CANCELAR";
+            this.buttonCancelarCadastro.UseVisualStyleBackColor = true;
+            // 
             // FormCadastroDeFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 373);
+            this.ClientSize = new System.Drawing.Size(1122, 420);
+            this.Controls.Add(this.buttonCancelarCadastro);
+            this.Controls.Add(this.buttonSalvarFuncionario);
             this.Controls.Add(this.checkBoxAtivo);
             this.Controls.Add(this.labelConfirmarSenha);
             this.Controls.Add(this.labelSenha);
@@ -333,5 +356,7 @@
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelConfirmarSenha;
+        private System.Windows.Forms.Button buttonSalvarFuncionario;
+        private System.Windows.Forms.Button buttonCancelarCadastro;
     }
 }

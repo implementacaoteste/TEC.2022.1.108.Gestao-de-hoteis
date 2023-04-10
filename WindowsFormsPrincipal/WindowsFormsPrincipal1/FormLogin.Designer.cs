@@ -104,6 +104,7 @@
             this.Controls.Add(this.label1);
             this.KeyPreview = true;
             this.Name = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
