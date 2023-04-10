@@ -364,3 +364,12 @@ USE [master]
 GO
 ALTER DATABASE [GESTAO_HOTEL] SET  READ_WRITE 
 GO
+
+insert into SEXO VALUES(1,'Masculino')
+insert into SEXO VALUES(2,'Feminino')
+SELECT * FROM FUNCIONARIO
+insert into FUNCIONARIO VALUES(1,'27845159963','Edivaldo Lima','edivaldol@gmail.com','63994521863','Rua 2 de Julho, 346','Edivaldo Lima','1642538',1,1,GETDATE())
+insert into FUNCIONARIO VALUES(2,'51278459325','Laila Vieira','lailavieira@gmail.com','62994870203','Rua 13 de maio, 06','Laila Santos','wads135',2,1,GETDATE())
+
+SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
+                                    ENDERECO,CELULAR FROM FUNCIONARIO WHERE ID LIKE 1

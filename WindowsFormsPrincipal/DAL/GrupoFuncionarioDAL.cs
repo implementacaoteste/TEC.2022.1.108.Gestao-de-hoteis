@@ -114,8 +114,9 @@ namespace DAL
             }
         }
 
-        public GrupoFuncionario BuscarPorId(int _id)
+        public List<GrupoFuncionario> BuscarPorId(int _id)
         {
+            List<GrupoFuncionario> gpfuncionario = new List<GrupoFuncionario>();
             GrupoFuncionario grupofuncionario = new GrupoFuncionario();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -134,9 +135,10 @@ namespace DAL
                     {
                         grupofuncionario.Id = Convert.ToInt32(rd["ID"]);
                         grupofuncionario.NomeGrupo = rd["NOME_GRUPO"].ToString();
+                        gpfuncionario.Add(grupofuncionario);
                     }
                 }
-                return grupofuncionario;
+                return gpfuncionario;
             }
             catch (Exception ex)
             {

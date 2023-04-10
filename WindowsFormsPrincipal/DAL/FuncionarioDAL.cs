@@ -29,7 +29,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Ativo", _funcionario.Ativo);
                 cmd.Parameters.AddWithValue("@ENDERECO", _funcionario.Endereco);
                 cmd.Parameters.AddWithValue("@CELULAR", _funcionario.Celular);
-                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", _funcionario.Data_nascimento);
+                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", Convert.ToDateTime(_funcionario.Data_nascimento));
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -63,7 +63,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Ativo", _funcionario.Ativo);
                 cmd.Parameters.AddWithValue("@ENDERECO", _funcionario.Endereco);
                 cmd.Parameters.AddWithValue("@CELULAR", _funcionario.Celular);
-                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", _funcionario.Data_nascimento);
+                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", Convert.ToDateTime(_funcionario.Data_nascimento));
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -89,8 +89,7 @@ namespace DAL
                 Funcionario funcionario = new Funcionario();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO,CELULAR 
-                                           From FUNCIONARIO
-                                       where ID=@ID";
+                                    From FUNCIONARIO where ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@ID", _id);
@@ -109,7 +108,7 @@ namespace DAL
                         funcionario.Senha = rd["SENHA"].ToString();
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
-                        funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
+                        funcionario.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
 
                     }
 
@@ -128,30 +127,24 @@ namespace DAL
             }
         }
 
-
         public Funcionario BuscarPorNomeFuncionario(string _nome)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-               Funcionario funcionario = new Funcionario();
-
+            Funcionario funcionario = new Funcionario();
             try
             {
                 SqlCommand cmd = new SqlCommand();
-
-              
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO,CELULAR 
-                                           From FUNCIONARIO
-                                       where NOME_USUARIO like @NomeUsuario";
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
+                                    ENDERECO,CELULAR FROM FUNCIONARIO WHERE NOME_USUARIO LIKE @NomeUsuario";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@NomeUsuario", " % "+ _nome + " % ");
+                cmd.Parameters.AddWithValue("@NomeUsuario", _nome);
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (rd.Read())
+                    if (rd.Read())
                     {
-                        funcionario = new Funcionario();
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
@@ -161,18 +154,13 @@ namespace DAL
                         funcionario.Senha = rd["SENHA"].ToString();
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
-                        funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
-
+                        funcionario.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
                     }
-
-                }
-                return funcionario;
-
+                }return funcionario;
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os funcionario na buscar por Nome usuario", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os funcionario na buscar por Nome usuario",ex);
             }
             finally
             {
@@ -207,63 +195,7 @@ namespace DAL
             }
         }
 
-            public List<Funcionario> BuscarTodos()
-            {
-
-                List<Funcionario> funcionarios = new List<Funcionario>();
-            Funcionario funcionario;
-                SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-                try
-                {
-                    SqlCommand cmd = new SqlCommand();
-
-
-                    cmd.Connection = cn;
-                    cmd.CommandText = "SELECT Id, Nome, NomeUsuario, Email,Senha ,CPF, Ativo From FUNCIONARIO";
-
-
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cn.Open();
-                    using (SqlDataReader rd = cmd.ExecuteReader())
-                    {
-                   
-                        while (rd.Read())
-                        {
-                        funcionario = new Funcionario();
-                        funcionario.Id = Convert.ToInt32(rd["ID"]);
-                            funcionario.Nome = rd["NOME"].ToString();
-                            funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
-                            funcionario.Email = rd["EMAIL"].ToString();
-                            funcionario.CPF = rd["CPF"].ToString();
-                            funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
-                            funcionario.Senha = rd["SENHA"].ToString();
-                            funcionario.Endereco = rd["ENDERECO"].ToString();
-                            funcionario.Celular = rd["CELULAR"].ToString();
-                            funcionario.Data_nascimento = Convert.ToInt32(rd["DATA_NASCIMENTO"]);
-                            
-
-
-
-                        }
-
-                    }
-                    return funcionarios;
-
-                }
-                catch (Exception ex)
-                {
-
-                    throw new Exception("Ocorreu um erro ao tentar buscar todos os usuario na buscar", ex);
-                }
-                finally
-                {
-                    cn.Close();
-                }
-            }
-
 
     }
-
-      
-    }
+}
 

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace BLL
@@ -37,8 +38,8 @@ namespace BLL
         public void Altenticar(string _NomeUsuario, string _Senha)
         {
             Funcionario funcionario = new FuncionarioDAL().BuscarPorNomeFuncionario(_NomeUsuario);
-
-            if (_Senha == funcionario.Senha && funcionario.Ativo == true)
+            
+            if (_Senha==funcionario.Senha && funcionario.Ativo)
             {
                 Constante.IdLogado = funcionario.Id;
             }
@@ -46,12 +47,9 @@ namespace BLL
             {
                 throw new Exception("Usuário ou senha incorreto");
             }
+            return;
         }
 
-        public List<Funcionario> BuscarTodos()
-        {
-            return new FuncionarioDAL().BuscarTodos();
-        }
     }
 }
 
