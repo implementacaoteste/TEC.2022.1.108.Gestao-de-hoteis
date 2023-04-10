@@ -59,7 +59,7 @@
             // 
             this.textBoxNome.Location = new System.Drawing.Point(215, 111);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(269, 30);
+            this.textBoxNome.Size = new System.Drawing.Size(269, 22);
             this.textBoxNome.TabIndex = 1;
             // 
             // labelNome
@@ -76,7 +76,7 @@
             // 
             this.textBoxCPF.Location = new System.Drawing.Point(490, 111);
             this.textBoxCPF.Name = "textBoxCPF";
-            this.textBoxCPF.Size = new System.Drawing.Size(198, 30);
+            this.textBoxCPF.Size = new System.Drawing.Size(198, 22);
             this.textBoxCPF.TabIndex = 1;
             // 
             // labelCPF
@@ -93,7 +93,7 @@
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(215, 185);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(195, 30);
+            this.textBoxEmail.Size = new System.Drawing.Size(195, 22);
             this.textBoxEmail.TabIndex = 1;
             // 
             // labelEmail
@@ -108,14 +108,16 @@
             // 
             // labelCadastroDeFuncionario
             // 
-
-            
-           // 
+            this.labelCadastroDeFuncionario.Location = new System.Drawing.Point(0, 0);
+            this.labelCadastroDeFuncionario.Name = "labelCadastroDeFuncionario";
+            this.labelCadastroDeFuncionario.Size = new System.Drawing.Size(100, 23);
+            this.labelCadastroDeFuncionario.TabIndex = 29;
+            // 
             // textBoxCelular
             // 
             this.textBoxCelular.Location = new System.Drawing.Point(694, 111);
             this.textBoxCelular.Name = "textBoxCelular";
-            this.textBoxCelular.Size = new System.Drawing.Size(185, 30);
+            this.textBoxCelular.Size = new System.Drawing.Size(185, 22);
             this.textBoxCelular.TabIndex = 1;
             // 
             // labelCelular
@@ -132,7 +134,7 @@
             // 
             this.textBoxEndereço.Location = new System.Drawing.Point(416, 185);
             this.textBoxEndereço.Name = "textBoxEndereço";
-            this.textBoxEndereço.Size = new System.Drawing.Size(231, 30);
+            this.textBoxEndereço.Size = new System.Drawing.Size(231, 22);
             this.textBoxEndereço.TabIndex = 1;
             // 
             // labelEndereco
@@ -160,14 +162,14 @@
             // 
             this.textBoxNomeDeUsuario.Location = new System.Drawing.Point(653, 185);
             this.textBoxNomeDeUsuario.Name = "textBoxNomeDeUsuario";
-            this.textBoxNomeDeUsuario.Size = new System.Drawing.Size(226, 30);
+            this.textBoxNomeDeUsuario.Size = new System.Drawing.Size(226, 22);
             this.textBoxNomeDeUsuario.TabIndex = 26;
             // 
             // textBoxDataDeNascimento
             // 
             this.textBoxDataDeNascimento.Location = new System.Drawing.Point(215, 270);
             this.textBoxDataDeNascimento.Name = "textBoxDataDeNascimento";
-            this.textBoxDataDeNascimento.Size = new System.Drawing.Size(195, 30);
+            this.textBoxDataDeNascimento.Size = new System.Drawing.Size(195, 22);
             this.textBoxDataDeNascimento.TabIndex = 26;
             // 
             // labelDataDeNascimento
@@ -185,7 +187,7 @@
             // 
             this.textBoxSexo.Location = new System.Drawing.Point(416, 270);
             this.textBoxSexo.Name = "textBoxSexo";
-            this.textBoxSexo.Size = new System.Drawing.Size(136, 30);
+            this.textBoxSexo.Size = new System.Drawing.Size(136, 22);
             this.textBoxSexo.TabIndex = 26;
             // 
             // labelSexo
@@ -201,10 +203,9 @@
             // 
             // textBoxSenha
             // 
-
             this.textBoxSenha.Location = new System.Drawing.Point(558, 270);
             this.textBoxSenha.Name = "textBoxSenha";
-            this.textBoxSenha.Size = new System.Drawing.Size(253, 30);
+            this.textBoxSenha.Size = new System.Drawing.Size(253, 22);
             this.textBoxSenha.TabIndex = 26;
             // 
             // labelSenha
@@ -253,15 +254,15 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(464, 301);
+            this.textBox1.Location = new System.Drawing.Point(220, 326);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 22);
+            this.textBox1.Size = new System.Drawing.Size(233, 22);
             this.textBox1.TabIndex = 26;
             // 
             // labelConfirmarSenha
             // 
             this.labelConfirmarSenha.AutoSize = true;
-            this.labelConfirmarSenha.Location = new System.Drawing.Point(461, 282);
+            this.labelConfirmarSenha.Location = new System.Drawing.Point(217, 307);
             this.labelConfirmarSenha.Name = "labelConfirmarSenha";
             this.labelConfirmarSenha.Size = new System.Drawing.Size(102, 16);
             this.labelConfirmarSenha.TabIndex = 27;
