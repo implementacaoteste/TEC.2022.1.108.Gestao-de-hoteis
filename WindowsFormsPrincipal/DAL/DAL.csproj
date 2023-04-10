@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteDAL.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="FuncionarioDAL.cs" />
     <Compile Include="GrupoFuncionarioDAL.cs" />
