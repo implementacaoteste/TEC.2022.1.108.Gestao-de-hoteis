@@ -175,7 +175,7 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"DELETE FROM FUNCIONARIO 
-                                    WHERE Id= @ID";
+                                    WHERE ID= @ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);

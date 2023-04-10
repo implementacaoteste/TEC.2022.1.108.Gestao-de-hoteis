@@ -1,6 +1,9 @@
-﻿using Modelss;
+﻿using DAL;
+using Models;
+using Modelss;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +12,12 @@ namespace DALL
 {
     public class ClienteDAL
     {
-        public void Alterar(Cliente cliente)
+        public void Alterar(Cliente _cliente)
         {
             throw new NotImplementedException();
         }
 
-        public void BuscaPorCPF(Cliente cPF)
+        public void BuscaPorCPF(string cPF)
         {
             throw new NotImplementedException();
         }
@@ -24,24 +27,142 @@ namespace DALL
             throw new NotImplementedException();
         }
 
-        public void BuscaPorTodos(Cliente cliente)
+        public List<Cliente> BuscaPorTodos()
         {
-            throw new NotImplementedException();
+            List<Cliente> clientes = new List<Cliente>();
+            Cliente cliente;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO
+                                    FROM CLIENTE ";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        cliente = new Cliente();
+                        cliente.Id = Convert.ToInt32(rd["Id"]);
+                        cliente.Nome = rd["Nome"].ToString();
+                        cliente.Email = rd["Email"].ToString();
+                        cliente.CPF = rd["CPF"].ToString();
+                        cliente.Endereco = rd["ENDERECO"].ToString();
+                        cliente.Celular = rd["CELULAR"].ToString();
+                        cliente.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
+                    }
+                }
+                return clientes;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuarios: ", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        public void BuscarPorId(Cliente id)
+        public Cliente BuscarPorId(int _id)
         {
-            throw new NotImplementedException();
+            Cliente cliente = new Cliente();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO
+                                    FROM CLIENTE WHERE ID = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _id);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        cliente.Id = Convert.ToInt32(rd["Id"]);
+                        cliente.Nome = rd["Nome"].ToString();
+                        cliente.Email = rd["Email"].ToString();
+                        cliente.CPF = rd["CPF"].ToString();
+                        cliente.Endereco = rd["ENDERECO"].ToString();
+                        cliente.Celular = rd["CELULAR"].ToString();
+                        cliente.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
+                    }
+                }
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar o ID: ", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        public void Excluir(Cliente id)
+        public void Excluir(int _id)
         {
-            throw new NotImplementedException();
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM CLIENTE 
+                                    WHERE ID= @ID";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar excluir um FUNCIONARIO no Banco de Dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        public void Inserir(Cliente cliente)
+        public void Inserir(Cliente _cliente)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO CLIENTE(NOME,  EMAIL,CPF, ATIVO, ENDERECO,CELULAR, DATA_NASCIMENTO)
+                                      VALUES(@Nome,  @Email, @CPF,  @ENDERECO, @CELULAR, @DATA_NASCIMENTO)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
+                cmd.Parameters.AddWithValue("@Email", _cliente.Email);
+                cmd.Parameters.AddWithValue("@CPF", _cliente.CPF);
+                cmd.Parameters.AddWithValue("@ENDERECO", _cliente.Endereco);
+                cmd.Parameters.AddWithValue("@CELULAR", _cliente.Celular);
+                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", Convert.ToDateTime(_cliente.Data_nascimento));
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar inserir um cliente no Banco de Dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            }
         }
     }
-}

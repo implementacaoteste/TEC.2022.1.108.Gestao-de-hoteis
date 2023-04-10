@@ -22,22 +22,22 @@ namespace BLL
             new ClienteDAL().Alterar(_cliente);
         }
 
-        public void BuscaPorTodos(Cliente _cliente)
+        public List<Cliente> BuscaPorTodos( )
         {
-            new ClienteDAL().BuscaPorTodos(_cliente);
+           return new ClienteDAL().BuscaPorTodos();
         }
 
-        public void Excluir(Cliente _id)
+        public void Excluir(int _id)
         {
             new ClienteDAL().Excluir(_id);
         }
 
-        public void BuscarPorId(Cliente _id)
+        public void BuscarPorId(int _id)
         {
             new ClienteDAL().BuscarPorId(_id);
         }
 
-        public void BuscaPorCPF(Cliente _CPF)
+        public void BuscaPorCPF(string _CPF)
         {
             new ClienteDAL().BuscaPorCPF(_CPF);
         }
