@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Modelss.Properties
+namespace Models.Properties
 {
 
 
