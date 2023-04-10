@@ -53,7 +53,7 @@
             // 
             // buttonBuscarFuncionario
             // 
-            this.buttonBuscarFuncionario.Location = new System.Drawing.Point(516, 166);
+            this.buttonBuscarFuncionario.Location = new System.Drawing.Point(504, 104);
             this.buttonBuscarFuncionario.Name = "buttonBuscarFuncionario";
             this.buttonBuscarFuncionario.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscarFuncionario.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             // buttonAdicionar
             // 
-            this.buttonAdicionar.Location = new System.Drawing.Point(597, 166);
+            this.buttonAdicionar.Location = new System.Drawing.Point(585, 104);
             this.buttonAdicionar.Name = "buttonAdicionar";
             this.buttonAdicionar.Size = new System.Drawing.Size(88, 23);
             this.buttonAdicionar.TabIndex = 0;
@@ -71,7 +71,7 @@
             // 
             // buttonExcluirFuncionário
             // 
-            this.buttonExcluirFuncionário.Location = new System.Drawing.Point(703, 166);
+            this.buttonExcluirFuncionário.Location = new System.Drawing.Point(691, 104);
             this.buttonExcluirFuncionário.Name = "buttonExcluirFuncionário";
             this.buttonExcluirFuncionário.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluirFuncionário.TabIndex = 0;
@@ -80,7 +80,7 @@
             // 
             // buttonAlterarFuncionario
             // 
-            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(784, 166);
+            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(772, 104);
             this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
             this.buttonAlterarFuncionario.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterarFuncionario.TabIndex = 0;
@@ -89,7 +89,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 166);
+            this.textBox1.Location = new System.Drawing.Point(0, 104);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(498, 22);
             this.textBox1.TabIndex = 1;
@@ -114,7 +114,7 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewCheckBoxColumn1});
             this.funcionarioDataGridView.DataSource = this.funcionarioBindingSource;
-            this.funcionarioDataGridView.Location = new System.Drawing.Point(12, 194);
+            this.funcionarioDataGridView.Location = new System.Drawing.Point(0, 132);
             this.funcionarioDataGridView.Name = "funcionarioDataGridView";
             this.funcionarioDataGridView.RowHeadersWidth = 51;
             this.funcionarioDataGridView.RowTemplate.Height = 24;
