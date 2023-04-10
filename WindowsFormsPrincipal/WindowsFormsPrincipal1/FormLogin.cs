@@ -41,5 +41,9 @@ namespace WindowsFormsPrincipal1
             Application.Exit();
         }
 
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

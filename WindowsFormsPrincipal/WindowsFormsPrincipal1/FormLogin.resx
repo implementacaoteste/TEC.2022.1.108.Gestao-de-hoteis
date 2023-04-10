@@ -128,8 +128,11 @@
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>582, 94</value>
+    <value>776, 116</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
@@ -819,10 +822,13 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 97</value>
+    <value>263, 119</value>
+  </data>
+  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 126</value>
+    <value>251, 155</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -843,13 +849,16 @@
     <value>6</value>
   </data>
   <data name="textBoxUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 258</value>
+    <value>281, 318</value>
+  </data>
+  <data name="textBoxUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxUsuario.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="textBoxUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 26</value>
+    <value>320, 31</value>
   </data>
   <data name="textBoxUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -867,7 +876,10 @@
     <value>5</value>
   </data>
   <data name="textBoxSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 302</value>
+    <value>281, 372</value>
+  </data>
+  <data name="textBoxSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxSenha.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -876,7 +888,7 @@
     <value>*</value>
   </data>
   <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 26</value>
+    <value>320, 31</value>
   </data>
   <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -900,10 +912,13 @@
     <value>Microsoft Sans Serif, 15.70909pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 255</value>
+    <value>145, 314</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 29</value>
+    <value>108, 31</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -930,10 +945,13 @@
     <value>Microsoft Sans Serif, 15.70909pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 300</value>
+    <value>164, 369</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 29</value>
+    <value>92, 31</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -957,10 +975,13 @@
     <value>Microsoft Sans Serif, 11.78182pt, style=Bold</value>
   </data>
   <data name="buttonEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 377</value>
+    <value>235, 464</value>
+  </data>
+  <data name="buttonEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 36</value>
+    <value>143, 44</value>
   </data>
   <data name="buttonEntrar.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -984,10 +1005,13 @@
     <value>Microsoft Sans Serif, 11.78182pt, style=Bold</value>
   </data>
   <data name="buttonCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 377</value>
+    <value>385, 464</value>
+  </data>
+  <data name="buttonCancelar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonCancelar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 36</value>
+    <value>143, 44</value>
   </data>
   <data name="buttonCancelar.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1011,10 +1035,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>582, 456</value>
+    <value>776, 558</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1092,11 +1116,14 @@
         AAAAAAAAAAAAAAAAAACAAAABgAAAAeAAAAc=
 </value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 500</value>
+    <value>794, 605</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 500</value>
+    <value>794, 605</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

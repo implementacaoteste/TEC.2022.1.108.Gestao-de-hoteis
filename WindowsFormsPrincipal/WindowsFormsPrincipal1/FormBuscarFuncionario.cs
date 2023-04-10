@@ -17,7 +17,6 @@ namespace WindowsFormsPrincipal1
             InitializeComponent();
         }
 
-        
-
+       
     }
 }

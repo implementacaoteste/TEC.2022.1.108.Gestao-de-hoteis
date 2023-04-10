@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,12 @@ namespace WindowsFormsPrincipal1
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
+        {
+            FuncionarioBLL funcionarioBLL = new FuncionarioBLL();
             
         }
     }
