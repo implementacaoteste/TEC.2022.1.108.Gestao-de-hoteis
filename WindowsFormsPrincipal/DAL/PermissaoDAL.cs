@@ -25,7 +25,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao 'Inserir' um dado no banco. Favor, verificar conexão");
+                throw new Exception("Ocorreu um erro ao 'Inserir' um dado no banco. Favor, verificar conexão", ex);
             }
             finally 
             {
@@ -47,7 +47,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao atulizar os dados.  Favor, verificar conexão");
+                throw new Exception("Ocorreu um erro ao atulizar os dados.  Favor, verificar conexão", ex);
             }
             finally 
             {
@@ -71,7 +71,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao 'Excluir' um dado do banco. Favor, verificar conexao",ex);
+                throw new Exception("Ocorreu um erro ao 'Excluir' um dado do banco. Favor, verificar conexao", ex);
             }
             finally 
             {
@@ -107,7 +107,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro na busca de dados em 'Permissão'. Por favor verifique sua conexão",ex);
+                throw new Exception("Ocorreu um erro na busca de dados em 'Permissão'. Por favor verifique sua conexão", ex);
             }
             finally
             {
