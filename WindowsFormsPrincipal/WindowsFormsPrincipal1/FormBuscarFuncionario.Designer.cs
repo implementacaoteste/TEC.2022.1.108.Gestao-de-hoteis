@@ -100,6 +100,9 @@
             // 
             // funcionarioDataGridView
             // 
+            this.funcionarioDataGridView.AllowUserToAddRows = false;
+            this.funcionarioDataGridView.AllowUserToDeleteRows = false;
+            this.funcionarioDataGridView.AllowUserToOrderColumns = true;
             this.funcionarioDataGridView.AutoGenerateColumns = false;
             this.funcionarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.funcionarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -116,9 +119,10 @@
             this.funcionarioDataGridView.DataSource = this.funcionarioBindingSource;
             this.funcionarioDataGridView.Location = new System.Drawing.Point(0, 132);
             this.funcionarioDataGridView.Name = "funcionarioDataGridView";
+            this.funcionarioDataGridView.ReadOnly = true;
             this.funcionarioDataGridView.RowHeadersWidth = 51;
             this.funcionarioDataGridView.RowTemplate.Height = 24;
-            this.funcionarioDataGridView.Size = new System.Drawing.Size(1298, 448);
+            this.funcionarioDataGridView.Size = new System.Drawing.Size(1298, 483);
             this.funcionarioDataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
@@ -127,6 +131,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
@@ -135,6 +140,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
@@ -143,6 +149,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "CPF";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
@@ -151,6 +158,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Email";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
@@ -159,30 +167,34 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Celular";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Endereco";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Endereco";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Endereço";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "NomeUsuario";
-            this.dataGridViewTextBoxColumn7.HeaderText = "NomeUsuario";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Nome usuário";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 125;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Data_nascimento";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Data_nascimento";
+            this.dataGridViewTextBoxColumn8.HeaderText = " Data de nascimento";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // dataGridViewTextBoxColumn9
@@ -191,6 +203,7 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Senha";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Width = 125;
             // 
             // dataGridViewCheckBoxColumn1
@@ -199,6 +212,7 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Ativo";
             this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
             // FormBuscarFuncionario
