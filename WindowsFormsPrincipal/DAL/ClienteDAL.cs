@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,17 +15,114 @@ namespace DALL
     {
         public void Alterar(Cliente _cliente)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"UPDATE CLIENTE SET NOME= @Nome,  EMAIL= @Email, ,CPF = @CPF,
+                                          ENDERECO= @ENDERECO, DATA_NASCIMENTO = @DATA_NASCIMENTO, CELULAR= @CELULAR   
+                                        Where ID= @ID ";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
+                cmd.Parameters.AddWithValue("@Email", _cliente.Email);
+                cmd.Parameters.AddWithValue("@CPF", _cliente.CPF);
+                cmd.Parameters.AddWithValue("@ENDERECO", _cliente.Endereco);
+                cmd.Parameters.AddWithValue("@CELULAR", _cliente.Celular);
+                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", Convert.ToDateTime(_cliente.Data_nascimento));
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar alterar um funcionario no Banco de Dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        public void BuscaPorCPF(string cPF)
+        public Cliente BuscaPorCPF(string _CPF)
         {
-            throw new NotImplementedException();
+            Cliente cliente = new Cliente();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO
+                                    FROM CLIENTE WHERE CPF = @CPF";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@CPF", _CPF);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        cliente.Id = Convert.ToInt32(rd["Id"]);
+                        cliente.Nome = rd["Nome"].ToString();
+                        cliente.Email = rd["Email"].ToString();
+                        cliente.CPF = rd["CPF"].ToString();
+                        cliente.Endereco = rd["ENDERECO"].ToString();
+                        cliente.Celular = rd["CELULAR"].ToString();
+                        cliente.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
+                    }
+                }
+               return cliente;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar o cliente por CPF: ", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        public void BuscaPorNome(Cliente nome)
+        public List<Cliente> BuscaPorNome(Cliente _nome)
         {
-            throw new NotImplementedException();
+            List<Cliente> clientes = new List<Cliente>();
+            Cliente cliente;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO
+                                    FROM CLIENTE Where NOME Like @Nome";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        cliente = new Cliente();
+                        cliente.Id = Convert.ToInt32(rd["Id"]);
+                        cliente.Nome = rd["Nome"].ToString();
+                        cliente.Email = rd["Email"].ToString();
+                        cliente.CPF = rd["CPF"].ToString();
+                        cliente.Endereco = rd["ENDERECO"].ToString();
+                        cliente.Celular = rd["CELULAR"].ToString();
+                        cliente.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
+                    }
+                }
+                return clientes;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuarios: ", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         public List<Cliente> BuscaPorTodos()
