@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClasseBLL.cs" />
     <Compile Include="ClienteBLL.cs" />
     <Compile Include="FuncionarioBLL.cs" />
     <Compile Include="GrupoFuncionarioBLL.cs" />
