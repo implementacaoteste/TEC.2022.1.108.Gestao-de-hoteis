@@ -12,6 +12,7 @@ namespace WindowsFormsPrincipal1
 {
     public partial class FormCadastroGrupoFuncionario : Form
     {
+        public int id;
         public FormCadastroGrupoFuncionario()
         {
             InitializeComponent();

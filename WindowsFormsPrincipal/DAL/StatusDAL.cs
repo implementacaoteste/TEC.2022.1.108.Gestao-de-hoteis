@@ -11,7 +11,7 @@ namespace DALL
 {
     public class StatusDAL
     {
-        public void Inserir(Status _status)
+        public void Inserir(Statuses _status)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -33,7 +33,7 @@ namespace DALL
                 cn.Close();
             }
         }
-        public void Alterar(Status _status)
+        public void Alterar(Statuses _status)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -78,9 +78,71 @@ namespace DALL
                 cn.Close();
             }
         }
-        public List<Status> BuscarPorTodos()
+        public List<Statuses> BuscarPorTodos()
         {
+            List<Statuses> stats = new List<Statuses>();
+            Statuses status;
 
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"SELECT ID,STATUS FROM STATUS";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cn.Open();
+
+                using (SqlDataReader Ler = cmd.ExecuteReader())
+                {
+                    if(Ler.Read())
+                    {
+                        status = new Statuses();
+                        status.Id = Convert.ToInt32(Ler["ID"]);
+                        status.Status = (Ler["STATUS"]).ToString();
+                       
+                        stats.Add(status);
+                    }
+                }
+                return stats;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possivel buscar 'Status' no banco. Favor, verificar a conexão", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public Statuses BuscarPorStatus(string _status)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Statuses status = new Statuses();
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"SELECT ID,STATUS FROM STATUS WHERE STATUS LIKE @Status";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Status",_status);
+                cn.Open();
+
+                using (SqlDataReader Ler = cmd.ExecuteReader())
+                {
+                    if(Ler.Read())
+                    {
+                        status.Id = Convert.ToInt32(Ler["ID"]);
+                        status.Status = (Ler["STATUS"]).ToString();
+                    }
+                }
+                return status;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possivel buscar 'Status' no banco. Favor, verificar a conexão", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
     }
 }

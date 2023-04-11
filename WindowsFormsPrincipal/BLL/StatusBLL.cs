@@ -13,23 +13,23 @@ namespace BLL
 {
     public class StatusBLL
     {
-        public void Inserir(StatusBLL _status)
+        public void Inserir(Statuses _status)
         {
             new StatusDAL().Inserir(_status);
         }
-        public void Alterar(StatusBLL _status)
+        public void Alterar(Statuses _status)
         {
             new StatusDAL().Alterar(_status);
         }
-        public void Excluir(StatusBLL _status)
+        public void Excluir(int _id)
         {
-            new StatusDAL().Excluir(_status);
+            new StatusDAL().Excluir(_id);
         }
-        public List<StatusDAL> BuscaPorTodos()
+        public List<Statuses> BuscaPorTodos()
         {
-            return new StatusDAL().BuscaPorTodos();
+            return new StatusDAL().BuscarPorTodos();
         }
-        public void BuscarPorStatus(StatusBLL _status)
+        public void BuscarPorStatus(string _status)
         {
             new StatusDAL().BuscarPorStatus(_status);
         }

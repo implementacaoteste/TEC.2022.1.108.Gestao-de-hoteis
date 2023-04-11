@@ -98,7 +98,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(Ler["Id"]);
-                        permissao.Descricao = Convert.ToString(Ler["Descricao"]);
+                        permissao.Descricao = (Ler["Descricao"]).ToString();
                         //permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
                         permissaos.Add(permissao);
                     }
