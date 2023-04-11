@@ -25,7 +25,7 @@ namespace BLL
         {
             new StatusDAL().Excluir(_status);
         }
-        public void BuscarPorTodos(StatusBLL _status)
+        public List<StatusDAL> BuscaPorTodos()
         {
             return new StatusDAL().BuscaPorTodos();
         }
