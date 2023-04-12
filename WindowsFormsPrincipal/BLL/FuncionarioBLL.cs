@@ -50,52 +50,12 @@ namespace BLL
             {
                 throw new Exception("Usuário ou senha incorreto");
             }
-            return;
-            
+            return; 
         }
         public List<Funcionario> BuscarTodos()
         {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            List<Funcionario> funcionarios = new List<Funcionario>();
-            Funcionario funcionario;
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR 
-                                    From FUNCIONARIO";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cn.Open();
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        funcionario = new Funcionario();
-                        funcionario.Id = Convert.ToInt32(rd["ID"]);
-                        funcionario.Nome = rd["NOME"].ToString();
-                        funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
-                        funcionario.Email = rd["EMAIL"].ToString();
-                        funcionario.Senha = rd["SENHA"].ToString();
-                        funcionario.CPF = rd["CPF"].ToString();
-                        funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
-                        funcionario.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
-                        funcionario.Endereco = rd["ENDERECO"].ToString();
-                        funcionario.Celular = rd["CELULAR"].ToString();
-                    }
+            return new FuncionarioDAL().BuscarTodos();
 
-                }
-                return funcionarios;
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception("Ocorreu um erro ao tentar buscar os funcionarios", ex);
-            }
-            finally
-            {
-                cn.Close();
-            }
         }
         
         private void ValidarDados (Funcionario _funcionario, string _confirmacaoSenha)
@@ -109,6 +69,7 @@ namespace BLL
             if (_funcionario.Nome.Length <= 2)
                 throw new Exception("O nome deve ter mais de 2 caracteres");
         }
+
 
 
 

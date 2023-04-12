@@ -73,7 +73,7 @@
             // 
             // buttonExcluirFuncionário
             // 
-            this.buttonExcluirFuncionário.Location = new System.Drawing.Point(679, 104);
+            this.buttonExcluirFuncionário.Location = new System.Drawing.Point(760, 104);
             this.buttonExcluirFuncionário.Name = "buttonExcluirFuncionário";
             this.buttonExcluirFuncionário.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluirFuncionário.TabIndex = 0;
@@ -83,7 +83,7 @@
             // 
             // buttonAlterarFuncionario
             // 
-            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(760, 104);
+            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(679, 104);
             this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
             this.buttonAlterarFuncionario.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterarFuncionario.TabIndex = 0;
