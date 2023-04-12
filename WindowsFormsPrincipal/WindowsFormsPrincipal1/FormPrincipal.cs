@@ -46,7 +46,10 @@ namespace WindowsFormsPrincipal1
 
         private void cadastroGrupoDeFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            using (FormCadastroGrupoFuncionario frm = new FormCadastroGrupoFuncionario())
+            {
+                frm.ShowDialog();
+            }
         }
 
         private void consultaFuncionárioToolStripMenuItem1_Click(object sender, EventArgs e)
