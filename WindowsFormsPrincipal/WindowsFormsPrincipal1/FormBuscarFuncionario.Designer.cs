@@ -69,24 +69,27 @@
             this.buttonAdicionar.TabIndex = 0;
             this.buttonAdicionar.Text = "Adicionar Funcionário";
             this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
             // buttonExcluirFuncionário
             // 
-            this.buttonExcluirFuncionário.Location = new System.Drawing.Point(691, 104);
+            this.buttonExcluirFuncionário.Location = new System.Drawing.Point(679, 104);
             this.buttonExcluirFuncionário.Name = "buttonExcluirFuncionário";
             this.buttonExcluirFuncionário.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluirFuncionário.TabIndex = 0;
             this.buttonExcluirFuncionário.Text = "Excluir Funcionário";
             this.buttonExcluirFuncionário.UseVisualStyleBackColor = true;
+            this.buttonExcluirFuncionário.Click += new System.EventHandler(this.buttonExcluirFuncionário_Click);
             // 
             // buttonAlterarFuncionario
             // 
-            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(772, 104);
+            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(760, 104);
             this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
             this.buttonAlterarFuncionario.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterarFuncionario.TabIndex = 0;
             this.buttonAlterarFuncionario.Text = "Alterar Funcionario";
             this.buttonAlterarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonAlterarFuncionario.Click += new System.EventHandler(this.buttonAlterarFuncionario_Click);
             // 
             // textBox1
             // 
