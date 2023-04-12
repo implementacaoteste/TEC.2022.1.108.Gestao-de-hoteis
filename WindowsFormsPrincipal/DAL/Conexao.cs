@@ -8,7 +8,7 @@
             {
                 return @"User ID=SA;
                         Initial Catalog=GESTAO_HOTEL;
-                        Data Source=.\SQLEXPRESS2019;
+                        Data Source=.\SQLEXPRESS2019A;
                         Password=Senailab02";
             }
         }   

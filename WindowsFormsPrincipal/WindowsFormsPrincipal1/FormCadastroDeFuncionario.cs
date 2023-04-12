@@ -20,13 +20,8 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
             Id = _id;
-        public int id;
-        public FormCadastroDeFuncionario(int id = 0)
-        {
-            InitializeComponent();
-            this.id = id;
         }
-
+        
         private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
         {
 
@@ -74,7 +69,7 @@ namespace WindowsFormsPrincipal1
             Close();
         }
 
-        private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
+        private void FormCadastroDeFuncionario_Load_1(object sender, EventArgs e)
         {
             if (Id == 0)
                 funcionarioBindingSource.AddNew();
