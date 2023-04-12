@@ -78,6 +78,7 @@ namespace DAL
                 cn.Close();
             }
         }
+        
 
         public Funcionario BuscarPorId(int _id)
         {
@@ -192,8 +193,8 @@ namespace DAL
             {
                 cn.Close();
             }
+            
         }
-
 
     }
 }
