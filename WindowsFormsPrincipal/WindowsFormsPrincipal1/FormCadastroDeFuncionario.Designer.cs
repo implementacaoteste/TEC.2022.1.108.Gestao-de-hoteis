@@ -373,6 +373,7 @@
             this.MinimizeBox = false;
             this.Name = "FormCadastroDeFuncionario";
             this.Text = "HOTELOGIX - Cadastro de Funcionários";
+            ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).EndInit();
             this.Load += new System.EventHandler(this.FormCadastroDeFuncionario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).EndInit();
