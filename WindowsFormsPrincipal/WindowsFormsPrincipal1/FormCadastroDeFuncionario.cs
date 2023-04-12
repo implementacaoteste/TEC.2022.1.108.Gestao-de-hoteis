@@ -50,5 +50,10 @@ namespace WindowsFormsPrincipal1
             FuncionarioBLL funcionarioBLL = new FuncionarioBLL();
             
         }
+
+        private void buttonCancelarCadastro_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
