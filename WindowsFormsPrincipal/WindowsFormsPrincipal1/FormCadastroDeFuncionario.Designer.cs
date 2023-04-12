@@ -289,6 +289,7 @@
             this.buttonCancelarCadastro.TabIndex = 30;
             this.buttonCancelarCadastro.Text = "CANCELAR";
             this.buttonCancelarCadastro.UseVisualStyleBackColor = true;
+            this.buttonCancelarCadastro.Click += new System.EventHandler(this.buttonCancelarCadastro_Click);
             // 
             // FormCadastroDeFuncionario
             // 

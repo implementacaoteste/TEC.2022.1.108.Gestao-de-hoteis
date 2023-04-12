@@ -59,6 +59,7 @@
             this.buttonBuscarFuncionario.TabIndex = 0;
             this.buttonBuscarFuncionario.Text = "Buscar Funcionário";
             this.buttonBuscarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonBuscarFuncionario.Click += new System.EventHandler(this.buttonBuscarFuncionario_Click);
             // 
             // buttonAdicionar
             // 
