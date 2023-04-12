@@ -28,7 +28,7 @@ namespace BLL
         }
         public void BuscarPorNumero(int _numero)
         {
-            return new QuartoDAL().BuscarPorNumero();
+             new QuartoDAL().BuscarPorNumero(_numero);
         }
     }
 }
