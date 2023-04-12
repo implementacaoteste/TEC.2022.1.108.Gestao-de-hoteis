@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPrincipal1
 {
-   
+
     public partial class FormCadastroDeFuncionario : Form
     {
         public int Id;
@@ -20,25 +20,7 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
             Id = _id;
-        public int id;
-        public FormCadastroDeFuncionario(int id = 0)
-        {
-            InitializeComponent();
-            this.id = id;
-        }
 
-        private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxAtivo_CheckedChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -47,10 +29,8 @@ namespace WindowsFormsPrincipal1
             Close();
         }
 
-        private void buttonSalvar_Click(object sender, EventArgs e)
-        {
-            
-        }
+
+
 
         private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
         {
@@ -63,9 +43,9 @@ namespace WindowsFormsPrincipal1
                 else
                     funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
