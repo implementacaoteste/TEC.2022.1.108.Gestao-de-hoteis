@@ -81,12 +81,11 @@ namespace DAL
 
         public Funcionario BuscarPorId(int _id)
         {
+            Funcionario funcionario = new Funcionario();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
-
-                Funcionario funcionario = new Funcionario();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO,CELULAR 
                                     From FUNCIONARIO where ID=@ID";

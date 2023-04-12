@@ -13,12 +13,14 @@ namespace BLL
 {
     public class FuncionarioBLL
     {
-        public void Inserir(Funcionario _funcionario)
+        public void Inserir(Funcionario _funcionario, string _confirmacaoSenha)
         {
+            ValidarDados(_funcionario, _confirmacaoSenha);
             new FuncionarioDAL().Inserir(_funcionario);
         }
-        public void Alterar(Funcionario _funcionario)
+        public void Alterar(Funcionario _funcionario, string _confirmacaoSenha)
         {
+            ValidarDados(_funcionario,_confirmacaoSenha);
             new FuncionarioDAL().Alterar(_funcionario);
         }
         public void Excluir(int _Id)
@@ -26,9 +28,9 @@ namespace BLL
             new FuncionarioDAL().Excluir(_Id);
         }
 
-        public void BuscarPorId(int _Id)
+        public Funcionario BuscarPorId(int _Id)
         {
-            new FuncionarioDAL().BuscarPorId(_Id);
+            return   new FuncionarioDAL().BuscarPorId(_Id);
         }
 
         public void BuscarPorNomeFuncionario(string _nome)
@@ -49,6 +51,20 @@ namespace BLL
             }
             return;
         }
+        
+        private void ValidarDados (Funcionario _funcionario, string _confirmacaoSenha)
+        {
+            if (_funcionario.Senha != _confirmacaoSenha)
+                throw new Exception("A senha e a confirmação de senha devem ser iguais.");
+
+             if (_funcionario.Senha.Length <= 3)
+                throw new Exception("A senha deve ter mais de 3 caracteres.");
+
+            if (_funcionario.Nome.Length <= 2)
+                throw new Exception("O nome deve ter mais de 2 caracteres");
+        }
+
+
 
     }
 }
