@@ -13,9 +13,11 @@ namespace WindowsFormsPrincipal1
 {
     public partial class FormCadastroDeFuncionario : Form
     {
-        public FormCadastroDeFuncionario()
+        public int id;
+        public FormCadastroDeFuncionario(int id = 0)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)

@@ -78,50 +78,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List <Funcionario> BuscarTodos()
-        {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            List<Funcionario> funcionarios = new List<Funcionario>();
-            Funcionario funcionario;
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO,CELULAR 
-                                    From FUNCIONARIO";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cn.Open();
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        funcionario = new Funcionario();
-                        funcionario.Id = Convert.ToInt32(rd["Id"]);
-                        funcionario.Nome = rd["Nome"].ToString();
-                        funcionario.NomeUsuario = rd["NomeUsuario"].ToString();
-                        funcionario.Email = rd["Email"].ToString();
-                        funcionario.Senha = rd["Senha"].ToString();
-                        funcionario.CPF = rd["CPF"].ToString();
-                        funcionario.Ativo = Convert.ToBoolean(rd["Ativo"]);
-                        funcionario.Data_nascimento = rd["Data_nascimento"].ToString();
-                        funcionario.Endereco = rd["Endereco"].ToString();
-                        funcionario.Celular = rd["Celular"].ToString();
-                    }
-
-                }
-                return funcionarios;
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception("Ocorreu um erro ao tentar buscar os funcionario", ex);
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
+        
 
         public Funcionario BuscarPorId(int _id)
         {
