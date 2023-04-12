@@ -13,7 +13,7 @@ namespace WindowsFormsPrincipal1
             Logou = false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBoxClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

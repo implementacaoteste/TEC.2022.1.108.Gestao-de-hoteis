@@ -32,11 +32,11 @@
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxEntrar = new System.Windows.Forms.PictureBox();
+            this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEntrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxUsuario
@@ -59,13 +59,6 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // pictureBoxEntrar
             // 
             resources.ApplyResources(this.pictureBoxEntrar, "pictureBoxEntrar");
@@ -73,12 +66,19 @@
             this.pictureBoxEntrar.TabStop = false;
             this.pictureBoxEntrar.Click += new System.EventHandler(this.pictureBoxEntrar_Click);
             // 
+            // pictureBoxClose
+            // 
+            resources.ApplyResources(this.pictureBoxClose, "pictureBoxClose");
+            this.pictureBoxClose.Name = "pictureBoxClose";
+            this.pictureBoxClose.TabStop = false;
+            this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
+            // 
             // FormLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxClose);
             this.Controls.Add(this.textBoxSenha);
             this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.pictureBoxEntrar);
@@ -89,8 +89,8 @@
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEntrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,7 +100,7 @@
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBoxEntrar;
+        private System.Windows.Forms.PictureBox pictureBoxClose;
     }
 }
