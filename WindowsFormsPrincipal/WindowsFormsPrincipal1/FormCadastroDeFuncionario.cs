@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPrincipal1
 {
-   
+
     public partial class FormCadastroDeFuncionario : Form
     {
         public int Id;
@@ -20,6 +20,7 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
             Id = _id;
+        } 
         public int id;
         public FormCadastroDeFuncionario(int id = 0)
         {
