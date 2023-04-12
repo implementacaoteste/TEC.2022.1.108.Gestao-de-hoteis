@@ -135,30 +135,27 @@
             // ativoLabel
             // 
             ativoLabel.AutoSize = true;
-            ativoLabel.Location = new System.Drawing.Point(664, 132);
-            ativoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            ativoLabel.Location = new System.Drawing.Point(885, 162);
             ativoLabel.Name = "ativoLabel";
-            ativoLabel.Size = new System.Drawing.Size(34, 13);
+            ativoLabel.Size = new System.Drawing.Size(40, 16);
             ativoLabel.TabIndex = 36;
             ativoLabel.Text = "Ativo:";
             // 
             // data_nascimentoLabel
             // 
             data_nascimentoLabel.AutoSize = true;
-            data_nascimentoLabel.Location = new System.Drawing.Point(510, 113);
-            data_nascimentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            data_nascimentoLabel.Location = new System.Drawing.Point(680, 139);
             data_nascimentoLabel.Name = "data_nascimentoLabel";
-            data_nascimentoLabel.Size = new System.Drawing.Size(87, 13);
+            data_nascimentoLabel.Size = new System.Drawing.Size(108, 16);
             data_nascimentoLabel.TabIndex = 37;
             data_nascimentoLabel.Text = "Data nascimento";
             // 
             // nomeUsuarioLabel
             // 
             nomeUsuarioLabel.AutoSize = true;
-            nomeUsuarioLabel.Location = new System.Drawing.Point(80, 162);
-            nomeUsuarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            nomeUsuarioLabel.Location = new System.Drawing.Point(107, 200);
             nomeUsuarioLabel.Name = "nomeUsuarioLabel";
-            nomeUsuarioLabel.Size = new System.Drawing.Size(74, 13);
+            nomeUsuarioLabel.Size = new System.Drawing.Size(94, 16);
             nomeUsuarioLabel.TabIndex = 38;
             nomeUsuarioLabel.Text = "Nome Usuario";
             // 
