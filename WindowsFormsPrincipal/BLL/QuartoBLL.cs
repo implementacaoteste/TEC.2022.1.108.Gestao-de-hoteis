@@ -25,17 +25,9 @@ namespace BLL
         {
             return new QuartoDAL().BuscarPorTodos();
         }
-        public void BuscarPorId(int _id)
-        {
-            return new QuartoDAL().BuscarPorId();
-        }
         public void BuscarPorNumero(int _numero)
         {
             return new QuartoDAL().BuscarPorNumero();
-        }
-        public void BuscarPorDescricao(string _descricao)
-        {
-            return new QuartoDAL().BuscarPorDescricao(_descricao);
         }
     }
 }
