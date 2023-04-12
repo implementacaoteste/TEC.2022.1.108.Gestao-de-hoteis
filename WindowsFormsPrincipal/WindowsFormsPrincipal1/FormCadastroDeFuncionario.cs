@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,47 +12,44 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPrincipal1
 {
+   
     public partial class FormCadastroDeFuncionario : Form
     {
-        public FormCadastroDeFuncionario()
+        public int Id;
+        public FormCadastroDeFuncionario(int _id = 0)
         {
             InitializeComponent();
-        }
-
-        private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxAtivo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void buttonSalvar_Click(object sender, EventArgs e)
-        {
-            
+            Id = _id;
         }
 
         private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
         {
-            FuncionarioBLL funcionarioBLL = new FuncionarioBLL();
-            
+            try
+            {
+                FuncionarioBLL funcionarioBLL = new FuncionarioBLL();
+                funcionarioBindingSource.EndEdit();
+                if (Id == 0)
+                    funcionarioBLL.Inserir((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
+                else
+                    funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
+            }
+            catch
+            {
+
+            }
         }
 
         private void buttonCancelarCadastro_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
+        {
+            if (Id == 0)
+                funcionarioBindingSource.AddNew();
+            else
+                funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorId(Id);
         }
     }
 }
