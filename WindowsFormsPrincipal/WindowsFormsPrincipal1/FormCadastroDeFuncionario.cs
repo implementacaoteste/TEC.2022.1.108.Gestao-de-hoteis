@@ -21,6 +21,31 @@ namespace WindowsFormsPrincipal1
             InitializeComponent();
             Id = _id;
         } 
+                
+        private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
         {
@@ -43,8 +68,7 @@ namespace WindowsFormsPrincipal1
         {
             Close();
         }
-
-
+        
         private void FormCadastroDeFuncionario_Load_1(object sender, EventArgs e)
         {
             if (Id == 0)

@@ -132,9 +132,8 @@ namespace DAL
         }
         public Quarto BuscarPorNumero(int _numero)
         {
-            Quarto quartos = new Quarto();
-            Quarto quarto = new Quarto();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Quarto quarto = new Quarto();
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -156,7 +155,7 @@ namespace DAL
                         quarto.Valor_Diaria = Convert.ToInt32(rd["Valor_Diaria"]);
                     }
                 }
-                return quartos;
+                return quarto;
             }
             catch (Exception ex)
             {
