@@ -44,7 +44,8 @@ namespace WindowsFormsPrincipal1
             Close();
         }
 
-        private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
+
+        private void FormCadastroDeFuncionario_Load_1(object sender, EventArgs e)
         {
             if (Id == 0)
                 funcionarioBindingSource.AddNew();

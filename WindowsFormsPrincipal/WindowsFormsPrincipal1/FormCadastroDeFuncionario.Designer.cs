@@ -45,6 +45,7 @@
             this.buttonSalvarFuncionario = new System.Windows.Forms.Button();
             this.buttonCancelarCadastro = new System.Windows.Forms.Button();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.cPFTextBox = new System.Windows.Forms.TextBox();
             this.celularTextBox = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.nomeUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBoxConfirmarSenha = new System.Windows.Forms.TextBox();
-            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
@@ -68,8 +68,8 @@
             ativoLabel = new System.Windows.Forms.Label();
             data_nascimentoLabel = new System.Windows.Forms.Label();
             nomeUsuarioLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel
@@ -126,6 +126,33 @@
             senhaLabel.TabIndex = 35;
             senhaLabel.Text = "Senha";
             // 
+            // ativoLabel
+            // 
+            ativoLabel.AutoSize = true;
+            ativoLabel.Location = new System.Drawing.Point(885, 162);
+            ativoLabel.Name = "ativoLabel";
+            ativoLabel.Size = new System.Drawing.Size(40, 16);
+            ativoLabel.TabIndex = 36;
+            ativoLabel.Text = "Ativo:";
+            // 
+            // data_nascimentoLabel
+            // 
+            data_nascimentoLabel.AutoSize = true;
+            data_nascimentoLabel.Location = new System.Drawing.Point(680, 139);
+            data_nascimentoLabel.Name = "data_nascimentoLabel";
+            data_nascimentoLabel.Size = new System.Drawing.Size(108, 16);
+            data_nascimentoLabel.TabIndex = 37;
+            data_nascimentoLabel.Text = "Data nascimento";
+            // 
+            // nomeUsuarioLabel
+            // 
+            nomeUsuarioLabel.AutoSize = true;
+            nomeUsuarioLabel.Location = new System.Drawing.Point(107, 200);
+            nomeUsuarioLabel.Name = "nomeUsuarioLabel";
+            nomeUsuarioLabel.Size = new System.Drawing.Size(94, 16);
+            nomeUsuarioLabel.TabIndex = 38;
+            nomeUsuarioLabel.Text = "Nome Usuario";
+            // 
             // labelCadastroDeFuncionario
             // 
             this.labelCadastroDeFuncionario.Location = new System.Drawing.Point(0, 0);
@@ -180,6 +207,10 @@
             this.nomeTextBox.Size = new System.Drawing.Size(361, 22);
             this.nomeTextBox.TabIndex = 31;
             // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataSource = typeof(Models.Funcionario);
+            // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Email", true));
@@ -225,15 +256,6 @@
             this.senhaTextBox.Size = new System.Drawing.Size(152, 22);
             this.senhaTextBox.TabIndex = 36;
             // 
-            // ativoLabel
-            // 
-            ativoLabel.AutoSize = true;
-            ativoLabel.Location = new System.Drawing.Point(885, 162);
-            ativoLabel.Name = "ativoLabel";
-            ativoLabel.Size = new System.Drawing.Size(40, 16);
-            ativoLabel.TabIndex = 36;
-            ativoLabel.Text = "Ativo:";
-            // 
             // ativoCheckBox
             // 
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.funcionarioBindingSource, "Ativo", true));
@@ -243,15 +265,6 @@
             this.ativoCheckBox.TabIndex = 37;
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // data_nascimentoLabel
-            // 
-            data_nascimentoLabel.AutoSize = true;
-            data_nascimentoLabel.Location = new System.Drawing.Point(680, 139);
-            data_nascimentoLabel.Name = "data_nascimentoLabel";
-            data_nascimentoLabel.Size = new System.Drawing.Size(108, 16);
-            data_nascimentoLabel.TabIndex = 37;
-            data_nascimentoLabel.Text = "Data nascimento";
-            // 
             // data_nascimentoTextBox
             // 
             this.data_nascimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Data_nascimento", true));
@@ -259,15 +272,6 @@
             this.data_nascimentoTextBox.Name = "data_nascimentoTextBox";
             this.data_nascimentoTextBox.Size = new System.Drawing.Size(176, 22);
             this.data_nascimentoTextBox.TabIndex = 38;
-            // 
-            // nomeUsuarioLabel
-            // 
-            nomeUsuarioLabel.AutoSize = true;
-            nomeUsuarioLabel.Location = new System.Drawing.Point(107, 200);
-            nomeUsuarioLabel.Name = "nomeUsuarioLabel";
-            nomeUsuarioLabel.Size = new System.Drawing.Size(94, 16);
-            nomeUsuarioLabel.TabIndex = 38;
-            nomeUsuarioLabel.Text = "Nome Usuario";
             // 
             // nomeUsuarioTextBox
             // 
@@ -292,10 +296,6 @@
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
             this.textBoxConfirmarSenha.Size = new System.Drawing.Size(169, 22);
             this.textBoxConfirmarSenha.TabIndex = 41;
-            // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataSource = typeof(Models.Funcionario);
             // 
             // label1
             // 
@@ -351,7 +351,9 @@
             this.Name = "FormCadastroDeFuncionario";
             this.Text = "HOTELOGIX - Cadastro de Funcionários";
             ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.FormCadastroDeFuncionario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
