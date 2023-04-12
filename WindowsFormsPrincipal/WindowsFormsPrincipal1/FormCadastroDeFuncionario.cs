@@ -51,7 +51,7 @@ namespace WindowsFormsPrincipal1
 
         private void buttonCancelarCadastro_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }
