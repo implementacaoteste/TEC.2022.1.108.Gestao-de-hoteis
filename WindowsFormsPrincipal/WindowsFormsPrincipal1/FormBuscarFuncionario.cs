@@ -17,6 +17,9 @@ namespace WindowsFormsPrincipal1
             InitializeComponent();
         }
 
-       
+        private void buttonBuscarFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
