@@ -41,9 +41,9 @@
             // 
             // textBoxUsuario
             // 
+            resources.ApplyResources(this.textBoxUsuario, "textBoxUsuario");
             this.textBoxUsuario.BackColor = System.Drawing.Color.White;
             this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBoxUsuario, "textBoxUsuario");
             this.textBoxUsuario.Name = "textBoxUsuario";
             // 
             // textBoxSenha
@@ -52,6 +52,7 @@
             this.textBoxSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxSenha, "textBoxSenha");
             this.textBoxSenha.Name = "textBoxSenha";
+            this.textBoxSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSenha_KeyDown);
             // 
             // pictureBox2
             // 
