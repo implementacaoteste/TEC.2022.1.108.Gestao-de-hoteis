@@ -1,15 +1,21 @@
-﻿namespace DAL
+﻿using System;
+using System.IO;
+
+namespace DAL
 {
     public static class Conexao
     {
+        private static string stringDeConexao;
         public static string StringDeConexao
         {
             get
             {
-                return @"User ID=SA;
-                        Initial Catalog=GESTAO_HOTEL;
-                        Data Source=.\SQLEXPRESS2019A;
-                        Password=Senailab02";
+                if (string.IsNullOrEmpty(stringDeConexao))
+                    if (File.Exists("C:\\ConfiguracaoBanco\\Conexao.config"))
+                        stringDeConexao = File.ReadAllText("C:\\ConfiguracaoBanco\\Conexao.config");
+                    else throw new Exception("Você precisa criar a conexão com o Banco de Dados");
+
+                return stringDeConexao;
             }
         }   
     }
