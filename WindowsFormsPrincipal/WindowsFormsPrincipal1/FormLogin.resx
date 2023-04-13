@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBoxUsuario.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="textBoxUsuario.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.8pt</value>
@@ -183,7 +186,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAYAAADPfd1WAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAA/7JJREFUeF7svfe/XFW9/3//hPvT93oFQgsloQUCgQAhhO4VBa/lKiB2RGyo9BZQ
+        DAAACwwBP0AiyAAA/7JJREFUeF7svfe/XFW9/3//hPvT93oFQgsloQUCgQAhhO4VBa/lKiB2RGyo9BZQ
         ivTeQr3YrrQECC2hk8A5SvFeRLAgiEIIiYL6gUAo67vfk7NO1lnzXn2tXea8Xo/H83Fm1nq3tWdmZ807
         e2b+5ehbXhIAAAAAAAAAPyAIgiAIgromNAABAAAAAAAIAIIgCIIgqGtCAxAAAAAAAIAAIAiCIAiCuiY0
         AAEAAAAAAAgAgiAIgiCoa0IDEAAAAAAAgAAgCIIgCIK6JjQAAQAAAAAACACCIAiCIKhrQgMQAAAAAACA
@@ -2435,7 +2438,7 @@
   <data name="pictureBoxEntrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXwAAAA8CAYAAABlyAESAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAABc1JREFUeF7t3E9v03Ycx/E8hD60PoQ+hJxK0svokV429Qg3ODLJsco4rJPgUA6d
+        DAAACwwBP0AiyAAABc1JREFUeF7t3E9v03Ycx/E8hD60PoQ+hJxK0svokV429Qg3ODLJsco4rJPgUA6d
         GJvUoXFYCQtJGGtp6KBllG1dPplNf3a/PydOk6ax31/pJQT+k6SHd41ju2JNNWgu1IN29VqjE9TCTrMe
         dk4BAFeXWj1odtBailI+fJaD1uJK2OlZOwQAzIXm0PDXw+6XxoYAgDnUP+r/Isp7crTA2gAAML+u9Q/k
         o8z/P7WgvWStCACYfzpVH+V+cCqHL2YBoLh6uhiHo3sAKIHloF2t1MKXDWshAKA41PrKStj50VoIACiU
@@ -2493,7 +2496,7 @@
   <data name="pictureBoxClose.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
+        DAAACwwBP0AiyAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
         xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
         6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
         RU5ErkJggg==
@@ -2502,7 +2505,7 @@
   <data name="pictureBoxClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
+        DAAACwwBP0AiyAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
         xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
         6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
         RU5ErkJggg==
@@ -2514,7 +2517,7 @@
   <data name="pictureBoxClose.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
+        DAAACwwBP0AiyAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
         xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
         6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
         RU5ErkJggg==
