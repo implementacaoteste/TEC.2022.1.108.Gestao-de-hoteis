@@ -37,11 +37,11 @@ namespace WindowsFormsPrincipal1
             try
             {
                 ClienteBLL clienteBLL = new ClienteBLL();
-                ClientebindingSource.EndEdit();
+                bindingSourceCadastroCliente.EndEdit();
                 if (Id == 0)
-                    clienteBLL.Inserir((Cliente)ClientebindingSource.Current);
+                    clienteBLL.Inserir((Cliente)bindingSourceCadastroCliente.Current);
                 else
-                    clienteBLL.Alterar((Cliente)ClientebindingSource.Current);
+                    clienteBLL.Alterar((Cliente)bindingSourceCadastroCliente.Current);
             }
             catch(Exception ex)
             {
