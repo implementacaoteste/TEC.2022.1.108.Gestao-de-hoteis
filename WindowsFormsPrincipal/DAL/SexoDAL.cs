@@ -34,7 +34,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possivel buscar 'Status' no banco. Favor, verificar a conexão", ex);
+                throw new Exception("Não foi possivel buscar por id sexo  no banco. Favor, verificar a conexão", ex);
             }
             finally
             {
