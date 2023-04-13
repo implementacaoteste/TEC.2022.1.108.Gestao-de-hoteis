@@ -37,6 +37,7 @@
             this.consultaFuncionárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultagrupoDeFuncionárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,8 @@
             this.consultaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1176, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(882, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,10 +62,11 @@
             this.cadastroToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroFuncionárioToolStripMenuItem,
-            this.cadastroGrupoDeFuncionárioToolStripMenuItem});
+            this.cadastroGrupoDeFuncionárioToolStripMenuItem,
+            this.clienteToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(106, 29);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
@@ -71,7 +74,7 @@
             // 
             this.cadastroFuncionárioToolStripMenuItem.Name = "cadastroFuncionárioToolStripMenuItem";
             this.cadastroFuncionárioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.cadastroFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(348, 30);
+            this.cadastroFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(328, 28);
             this.cadastroFuncionárioToolStripMenuItem.Text = "Funcionário";
             this.cadastroFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.cadastroFuncionárioToolStripMenuItem_Click);
             // 
@@ -79,7 +82,7 @@
             // 
             this.cadastroGrupoDeFuncionárioToolStripMenuItem.Name = "cadastroGrupoDeFuncionárioToolStripMenuItem";
             this.cadastroGrupoDeFuncionárioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.cadastroGrupoDeFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(348, 30);
+            this.cadastroGrupoDeFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(328, 28);
             this.cadastroGrupoDeFuncionárioToolStripMenuItem.Text = "Grupo de funcionário";
             this.cadastroGrupoDeFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.cadastroGrupoDeFuncionárioToolStripMenuItem_Click);
             // 
@@ -92,7 +95,7 @@
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(104, 29);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(97, 28);
             this.consultaToolStripMenuItem.Text = "Consulta";
             // 
             // consultaFuncionárioToolStripMenuItem1
@@ -100,7 +103,7 @@
             this.consultaFuncionárioToolStripMenuItem1.Name = "consultaFuncionárioToolStripMenuItem1";
             this.consultaFuncionárioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.F)));
-            this.consultaFuncionárioToolStripMenuItem1.Size = new System.Drawing.Size(399, 30);
+            this.consultaFuncionárioToolStripMenuItem1.Size = new System.Drawing.Size(374, 28);
             this.consultaFuncionárioToolStripMenuItem1.Text = "Funcionário";
             this.consultaFuncionárioToolStripMenuItem1.Click += new System.EventHandler(this.consultaFuncionárioToolStripMenuItem1_Click);
             // 
@@ -109,7 +112,7 @@
             this.consultagrupoDeFuncionárioToolStripMenuItem1.Name = "consultagrupoDeFuncionárioToolStripMenuItem1";
             this.consultagrupoDeFuncionárioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.G)));
-            this.consultagrupoDeFuncionárioToolStripMenuItem1.Size = new System.Drawing.Size(399, 30);
+            this.consultagrupoDeFuncionárioToolStripMenuItem1.Size = new System.Drawing.Size(374, 28);
             this.consultagrupoDeFuncionárioToolStripMenuItem1.Text = "Grupo de funcionário";
             this.consultagrupoDeFuncionárioToolStripMenuItem1.Click += new System.EventHandler(this.consultagrupoDeFuncionárioToolStripMenuItem1_Click);
             // 
@@ -117,28 +120,34 @@
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(353, 49);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(265, 40);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(467, 431);
+            this.pictureBox1.Size = new System.Drawing.Size(350, 350);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // clienteToolStripMenuItem
+            // 
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(328, 28);
+            this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(1176, 681);
+            this.ClientSize = new System.Drawing.Size(882, 556);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1194, 728);
-            this.MinimumSize = new System.Drawing.Size(1194, 728);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(900, 600);
+            this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Gestão de Hotéis";
@@ -161,6 +170,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultaFuncionárioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultagrupoDeFuncionárioToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
     }
 }
 

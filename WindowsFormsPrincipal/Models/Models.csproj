@@ -69,6 +69,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Constante.datasource" />
+    <None Include="Properties\DataSources\Funcionario.datasource" />
+    <None Include="Properties\DataSources\GrupoFuncionario.datasource" />
+    <None Include="Properties\DataSources\Modelss.Classe.datasource" />
+    <None Include="Properties\DataSources\Modelss.Cliente.datasource" />
+    <None Include="Properties\DataSources\Permissao.datasource" />
+    <None Include="Properties\DataSources\Quarto.datasource" />
+    <None Include="Properties\DataSources\Sexo.datasource" />
+    <None Include="Properties\DataSources\Statuses.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -72,5 +72,13 @@ namespace WindowsFormsPrincipal1
         {
 
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroCliente frm = new FormCadastroCliente())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
