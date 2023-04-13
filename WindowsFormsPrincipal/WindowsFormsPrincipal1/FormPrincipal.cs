@@ -17,23 +17,23 @@ namespace WindowsFormsPrincipal1
             InitializeComponent();
         }
 
-        private void FormPrincipal_Load(object sender, EventArgs e)
+       private void FormPrincipal_Load(object sender, EventArgs e)
         {
-           try
+            try
             {
-               using (FormLogin frm = new FormLogin())
+                using (FormLogin frm = new FormLogin())
                 {
-                  frm.ShowDialog();
-                   if (!frm.Logou)
-                   {
+                    frm.ShowDialog();
+                    if (!frm.Logou)
+                    {
                         Application.Exit();
-                   }
+                    }
                 }
-           }
-           catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-               MessageBox.Show(ex.Message);
-           }
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cadastroFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)

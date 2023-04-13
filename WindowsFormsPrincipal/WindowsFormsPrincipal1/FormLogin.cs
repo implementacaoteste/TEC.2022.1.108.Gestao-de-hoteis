@@ -31,5 +31,13 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void textBoxSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                pictureBoxEntrar_Click(null, null);
+            }
+        }
     }
 }
