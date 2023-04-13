@@ -46,5 +46,10 @@ namespace WindowsFormsPrincipal1
         {
             Close();
         }
+
+        private void buttonBuscar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
