@@ -122,10 +122,14 @@
     <value>Segoe UI, 13.8pt</value>
   </data>
   <data name="textBoxUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 276</value>
+    <value>817, 340</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBoxUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 29</value>
+    <value>355, 31</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxUsuario.TabIndex" type="System.Int32, mscorlib">
@@ -147,13 +151,16 @@
     <value>Segoe UI, 13.8pt</value>
   </data>
   <data name="textBoxSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 365</value>
+    <value>817, 449</value>
+  </data>
+  <data name="textBoxSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxSenha.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 29</value>
+    <value>355, 31</value>
   </data>
   <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -170,14 +177,13 @@
   <data name="&gt;&gt;textBoxSenha.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAYAAADPfd1WAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAA/7JJREFUeF7svfe/XFW9/3//hPvT93oFQgsloQUCgQAhhO4VBa/lKiB2RGyo9BZQ
+        DgAACw4BQL7hQQAA/7JJREFUeF7svfe/XFW9/3//hPvT93oFQgsloQUCgQAhhO4VBa/lKiB2RGyo9BZQ
         ivTeQr3YrrQECC2hk8A5SvFeRLAgiEIIiYL6gUAo67vfk7NO1lnzXn2tXea8Xo/H83Fm1nq3tWdmZ807
         e2b+5ehbXhIAAAAAAAAAPyAIgiAIgromNAABAAAAAAAIAIIgCIIgqGtCAxAAAAAAAIAAIAiCIAiCuiY0
         AAEAAAAAAAgAgiAIgiCoa0IDEAAAAAAAgAAgCIIgCIK6JjQAAQAAAAAACACCIAiCIKhrQgMQAAAAAACA
@@ -2397,16 +2403,16 @@
     <value>0, 0</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBox2.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1280, 720</value>
   </data>
   <data name="pictureBox2.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1280, 720</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1280, 720</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2429,7 +2435,7 @@
   <data name="pictureBoxEntrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXwAAAA8CAYAAABlyAESAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAABc1JREFUeF7t3E9v03Ycx/E8hD60PoQ+hJxK0svokV429Qg3ODLJsco4rJPgUA6d
+        DQAACw0B7QfALAAABc1JREFUeF7t3E9v03Ycx/E8hD60PoQ+hJxK0svokV429Qg3ODLJsco4rJPgUA6d
         GJvUoXFYCQtJGGtp6KBllG1dPplNf3a/PydOk6ax31/pJQT+k6SHd41ju2JNNWgu1IN29VqjE9TCTrMe
         dk4BAFeXWj1odtBailI+fJaD1uJK2OlZOwQAzIXm0PDXw+6XxoYAgDnUP+r/Isp7crTA2gAAML+u9Q/k
         o8z/P7WgvWStCACYfzpVH+V+cCqHL2YBoLh6uhiHo3sAKIHloF2t1MKXDWshAKA41PrKStj50VoIACiU
@@ -2458,13 +2464,13 @@
 </value>
   </data>
   <data name="pictureBoxEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 455</value>
+    <value>811, 560</value>
   </data>
   <data name="pictureBoxEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBoxEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 49</value>
+    <value>380, 60</value>
   </data>
   <data name="pictureBoxEntrar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2487,7 +2493,7 @@
   <data name="pictureBoxClose.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
+        DQAACw0B7QfALAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
         xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
         6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
         RU5ErkJggg==
@@ -2496,7 +2502,7 @@
   <data name="pictureBoxClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
+        DQAACw0B7QfALAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
         xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
         6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
         RU5ErkJggg==
@@ -2508,26 +2514,26 @@
   <data name="pictureBoxClose.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
+        DQAACw0B7QfALAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
         xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
         6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
         RU5ErkJggg==
 </value>
   </data>
   <data name="pictureBoxClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>925, 11</value>
+    <value>1233, 14</value>
   </data>
   <data name="pictureBoxClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBoxClose.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+    <value>29, 30</value>
   </data>
   <data name="pictureBoxClose.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+    <value>29, 30</value>
   </data>
   <data name="pictureBoxClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+    <value>29, 30</value>
   </data>
   <data name="pictureBoxClose.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2551,10 +2557,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>958, 583</value>
+    <value>1277, 718</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2632,11 +2638,14 @@
         AAAAAAAAAAAAAAAAAACAAAABgAAAAeAAAAc=
 </value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1279, 720</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1279, 720</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
