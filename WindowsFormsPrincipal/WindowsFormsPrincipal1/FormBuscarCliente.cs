@@ -25,7 +25,7 @@ namespace WindowsFormsPrincipal1
             {
                 clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -47,9 +47,9 @@ namespace WindowsFormsPrincipal1
                 return;
             }
 
-            if(MessageBox.Show("Deseja realmente excluir o cliente permanentemente do sistema",
+            if (MessageBox.Show("Deseja realmente excluir o cliente permanentemente do sistema",
                                 "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
-                 return;
+                return;
 
             int id = ((Cliente)clienteBindingSource.Current).Id;
             new ClienteBLL().Excluir(id);
@@ -57,9 +57,10 @@ namespace WindowsFormsPrincipal1
             MessageBox.Show("Usuário removido com sucesso");
         }
 
-        private void buttonAlterarCliente_Click(object sender, EventArgs e)
+
+        private void buttonAlterarCliente_Click_1(object sender, EventArgs e)
         {
-            if(clienteBindingSource.Count <= 0)
+            if (clienteBindingSource.Count <= 0)
             {
                 MessageBox.Show("Não há registro selecionar para ser alterado.");
                 return;

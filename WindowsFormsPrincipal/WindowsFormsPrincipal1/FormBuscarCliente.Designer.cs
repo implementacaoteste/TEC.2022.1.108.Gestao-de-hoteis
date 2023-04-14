@@ -51,20 +51,20 @@
             // 
             this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(101, 89);
-            this.textBox.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox.Location = new System.Drawing.Point(135, 110);
+            this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(380, 28);
+            this.textBox.Size = new System.Drawing.Size(506, 30);
             this.textBox.TabIndex = 1;
             // 
             // buttonExcluirCliente
             // 
             this.buttonExcluirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirCliente.Location = new System.Drawing.Point(990, 89);
-            this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExcluirCliente.Location = new System.Drawing.Point(1320, 110);
+            this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirCliente.Name = "buttonExcluirCliente";
-            this.buttonExcluirCliente.Size = new System.Drawing.Size(80, 28);
+            this.buttonExcluirCliente.Size = new System.Drawing.Size(107, 34);
             this.buttonExcluirCliente.TabIndex = 8;
             this.buttonExcluirCliente.Text = "Excluir";
             this.buttonExcluirCliente.UseVisualStyleBackColor = true;
@@ -74,22 +74,23 @@
             // 
             this.buttonAlterarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAlterarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAlterarCliente.Location = new System.Drawing.Point(906, 89);
-            this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAlterarCliente.Location = new System.Drawing.Point(1208, 110);
+            this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterarCliente.Name = "buttonAlterarCliente";
-            this.buttonAlterarCliente.Size = new System.Drawing.Size(80, 28);
+            this.buttonAlterarCliente.Size = new System.Drawing.Size(107, 34);
             this.buttonAlterarCliente.TabIndex = 7;
             this.buttonAlterarCliente.Text = "Alterar";
             this.buttonAlterarCliente.UseVisualStyleBackColor = true;
+            this.buttonAlterarCliente.Click += new System.EventHandler(this.buttonAlterarCliente_Click_1);
             // 
             // buttonAdicionarCliente
             // 
             this.buttonAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdicionarCliente.Location = new System.Drawing.Point(822, 89);
-            this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdicionarCliente.Location = new System.Drawing.Point(1096, 110);
+            this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
-            this.buttonAdicionarCliente.Size = new System.Drawing.Size(80, 28);
+            this.buttonAdicionarCliente.Size = new System.Drawing.Size(107, 34);
             this.buttonAdicionarCliente.TabIndex = 6;
             this.buttonAdicionarCliente.Text = "Adicionar";
             this.buttonAdicionarCliente.UseVisualStyleBackColor = true;
@@ -99,10 +100,10 @@
             // 
             this.buttonBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarCliente.Location = new System.Drawing.Point(495, 89);
-            this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscarCliente.Location = new System.Drawing.Point(660, 110);
+            this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarCliente.Name = "buttonBuscarCliente";
-            this.buttonBuscarCliente.Size = new System.Drawing.Size(80, 28);
+            this.buttonBuscarCliente.Size = new System.Drawing.Size(107, 34);
             this.buttonBuscarCliente.TabIndex = 5;
             this.buttonBuscarCliente.Text = "Buscar";
             this.buttonBuscarCliente.UseVisualStyleBackColor = true;
@@ -127,11 +128,12 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn7});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Location = new System.Drawing.Point(11, 132);
+            this.clienteDataGridView.Location = new System.Drawing.Point(15, 162);
+            this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.ReadOnly = true;
             this.clienteDataGridView.RowHeadersWidth = 47;
-            this.clienteDataGridView.Size = new System.Drawing.Size(1059, 412);
+            this.clienteDataGridView.Size = new System.Drawing.Size(1412, 507);
             this.clienteDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
@@ -192,17 +194,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 93);
+            this.label1.Location = new System.Drawing.Point(16, 114);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.Size = new System.Drawing.Size(93, 24);
             this.label1.TabIndex = 10;
             this.label1.Text = "Pesquisar";
             // 
             // FormBuscarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 556);
+            this.ClientSize = new System.Drawing.Size(1443, 681);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.buttonExcluirCliente);
@@ -210,9 +213,10 @@
             this.Controls.Add(this.buttonAdicionarCliente);
             this.Controls.Add(this.buttonBuscarCliente);
             this.Controls.Add(this.textBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1100, 600);
-            this.MinimumSize = new System.Drawing.Size(1100, 600);
+            this.MaximumSize = new System.Drawing.Size(1461, 728);
+            this.MinimumSize = new System.Drawing.Size(1461, 728);
             this.Name = "FormBuscarCliente";
             this.Text = "HOTELOGIX - Consulta ao Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
