@@ -18,35 +18,31 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
         }
-
         public int Id;
         public FormCadastroCliente(int _id = 0)
         {
             InitializeComponent();
             Id = _id;
         }
-
-        private void buttonCancelarCadastro_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
+        private void buttonSalvar_Click(object sender, EventArgs e)
         {
             try
             {
                 ClienteBLL clienteBLL = new ClienteBLL();
-                bindingSourceCadastroCliente.EndEdit();
+                clienteBindingSource.EndEdit();
                 if (Id == 0)
-                    clienteBLL.Inserir((Cliente)bindingSourceCadastroCliente.Current);
+                    clienteBLL.Inserir((Cliente)clienteBindingSource.Current);
                 else
-                    clienteBLL.Alterar((Cliente)bindingSourceCadastroCliente.Current);
+                    clienteBLL.Alterar((Cliente)clienteBindingSource.Current);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("Ocorreu erro ao tentar salvar um cliente no Banco de Dados", ex);
             }
-
+        }
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
