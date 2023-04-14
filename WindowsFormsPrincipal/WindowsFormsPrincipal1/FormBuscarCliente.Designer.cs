@@ -30,20 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.buttonExcluirGrupoFuncionario = new System.Windows.Forms.Button();
-            this.buttonAlterarGrupoFuncionario = new System.Windows.Forms.Button();
-            this.buttonAdicionarGrupoFuncionario = new System.Windows.Forms.Button();
+            this.buttonExcluirCliente = new System.Windows.Forms.Button();
+            this.buttonAlterarCliente = new System.Windows.Forms.Button();
+            this.buttonAdicionarCliente = new System.Windows.Forms.Button();
             this.buttonBuscarCliente = new System.Windows.Forms.Button();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -58,43 +57,43 @@
             this.textBox.Size = new System.Drawing.Size(380, 28);
             this.textBox.TabIndex = 1;
             // 
-            // buttonExcluirGrupoFuncionario
+            // buttonExcluirCliente
             // 
-            this.buttonExcluirGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcluirGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirGrupoFuncionario.Location = new System.Drawing.Point(990, 89);
-            this.buttonExcluirGrupoFuncionario.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonExcluirGrupoFuncionario.Name = "buttonExcluirGrupoFuncionario";
-            this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(80, 28);
-            this.buttonExcluirGrupoFuncionario.TabIndex = 8;
-            this.buttonExcluirGrupoFuncionario.Text = "Excluir";
-            this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = true;
-            this.buttonExcluirGrupoFuncionario.Click += new System.EventHandler(this.buttonExcluirGrupoFuncionario_Click);
+            this.buttonExcluirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluirCliente.Location = new System.Drawing.Point(990, 89);
+            this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExcluirCliente.Name = "buttonExcluirCliente";
+            this.buttonExcluirCliente.Size = new System.Drawing.Size(80, 28);
+            this.buttonExcluirCliente.TabIndex = 8;
+            this.buttonExcluirCliente.Text = "Excluir";
+            this.buttonExcluirCliente.UseVisualStyleBackColor = true;
+            this.buttonExcluirCliente.Click += new System.EventHandler(this.buttonExcluirCliente_Click);
             // 
-            // buttonAlterarGrupoFuncionario
+            // buttonAlterarCliente
             // 
-            this.buttonAlterarGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAlterarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAlterarGrupoFuncionario.Location = new System.Drawing.Point(906, 89);
-            this.buttonAlterarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAlterarGrupoFuncionario.Name = "buttonAlterarGrupoFuncionario";
-            this.buttonAlterarGrupoFuncionario.Size = new System.Drawing.Size(80, 28);
-            this.buttonAlterarGrupoFuncionario.TabIndex = 7;
-            this.buttonAlterarGrupoFuncionario.Text = "Alterar";
-            this.buttonAlterarGrupoFuncionario.UseVisualStyleBackColor = true;
+            this.buttonAlterarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAlterarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAlterarCliente.Location = new System.Drawing.Point(906, 89);
+            this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAlterarCliente.Name = "buttonAlterarCliente";
+            this.buttonAlterarCliente.Size = new System.Drawing.Size(80, 28);
+            this.buttonAlterarCliente.TabIndex = 7;
+            this.buttonAlterarCliente.Text = "Alterar";
+            this.buttonAlterarCliente.UseVisualStyleBackColor = true;
             // 
-            // buttonAdicionarGrupoFuncionario
+            // buttonAdicionarCliente
             // 
-            this.buttonAdicionarGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdicionarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdicionarGrupoFuncionario.Location = new System.Drawing.Point(822, 89);
-            this.buttonAdicionarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAdicionarGrupoFuncionario.Name = "buttonAdicionarGrupoFuncionario";
-            this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(80, 28);
-            this.buttonAdicionarGrupoFuncionario.TabIndex = 6;
-            this.buttonAdicionarGrupoFuncionario.Text = "Adicionar";
-            this.buttonAdicionarGrupoFuncionario.UseVisualStyleBackColor = true;
-            this.buttonAdicionarGrupoFuncionario.Click += new System.EventHandler(this.buttonAdicionarGrupoFuncionario_Click);
+            this.buttonAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionarCliente.Location = new System.Drawing.Point(822, 89);
+            this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
+            this.buttonAdicionarCliente.Size = new System.Drawing.Size(80, 28);
+            this.buttonAdicionarCliente.TabIndex = 6;
+            this.buttonAdicionarCliente.Text = "Adicionar";
+            this.buttonAdicionarCliente.UseVisualStyleBackColor = true;
+            this.buttonAdicionarCliente.Click += new System.EventHandler(this.buttonAdicionarCliente_Click);
             // 
             // buttonBuscarCliente
             // 
@@ -126,7 +125,6 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
             this.clienteDataGridView.Location = new System.Drawing.Point(11, 132);
@@ -135,16 +133,6 @@
             this.clienteDataGridView.RowHeadersWidth = 47;
             this.clienteDataGridView.Size = new System.Drawing.Size(1059, 412);
             this.clienteDataGridView.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Pesquisar";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -191,15 +179,6 @@
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 120;
             // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Endereço";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Endereco";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Data_nascimento";
@@ -209,6 +188,16 @@
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 135;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Pesquisar";
+            // 
             // FormBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,9 +205,9 @@
             this.ClientSize = new System.Drawing.Size(1082, 556);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clienteDataGridView);
-            this.Controls.Add(this.buttonExcluirGrupoFuncionario);
-            this.Controls.Add(this.buttonAlterarGrupoFuncionario);
-            this.Controls.Add(this.buttonAdicionarGrupoFuncionario);
+            this.Controls.Add(this.buttonExcluirCliente);
+            this.Controls.Add(this.buttonAlterarCliente);
+            this.Controls.Add(this.buttonAdicionarCliente);
             this.Controls.Add(this.buttonBuscarCliente);
             this.Controls.Add(this.textBox);
             this.MaximizeBox = false;
@@ -236,9 +225,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.Button buttonExcluirGrupoFuncionario;
-        private System.Windows.Forms.Button buttonAlterarGrupoFuncionario;
-        private System.Windows.Forms.Button buttonAdicionarGrupoFuncionario;
+        private System.Windows.Forms.Button buttonExcluirCliente;
+        private System.Windows.Forms.Button buttonAlterarCliente;
+        private System.Windows.Forms.Button buttonAdicionarCliente;
         private System.Windows.Forms.Button buttonBuscarCliente;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private System.Windows.Forms.DataGridView clienteDataGridView;

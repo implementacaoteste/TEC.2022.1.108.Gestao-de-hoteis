@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using Models;
 
 namespace WindowsFormsPrincipal1
 {
@@ -30,7 +31,7 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void buttonAdicionarGrupoFuncionario_Click(object sender, EventArgs e)
+        private void buttonAdicionarCliente_Click(object sender, EventArgs e)
         {
             using (FormCadastroCliente frm = new FormCadastroCliente())
             {
@@ -38,7 +39,7 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void buttonExcluirGrupoFuncionario_Click(object sender, EventArgs e)
+        private void buttonExcluirCliente_Click(object sender, EventArgs e)
         {
             if (clienteBindingSource.Count <= 0)
             {
@@ -49,7 +50,10 @@ namespace WindowsFormsPrincipal1
                                 "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                  return;
 
-            int id = ((Cliente));
+            int id = ((Cliente)clienteBindingSource.Current).Id;
+            new ClienteBLL().Excluir(id);
+            clienteBindingSource.RemoveCurrent();
+            MessageBox.Show("Usuário removido com sucesso");
         }
     }
 }
