@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using Models;
 
 namespace WindowsFormsPrincipal1
 {
@@ -50,6 +51,24 @@ namespace WindowsFormsPrincipal1
                  return;
 
             int id = ((Cliente));
+        }
+
+        private void buttonAlterarGrupoFuncionario_Click(object sender, EventArgs e)
+        {
+            if(clienteBindingSource.Count <= 0)
+            {
+                MessageBox.Show("Não há registro selecionar para ser alterado.");
+                return;
+            }
+            else
+            {
+                int id = ((Cliente)clienteBindingSource.Current).Id;
+                using (FormCadastroCliente frm = new FormCadastroCliente(id))
+                {
+                    frm.ShowDialog();
+                }
+                buttonBuscarCliente_Click(null, null);
+            }
         }
     }
 }
