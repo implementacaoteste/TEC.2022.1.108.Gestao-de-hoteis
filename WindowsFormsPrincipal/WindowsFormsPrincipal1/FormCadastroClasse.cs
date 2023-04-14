@@ -44,8 +44,16 @@ namespace WindowsFormsPrincipal1
                 classeBindingSource.AddNew();
             else
             {
-                classeBindingSource.DataSource = new ClasseBLL().BuscarPorId(Id);
+                //classeBindingSource.DataSource = new ClasseBLL().BuscarPorId(Id);
 
+            }
+        }
+
+        private void buttonCancelar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
             }
         }
     }

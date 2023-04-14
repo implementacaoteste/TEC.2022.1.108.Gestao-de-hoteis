@@ -60,6 +60,7 @@
             this.pictureBox2.Image = global::WindowsFormsPrincipal1.Properties.Resources.Form_Login;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBoxEntrar
             // 

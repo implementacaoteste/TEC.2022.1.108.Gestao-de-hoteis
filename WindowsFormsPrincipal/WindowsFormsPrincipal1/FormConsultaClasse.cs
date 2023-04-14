@@ -34,5 +34,13 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonCancelar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

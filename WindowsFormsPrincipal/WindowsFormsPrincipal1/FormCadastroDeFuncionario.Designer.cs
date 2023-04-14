@@ -35,10 +35,10 @@
             System.Windows.Forms.Label celularLabel;
             System.Windows.Forms.Label enderecoLabel;
             System.Windows.Forms.Label senhaLabel;
-            System.Windows.Forms.Label ativoLabel;
             System.Windows.Forms.Label data_nascimentoLabel;
             System.Windows.Forms.Label nomeUsuarioLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroDeFuncionario));
+            this.ativoLabel = new System.Windows.Forms.Label();
             this.labelCadastroDeFuncionario = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -65,7 +65,6 @@
             celularLabel = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
             senhaLabel = new System.Windows.Forms.Label();
-            ativoLabel = new System.Windows.Forms.Label();
             data_nascimentoLabel = new System.Windows.Forms.Label();
             nomeUsuarioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
@@ -128,13 +127,13 @@
             // 
             // ativoLabel
             // 
-            ativoLabel.AutoSize = true;
-            ativoLabel.Location = new System.Drawing.Point(1180, 199);
-            ativoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            ativoLabel.Name = "ativoLabel";
-            ativoLabel.Size = new System.Drawing.Size(40, 16);
-            ativoLabel.TabIndex = 36;
-            ativoLabel.Text = "Ativo:";
+            this.ativoLabel.AutoSize = true;
+            this.ativoLabel.Location = new System.Drawing.Point(1180, 199);
+            this.ativoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ativoLabel.Name = "ativoLabel";
+            this.ativoLabel.Size = new System.Drawing.Size(40, 16);
+            this.ativoLabel.TabIndex = 36;
+            this.ativoLabel.Text = "Ativo:";
             // 
             // data_nascimentoLabel
             // 
@@ -203,6 +202,7 @@
             this.buttonCancelarCadastro.Text = "CANCELAR";
             this.buttonCancelarCadastro.UseVisualStyleBackColor = true;
             this.buttonCancelarCadastro.Click += new System.EventHandler(this.buttonCancelarCadastro_Click);
+            this.buttonCancelarCadastro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonCancelarCadastro_KeyDown);
             // 
             // nomeTextBox
             // 
@@ -344,7 +344,7 @@
             this.Controls.Add(this.nomeUsuarioTextBox);
             this.Controls.Add(data_nascimentoLabel);
             this.Controls.Add(this.data_nascimentoTextBox);
-            this.Controls.Add(ativoLabel);
+            this.Controls.Add(this.ativoLabel);
             this.Controls.Add(this.ativoCheckBox);
             this.Controls.Add(senhaLabel);
             this.Controls.Add(this.senhaTextBox);
@@ -396,5 +396,6 @@
         private System.Windows.Forms.TextBox textBoxConfirmarSenha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label ativoLabel;
     }
 }

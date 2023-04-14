@@ -76,5 +76,13 @@ namespace WindowsFormsPrincipal1
             else
                 funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorId(Id);
         }
+
+        private void buttonCancelarCadastro_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }
