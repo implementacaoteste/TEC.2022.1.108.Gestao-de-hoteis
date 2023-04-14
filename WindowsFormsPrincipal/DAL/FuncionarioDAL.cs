@@ -224,8 +224,8 @@ namespace DAL
                         funcionario.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
+                        funcionarios.Add(funcionario);
                     }
-
                 }
                 return funcionarios;
 
