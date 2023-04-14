@@ -111,7 +111,7 @@
             // 
             // clienteBindingSource
             // 
-            this.clienteBindingSource.DataSource = typeof(Modelss.Cliente);
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
             // 
             // clienteDataGridView
             // 

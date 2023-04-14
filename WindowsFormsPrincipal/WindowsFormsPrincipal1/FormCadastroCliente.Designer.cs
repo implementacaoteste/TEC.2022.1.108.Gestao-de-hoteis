@@ -61,7 +61,7 @@
             // 
             // bindingSourceCadastroCliente
             // 
-            this.bindingSourceCadastroCliente.DataSource = typeof(Modelss.Cliente);
+            this.bindingSourceCadastroCliente.DataSource = typeof(Models.Cliente);
             // 
             // nomeLabel
             // 

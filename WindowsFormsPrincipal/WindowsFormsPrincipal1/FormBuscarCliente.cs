@@ -49,7 +49,7 @@ namespace WindowsFormsPrincipal1
                                 "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                  return;
 
-            int id = ((Cliente))
+            int id = ((Cliente));
         }
     }
 }
