@@ -2,12 +2,6 @@
 using Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace BLL
 {
@@ -27,12 +21,10 @@ namespace BLL
         {
             new FuncionarioDAL().Excluir(_Id);
         }
-
         public Funcionario BuscarPorId(int _Id)
         {
             return   new FuncionarioDAL().BuscarPorId(_Id);
         }
-
         public void BuscarPorNomeFuncionario(string _nome)
         {
             new FuncionarioDAL().BuscarPorNomeFuncionario(_nome);
@@ -56,7 +48,6 @@ namespace BLL
             return new FuncionarioDAL().BuscarTodos();
 
         }
-        
         private void ValidarDados (Funcionario _funcionario, string _confirmacaoSenha)
         {
             if (_funcionario.Senha != _confirmacaoSenha)
@@ -68,10 +59,6 @@ namespace BLL
             if (_funcionario.Nome.Length <= 2)
                 throw new Exception("O nome deve ter mais de 2 caracteres");
         }
-
-
-
-
     }
 }
 
