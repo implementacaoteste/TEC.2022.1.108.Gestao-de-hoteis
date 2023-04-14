@@ -2,39 +2,38 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
     public class SexoDAL
     {
-        public Sexo BuscarPorId(int _id)
+        public List<Sexo> BuscarPorTodos()
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             Sexo sexo = new Sexo();
+            List<Sexo> sexos= new List<Sexo>();
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"SELECT SEXO From SEXO where ID = @ID";
+                cmd.CommandText = @"SELECT ID, SEXO FROM SEXO";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@ID", _id);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    if (rd.Read())
+                    while (rd.Read())
                     {
+                        sexo = new Sexo();
                         sexo.Id = Convert.ToInt32(rd["ID"]);
                         sexo.Genero = rd["SEXO"].ToString();
+                        sexos.Add(sexo);
                     }
                 }
-                return sexo;
+                return sexos;
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possivel buscar por id sexo  no banco. Favor, verificar a conexão", ex);
+                throw new Exception("Não foi possível buscar o sexo por ID no banco. Favor, verificar a conexão", ex);
             }
             finally
             {
