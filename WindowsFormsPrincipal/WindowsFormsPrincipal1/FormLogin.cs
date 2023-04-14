@@ -20,16 +20,16 @@ namespace WindowsFormsPrincipal1
 
         private void pictureBoxEntrar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 new FuncionarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
                 Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+           // catch (Exception ex)
+            //{
+               // MessageBox.Show(ex.Message);
+            //}
         }
 
         private void textBoxSenha_KeyDown(object sender, KeyEventArgs e)
