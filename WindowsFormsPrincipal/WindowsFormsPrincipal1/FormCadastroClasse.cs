@@ -44,7 +44,7 @@ namespace WindowsFormsPrincipal1
                 classeBindingSource.AddNew();
             else
             {
-                classeBindingSource.DataSource = new ClasseBLL().BuscarPorId(Id);
+                //classeBindingSource.DataSource = new ClasseBLL().BuscarPorId(Id);
 
             }
         }

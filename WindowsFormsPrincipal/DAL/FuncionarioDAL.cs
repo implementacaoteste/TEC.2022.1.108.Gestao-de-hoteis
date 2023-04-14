@@ -216,7 +216,6 @@ namespace DAL
                     {
                         funcionario = new Funcionario();
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
-                        funcionario.Id = Convert.ToInt32(rd["ID_SEXO"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();

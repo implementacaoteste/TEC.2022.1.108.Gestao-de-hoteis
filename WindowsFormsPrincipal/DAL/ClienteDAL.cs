@@ -144,9 +144,9 @@ namespace DALL
                     while (rd.Read())
                     {
                         cliente = new Cliente();
-                        cliente.Id = Convert.ToInt32(rd["Id"]);
-                        cliente.Nome = rd["Nome"].ToString();
-                        cliente.Email = rd["Email"].ToString();
+                        cliente.Id = Convert.ToInt32(rd["ID"]);
+                        cliente.Nome = rd["NOME"].ToString();
+                        cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
                         cliente.Endereco = rd["ENDERECO"].ToString();
                         cliente.Celular = rd["CELULAR"].ToString();

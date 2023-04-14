@@ -80,5 +80,13 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (FormBuscarCliente frm = new FormBuscarCliente())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

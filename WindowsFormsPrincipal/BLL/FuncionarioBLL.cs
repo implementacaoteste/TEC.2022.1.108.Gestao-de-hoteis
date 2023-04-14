@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,7 +32,7 @@ namespace BLL
 
         public Funcionario BuscarPorId(int _Id)
         {
-            return   new FuncionarioDAL().BuscarPorId(_Id);
+            return new FuncionarioDAL().BuscarPorId(_Id);
         }
 
         public void BuscarPorNomeFuncionario(string _nome)
