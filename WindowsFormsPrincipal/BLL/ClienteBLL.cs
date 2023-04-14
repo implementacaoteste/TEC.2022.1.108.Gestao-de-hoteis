@@ -22,7 +22,7 @@ namespace BLL
             new ClienteDAL().Alterar(_cliente);
         }
 
-        public List<Cliente> BuscaPorTodos( )
+        public List<Cliente> BuscaPorTodos()
         {
            return new ClienteDAL().BuscaPorTodos();
         }

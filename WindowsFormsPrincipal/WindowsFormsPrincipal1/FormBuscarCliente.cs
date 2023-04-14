@@ -44,6 +44,7 @@ namespace WindowsFormsPrincipal1
             if (clienteBindingSource.Count <= 0)
             {
                 MessageBox.Show("Não há registro para ser excluido");
+                return;
             }
 
             if(MessageBox.Show("Deseja realmente excluir o cliente permanentemente do sistema",
@@ -56,7 +57,7 @@ namespace WindowsFormsPrincipal1
             MessageBox.Show("Usuário removido com sucesso");
         }
 
-        private void buttonAlterarGrupoFuncionario_Click(object sender, EventArgs e)
+        private void buttonAlterarCliente_Click(object sender, EventArgs e)
         {
             if(clienteBindingSource.Count <= 0)
             {

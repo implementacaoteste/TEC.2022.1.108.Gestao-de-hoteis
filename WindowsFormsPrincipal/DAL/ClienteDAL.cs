@@ -151,6 +151,7 @@ namespace DALL
                         cliente.Endereco = rd["ENDERECO"].ToString();
                         cliente.Celular = rd["CELULAR"].ToString();
                         cliente.Data_nascimento = rd["DATA_NASCIMENTO"].ToString();
+                        clientes.Add(cliente);
                     }
                 }
                 return clientes;
