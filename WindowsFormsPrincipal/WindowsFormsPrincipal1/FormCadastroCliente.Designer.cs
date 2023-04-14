@@ -59,6 +59,69 @@
             ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // nomeLabel1
+            // 
+            nomeLabel1.AutoSize = true;
+            nomeLabel1.Location = new System.Drawing.Point(22, 96);
+            nomeLabel1.Name = "nomeLabel1";
+            nomeLabel1.Size = new System.Drawing.Size(44, 16);
+            nomeLabel1.TabIndex = 42;
+            nomeLabel1.Text = "Nome";
+            // 
+            // celularLabel1
+            // 
+            celularLabel1.AutoSize = true;
+            celularLabel1.Location = new System.Drawing.Point(317, 96);
+            celularLabel1.Name = "celularLabel1";
+            celularLabel1.Size = new System.Drawing.Size(49, 16);
+            celularLabel1.TabIndex = 43;
+            celularLabel1.Text = "Celular";
+            // 
+            // cPFLabel1
+            // 
+            cPFLabel1.AutoSize = true;
+            cPFLabel1.Location = new System.Drawing.Point(526, 96);
+            cPFLabel1.Name = "cPFLabel1";
+            cPFLabel1.Size = new System.Drawing.Size(33, 16);
+            cPFLabel1.TabIndex = 44;
+            cPFLabel1.Text = "CPF";
+            // 
+            // enderecoLabel
+            // 
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Location = new System.Drawing.Point(22, 166);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(66, 16);
+            enderecoLabel.TabIndex = 45;
+            enderecoLabel.Text = "Endereço";
+            // 
+            // data_nascimentoLabel1
+            // 
+            data_nascimentoLabel1.AutoSize = true;
+            data_nascimentoLabel1.Location = new System.Drawing.Point(317, 166);
+            data_nascimentoLabel1.Name = "data_nascimentoLabel1";
+            data_nascimentoLabel1.Size = new System.Drawing.Size(127, 16);
+            data_nascimentoLabel1.TabIndex = 46;
+            data_nascimentoLabel1.Text = "Data de nascimento";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(497, 166);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(45, 16);
+            emailLabel.TabIndex = 47;
+            emailLabel.Text = "E-mail";
+            // 
+            // generoLabel1
+            // 
+            generoLabel1.AutoSize = true;
+            generoLabel1.Location = new System.Drawing.Point(22, 235);
+            generoLabel1.Name = "generoLabel1";
+            generoLabel1.Size = new System.Drawing.Size(52, 16);
+            generoLabel1.TabIndex = 48;
+            generoLabel1.Text = "Genero";
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -87,19 +150,11 @@
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            this.buttonCancelar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonCancelar_KeyDown);
             // 
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataSource = typeof(Models.Cliente);
-            // 
-            // nomeLabel1
-            // 
-            nomeLabel1.AutoSize = true;
-            nomeLabel1.Location = new System.Drawing.Point(22, 96);
-            nomeLabel1.Name = "nomeLabel1";
-            nomeLabel1.Size = new System.Drawing.Size(44, 16);
-            nomeLabel1.TabIndex = 42;
-            nomeLabel1.Text = "Nome";
             // 
             // nomeTextBox1
             // 
@@ -109,15 +164,6 @@
             this.nomeTextBox1.Size = new System.Drawing.Size(286, 22);
             this.nomeTextBox1.TabIndex = 43;
             // 
-            // celularLabel1
-            // 
-            celularLabel1.AutoSize = true;
-            celularLabel1.Location = new System.Drawing.Point(317, 96);
-            celularLabel1.Name = "celularLabel1";
-            celularLabel1.Size = new System.Drawing.Size(49, 16);
-            celularLabel1.TabIndex = 43;
-            celularLabel1.Text = "Celular";
-            // 
             // celularTextBox1
             // 
             this.celularTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Celular", true));
@@ -125,15 +171,6 @@
             this.celularTextBox1.Name = "celularTextBox1";
             this.celularTextBox1.Size = new System.Drawing.Size(206, 22);
             this.celularTextBox1.TabIndex = 44;
-            // 
-            // cPFLabel1
-            // 
-            cPFLabel1.AutoSize = true;
-            cPFLabel1.Location = new System.Drawing.Point(526, 96);
-            cPFLabel1.Name = "cPFLabel1";
-            cPFLabel1.Size = new System.Drawing.Size(33, 16);
-            cPFLabel1.TabIndex = 44;
-            cPFLabel1.Text = "CPF";
             // 
             // cPFTextBox1
             // 
@@ -143,15 +180,6 @@
             this.cPFTextBox1.Size = new System.Drawing.Size(226, 22);
             this.cPFTextBox1.TabIndex = 45;
             // 
-            // enderecoLabel
-            // 
-            enderecoLabel.AutoSize = true;
-            enderecoLabel.Location = new System.Drawing.Point(22, 166);
-            enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(66, 16);
-            enderecoLabel.TabIndex = 45;
-            enderecoLabel.Text = "Endereço";
-            // 
             // enderecoTextBox
             // 
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
@@ -160,15 +188,6 @@
             this.enderecoTextBox.Size = new System.Drawing.Size(286, 22);
             this.enderecoTextBox.TabIndex = 46;
             // 
-            // data_nascimentoLabel1
-            // 
-            data_nascimentoLabel1.AutoSize = true;
-            data_nascimentoLabel1.Location = new System.Drawing.Point(317, 166);
-            data_nascimentoLabel1.Name = "data_nascimentoLabel1";
-            data_nascimentoLabel1.Size = new System.Drawing.Size(127, 16);
-            data_nascimentoLabel1.TabIndex = 46;
-            data_nascimentoLabel1.Text = "Data de nascimento";
-            // 
             // data_nascimentoTextBox1
             // 
             this.data_nascimentoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Data_nascimento", true));
@@ -176,15 +195,6 @@
             this.data_nascimentoTextBox1.Name = "data_nascimentoTextBox1";
             this.data_nascimentoTextBox1.Size = new System.Drawing.Size(177, 22);
             this.data_nascimentoTextBox1.TabIndex = 47;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(497, 166);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(45, 16);
-            emailLabel.TabIndex = 47;
-            emailLabel.Text = "E-mail";
             // 
             // emailTextBox
             // 
@@ -198,15 +208,6 @@
             // 
             this.sexosBindingSource.DataMember = "Sexos";
             this.sexosBindingSource.DataSource = this.clienteBindingSource;
-            // 
-            // generoLabel1
-            // 
-            generoLabel1.AutoSize = true;
-            generoLabel1.Location = new System.Drawing.Point(22, 235);
-            generoLabel1.Name = "generoLabel1";
-            generoLabel1.Size = new System.Drawing.Size(52, 16);
-            generoLabel1.TabIndex = 48;
-            generoLabel1.Text = "Genero";
             // 
             // FormCadastroCliente
             // 

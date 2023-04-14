@@ -90,7 +90,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ID_SEXO, ENDERECO,CELULAR 
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR 
                                     From FUNCIONARIO where ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -102,7 +102,6 @@ namespace DAL
                     {
 
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
-                            funcionario.Id = Convert.ToInt32(rd["ID_SEXO"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();

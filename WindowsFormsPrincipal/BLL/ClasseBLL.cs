@@ -35,9 +35,9 @@ namespace BLL
             new ClasseDAL().Excluir(_id);
         }
 
-        public void BuscarPorId(int _id)
+        public Classe BuscarPorId(int _id)
         {
-            new ClasseDAL().BuscarPorId(_id);
+            return new ClasseDAL().BuscarPorId(_id);
         }
     }
 }

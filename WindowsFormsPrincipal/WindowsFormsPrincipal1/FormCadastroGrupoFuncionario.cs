@@ -43,5 +43,13 @@ namespace WindowsFormsPrincipal1
         {
             Close();
         }
+
+        private void buttonCancelar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

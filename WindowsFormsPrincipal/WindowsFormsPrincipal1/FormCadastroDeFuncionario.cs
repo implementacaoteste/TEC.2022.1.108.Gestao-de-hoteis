@@ -1,13 +1,6 @@
 ﻿using BLL;
 using Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsPrincipal1
@@ -20,31 +13,6 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
             Id = _id;
-        } 
-                
-        private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxAtivo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void buttonSalvar_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
@@ -58,9 +26,9 @@ namespace WindowsFormsPrincipal1
                 else
                     funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -68,7 +36,7 @@ namespace WindowsFormsPrincipal1
         {
             Close();
         }
-        
+
         private void FormCadastroDeFuncionario_Load_1(object sender, EventArgs e)
         {
             if (Id == 0)

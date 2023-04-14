@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace DALL
 {
@@ -109,22 +110,40 @@ namespace DALL
             }
         }
 
-        public void BuscarPorId(int _id)
+        public  Classe BuscarPorId(int _id)
         {
+
+
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"SELECT ID, CLASSE
-                                    FROM CLASSE where ID=@ID";
+                SqlCommand cmd = new SqlCommand();
+
+                Classe classe = new  Classe();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT CLASSE, ID From CLASSE
+                                    WHERE ID = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
-
-                cmd.Connection = cn;
+                cmd.Parameters.AddWithValue("@Id", _id);
+                cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        classe = new Classe();
+                        classe.Id = Convert.ToInt32(rd["Id"]);
+                        classe.Class = rd["Descricao"].ToString();
 
-                cmd.ExecuteNonQuery();
+
+
+
+
+                    }
+
+                }
+                return classe;
             }
             catch (Exception ex)
             {

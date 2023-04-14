@@ -39,5 +39,10 @@ namespace WindowsFormsPrincipal1
                 pictureBoxEntrar_Click(null, null);
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

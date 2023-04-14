@@ -35,10 +35,10 @@
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.permissaoDataGridView = new System.Windows.Forms.DataGridView();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonSelecionar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.permissaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonSelecionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -101,27 +101,6 @@
             this.permissaoDataGridView.Size = new System.Drawing.Size(774, 256);
             this.permissaoDataGridView.TabIndex = 15;
             // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Location = new System.Drawing.Point(713, 434);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 30);
-            this.buttonCancelar.TabIndex = 12;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // buttonSelecionar
-            // 
-            this.buttonSelecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelecionar.Location = new System.Drawing.Point(617, 434);
-            this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(90, 30);
-            this.buttonSelecionar.TabIndex = 12;
-            this.buttonSelecionar.Text = "Selecionar";
-            this.buttonSelecionar.UseVisualStyleBackColor = true;
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -134,6 +113,28 @@
             // permissaoBindingSource
             // 
             this.permissaoBindingSource.DataSource = typeof(Models.Permissao);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Location = new System.Drawing.Point(713, 434);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 30);
+            this.buttonCancelar.TabIndex = 12;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            this.buttonCancelar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonCancelar_KeyDown);
+            // 
+            // buttonSelecionar
+            // 
+            this.buttonSelecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelecionar.Location = new System.Drawing.Point(617, 434);
+            this.buttonSelecionar.Name = "buttonSelecionar";
+            this.buttonSelecionar.Size = new System.Drawing.Size(90, 30);
+            this.buttonSelecionar.TabIndex = 12;
+            this.buttonSelecionar.Text = "Selecionar";
+            this.buttonSelecionar.UseVisualStyleBackColor = true;
             // 
             // FormConsultaPermissao
             // 
