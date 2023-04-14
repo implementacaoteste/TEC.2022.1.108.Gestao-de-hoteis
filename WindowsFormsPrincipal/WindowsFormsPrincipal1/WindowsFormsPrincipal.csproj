@@ -164,6 +164,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\Models.Constante.datasource" />
     <None Include="Properties\DataSources\Models.Funcionario.datasource" />
@@ -190,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hotelogix.ico" />
+    <None Include="Resources\Form_Login.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
