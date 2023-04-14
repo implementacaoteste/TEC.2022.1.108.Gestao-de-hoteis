@@ -53,7 +53,7 @@ namespace DAL
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE FUNCIONARIO SET NOME= @Nome, NOME_USUARIO= @NomeUsuario, EMAIL= @Email, SENHA=@Senha ,CPF = @CPF,
                                          ATIVO = @Ativo, ENDERECO= @ENDERECO, DATA_NASCIMENTO = @DATA_NASCIMENTO, CELULAR= @CELULAR, ID_SEXO=@SEXO   
-                                        Where ID= @ID ";
+                                        Where ID= @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", _funcionario.Nome);
@@ -66,6 +66,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@ENDERECO", _funcionario.Endereco);
                 cmd.Parameters.AddWithValue("@CELULAR", _funcionario.Celular);
                 cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", Convert.ToDateTime(_funcionario.Data_nascimento));
+                cmd.Parameters.AddWithValue("@Id", _funcionario.Id);
                 cmd.Connection = cn;
                 cn.Open();
 

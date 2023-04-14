@@ -17,19 +17,19 @@ namespace WindowsFormsPrincipal1
 
         private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 FuncionarioBLL funcionarioBLL = new FuncionarioBLL();
                 funcionarioBindingSource.EndEdit();
                 if (Id == 0)
                     funcionarioBLL.Inserir((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
                 else
                     funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           // }
+           // catch (Exception ex)
+           // {
+              //  MessageBox.Show(ex.Message);
+          //  }
         }
 
         private void buttonCancelarCadastro_Click(object sender, EventArgs e)
