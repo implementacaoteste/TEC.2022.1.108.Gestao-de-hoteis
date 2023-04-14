@@ -109,6 +109,33 @@ namespace DALL
             }
         }
 
+        public void BuscarPorId(int _id)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"SELECT ID, CLASSE
+                                    FROM CLASSE where ID=@ID";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar excluir uma Classe no Banco de Dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public void Excluir(int _id)
         {
 

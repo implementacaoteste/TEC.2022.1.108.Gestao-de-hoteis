@@ -3,6 +3,7 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,6 +33,11 @@ namespace BLL
         public void Excluir(int _id)
         {
             new ClasseDAL().Excluir(_id);
+        }
+
+        public void BuscarPorId(int _id)
+        {
+            new ClasseDAL().BuscarPorId(_id);
         }
     }
 }
