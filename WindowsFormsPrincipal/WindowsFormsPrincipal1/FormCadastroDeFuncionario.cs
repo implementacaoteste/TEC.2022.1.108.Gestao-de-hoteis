@@ -17,19 +17,22 @@ namespace WindowsFormsPrincipal1
 
         private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 FuncionarioBLL funcionarioBLL = new FuncionarioBLL();
                 funcionarioBindingSource.EndEdit();
                 if (Id == 0)
                     funcionarioBLL.Inserir((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
                 else
                     funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
-           // }
-           // catch (Exception ex)
-           // {
-              //  MessageBox.Show(ex.Message);
-          //  }
+
+                MessageBox.Show("Registro salvo com sucesso!");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonCancelarCadastro_Click(object sender, EventArgs e)
@@ -43,6 +46,8 @@ namespace WindowsFormsPrincipal1
                 funcionarioBindingSource.AddNew();
             else
                 funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorId(Id);
+
+            sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
         }
     }
 }
