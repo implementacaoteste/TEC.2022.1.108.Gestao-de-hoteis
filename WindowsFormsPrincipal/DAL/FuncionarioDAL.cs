@@ -17,16 +17,17 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO FUNCIONARIO(NOME, NOME_USUARIO, EMAIL,SENHA ,CPF, ATIVO, ENDERECO,CELULAR, DATA_NASCIMENTO)
-                                      VALUES(@Nome, @NomeUsuario, @Email,@Senha, @CPF, @Ativo, @ENDERECO, @CELULAR, @DATA_NASCIMENTO)";
+                cmd.CommandText = @"INSERT INTO FUNCIONARIO(NOME, NOME_USUARIO, EMAIL,SENHA ,CPF, ATIVO, ENDERECO,CELULAR, DATA_NASCIMENTO, ID_SEXO)
+                                      VALUES(@NOME, @NOME_USUARIO, @EMAIL,@SENHA, @CPF, @Ativo, @ENDERECO, @CELULAR, @DATA_NASCIMENTO,@SEXO)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", _funcionario.Nome);
-                cmd.Parameters.AddWithValue("@NomeUsuario", _funcionario.NomeUsuario);
-                cmd.Parameters.AddWithValue("@Email", _funcionario.Email);
+                cmd.Parameters.AddWithValue("@NOME", _funcionario.Nome);
+                cmd.Parameters.AddWithValue("@NOME_USUARIO", _funcionario.NomeUsuario);
+                cmd.Parameters.AddWithValue("@EMAIL", _funcionario.Email);
                 cmd.Parameters.AddWithValue("@CPF", _funcionario.CPF);
-                cmd.Parameters.AddWithValue("@Senha", _funcionario.Senha);
-                cmd.Parameters.AddWithValue("@Ativo", _funcionario.Ativo);
+                cmd.Parameters.AddWithValue("@SENHA", _funcionario.Senha);
+                cmd.Parameters.AddWithValue("@SEXO", _funcionario.Sexos);
+                cmd.Parameters.AddWithValue("@ATIVO", _funcionario.Ativo);
                 cmd.Parameters.AddWithValue("@ENDERECO", _funcionario.Endereco);
                 cmd.Parameters.AddWithValue("@CELULAR", _funcionario.Celular);
                 cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", Convert.ToDateTime(_funcionario.Data_nascimento));
@@ -51,7 +52,7 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE FUNCIONARIO SET NOME= @Nome, NOME_USUARIO= @NomeUsuario, EMAIL= @Email, SENHA=@Senha ,CPF = @CPF,
-                                         ATIVO = @Ativo, ENDERECO= @ENDERECO, DATA_NASCIMENTO = @DATA_NASCIMENTO, CELULAR= @CELULAR   
+                                         ATIVO = @Ativo, ENDERECO= @ENDERECO, DATA_NASCIMENTO = @DATA_NASCIMENTO, CELULAR= @CELULAR, ID_SEXO=@SEXO   
                                         Where ID= @ID ";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -59,6 +60,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@NomeUsuario", _funcionario.NomeUsuario);
                 cmd.Parameters.AddWithValue("@Email", _funcionario.Email);
                 cmd.Parameters.AddWithValue("@CPF", _funcionario.CPF);
+                cmd.Parameters.AddWithValue("@SEXO", _funcionario.Sexos);
                 cmd.Parameters.AddWithValue("@Senha", _funcionario.Senha);
                 cmd.Parameters.AddWithValue("@Ativo", _funcionario.Ativo);
                 cmd.Parameters.AddWithValue("@ENDERECO", _funcionario.Endereco);
@@ -88,7 +90,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO,CELULAR 
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ID_SEXO, ENDERECO,CELULAR 
                                     From FUNCIONARIO where ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -100,6 +102,7 @@ namespace DAL
                     {
 
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
+                            funcionario.Id = Convert.ToInt32(rd["ID_SEXO"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();
@@ -136,7 +139,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
-                                    ENDERECO,CELULAR FROM FUNCIONARIO WHERE NOME_USUARIO LIKE @NomeUsuario";
+                                    ENDERECO,CELULAR,ID_SEXO FROM FUNCIONARIO WHERE NOME_USUARIO LIKE @NomeUsuario";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@NomeUsuario", _nome);
@@ -203,7 +206,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR 
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA , ID_SEXO ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR 
                                     From FUNCIONARIO";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
@@ -213,6 +216,7 @@ namespace DAL
                     {
                         funcionario = new Funcionario();
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
+                        funcionario.Id = Convert.ToInt32(rd["ID_SEXO"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();
