@@ -40,6 +40,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // classLabel
+            // 
+            classLabel.AutoSize = true;
+            classLabel.Location = new System.Drawing.Point(212, 155);
+            classLabel.Name = "classLabel";
+            classLabel.Size = new System.Drawing.Size(44, 16);
+            classLabel.TabIndex = 2;
+            classLabel.Text = "Class:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -54,15 +63,6 @@
             // classeBindingSource
             // 
             this.classeBindingSource.DataSource = typeof(Models.Classe);
-            // 
-            // classLabel
-            // 
-            classLabel.AutoSize = true;
-            classLabel.Location = new System.Drawing.Point(212, 155);
-            classLabel.Name = "classLabel";
-            classLabel.Size = new System.Drawing.Size(44, 16);
-            classLabel.TabIndex = 2;
-            classLabel.Text = "Class:";
             // 
             // classTextBox
             // 
@@ -80,6 +80,7 @@
             this.buttonSalvar.TabIndex = 4;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
@@ -107,6 +108,7 @@
             this.Name = "FormCadastroClasse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Classe";
+            this.Load += new System.EventHandler(this.FormCadastroClasse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

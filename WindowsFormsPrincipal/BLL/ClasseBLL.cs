@@ -33,5 +33,10 @@ namespace BLL
         {
             new ClasseDAL().Excluir(_id);
         }
+
+        public object BuscarPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
