@@ -29,159 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label nomeLabel;
-            System.Windows.Forms.Label celularLabel;
-            System.Windows.Forms.Label cPFLabel;
-            System.Windows.Forms.Label data_nascimentoLabel;
-            System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label nomeLabel1;
+            System.Windows.Forms.Label celularLabel1;
+            System.Windows.Forms.Label cPFLabel1;
             System.Windows.Forms.Label enderecoLabel;
-            System.Windows.Forms.Label generoLabel;
+            System.Windows.Forms.Label data_nascimentoLabel1;
+            System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label generoLabel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroCliente));
-            this.bindingSourceCadastroCliente = new System.Windows.Forms.BindingSource(this.components);
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.celularTextBox = new System.Windows.Forms.TextBox();
-            this.cPFTextBox = new System.Windows.Forms.TextBox();
-            this.data_nascimentoTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.enderecoTextBox = new System.Windows.Forms.TextBox();
-            this.sexosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            nomeLabel = new System.Windows.Forms.Label();
-            celularLabel = new System.Windows.Forms.Label();
-            cPFLabel = new System.Windows.Forms.Label();
-            data_nascimentoLabel = new System.Windows.Forms.Label();
-            emailLabel = new System.Windows.Forms.Label();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nomeTextBox1 = new System.Windows.Forms.TextBox();
+            this.celularTextBox1 = new System.Windows.Forms.TextBox();
+            this.cPFTextBox1 = new System.Windows.Forms.TextBox();
+            this.enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.data_nascimentoTextBox1 = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.sexosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            nomeLabel1 = new System.Windows.Forms.Label();
+            celularLabel1 = new System.Windows.Forms.Label();
+            cPFLabel1 = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
-            generoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCadastroCliente)).BeginInit();
+            data_nascimentoLabel1 = new System.Windows.Forms.Label();
+            emailLabel = new System.Windows.Forms.Label();
+            generoLabel1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // bindingSourceCadastroCliente
-            // 
-            this.bindingSourceCadastroCliente.DataSource = typeof(Models.Cliente);
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(22, 96);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(44, 16);
-            nomeLabel.TabIndex = 0;
-            nomeLabel.Text = "Nome";
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastroCliente, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(25, 115);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(289, 22);
-            this.nomeTextBox.TabIndex = 1;
-            // 
-            // celularLabel
-            // 
-            celularLabel.AutoSize = true;
-            celularLabel.Location = new System.Drawing.Point(317, 96);
-            celularLabel.Name = "celularLabel";
-            celularLabel.Size = new System.Drawing.Size(49, 16);
-            celularLabel.TabIndex = 2;
-            celularLabel.Text = "Celular";
-            // 
-            // celularTextBox
-            // 
-            this.celularTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastroCliente, "Celular", true));
-            this.celularTextBox.Location = new System.Drawing.Point(320, 115);
-            this.celularTextBox.Name = "celularTextBox";
-            this.celularTextBox.Size = new System.Drawing.Size(200, 22);
-            this.celularTextBox.TabIndex = 3;
-            // 
-            // cPFLabel
-            // 
-            cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(526, 96);
-            cPFLabel.Name = "cPFLabel";
-            cPFLabel.Size = new System.Drawing.Size(33, 16);
-            cPFLabel.TabIndex = 4;
-            cPFLabel.Text = "CPF";
-            // 
-            // cPFTextBox
-            // 
-            this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastroCliente, "CPF", true));
-            this.cPFTextBox.Location = new System.Drawing.Point(529, 115);
-            this.cPFTextBox.Name = "cPFTextBox";
-            this.cPFTextBox.Size = new System.Drawing.Size(226, 22);
-            this.cPFTextBox.TabIndex = 5;
-            // 
-            // data_nascimentoLabel
-            // 
-            data_nascimentoLabel.AutoSize = true;
-            data_nascimentoLabel.Location = new System.Drawing.Point(317, 166);
-            data_nascimentoLabel.Name = "data_nascimentoLabel";
-            data_nascimentoLabel.Size = new System.Drawing.Size(127, 16);
-            data_nascimentoLabel.TabIndex = 6;
-            data_nascimentoLabel.Text = "Data de nascimento";
-            // 
-            // data_nascimentoTextBox
-            // 
-            this.data_nascimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastroCliente, "Data_nascimento", true));
-            this.data_nascimentoTextBox.Location = new System.Drawing.Point(320, 185);
-            this.data_nascimentoTextBox.Name = "data_nascimentoTextBox";
-            this.data_nascimentoTextBox.Size = new System.Drawing.Size(174, 22);
-            this.data_nascimentoTextBox.TabIndex = 7;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(497, 166);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(45, 16);
-            emailLabel.TabIndex = 8;
-            emailLabel.Text = "E-mail";
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastroCliente, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(500, 185);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(255, 22);
-            this.emailTextBox.TabIndex = 9;
-            // 
-            // enderecoLabel
-            // 
-            enderecoLabel.AutoSize = true;
-            enderecoLabel.Location = new System.Drawing.Point(22, 166);
-            enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(66, 16);
-            enderecoLabel.TabIndex = 10;
-            enderecoLabel.Text = "Endereco";
-            // 
-            // enderecoTextBox
-            // 
-            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastroCliente, "Endereco", true));
-            this.enderecoTextBox.Location = new System.Drawing.Point(25, 185);
-            this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(289, 22);
-            this.enderecoTextBox.TabIndex = 11;
-            // 
-            // sexosBindingSource
-            // 
-            this.sexosBindingSource.DataMember = "Sexos";
-            this.sexosBindingSource.DataSource = this.bindingSourceCadastroCliente;
-            // 
-            // generoLabel
-            // 
-            generoLabel.AutoSize = true;
-            generoLabel.Location = new System.Drawing.Point(22, 235);
-            generoLabel.Name = "generoLabel";
-            generoLabel.Size = new System.Drawing.Size(52, 16);
-            generoLabel.TabIndex = 12;
-            generoLabel.Text = "Genero";
-            // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sexosBindingSource, "Genero", true));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(25, 253);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -197,6 +76,7 @@
             this.buttonSalvar.TabIndex = 42;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
@@ -206,35 +86,156 @@
             this.buttonCancelar.TabIndex = 42;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
+            // 
+            // nomeLabel1
+            // 
+            nomeLabel1.AutoSize = true;
+            nomeLabel1.Location = new System.Drawing.Point(22, 96);
+            nomeLabel1.Name = "nomeLabel1";
+            nomeLabel1.Size = new System.Drawing.Size(44, 16);
+            nomeLabel1.TabIndex = 42;
+            nomeLabel1.Text = "Nome";
+            // 
+            // nomeTextBox1
+            // 
+            this.nomeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
+            this.nomeTextBox1.Location = new System.Drawing.Point(25, 115);
+            this.nomeTextBox1.Name = "nomeTextBox1";
+            this.nomeTextBox1.Size = new System.Drawing.Size(286, 22);
+            this.nomeTextBox1.TabIndex = 43;
+            // 
+            // celularLabel1
+            // 
+            celularLabel1.AutoSize = true;
+            celularLabel1.Location = new System.Drawing.Point(317, 96);
+            celularLabel1.Name = "celularLabel1";
+            celularLabel1.Size = new System.Drawing.Size(49, 16);
+            celularLabel1.TabIndex = 43;
+            celularLabel1.Text = "Celular";
+            // 
+            // celularTextBox1
+            // 
+            this.celularTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Celular", true));
+            this.celularTextBox1.Location = new System.Drawing.Point(317, 115);
+            this.celularTextBox1.Name = "celularTextBox1";
+            this.celularTextBox1.Size = new System.Drawing.Size(206, 22);
+            this.celularTextBox1.TabIndex = 44;
+            // 
+            // cPFLabel1
+            // 
+            cPFLabel1.AutoSize = true;
+            cPFLabel1.Location = new System.Drawing.Point(526, 96);
+            cPFLabel1.Name = "cPFLabel1";
+            cPFLabel1.Size = new System.Drawing.Size(33, 16);
+            cPFLabel1.TabIndex = 44;
+            cPFLabel1.Text = "CPF";
+            // 
+            // cPFTextBox1
+            // 
+            this.cPFTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
+            this.cPFTextBox1.Location = new System.Drawing.Point(529, 115);
+            this.cPFTextBox1.Name = "cPFTextBox1";
+            this.cPFTextBox1.Size = new System.Drawing.Size(226, 22);
+            this.cPFTextBox1.TabIndex = 45;
+            // 
+            // enderecoLabel
+            // 
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Location = new System.Drawing.Point(22, 166);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(66, 16);
+            enderecoLabel.TabIndex = 45;
+            enderecoLabel.Text = "Endereço";
+            // 
+            // enderecoTextBox
+            // 
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
+            this.enderecoTextBox.Location = new System.Drawing.Point(25, 185);
+            this.enderecoTextBox.Name = "enderecoTextBox";
+            this.enderecoTextBox.Size = new System.Drawing.Size(286, 22);
+            this.enderecoTextBox.TabIndex = 46;
+            // 
+            // data_nascimentoLabel1
+            // 
+            data_nascimentoLabel1.AutoSize = true;
+            data_nascimentoLabel1.Location = new System.Drawing.Point(317, 166);
+            data_nascimentoLabel1.Name = "data_nascimentoLabel1";
+            data_nascimentoLabel1.Size = new System.Drawing.Size(127, 16);
+            data_nascimentoLabel1.TabIndex = 46;
+            data_nascimentoLabel1.Text = "Data de nascimento";
+            // 
+            // data_nascimentoTextBox1
+            // 
+            this.data_nascimentoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Data_nascimento", true));
+            this.data_nascimentoTextBox1.Location = new System.Drawing.Point(317, 185);
+            this.data_nascimentoTextBox1.Name = "data_nascimentoTextBox1";
+            this.data_nascimentoTextBox1.Size = new System.Drawing.Size(177, 22);
+            this.data_nascimentoTextBox1.TabIndex = 47;
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(497, 166);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(45, 16);
+            emailLabel.TabIndex = 47;
+            emailLabel.Text = "E-mail";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(500, 185);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(255, 22);
+            this.emailTextBox.TabIndex = 48;
+            // 
+            // sexosBindingSource
+            // 
+            this.sexosBindingSource.DataMember = "Sexos";
+            this.sexosBindingSource.DataSource = this.clienteBindingSource;
+            // 
+            // generoLabel1
+            // 
+            generoLabel1.AutoSize = true;
+            generoLabel1.Location = new System.Drawing.Point(22, 235);
+            generoLabel1.Name = "generoLabel1";
+            generoLabel1.Size = new System.Drawing.Size(52, 16);
+            generoLabel1.TabIndex = 48;
+            generoLabel1.Text = "Genero";
             // 
             // FormCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 401);
+            this.ClientSize = new System.Drawing.Size(778, 417);
+            this.Controls.Add(generoLabel1);
+            this.Controls.Add(emailLabel);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(data_nascimentoLabel1);
+            this.Controls.Add(this.data_nascimentoTextBox1);
+            this.Controls.Add(enderecoLabel);
+            this.Controls.Add(this.enderecoTextBox);
+            this.Controls.Add(cPFLabel1);
+            this.Controls.Add(this.cPFTextBox1);
+            this.Controls.Add(celularLabel1);
+            this.Controls.Add(this.celularTextBox1);
+            this.Controls.Add(nomeLabel1);
+            this.Controls.Add(this.nomeTextBox1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(generoLabel);
-            this.Controls.Add(enderecoLabel);
-            this.Controls.Add(this.enderecoTextBox);
-            this.Controls.Add(emailLabel);
-            this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(data_nascimentoLabel);
-            this.Controls.Add(this.data_nascimentoTextBox);
-            this.Controls.Add(cPFLabel);
-            this.Controls.Add(this.cPFTextBox);
-            this.Controls.Add(celularLabel);
-            this.Controls.Add(this.celularTextBox);
-            this.Controls.Add(nomeLabel);
-            this.Controls.Add(this.nomeTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCadastroCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -242,17 +243,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource bindingSourceCadastroCliente;
-        private System.Windows.Forms.TextBox nomeTextBox;
-        private System.Windows.Forms.TextBox celularTextBox;
-        private System.Windows.Forms.TextBox cPFTextBox;
-        private System.Windows.Forms.TextBox data_nascimentoTextBox;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox enderecoTextBox;
-        private System.Windows.Forms.BindingSource sexosBindingSource;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private System.Windows.Forms.TextBox nomeTextBox1;
+        private System.Windows.Forms.TextBox celularTextBox1;
+        private System.Windows.Forms.TextBox cPFTextBox1;
+        private System.Windows.Forms.TextBox enderecoTextBox;
+        private System.Windows.Forms.TextBox data_nascimentoTextBox1;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.BindingSource sexosBindingSource;
     }
 }
