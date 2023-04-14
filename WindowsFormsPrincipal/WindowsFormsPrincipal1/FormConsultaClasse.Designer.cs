@@ -57,7 +57,7 @@
             // 
             // classeBindingSource
             // 
-            this.classeBindingSource.DataSource = typeof(Modelss.Classe);
+            this.classeBindingSource.DataSource = typeof(Models.Classe);
             // 
             // classeDataGridView
             // 
