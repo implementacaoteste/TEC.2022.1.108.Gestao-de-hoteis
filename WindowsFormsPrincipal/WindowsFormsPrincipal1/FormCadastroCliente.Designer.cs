@@ -91,7 +91,7 @@
             enderecoLabel.Name = "enderecoLabel";
             enderecoLabel.Size = new System.Drawing.Size(66, 16);
             enderecoLabel.TabIndex = 45;
-            enderecoLabel.Text = "Endereço";
+            enderecoLabel.Text = "Endereco";
             // 
             // data_nascimentoLabel1
             // 
@@ -196,7 +196,10 @@
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(174, 22);
             this.data_nascimentoDateTimePicker.TabIndex = 49;
+
             //this.data_nascimentoDateTimePicker.ValueChanged += new System.EventHandler(this.data_nascimentoDateTimePicker_ValueChanged);
+
+
             // 
             // FormCadastroCliente
             // 
