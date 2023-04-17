@@ -107,7 +107,11 @@ namespace WindowsFormsPrincipal1
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            /*using (FormLogin frm = new FormLogin())
+            {
+                frm.ShowDialog();
+            }*/
+            Close();
         }
     }
 }
