@@ -48,9 +48,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.quartoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // labelQuarto
+            // 
+            labelQuarto.AutoEllipsis = true;
+            labelQuarto.Dock = System.Windows.Forms.DockStyle.Top;
+            labelQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            labelQuarto.Location = new System.Drawing.Point(0, 0);
+            labelQuarto.Name = "labelQuarto";
+            labelQuarto.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            labelQuarto.Size = new System.Drawing.Size(869, 46);
+            labelQuarto.TabIndex = 2;
+            labelQuarto.Text = "QUARTO";
+            labelQuarto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(546, 101);
+            this.buttonBuscar.Location = new System.Drawing.Point(553, 100);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(83, 23);
             this.buttonBuscar.TabIndex = 0;
@@ -60,7 +73,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(741, 101);
+            this.buttonCancelar.Location = new System.Drawing.Point(748, 100);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(88, 23);
             this.buttonCancelar.TabIndex = 0;
@@ -72,31 +85,18 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(23, 101);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(517, 22);
+            this.textBox1.Size = new System.Drawing.Size(503, 22);
             this.textBox1.TabIndex = 1;
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.Location = new System.Drawing.Point(635, 100);
+            this.buttonSelecionar.Location = new System.Drawing.Point(642, 100);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(100, 23);
             this.buttonSelecionar.TabIndex = 0;
             this.buttonSelecionar.Text = "Selecionar ";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
             this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
-            // 
-            // labelQuarto
-            // 
-            labelQuarto.AutoEllipsis = true;
-            labelQuarto.Dock = System.Windows.Forms.DockStyle.Top;
-            labelQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            labelQuarto.Location = new System.Drawing.Point(0, 0);
-            labelQuarto.Name = "labelQuarto";
-            labelQuarto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            labelQuarto.Size = new System.Drawing.Size(920, 46);
-            labelQuarto.TabIndex = 2;
-            labelQuarto.Text = "QUARTO";
-            labelQuarto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // quartoBindingSource
             // 
@@ -122,7 +122,7 @@
             this.quartoDataGridView.ReadOnly = true;
             this.quartoDataGridView.RowHeadersWidth = 51;
             this.quartoDataGridView.RowTemplate.Height = 24;
-            this.quartoDataGridView.Size = new System.Drawing.Size(806, 319);
+            this.quartoDataGridView.Size = new System.Drawing.Size(812, 319);
             this.quartoDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
@@ -132,7 +132,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.dataGridViewTextBoxColumn1.Width = 80;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -150,7 +150,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.dataGridViewTextBoxColumn3.Width = 80;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -177,13 +177,13 @@
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 125;
+            this.dataGridViewTextBoxColumn6.Width = 80;
             // 
             // FormConsultaQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 480);
+            this.ClientSize = new System.Drawing.Size(869, 480);
             this.Controls.Add(this.quartoDataGridView);
             this.Controls.Add(labelQuarto);
             this.Controls.Add(this.textBox1);
