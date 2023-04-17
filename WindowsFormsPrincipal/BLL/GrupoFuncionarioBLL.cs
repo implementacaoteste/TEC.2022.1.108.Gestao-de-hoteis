@@ -33,5 +33,16 @@ namespace BLL
         {
             return new GrupoFuncionarioDAL().BuscarPorNomeGrupo(_nomeGrupo);
         }
+
+        public void AdicionarPermissao(int _idGrupoFuncionario, int _idPermissao)
+        {
+            if (!new GrupoFuncionarioDAL().PermissaoPertenceAoGrupo(_idGrupoFuncionario, _idPermissao))
+                new GrupoFuncionarioDAL().AdicionarPermissao(_idGrupoFuncionario, _idPermissao);
+        }
+
+        public void RemoverPermissao(int _idGrupoFuncionario, int _idPermissao)
+        {
+            new GrupoFuncionarioDAL().RemoverPermissao(_idGrupoFuncionario, _idPermissao);
+        }
     }
 }
