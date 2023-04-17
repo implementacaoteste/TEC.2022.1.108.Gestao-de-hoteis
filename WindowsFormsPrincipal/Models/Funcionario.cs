@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Models
 {
@@ -16,6 +17,7 @@ namespace Models
         public bool Ativo { get; set; }
         public int IdSexo { get; set; }
         public string Sexo { get; set; }
+        public List<GrupoFuncionario> GrupoFuncionarios { get; set; }
 
     }
 }
