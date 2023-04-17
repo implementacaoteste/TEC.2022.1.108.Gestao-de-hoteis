@@ -196,7 +196,7 @@
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(174, 22);
             this.data_nascimentoDateTimePicker.TabIndex = 49;
-            this.data_nascimentoDateTimePicker.ValueChanged += new System.EventHandler(this.data_nascimentoDateTimePicker_ValueChanged);
+            //this.data_nascimentoDateTimePicker.ValueChanged += new System.EventHandler(this.data_nascimentoDateTimePicker_ValueChanged);
             // 
             // FormCadastroCliente
             // 

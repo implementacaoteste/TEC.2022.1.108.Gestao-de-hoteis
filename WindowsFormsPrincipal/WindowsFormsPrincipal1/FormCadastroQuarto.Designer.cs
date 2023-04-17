@@ -38,11 +38,13 @@
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.statusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.numeroTextBox = new System.Windows.Forms.TextBox();
             this.valor_DiariaTextBox = new System.Windows.Forms.TextBox();
-            this.statusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.classeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             descricaoLabel = new System.Windows.Forms.Label();
             id_StatusLabel = new System.Windows.Forms.Label();
             id_ClasseLabel = new System.Windows.Forms.Label();
@@ -50,6 +52,7 @@
             valor_DiariaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // descricaoLabel
@@ -121,13 +124,9 @@
             this.comboBoxStatus.TabIndex = 7;
             this.comboBoxStatus.ValueMember = "Id";
             // 
-            // comboBox2
+            // statusesBindingSource
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(323, 174);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 7;
+            this.statusesBindingSource.DataSource = typeof(Models.Statuses);
             // 
             // numeroTextBox
             // 
@@ -145,10 +144,6 @@
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(100, 22);
             this.valor_DiariaTextBox.TabIndex = 10;
             // 
-            // statusesBindingSource
-            // 
-            this.statusesBindingSource.DataSource = typeof(Models.Statuses);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -160,17 +155,41 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Cadastro de Quarto";
             // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.Location = new System.Drawing.Point(564, 368);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvar.TabIndex = 12;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(669, 368);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.TabIndex = 12;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // classeBindingSource
+            // 
+            this.classeBindingSource.DataSource = typeof(Models.Classe);
+            // 
             // FormCadastroQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label1);
             this.Controls.Add(valor_DiariaLabel);
             this.Controls.Add(this.valor_DiariaTextBox);
             this.Controls.Add(numeroLabel);
             this.Controls.Add(this.numeroTextBox);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(id_ClasseLabel);
             this.Controls.Add(id_StatusLabel);
@@ -184,6 +203,7 @@
             this.Text = "Cadastro de Quarto";
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,10 +214,12 @@
         private System.Windows.Forms.BindingSource quartoBindingSource;
         private System.Windows.Forms.TextBox descricaoTextBox;
         private System.Windows.Forms.ComboBox comboBoxStatus;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox numeroTextBox;
         private System.Windows.Forms.TextBox valor_DiariaTextBox;
         private System.Windows.Forms.BindingSource statusesBindingSource;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSalvar;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.BindingSource classeBindingSource;
     }
 }
