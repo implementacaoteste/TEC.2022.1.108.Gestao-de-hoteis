@@ -186,5 +186,86 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public bool PermissaoPertenceAoGrupo(int _idGrupoFuncionario, int _idPermissao)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 FROM PERMISSAO_GRUPO_FUNCIONARIO
+                                    WHERE ID_GRUPO_FUNCIONARIO = @IdGrupoUsuario AND ID_PERMISSAO = @IdPermissao";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idGrupoFuncionario);
+                cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar validar a existencia.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public void AdicionarPermissao(int _idGrupoFuncionario, int _idPermissao)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO PERMISSAO_GRUPO_FUNCIONARIO(ID_GRUPO_FUNCIONARIO, ID_PERMISSAO)
+                                    VALUES(@IdGrupoUsuario, @IdPermissao)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idGrupoFuncionario);
+                cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar vincular uma permissão a um grupo de funcionário no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public void RemoverPermissao(int _idGrupoFuncionario, int _idPermissao)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM PERMISSAO_GRUPO_FUNCIONARIO
+                                    WHERE ID_PERMISSAO = @IdPermissao AND ID_GRUPO_FUNCIONARIO = @IdGrupoUsuario";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
+                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idGrupoFuncionario);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar excluir uma permissão do grupo de funcionário no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
