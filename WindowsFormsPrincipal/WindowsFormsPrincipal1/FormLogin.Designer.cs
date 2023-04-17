@@ -45,6 +45,7 @@
             this.textBoxUsuario.BackColor = System.Drawing.Color.White;
             this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUsuario.Name = "textBoxUsuario";
+            this.textBoxUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUsuario_KeyDown);
             // 
             // textBoxSenha
             // 
@@ -60,7 +61,6 @@
             this.pictureBox2.Image = global::WindowsFormsPrincipal1.Properties.Resources.Form_Login;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBoxEntrar
             // 

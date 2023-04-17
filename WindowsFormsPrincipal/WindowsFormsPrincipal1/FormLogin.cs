@@ -39,10 +39,12 @@ namespace WindowsFormsPrincipal1
                 pictureBoxEntrar_Click(null, null);
             }
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void textBoxUsuario_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if(e.KeyCode == Keys.Enter)
+            {
+                textBoxSenha.Focus();
+            }
         }
     }
 }
