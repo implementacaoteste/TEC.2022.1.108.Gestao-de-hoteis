@@ -88,5 +88,13 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void quartoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(FormConsultaQuarto frm = new FormConsultaQuarto())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

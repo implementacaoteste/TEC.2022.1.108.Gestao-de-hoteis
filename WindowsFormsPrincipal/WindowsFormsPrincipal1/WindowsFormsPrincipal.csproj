@@ -112,6 +112,12 @@
     <Compile Include="FormConsultaPermissao.Designer.cs">
       <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultaQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaQuarto.Designer.cs">
+      <DependentUpon>FormConsultaQuarto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaPermissao.resx">
       <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaQuarto.resx">
+      <DependentUpon>FormConsultaQuarto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.pt-BR.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

@@ -90,7 +90,6 @@ namespace DALL
                         classe = new Classe();
                         classe.Id = Convert.ToInt32(rd["ID"]);
                         classe.Descricao = rd["CLASSE"].ToString();
-                       
                     }
                 }
                 return classes;
@@ -130,7 +129,7 @@ namespace DALL
                         classe.Descricao = rd["CLASSE"].ToString();
                     }
                 }
-                return classe;
+                return classes;
             }
             catch (Exception ex)
             {
@@ -144,7 +143,6 @@ namespace DALL
 
         public void Excluir(int _id)
         {
-
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -180,7 +178,7 @@ namespace DALL
                                       VALUES(@CLASSE)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@CLASSE", _classe.Class);
+                cmd.Parameters.AddWithValue("@CLASSE", _classe.Descricao);
             
                 cmd.Connection = cn;
                 cn.Open();
