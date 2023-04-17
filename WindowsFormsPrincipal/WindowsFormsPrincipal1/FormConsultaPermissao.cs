@@ -49,7 +49,14 @@ namespace WindowsFormsPrincipal1
 
         private void buttonBuscar_Click_1(object sender, EventArgs e)
         {
-
+            try
+            {
+                permissaoBindingSource.DataSource = new PermissaoBLL().BuscarPorDescricao(textBoxBuscar.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonCancelar_KeyDown(object sender, KeyEventArgs e)
