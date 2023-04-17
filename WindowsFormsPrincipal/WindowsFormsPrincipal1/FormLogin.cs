@@ -38,6 +38,10 @@ namespace WindowsFormsPrincipal1
             {
                 pictureBoxEntrar_Click(null, null);
             }
+            if(e.KeyCode == Keys.Up)
+            {
+                textBoxUsuario.Focus();
+            }
         }
         private void textBoxUsuario_KeyDown(object sender, KeyEventArgs e)
         {
