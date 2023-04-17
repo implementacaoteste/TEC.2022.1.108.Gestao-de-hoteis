@@ -1,6 +1,7 @@
 ﻿using System;
 using BLL;
 using System.Windows.Forms;
+using Models;
 
 namespace WindowsFormsPrincipal1
 {
@@ -8,7 +9,7 @@ namespace WindowsFormsPrincipal1
     {
         public bool Logou;
         public FormLogin()
-        {
+        { 
             InitializeComponent();
             Logou = false;
         }
