@@ -62,7 +62,7 @@ namespace WindowsFormsPrincipal1
         {
             if (clienteBindingSource.Count <= 0)
             {
-                MessageBox.Show("Não há registro selecionar para ser alterado.");
+                MessageBox.Show("Não há registro selecionado para ser alterado.");
                 return;
             }
             else

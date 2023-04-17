@@ -37,9 +37,9 @@
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaFuncionárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultagrupoDeFuncionárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +104,7 @@
             this.consultaFuncionárioToolStripMenuItem1,
             this.consultagrupoDeFuncionárioToolStripMenuItem1});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+            this.consultaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
             this.consultaToolStripMenuItem.Text = "Consultas";
@@ -112,7 +112,7 @@
             // consultaFuncionárioToolStripMenuItem1
             // 
             this.consultaFuncionárioToolStripMenuItem1.Name = "consultaFuncionárioToolStripMenuItem1";
-            this.consultaFuncionárioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+            this.consultaFuncionárioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.F)));
             this.consultaFuncionárioToolStripMenuItem1.Size = new System.Drawing.Size(399, 30);
             this.consultaFuncionárioToolStripMenuItem1.Text = "Funcionário";
@@ -121,35 +121,37 @@
             // consultagrupoDeFuncionárioToolStripMenuItem1
             // 
             this.consultagrupoDeFuncionárioToolStripMenuItem1.Name = "consultagrupoDeFuncionárioToolStripMenuItem1";
-            this.consultagrupoDeFuncionárioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+            this.consultagrupoDeFuncionárioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.G)));
             this.consultagrupoDeFuncionárioToolStripMenuItem1.Size = new System.Drawing.Size(399, 30);
             this.consultagrupoDeFuncionárioToolStripMenuItem1.Text = "Grupo de funcionário";
             this.consultagrupoDeFuncionárioToolStripMenuItem1.Click += new System.EventHandler(this.consultagrupoDeFuncionárioToolStripMenuItem1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(353, 49);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(467, 431);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Space)));
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
             this.sairToolStripMenuItem.Text = "Sair";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(353, 49);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(467, 431);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // FormPrincipal
             // 
