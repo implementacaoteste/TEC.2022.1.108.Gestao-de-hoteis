@@ -18,9 +18,9 @@ namespace BLL
         {
             new PermissaoDAL().Alterar(_permissao);
         }
-        public void Deletar(int _id)
+        public void Excluir(int _id)
         {
-            new PermissaoDAL().Deletar(_id);
+            new PermissaoDAL().Excluir(_id);
         }
         public List<Permissao> BuscarTodos()
         {
