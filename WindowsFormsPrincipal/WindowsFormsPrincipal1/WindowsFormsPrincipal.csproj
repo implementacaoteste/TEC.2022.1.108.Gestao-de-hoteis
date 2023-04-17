@@ -106,6 +106,12 @@
     <Compile Include="FormConsultaClasse.Designer.cs">
       <DependentUpon>FormConsultaClasse.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultaGrupoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaGrupoFuncionario.Designer.cs">
+      <DependentUpon>FormConsultaGrupoFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultaPermissao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaClasse.resx">
       <DependentUpon>FormConsultaClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaGrupoFuncionario.resx">
+      <DependentUpon>FormConsultaGrupoFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaPermissao.resx">
       <DependentUpon>FormConsultaPermissao.cs</DependentUpon>

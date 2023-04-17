@@ -16,5 +16,29 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
         }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarPorNomeGrupo(textBoxBuscar.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void buttonCancelar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }
