@@ -95,7 +95,9 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(328, 28);
+
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
@@ -174,6 +176,13 @@
             this.clienteToolStripMenuItem1.Text = "Cliente";
             this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click_1);
             // 
+
+            this.quartoToolStripMenuItem.Name = "quartoToolStripMenuItem";
+            this.quartoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.quartoToolStripMenuItem.Size = new System.Drawing.Size(399, 30);
+            this.quartoToolStripMenuItem.Text = "Quarto";
+            this.quartoToolStripMenuItem.Click += new System.EventHandler(this.quartoToolStripMenuItem_Click);
+
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
