@@ -129,7 +129,7 @@
             this.dataGridViewTextBoxColumn7});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
             this.clienteDataGridView.Location = new System.Drawing.Point(15, 162);
-            this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.ReadOnly = true;
             this.clienteDataGridView.RowHeadersWidth = 47;
@@ -213,7 +213,7 @@
             this.Controls.Add(this.buttonAdicionarCliente);
             this.Controls.Add(this.buttonBuscarCliente);
             this.Controls.Add(this.textBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1461, 728);
             this.MinimumSize = new System.Drawing.Size(1461, 728);
