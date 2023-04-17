@@ -84,7 +84,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR 
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR , ID_SEXO
                                     From FUNCIONARIO WHERE ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -95,6 +95,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
+                        funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();
@@ -137,6 +138,7 @@ namespace DAL
                     if (rd.Read())
                     {
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
+                        funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();
