@@ -89,9 +89,9 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void clienteToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        private void quartoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormBuscarCliente frm = new FormBuscarCliente())
+            using(FormConsultaQuarto frm = new FormConsultaQuarto())
             {
                 frm.ShowDialog();
             }
