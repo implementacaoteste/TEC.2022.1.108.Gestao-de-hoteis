@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,229 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBoxUsuario.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="textBoxUsuario.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13.8pt</value>
-  </data>
-  <data name="textBoxUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 276</value>
-  </data>
-  <data name="textBoxUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 29</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBoxUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsuario.Name" xml:space="preserve">
-    <value>textBoxUsuario</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsuario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsuario.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsuario.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="textBoxSenha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13.8pt</value>
-  </data>
-  <data name="textBoxSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 365</value>
-  </data>
-  <data name="textBoxSenha.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 29</value>
-  </data>
-  <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Name" xml:space="preserve">
-    <value>textBoxSenha</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="pictureBox2.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
-  </data>
-  <data name="pictureBox2.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="pictureBoxEntrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        8PVoFnPbPQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBoxEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 455</value>
-  </data>
-  <data name="pictureBoxEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="pictureBoxEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 49</value>
-  </data>
-  <data name="pictureBoxEntrar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBoxEntrar.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxEntrar.Name" xml:space="preserve">
-    <value>pictureBoxEntrar</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxEntrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxEntrar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxEntrar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pictureBoxClose.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
-        xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
-        6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBoxClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
-        xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
-        6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBoxClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBoxClose.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAJlJREFUSEvtk2EKgCAMRj1SN6obi16kI5SLFjZE5tiEaA8E/fF9D6YGx/kXKaU1
-        xrjcRzbS3AWEc85HWftIiTT3UELbXcAuqaRyMTAiV5MiHLm6FOnJzaRIS24uRai83ptJESKfIwXIeOeI
-        6Z3WezN56yGRsevLe6/XTM75MupyjhRRk49IERV5VTJUIM29gBJJWJpznC8TwgmJydv4Jm9v6gAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBoxClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>925, 11</value>
-  </data>
-  <data name="pictureBoxClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="pictureBoxClose.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
-  </data>
-  <data name="pictureBoxClose.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
-  </data>
-  <data name="pictureBoxClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
-  </data>
-  <data name="pictureBoxClose.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBoxClose.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxClose.Name" xml:space="preserve">
-    <value>pictureBoxClose</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxClose.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxClose.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="descricaoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>958, 583</value>
-  </data>
+  <metadata name="id_StatusLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="id_ClasseLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="numeroLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="valor_DiariaLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="quartoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="statusesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>217, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAJg6AACYOgAAAAAAAAAA
@@ -415,20 +214,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAACAAAABgAAAAeAAAAc=
 </value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormLogin</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

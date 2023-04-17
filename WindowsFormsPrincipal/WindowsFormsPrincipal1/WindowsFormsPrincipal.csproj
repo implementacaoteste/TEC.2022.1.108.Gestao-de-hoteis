@@ -94,6 +94,12 @@
     <Compile Include="FormCadastroGrupoFuncionario.Designer.cs">
       <DependentUpon>FormCadastroGrupoFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroQuarto.Designer.cs">
+      <DependentUpon>FormCadastroQuarto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultaClasse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroGrupoFuncionario.resx">
       <DependentUpon>FormCadastroGrupoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroQuarto.resx">
+      <DependentUpon>FormCadastroQuarto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaClasse.resx">
       <DependentUpon>FormConsultaClasse.cs</DependentUpon>
