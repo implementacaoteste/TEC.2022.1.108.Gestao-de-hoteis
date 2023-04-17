@@ -18,8 +18,8 @@ namespace DALL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO CLIENTE(NOME,  EMAIL,CPF, ATIVO, ENDERECO,CELULAR, DATA_NASCIMENTO)
-                                      VALUES(@Nome,  @Email, @CPF,  @ENDERECO, @CELULAR, @DATA_NASCIMENTO)";
+                cmd.CommandText = @"INSERT INTO CLIENTE(NOME,  EMAIL,CPF, ATIVO, ENDERECO,CELULAR, DATA_NASCIMENTO, ID_SEXO)
+                                      VALUES(@Nome,  @Email, @CPF,  @ENDERECO, @CELULAR, @DATA_NASCIMENTO, @ID_SEXO)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
@@ -28,6 +28,7 @@ namespace DALL
                 cmd.Parameters.AddWithValue("@ENDERECO", _cliente.Endereco);
                 cmd.Parameters.AddWithValue("@CELULAR", _cliente.Celular);
                 cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", _cliente.Data_nascimento);
+                cmd.Parameters.AddWithValue("@ID_SEXO", _cliente.IdSexo);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -76,7 +77,7 @@ namespace DALL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE CLIENTE SET NOME= @Nome,  EMAIL= @Email, ,CPF = @CPF,
-                                            ENDERECO= @ENDERECO, DATA_NASCIMENTO = @DATA_NASCIMENTO, CELULAR= @CELULAR   
+                                            ENDERECO= @ENDERECO, DATA_NASCIMENTO = @DATA_NASCIMENTO, CELULAR= @CELULAR , ID_SEXO = @ID_SEXO  
                                         Where ID= @ID ";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -86,6 +87,7 @@ namespace DALL
                 cmd.Parameters.AddWithValue("@ENDERECO", _cliente.Endereco);
                 cmd.Parameters.AddWithValue("@CELULAR", _cliente.Celular);
                 cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", _cliente.Data_nascimento);
+                cmd.Parameters.AddWithValue("@ID_SEXO", _cliente.IdSexo);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -108,7 +110,7 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO
+                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
                                     FROM CLIENTE WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _CPF);
@@ -118,9 +120,10 @@ namespace DALL
                 {
                     if (rd.Read())
                     {
-                        cliente.Id = Convert.ToInt32(rd["Id"]);
+                        cliente.Id = Convert.ToInt32(rd["ID"]);
+                        cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.Email = rd["Email"].ToString();
+                        cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
                         cliente.Endereco = rd["ENDERECO"].ToString();
                         cliente.Celular = rd["CELULAR"].ToString();
@@ -147,7 +150,7 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO
+                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
                                     FROM CLIENTE Where NOME Like @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
@@ -158,9 +161,10 @@ namespace DALL
                     while (rd.Read())
                     {
                         cliente = new Cliente();
-                        cliente.Id = Convert.ToInt32(rd["Id"]);
-                        cliente.Nome = rd["Nome"].ToString();
-                        cliente.Email = rd["Email"].ToString();
+                        cliente.Id = Convert.ToInt32(rd["ID"]);
+                        cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        cliente.Nome = rd["NOME"].ToString();
+                        cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
                         cliente.Endereco = rd["ENDERECO"].ToString();
                         cliente.Celular = rd["CELULAR"].ToString();
@@ -187,7 +191,7 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO
+                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
                                     FROM CLIENTE ";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
@@ -198,6 +202,7 @@ namespace DALL
                     {
                         cliente = new Cliente();
                         cliente.Id = Convert.ToInt32(rd["ID"]);
+                          cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         cliente.Nome = rd["NOME"].ToString();
                         cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
@@ -226,7 +231,7 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO
+                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
                                     FROM CLIENTE WHERE ID = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -236,9 +241,10 @@ namespace DALL
                 {
                     if (rd.Read())
                     {
-                        cliente.Id = Convert.ToInt32(rd["Id"]);
-                        cliente.Nome = rd["Nome"].ToString();
-                        cliente.Email = rd["Email"].ToString();
+                        cliente.Id = Convert.ToInt32(rd["ID"]);
+                        cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        cliente.Nome = rd["NOME"].ToString();
+                        cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
                         cliente.Endereco = rd["ENDERECO"].ToString();
                         cliente.Celular = rd["CELULAR"].ToString();

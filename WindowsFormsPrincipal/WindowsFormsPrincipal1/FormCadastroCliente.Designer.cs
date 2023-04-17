@@ -40,14 +40,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeTextBox1 = new System.Windows.Forms.TextBox();
             this.celularTextBox1 = new System.Windows.Forms.TextBox();
             this.cPFTextBox1 = new System.Windows.Forms.TextBox();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
-            this.data_nascimentoTextBox1 = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.sexosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             nomeLabel1 = new System.Windows.Forms.Label();
             celularLabel1 = new System.Windows.Forms.Label();
             cPFLabel1 = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@
             emailLabel = new System.Windows.Forms.Label();
             generoLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel1
@@ -152,13 +150,8 @@
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             this.buttonCancelar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonCancelar_KeyDown);
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
-            // 
             // nomeTextBox1
             // 
-            this.nomeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
             this.nomeTextBox1.Location = new System.Drawing.Point(25, 115);
             this.nomeTextBox1.Name = "nomeTextBox1";
             this.nomeTextBox1.Size = new System.Drawing.Size(286, 22);
@@ -166,7 +159,6 @@
             // 
             // celularTextBox1
             // 
-            this.celularTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Celular", true));
             this.celularTextBox1.Location = new System.Drawing.Point(317, 115);
             this.celularTextBox1.Name = "celularTextBox1";
             this.celularTextBox1.Size = new System.Drawing.Size(206, 22);
@@ -174,7 +166,6 @@
             // 
             // cPFTextBox1
             // 
-            this.cPFTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
             this.cPFTextBox1.Location = new System.Drawing.Point(529, 115);
             this.cPFTextBox1.Name = "cPFTextBox1";
             this.cPFTextBox1.Size = new System.Drawing.Size(226, 22);
@@ -182,43 +173,41 @@
             // 
             // enderecoTextBox
             // 
-            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
             this.enderecoTextBox.Location = new System.Drawing.Point(25, 185);
             this.enderecoTextBox.Name = "enderecoTextBox";
             this.enderecoTextBox.Size = new System.Drawing.Size(286, 22);
             this.enderecoTextBox.TabIndex = 46;
             // 
-            // data_nascimentoTextBox1
-            // 
-            this.data_nascimentoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Data_nascimento", true));
-            this.data_nascimentoTextBox1.Location = new System.Drawing.Point(317, 185);
-            this.data_nascimentoTextBox1.Name = "data_nascimentoTextBox1";
-            this.data_nascimentoTextBox1.Size = new System.Drawing.Size(177, 22);
-            this.data_nascimentoTextBox1.TabIndex = 47;
-            // 
             // emailTextBox
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Email", true));
             this.emailTextBox.Location = new System.Drawing.Point(500, 185);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(255, 22);
             this.emailTextBox.TabIndex = 48;
             // 
-            // sexosBindingSource
+            // clienteBindingSource
             // 
-            this.sexosBindingSource.DataMember = "Sexos";
-            this.sexosBindingSource.DataSource = this.clienteBindingSource;
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
+            // 
+            // data_nascimentoDateTimePicker
+            // 
+            this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "Data_nascimento", true));
+            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(320, 183);
+            this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
+            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(174, 22);
+            this.data_nascimentoDateTimePicker.TabIndex = 49;
+            this.data_nascimentoDateTimePicker.ValueChanged += new System.EventHandler(this.data_nascimentoDateTimePicker_ValueChanged);
             // 
             // FormCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 417);
+            this.ClientSize = new System.Drawing.Size(775, 414);
+            this.Controls.Add(this.data_nascimentoDateTimePicker);
             this.Controls.Add(generoLabel1);
             this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(data_nascimentoLabel1);
-            this.Controls.Add(this.data_nascimentoTextBox1);
             this.Controls.Add(enderecoLabel);
             this.Controls.Add(this.enderecoTextBox);
             this.Controls.Add(cPFLabel1);
@@ -237,7 +226,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de cliente";
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,13 +235,12 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.BindingSource clienteBindingSource;
         private System.Windows.Forms.TextBox nomeTextBox1;
         private System.Windows.Forms.TextBox celularTextBox1;
         private System.Windows.Forms.TextBox cPFTextBox1;
         private System.Windows.Forms.TextBox enderecoTextBox;
-        private System.Windows.Forms.TextBox data_nascimentoTextBox1;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.BindingSource sexosBindingSource;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
     }
 }

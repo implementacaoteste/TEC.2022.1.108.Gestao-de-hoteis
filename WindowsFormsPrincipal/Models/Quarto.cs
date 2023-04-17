@@ -14,6 +14,5 @@ namespace Models
         public string Descricao { get; set; }
         public float Valor_Diaria { get; set; }
         public int Id_Status { get; set; }
-        public List<Statuses> status { get; set; }
     }
 }
