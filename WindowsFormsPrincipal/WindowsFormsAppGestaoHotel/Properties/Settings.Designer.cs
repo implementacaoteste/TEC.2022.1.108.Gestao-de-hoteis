@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsPrincipal1.Properties
+namespace WindowsFormsAppGestaoHotel.Properties
 {
 
 

@@ -103,6 +103,15 @@
             valor_DiariaLabel.TabIndex = 9;
             valor_DiariaLabel.Text = "Valor Diaria:";
             // 
+            // id_ClasseLabel1
+            // 
+            id_ClasseLabel1.AutoSize = true;
+            id_ClasseLabel1.Location = new System.Drawing.Point(316, 185);
+            id_ClasseLabel1.Name = "id_ClasseLabel1";
+            id_ClasseLabel1.Size = new System.Drawing.Size(66, 16);
+            id_ClasseLabel1.TabIndex = 12;
+            id_ClasseLabel1.Text = "Id Classe:";
+            // 
             // descricaoTextBox
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Descricao", true));
@@ -181,18 +190,11 @@
             // 
             this.classeBindingSource.DataSource = typeof(Models.Classe);
             // 
-            // id_ClasseLabel1
-            // 
-            id_ClasseLabel1.AutoSize = true;
-            id_ClasseLabel1.Location = new System.Drawing.Point(316, 185);
-            id_ClasseLabel1.Name = "id_ClasseLabel1";
-            id_ClasseLabel1.Size = new System.Drawing.Size(66, 16);
-            id_ClasseLabel1.TabIndex = 12;
-            id_ClasseLabel1.Text = "Id Classe:";
-            // 
             // id_ClasseComboBox
             // 
             this.id_ClasseComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Id_Classe", true));
+            this.id_ClasseComboBox.DataSource = this.classeBindingSource;
+            this.id_ClasseComboBox.DisplayMember = "Descricao";
             this.id_ClasseComboBox.FormattingEnabled = true;
             this.id_ClasseComboBox.Location = new System.Drawing.Point(388, 182);
             this.id_ClasseComboBox.Name = "id_ClasseComboBox";

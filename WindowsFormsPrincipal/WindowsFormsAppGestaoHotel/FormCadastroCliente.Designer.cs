@@ -47,6 +47,7 @@
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nomeLabel1 = new System.Windows.Forms.Label();
             celularLabel1 = new System.Windows.Forms.Label();
             cPFLabel1 = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             emailLabel = new System.Windows.Forms.Label();
             generoLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel1
@@ -122,12 +124,16 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clienteBindingSource, "IdSexo", true));
+            this.comboBox1.DataSource = this.sexoBindingSource;
+            this.comboBox1.DisplayMember = "Genero";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(25, 253);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 41;
+            this.comboBox1.ValueMember = "Id";
             // 
             // buttonSalvar
             // 
@@ -196,10 +202,10 @@
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(174, 22);
             this.data_nascimentoDateTimePicker.TabIndex = 49;
-
-            //this.data_nascimentoDateTimePicker.ValueChanged += new System.EventHandler(this.data_nascimentoDateTimePicker_ValueChanged);
-
-
+            // 
+            // sexoBindingSource
+            // 
+            this.sexoBindingSource.DataSource = typeof(Models.Sexo);
             // 
             // FormCadastroCliente
             // 
@@ -229,6 +235,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de cliente";
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +252,6 @@
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
+        private System.Windows.Forms.BindingSource sexoBindingSource;
     }
 }

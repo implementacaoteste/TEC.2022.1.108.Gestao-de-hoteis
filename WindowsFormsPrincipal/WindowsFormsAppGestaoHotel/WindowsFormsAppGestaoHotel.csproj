@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{311AD0E3-B1D1-4828-9FD9-50B58FB8561B}</ProjectGuid>
+    <ProjectGuid>{F553A28C-B657-4ADB-9BB1-DCDF67E1C9F1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsPrincipal1</RootNamespace>
-    <AssemblyName>WindowsFormsPrincipal1</AssemblyName>
+    <RootNamespace>WindowsFormsAppGestaoHotel</RootNamespace>
+    <AssemblyName>WindowsFormsAppGestaoHotel</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,12 +31,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Hotelogix.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -202,16 +196,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Models.Classe.datasource" />
+    <None Include="Properties\DataSources\Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Models.Constante.datasource" />
+    <None Include="Properties\DataSources\Models.Diaria.datasource" />
     <None Include="Properties\DataSources\Models.Funcionario.datasource" />
     <None Include="Properties\DataSources\Models.GrupoFuncionario.datasource" />
+    <None Include="Properties\DataSources\Models.Pagamento.datasource" />
     <None Include="Properties\DataSources\Models.Permissao.datasource" />
     <None Include="Properties\DataSources\Models.Quarto.datasource" />
     <None Include="Properties\DataSources\Models.Sexo.datasource" />
-    <None Include="Properties\DataSources\Modelss.Classe.datasource" />
     <None Include="Properties\DataSources\Models.Statuses.datasource" />
-    <None Include="Properties\DataSources\Modelss.Classe.datasource" />
-    <None Include="Properties\DataSources\Modelss.Cliente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
