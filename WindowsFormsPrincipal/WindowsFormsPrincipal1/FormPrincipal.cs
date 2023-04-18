@@ -125,7 +125,7 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sobreToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             using (FormSobre frm = new FormSobre())
             {
