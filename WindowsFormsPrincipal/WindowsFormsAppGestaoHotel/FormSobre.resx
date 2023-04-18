@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABDgAAAQ4CAYAAADsEGyPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAA/7JJREFUeF7s/UGy9+dxpYn1ErQELUFL0BK0g9YStAPVDqAGSNfMqgh77trBBWvQ
+        DAAACwwBP0AiyAAA/7JJREFUeF7s/UGy9+dxpYn1ErQELUFL0BK0g9YStAPVDqAGSNfMqgh77trBBWvQ
         4Rkndk/KDlY7yk0CCjfDo472REai7oEeHJ7M9/3974UEkpkRT7yZ55zM31cd9wP1oUngv9va2tra2tra
         2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra
         2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra
@@ -4539,15 +4539,16 @@
         rkJggg==
 </value>
   </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>DESENVOLVEDORES: LUIZ FILIPI, RANGERSON, LUCAS, KLAUBER E ALANA
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>										HOTEL
+
+DESENVOLVEDORES: LUIZ FILIPI, RANGERSON, LUCAS, KLAUBER E ALANA
 
 VERSÃO: 1.0.0.0
 
-OBJETIVO:  ESTE SISTEMA É UMA APLICAÇÃO PARA UMA SOLUÇÃO COMPLETA EM APRIMORAR A GESTÃO DE UMA HOSPEDAGEM, TORNANDO-SE MAIS COMPREENSIVA, EFICIENTE E RENTÁVEL. 
-
 COPYRIGHT ©
-</value>
+
+OBJETIVO:  ESTE SISTEMA É UMA APLICAÇÃO PARA UMA SOLUÇÃO COMPLETA EM APRIMORAR A GESTÃO DE UMA HOSPEDAGEM, TORNANDO-SE MAIS COMPREENSIVA, EFICIENTE E RENTÁVEL. </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

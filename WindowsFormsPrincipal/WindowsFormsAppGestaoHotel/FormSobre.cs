@@ -17,6 +17,9 @@ namespace WindowsFormsPrincipal1
             InitializeComponent();
         }
 
-       
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
