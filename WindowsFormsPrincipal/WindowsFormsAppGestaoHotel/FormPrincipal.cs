@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -131,7 +132,23 @@ namespace WindowsFormsPrincipal1
             {
                 frm.ShowDialog();
             }
+        }         
+        
+
+        private void buscarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormBuscarFuncionario frm = new FormBuscarFuncionario())
+            {
+                frm.ShowDialog();
+            }
         }
 
+        private void grupoFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario)
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

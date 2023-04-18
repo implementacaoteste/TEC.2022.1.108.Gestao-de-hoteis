@@ -69,7 +69,7 @@
             this.labelSobre.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSobre.Location = new System.Drawing.Point(0, 0);
             this.labelSobre.Name = "labelSobre";
-            this.labelSobre.Size = new System.Drawing.Size(814, 57);
+            this.labelSobre.Size = new System.Drawing.Size(851, 57);
             this.labelSobre.TabIndex = 1;
             this.labelSobre.Text = "Sobre";
             this.labelSobre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 510);
+            this.ClientSize = new System.Drawing.Size(851, 510);
             this.ControlBox = false;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelSobre);
