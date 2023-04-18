@@ -24,7 +24,7 @@ namespace BLL
         }
         public List<Diaria> BuscarPorTodos()
         {
-            return new Diaria().BuscarPorTodos();
+            return new DiariaDAL().BuscarPorTodos();
         }
         public void ValidarPermissao(int _idPermissao)
         {

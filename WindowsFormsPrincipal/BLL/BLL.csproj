@@ -52,6 +52,7 @@
     <Compile Include="ClasseBLL.cs" />
     <Compile Include="ClienteBLL.cs" />
     <Compile Include="DiariaBLL.cs" />
+    <Compile Include="DiariaDAL.cs" />
     <Compile Include="FuncionarioBLL.cs" />
     <Compile Include="GrupoFuncionarioBLL.cs" />
     <Compile Include="PermissaoBLL.cs" />
