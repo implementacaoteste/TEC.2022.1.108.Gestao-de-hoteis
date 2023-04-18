@@ -267,5 +267,43 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        internal List<GrupoFuncionario> BuscarPorIdFuncionario(int _idFuncionario)
+        {
+            List<GrupoFuncionario> grupofuncionarios = new List<GrupoFuncionario>();
+            GrupoFuncionario grupofuncionario;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT GRUPO_FUNCIONARIO.ID, GRUPO_FUNCIONARIO.NOME_GRUPO FROM GRUPO_FUNCIONARIO
+                                    INNER JOIN FUNCIONARIO_GRUPO_FUNCIONARIO ON GRUPO_FUNCIONARIO.ID = FUNCIONARIO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO
+                                    WHERE FUNCIONARIO_GRUPO_FUNCIONARIO.ID_FUNCIONARIO = @IdFuncionario";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncionario", _idFuncionario);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        grupofuncionario = new GrupoFuncionario();
+                        grupofuncionario.Id = Convert.ToInt32(rd["ID"]);
+                        grupofuncionario.NomeGrupo = rd["NomeGrupo"].ToString();
+                        grupofuncionarios.Add(grupofuncionario);
+                    }
+                }
+                return grupofuncionarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar grupos de funcionários por Id do funcionário.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
