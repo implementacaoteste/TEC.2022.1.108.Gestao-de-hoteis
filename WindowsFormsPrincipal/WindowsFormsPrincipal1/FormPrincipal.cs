@@ -124,5 +124,14 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void sobreToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            using (FormSobre frm = new FormSobre())
+            {
+                frm.ShowDialog();
+            }
+        }
+
     }
 }
