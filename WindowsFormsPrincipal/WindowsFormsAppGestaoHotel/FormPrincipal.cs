@@ -145,7 +145,7 @@ namespace WindowsFormsPrincipal1
 
         private void grupoFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario)
+            using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
             {
                 frm.ShowDialog();
             }

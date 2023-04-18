@@ -114,14 +114,18 @@
             // buscarFuncionárioToolStripMenuItem
             // 
             this.buscarFuncionárioToolStripMenuItem.Name = "buscarFuncionárioToolStripMenuItem";
-            this.buscarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(279, 30);
+            this.buscarFuncionárioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.buscarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(384, 30);
             this.buscarFuncionárioToolStripMenuItem.Text = "Buscar Funcionário";
             this.buscarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.buscarFuncionárioToolStripMenuItem_Click);
             // 
             // grupoFuncionárioToolStripMenuItem
             // 
             this.grupoFuncionárioToolStripMenuItem.Name = "grupoFuncionárioToolStripMenuItem";
-            this.grupoFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(279, 30);
+            this.grupoFuncionárioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.G)));
+            this.grupoFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(384, 30);
             this.grupoFuncionárioToolStripMenuItem.Text = "Grupo Funcionário";
             this.grupoFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.grupoFuncionárioToolStripMenuItem_Click);
             // 
