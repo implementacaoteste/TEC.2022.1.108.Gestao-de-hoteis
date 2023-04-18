@@ -216,6 +216,7 @@ namespace DAL
                         funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
+                        funcionarios.Add(funcionario);
                     }
                 }
                 return funcionarios;
