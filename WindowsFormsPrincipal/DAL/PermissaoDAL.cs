@@ -54,7 +54,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public void Excluir(int _id)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -78,7 +77,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Permissao> BuscarTodos() 
         {
             List<Permissao> permissaos = new List<Permissao>();
@@ -114,7 +112,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Permissao> BuscarPorId(int _id)
         {
             Permissao permissao = new Permissao();
@@ -152,26 +149,28 @@ namespace DAL
         }
         public List<Permissao> BuscarPorDescricao(string _descricao)
         {
-            List<Permissao> permissaos = new List<Permissao>();
+            List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"SELECT Id,Descricao FROM Permissao WHERE Descricao LIKE @descricao";
+                cmd.CommandText = @"SELECT ID, DESCRICAO FROM PERMISSAO WHERE DESCRICAO LIKE @Descricao";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@descricao","%"+_descricao+"%");
-                using (SqlDataReader Ler = cmd.ExecuteReader())
+                cmd.Parameters.AddWithValue("@Descricao", "%" + _descricao + "%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (Ler.Read())
+                    while (rd.Read())
                     {
                         permissao = new Permissao();
-                        permissao.Id = Convert.ToInt32(Ler["Id"]);
-                        permissao.Descricao = Convert.ToString(Ler["Descricao"]);
-                        //permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
+                        permissao.Id = Convert.ToInt32(rd["ID"]);
+                        permissao.Descricao = Convert.ToString(rd["DESCRICAO"]);
+                        permissoes.Add(permissao);
                     }
                 }
-                return permissaos;
+                return permissoes;
             }
             catch(Exception ex)
             {
@@ -179,7 +178,46 @@ namespace DAL
             }
             finally
             {
+                cn.Close();
+            }
+        }
+        public List<Permissao> BuscarPorIdGrupo(int _idGrupoFuncionario)
+        {
+            List<Permissao> permissoes = new List<Permissao>();
+            Permissao permissao;
 
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Permissao.Id, Permissao.Descricao FROM Permissao
+                                    INNER JOIN PermissaoGrupoUsuario ON Permissao.Id = PermissaoGrupoUsuario.IdPermissao
+                                    WHERE PermissaoGrupoUsuario.IdGrupoUsuario = @IdGrupoUsuario ORDER BY Permissao.Descricao";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idGrupoFuncionario);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        permissao = new Permissao();
+                        permissao.Id = Convert.ToInt32(rd["Id"]);
+                        permissao.Descricao = rd["Descricao"].ToString();
+                        permissoes.Add(permissao);
+                    }
+                }
+                return permissoes;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar permissoes por Id no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
             }
         }
     }
