@@ -34,6 +34,7 @@
             System.Windows.Forms.Label id_ClasseLabel;
             System.Windows.Forms.Label numeroLabel;
             System.Windows.Forms.Label valor_DiariaLabel;
+            System.Windows.Forms.Label id_ClasseLabel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroQuarto));
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -45,11 +46,13 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.classeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.id_ClasseComboBox = new System.Windows.Forms.ComboBox();
             descricaoLabel = new System.Windows.Forms.Label();
             id_StatusLabel = new System.Windows.Forms.Label();
             id_ClasseLabel = new System.Windows.Forms.Label();
             numeroLabel = new System.Windows.Forms.Label();
             valor_DiariaLabel = new System.Windows.Forms.Label();
+            id_ClasseLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).BeginInit();
@@ -178,11 +181,31 @@
             // 
             this.classeBindingSource.DataSource = typeof(Models.Classe);
             // 
+            // id_ClasseLabel1
+            // 
+            id_ClasseLabel1.AutoSize = true;
+            id_ClasseLabel1.Location = new System.Drawing.Point(316, 185);
+            id_ClasseLabel1.Name = "id_ClasseLabel1";
+            id_ClasseLabel1.Size = new System.Drawing.Size(66, 16);
+            id_ClasseLabel1.TabIndex = 12;
+            id_ClasseLabel1.Text = "Id Classe:";
+            // 
+            // id_ClasseComboBox
+            // 
+            this.id_ClasseComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Id_Classe", true));
+            this.id_ClasseComboBox.FormattingEnabled = true;
+            this.id_ClasseComboBox.Location = new System.Drawing.Point(388, 182);
+            this.id_ClasseComboBox.Name = "id_ClasseComboBox";
+            this.id_ClasseComboBox.Size = new System.Drawing.Size(121, 24);
+            this.id_ClasseComboBox.TabIndex = 13;
+            // 
             // FormCadastroQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(id_ClasseLabel1);
+            this.Controls.Add(this.id_ClasseComboBox);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label1);
@@ -221,5 +244,6 @@
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.BindingSource classeBindingSource;
+        private System.Windows.Forms.ComboBox id_ClasseComboBox;
     }
 }
