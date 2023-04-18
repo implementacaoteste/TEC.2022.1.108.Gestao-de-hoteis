@@ -31,13 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroGrupoDeFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaFuncionárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultagrupoDeFuncionárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.quartoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,30 +63,12 @@
             // 
             this.cadastroToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroFuncionárioToolStripMenuItem,
-            this.cadastroGrupoDeFuncionárioToolStripMenuItem,
             this.clienteToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
             this.cadastroToolStripMenuItem.Text = "Cadastros";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
-            // 
-            // cadastroFuncionarioToolStripMenuItem
-            // 
-            this.cadastroFuncionarioToolStripMenuItem.Name = "cadastroFuncionarioToolStripMenuItem";
-            this.cadastroFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.cadastroFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(348, 30);
-            this.cadastroFuncionarioToolStripMenuItem.Text = "Funcionario";
-            this.cadastroFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.cadastroFuncionarioToolStripMenuItem_Click);
-            // 
-            // cadastroGrupoDeFuncionarioToolStripMenuItem
-            // 
-            this.cadastroGrupoDeFuncionarioToolStripMenuItem.Name = "cadastroGrupoDeFuncionarioToolStripMenuItem";
-            this.cadastroGrupoDeFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.cadastroGrupoDeFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(348, 30);
-            this.cadastroGrupoDeFuncionarioToolStripMenuItem.Text = "Grupo de funcionario";
-            this.cadastroGrupoDeFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.cadastroGrupoDeFuncionarioToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
@@ -104,8 +82,6 @@
             this.consultaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem1,
-            this.consultaFuncionarioToolStripMenuItem1,
-            this.consultagrupoDeFuncionarioToolStripMenuItem1,
             this.quartoToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
@@ -121,24 +97,6 @@
             this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(399, 30);
             this.clienteToolStripMenuItem1.Text = "Cliente";
             this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click_1);
-            // 
-            // consultaFuncionarioToolStripMenuItem1
-            // 
-            this.consultaFuncionarioToolStripMenuItem1.Name = "consultaFuncionarioToolStripMenuItem1";
-            this.consultaFuncionarioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.F)));
-            this.consultaFuncionarioToolStripMenuItem1.Size = new System.Drawing.Size(399, 30);
-            this.consultaFuncionarioToolStripMenuItem1.Text = "Funcionario";
-            this.consultaFuncionarioToolStripMenuItem1.Click += new System.EventHandler(this.consultaFuncionarioToolStripMenuItem1_Click);
-            // 
-            // consultagrupoDeFuncionarioToolStripMenuItem1
-            // 
-            this.consultagrupoDeFuncionarioToolStripMenuItem1.Name = "consultagrupoDeFuncionarioToolStripMenuItem1";
-            this.consultagrupoDeFuncionarioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.G)));
-            this.consultagrupoDeFuncionarioToolStripMenuItem1.Size = new System.Drawing.Size(399, 30);
-            this.consultagrupoDeFuncionarioToolStripMenuItem1.Text = "Grupo de funcionario";
-            this.consultagrupoDeFuncionarioToolStripMenuItem1.Click += new System.EventHandler(this.consultagrupoDeFuncionarioToolStripMenuItem1_Click);
             // 
             // quartoToolStripMenuItem
             // 

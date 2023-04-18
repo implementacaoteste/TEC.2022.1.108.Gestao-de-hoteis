@@ -100,12 +100,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 429);
+            this.ClientSize = new System.Drawing.Size(814, 510);
             this.ControlBox = false;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelSobre);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonOK);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
