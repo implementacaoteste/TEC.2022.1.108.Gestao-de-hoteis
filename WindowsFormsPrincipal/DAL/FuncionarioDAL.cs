@@ -76,6 +76,78 @@ namespace DAL
                 cn.Close();
             }
         }
+        public void Excluir(int _id)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM FUNCIONARIO 
+                                    WHERE ID= @ID";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar excluir um Funcionário no Banco de Dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public List<Funcionario> BuscarTodos()
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            List<Funcionario> funcionarios = new List<Funcionario>();
+            Funcionario funcionario;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID, ID_SEXO, NOME, NOME_USUARIO, EMAIL ,SENHA , CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR 
+                                    FROM FUNCIONARIO";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        funcionario = new Funcionario();
+                        funcionario.Id = Convert.ToInt32(rd["ID"]);
+                        funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        funcionario.Nome = rd["NOME"].ToString();
+                        funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
+                        funcionario.Email = rd["EMAIL"].ToString();
+                        funcionario.Senha = rd["SENHA"].ToString();
+                        funcionario.CPF = rd["CPF"].ToString();
+                        funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
+                        funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
+                        funcionario.Endereco = rd["ENDERECO"].ToString();
+                        funcionario.Celular = rd["CELULAR"].ToString();
+                        funcionario.GrupoFuncionarios = new GrupoFuncionarioDAL().BuscarPorIdFuncionario(funcionario.Id);
+                        funcionarios.Add(funcionario);
+                    }
+                }
+                return funcionarios;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Ocorreu um erro ao tentar buscar os funcionarios", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public Funcionario BuscarPorId(int _id)
         {
             Funcionario funcionario = new Funcionario();
@@ -161,75 +233,37 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Excluir(int _id)
+        public bool ValidarPermissao(int _idFuncionario, int _idPermissao)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM FUNCIONARIO 
-                                    WHERE ID= @ID";
-
-                cmd.CommandType = System.Data.CommandType.Text;
-                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
-
-                cmd.Connection = cn;
-                cn.Open();
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu erro ao tentar excluir um Funcionário no Banco de Dados.", ex);
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        public List<Funcionario> BuscarTodos()
-        {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            List<Funcionario> funcionarios = new List<Funcionario>();
-            Funcionario funcionario;
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA , ID_SEXO ,CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR 
-                                    From FUNCIONARIO";
+                cmd.CommandText = @"SELECT 1 FROM PERMISSAO_GRUPO_FUNCIONARIO
+                                    INNER JOIN FUNCIONARIO_GRUPO_FUNCIONARIO ON PERMISSAO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO = FUNCIONARIO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO
+                                    WHERE FUNCIONARIO_GRUPO_FUNCIONARIO.ID_FUNCIONARIO = @IdFuncionario AND PERMISSAO_GRUPO_FUNCIONARIO.ID_PERMISSAO = @IdPermissao";
                 cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncionario", _idFuncionario);
+                cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
                 cn.Open();
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (rd.Read())
-                    {
-                        funcionario = new Funcionario();
-                        funcionario.Id = Convert.ToInt32(rd["ID"]);
-                        funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
-                        funcionario.Nome = rd["NOME"].ToString();
-                        funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
-                        funcionario.Email = rd["EMAIL"].ToString();
-                        funcionario.Senha = rd["SENHA"].ToString();
-                        funcionario.CPF = rd["CPF"].ToString();
-                        funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
-                        funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
-                        funcionario.Endereco = rd["ENDERECO"].ToString();
-                        funcionario.Celular = rd["CELULAR"].ToString();
-                        funcionarios.Add(funcionario);
-                    }
+                    if (rd.Read())
+                        return true;
                 }
-                return funcionarios;
+                return false;
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Ocorreu um erro ao tentar buscar os funcionarios", ex);
+                throw new Exception("Ocorreu um erro ao tentar validar permissões do usuário no banco de dados.", ex);
             }
             finally
             {
                 cn.Close();
             }
         }
+
     }
 }
