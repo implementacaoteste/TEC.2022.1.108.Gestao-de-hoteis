@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaGrupoFuncionario));
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
@@ -35,6 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSelecionar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.grupoFuncionariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grupoFuncionariosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionariosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -86,6 +92,7 @@
             this.buttonSelecionar.TabIndex = 18;
             this.buttonSelecionar.Text = "Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonCancelar
             // 
@@ -98,11 +105,42 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // grupoFuncionariosBindingSource
+            // 
+            this.grupoFuncionariosBindingSource.DataSource = typeof(Models.GrupoFuncionario);
+            // 
+            // grupoFuncionariosDataGridView
+            // 
+            this.grupoFuncionariosDataGridView.AllowUserToAddRows = false;
+            this.grupoFuncionariosDataGridView.AllowUserToDeleteRows = false;
+            this.grupoFuncionariosDataGridView.AutoGenerateColumns = false;
+            this.grupoFuncionariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grupoFuncionariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2});
+            this.grupoFuncionariosDataGridView.DataSource = this.grupoFuncionariosBindingSource;
+            this.grupoFuncionariosDataGridView.Location = new System.Drawing.Point(14, 147);
+            this.grupoFuncionariosDataGridView.Name = "grupoFuncionariosDataGridView";
+            this.grupoFuncionariosDataGridView.ReadOnly = true;
+            this.grupoFuncionariosDataGridView.RowHeadersWidth = 51;
+            this.grupoFuncionariosDataGridView.RowTemplate.Height = 24;
+            this.grupoFuncionariosDataGridView.Size = new System.Drawing.Size(774, 256);
+            this.grupoFuncionariosDataGridView.TabIndex = 22;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NomeGrupo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome do Grupo";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // FormConsultaGrupoFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 477);
+            this.Controls.Add(this.grupoFuncionariosDataGridView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.buttonBuscar);
@@ -113,6 +151,8 @@
             this.MaximizeBox = false;
             this.Name = "FormConsultaGrupoFuncionario";
             this.Text = "Consulta de Grupo de Funcionário";
+            ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionariosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,5 +165,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSelecionar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.BindingSource grupoFuncionariosBindingSource;
+        private System.Windows.Forms.DataGridView grupoFuncionariosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

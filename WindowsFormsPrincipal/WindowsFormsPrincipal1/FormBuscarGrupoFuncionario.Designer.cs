@@ -185,6 +185,7 @@
             this.buttonAdicionarPermissão.TabIndex = 5;
             this.buttonAdicionarPermissão.Text = "Adicionar";
             this.buttonAdicionarPermissão.UseVisualStyleBackColor = true;
+            this.buttonAdicionarPermissão.Click += new System.EventHandler(this.buttonAdicionarPermissão_Click);
             // 
             // buttonExcluirPermissão
             // 
@@ -195,6 +196,7 @@
             this.buttonExcluirPermissão.TabIndex = 6;
             this.buttonExcluirPermissão.Text = "Excluir";
             this.buttonExcluirPermissão.UseVisualStyleBackColor = true;
+            this.buttonExcluirPermissão.Click += new System.EventHandler(this.buttonExcluirPermissão_Click);
             // 
             // FormBuscarGrupoFuncionario
             // 

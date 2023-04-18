@@ -60,5 +60,44 @@ namespace WindowsFormsPrincipal1
 
             MessageBox.Show("Registro excluído com sucesso!");
         }
+
+        private void buttonAdicionarPermissão_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (grupoFuncionarioBindingSource.Count == 0)
+                    throw new Exception("Não existe um grupo selecionado para adicionar uma permissão.");
+
+                using (FormConsultaPermissao frm = new FormConsultaPermissao())
+                {
+                    frm.ShowDialog();
+                    if (frm.Id != 0)
+                    {
+                        int idGrupoFuncionario = ((GrupoFuncionario)grupoFuncionarioBindingSource.Current).Id;
+                        new GrupoFuncionarioBLL().AdicionarPermissao(idGrupoFuncionario, frm.Id);
+                    }
+                }
+                buttonBuscarGrupoFuncionario_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonExcluirPermissão_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idGrupoFuncionario = ((GrupoFuncionario)grupoFuncionarioBindingSource.Current).Id;
+                int idPermissao = ((Permissao)permissoesBindingSource.Current).Id;
+                new GrupoFuncionarioBLL().RemoverPermissao(idGrupoFuncionario, idPermissao);
+                permissoesBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

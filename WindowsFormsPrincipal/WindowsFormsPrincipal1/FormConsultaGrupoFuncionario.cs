@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace WindowsFormsPrincipal1
 {
     public partial class FormConsultaGrupoFuncionario : Form
     {
+        public int Id;
         public FormConsultaGrupoFuncionario()
         {
             InitializeComponent();
@@ -21,7 +24,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                //grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarPorNomeGrupo(textBoxBuscar.Text);
+                grupoFuncionariosBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarPorNomeGrupo(textBoxBuscar.Text);
             }
             catch (Exception ex)
             {
@@ -33,6 +36,25 @@ namespace WindowsFormsPrincipal1
         {
             Close();
         }
+        
+        private void buttonSelecionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (grupoFuncionariosBindingSource.Count > 0)
+                {
+                    Id = ((GrupoFuncionario)grupoFuncionariosBindingSource.Current).Id;
+                    Close();
+                }
+                else
+                    MessageBox.Show("Não existe registro para ser selecionado.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void buttonCancelar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
