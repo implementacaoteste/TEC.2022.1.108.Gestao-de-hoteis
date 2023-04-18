@@ -9,11 +9,13 @@ namespace BLL
     {
         public void Inserir(GrupoFuncionario _grupoFuncionario)
         {
+            ValidarDados(_grupoFuncionario);
             GrupoFuncionarioDAL grupoFuncionarioDAL = new GrupoFuncionarioDAL();
             grupoFuncionarioDAL.Inserir(_grupoFuncionario);
         }
         public void Alterar(GrupoFuncionario _grupoFuncionario)
         {
+            ValidarDados(_grupoFuncionario);
             GrupoFuncionarioDAL grupoFuncionarioDAL = new GrupoFuncionarioDAL();
             grupoFuncionarioDAL.Alterar(_grupoFuncionario);
         }
@@ -33,13 +35,16 @@ namespace BLL
         {
             return new GrupoFuncionarioDAL().BuscarPorNomeGrupo(_nomeGrupo);
         }
-
+        private void ValidarDados(GrupoFuncionario _grupoFuncionario)
+        {
+            if (_grupoFuncionario.NomeGrupo.Length <= 2)
+                throw new Exception("O nome deve ter mais de 2 caracteres.");
+        }
         public void AdicionarPermissao(int _idGrupoFuncionario, int _idPermissao)
         {
             if (!new GrupoFuncionarioDAL().PermissaoPertenceAoGrupo(_idGrupoFuncionario, _idPermissao))
                 new GrupoFuncionarioDAL().AdicionarPermissao(_idGrupoFuncionario, _idPermissao);
         }
-
         public void RemoverPermissao(int _idGrupoFuncionario, int _idPermissao)
         {
             new GrupoFuncionarioDAL().RemoverPermissao(_idGrupoFuncionario, _idPermissao);
