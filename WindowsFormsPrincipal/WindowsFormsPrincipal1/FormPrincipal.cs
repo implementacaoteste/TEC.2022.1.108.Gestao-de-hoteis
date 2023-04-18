@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -107,11 +108,21 @@ namespace WindowsFormsPrincipal1
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            using (FormLogin frm = new FormLogin())
+            if (MessageBox.Show("Deseja realmente sair do seu usuário", "Cuidado", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+            new Funcionario().LimparDados();
+
+
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormSobre frm = new FormSobre())
             {
                 frm.ShowDialog();
-            }            
+            }
         }
     }
 }
