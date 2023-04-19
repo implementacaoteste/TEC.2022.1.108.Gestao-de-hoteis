@@ -152,5 +152,45 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroDeFuncionario frm = new FormCadastroDeFuncionario())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void quartoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroQuarto frm = new FormCadastroQuarto())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void grupoFuncionarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroGrupoFuncionario frm = new FormCadastroGrupoFuncionario())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void buscarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(FormBuscarFuncionario frm = new FormBuscarFuncionario())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void grupoFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
