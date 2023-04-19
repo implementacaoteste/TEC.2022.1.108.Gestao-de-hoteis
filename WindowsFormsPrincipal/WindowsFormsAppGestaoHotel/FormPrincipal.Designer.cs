@@ -129,7 +129,7 @@
             | System.Windows.Forms.Keys.B)));
             this.buscarFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(384, 30);
             this.buscarFuncionarioToolStripMenuItem.Text = "Buscar Funcionario";
-            this.buscarFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.buscarFuncionarioToolStripMenuItem_Click);
+           // this.buscarFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.buscarFuncionarioToolStripMenuItem_Click);
             // 
             // grupoFuncionarioToolStripMenuItem
             // 
@@ -138,7 +138,7 @@
             | System.Windows.Forms.Keys.G)));
             this.grupoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(384, 30);
             this.grupoFuncionarioToolStripMenuItem.Text = "Grupo Funcionario";
-            this.grupoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem_Click);
+           // this.grupoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -190,7 +190,7 @@
             this.grupoFuncionarioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
             this.grupoFuncionarioToolStripMenuItem1.Size = new System.Drawing.Size(321, 30);
             this.grupoFuncionarioToolStripMenuItem1.Text = "Grupo funcionario";
-            this.grupoFuncionarioToolStripMenuItem1.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem1_Click);
+           // this.grupoFuncionarioToolStripMenuItem1.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem1_Click);
             // 
             // quartoToolStripMenuItem1
             // 
@@ -198,7 +198,7 @@
             this.quartoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
             this.quartoToolStripMenuItem1.Size = new System.Drawing.Size(321, 30);
             this.quartoToolStripMenuItem1.Text = "Quarto";
-            this.quartoToolStripMenuItem1.Click += new System.EventHandler(this.quartoToolStripMenuItem1_Click);
+           // this.quartoToolStripMenuItem1.Click += new System.EventHandler(this.quartoToolStripMenuItem1_Click);
 
             // 
             // FormPrincipal
@@ -248,7 +248,7 @@
 
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
 
-        private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
+       // private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grupoFuncionarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem quartoToolStripMenuItem1;
 
