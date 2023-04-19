@@ -104,7 +104,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;    
+                cmd.Connection = cn;
                 cmd.CommandText
             }
         }
