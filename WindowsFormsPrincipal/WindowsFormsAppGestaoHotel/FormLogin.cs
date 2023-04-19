@@ -54,8 +54,10 @@ namespace WindowsFormsPrincipal1
 
         private void FormLogin_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if(e.KeyCode == Keys.Escape)
+            {
                 Application.Exit();
+            }
         }
     }
 }
