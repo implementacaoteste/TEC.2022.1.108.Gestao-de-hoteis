@@ -152,5 +152,21 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void grupoFuncionárioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using(FormCadastroGrupoFuncionario frm = new FormCadastroGrupoFuncionario())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void quartoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroQuarto frm = new FormCadastroQuarto())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
