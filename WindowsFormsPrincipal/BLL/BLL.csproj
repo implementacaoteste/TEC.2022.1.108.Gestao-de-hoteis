@@ -69,6 +69,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Models.Classe.datasource" />
+    <None Include="Models.Cliente.datasource" />
+    <None Include="Models.Constante.datasource" />
+    <None Include="Models.Diaria.datasource" />
+    <None Include="Models.Funcionario.datasource" />
+    <None Include="Models.GrupoFuncionario.datasource" />
+    <None Include="Models.Pagamento.datasource" />
+    <None Include="Models.Permissao.datasource" />
+    <None Include="Models.Quarto.datasource" />
+    <None Include="Models.Sexo.datasource" />
+    <None Include="Models.Statuses.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

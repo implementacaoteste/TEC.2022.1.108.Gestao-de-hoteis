@@ -30,5 +30,10 @@ namespace BLL
         {
             new QuartoDAL().BuscarPorNumero(_numero);
         }
+        public void ValidarPermissao(int _idPermissao)
+        {
+            if (!new QuartoDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))//Implementar o método "ValidarPermissao" na DAL
+                throw new Exception("Não foi possível realizar essa operação");
+        }
     }
 }
