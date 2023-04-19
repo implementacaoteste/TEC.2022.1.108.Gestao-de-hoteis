@@ -9,7 +9,7 @@ namespace WindowsFormsPrincipal1
     {
         public bool Logou;
         public FormLogin()
-        { 
+        {
             InitializeComponent();
             Logou = false;
         }
@@ -35,21 +35,27 @@ namespace WindowsFormsPrincipal1
 
         private void textBoxSenha_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 pictureBoxEntrar_Click(null, null);
             }
-            if(e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.Up)
             {
                 textBoxUsuario.Focus();
             }
         }
         private void textBoxUsuario_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 textBoxSenha.Focus();
             }
+        }
+
+        private void FormLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Application.Exit();
         }
     }
 }
