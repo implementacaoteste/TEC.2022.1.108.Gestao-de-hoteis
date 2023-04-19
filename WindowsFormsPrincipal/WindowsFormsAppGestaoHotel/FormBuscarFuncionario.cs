@@ -33,7 +33,7 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void buttonAdicionar_Click(object sender, EventArgs e)
+        private void buttonAdicionarFuncionario_Click(object sender, EventArgs e)
         {
             using (FormCadastroDeFuncionario frm = new FormCadastroDeFuncionario())
             {
@@ -76,6 +76,11 @@ namespace WindowsFormsPrincipal1
                 }
                 buttonBuscarFuncionario_Click(null, null);
             }
+        }
+
+        private void buttonAdicionarGrupoFuncionario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

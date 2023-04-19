@@ -45,9 +45,9 @@
             classLabel.AutoSize = true;
             classLabel.Location = new System.Drawing.Point(212, 155);
             classLabel.Name = "classLabel";
-            classLabel.Size = new System.Drawing.Size(44, 16);
+            classLabel.Size = new System.Drawing.Size(52, 16);
             classLabel.TabIndex = 2;
-            classLabel.Text = "Class:";
+            classLabel.Text = "Classe:";
             // 
             // label1
             // 

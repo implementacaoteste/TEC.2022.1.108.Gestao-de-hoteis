@@ -38,6 +38,8 @@
             System.Windows.Forms.Label generoLabel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroCliente));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.nomeTextBox1 = new System.Windows.Forms.TextBox();
@@ -45,9 +47,7 @@
             this.cPFTextBox1 = new System.Windows.Forms.TextBox();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nomeLabel1 = new System.Windows.Forms.Label();
             celularLabel1 = new System.Windows.Forms.Label();
             cPFLabel1 = new System.Windows.Forms.Label();
@@ -135,6 +135,14 @@
             this.comboBox1.TabIndex = 41;
             this.comboBox1.ValueMember = "Id";
             // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
+            // 
+            // sexoBindingSource
+            // 
+            this.sexoBindingSource.DataSource = typeof(Models.Sexo);
+            // 
             // buttonSalvar
             // 
             this.buttonSalvar.Location = new System.Drawing.Point(595, 360);
@@ -191,10 +199,6 @@
             this.emailTextBox.Size = new System.Drawing.Size(255, 22);
             this.emailTextBox.TabIndex = 48;
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
-            // 
             // data_nascimentoDateTimePicker
             // 
             this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "Data_nascimento", true));
@@ -202,10 +206,6 @@
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(174, 22);
             this.data_nascimentoDateTimePicker.TabIndex = 49;
-            // 
-            // sexoBindingSource
-            // 
-            this.sexoBindingSource.DataSource = typeof(Models.Sexo);
             // 
             // FormCadastroCliente
             // 

@@ -32,15 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaClasse));
             this.label1 = new System.Windows.Forms.Label();
             this.classeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.classeDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Selecionar = new System.Windows.Forms.Button();
+            this.classeDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classeDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,43 +58,6 @@
             // classeBindingSource
             // 
             this.classeBindingSource.DataSource = typeof(Models.Classe);
-            // 
-            // classeDataGridView
-            // 
-            this.classeDataGridView.AllowUserToAddRows = false;
-            this.classeDataGridView.AllowUserToDeleteRows = false;
-            this.classeDataGridView.AllowUserToOrderColumns = true;
-            this.classeDataGridView.AutoGenerateColumns = false;
-            this.classeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.classeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.classeDataGridView.DataSource = this.classeBindingSource;
-            this.classeDataGridView.Location = new System.Drawing.Point(0, 128);
-            this.classeDataGridView.Name = "classeDataGridView";
-            this.classeDataGridView.ReadOnly = true;
-            this.classeDataGridView.RowHeadersWidth = 51;
-            this.classeDataGridView.RowTemplate.Height = 24;
-            this.classeDataGridView.Size = new System.Drawing.Size(800, 194);
-            this.classeDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Class";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Classe";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // buttonBuscar
             // 
@@ -133,16 +96,53 @@
             this.Selecionar.Text = "Selecionar";
             this.Selecionar.UseVisualStyleBackColor = true;
             // 
+            // classeDataGridView1
+            // 
+            this.classeDataGridView1.AllowUserToAddRows = false;
+            this.classeDataGridView1.AllowUserToDeleteRows = false;
+            this.classeDataGridView1.AllowUserToOrderColumns = true;
+            this.classeDataGridView1.AutoGenerateColumns = false;
+            this.classeDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.classeDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.classeDataGridView1.DataSource = this.classeBindingSource;
+            this.classeDataGridView1.Location = new System.Drawing.Point(0, 118);
+            this.classeDataGridView1.Name = "classeDataGridView1";
+            this.classeDataGridView1.ReadOnly = true;
+            this.classeDataGridView1.RowHeadersWidth = 51;
+            this.classeDataGridView1.RowTemplate.Height = 24;
+            this.classeDataGridView1.Size = new System.Drawing.Size(947, 220);
+            this.classeDataGridView1.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
             // FormConsultaClasse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.ClientSize = new System.Drawing.Size(959, 451);
+            this.Controls.Add(this.classeDataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.Selecionar);
             this.Controls.Add(this.buttonBuscar);
-            this.Controls.Add(this.classeDataGridView);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -150,7 +150,7 @@
             this.Name = "FormConsultaClasse";
             this.Text = "Consulta de Classe";
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classeDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,12 +160,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource classeBindingSource;
-        private System.Windows.Forms.DataGridView classeDataGridView;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Selecionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView classeDataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
