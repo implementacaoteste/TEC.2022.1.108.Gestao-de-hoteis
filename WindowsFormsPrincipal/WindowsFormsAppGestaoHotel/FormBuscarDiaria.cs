@@ -16,5 +16,10 @@ namespace WindowsFormsAppGestaoHotel
         {
             InitializeComponent();
         }
+
+        private void FormBuscarDiaria_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
