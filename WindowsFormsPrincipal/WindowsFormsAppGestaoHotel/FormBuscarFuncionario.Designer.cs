@@ -85,6 +85,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.senhaTextBox = new System.Windows.Forms.TextBox();
             this.nomeUsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             idLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
@@ -219,59 +220,70 @@
             // 
             // buttonBuscarFuncionario
             // 
+            this.buttonBuscarFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonBuscarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarFuncionario.Image")));
             this.buttonBuscarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBuscarFuncionario.Location = new System.Drawing.Point(309, 58);
+            this.buttonBuscarFuncionario.MinimumSize = new System.Drawing.Size(110, 35);
             this.buttonBuscarFuncionario.Name = "buttonBuscarFuncionario";
             this.buttonBuscarFuncionario.Size = new System.Drawing.Size(110, 35);
             this.buttonBuscarFuncionario.TabIndex = 0;
             this.buttonBuscarFuncionario.Text = "Buscar";
             this.buttonBuscarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBuscarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonBuscarFuncionario.UseVisualStyleBackColor = false;
             this.buttonBuscarFuncionario.Click += new System.EventHandler(this.buttonBuscarFuncionario_Click);
             // 
             // buttonAdicionarFuncionario
             // 
+            this.buttonAdicionarFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonAdicionarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdicionarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonAdicionarFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarFuncionario.Image")));
             this.buttonAdicionarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAdicionarFuncionario.Location = new System.Drawing.Point(12, 769);
+            this.buttonAdicionarFuncionario.MinimumSize = new System.Drawing.Size(130, 35);
             this.buttonAdicionarFuncionario.Name = "buttonAdicionarFuncionario";
             this.buttonAdicionarFuncionario.Size = new System.Drawing.Size(130, 35);
             this.buttonAdicionarFuncionario.TabIndex = 0;
             this.buttonAdicionarFuncionario.Text = "Adicionar";
             this.buttonAdicionarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAdicionarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonAdicionarFuncionario.UseVisualStyleBackColor = false;
             this.buttonAdicionarFuncionario.Click += new System.EventHandler(this.buttonAdicionarFuncionario_Click);
             // 
             // buttonExcluirFuncionario
             // 
-            this.buttonExcluirFuncionario.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonExcluirFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonExcluirFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExcluirFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluirFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirFuncionario.Image")));
             this.buttonExcluirFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExcluirFuncionario.Location = new System.Drawing.Point(274, 769);
+            this.buttonExcluirFuncionario.MinimumSize = new System.Drawing.Size(110, 35);
             this.buttonExcluirFuncionario.Name = "buttonExcluirFuncionario";
             this.buttonExcluirFuncionario.Size = new System.Drawing.Size(110, 35);
             this.buttonExcluirFuncionario.TabIndex = 0;
             this.buttonExcluirFuncionario.Text = "Excluir";
             this.buttonExcluirFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExcluirFuncionario.UseVisualStyleBackColor = true;
+            this.buttonExcluirFuncionario.UseVisualStyleBackColor = false;
             this.buttonExcluirFuncionario.Click += new System.EventHandler(this.buttonExcluirFuncionário_Click);
             // 
             // buttonAlterarFuncionario
             // 
+            this.buttonAlterarFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonAlterarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAlterarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonAlterarFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarFuncionario.Image")));
             this.buttonAlterarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAlterarFuncionario.Location = new System.Drawing.Point(152, 769);
+            this.buttonAlterarFuncionario.MinimumSize = new System.Drawing.Size(110, 35);
             this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
             this.buttonAlterarFuncionario.Size = new System.Drawing.Size(110, 35);
             this.buttonAlterarFuncionario.TabIndex = 0;
             this.buttonAlterarFuncionario.Text = "Alterar";
             this.buttonAlterarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAlterarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonAlterarFuncionario.UseVisualStyleBackColor = false;
             this.buttonAlterarFuncionario.Click += new System.EventHandler(this.buttonAlterarFuncionario_Click);
             // 
             // textBoxBuscar
@@ -417,6 +429,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButtonTodos);
             this.groupBox1.Controls.Add(this.radioButtonCPF);
             this.groupBox1.Controls.Add(this.radioButtonNome);
             this.groupBox1.Controls.Add(this.textBoxBuscar);
@@ -432,11 +445,11 @@
             // radioButtonCPF
             // 
             this.radioButtonCPF.AutoSize = true;
-            this.radioButtonCPF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radioButtonCPF.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonCPF.Location = new System.Drawing.Point(118, 22);
+            this.radioButtonCPF.Location = new System.Drawing.Point(202, 21);
             this.radioButtonCPF.Name = "radioButtonCPF";
-            this.radioButtonCPF.Size = new System.Drawing.Size(62, 24);
+            this.radioButtonCPF.Size = new System.Drawing.Size(72, 25);
             this.radioButtonCPF.TabIndex = 2;
             this.radioButtonCPF.TabStop = true;
             this.radioButtonCPF.Text = "CPF";
@@ -445,11 +458,11 @@
             // radioButtonNome
             // 
             this.radioButtonNome.AutoSize = true;
-            this.radioButtonNome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radioButtonNome.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonNome.Location = new System.Drawing.Point(7, 22);
+            this.radioButtonNome.Location = new System.Drawing.Point(105, 21);
             this.radioButtonNome.Name = "radioButtonNome";
-            this.radioButtonNome.Size = new System.Drawing.Size(73, 24);
+            this.radioButtonNome.Size = new System.Drawing.Size(83, 25);
             this.radioButtonNome.TabIndex = 2;
             this.radioButtonNome.TabStop = true;
             this.radioButtonNome.Text = "Nome";
@@ -524,32 +537,37 @@
             // 
             // buttonAdicionarGrupoFuncionario
             // 
+            this.buttonAdicionarGrupoFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonAdicionarGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdicionarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonAdicionarGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarGrupoFuncionario.Image")));
             this.buttonAdicionarGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAdicionarGrupoFuncionario.Location = new System.Drawing.Point(750, 769);
+            this.buttonAdicionarGrupoFuncionario.MinimumSize = new System.Drawing.Size(130, 35);
             this.buttonAdicionarGrupoFuncionario.Name = "buttonAdicionarGrupoFuncionario";
             this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(130, 35);
             this.buttonAdicionarGrupoFuncionario.TabIndex = 0;
             this.buttonAdicionarGrupoFuncionario.Text = "Adicionar";
             this.buttonAdicionarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAdicionarGrupoFuncionario.UseVisualStyleBackColor = true;
+            this.buttonAdicionarGrupoFuncionario.UseVisualStyleBackColor = false;
             this.buttonAdicionarGrupoFuncionario.Click += new System.EventHandler(this.buttonAdicionarGrupoFuncionario_Click);
             // 
             // buttonExcluirGrupoFuncionario
             // 
-            this.buttonExcluirGrupoFuncionario.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonExcluirGrupoFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonExcluirGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExcluirGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluirGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirGrupoFuncionario.Image")));
             this.buttonExcluirGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExcluirGrupoFuncionario.Location = new System.Drawing.Point(897, 769);
+            this.buttonExcluirGrupoFuncionario.MinimumSize = new System.Drawing.Size(110, 35);
             this.buttonExcluirGrupoFuncionario.Name = "buttonExcluirGrupoFuncionario";
             this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(110, 35);
             this.buttonExcluirGrupoFuncionario.TabIndex = 0;
             this.buttonExcluirGrupoFuncionario.Text = "Excluir";
             this.buttonExcluirGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = true;
-            //this.buttonExcluirGrupoFuncionario.Click += new System.EventHandler(this.buttonExcluirFuncionário_Click);
+            this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = false;
+            this.buttonExcluirGrupoFuncionario.Click += new System.EventHandler(this.buttonExcluirGrupoFuncionario_Click);
             // 
             // groupBox4
             // 
@@ -578,6 +596,7 @@
             // 
             // celularTextBox
             // 
+            this.celularTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.celularTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Celular", true));
             this.celularTextBox.Location = new System.Drawing.Point(86, 177);
             this.celularTextBox.Name = "celularTextBox";
@@ -586,6 +605,7 @@
             // 
             // emailTextBox
             // 
+            this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Email", true));
             this.emailTextBox.Location = new System.Drawing.Point(86, 145);
             this.emailTextBox.Name = "emailTextBox";
@@ -594,6 +614,7 @@
             // 
             // enderecoTextBox
             // 
+            this.enderecoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Endereco", true));
             this.enderecoTextBox.Location = new System.Drawing.Point(86, 114);
             this.enderecoTextBox.Name = "enderecoTextBox";
@@ -612,6 +633,7 @@
             // 
             // sexoTextBox
             // 
+            this.sexoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Sexo", true));
             this.sexoTextBox.Location = new System.Drawing.Point(430, 51);
             this.sexoTextBox.Name = "sexoTextBox";
@@ -620,6 +642,7 @@
             // 
             // cPFTextBox
             // 
+            this.cPFTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "CPF", true));
             this.cPFTextBox.Location = new System.Drawing.Point(86, 83);
             this.cPFTextBox.Name = "cPFTextBox";
@@ -628,6 +651,7 @@
             // 
             // nomeTextBox
             // 
+            this.nomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(86, 54);
             this.nomeTextBox.Name = "nomeTextBox";
@@ -636,6 +660,7 @@
             // 
             // idTextBox
             // 
+            this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(86, 25);
             this.idTextBox.Name = "idTextBox";
@@ -657,6 +682,7 @@
             // 
             // nomeGrupoTextBox
             // 
+            this.nomeGrupoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeGrupoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionariosBindingSource, "NomeGrupo", true));
             this.nomeGrupoTextBox.Location = new System.Drawing.Point(127, 54);
             this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
@@ -665,6 +691,7 @@
             // 
             // idTextBox1
             // 
+            this.idTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionariosBindingSource, "Id", true));
             this.idTextBox1.Location = new System.Drawing.Point(127, 26);
             this.idTextBox1.Name = "idTextBox1";
@@ -686,6 +713,7 @@
             // 
             // senhaTextBox
             // 
+            this.senhaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Senha", true));
             this.senhaTextBox.Location = new System.Drawing.Point(114, 56);
             this.senhaTextBox.Name = "senhaTextBox";
@@ -694,11 +722,26 @@
             // 
             // nomeUsuarioTextBox
             // 
+            this.nomeUsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "NomeUsuario", true));
             this.nomeUsuarioTextBox.Location = new System.Drawing.Point(114, 27);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
             this.nomeUsuarioTextBox.Size = new System.Drawing.Size(150, 22);
             this.nomeUsuarioTextBox.TabIndex = 1;
+            // 
+            // radioButtonTodos
+            // 
+            this.radioButtonTodos.AutoSize = true;
+            this.radioButtonTodos.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonTodos.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioButtonTodos.Location = new System.Drawing.Point(14, 21);
+            this.radioButtonTodos.Name = "radioButtonTodos";
+            this.radioButtonTodos.Size = new System.Drawing.Size(85, 25);
+            this.radioButtonTodos.TabIndex = 2;
+            this.radioButtonTodos.TabStop = true;
+            this.radioButtonTodos.Text = "Todos";
+            this.radioButtonTodos.UseVisualStyleBackColor = false;
             // 
             // FormBuscarFuncionario
             // 
@@ -716,8 +759,11 @@
             this.Controls.Add(this.buttonAdicionarGrupoFuncionario);
             this.Controls.Add(this.buttonExcluirFuncionario);
             this.Controls.Add(this.buttonAdicionarFuncionario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormBuscarFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Consulta de Funcionários";
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).EndInit();
@@ -782,5 +828,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox senhaTextBox;
         private System.Windows.Forms.TextBox nomeUsuarioTextBox;
+        private System.Windows.Forms.RadioButton radioButtonTodos;
     }
 }

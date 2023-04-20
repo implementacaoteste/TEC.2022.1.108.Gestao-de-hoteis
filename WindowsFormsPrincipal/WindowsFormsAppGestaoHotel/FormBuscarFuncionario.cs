@@ -24,6 +24,17 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
+                if (radioButtonTodos.Checked)
+                {
+                    funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarTodos();
+                }
+                else if (radioButtonNome.Checked)
+                {
+                    funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorNome(textBoxBuscar.Text);
+                    //bindingSourceCandidato.DataSource = candidatoBLL.BuscarNumero(Convert.ToInt32(textBoxBuscar.Text));
+                }
+                else if (radioButtonCPF.Checked)
+
                 funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarTodos();
 
             }
@@ -79,6 +90,11 @@ namespace WindowsFormsPrincipal1
         }
 
         private void buttonAdicionarGrupoFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExcluirGrupoFuncionario_Click(object sender, EventArgs e)
         {
 
         }
