@@ -15,5 +15,6 @@ namespace Models
         public int Id_funcionario { get; set; }
         public string Data_Saida { get; set; }
         public int Id_Pagamento { get; set; }
+        public List<Quarto> Quartos { get; set; }
     }
 }
