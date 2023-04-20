@@ -49,5 +49,10 @@ namespace BLL
         {
             new GrupoFuncionarioDAL().RemoverPermissao(_idGrupoFuncionario, _idPermissao);
         }
+        public void ValidarPermissao(int _idPermissao)
+        {
+            if (!new GrupoFuncionarioDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
+                throw new Exception("Não foi possível realizar essa operação");
+        }
     }
 }
