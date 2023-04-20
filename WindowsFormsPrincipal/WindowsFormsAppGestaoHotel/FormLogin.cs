@@ -59,5 +59,10 @@ namespace WindowsFormsPrincipal1
                 Application.Exit();
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
