@@ -46,6 +46,10 @@ namespace BLL
         {
              return new ClienteDAL().BuscaPorNome(_Nome);
         }
+        public void ValidarPermissao(Cliente _cliente)
+        {
+            
+        }
 
     }
 }
