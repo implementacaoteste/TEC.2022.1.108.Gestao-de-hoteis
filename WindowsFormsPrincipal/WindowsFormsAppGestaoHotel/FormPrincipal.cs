@@ -193,5 +193,13 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
