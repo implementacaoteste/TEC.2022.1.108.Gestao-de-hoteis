@@ -69,12 +69,6 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
-
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FormCadastroCliente frm = new FormCadastroCliente())
@@ -116,7 +110,6 @@ namespace WindowsFormsPrincipal1
             new Funcionario().LimparDados();
             using (FormLogin frm = new FormLogin())
             {
-                this.Hide();
                 frm.ShowDialog();
             }
         }
@@ -191,14 +184,6 @@ namespace WindowsFormsPrincipal1
             using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
             {
                 frm.ShowDialog();
-            }
-        }
-
-        private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                Application.Exit();
             }
         }
     }

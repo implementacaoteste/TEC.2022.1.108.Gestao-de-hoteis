@@ -67,10 +67,7 @@ namespace WindowsFormsPrincipal1
 
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Logou == false)
-            {
-                Application.Exit();
-            }
+            
         }
     }
 }

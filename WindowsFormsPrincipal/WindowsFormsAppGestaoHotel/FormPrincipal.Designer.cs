@@ -76,7 +76,6 @@
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
             this.cadastroToolStripMenuItem.Text = "Cadastros";
-            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
@@ -208,7 +207,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Gestão de Hotéis";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
