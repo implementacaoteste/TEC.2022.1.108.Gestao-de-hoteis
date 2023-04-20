@@ -19,24 +19,26 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
         }
-
+        private void FormBuscarFuncionario_Load(object sender, EventArgs e)
+        {
+            radioButtonTodos.Checked = true;
+            funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarTodos();
+        }
         private void buttonBuscarFuncionario_Click(object sender, EventArgs e)
         {
             try
             {
                 if (radioButtonTodos.Checked)
                 {
+                    textBoxBuscar.Clear();
                     funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarTodos();
                 }
                 else if (radioButtonNome.Checked)
                 {
                     funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorNome(textBoxBuscar.Text);
-                    //bindingSourceCandidato.DataSource = candidatoBLL.BuscarNumero(Convert.ToInt32(textBoxBuscar.Text));
                 }
                 else if (radioButtonCPF.Checked)
-
-                funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarTodos();
-
+                    funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorCPF(textBoxBuscar.Text);
             }
             catch (Exception ex)
             {
@@ -91,12 +93,39 @@ namespace WindowsFormsPrincipal1
 
         private void buttonAdicionarGrupoFuncionario_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                using (FormConsultaGrupoFuncionario frm = new FormConsultaGrupoFuncionario())
+                {
+                    frm.ShowDialog();
+                    if (frm.Id != 0)
+                    {
+                        int idFuncionario = ((Funcionario)funcionarioBindingSource.Current).Id;
+                        new FuncionarioBLL().AdicionarGrupoUsuario(idFuncionario, frm.Id);
+                    }
+                }
+                buttonBuscarFuncionario_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonExcluirGrupoFuncionario_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int idGrupoFuncionario = ((GrupoFuncionario)grupoFuncionariosBindingSource.Current).Id;
+                int idFuncionario = ((Funcionario)funcionarioBindingSource.Current).Id;
+                new FuncionarioBLL().RemoverGrupoUsuario(idFuncionario, idGrupoFuncionario);
+                grupoFuncionariosBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
     }
 }

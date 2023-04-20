@@ -169,12 +169,12 @@ namespace DAL
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();
-                        funcionario.Senha = rd["SENHA"].ToString();
                         funcionario.CPF = rd["CPF"].ToString();
                         funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
-                        funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
+                        funcionario.Senha = rd["SENHA"].ToString();
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
+                        funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
                         funcionario.GrupoFuncionarios = new GrupoFuncionarioDAL().BuscarPorIdFuncionario(funcionario.Id);
                         funcionarios.Add(funcionario);
                     }
@@ -183,7 +183,6 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
                 throw new Exception("Ocorreu um erro ao tentar buscar os funcionarios", ex);
             }
             finally
@@ -203,7 +202,7 @@ namespace DAL
                 cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
                                     ENDERECO, CELULAR, ID_SEXO FROM FUNCIONARIO WHERE NOME LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", _nome);
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {

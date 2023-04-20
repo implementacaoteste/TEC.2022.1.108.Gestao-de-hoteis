@@ -23,7 +23,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                new FuncionarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
+                new FuncionarioBLL().Autenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
                 Close();
             }
