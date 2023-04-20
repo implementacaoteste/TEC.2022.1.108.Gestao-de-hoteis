@@ -24,35 +24,30 @@ namespace BLL
             ValidarPermissao(4);
             new FuncionarioDAL().Excluir(_Id);
         }
+        public List<Funcionario> BuscarTodos()
+        {
+            ValidarPermissao(1);
+            return new FuncionarioDAL().BuscarTodos();
+        }
         public Funcionario BuscarPorId(int _Id)
         {
             ValidarPermissao(1);
             return new FuncionarioDAL().BuscarPorId(_Id);
         }
-        public void BuscarPorNomeFuncionario(string _nome)
+        public Funcionario BuscarPorCPF(string _cPF)
         {
             ValidarPermissao(1);
-            new FuncionarioDAL().BuscarPorNomeFuncionario(_nome);
+            return new FuncionarioDAL().BuscarPorCPF(_cPF);
         }
-        public void Altenticar(string _NomeUsuario, string _Senha)
-        {
-            Funcionario funcionario = new FuncionarioDAL().BuscarPorNomeFuncionario(_NomeUsuario);
-            
-            if (_Senha==funcionario.Senha && funcionario.Ativo)
-            {
-                Constante.IdLogado = funcionario.Id;
-            }
-            else
-            {
-                throw new Exception("Usuário ou senha incorreto");
-            }
-            return; 
-        }
-        public List<Funcionario> BuscarTodos()
+        public List<Funcionario> BuscarPorNome(string _nome)
         {
             ValidarPermissao(1);
-            return new FuncionarioDAL().BuscarTodos();
-
+            return new FuncionarioDAL().BuscarPorNome(_nome);
+        }
+        public Funcionario BuscarPorNomeUsuario(string _nomeUsuario)
+        {
+            ValidarPermissao(1);
+            return new FuncionarioDAL().BuscarPorNomeUsuario(_nomeUsuario);
         }
         private void ValidarDados (Funcionario _funcionario, string _confirmacaoSenha)
         {
@@ -70,6 +65,27 @@ namespace BLL
             if (!new FuncionarioDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
                 throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
         }
+        public void AdicionarGrupoUsuario(int _idFuncionario, int _idGrupoFuncionario)
+        {
+            if (!new FuncionarioDAL().FuncionarioPertenceAoGrupo(_idFuncionario, _idGrupoFuncionario))
+                new FuncionarioDAL().AdicionarGrupoFuncionario(_idFuncionario, _idGrupoFuncionario);
+        }
+        public void RemoverGrupoUsuario(int _idFuncionario, int _idGrupoFuncionario)
+        {
+            new FuncionarioDAL().RemoverGrupoUsuario(_idFuncionario, _idGrupoFuncionario);
+        }
+        public void Autenticar(string _NomeUsuario, string _Senha)
+        {
+            Funcionario funcionario = new FuncionarioDAL().BuscarPorNomeUsuario(_NomeUsuario);
+            if (_Senha==funcionario.Senha && funcionario.Ativo)
+            {
+                Constante.IdLogado = funcionario.Id;
+            }
+            else
+            {
+                throw new Exception("Usuário ou senha incorreto");
+            }
+            return; 
+        }
     }
 }
-
