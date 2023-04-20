@@ -116,6 +116,7 @@ namespace WindowsFormsPrincipal1
             new Funcionario().LimparDados();
             using (FormLogin frm = new FormLogin())
             {
+                this.Hide();
                 frm.ShowDialog();
             }
         }
@@ -190,6 +191,14 @@ namespace WindowsFormsPrincipal1
             using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
             {
                 frm.ShowDialog();
+            }
+        }
+
+        private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit();
             }
         }
     }
