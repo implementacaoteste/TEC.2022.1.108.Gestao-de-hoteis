@@ -166,6 +166,10 @@ namespace DAL
             }
 
         }
+        public bool ValidarPermissao(int idLogado, int idPermissao)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
