@@ -118,7 +118,7 @@ namespace DAL
                         diaria.Id_funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         diaria.Id_cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
                         diaria.Id_Pagamento = Convert.ToInt32(rd["ID_pagamento"]);
-                        diaria.Valor_Total = Convert.ToFloat(rd["VALOR_TOTAL"]);
+                        diaria.Valor_Total = Convert.ToSingle(rd["VALOR_TOTAL"]);
                         diaria.Data_Entrada = rd["DATA_ENTRADA"].ToString();
                         diaria.Data_Saida = rd["DATA_SAIDA"].ToString();
                     }
