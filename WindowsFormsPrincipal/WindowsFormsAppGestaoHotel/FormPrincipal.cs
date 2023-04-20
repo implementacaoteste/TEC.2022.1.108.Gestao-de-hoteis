@@ -116,6 +116,7 @@ namespace WindowsFormsPrincipal1
             new Funcionario().LimparDados();
             using (FormLogin frm = new FormLogin())
             {
+                this.Hide();
                 frm.ShowDialog();
             }
         }

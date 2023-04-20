@@ -50,11 +50,23 @@ namespace WindowsFormsPrincipal1
             {
                 textBoxSenha.Focus();
             }
+            if (e.KeyCode == Keys.Down)
+            {
+                textBoxSenha.Focus();
+            }
         }
 
         private void FormLogin_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Escape)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Logou == false)
             {
                 Application.Exit();
             }
