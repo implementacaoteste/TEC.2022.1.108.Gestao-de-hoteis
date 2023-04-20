@@ -102,6 +102,49 @@ namespace DAL
                 cn.Close();
             }
         }
+        public Funcionario BuscarPorId(int _id)
+        {
+            Funcionario funcionario = new Funcionario();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR , ID_SEXO
+                                    From FUNCIONARIO WHERE ID=@ID";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@ID", _id);
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        funcionario.Id = Convert.ToInt32(rd["ID"]);
+                        funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        funcionario.Nome = rd["NOME"].ToString();
+                        funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
+                        funcionario.Email = rd["EMAIL"].ToString();
+                        funcionario.CPF = rd["CPF"].ToString();
+                        funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
+                        funcionario.Senha = rd["SENHA"].ToString();
+                        funcionario.Endereco = rd["ENDERECO"].ToString();
+                        funcionario.Celular = rd["CELULAR"].ToString();
+                        funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
+                    }
+                }
+                return funcionario;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Ocorreu um erro ao tentar buscar o Funcionário na buscar por ID.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public List<Funcionario> BuscarTodos()
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -148,24 +191,25 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Funcionario BuscarPorId(int _id)
+        public List<Funcionario> BuscarPorNome(string _nome)
         {
-            Funcionario funcionario = new Funcionario();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            List<Funcionario> funcionarios = new List<Funcionario>();
+            Funcionario funcionario;
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR , ID_SEXO
-                                    From FUNCIONARIO WHERE ID=@ID";
-
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
+                                    ENDERECO, CELULAR, ID_SEXO FROM FUNCIONARIO WHERE NOME LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@ID", _id);
+                cmd.Parameters.AddWithValue("@Nome", _nome);
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
                     {
+                        funcionario = new Funcionario();
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
                         funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         funcionario.Nome = rd["NOME"].ToString();
@@ -177,21 +221,22 @@ namespace DAL
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
                         funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
+                        funcionario.GrupoFuncionarios = new GrupoFuncionarioDAL().BuscarPorIdFuncionario(funcionario.Id);
+                        funcionarios.Add(funcionario);
                     }
                 }
-                return funcionario;
+                return funcionarios;
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Ocorreu um erro ao tentar buscar o Funcionário na buscar por ID.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o nome do funcionario.", ex);
             }
             finally
             {
                 cn.Close();
             }
         }
-        public Funcionario BuscarPorNomeFuncionario(string _nome)
+        public Funcionario BuscarPorNomeUsuario(string _nome)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             Funcionario funcionario = new Funcionario();
@@ -226,7 +271,50 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o nome do funcionario.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o nome de usuário do funcionario.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public Funcionario BuscarPorCPF(string _cPF)
+        {
+            Funcionario funcionario = new Funcionario();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
+                                    ENDERECO, CELULAR, ID_SEXO FROM FUNCIONARIO WHERE CPF = @CPF";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@CPF", _cPF);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        funcionario.Id = Convert.ToInt32(rd["ID"]);
+                        funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        funcionario.Nome = rd["NOME"].ToString();
+                        funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
+                        funcionario.Email = rd["EMAIL"].ToString();
+                        funcionario.CPF = rd["CPF"].ToString();
+                        funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);
+                        funcionario.Senha = rd["SENHA"].ToString();
+                        funcionario.Endereco = rd["ENDERECO"].ToString();
+                        funcionario.Celular = rd["CELULAR"].ToString();
+                        funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
+                        funcionario.GrupoFuncionarios = new GrupoFuncionarioDAL().BuscarPorIdFuncionario(funcionario.Id);
+                    }
+                }
+                return funcionario;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar o CPF: ", ex);
             }
             finally
             {
@@ -264,6 +352,83 @@ namespace DAL
                 cn.Close();
             }
         }
+        public bool FuncionarioPertenceAoGrupo(int _idFuncionario, int _idGrupoFuncionario)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 FROM FUNCIONARIO_GRUPO_FUNCIONARIO
+                                    WHERE ID_FUNCIONARIO = @IdFuncionario AND ID_GRUPO_FUNCIONARIO = @IdGrupoFuncionario";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncionario", _idFuncionario);
+                cmd.Parameters.AddWithValue("@IdGrupoFuncionario", _idGrupoFuncionario);
+                cn.Open();
 
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar validar a existencia.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public void AdicionarGrupoFuncionario(int _idFuncionario, int _idGrupoFuncionario)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO FUNCIONARIO_GRUPO_FUNCIONARIO(ID_FUNCIONARIO, ID_GRUPO_FUNCIONARIO)
+                                    VALUES(@IdFuncionario, @IdGrupoFuncionario)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncionario", _idFuncionario);
+                cmd.Parameters.AddWithValue("@IdGrupoFuncionario", _idGrupoFuncionario);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar vincular um grupo a um funcionário no banco de dados: ", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public void RemoverGrupoUsuario(int _idFuncionario, int _idGrupoFuncionario)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM FUNCIONARIO_GRUPO_FUNCIONARIO
+                                    WHERE ID_FUNCIONARIO = @IdFuncionario AND ID_GRUPO_FUNCIONARIO = @IdGrupoFuncionario";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncionario", _idFuncionario);
+                cmd.Parameters.AddWithValue("@IdGrupoFuncionario", _idGrupoFuncionario);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar excluir um grupo do funcionário no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
