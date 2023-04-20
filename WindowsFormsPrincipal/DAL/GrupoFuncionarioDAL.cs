@@ -290,7 +290,7 @@ namespace DAL
                     {
                         grupofuncionario = new GrupoFuncionario();
                         grupofuncionario.Id = Convert.ToInt32(rd["ID"]);
-                        grupofuncionario.NomeGrupo = rd["NomeGrupo"].ToString();
+                        grupofuncionario.NomeGrupo = rd["NOME_GRUPO"].ToString();
                         grupofuncionarios.Add(grupofuncionario);
                     }
                 }
