@@ -117,12 +117,12 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.quartoDataGridView.DataSource = this.quartoBindingSource;
-            this.quartoDataGridView.Location = new System.Drawing.Point(23, 129);
+            this.quartoDataGridView.Location = new System.Drawing.Point(12, 129);
             this.quartoDataGridView.Name = "quartoDataGridView";
             this.quartoDataGridView.ReadOnly = true;
             this.quartoDataGridView.RowHeadersWidth = 51;
             this.quartoDataGridView.RowTemplate.Height = 24;
-            this.quartoDataGridView.Size = new System.Drawing.Size(812, 319);
+            this.quartoDataGridView.Size = new System.Drawing.Size(845, 319);
             this.quartoDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
@@ -136,48 +136,48 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Numero";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Numero";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Número";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Id_Classe";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Id_Classe";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Código da Classe";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 80;
             // 
             // dataGridViewTextBoxColumn4
             // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Descricao";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Valor_Diaria";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor_Diaria";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor da Diaria";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
             // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Id_Status";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Id_Status";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Código da Status";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 80;
             // 
             // FormConsultaQuarto
             // 

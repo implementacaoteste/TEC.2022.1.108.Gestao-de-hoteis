@@ -568,6 +568,7 @@
             this.buttonExcluirGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = false;
             this.buttonExcluirGrupoFuncionario.Click += new System.EventHandler(this.buttonExcluirGrupoFuncionario_Click);
+            this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
