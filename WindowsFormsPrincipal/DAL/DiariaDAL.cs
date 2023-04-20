@@ -56,7 +56,6 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _diaria.Id_funcionario);
                 cmd.Parameters.AddWithValue("@ID_PAGAMENTO", _diaria.Id_Pagamento);
                 cmd.Parameters.AddWithValue("@DATA_SAIDA", _diaria.Data_Saida);
-                cmd.Parameters.AddWithValue("@DATA_ENTRADA", _diaria.Data_Entrada);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -96,20 +95,47 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Diaria>BuscarPorTodos()
+        public List<Diaria> BuscarPorTodos()
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            List<Diaria> diaria = new List<Diaria>();
-            Funcionario Diaria;
+            List<Diaria> Diaria = new List<Diaria>();
+            Diaria diaria;
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText
+                cmd.CommandText = @"SELECT ID, VALOR_TOTAL, DATA_ENTRADA, ID_CLIENTE, ID_FUNCIONARIO, ID_PAGAMENTO, DATA_SAIDA, DATA_ENTRADA
+                                    FROM Diaria";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        diaria = new Diaria();
+                        diaria.Id = Convert.ToInt32(rd["ID"]);
+                        diaria.Id_funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
+                        diaria.Id_cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        diaria.Id_Pagamento = Convert.ToInt32(rd["ID_pagamento"]);
+                        diaria.Valor_Total = Convert.ToFloat(rd["VALOR_TOTAL"]);
+                        diaria.Data_Entrada = rd["DATA_ENTRADA"].ToString();
+                        diaria.Data_Saida = rd["DATA_SAIDA"].ToString();
+                    }
+
+                }
+                return Diaria;
             }
+            catch(Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias");
+            }
+            finally 
+            {
+                cn.Close();
+            }
+
         }
-
-
     } 
  } 
 
