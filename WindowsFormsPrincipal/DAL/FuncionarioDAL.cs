@@ -47,21 +47,22 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE FUNCIONARIO SET NOME= @Nome, NOME_USUARIO= @NomeUsuario, EMAIL= @Email, SENHA=@Senha ,CPF = @CPF,
-                                         ATIVO = @Ativo, ENDERECO= @ENDERECO, DATA_NASCIMENTO = @DATA_NASCIMENTO, CELULAR= @CELULAR, ID_SEXO=@SEXO   
-                                        Where ID= @ID ";
+                cmd.CommandText = @"UPDATE FUNCIONARIO SET NOME = @Nome, NOME_USUARIO = @NomeUsuario, EMAIL = @Email, SENHA = @Senha ,CPF = @CPF,
+                                         ATIVO = @Ativo, ENDERECO = @Endereco, DATA_NASCIMENTO = @Data_nascimento, CELULAR = @Celular, ID_SEXO = @Sexo   
+                                        WHERE ID= @ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", _funcionario.Nome);
                 cmd.Parameters.AddWithValue("@NomeUsuario", _funcionario.NomeUsuario);
                 cmd.Parameters.AddWithValue("@Email", _funcionario.Email);
                 cmd.Parameters.AddWithValue("@CPF", _funcionario.CPF);
-                cmd.Parameters.AddWithValue("@IDSEXO", _funcionario.IdSexo);
+                cmd.Parameters.AddWithValue("@Sexo", _funcionario.IdSexo);
                 cmd.Parameters.AddWithValue("@Senha", _funcionario.Senha);
                 cmd.Parameters.AddWithValue("@Ativo", _funcionario.Ativo);
-                cmd.Parameters.AddWithValue("@ENDERECO", _funcionario.Endereco);
-                cmd.Parameters.AddWithValue("@CELULAR", _funcionario.Celular);
-                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", _funcionario.Data_nascimento);
+                cmd.Parameters.AddWithValue("@Endereco", _funcionario.Endereco);
+                cmd.Parameters.AddWithValue("@Celular", _funcionario.Celular);
+                cmd.Parameters.AddWithValue("@Data_nascimento", _funcionario.Data_nascimento);
+                cmd.Parameters.AddWithValue("@ID", _funcionario.Id);
                 cmd.Connection = cn;
                 cn.Open();
 
