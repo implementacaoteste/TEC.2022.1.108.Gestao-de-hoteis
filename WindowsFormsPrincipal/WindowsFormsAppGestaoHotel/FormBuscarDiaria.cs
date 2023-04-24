@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,5 +50,22 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonExcluirDiaria_Click(object sender, EventArgs e)
+        {
+            if (diariaBindingSource.Count <= 0)
+            {
+                MessageBox.Show("Não existe registro para ser excluido.");
+                return;
+            }
+            if (MessageBox.Show("Deseja realmente excluir a diaria?","ATENÇÃO",MessageBoxButtons.YesNo) == DialogResult.No)
+                return;
+            int id = ((Diaria)diariaBindingSource.Current).Id;
+            new Diaria().Excluir(id);
+            diariaBindingSource.RemoveCurrent();
+
+            MessageBox.Show("Registro excluido com sucesso!");
+        }
+
     }
 }

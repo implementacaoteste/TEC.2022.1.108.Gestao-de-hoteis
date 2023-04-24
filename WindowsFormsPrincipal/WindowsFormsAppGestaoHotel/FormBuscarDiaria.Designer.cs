@@ -434,6 +434,7 @@
             this.buttonExcluirDiaria.TabIndex = 24;
             this.buttonExcluirDiaria.Text = "Excluir";
             this.buttonExcluirDiaria.UseVisualStyleBackColor = true;
+            this.buttonExcluirDiaria.Click += new System.EventHandler(this.buttonExcluirDiaria_Click);
             // 
             // buttonADCquarto
             // 
