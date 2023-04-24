@@ -67,5 +67,20 @@ namespace WindowsFormsAppGestaoHotel
             MessageBox.Show("Registro excluido com sucesso!");
         }
 
+        private void buttonExcluirQuarto_Click(object sender, EventArgs e)
+        {
+            if (quartosBindingSource.Count <= 0)
+            {
+                MessageBox.Show("Não há registro para ser excluido.");
+                return;
+            }
+            if (MessageBox.Show("Deseja realmente excluir o quarto","ATENÇÃO",MessageBoxButtons.YesNo) == DialogResult.No)
+                return;
+            int id = (((Diaria)quartosBindingSource.Current).Id);
+            new QuartoBLL().Excluir(id);
+            quartosBindingSource.RemoveCurrent();
+
+            MessageBox.Show("Registro excluido com sucesso!");
+        }
     }
 }

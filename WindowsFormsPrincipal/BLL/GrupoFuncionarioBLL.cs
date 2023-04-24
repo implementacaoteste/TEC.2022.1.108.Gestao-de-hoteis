@@ -52,7 +52,7 @@ namespace BLL
         public void ValidarPermissao(int _idPermissao)
         {
             if (!new GrupoFuncionarioDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
-                throw new Exception("Não foi possível realizar essa operação");
+                throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
         }
     }
 }

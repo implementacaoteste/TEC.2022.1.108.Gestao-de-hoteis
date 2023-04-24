@@ -48,34 +48,6 @@
             this.buttonAlterarFuncionario = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.funcionarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonTodos = new System.Windows.Forms.RadioButton();
-            this.radioButtonCPF = new System.Windows.Forms.RadioButton();
-            this.radioButtonNome = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.grupoFuncionariosDataGridView = new System.Windows.Forms.DataGridView();
-            this.grupoFuncionariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonAdicionarGrupoFuncionario = new System.Windows.Forms.Button();
-            this.buttonExcluirGrupoFuncionario = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.celularTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.enderecoTextBox = new System.Windows.Forms.TextBox();
-            this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.sexoTextBox = new System.Windows.Forms.TextBox();
-            this.cPFTextBox = new System.Windows.Forms.TextBox();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.nomeGrupoTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.senhaTextBox = new System.Windows.Forms.TextBox();
-            this.nomeUsuarioTextBox = new System.Windows.Forms.TextBox();
-            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +58,34 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonTodos = new System.Windows.Forms.RadioButton();
+            this.radioButtonCPF = new System.Windows.Forms.RadioButton();
+            this.radioButtonNome = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grupoFuncionariosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupoFuncionariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonAdicionarGrupoFuncionario = new System.Windows.Forms.Button();
+            this.buttonExcluirGrupoFuncionario = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.sexoTextBox = new System.Windows.Forms.TextBox();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.nomeGrupoTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.senhaTextBox = new System.Windows.Forms.TextBox();
+            this.nomeUsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.cPFMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.celularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             idLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
@@ -99,6 +99,7 @@
             idLabel1 = new System.Windows.Forms.Label();
             nomeGrupoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -107,7 +108,6 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -323,328 +323,8 @@
             this.funcionarioDataGridView.RowHeadersWidth = 10;
             this.funcionarioDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.funcionarioDataGridView.RowTemplate.Height = 24;
-            this.funcionarioDataGridView.Size = new System.Drawing.Size(529, 266);
+            this.funcionarioDataGridView.Size = new System.Drawing.Size(533, 266);
             this.funcionarioDataGridView.TabIndex = 6;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButtonTodos);
-            this.groupBox1.Controls.Add(this.radioButtonCPF);
-            this.groupBox1.Controls.Add(this.radioButtonNome);
-            this.groupBox1.Controls.Add(this.textBoxBuscar);
-            this.groupBox1.Controls.Add(this.buttonBuscarFuncionario);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(425, 98);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesquisar por:";
-            // 
-            // radioButtonTodos
-            // 
-            this.radioButtonTodos.AutoSize = true;
-            this.radioButtonTodos.BackColor = System.Drawing.Color.Transparent;
-            this.radioButtonTodos.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonTodos.Location = new System.Drawing.Point(14, 21);
-            this.radioButtonTodos.Name = "radioButtonTodos";
-            this.radioButtonTodos.Size = new System.Drawing.Size(85, 25);
-            this.radioButtonTodos.TabIndex = 2;
-            this.radioButtonTodos.TabStop = true;
-            this.radioButtonTodos.Text = "Todos";
-            this.radioButtonTodos.UseVisualStyleBackColor = false;
-            // 
-            // radioButtonCPF
-            // 
-            this.radioButtonCPF.AutoSize = true;
-            this.radioButtonCPF.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonCPF.Location = new System.Drawing.Point(207, 21);
-            this.radioButtonCPF.Name = "radioButtonCPF";
-            this.radioButtonCPF.Size = new System.Drawing.Size(72, 25);
-            this.radioButtonCPF.TabIndex = 2;
-            this.radioButtonCPF.TabStop = true;
-            this.radioButtonCPF.Text = "CPF";
-            this.radioButtonCPF.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNome
-            // 
-            this.radioButtonNome.AutoSize = true;
-            this.radioButtonNome.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonNome.Location = new System.Drawing.Point(109, 21);
-            this.radioButtonNome.Name = "radioButtonNome";
-            this.radioButtonNome.Size = new System.Drawing.Size(83, 25);
-            this.radioButtonNome.TabIndex = 2;
-            this.radioButtonNome.TabStop = true;
-            this.radioButtonNome.Text = "Nome";
-            this.radioButtonNome.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.funcionarioDataGridView);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.groupBox2.Location = new System.Drawing.Point(12, 128);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(541, 296);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Funcionários cadastrados";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.grupoFuncionariosDataGridView);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.groupBox3.Location = new System.Drawing.Point(571, 128);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(436, 296);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Pertence ao grupo:";
-            // 
-            // grupoFuncionariosDataGridView
-            // 
-            this.grupoFuncionariosDataGridView.AllowUserToAddRows = false;
-            this.grupoFuncionariosDataGridView.AllowUserToDeleteRows = false;
-            this.grupoFuncionariosDataGridView.AllowUserToOrderColumns = true;
-            this.grupoFuncionariosDataGridView.AutoGenerateColumns = false;
-            this.grupoFuncionariosDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.grupoFuncionariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grupoFuncionariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.grupoFuncionariosDataGridView.DataSource = this.grupoFuncionariosBindingSource;
-            this.grupoFuncionariosDataGridView.Location = new System.Drawing.Point(6, 22);
-            this.grupoFuncionariosDataGridView.Name = "grupoFuncionariosDataGridView";
-            this.grupoFuncionariosDataGridView.ReadOnly = true;
-            this.grupoFuncionariosDataGridView.RowHeadersVisible = false;
-            this.grupoFuncionariosDataGridView.RowHeadersWidth = 51;
-            this.grupoFuncionariosDataGridView.RowTemplate.Height = 24;
-            this.grupoFuncionariosDataGridView.Size = new System.Drawing.Size(424, 265);
-            this.grupoFuncionariosDataGridView.TabIndex = 0;
-            // 
-            // grupoFuncionariosBindingSource
-            // 
-            this.grupoFuncionariosBindingSource.DataMember = "GrupoFuncionarios";
-            this.grupoFuncionariosBindingSource.DataSource = this.funcionarioBindingSource;
-            // 
-            // buttonAdicionarGrupoFuncionario
-            // 
-            this.buttonAdicionarGrupoFuncionario.BackColor = System.Drawing.Color.White;
-            this.buttonAdicionarGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdicionarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonAdicionarGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarGrupoFuncionario.Image")));
-            this.buttonAdicionarGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdicionarGrupoFuncionario.Location = new System.Drawing.Point(750, 769);
-            this.buttonAdicionarGrupoFuncionario.MinimumSize = new System.Drawing.Size(130, 35);
-            this.buttonAdicionarGrupoFuncionario.Name = "buttonAdicionarGrupoFuncionario";
-            this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(130, 35);
-            this.buttonAdicionarGrupoFuncionario.TabIndex = 0;
-            this.buttonAdicionarGrupoFuncionario.Text = "Adicionar";
-            this.buttonAdicionarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAdicionarGrupoFuncionario.UseVisualStyleBackColor = false;
-            this.buttonAdicionarGrupoFuncionario.Click += new System.EventHandler(this.buttonAdicionarGrupoFuncionario_Click);
-            // 
-            // buttonExcluirGrupoFuncionario
-            // 
-            this.buttonExcluirGrupoFuncionario.BackColor = System.Drawing.Color.White;
-            this.buttonExcluirGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcluirGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirGrupoFuncionario.Image")));
-            this.buttonExcluirGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirGrupoFuncionario.Location = new System.Drawing.Point(897, 769);
-            this.buttonExcluirGrupoFuncionario.MinimumSize = new System.Drawing.Size(110, 35);
-            this.buttonExcluirGrupoFuncionario.Name = "buttonExcluirGrupoFuncionario";
-            this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(110, 35);
-            this.buttonExcluirGrupoFuncionario.TabIndex = 0;
-            this.buttonExcluirGrupoFuncionario.Text = "Excluir";
-            this.buttonExcluirGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = true;
-            this.buttonExcluirGrupoFuncionario.Click += new System.EventHandler(this.buttonExcluirGrupoFuncionario_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(celularLabel);
-            this.groupBox4.Controls.Add(this.celularTextBox);
-            this.groupBox4.Controls.Add(emailLabel);
-            this.groupBox4.Controls.Add(this.emailTextBox);
-            this.groupBox4.Controls.Add(enderecoLabel);
-            this.groupBox4.Controls.Add(this.enderecoTextBox);
-            this.groupBox4.Controls.Add(data_nascimentoLabel);
-            this.groupBox4.Controls.Add(this.data_nascimentoDateTimePicker);
-            this.groupBox4.Controls.Add(sexoLabel);
-            this.groupBox4.Controls.Add(this.sexoTextBox);
-            this.groupBox4.Controls.Add(cPFLabel);
-            this.groupBox4.Controls.Add(this.cPFTextBox);
-            this.groupBox4.Controls.Add(nomeLabel);
-            this.groupBox4.Controls.Add(this.nomeTextBox);
-            this.groupBox4.Controls.Add(idLabel);
-            this.groupBox4.Controls.Add(this.idTextBox);
-            this.groupBox4.Location = new System.Drawing.Point(12, 433);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(545, 212);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Dados Pessoais";
-            // 
-            // celularTextBox
-            // 
-            this.celularTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.celularTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Celular", true));
-            this.celularTextBox.Location = new System.Drawing.Point(88, 177);
-            this.celularTextBox.Name = "celularTextBox";
-            this.celularTextBox.Size = new System.Drawing.Size(150, 22);
-            this.celularTextBox.TabIndex = 15;
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(88, 145);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(444, 22);
-            this.emailTextBox.TabIndex = 13;
-            // 
-            // enderecoTextBox
-            // 
-            this.enderecoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Endereco", true));
-            this.enderecoTextBox.Location = new System.Drawing.Point(88, 114);
-            this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(444, 22);
-            this.enderecoTextBox.TabIndex = 11;
-            // 
-            // data_nascimentoDateTimePicker
-            // 
-            this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.funcionarioBindingSource, "Data_nascimento", true));
-            this.data_nascimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(432, 79);
-            this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
-            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(100, 22);
-            this.data_nascimentoDateTimePicker.TabIndex = 9;
-            this.data_nascimentoDateTimePicker.Value = new System.DateTime(2023, 4, 19, 0, 0, 0, 0);
-            // 
-            // sexoTextBox
-            // 
-            this.sexoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Sexo", true));
-            this.sexoTextBox.Location = new System.Drawing.Point(432, 51);
-            this.sexoTextBox.Name = "sexoTextBox";
-            this.sexoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.sexoTextBox.TabIndex = 7;
-            // 
-            // cPFTextBox
-            // 
-            this.cPFTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "CPF", true));
-            this.cPFTextBox.Location = new System.Drawing.Point(88, 83);
-            this.cPFTextBox.Name = "cPFTextBox";
-            this.cPFTextBox.Size = new System.Drawing.Size(250, 22);
-            this.cPFTextBox.TabIndex = 5;
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(88, 54);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(250, 22);
-            this.nomeTextBox.TabIndex = 3;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(88, 25);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(50, 22);
-            this.idTextBox.TabIndex = 1;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(nomeGrupoLabel);
-            this.groupBox5.Controls.Add(this.nomeGrupoTextBox);
-            this.groupBox5.Controls.Add(idLabel1);
-            this.groupBox5.Controls.Add(this.idTextBox1);
-            this.groupBox5.Location = new System.Drawing.Point(571, 433);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(436, 100);
-            this.groupBox5.TabIndex = 9;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Dados do Grupo";
-            // 
-            // nomeGrupoTextBox
-            // 
-            this.nomeGrupoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nomeGrupoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionariosBindingSource, "NomeGrupo", true));
-            this.nomeGrupoTextBox.Location = new System.Drawing.Point(127, 54);
-            this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
-            this.nomeGrupoTextBox.Size = new System.Drawing.Size(200, 22);
-            this.nomeGrupoTextBox.TabIndex = 3;
-            // 
-            // idTextBox1
-            // 
-            this.idTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionariosBindingSource, "Id", true));
-            this.idTextBox1.Location = new System.Drawing.Point(127, 26);
-            this.idTextBox1.Name = "idTextBox1";
-            this.idTextBox1.Size = new System.Drawing.Size(50, 22);
-            this.idTextBox1.TabIndex = 1;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(senhaLabel);
-            this.groupBox6.Controls.Add(this.senhaTextBox);
-            this.groupBox6.Controls.Add(nomeUsuarioLabel);
-            this.groupBox6.Controls.Add(this.nomeUsuarioTextBox);
-            this.groupBox6.Location = new System.Drawing.Point(12, 651);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(545, 92);
-            this.groupBox6.TabIndex = 9;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Dados Usuário";
-            // 
-            // senhaTextBox
-            // 
-            this.senhaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Senha", true));
-            this.senhaTextBox.Location = new System.Drawing.Point(114, 56);
-            this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.Size = new System.Drawing.Size(150, 22);
-            this.senhaTextBox.TabIndex = 3;
-            // 
-            // nomeUsuarioTextBox
-            // 
-            this.nomeUsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nomeUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "NomeUsuario", true));
-            this.nomeUsuarioTextBox.Location = new System.Drawing.Point(114, 27);
-            this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
-            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(150, 22);
-            this.nomeUsuarioTextBox.TabIndex = 1;
-            // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataSource = typeof(Models.Funcionario);
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Visible = false;
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "NomeGrupo";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Nome do Grupo";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -746,11 +426,333 @@
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataSource = typeof(Models.Funcionario);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButtonTodos);
+            this.groupBox1.Controls.Add(this.radioButtonCPF);
+            this.groupBox1.Controls.Add(this.radioButtonNome);
+            this.groupBox1.Controls.Add(this.textBoxBuscar);
+            this.groupBox1.Controls.Add(this.buttonBuscarFuncionario);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(425, 98);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Pesquisar por:";
+            // 
+            // radioButtonTodos
+            // 
+            this.radioButtonTodos.AutoSize = true;
+            this.radioButtonTodos.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonTodos.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioButtonTodos.Location = new System.Drawing.Point(14, 21);
+            this.radioButtonTodos.Name = "radioButtonTodos";
+            this.radioButtonTodos.Size = new System.Drawing.Size(85, 25);
+            this.radioButtonTodos.TabIndex = 2;
+            this.radioButtonTodos.TabStop = true;
+            this.radioButtonTodos.Text = "Todos";
+            this.radioButtonTodos.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonCPF
+            // 
+            this.radioButtonCPF.AutoSize = true;
+            this.radioButtonCPF.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioButtonCPF.Location = new System.Drawing.Point(207, 21);
+            this.radioButtonCPF.Name = "radioButtonCPF";
+            this.radioButtonCPF.Size = new System.Drawing.Size(72, 25);
+            this.radioButtonCPF.TabIndex = 2;
+            this.radioButtonCPF.TabStop = true;
+            this.radioButtonCPF.Text = "CPF";
+            this.radioButtonCPF.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNome
+            // 
+            this.radioButtonNome.AutoSize = true;
+            this.radioButtonNome.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioButtonNome.Location = new System.Drawing.Point(109, 21);
+            this.radioButtonNome.Name = "radioButtonNome";
+            this.radioButtonNome.Size = new System.Drawing.Size(83, 25);
+            this.radioButtonNome.TabIndex = 2;
+            this.radioButtonNome.TabStop = true;
+            this.radioButtonNome.Text = "Nome";
+            this.radioButtonNome.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.funcionarioDataGridView);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.groupBox2.Location = new System.Drawing.Point(12, 128);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(545, 296);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Funcionários cadastrados";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.grupoFuncionariosDataGridView);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.groupBox3.Location = new System.Drawing.Point(571, 128);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(436, 296);
+            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Pertence ao grupo:";
+            // 
+            // grupoFuncionariosDataGridView
+            // 
+            this.grupoFuncionariosDataGridView.AllowUserToAddRows = false;
+            this.grupoFuncionariosDataGridView.AllowUserToDeleteRows = false;
+            this.grupoFuncionariosDataGridView.AllowUserToOrderColumns = true;
+            this.grupoFuncionariosDataGridView.AutoGenerateColumns = false;
+            this.grupoFuncionariosDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.grupoFuncionariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grupoFuncionariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.grupoFuncionariosDataGridView.DataSource = this.grupoFuncionariosBindingSource;
+            this.grupoFuncionariosDataGridView.Location = new System.Drawing.Point(6, 22);
+            this.grupoFuncionariosDataGridView.Name = "grupoFuncionariosDataGridView";
+            this.grupoFuncionariosDataGridView.ReadOnly = true;
+            this.grupoFuncionariosDataGridView.RowHeadersVisible = false;
+            this.grupoFuncionariosDataGridView.RowHeadersWidth = 51;
+            this.grupoFuncionariosDataGridView.RowTemplate.Height = 24;
+            this.grupoFuncionariosDataGridView.Size = new System.Drawing.Size(424, 265);
+            this.grupoFuncionariosDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "NomeGrupo";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Nome do Grupo";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // grupoFuncionariosBindingSource
+            // 
+            this.grupoFuncionariosBindingSource.DataMember = "GrupoFuncionarios";
+            this.grupoFuncionariosBindingSource.DataSource = this.funcionarioBindingSource;
+            // 
+            // buttonAdicionarGrupoFuncionario
+            // 
+            this.buttonAdicionarGrupoFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonAdicionarGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdicionarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonAdicionarGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarGrupoFuncionario.Image")));
+            this.buttonAdicionarGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAdicionarGrupoFuncionario.Location = new System.Drawing.Point(750, 769);
+            this.buttonAdicionarGrupoFuncionario.MinimumSize = new System.Drawing.Size(130, 35);
+            this.buttonAdicionarGrupoFuncionario.Name = "buttonAdicionarGrupoFuncionario";
+            this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(130, 35);
+            this.buttonAdicionarGrupoFuncionario.TabIndex = 0;
+            this.buttonAdicionarGrupoFuncionario.Text = "Adicionar";
+            this.buttonAdicionarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAdicionarGrupoFuncionario.UseVisualStyleBackColor = false;
+            this.buttonAdicionarGrupoFuncionario.Click += new System.EventHandler(this.buttonAdicionarGrupoFuncionario_Click);
+            // 
+            // buttonExcluirGrupoFuncionario
+            // 
+            this.buttonExcluirGrupoFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonExcluirGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcluirGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluirGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirGrupoFuncionario.Image")));
+            this.buttonExcluirGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExcluirGrupoFuncionario.Location = new System.Drawing.Point(897, 769);
+            this.buttonExcluirGrupoFuncionario.MinimumSize = new System.Drawing.Size(110, 35);
+            this.buttonExcluirGrupoFuncionario.Name = "buttonExcluirGrupoFuncionario";
+            this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(110, 35);
+            this.buttonExcluirGrupoFuncionario.TabIndex = 0;
+            this.buttonExcluirGrupoFuncionario.Text = "Excluir";
+            this.buttonExcluirGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = true;
+            this.buttonExcluirGrupoFuncionario.Click += new System.EventHandler(this.buttonExcluirGrupoFuncionario_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.celularMaskedTextBox);
+            this.groupBox4.Controls.Add(this.cPFMaskedTextBox);
+            this.groupBox4.Controls.Add(celularLabel);
+            this.groupBox4.Controls.Add(emailLabel);
+            this.groupBox4.Controls.Add(this.emailTextBox);
+            this.groupBox4.Controls.Add(enderecoLabel);
+            this.groupBox4.Controls.Add(this.enderecoTextBox);
+            this.groupBox4.Controls.Add(data_nascimentoLabel);
+            this.groupBox4.Controls.Add(this.data_nascimentoDateTimePicker);
+            this.groupBox4.Controls.Add(sexoLabel);
+            this.groupBox4.Controls.Add(this.sexoTextBox);
+            this.groupBox4.Controls.Add(cPFLabel);
+            this.groupBox4.Controls.Add(nomeLabel);
+            this.groupBox4.Controls.Add(this.nomeTextBox);
+            this.groupBox4.Controls.Add(idLabel);
+            this.groupBox4.Controls.Add(this.idTextBox);
+            this.groupBox4.Location = new System.Drawing.Point(12, 433);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(545, 212);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Dados Pessoais";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(88, 145);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(444, 22);
+            this.emailTextBox.TabIndex = 13;
+            // 
+            // enderecoTextBox
+            // 
+            this.enderecoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Endereco", true));
+            this.enderecoTextBox.Location = new System.Drawing.Point(88, 114);
+            this.enderecoTextBox.Name = "enderecoTextBox";
+            this.enderecoTextBox.Size = new System.Drawing.Size(444, 22);
+            this.enderecoTextBox.TabIndex = 11;
+            // 
+            // data_nascimentoDateTimePicker
+            // 
+            this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.funcionarioBindingSource, "Data_nascimento", true));
+            this.data_nascimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(432, 79);
+            this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
+            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(100, 22);
+            this.data_nascimentoDateTimePicker.TabIndex = 9;
+            this.data_nascimentoDateTimePicker.Value = new System.DateTime(2023, 4, 19, 0, 0, 0, 0);
+            // 
+            // sexoTextBox
+            // 
+            this.sexoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Sexo", true));
+            this.sexoTextBox.Location = new System.Drawing.Point(432, 51);
+            this.sexoTextBox.Name = "sexoTextBox";
+            this.sexoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.sexoTextBox.TabIndex = 7;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(88, 54);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(250, 22);
+            this.nomeTextBox.TabIndex = 3;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(88, 25);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(50, 22);
+            this.idTextBox.TabIndex = 1;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(nomeGrupoLabel);
+            this.groupBox5.Controls.Add(this.nomeGrupoTextBox);
+            this.groupBox5.Controls.Add(idLabel1);
+            this.groupBox5.Controls.Add(this.idTextBox1);
+            this.groupBox5.Location = new System.Drawing.Point(571, 433);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(436, 100);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Dados do Grupo";
+            // 
+            // nomeGrupoTextBox
+            // 
+            this.nomeGrupoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nomeGrupoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionariosBindingSource, "NomeGrupo", true));
+            this.nomeGrupoTextBox.Location = new System.Drawing.Point(127, 54);
+            this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
+            this.nomeGrupoTextBox.Size = new System.Drawing.Size(200, 22);
+            this.nomeGrupoTextBox.TabIndex = 3;
+            // 
+            // idTextBox1
+            // 
+            this.idTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionariosBindingSource, "Id", true));
+            this.idTextBox1.Location = new System.Drawing.Point(127, 26);
+            this.idTextBox1.Name = "idTextBox1";
+            this.idTextBox1.Size = new System.Drawing.Size(50, 22);
+            this.idTextBox1.TabIndex = 1;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(senhaLabel);
+            this.groupBox6.Controls.Add(this.senhaTextBox);
+            this.groupBox6.Controls.Add(nomeUsuarioLabel);
+            this.groupBox6.Controls.Add(this.nomeUsuarioTextBox);
+            this.groupBox6.Location = new System.Drawing.Point(12, 651);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(545, 92);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Dados Usuário";
+            // 
+            // senhaTextBox
+            // 
+            this.senhaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Senha", true));
+            this.senhaTextBox.Location = new System.Drawing.Point(114, 56);
+            this.senhaTextBox.Name = "senhaTextBox";
+            this.senhaTextBox.Size = new System.Drawing.Size(150, 22);
+            this.senhaTextBox.TabIndex = 3;
+            // 
+            // nomeUsuarioTextBox
+            // 
+            this.nomeUsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nomeUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "NomeUsuario", true));
+            this.nomeUsuarioTextBox.Location = new System.Drawing.Point(114, 27);
+            this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
+            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(150, 22);
+            this.nomeUsuarioTextBox.TabIndex = 1;
+            // 
+            // cPFMaskedTextBox
+            // 
+            this.cPFMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cPFMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "CPF", true));
+            this.cPFMaskedTextBox.Location = new System.Drawing.Point(88, 84);
+            this.cPFMaskedTextBox.Mask = "000,000,000-00";
+            this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
+            this.cPFMaskedTextBox.Size = new System.Drawing.Size(250, 22);
+            this.cPFMaskedTextBox.TabIndex = 12;
+            // 
+            // celularMaskedTextBox
+            // 
+            this.celularMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.celularMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Celular", true));
+            this.celularMaskedTextBox.Location = new System.Drawing.Point(88, 177);
+            this.celularMaskedTextBox.Mask = "(99) 0000-0000";
+            this.celularMaskedTextBox.Name = "celularMaskedTextBox";
+            this.celularMaskedTextBox.Size = new System.Drawing.Size(150, 22);
+            this.celularMaskedTextBox.TabIndex = 12;
+            // 
             // FormBuscarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 816);
+            this.ClientSize = new System.Drawing.Size(1027, 824);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
@@ -770,6 +772,7 @@
             this.Text = "HOTELOGIX - Consulta de Funcionários";
             this.Load += new System.EventHandler(this.FormBuscarFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -782,7 +785,6 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -808,12 +810,10 @@
         private System.Windows.Forms.Button buttonAdicionarGrupoFuncionario;
         private System.Windows.Forms.Button buttonExcluirGrupoFuncionario;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox celularTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox enderecoTextBox;
         private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
         private System.Windows.Forms.TextBox sexoTextBox;
-        private System.Windows.Forms.TextBox cPFTextBox;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -833,5 +833,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Senha;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.MaskedTextBox celularMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cPFMaskedTextBox;
     }
 }
