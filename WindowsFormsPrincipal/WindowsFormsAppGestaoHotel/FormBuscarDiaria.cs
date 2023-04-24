@@ -61,7 +61,7 @@ namespace WindowsFormsAppGestaoHotel
             if (MessageBox.Show("Deseja realmente excluir a diaria?","ATENÇÃO",MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
             int id = ((Diaria)diariaBindingSource.Current).Id;
-            new DiariaBLL.Excluir(id);
+            new DiariaBLL().Excluir(id);
             diariaBindingSource.RemoveCurrent();
 
             MessageBox.Show("Registro excluido com sucesso!");

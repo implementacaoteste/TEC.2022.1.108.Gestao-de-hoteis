@@ -305,5 +305,10 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public bool ValidarPermissao(int idLogado, int idPermissao)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
