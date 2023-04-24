@@ -454,6 +454,7 @@
             this.buttonExcluirQuarto.TabIndex = 24;
             this.buttonExcluirQuarto.Text = "Excluir";
             this.buttonExcluirQuarto.UseVisualStyleBackColor = true;
+            this.buttonExcluirQuarto.Click += new System.EventHandler(this.buttonExcluirQuarto_Click);
             // 
             // label3
             // 
