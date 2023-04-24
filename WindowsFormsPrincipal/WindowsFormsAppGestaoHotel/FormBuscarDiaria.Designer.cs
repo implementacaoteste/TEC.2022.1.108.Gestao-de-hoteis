@@ -44,17 +44,17 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.diariaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quartosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.data_EntradaTextBox = new System.Windows.Forms.TextBox();
             this.id_clienteTextBox = new System.Windows.Forms.TextBox();
@@ -83,6 +83,69 @@
             ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartosDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(40, 474);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(54, 16);
+            idLabel.TabIndex = 8;
+            idLabel.Text = "Código:";
+            // 
+            // data_EntradaLabel
+            // 
+            data_EntradaLabel.AutoSize = true;
+            data_EntradaLabel.Location = new System.Drawing.Point(8, 533);
+            data_EntradaLabel.Name = "data_EntradaLabel";
+            data_EntradaLabel.Size = new System.Drawing.Size(89, 16);
+            data_EntradaLabel.TabIndex = 10;
+            data_EntradaLabel.Text = "Data Entrada:";
+            // 
+            // id_clienteLabel
+            // 
+            id_clienteLabel.AutoSize = true;
+            id_clienteLabel.Location = new System.Drawing.Point(43, 502);
+            id_clienteLabel.Name = "id_clienteLabel";
+            id_clienteLabel.Size = new System.Drawing.Size(51, 16);
+            id_clienteLabel.TabIndex = 12;
+            id_clienteLabel.Text = "Cliente:";
+            // 
+            // id_funcionarioLabel
+            // 
+            id_funcionarioLabel.AutoSize = true;
+            id_funcionarioLabel.Location = new System.Drawing.Point(209, 505);
+            id_funcionarioLabel.Name = "id_funcionarioLabel";
+            id_funcionarioLabel.Size = new System.Drawing.Size(80, 16);
+            id_funcionarioLabel.TabIndex = 14;
+            id_funcionarioLabel.Text = "Funcionário:";
+            // 
+            // numeroLabel
+            // 
+            numeroLabel.AutoSize = true;
+            numeroLabel.Location = new System.Drawing.Point(649, 477);
+            numeroLabel.Name = "numeroLabel";
+            numeroLabel.Size = new System.Drawing.Size(58, 16);
+            numeroLabel.TabIndex = 16;
+            numeroLabel.Text = "Número:";
+            // 
+            // descricaoLabel
+            // 
+            descricaoLabel.AutoSize = true;
+            descricaoLabel.Location = new System.Drawing.Point(635, 508);
+            descricaoLabel.Name = "descricaoLabel";
+            descricaoLabel.Size = new System.Drawing.Size(72, 16);
+            descricaoLabel.TabIndex = 18;
+            descricaoLabel.Text = "Descrição:";
+            // 
+            // valor_DiariaLabel
+            // 
+            valor_DiariaLabel.AutoSize = true;
+            valor_DiariaLabel.Location = new System.Drawing.Point(607, 536);
+            valor_DiariaLabel.Name = "valor_DiariaLabel";
+            valor_DiariaLabel.Size = new System.Drawing.Size(100, 16);
+            valor_DiariaLabel.TabIndex = 20;
+            valor_DiariaLabel.Text = "Valor da Diária:";
             // 
             // radioButtonDT_EN
             // 
@@ -139,6 +202,7 @@
             this.buttonBuscar.TabIndex = 3;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // diariaDataGridView
             // 
@@ -161,6 +225,56 @@
             this.diariaDataGridView.RowTemplate.Height = 24;
             this.diariaDataGridView.Size = new System.Drawing.Size(600, 220);
             this.diariaDataGridView.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.FillWeight = 35F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cód.";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Id_cliente";
+            this.dataGridViewTextBoxColumn2.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cliente";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 72;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Data_Entrada";
+            this.dataGridViewTextBoxColumn4.FillWeight = 60F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Data da Entrada";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Id_funcionario";
+            this.dataGridViewTextBoxColumn5.FillWeight = 50F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Funcionário";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Data_Saida";
+            this.dataGridViewTextBoxColumn6.FillWeight = 60F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Data da Saida";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 193;
             // 
             // diariaBindingSource
             // 
@@ -218,65 +332,6 @@
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 125;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.FillWeight = 35F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cód.";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 55;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Id_cliente";
-            this.dataGridViewTextBoxColumn2.FillWeight = 40F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cliente";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 72;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Data_Entrada";
-            this.dataGridViewTextBoxColumn4.FillWeight = 60F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Data da Entrada";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Id_funcionario";
-            this.dataGridViewTextBoxColumn5.FillWeight = 50F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Funcionário";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Data_Saida";
-            this.dataGridViewTextBoxColumn6.FillWeight = 60F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Data da Saida";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 193;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(40, 474);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(54, 16);
-            idLabel.TabIndex = 8;
-            idLabel.Text = "Código:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id", true));
@@ -284,15 +339,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 22);
             this.idTextBox.TabIndex = 9;
-            // 
-            // data_EntradaLabel
-            // 
-            data_EntradaLabel.AutoSize = true;
-            data_EntradaLabel.Location = new System.Drawing.Point(8, 533);
-            data_EntradaLabel.Name = "data_EntradaLabel";
-            data_EntradaLabel.Size = new System.Drawing.Size(89, 16);
-            data_EntradaLabel.TabIndex = 10;
-            data_EntradaLabel.Text = "Data Entrada:";
             // 
             // data_EntradaTextBox
             // 
@@ -302,15 +348,6 @@
             this.data_EntradaTextBox.Size = new System.Drawing.Size(309, 22);
             this.data_EntradaTextBox.TabIndex = 11;
             // 
-            // id_clienteLabel
-            // 
-            id_clienteLabel.AutoSize = true;
-            id_clienteLabel.Location = new System.Drawing.Point(43, 502);
-            id_clienteLabel.Name = "id_clienteLabel";
-            id_clienteLabel.Size = new System.Drawing.Size(51, 16);
-            id_clienteLabel.TabIndex = 12;
-            id_clienteLabel.Text = "Cliente:";
-            // 
             // id_clienteTextBox
             // 
             this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id_cliente", true));
@@ -318,15 +355,6 @@
             this.id_clienteTextBox.Name = "id_clienteTextBox";
             this.id_clienteTextBox.Size = new System.Drawing.Size(100, 22);
             this.id_clienteTextBox.TabIndex = 13;
-            // 
-            // id_funcionarioLabel
-            // 
-            id_funcionarioLabel.AutoSize = true;
-            id_funcionarioLabel.Location = new System.Drawing.Point(209, 505);
-            id_funcionarioLabel.Name = "id_funcionarioLabel";
-            id_funcionarioLabel.Size = new System.Drawing.Size(80, 16);
-            id_funcionarioLabel.TabIndex = 14;
-            id_funcionarioLabel.Text = "Funcionário:";
             // 
             // id_funcionarioTextBox
             // 
@@ -336,15 +364,6 @@
             this.id_funcionarioTextBox.Size = new System.Drawing.Size(117, 22);
             this.id_funcionarioTextBox.TabIndex = 15;
             // 
-            // numeroLabel
-            // 
-            numeroLabel.AutoSize = true;
-            numeroLabel.Location = new System.Drawing.Point(649, 477);
-            numeroLabel.Name = "numeroLabel";
-            numeroLabel.Size = new System.Drawing.Size(58, 16);
-            numeroLabel.TabIndex = 16;
-            numeroLabel.Text = "Número:";
-            // 
             // numeroTextBox
             // 
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Numero", true));
@@ -353,15 +372,6 @@
             this.numeroTextBox.Size = new System.Drawing.Size(142, 22);
             this.numeroTextBox.TabIndex = 17;
             // 
-            // descricaoLabel
-            // 
-            descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(635, 508);
-            descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(72, 16);
-            descricaoLabel.TabIndex = 18;
-            descricaoLabel.Text = "Descrição:";
-            // 
             // descricaoTextBox
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Descricao", true));
@@ -369,15 +379,6 @@
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(142, 22);
             this.descricaoTextBox.TabIndex = 19;
-            // 
-            // valor_DiariaLabel
-            // 
-            valor_DiariaLabel.AutoSize = true;
-            valor_DiariaLabel.Location = new System.Drawing.Point(607, 536);
-            valor_DiariaLabel.Name = "valor_DiariaLabel";
-            valor_DiariaLabel.Size = new System.Drawing.Size(100, 16);
-            valor_DiariaLabel.TabIndex = 20;
-            valor_DiariaLabel.Text = "Valor da Diária:";
             // 
             // valor_DiariaTextBox
             // 
@@ -433,6 +434,7 @@
             this.buttonExcluirDiaria.TabIndex = 24;
             this.buttonExcluirDiaria.Text = "Excluir";
             this.buttonExcluirDiaria.UseVisualStyleBackColor = true;
+            this.buttonExcluirDiaria.Click += new System.EventHandler(this.buttonExcluirDiaria_Click);
             // 
             // buttonADCquarto
             // 
@@ -442,6 +444,7 @@
             this.buttonADCquarto.TabIndex = 24;
             this.buttonADCquarto.Text = "Adicionar";
             this.buttonADCquarto.UseVisualStyleBackColor = true;
+            this.buttonADCquarto.Click += new System.EventHandler(this.buttonADCquarto_Click);
             // 
             // buttonExcluirQuarto
             // 
@@ -451,6 +454,7 @@
             this.buttonExcluirQuarto.TabIndex = 24;
             this.buttonExcluirQuarto.Text = "Excluir";
             this.buttonExcluirQuarto.UseVisualStyleBackColor = true;
+            this.buttonExcluirQuarto.Click += new System.EventHandler(this.buttonExcluirQuarto_Click);
             // 
             // label3
             // 

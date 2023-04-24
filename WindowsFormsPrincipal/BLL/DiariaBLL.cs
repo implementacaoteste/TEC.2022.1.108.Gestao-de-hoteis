@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using DAL;
 using Models;
-using System.Threading.Tasks;
 
 namespace BLL
 {
@@ -28,7 +25,7 @@ namespace BLL
         }
         public void ValidarPermissao(int _idPermissao)
         {
-            if (!new DiariaDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
+            if (!new GrupoFuncionarioDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
                 throw new Exception("Não foi possível realizar essa operação.");
         }
     }
