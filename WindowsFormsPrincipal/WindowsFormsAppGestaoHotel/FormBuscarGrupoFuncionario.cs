@@ -18,10 +18,30 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
         }
+        private void FormBuscarGrupoFuncionario_Load(object sender, EventArgs e)
+        {
+            radioButtonTodos.Checked = true;
+            grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarTodos();
+        }
 
         private void buttonBuscarGrupoFuncionario_Click(object sender, EventArgs e)
         {
-            grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarTodos();
+            try
+            {
+                if (radioButtonTodos.Checked)
+                {
+                    textBoxBuscar.Clear();
+                    grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarTodos();
+                }
+                else if (radioButtonNome.Checked)
+                {
+                    grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarPorNomeGrupo(textBoxBuscar.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonAdicionarGrupoFuncionario_Click(object sender, EventArgs e)
