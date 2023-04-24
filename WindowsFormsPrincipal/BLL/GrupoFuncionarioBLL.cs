@@ -9,30 +9,36 @@ namespace BLL
     {
         public void Inserir(GrupoFuncionario _grupoFuncionario)
         {
+            ValidarPermissao(6);
             ValidarDados(_grupoFuncionario);
             GrupoFuncionarioDAL grupoFuncionarioDAL = new GrupoFuncionarioDAL();
             grupoFuncionarioDAL.Inserir(_grupoFuncionario);
         }
         public void Alterar(GrupoFuncionario _grupoFuncionario)
         {
+            ValidarPermissao(7);
             ValidarDados(_grupoFuncionario);
             GrupoFuncionarioDAL grupoFuncionarioDAL = new GrupoFuncionarioDAL();
             grupoFuncionarioDAL.Alterar(_grupoFuncionario);
         }
         public void Excluir(int _id)
         {
+            ValidarPermissao(8);
             new GrupoFuncionarioDAL().Excluir(_id);
         }
         public List<GrupoFuncionario> BuscarTodos()
         {
+            ValidarPermissao(5);
             return new GrupoFuncionarioDAL().BuscarTodos();
         }
         public List<GrupoFuncionario> BuscarPorId(int _id)
         {
+            ValidarPermissao(5);
             return new GrupoFuncionarioDAL().BuscarPorId(_id);
         }
         public List<GrupoFuncionario> BuscarPorNomeGrupo(string _nomeGrupo)
         {
+            ValidarPermissao(5);
             return new GrupoFuncionarioDAL().BuscarPorNomeGrupo(_nomeGrupo);
         }
         private void ValidarDados(GrupoFuncionario _grupoFuncionario)
