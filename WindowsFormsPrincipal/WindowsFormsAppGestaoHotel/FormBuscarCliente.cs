@@ -58,7 +58,7 @@ namespace WindowsFormsPrincipal1
         }
 
 
-        private void buttonAlterarCliente_Click_1(object sender, EventArgs e)
+        private void buttonAlterarCliente_Click(object sender, EventArgs e)
         {
             if (clienteBindingSource.Count <= 0)
             {
