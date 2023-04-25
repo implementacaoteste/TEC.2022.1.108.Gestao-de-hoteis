@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsAppGestaoHotel;
 
 namespace WindowsFormsPrincipal1
 {
@@ -87,7 +88,7 @@ namespace WindowsFormsPrincipal1
 
         private void quartoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using(FormConsultaQuarto frm = new FormConsultaQuarto())
+            using(FormBuscarQuarto frm = new FormBuscarQuarto())
             {
                 frm.ShowDialog();
             }

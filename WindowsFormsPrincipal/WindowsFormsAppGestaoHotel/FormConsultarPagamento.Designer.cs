@@ -58,12 +58,13 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.pagamentoDataGridView.DataSource = this.pagamentoBindingSource;
-            this.pagamentoDataGridView.Location = new System.Drawing.Point(0, 127);
+            this.pagamentoDataGridView.Location = new System.Drawing.Point(0, 103);
+            this.pagamentoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pagamentoDataGridView.Name = "pagamentoDataGridView";
             this.pagamentoDataGridView.ReadOnly = true;
             this.pagamentoDataGridView.RowHeadersWidth = 51;
             this.pagamentoDataGridView.RowTemplate.Height = 24;
-            this.pagamentoDataGridView.Size = new System.Drawing.Size(445, 220);
+            this.pagamentoDataGridView.Size = new System.Drawing.Size(334, 179);
             this.pagamentoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -86,16 +87,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 99);
+            this.textBox1.Location = new System.Drawing.Point(61, 80);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 22);
+            this.textBox1.Size = new System.Drawing.Size(265, 20);
             this.textBox1.TabIndex = 2;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(0, 98);
+            this.buttonBuscar.Location = new System.Drawing.Point(0, 80);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(56, 19);
             this.buttonBuscar.TabIndex = 3;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -103,9 +106,10 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(339, 369);
+            this.buttonCancelar.Location = new System.Drawing.Point(254, 300);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(56, 19);
             this.buttonCancelar.TabIndex = 4;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -113,9 +117,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(247, 369);
+            this.button3.Location = new System.Drawing.Point(185, 300);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 23);
+            this.button3.Size = new System.Drawing.Size(64, 19);
             this.button3.TabIndex = 5;
             this.button3.Text = "Selecionar";
             this.button3.UseVisualStyleBackColor = true;
@@ -124,18 +129,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 34);
+            this.label1.Location = new System.Drawing.Point(32, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(372, 37);
+            this.label1.Size = new System.Drawing.Size(342, 36);
             this.label1.TabIndex = 6;
             this.label1.Text = "Consultar de Pagamento";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormConsultarPagamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 450);
+            this.ClientSize = new System.Drawing.Size(334, 366);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonCancelar);
@@ -143,6 +149,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pagamentoDataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConsultarPagamento";
