@@ -28,7 +28,7 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-               //pagamentoBindingSource.DataSource = new PagamentoBLL().BuscaPorId(textBox1);
+                pagamentoBindingSource.DataSource = new PagamentoBLL().BuscaPorTodos();
             }
             catch (Exception ex)
             {
