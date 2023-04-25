@@ -99,6 +99,7 @@ namespace DAL
                         grupofuncionario = new GrupoFuncionario();
                         grupofuncionario.Id = Convert.ToInt32(rd["ID"]);
                         grupofuncionario.NomeGrupo = rd["NOME_GRUPO"].ToString();
+                        grupofuncionario.Permissoes = new PermissaoDAL().BuscarPorIdGrupo(grupofuncionario.Id);
                         grupofuncionarios.Add(grupofuncionario);
                     }
                 }
@@ -135,6 +136,7 @@ namespace DAL
                     {
                         grupofuncionario.Id = Convert.ToInt32(rd["ID"]);
                         grupofuncionario.NomeGrupo = rd["NOME_GRUPO"].ToString();
+                        grupofuncionario.Permissoes = new PermissaoDAL().BuscarPorIdGrupo(grupofuncionario.Id);
                         gpfuncionario.Add(grupofuncionario);
                     }
                 }
@@ -172,6 +174,7 @@ namespace DAL
                         grupofuncionario = new GrupoFuncionario();
                         grupofuncionario.Id = Convert.ToInt32(rd["ID"]);
                         grupofuncionario.NomeGrupo = rd["NOME_GRUPO"].ToString();
+                        grupofuncionario.Permissoes = new PermissaoDAL().BuscarPorIdGrupo(grupofuncionario.Id);
                         grupofuncionarios.Add(grupofuncionario);
                     }
                 }
