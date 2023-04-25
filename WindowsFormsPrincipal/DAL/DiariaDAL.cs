@@ -136,6 +136,98 @@ namespace DAL
             }
 
         }
+
+        public Diaria BuscarPorCPFCliente(string _cpf)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Diaria diaria = new Diaria();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE, 
+                                    D.ID_FUNCIONARIO, D.ID_PAGAMENTO, D.DATA_SAIDA, D.DATA_ENTRADA
+                                    FROM DIARIA D
+                                    INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
+                                    WHERE C.CPF LIKE @cpf";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@cpf",_cpf);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        diaria = new Diaria();
+                        diaria.Id = Convert.ToInt32(rd["ID"]);
+                        diaria.Id_funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
+                        diaria.Nome_Cliente = rd["C.NOME"].ToString();
+                        diaria.Cpf_Cliente = rd["C.CPF"].ToString();
+                        diaria.Id_cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        diaria.Id_Pagamento = Convert.ToInt32(rd["ID_pagamento"]);
+                        diaria.Valor_Total = Convert.ToSingle(rd["VALOR_TOTAL"]);
+                        diaria.Data_Entrada = rd["DATA_ENTRADA"].ToString();
+                        diaria.Data_Saida = rd["DATA_SAIDA"].ToString();
+                    }
+
+                }
+                return diaria;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public Diaria BuscarPorNomeCliente(string _nome)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            Diaria diaria = new Diaria();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
+                                    D.ID_FUNCIONARIO, D.ID_PAGAMENTO, D.DATA_SAIDA, D.DATA_ENTRADA
+                                    FROM DIARIA D
+                                    INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
+                                    WHERE C.NOME LIKE @nome";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@nome", "%"+_nome+"%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        diaria = new Diaria();
+                        diaria.Id = Convert.ToInt32(rd["ID"]);
+                        diaria.Id_funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
+                        diaria.Nome_Cliente = rd["C.NOME"].ToString();
+                        diaria.Cpf_Cliente = rd["C.CPF"].ToString();
+                        diaria.Id_cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        diaria.Id_Pagamento = Convert.ToInt32(rd["ID_pagamento"]);
+                        diaria.Valor_Total = Convert.ToSingle(rd["VALOR_TOTAL"]);
+                        diaria.Data_Entrada = rd["DATA_ENTRADA"].ToString();
+                        diaria.Data_Saida = rd["DATA_SAIDA"].ToString();
+                    }
+
+                }
+                return diaria;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     } 
  } 
 
