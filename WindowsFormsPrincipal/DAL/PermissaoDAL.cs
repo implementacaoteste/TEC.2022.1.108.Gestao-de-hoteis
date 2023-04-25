@@ -38,16 +38,17 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Permissao SET Descricao = @descricao WHERE Id=@id";
+                cmd.CommandText = @"UPDATE PERMISSAO SET DESCRICAO = @Descricao WHERE ID = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("id", _permissao.Id);
+                cmd.Parameters.AddWithValue("@Descricao", _permissao.Descricao);
+                cmd.Parameters.AddWithValue("Id", _permissao.Id);
                 cmd.Connection = cn;
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao atulizar os dados.  Favor, verificar conexão", ex);
+                throw new Exception("Ocorreu um erro ao atulizar os dados.", ex);
             }
             finally 
             {
@@ -60,9 +61,9 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = "DELETE Permissao WHERE Id = @id";
+                cmd.CommandText = "DELETE PERMISSAO WHERE ID = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("id", _id);
+                cmd.Parameters.AddWithValue("Id", _id);
 
                 cmd.Connection = cn;
                 cmd.Connection.Open();
@@ -70,7 +71,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao 'Excluir' um dado do banco. Favor, verificar conexao", ex);
+                throw new Exception("Ocorreu um erro ao 'Excluir' um dado do banco.", ex);
             }
             finally 
             {
@@ -86,7 +87,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"SELECT Id,Descricao FROM Permissao";
+                cmd.CommandText = @"SELECT ID, DESCRICAO FROM PERMISSAO";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -95,8 +96,8 @@ namespace DAL
                     while (Ler.Read())
                     {
                         permissao = new Permissao();
-                        permissao.Id = Convert.ToInt32(Ler["Id"]);
-                        permissao.Descricao = (Ler["Descricao"]).ToString();
+                        permissao.Id = Convert.ToInt32(Ler["ID"]);
+                        permissao.Descricao = (Ler["DESCRICAO"]).ToString();
                         //permissao.Grupos = new GrupoFuncionarioDAL().BuscarPorId(permissao.Id);
                         permissaos.Add(permissao);
                     }
@@ -105,7 +106,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro na busca de dados em 'Permissão'. Por favor verifique sua conexão", ex);
+                throw new Exception("Ocorreu um erro na busca de dados em 'Permissão'.", ex);
             }
             finally
             {
@@ -121,9 +122,9 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"SELECT Id,Descricao FROM Permissao WHERE Id=@id";
+                cmd.CommandText = "SELECT ID, DESCRICAO FROM PERMISSAO WHERE ID = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@id", _id);
+                cmd.Parameters.AddWithValue("@Id", _id);
 
                 cn.Open();
                 using(SqlDataReader Ler = cmd.ExecuteReader())
@@ -181,7 +182,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Permissao> BuscarPorIdGrupo(int _idGrupoFuncionario)
+        internal List<Permissao> BuscarPorIdGrupo(int _idGrupoFuncionario)
         {
             List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
@@ -191,12 +192,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Permissao.Id, Permissao.Descricao FROM Permissao
-                                    INNER JOIN PermissaoGrupoUsuario ON Permissao.Id = PermissaoGrupoUsuario.IdPermissao
-                                    WHERE PermissaoGrupoUsuario.IdGrupoUsuario = @IdGrupoUsuario ORDER BY Permissao.Descricao";
+                cmd.CommandText = @"SELECT PERMISSAO.ID, PERMISSAO.DESCRICAO FROM PERMISSAO
+                                    INNER JOIN PERMISSAO_GRUPO_FUNCIONARIO ON PERMISSAO.ID = PERMISSAO_GRUPO_FUNCIONARIO.ID_PERMISSAO
+                                    WHERE PERMISSAO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO = @IdGrupoFuncionario ORDER BY PERMISSAO.DESCRICAO";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idGrupoFuncionario);
+                cmd.Parameters.AddWithValue("@IdGrupoFuncionario", _idGrupoFuncionario);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -204,8 +205,8 @@ namespace DAL
                     while (rd.Read())
                     {
                         permissao = new Permissao();
-                        permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Descricao = rd["Descricao"].ToString();
+                        permissao.Id = Convert.ToInt32(rd["ID"]);
+                        permissao.Descricao = rd["DESCRICAO"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
