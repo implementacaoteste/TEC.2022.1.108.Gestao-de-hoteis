@@ -41,7 +41,7 @@
             this.radioButtonNome = new System.Windows.Forms.RadioButton();
             this.radioButtonCPF = new System.Windows.Forms.RadioButton();
             this.textBoxDt_En = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.diariaDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,72 +87,80 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(40, 474);
+            idLabel.Location = new System.Drawing.Point(30, 385);
+            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(54, 16);
+            idLabel.Size = new System.Drawing.Size(43, 13);
             idLabel.TabIndex = 8;
             idLabel.Text = "Código:";
             // 
             // data_EntradaLabel
             // 
             data_EntradaLabel.AutoSize = true;
-            data_EntradaLabel.Location = new System.Drawing.Point(8, 533);
+            data_EntradaLabel.Location = new System.Drawing.Point(6, 433);
+            data_EntradaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_EntradaLabel.Name = "data_EntradaLabel";
-            data_EntradaLabel.Size = new System.Drawing.Size(89, 16);
+            data_EntradaLabel.Size = new System.Drawing.Size(73, 13);
             data_EntradaLabel.TabIndex = 10;
             data_EntradaLabel.Text = "Data Entrada:";
             // 
             // id_clienteLabel
             // 
             id_clienteLabel.AutoSize = true;
-            id_clienteLabel.Location = new System.Drawing.Point(43, 502);
+            id_clienteLabel.Location = new System.Drawing.Point(32, 408);
+            id_clienteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_clienteLabel.Name = "id_clienteLabel";
-            id_clienteLabel.Size = new System.Drawing.Size(51, 16);
+            id_clienteLabel.Size = new System.Drawing.Size(42, 13);
             id_clienteLabel.TabIndex = 12;
             id_clienteLabel.Text = "Cliente:";
             // 
             // id_funcionarioLabel
             // 
             id_funcionarioLabel.AutoSize = true;
-            id_funcionarioLabel.Location = new System.Drawing.Point(209, 505);
+            id_funcionarioLabel.Location = new System.Drawing.Point(157, 410);
+            id_funcionarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_funcionarioLabel.Name = "id_funcionarioLabel";
-            id_funcionarioLabel.Size = new System.Drawing.Size(80, 16);
+            id_funcionarioLabel.Size = new System.Drawing.Size(65, 13);
             id_funcionarioLabel.TabIndex = 14;
             id_funcionarioLabel.Text = "Funcionário:";
             // 
             // numeroLabel
             // 
             numeroLabel.AutoSize = true;
-            numeroLabel.Location = new System.Drawing.Point(649, 477);
+            numeroLabel.Location = new System.Drawing.Point(487, 388);
+            numeroLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             numeroLabel.Name = "numeroLabel";
-            numeroLabel.Size = new System.Drawing.Size(58, 16);
+            numeroLabel.Size = new System.Drawing.Size(47, 13);
             numeroLabel.TabIndex = 16;
             numeroLabel.Text = "Número:";
             // 
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(635, 508);
+            descricaoLabel.Location = new System.Drawing.Point(476, 413);
+            descricaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(72, 16);
+            descricaoLabel.Size = new System.Drawing.Size(58, 13);
             descricaoLabel.TabIndex = 18;
             descricaoLabel.Text = "Descrição:";
             // 
             // valor_DiariaLabel
             // 
             valor_DiariaLabel.AutoSize = true;
-            valor_DiariaLabel.Location = new System.Drawing.Point(607, 536);
+            valor_DiariaLabel.Location = new System.Drawing.Point(455, 436);
+            valor_DiariaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             valor_DiariaLabel.Name = "valor_DiariaLabel";
-            valor_DiariaLabel.Size = new System.Drawing.Size(100, 16);
+            valor_DiariaLabel.Size = new System.Drawing.Size(79, 13);
             valor_DiariaLabel.TabIndex = 20;
             valor_DiariaLabel.Text = "Valor da Diária:";
             // 
             // radioButtonDT_EN
             // 
             this.radioButtonDT_EN.AutoSize = true;
-            this.radioButtonDT_EN.Location = new System.Drawing.Point(43, 12);
+            this.radioButtonDT_EN.Location = new System.Drawing.Point(32, 10);
+            this.radioButtonDT_EN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonDT_EN.Name = "radioButtonDT_EN";
-            this.radioButtonDT_EN.Size = new System.Drawing.Size(126, 20);
+            this.radioButtonDT_EN.Size = new System.Drawing.Size(103, 17);
             this.radioButtonDT_EN.TabIndex = 0;
             this.radioButtonDT_EN.TabStop = true;
             this.radioButtonDT_EN.Text = "Data da Entrada";
@@ -161,9 +169,10 @@
             // radioButtonNome
             // 
             this.radioButtonNome.AutoSize = true;
-            this.radioButtonNome.Location = new System.Drawing.Point(43, 88);
+            this.radioButtonNome.Location = new System.Drawing.Point(32, 72);
+            this.radioButtonNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonNome.Name = "radioButtonNome";
-            this.radioButtonNome.Size = new System.Drawing.Size(65, 20);
+            this.radioButtonNome.Size = new System.Drawing.Size(53, 17);
             this.radioButtonNome.TabIndex = 0;
             this.radioButtonNome.TabStop = true;
             this.radioButtonNome.Text = "Nome";
@@ -172,9 +181,10 @@
             // radioButtonCPF
             // 
             this.radioButtonCPF.AutoSize = true;
-            this.radioButtonCPF.Location = new System.Drawing.Point(166, 88);
+            this.radioButtonCPF.Location = new System.Drawing.Point(124, 72);
+            this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonCPF.Name = "radioButtonCPF";
-            this.radioButtonCPF.Size = new System.Drawing.Size(54, 20);
+            this.radioButtonCPF.Size = new System.Drawing.Size(45, 17);
             this.radioButtonCPF.TabIndex = 0;
             this.radioButtonCPF.TabStop = true;
             this.radioButtonCPF.Text = "CPF";
@@ -182,23 +192,26 @@
             // 
             // textBoxDt_En
             // 
-            this.textBoxDt_En.Location = new System.Drawing.Point(43, 51);
+            this.textBoxDt_En.Location = new System.Drawing.Point(32, 41);
+            this.textBoxDt_En.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDt_En.Name = "textBoxDt_En";
-            this.textBoxDt_En.Size = new System.Drawing.Size(226, 22);
+            this.textBoxDt_En.Size = new System.Drawing.Size(170, 20);
             this.textBoxDt_En.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxBuscar
             // 
-            this.textBox2.Location = new System.Drawing.Point(43, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 22);
-            this.textBox2.TabIndex = 2;
+            this.textBoxBuscar.Location = new System.Drawing.Point(32, 105);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(170, 20);
+            this.textBoxBuscar.TabIndex = 2;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(285, 128);
+            this.buttonBuscar.Location = new System.Drawing.Point(214, 104);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(56, 19);
             this.buttonBuscar.TabIndex = 3;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -218,12 +231,13 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.diariaDataGridView.DataSource = this.diariaBindingSource;
-            this.diariaDataGridView.Location = new System.Drawing.Point(11, 189);
+            this.diariaDataGridView.Location = new System.Drawing.Point(8, 154);
+            this.diariaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.diariaDataGridView.Name = "diariaDataGridView";
             this.diariaDataGridView.ReadOnly = true;
             this.diariaDataGridView.RowHeadersWidth = 51;
             this.diariaDataGridView.RowTemplate.Height = 24;
-            this.diariaDataGridView.Size = new System.Drawing.Size(600, 220);
+            this.diariaDataGridView.Size = new System.Drawing.Size(450, 179);
             this.diariaDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -297,12 +311,13 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.quartosDataGridView.DataSource = this.quartosBindingSource;
-            this.quartosDataGridView.Location = new System.Drawing.Point(629, 189);
+            this.quartosDataGridView.Location = new System.Drawing.Point(472, 154);
+            this.quartosDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quartosDataGridView.Name = "quartosDataGridView";
             this.quartosDataGridView.ReadOnly = true;
             this.quartosDataGridView.RowHeadersWidth = 51;
             this.quartosDataGridView.RowTemplate.Height = 24;
-            this.quartosDataGridView.Size = new System.Drawing.Size(428, 220);
+            this.quartosDataGridView.Size = new System.Drawing.Size(321, 179);
             this.quartosDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn7
@@ -335,66 +350,74 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(103, 474);
+            this.idTextBox.Location = new System.Drawing.Point(77, 385);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 22);
+            this.idTextBox.Size = new System.Drawing.Size(76, 20);
             this.idTextBox.TabIndex = 9;
             // 
             // data_EntradaTextBox
             // 
             this.data_EntradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Data_Entrada", true));
-            this.data_EntradaTextBox.Location = new System.Drawing.Point(103, 530);
+            this.data_EntradaTextBox.Location = new System.Drawing.Point(77, 431);
+            this.data_EntradaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_EntradaTextBox.Name = "data_EntradaTextBox";
-            this.data_EntradaTextBox.Size = new System.Drawing.Size(309, 22);
+            this.data_EntradaTextBox.Size = new System.Drawing.Size(233, 20);
             this.data_EntradaTextBox.TabIndex = 11;
             // 
             // id_clienteTextBox
             // 
             this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id_cliente", true));
-            this.id_clienteTextBox.Location = new System.Drawing.Point(103, 502);
+            this.id_clienteTextBox.Location = new System.Drawing.Point(77, 408);
+            this.id_clienteTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id_clienteTextBox.Name = "id_clienteTextBox";
-            this.id_clienteTextBox.Size = new System.Drawing.Size(100, 22);
+            this.id_clienteTextBox.Size = new System.Drawing.Size(76, 20);
             this.id_clienteTextBox.TabIndex = 13;
             // 
             // id_funcionarioTextBox
             // 
             this.id_funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id_funcionario", true));
-            this.id_funcionarioTextBox.Location = new System.Drawing.Point(295, 502);
+            this.id_funcionarioTextBox.Location = new System.Drawing.Point(221, 408);
+            this.id_funcionarioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id_funcionarioTextBox.Name = "id_funcionarioTextBox";
-            this.id_funcionarioTextBox.Size = new System.Drawing.Size(117, 22);
+            this.id_funcionarioTextBox.Size = new System.Drawing.Size(89, 20);
             this.id_funcionarioTextBox.TabIndex = 15;
             // 
             // numeroTextBox
             // 
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Numero", true));
-            this.numeroTextBox.Location = new System.Drawing.Point(713, 474);
+            this.numeroTextBox.Location = new System.Drawing.Point(535, 385);
+            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numeroTextBox.Name = "numeroTextBox";
-            this.numeroTextBox.Size = new System.Drawing.Size(142, 22);
+            this.numeroTextBox.Size = new System.Drawing.Size(108, 20);
             this.numeroTextBox.TabIndex = 17;
             // 
             // descricaoTextBox
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Descricao", true));
-            this.descricaoTextBox.Location = new System.Drawing.Point(713, 505);
+            this.descricaoTextBox.Location = new System.Drawing.Point(535, 410);
+            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(142, 22);
+            this.descricaoTextBox.Size = new System.Drawing.Size(108, 20);
             this.descricaoTextBox.TabIndex = 19;
             // 
             // valor_DiariaTextBox
             // 
             this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
-            this.valor_DiariaTextBox.Location = new System.Drawing.Point(713, 533);
+            this.valor_DiariaTextBox.Location = new System.Drawing.Point(535, 433);
+            this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
-            this.valor_DiariaTextBox.Size = new System.Drawing.Size(142, 22);
+            this.valor_DiariaTextBox.Size = new System.Drawing.Size(108, 20);
             this.valor_DiariaTextBox.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 424);
+            this.label1.Location = new System.Drawing.Point(9, 344);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 20);
+            this.label1.Size = new System.Drawing.Size(123, 20);
             this.label1.TabIndex = 22;
             this.label1.Text = "Dados da Diária";
             // 
@@ -402,35 +425,39 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(634, 424);
+            this.label2.Location = new System.Drawing.Point(476, 344);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 20);
+            this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Dados do Quarto";
             // 
             // buttonADCDiaria
             // 
-            this.buttonADCDiaria.Location = new System.Drawing.Point(19, 637);
+            this.buttonADCDiaria.Location = new System.Drawing.Point(14, 518);
+            this.buttonADCDiaria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonADCDiaria.Name = "buttonADCDiaria";
-            this.buttonADCDiaria.Size = new System.Drawing.Size(75, 23);
+            this.buttonADCDiaria.Size = new System.Drawing.Size(56, 19);
             this.buttonADCDiaria.TabIndex = 24;
             this.buttonADCDiaria.Text = "Adicionar";
             this.buttonADCDiaria.UseVisualStyleBackColor = true;
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(97, 637);
+            this.buttonAlterar.Location = new System.Drawing.Point(73, 518);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(81, 23);
+            this.buttonAlterar.Size = new System.Drawing.Size(61, 19);
             this.buttonAlterar.TabIndex = 24;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
             // 
             // buttonExcluirDiaria
             // 
-            this.buttonExcluirDiaria.Location = new System.Drawing.Point(188, 637);
+            this.buttonExcluirDiaria.Location = new System.Drawing.Point(141, 518);
+            this.buttonExcluirDiaria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonExcluirDiaria.Name = "buttonExcluirDiaria";
-            this.buttonExcluirDiaria.Size = new System.Drawing.Size(81, 23);
+            this.buttonExcluirDiaria.Size = new System.Drawing.Size(61, 19);
             this.buttonExcluirDiaria.TabIndex = 24;
             this.buttonExcluirDiaria.Text = "Excluir";
             this.buttonExcluirDiaria.UseVisualStyleBackColor = true;
@@ -438,9 +465,10 @@
             // 
             // buttonADCquarto
             // 
-            this.buttonADCquarto.Location = new System.Drawing.Point(884, 637);
+            this.buttonADCquarto.Location = new System.Drawing.Point(663, 518);
+            this.buttonADCquarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonADCquarto.Name = "buttonADCquarto";
-            this.buttonADCquarto.Size = new System.Drawing.Size(81, 23);
+            this.buttonADCquarto.Size = new System.Drawing.Size(61, 19);
             this.buttonADCquarto.TabIndex = 24;
             this.buttonADCquarto.Text = "Adicionar";
             this.buttonADCquarto.UseVisualStyleBackColor = true;
@@ -448,9 +476,10 @@
             // 
             // buttonExcluirQuarto
             // 
-            this.buttonExcluirQuarto.Location = new System.Drawing.Point(975, 637);
+            this.buttonExcluirQuarto.Location = new System.Drawing.Point(731, 518);
+            this.buttonExcluirQuarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonExcluirQuarto.Name = "buttonExcluirQuarto";
-            this.buttonExcluirQuarto.Size = new System.Drawing.Size(81, 23);
+            this.buttonExcluirQuarto.Size = new System.Drawing.Size(61, 19);
             this.buttonExcluirQuarto.TabIndex = 24;
             this.buttonExcluirQuarto.Text = "Excluir";
             this.buttonExcluirQuarto.UseVisualStyleBackColor = true;
@@ -459,26 +488,28 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 167);
+            this.label3.Location = new System.Drawing.Point(14, 136);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 16);
+            this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 25;
             this.label3.Text = "Cadastro de Diária";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(638, 167);
+            this.label4.Location = new System.Drawing.Point(478, 136);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 26;
             this.label4.Text = "Quarto";
             // 
             // FormBuscarDiaria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1076, 685);
+            this.ClientSize = new System.Drawing.Size(807, 557);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonExcluirQuarto);
@@ -505,12 +536,13 @@
             this.Controls.Add(this.quartosDataGridView);
             this.Controls.Add(this.diariaDataGridView);
             this.Controls.Add(this.buttonBuscar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.textBoxDt_En);
             this.Controls.Add(this.radioButtonCPF);
             this.Controls.Add(this.radioButtonNome);
             this.Controls.Add(this.radioButtonDT_EN);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormBuscarDiaria";
@@ -532,7 +564,7 @@
         private System.Windows.Forms.RadioButton radioButtonNome;
         private System.Windows.Forms.RadioButton radioButtonCPF;
         private System.Windows.Forms.TextBox textBoxDt_En;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.BindingSource diariaBindingSource;
         private System.Windows.Forms.DataGridView diariaDataGridView;

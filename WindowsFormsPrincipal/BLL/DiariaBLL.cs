@@ -28,6 +28,16 @@ namespace BLL
             if (!new GrupoFuncionarioDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
                 throw new Exception("Não foi possível realizar essa operação.");
         }
+
+        public object BuscarPorCPF(string cpf)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object BuscarPorNome(string nome)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

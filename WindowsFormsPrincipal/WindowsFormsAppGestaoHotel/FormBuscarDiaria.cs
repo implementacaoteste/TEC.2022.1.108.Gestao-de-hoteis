@@ -43,6 +43,14 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
+                if (radioButtonNome.Checked)
+                {
+                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorNome(textBoxBuscar.Text);
+                }
+                if(radioButtonCPF.Checked)
+                {
+                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorCPF(textBoxBuscar.Text);
+                }
                 quartosBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
             }
             catch(Exception ex )
@@ -82,5 +90,6 @@ namespace WindowsFormsAppGestaoHotel
 
             MessageBox.Show("Registro excluido com sucesso!");
         }
+
     }
 }
