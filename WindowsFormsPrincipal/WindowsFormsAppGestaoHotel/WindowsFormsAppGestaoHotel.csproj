@@ -70,6 +70,12 @@
     <Compile Include="FormBuscarGrupoFuncionario.Designer.cs">
       <DependentUpon>FormBuscarGrupoFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBuscarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarQuarto.Designer.cs">
+      <DependentUpon>FormBuscarQuarto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroClasse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarGrupoFuncionario.resx">
       <DependentUpon>FormBuscarGrupoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarQuarto.resx">
+      <DependentUpon>FormBuscarQuarto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroClasse.resx">
       <DependentUpon>FormCadastroClasse.cs</DependentUpon>
