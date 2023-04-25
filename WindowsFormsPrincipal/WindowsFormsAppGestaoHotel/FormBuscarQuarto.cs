@@ -16,5 +16,10 @@ namespace WindowsFormsAppGestaoHotel
         {
             InitializeComponent();
         }
+
+        private void buttonBuscarQuarto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
