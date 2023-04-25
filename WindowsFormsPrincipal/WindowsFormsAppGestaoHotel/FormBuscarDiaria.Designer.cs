@@ -495,6 +495,7 @@
             this.Cpf_Cliente.MinimumWidth = 6;
             this.Cpf_Cliente.Name = "Cpf_Cliente";
             this.Cpf_Cliente.ReadOnly = true;
+            this.Cpf_Cliente.Width = 90;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -504,7 +505,7 @@
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
+            this.dataGridViewTextBoxColumn5.Width = 70;
             // 
             // dataGridViewTextBoxColumn4
             // 

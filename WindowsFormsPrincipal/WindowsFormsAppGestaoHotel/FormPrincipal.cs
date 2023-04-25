@@ -187,5 +187,13 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void diariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormBuscarDiaria frm = new FormBuscarDiaria())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
