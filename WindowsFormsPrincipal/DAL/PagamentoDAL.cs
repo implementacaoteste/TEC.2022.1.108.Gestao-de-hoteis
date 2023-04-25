@@ -146,7 +146,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o ID do pagamento no banco d .", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o ID do pagamento no banco de dados.", ex);
             }
             finally
             {
