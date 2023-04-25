@@ -4,14 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using BLL;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Models;
 
 namespace WindowsFormsAppGestaoHotel
 {
     public partial class FormConsultarPagamento : Form
     {
+        public int Id;
         public FormConsultarPagamento()
         {
             InitializeComponent();
@@ -26,9 +28,24 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-               // pagamentoBindingSource.DataSource = new PagamentoBLL().BuscarPorTodos();
+               //pagamentoBindingSource.DataSource = new PagamentoBLL().BuscaPorId(textBox1);
             }
             catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (pagamentoBindingSource.Count > 0)
+                    Id = ((Pagamento)pagamentoBindingSource.Current).Id;
+                else
+                    MessageBox.Show("Não existe registro para ser Selecionador");
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
