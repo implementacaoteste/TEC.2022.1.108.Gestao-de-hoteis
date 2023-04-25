@@ -101,7 +101,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NUMERO,DESCICAO,VALOR_DIARIA
+                cmd.CommandText = @"SELECT ID, NUMERO,DESCRICAO,VALOR_DIARIA
                                     FROM QUARTO";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();

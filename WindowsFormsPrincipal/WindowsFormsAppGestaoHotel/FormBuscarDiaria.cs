@@ -51,7 +51,7 @@ namespace WindowsFormsAppGestaoHotel
                 {
                     diariaBindingSource.DataSource = new DiariaBLL().BuscarPorCPFCliente(textBoxBuscar.Text);
                 }
-                //quartosBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
+                quartosBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
             //}
             //catch(Exception ex )
             //{
