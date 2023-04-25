@@ -45,11 +45,11 @@ namespace WindowsFormsAppGestaoHotel
             {
                 if (radioButtonNome.Checked)
                 {
-                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorNome(textBoxBuscar.Text);
+                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorNomeCliente(textBoxBuscar.Text);
                 }
                 if(radioButtonCPF.Checked)
                 {
-                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorCPF(textBoxBuscar.Text);
+                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorCPFCliente(textBoxBuscar.Text);
                 }
                 quartosBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
             }
