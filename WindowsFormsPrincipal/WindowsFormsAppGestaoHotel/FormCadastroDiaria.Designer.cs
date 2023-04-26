@@ -194,6 +194,7 @@
             this.buttonSelecionarCliente.TabIndex = 14;
             this.buttonSelecionarCliente.Text = "Selecionar";
             this.buttonSelecionarCliente.UseVisualStyleBackColor = true;
+            this.buttonSelecionarCliente.Click += new System.EventHandler(this.buttonSelecionarCliente_Click);
             // 
             // buttonSelecionarPagamento
             // 

@@ -31,18 +31,24 @@ namespace WindowsFormsAppGestaoHotel
 
         private void buttonSelecionarFuncionario_Click(object sender, EventArgs e)
         {
-            using (FormConsultaFuncionario frm = new FormConsultaFuncionario())
+            using(FormConsultaFuncionario frm = new FormConsultaFuncionario())
             {
                 frm.ShowDialog();
             }
         }
-
         private void buttonSelecionarPagamento_Click(object sender, EventArgs e)
         {
-            using (FormConsultarPagamento frm = new FormConsultarPagamento())
+            using(FormConsultarPagamento frm = new FormConsultarPagamento())
             {
                 frm.ShowDialog();
             }
+        }
+        private void buttonSelecionarCliente_Click(object sender, EventArgs e)
+        {
+            using(FormBuscarCliente frm = new FormBuscarCliente())
+            {
+                frm.ShowDialog();
+            } 
         }
     }
 }
