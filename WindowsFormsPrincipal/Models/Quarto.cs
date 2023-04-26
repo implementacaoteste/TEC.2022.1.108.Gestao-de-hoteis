@@ -12,7 +12,7 @@ namespace Models
         public string Numero { get; set; }
         public int Id_Classe { get; set; }
         public string Descricao { get; set; }
-        public float Valor_Diaria { get; set; }
+        public double Valor_Diaria { get; set; }
         public int Id_Status { get; set; }
     }
 }
