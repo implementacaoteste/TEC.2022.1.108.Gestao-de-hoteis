@@ -108,7 +108,7 @@
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(72, 16);
             descricaoLabel.TabIndex = 18;
-            descricaoLabel.Text = "Descricao:";
+            descricaoLabel.Text = "Descrição:";
             // 
             // buttonAdicionarGrupoFuncionario
             // 
@@ -377,6 +377,7 @@
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionarioBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(127, 26);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(50, 22);
             this.idTextBox.TabIndex = 18;
             // 
@@ -386,6 +387,7 @@
             this.nomeGrupoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionarioBindingSource, "NomeGrupo", true));
             this.nomeGrupoTextBox1.Location = new System.Drawing.Point(127, 54);
             this.nomeGrupoTextBox1.Name = "nomeGrupoTextBox1";
+            this.nomeGrupoTextBox1.ReadOnly = true;
             this.nomeGrupoTextBox1.Size = new System.Drawing.Size(245, 22);
             this.nomeGrupoTextBox1.TabIndex = 19;
             // 
@@ -400,7 +402,7 @@
             this.groupBox4.Size = new System.Drawing.Size(436, 100);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Dados do Grupo";
+            this.groupBox4.Text = "Dados da Permissão";
             // 
             // idTextBox1
             // 
@@ -408,6 +410,7 @@
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.permissoesBindingSource, "Id", true));
             this.idTextBox1.Location = new System.Drawing.Point(127, 26);
             this.idTextBox1.Name = "idTextBox1";
+            this.idTextBox1.ReadOnly = true;
             this.idTextBox1.Size = new System.Drawing.Size(50, 22);
             this.idTextBox1.TabIndex = 20;
             // 
@@ -417,6 +420,7 @@
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.permissoesBindingSource, "Descricao", true));
             this.descricaoTextBox.Location = new System.Drawing.Point(127, 55);
             this.descricaoTextBox.Name = "descricaoTextBox";
+            this.descricaoTextBox.ReadOnly = true;
             this.descricaoTextBox.Size = new System.Drawing.Size(245, 22);
             this.descricaoTextBox.TabIndex = 19;
             // 

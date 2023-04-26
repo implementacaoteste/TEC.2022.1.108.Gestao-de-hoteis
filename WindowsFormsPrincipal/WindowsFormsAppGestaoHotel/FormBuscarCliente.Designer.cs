@@ -62,12 +62,13 @@
             this.cPFMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.emailTextBox1 = new System.Windows.Forms.TextBox();
             this.enderecoTextBox1 = new System.Windows.Forms.TextBox();
-            this.data_nascimentoDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.celularMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.buttonAlterarCliente = new System.Windows.Forms.Button();
             this.buttonExcluirCliente = new System.Windows.Forms.Button();
             this.buttonAdicionarCliente = new System.Windows.Forms.Button();
+            this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.data_nascimentoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             celularLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // celularLabel
@@ -380,6 +382,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.data_nascimentoMaskedTextBox);
             this.groupBox4.Controls.Add(this.idSexoTextBox);
             this.groupBox4.Controls.Add(this.nomeTextBox1);
             this.groupBox4.Controls.Add(this.cPFMaskedTextBox1);
@@ -388,7 +391,6 @@
             this.groupBox4.Controls.Add(celularLabel);
             this.groupBox4.Controls.Add(emailLabel);
             this.groupBox4.Controls.Add(idLabel1);
-            this.groupBox4.Controls.Add(this.data_nascimentoDateTimePicker1);
             this.groupBox4.Controls.Add(this.idTextBox1);
             this.groupBox4.Controls.Add(enderecoLabel);
             this.groupBox4.Controls.Add(this.celularMaskedTextBox1);
@@ -411,6 +413,7 @@
             this.idSexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "IdSexo", true));
             this.idSexoTextBox.Location = new System.Drawing.Point(431, 55);
             this.idSexoTextBox.Name = "idSexoTextBox";
+            this.idSexoTextBox.ReadOnly = true;
             this.idSexoTextBox.Size = new System.Drawing.Size(100, 22);
             this.idSexoTextBox.TabIndex = 21;
             // 
@@ -420,6 +423,7 @@
             this.nomeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
             this.nomeTextBox1.Location = new System.Drawing.Point(88, 55);
             this.nomeTextBox1.Name = "nomeTextBox1";
+            this.nomeTextBox1.ReadOnly = true;
             this.nomeTextBox1.Size = new System.Drawing.Size(250, 22);
             this.nomeTextBox1.TabIndex = 19;
             // 
@@ -430,6 +434,7 @@
             this.cPFMaskedTextBox1.Location = new System.Drawing.Point(88, 84);
             this.cPFMaskedTextBox1.Mask = "000,000,000-00";
             this.cPFMaskedTextBox1.Name = "cPFMaskedTextBox1";
+            this.cPFMaskedTextBox1.ReadOnly = true;
             this.cPFMaskedTextBox1.Size = new System.Drawing.Size(250, 22);
             this.cPFMaskedTextBox1.TabIndex = 13;
             // 
@@ -439,6 +444,7 @@
             this.emailTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Email", true));
             this.emailTextBox1.Location = new System.Drawing.Point(88, 146);
             this.emailTextBox1.Name = "emailTextBox1";
+            this.emailTextBox1.ReadOnly = true;
             this.emailTextBox1.Size = new System.Drawing.Size(445, 22);
             this.emailTextBox1.TabIndex = 16;
             // 
@@ -448,17 +454,9 @@
             this.enderecoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
             this.enderecoTextBox1.Location = new System.Drawing.Point(88, 115);
             this.enderecoTextBox1.Name = "enderecoTextBox1";
+            this.enderecoTextBox1.ReadOnly = true;
             this.enderecoTextBox1.Size = new System.Drawing.Size(445, 22);
             this.enderecoTextBox1.TabIndex = 17;
-            // 
-            // data_nascimentoDateTimePicker1
-            // 
-            this.data_nascimentoDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "Data_nascimento", true));
-            this.data_nascimentoDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.data_nascimentoDateTimePicker1.Location = new System.Drawing.Point(431, 84);
-            this.data_nascimentoDateTimePicker1.Name = "data_nascimentoDateTimePicker1";
-            this.data_nascimentoDateTimePicker1.Size = new System.Drawing.Size(100, 22);
-            this.data_nascimentoDateTimePicker1.TabIndex = 15;
             // 
             // idTextBox1
             // 
@@ -466,6 +464,7 @@
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Id", true));
             this.idTextBox1.Location = new System.Drawing.Point(88, 26);
             this.idTextBox1.Name = "idTextBox1";
+            this.idTextBox1.ReadOnly = true;
             this.idTextBox1.Size = new System.Drawing.Size(50, 22);
             this.idTextBox1.TabIndex = 18;
             // 
@@ -476,6 +475,7 @@
             this.celularMaskedTextBox1.Location = new System.Drawing.Point(88, 174);
             this.celularMaskedTextBox1.Mask = "(99) 00000-0000";
             this.celularMaskedTextBox1.Name = "celularMaskedTextBox1";
+            this.celularMaskedTextBox1.ReadOnly = true;
             this.celularMaskedTextBox1.Size = new System.Drawing.Size(150, 22);
             this.celularMaskedTextBox1.TabIndex = 14;
             // 
@@ -533,11 +533,27 @@
             this.buttonAdicionarCliente.UseVisualStyleBackColor = false;
             this.buttonAdicionarCliente.Click += new System.EventHandler(this.buttonAdicionarCliente_Click);
             // 
+            // sexoBindingSource
+            // 
+            this.sexoBindingSource.DataSource = typeof(Models.Sexo);
+            // 
+            // data_nascimentoMaskedTextBox
+            // 
+            this.data_nascimentoMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_nascimentoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Data_nascimento", true));
+            this.data_nascimentoMaskedTextBox.Location = new System.Drawing.Point(431, 84);
+            this.data_nascimentoMaskedTextBox.Mask = "00/00/0000";
+            this.data_nascimentoMaskedTextBox.Name = "data_nascimentoMaskedTextBox";
+            this.data_nascimentoMaskedTextBox.ReadOnly = true;
+            this.data_nascimentoMaskedTextBox.Size = new System.Drawing.Size(100, 22);
+            this.data_nascimentoMaskedTextBox.TabIndex = 16;
+            this.data_nascimentoMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
             // FormBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 750);
+            this.ClientSize = new System.Drawing.Size(1098, 759);
             this.Controls.Add(this.buttonAlterarCliente);
             this.Controls.Add(this.buttonExcluirCliente);
             this.Controls.Add(this.buttonAdicionarCliente);
@@ -558,6 +574,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -586,7 +603,6 @@
         private System.Windows.Forms.TextBox idTextBox1;
         private System.Windows.Forms.MaskedTextBox cPFMaskedTextBox1;
         private System.Windows.Forms.MaskedTextBox celularMaskedTextBox1;
-        private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker1;
         private System.Windows.Forms.TextBox emailTextBox1;
         private System.Windows.Forms.TextBox enderecoTextBox1;
         private System.Windows.Forms.TextBox nomeTextBox1;
@@ -594,5 +610,7 @@
         private System.Windows.Forms.Button buttonAlterarCliente;
         private System.Windows.Forms.Button buttonExcluirCliente;
         private System.Windows.Forms.Button buttonAdicionarCliente;
+        private System.Windows.Forms.BindingSource sexoBindingSource;
+        private System.Windows.Forms.MaskedTextBox data_nascimentoMaskedTextBox;
     }
 }

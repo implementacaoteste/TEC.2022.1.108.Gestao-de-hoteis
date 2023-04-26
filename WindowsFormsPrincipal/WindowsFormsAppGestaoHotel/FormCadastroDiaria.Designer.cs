@@ -184,6 +184,7 @@
             this.buttonSelecionarFuncionario.TabIndex = 13;
             this.buttonSelecionarFuncionario.Text = "Selecionar";
             this.buttonSelecionarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonSelecionarFuncionario.Click += new System.EventHandler(this.buttonSelecionarFuncionario_Click);
             // 
             // buttonSelecionarCliente
             // 
@@ -193,6 +194,7 @@
             this.buttonSelecionarCliente.TabIndex = 14;
             this.buttonSelecionarCliente.Text = "Selecionar";
             this.buttonSelecionarCliente.UseVisualStyleBackColor = true;
+            this.buttonSelecionarCliente.Click += new System.EventHandler(this.buttonSelecionarCliente_Click);
             // 
             // buttonSelecionarPagamento
             // 
@@ -202,6 +204,7 @@
             this.buttonSelecionarPagamento.TabIndex = 15;
             this.buttonSelecionarPagamento.Text = "Selecionar";
             this.buttonSelecionarPagamento.UseVisualStyleBackColor = true;
+            this.buttonSelecionarPagamento.Click += new System.EventHandler(this.buttonSelecionarPagamento_Click);
             // 
             // buttonSalvar
             // 
