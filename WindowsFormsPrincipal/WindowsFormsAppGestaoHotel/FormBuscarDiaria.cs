@@ -91,5 +91,38 @@ namespace WindowsFormsAppGestaoHotel
             MessageBox.Show("Registro excluido com sucesso!");
         }
 
+        private void buttonADCDiaria_Click(object sender, EventArgs e)
+        {
+            try
+            {
+            using (FormCadastroDiaria frm = new FormCadastroDiaria())
+            {
+                frm.ShowDialog();
+            }
+            buttonBuscar_Click(null, null); 
+            }
+            catch (Exception ex)
+            {
+              MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id= ((Diaria)diariaBindingSource.Current).Id;
+                using (FormCadastroDiaria frm = new FormCadastroDiaria())
+                {
+                    frm.ShowDialog();
+                }
+                buttonBuscar_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
     }
 }
