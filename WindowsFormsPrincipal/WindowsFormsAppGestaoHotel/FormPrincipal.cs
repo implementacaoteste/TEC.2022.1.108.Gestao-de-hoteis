@@ -37,6 +37,8 @@ namespace WindowsFormsPrincipal1
             {
                 MessageBox.Show(ex.Message);
             }
+            Logado log = new Logado();
+            listBoxNomeUsuario.Text = Convert.ToString(log.NomeUsuario);
         }
 
         private void cadastroFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -202,7 +204,7 @@ namespace WindowsFormsPrincipal1
             {
                 return;
             }
-            new Funcionario().LimparDados();
+            new Logado().LimparDados();
             using (FormLogin frm = new FormLogin())
             {
                 frm.ShowDialog();
