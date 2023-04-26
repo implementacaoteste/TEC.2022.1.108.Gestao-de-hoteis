@@ -125,12 +125,8 @@
             // numeroLabel
             // 
             numeroLabel.AutoSize = true;
-
-            numeroLabel.Location = new System.Drawing.Point(760, 478);
-
-            numeroLabel.Location = new System.Drawing.Point(673, 388);
+            numeroLabel.Location = new System.Drawing.Point(654, 455);
             numeroLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-
             numeroLabel.Name = "numeroLabel";
             numeroLabel.Size = new System.Drawing.Size(58, 16);
             numeroLabel.TabIndex = 16;
@@ -139,12 +135,8 @@
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
-
-            descricaoLabel.Location = new System.Drawing.Point(745, 508);
-
-            descricaoLabel.Location = new System.Drawing.Point(662, 413);
+            descricaoLabel.Location = new System.Drawing.Point(643, 480);
             descricaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(72, 16);
             descricaoLabel.TabIndex = 18;
@@ -153,12 +145,8 @@
             // valor_DiariaLabel
             // 
             valor_DiariaLabel.AutoSize = true;
-
-            valor_DiariaLabel.Location = new System.Drawing.Point(717, 537);
-
-            valor_DiariaLabel.Location = new System.Drawing.Point(641, 436);
+            valor_DiariaLabel.Location = new System.Drawing.Point(622, 503);
             valor_DiariaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-
             valor_DiariaLabel.Name = "valor_DiariaLabel";
             valor_DiariaLabel.Size = new System.Drawing.Size(100, 16);
             valor_DiariaLabel.TabIndex = 20;
@@ -248,19 +236,13 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.quartosDataGridView.DataSource = this.quartosBindingSource;
-            this.quartosDataGridView.Location = new System.Drawing.Point(740, 190);
-            this.quartosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.quartosDataGridView.Location = new System.Drawing.Point(658, 154);
+            this.quartosDataGridView.Location = new System.Drawing.Point(678, 190);
             this.quartosDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.quartosDataGridView.Name = "quartosDataGridView";
             this.quartosDataGridView.ReadOnly = true;
             this.quartosDataGridView.RowHeadersWidth = 51;
             this.quartosDataGridView.RowTemplate.Height = 24;
-
-            this.quartosDataGridView.Size = new System.Drawing.Size(428, 220);
-
-            this.quartosDataGridView.Size = new System.Drawing.Size(320, 179);
-
+            this.quartosDataGridView.Size = new System.Drawing.Size(416, 179);
             this.quartosDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn7
@@ -329,13 +311,8 @@
             // numeroTextBox
             // 
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Numero", true));
-
-            this.numeroTextBox.Location = new System.Drawing.Point(824, 474);
-            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
-            this.numeroTextBox.Location = new System.Drawing.Point(721, 385);
+            this.numeroTextBox.Location = new System.Drawing.Point(726, 445);
             this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2);
-
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.Size = new System.Drawing.Size(143, 22);
             this.numeroTextBox.TabIndex = 17;
@@ -343,13 +320,8 @@
             // descricaoTextBox
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Descricao", true));
-
-            this.descricaoTextBox.Location = new System.Drawing.Point(824, 505);
-            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
-            this.descricaoTextBox.Location = new System.Drawing.Point(721, 410);
+            this.descricaoTextBox.Location = new System.Drawing.Point(726, 471);
             this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2);
-
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(143, 22);
             this.descricaoTextBox.TabIndex = 19;
@@ -357,13 +329,8 @@
             // valor_DiariaTextBox
             // 
             this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
-
-            this.valor_DiariaTextBox.Location = new System.Drawing.Point(824, 533);
-            this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
-            this.valor_DiariaTextBox.Location = new System.Drawing.Point(721, 433);
+            this.valor_DiariaTextBox.Location = new System.Drawing.Point(726, 500);
             this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(2);
-
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(143, 22);
             this.valor_DiariaTextBox.TabIndex = 21;
@@ -382,12 +349,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-            this.label2.Location = new System.Drawing.Point(745, 423);
-
-            this.label2.Location = new System.Drawing.Point(662, 344);
+            this.label2.Location = new System.Drawing.Point(658, 423);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 23;
@@ -395,7 +358,7 @@
             // 
             // buttonADCDiaria
             // 
-            this.buttonADCDiaria.Location = new System.Drawing.Point(19, 638);
+            this.buttonADCDiaria.Location = new System.Drawing.Point(16, 564);
             this.buttonADCDiaria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonADCDiaria.Name = "buttonADCDiaria";
             this.buttonADCDiaria.Size = new System.Drawing.Size(75, 23);
@@ -406,7 +369,7 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(97, 638);
+            this.buttonAlterar.Location = new System.Drawing.Point(97, 564);
             this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(81, 23);
@@ -417,7 +380,7 @@
             // 
             // buttonExcluirDiaria
             // 
-            this.buttonExcluirDiaria.Location = new System.Drawing.Point(188, 638);
+            this.buttonExcluirDiaria.Location = new System.Drawing.Point(187, 564);
             this.buttonExcluirDiaria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirDiaria.Name = "buttonExcluirDiaria";
             this.buttonExcluirDiaria.Size = new System.Drawing.Size(81, 23);
@@ -428,13 +391,8 @@
             // 
             // buttonADCquarto
             // 
-
-            this.buttonADCquarto.Location = new System.Drawing.Point(995, 638);
-            this.buttonADCquarto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
-            this.buttonADCquarto.Location = new System.Drawing.Point(849, 518);
+            this.buttonADCquarto.Location = new System.Drawing.Point(854, 564);
             this.buttonADCquarto.Margin = new System.Windows.Forms.Padding(2);
-
             this.buttonADCquarto.Name = "buttonADCquarto";
             this.buttonADCquarto.Size = new System.Drawing.Size(81, 23);
             this.buttonADCquarto.TabIndex = 24;
@@ -444,13 +402,8 @@
             // 
             // buttonExcluirQuarto
             // 
-
-            this.buttonExcluirQuarto.Location = new System.Drawing.Point(1085, 638);
-            this.buttonExcluirQuarto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
-            this.buttonExcluirQuarto.Location = new System.Drawing.Point(917, 518);
+            this.buttonExcluirQuarto.Location = new System.Drawing.Point(939, 564);
             this.buttonExcluirQuarto.Margin = new System.Windows.Forms.Padding(2);
-
             this.buttonExcluirQuarto.Name = "buttonExcluirQuarto";
             this.buttonExcluirQuarto.Size = new System.Drawing.Size(81, 23);
             this.buttonExcluirQuarto.TabIndex = 24;
@@ -470,7 +423,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(748, 167);
+            this.label4.Location = new System.Drawing.Point(675, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 26;
@@ -498,11 +451,7 @@
             this.diariaDataGridView.ReadOnly = true;
             this.diariaDataGridView.RowHeadersWidth = 51;
             this.diariaDataGridView.RowTemplate.Height = 24;
-
-            this.diariaDataGridView.Size = new System.Drawing.Size(724, 220);
-
             this.diariaDataGridView.Size = new System.Drawing.Size(646, 179);
-
             this.diariaDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -577,11 +526,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(1193, 686);
-
-            this.ClientSize = new System.Drawing.Size(989, 557);
-
+            this.ClientSize = new System.Drawing.Size(1109, 598);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonExcluirQuarto);
