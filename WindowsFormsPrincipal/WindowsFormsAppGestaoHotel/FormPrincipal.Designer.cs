@@ -202,6 +202,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // labelNomeUsuario
             // 
@@ -221,6 +222,7 @@
             this.buttonSair.TabIndex = 5;
             this.buttonSair.Text = "Sair";
             this.buttonSair.UseVisualStyleBackColor = true;
+            this.buttonSair.Visible = false;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
             // FormPrincipal

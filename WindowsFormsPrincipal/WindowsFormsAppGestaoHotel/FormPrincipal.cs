@@ -208,5 +208,10 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            buttonSair.Visible = true;
+        }
     }
 }
