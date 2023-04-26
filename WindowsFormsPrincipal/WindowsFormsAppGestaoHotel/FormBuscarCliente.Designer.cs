@@ -68,6 +68,7 @@
             this.buttonAlterarCliente = new System.Windows.Forms.Button();
             this.buttonExcluirCliente = new System.Windows.Forms.Button();
             this.buttonAdicionarCliente = new System.Windows.Forms.Button();
+            this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             celularLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // celularLabel
@@ -533,6 +535,10 @@
             this.buttonAdicionarCliente.UseVisualStyleBackColor = false;
             this.buttonAdicionarCliente.Click += new System.EventHandler(this.buttonAdicionarCliente_Click);
             // 
+            // sexoBindingSource
+            // 
+            this.sexoBindingSource.DataSource = typeof(Models.Sexo);
+            // 
             // FormBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -558,6 +564,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,5 +601,6 @@
         private System.Windows.Forms.Button buttonAlterarCliente;
         private System.Windows.Forms.Button buttonExcluirCliente;
         private System.Windows.Forms.Button buttonAdicionarCliente;
+        private System.Windows.Forms.BindingSource sexoBindingSource;
     }
 }
