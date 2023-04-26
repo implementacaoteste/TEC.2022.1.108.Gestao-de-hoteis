@@ -195,5 +195,18 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
+
+        private void buttonSair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair do seu usuário", "Cuidado", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+            new Funcionario().LimparDados();
+            using (FormLogin frm = new FormLogin())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
