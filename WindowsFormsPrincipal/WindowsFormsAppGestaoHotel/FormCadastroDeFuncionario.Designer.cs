@@ -44,18 +44,18 @@
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.cPFTextBox = new System.Windows.Forms.TextBox();
-            this.celularTextBox = new System.Windows.Forms.TextBox();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
             this.senhaTextBox = new System.Windows.Forms.TextBox();
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
-            this.data_nascimentoTextBox = new System.Windows.Forms.TextBox();
             this.nomeUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxConfirmarSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tituloLabel = new System.Windows.Forms.Label();
-            this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cPFMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.celularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             nomeLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
@@ -151,6 +151,16 @@
             confirmar_senhaLabel.TabIndex = 42;
             confirmar_senhaLabel.Text = "Confirmar senha";
             // 
+            // senhaLabel
+            // 
+            senhaLabel.AutoSize = true;
+            senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            senhaLabel.Location = new System.Drawing.Point(70, 323);
+            senhaLabel.Name = "senhaLabel";
+            senhaLabel.Size = new System.Drawing.Size(70, 25);
+            senhaLabel.TabIndex = 44;
+            senhaLabel.Text = "Senha";
+            // 
             // buttonSalvarFuncionario
             // 
             this.buttonSalvarFuncionario.AutoSize = true;
@@ -184,7 +194,7 @@
             this.nomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.nomeTextBox.Location = new System.Drawing.Point(72, 123);
+            this.nomeTextBox.Location = new System.Drawing.Point(72, 124);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.nomeTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.nomeTextBox.Name = "nomeTextBox";
@@ -204,32 +214,8 @@
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.emailTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(365, 30);
+            this.emailTextBox.Size = new System.Drawing.Size(365, 28);
             this.emailTextBox.TabIndex = 6;
-            // 
-            // cPFTextBox
-            // 
-            this.cPFTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "CPF", true));
-            this.cPFTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.cPFTextBox.Location = new System.Drawing.Point(446, 123);
-            this.cPFTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.cPFTextBox.MinimumSize = new System.Drawing.Size(150, 30);
-            this.cPFTextBox.Name = "cPFTextBox";
-            this.cPFTextBox.Size = new System.Drawing.Size(150, 30);
-            this.cPFTextBox.TabIndex = 1;
-            // 
-            // celularTextBox
-            // 
-            this.celularTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.celularTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Celular", true));
-            this.celularTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.celularTextBox.Location = new System.Drawing.Point(611, 123);
-            this.celularTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.celularTextBox.MinimumSize = new System.Drawing.Size(150, 30);
-            this.celularTextBox.Name = "celularTextBox";
-            this.celularTextBox.Size = new System.Drawing.Size(150, 30);
-            this.celularTextBox.TabIndex = 2;
             // 
             // enderecoTextBox
             // 
@@ -240,7 +226,7 @@
             this.enderecoTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.enderecoTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(365, 30);
+            this.enderecoTextBox.Size = new System.Drawing.Size(365, 28);
             this.enderecoTextBox.TabIndex = 5;
             // 
             // senhaTextBox
@@ -252,7 +238,7 @@
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.senhaTextBox.MinimumSize = new System.Drawing.Size(205, 30);
             this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.Size = new System.Drawing.Size(205, 30);
+            this.senhaTextBox.Size = new System.Drawing.Size(205, 28);
             this.senhaTextBox.TabIndex = 8;
             // 
             // ativoCheckBox
@@ -267,18 +253,6 @@
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // data_nascimentoTextBox
-            // 
-            this.data_nascimentoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.data_nascimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Data_nascimento", true));
-            this.data_nascimentoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.data_nascimentoTextBox.Location = new System.Drawing.Point(778, 123);
-            this.data_nascimentoTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.data_nascimentoTextBox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.data_nascimentoTextBox.Name = "data_nascimentoTextBox";
-            this.data_nascimentoTextBox.Size = new System.Drawing.Size(200, 30);
-            this.data_nascimentoTextBox.TabIndex = 3;
-            // 
             // nomeUsuarioTextBox
             // 
             this.nomeUsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -288,7 +262,7 @@
             this.nomeUsuarioTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.nomeUsuarioTextBox.MinimumSize = new System.Drawing.Size(205, 30);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
-            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(205, 30);
+            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(205, 28);
             this.nomeUsuarioTextBox.TabIndex = 7;
             // 
             // comboBox1
@@ -306,6 +280,10 @@
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "Id";
             // 
+            // sexoBindingSource
+            // 
+            this.sexoBindingSource.DataSource = typeof(Models.Sexo);
+            // 
             // textBoxConfirmarSenha
             // 
             this.textBoxConfirmarSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -314,7 +292,7 @@
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxConfirmarSenha.MinimumSize = new System.Drawing.Size(205, 30);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
-            this.textBoxConfirmarSenha.Size = new System.Drawing.Size(205, 30);
+            this.textBoxConfirmarSenha.Size = new System.Drawing.Size(205, 28);
             this.textBoxConfirmarSenha.TabIndex = 9;
             // 
             // label2
@@ -333,31 +311,52 @@
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(1062, 65);
+            this.tituloLabel.Size = new System.Drawing.Size(1087, 65);
             this.tituloLabel.TabIndex = 44;
             this.tituloLabel.Text = "Cadastro de Funcionário";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // sexoBindingSource
+            // cPFMaskedTextBox
             // 
-            this.sexoBindingSource.DataSource = typeof(Models.Sexo);
+            this.cPFMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cPFMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "CPF", true));
+            this.cPFMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cPFMaskedTextBox.Location = new System.Drawing.Point(446, 124);
+            this.cPFMaskedTextBox.Mask = "000,000,000-00";
+            this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
+            this.cPFMaskedTextBox.Size = new System.Drawing.Size(150, 28);
+            this.cPFMaskedTextBox.TabIndex = 1;
             // 
-            // senhaLabel
+            // celularMaskedTextBox
             // 
-            senhaLabel.AutoSize = true;
-            senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            senhaLabel.Location = new System.Drawing.Point(70, 323);
-            senhaLabel.Name = "senhaLabel";
-            senhaLabel.Size = new System.Drawing.Size(70, 25);
-            senhaLabel.TabIndex = 44;
-            senhaLabel.Text = "Senha";
+            this.celularMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.celularMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Celular", true));
+            this.celularMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.celularMaskedTextBox.Location = new System.Drawing.Point(613, 123);
+            this.celularMaskedTextBox.Mask = "(99) 00000-0000";
+            this.celularMaskedTextBox.Name = "celularMaskedTextBox";
+            this.celularMaskedTextBox.Size = new System.Drawing.Size(153, 28);
+            this.celularMaskedTextBox.TabIndex = 2;
+            // 
+            // data_nascimentoDateTimePicker
+            // 
+            this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.funcionarioBindingSource, "Data_nascimento", true));
+            this.data_nascimentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.data_nascimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(778, 124);
+            this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
+            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(200, 28);
+            this.data_nascimentoDateTimePicker.TabIndex = 45;
             // 
             // FormCadastroDeFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1062, 433);
+            this.ClientSize = new System.Drawing.Size(1087, 433);
+            this.Controls.Add(this.data_nascimentoDateTimePicker);
+            this.Controls.Add(this.celularMaskedTextBox);
+            this.Controls.Add(this.cPFMaskedTextBox);
             this.Controls.Add(senhaLabel);
             this.Controls.Add(this.tituloLabel);
             this.Controls.Add(this.label2);
@@ -367,15 +366,12 @@
             this.Controls.Add(nomeUsuarioLabel);
             this.Controls.Add(this.nomeUsuarioTextBox);
             this.Controls.Add(data_nascimentoLabel);
-            this.Controls.Add(this.data_nascimentoTextBox);
             this.Controls.Add(this.ativoCheckBox);
             this.Controls.Add(this.senhaTextBox);
             this.Controls.Add(enderecoLabel);
             this.Controls.Add(this.enderecoTextBox);
             this.Controls.Add(celularLabel);
-            this.Controls.Add(this.celularTextBox);
             this.Controls.Add(cPFLabel);
-            this.Controls.Add(this.cPFTextBox);
             this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(nomeLabel);
@@ -402,17 +398,17 @@
         private System.Windows.Forms.BindingSource funcionarioBindingSource;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox cPFTextBox;
-        private System.Windows.Forms.TextBox celularTextBox;
         private System.Windows.Forms.TextBox enderecoTextBox;
         private System.Windows.Forms.TextBox senhaTextBox;
         private System.Windows.Forms.CheckBox ativoCheckBox;
-        private System.Windows.Forms.TextBox data_nascimentoTextBox;
         private System.Windows.Forms.TextBox nomeUsuarioTextBox;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBoxConfirmarSenha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label tituloLabel;
         private System.Windows.Forms.BindingSource sexoBindingSource;
+        private System.Windows.Forms.MaskedTextBox cPFMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox celularMaskedTextBox;
+        private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
     }
 }

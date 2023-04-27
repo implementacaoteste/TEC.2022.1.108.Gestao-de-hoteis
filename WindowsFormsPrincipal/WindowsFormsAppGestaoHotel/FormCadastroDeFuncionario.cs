@@ -45,7 +45,10 @@ namespace WindowsFormsPrincipal1
             if (Id == 0)
                 funcionarioBindingSource.AddNew();
             else
+            {
+                tituloLabel.Text = "Editar Funcionario";
                 funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorId(Id);
+            }
 
             sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
         }
