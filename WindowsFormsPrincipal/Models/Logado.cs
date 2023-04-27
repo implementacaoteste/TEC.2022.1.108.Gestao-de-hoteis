@@ -1,9 +1,13 @@
 ﻿using System;
+using Models;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Funcionario
+    public class Logado
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -17,12 +21,27 @@ namespace Models
         public bool Ativo { get; set; }
         public int IdSexo { get; set; }
         public string Sexo { get; set; }
-        public List<GrupoFuncionario> GrupoFuncionarios { get; set; }
+
+        public void DadosUsuarioLogado()
+        {
+            Funcionario funcionario = new Funcionario();
+            this.Id = funcionario.Id;
+            this.Nome = funcionario.Nome;
+            this.CPF = funcionario.CPF;
+            this.Email = funcionario.Email;
+            this.Celular = funcionario.Celular;
+            this.Endereco = funcionario.Endereco;
+            this.NomeUsuario = funcionario.NomeUsuario;
+            this.Data_nascimento = funcionario.Data_nascimento;
+            this.Ativo = funcionario.Ativo;
+            this.IdSexo = funcionario.IdSexo;
+            this.Sexo = funcionario.Sexo;
+        }
 
         public void LimparDados()
         {
             this.Id = 0;
-            this.Nome = "ll";
+            this.Nome = null;
             this.CPF = null;
             this.Email = null;
             this.Celular = null;
@@ -34,6 +53,5 @@ namespace Models
             this.IdSexo = 0;
             this.Sexo = null;
         }
-
     }
 }

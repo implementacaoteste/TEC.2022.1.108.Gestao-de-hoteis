@@ -55,6 +55,7 @@
     <Compile Include="Diaria.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="GrupoFuncionario.cs" />
+    <Compile Include="Logado.cs" />
     <Compile Include="Pagamento.cs" />
     <Compile Include="Permissao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

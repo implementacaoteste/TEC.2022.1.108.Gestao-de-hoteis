@@ -101,7 +101,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NUMERO,DESCRICAO,VALOR_DIARIA
+                cmd.CommandText = @"SELECT ID, NUMERO, ID_CLASSE, DESCRICAO, VALOR_DIARIA, ID_STATUS
                                     FROM QUARTO";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
@@ -111,10 +111,13 @@ namespace DAL
                     while (rd.Read())
                     {
                         quarto = new Quarto();
-                        quarto.Id = Convert.ToInt32(rd["Id"]);
-                        quarto.Numero = rd["Numero"].ToString();
-                        quarto.Descricao = rd["Descricao"].ToString();
-                        quarto.Valor_Diaria = Convert.ToInt32(rd["Valor_Diaria"]);
+                        quarto.Id = Convert.ToInt32(rd["ID"]);
+                        quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
+                        quarto.Numero = rd["NUMERO"].ToString();
+                        quarto.Descricao = rd["DESCRICAO"].ToString();
+                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
+                        quartos.Add(quarto);
                     }
                 }
                 return quartos;

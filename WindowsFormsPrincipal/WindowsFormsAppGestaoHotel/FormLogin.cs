@@ -25,6 +25,8 @@ namespace WindowsFormsPrincipal1
             {
                 new FuncionarioBLL().Autenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
+                new Logado().DadosUsuarioLogado();
+
                 Close();
             }
             catch (Exception ex)

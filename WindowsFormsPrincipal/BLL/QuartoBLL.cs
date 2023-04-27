@@ -30,10 +30,10 @@ namespace BLL
             //ValidarPermissao(17);
             return new QuartoDAL().BuscarPorTodos();
         }
-        public void BuscarPorNumero(int _numero)
+        public Quarto BuscarPorNumero(int _numero)
         {
             //ValidarPermissao(17);
-            new QuartoDAL().BuscarPorNumero(_numero);
+            return new QuartoDAL().BuscarPorNumero(_numero);
         }
         public void ValidarPermissao(int _idPermissao)
         {
