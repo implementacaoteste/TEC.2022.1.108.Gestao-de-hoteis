@@ -22,7 +22,7 @@ namespace Models
         public void LimparDados()
         {
             this.Id = 0;
-            this.Nome = null;
+            this.Nome = "ll";
             this.CPF = null;
             this.Email = null;
             this.Celular = null;

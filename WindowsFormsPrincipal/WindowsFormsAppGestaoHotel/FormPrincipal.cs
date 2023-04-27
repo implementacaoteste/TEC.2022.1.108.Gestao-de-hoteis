@@ -32,13 +32,14 @@ namespace WindowsFormsPrincipal1
                         Application.Exit();
                     }
                 }
+                Logado log = new Logado();
+                textBoxNomeUsuario.Text = log.NomeUsuario;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            Logado log = new Logado();
-            listBoxNomeUsuario.Text = Convert.ToString(log.NomeUsuario);
+            
         }
 
         private void cadastroFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -213,7 +214,21 @@ namespace WindowsFormsPrincipal1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            buttonSair.Visible = true;
+            if(buttonSair.Visible)
+            {
+                buttonSair.Visible = false;
+                pictureBoxCaixaLogin.Visible = false;
+                pictureBoxCaixaLogin2.Visible = false;
+                textBoxNomeUsuario.Visible = false;
+            }
+            else
+            {
+                buttonSair.Visible = true;
+                pictureBoxCaixaLogin.Visible = true;
+                pictureBoxCaixaLogin2.Visible = true;
+                textBoxNomeUsuario.Visible=true;
+            }
+            
         }
     }
 }

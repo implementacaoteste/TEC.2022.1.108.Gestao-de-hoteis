@@ -45,10 +45,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.buttonSair = new System.Windows.Forms.Button();
-            this.listBoxNomeUsuario = new System.Windows.Forms.ListBox();
+            this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCaixaLogin = new System.Windows.Forms.PictureBox();
+            this.textBoxNomeUsuario = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,6 +68,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(882, 32);
+            this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -194,35 +199,64 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(799, 34);
+            this.pictureBox2.Location = new System.Drawing.Point(783, 43);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 63);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.UseWaitCursor = true;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // buttonSair
             // 
-            this.buttonSair.Location = new System.Drawing.Point(799, 150);
+            this.buttonSair.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.buttonSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSair.Location = new System.Drawing.Point(771, 151);
             this.buttonSair.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSair.Name = "buttonSair";
-            this.buttonSair.Size = new System.Drawing.Size(61, 26);
+            this.buttonSair.Size = new System.Drawing.Size(73, 30);
             this.buttonSair.TabIndex = 5;
             this.buttonSair.Text = "Sair";
-            this.buttonSair.UseVisualStyleBackColor = true;
+            this.buttonSair.UseVisualStyleBackColor = false;
             this.buttonSair.Visible = false;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
-            // listBoxNomeUsuario
+            // pictureBoxCaixaLogin2
             // 
-            this.listBoxNomeUsuario.FormattingEnabled = true;
-            this.listBoxNomeUsuario.Location = new System.Drawing.Point(791, 102);
-            this.listBoxNomeUsuario.Name = "listBoxNomeUsuario";
-            this.listBoxNomeUsuario.Size = new System.Drawing.Size(79, 43);
-            this.listBoxNomeUsuario.TabIndex = 7;
+            this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(737, 38);
+            this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
+            this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(135, 152);
+            this.pictureBoxCaixaLogin2.TabIndex = 7;
+            this.pictureBoxCaixaLogin2.TabStop = false;
+            this.pictureBoxCaixaLogin2.Visible = false;
+            // 
+            // pictureBoxCaixaLogin
+            // 
+            this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(739, 40);
+            this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
+            this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(131, 148);
+            this.pictureBoxCaixaLogin.TabIndex = 8;
+            this.pictureBoxCaixaLogin.TabStop = false;
+            this.pictureBoxCaixaLogin.Visible = false;
+            // 
+            // textBoxNomeUsuario
+            // 
+            this.textBoxNomeUsuario.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxNomeUsuario.Location = new System.Drawing.Point(741, 97);
+            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNomeUsuario.Multiline = true;
+            this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
+            this.textBoxNomeUsuario.ReadOnly = true;
+            this.textBoxNomeUsuario.Size = new System.Drawing.Size(128, 50);
+            this.textBoxNomeUsuario.TabIndex = 13;
+            this.textBoxNomeUsuario.Visible = false;
             // 
             // FormPrincipal
             // 
@@ -231,11 +265,13 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(882, 556);
-            this.Controls.Add(this.listBoxNomeUsuario);
-            this.Controls.Add(this.buttonSair);
+            this.Controls.Add(this.textBoxNomeUsuario);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.buttonSair);
+            this.Controls.Add(this.pictureBoxCaixaLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBoxCaixaLogin2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -249,6 +285,8 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +317,8 @@
         private System.Windows.Forms.ToolStripMenuItem diariaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonSair;
-        private System.Windows.Forms.ListBox listBoxNomeUsuario;
+        private System.Windows.Forms.PictureBox pictureBoxCaixaLogin2;
+        private System.Windows.Forms.PictureBox pictureBoxCaixaLogin;
+        private System.Windows.Forms.TextBox textBoxNomeUsuario;
     }
 }
