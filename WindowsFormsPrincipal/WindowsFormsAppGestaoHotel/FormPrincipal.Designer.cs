@@ -206,7 +206,7 @@
             // 
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
-            this.pictureBoxUsu1.Location = new System.Drawing.Point(788, 38);
+            this.pictureBoxUsu1.Location = new System.Drawing.Point(787, 39);
             this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
             this.pictureBoxUsu1.Size = new System.Drawing.Size(50, 50);
@@ -219,7 +219,7 @@
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(745, 33);
+            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(744, 34);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
             this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(135, 152);
             this.pictureBoxCaixaLogin2.TabIndex = 7;
@@ -229,7 +229,7 @@
             // pictureBoxCaixaLogin
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(747, 35);
+            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(746, 36);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
             this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(131, 148);
             this.pictureBoxCaixaLogin.TabIndex = 8;
@@ -240,7 +240,7 @@
             // 
             this.textBoxNomeUsuario.BackColor = System.Drawing.Color.PowderBlue;
             this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeUsuario.Location = new System.Drawing.Point(749, 92);
+            this.textBoxNomeUsuario.Location = new System.Drawing.Point(748, 93);
             this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomeUsuario.Multiline = true;
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
@@ -254,7 +254,7 @@
             // 
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
-            this.pictureBoxSair.Location = new System.Drawing.Point(799, 148);
+            this.pictureBoxSair.Location = new System.Drawing.Point(798, 149);
             this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSair.Name = "pictureBoxSair";
             this.pictureBoxSair.Size = new System.Drawing.Size(30, 30);
@@ -269,7 +269,7 @@
             this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
-            this.pictureBoxUsu2.Location = new System.Drawing.Point(788, 38);
+            this.pictureBoxUsu2.Location = new System.Drawing.Point(787, 39);
             this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
             this.pictureBoxUsu2.Size = new System.Drawing.Size(50, 50);
@@ -283,7 +283,7 @@
             // pictureBoxfundo
             // 
             this.pictureBoxfundo.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxfundo.Location = new System.Drawing.Point(797, 146);
+            this.pictureBoxfundo.Location = new System.Drawing.Point(796, 147);
             this.pictureBoxfundo.Name = "pictureBoxfundo";
             this.pictureBoxfundo.Size = new System.Drawing.Size(34, 34);
             this.pictureBoxfundo.TabIndex = 16;
