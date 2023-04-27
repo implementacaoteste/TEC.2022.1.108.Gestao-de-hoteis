@@ -237,9 +237,10 @@
             // 
             // textBoxNomeUsuario
             // 
-            this.textBoxNomeUsuario.BackColor = System.Drawing.Color.LightBlue;
-            this.textBoxNomeUsuario.Location = new System.Drawing.Point(988, 119);
-            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNomeUsuario.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNomeUsuario.Location = new System.Drawing.Point(741, 97);
+            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomeUsuario.Multiline = true;
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
             this.textBoxNomeUsuario.ReadOnly = true;

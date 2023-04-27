@@ -52,5 +52,7 @@ namespace WindowsFormsPrincipal1
                 Close();
             }
         }
+
+
     }
 }

@@ -22,22 +22,6 @@ namespace Models
         public int IdSexo { get; set; }
         public string Sexo { get; set; }
 
-        public void DadosUsuarioLogado()
-        {
-            Funcionario funcionario = new Funcionario();
-            this.Id = funcionario.Id;
-            this.Nome = funcionario.Nome;
-            this.CPF = funcionario.CPF;
-            this.Email = funcionario.Email;
-            this.Celular = funcionario.Celular;
-            this.Endereco = funcionario.Endereco;
-            this.NomeUsuario = funcionario.NomeUsuario;
-            this.Data_nascimento = funcionario.Data_nascimento;
-            this.Ativo = funcionario.Ativo;
-            this.IdSexo = funcionario.IdSexo;
-            this.Sexo = funcionario.Sexo;
-        }
-
         public void LimparDados()
         {
             this.Id = 0;

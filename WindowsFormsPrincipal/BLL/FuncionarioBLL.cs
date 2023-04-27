@@ -80,6 +80,7 @@ namespace BLL
             if (_Senha==funcionario.Senha && funcionario.Ativo)
             {
                 Constante.IdLogado = funcionario.Id;
+                Constante.NomeUsuario = funcionario.NomeUsuario;
             }
             else
             {
