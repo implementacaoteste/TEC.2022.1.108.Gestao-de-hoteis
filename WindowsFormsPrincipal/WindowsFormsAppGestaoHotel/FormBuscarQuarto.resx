@@ -151,7 +151,7 @@
   <metadata name="quartoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="buttonAlterarCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonAlterarQuarto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAMtJREFUSEvtls0NwyAMRhkhI3WEjtARukGzSbsRN35OjNL6k5zIRS6HEEeKypM+
@@ -160,7 +160,7 @@
         eLk/zaVAium9hHcTxrZSUB11HRspaIjtpKCUMkFex1Q6sMW5D1pV1V/djF5WAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="buttonExcluirCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonExcluirQuarto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAANxJREFUSEvtlssNwjAQBV0CJaQESqA0OoFOoANfIvlzSSmwi9YXZCljO1JyyEhP
@@ -170,7 +170,7 @@
         RBgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonAdicionarCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonAdicionarQuarto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAI5JREFUSEvtlt0JwCAQgx3JETqSG9YhxL9lWgMR+uBDkV5b2vsgcARJQDjRKIoC
