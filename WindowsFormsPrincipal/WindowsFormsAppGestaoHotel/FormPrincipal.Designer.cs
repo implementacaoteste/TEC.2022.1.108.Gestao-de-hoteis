@@ -71,8 +71,8 @@
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(882, 32);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1176, 33);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -87,14 +87,14 @@
             this.quartoToolStripMenuItem1});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
             this.cadastroToolStripMenuItem.Text = "Cadastros";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(301, 28);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
@@ -102,7 +102,7 @@
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(301, 28);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
             this.funcionarioToolStripMenuItem.Text = "Funcionário";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
@@ -110,7 +110,7 @@
             // 
             this.grupoFuncionarioToolStripMenuItem1.Name = "grupoFuncionarioToolStripMenuItem1";
             this.grupoFuncionarioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.grupoFuncionarioToolStripMenuItem1.Size = new System.Drawing.Size(301, 28);
+            this.grupoFuncionarioToolStripMenuItem1.Size = new System.Drawing.Size(321, 30);
             this.grupoFuncionarioToolStripMenuItem1.Text = "Grupo funcionário";
             this.grupoFuncionarioToolStripMenuItem1.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem1_Click);
             // 
@@ -118,7 +118,7 @@
             // 
             this.quartoToolStripMenuItem1.Name = "quartoToolStripMenuItem1";
             this.quartoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.quartoToolStripMenuItem1.Size = new System.Drawing.Size(301, 28);
+            this.quartoToolStripMenuItem1.Size = new System.Drawing.Size(321, 30);
             this.quartoToolStripMenuItem1.Text = "Quarto";
             this.quartoToolStripMenuItem1.Click += new System.EventHandler(this.quartoToolStripMenuItem1_Click);
             // 
@@ -134,7 +134,7 @@
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(106, 28);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
             this.consultaToolStripMenuItem.Text = "Consultas";
             // 
             // clienteToolStripMenuItem1
@@ -142,7 +142,7 @@
             this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
             this.clienteToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(355, 28);
+            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(379, 30);
             this.clienteToolStripMenuItem1.Text = "Cliente";
             this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click_1);
             // 
@@ -151,7 +151,7 @@
             this.diariaToolStripMenuItem.Name = "diariaToolStripMenuItem";
             this.diariaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.D)));
-            this.diariaToolStripMenuItem.Size = new System.Drawing.Size(355, 28);
+            this.diariaToolStripMenuItem.Size = new System.Drawing.Size(379, 30);
             this.diariaToolStripMenuItem.Text = "Diária";
             this.diariaToolStripMenuItem.Click += new System.EventHandler(this.diariaToolStripMenuItem_Click);
             // 
@@ -160,7 +160,7 @@
             this.buscarFuncionarioToolStripMenuItem.Name = "buscarFuncionarioToolStripMenuItem";
             this.buscarFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.F)));
-            this.buscarFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(355, 28);
+            this.buscarFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(379, 30);
             this.buscarFuncionarioToolStripMenuItem.Text = "Funcionário";
             this.buscarFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.buscarFuncionarioToolStripMenuItem_Click);
             // 
@@ -169,7 +169,7 @@
             this.grupoFuncionarioToolStripMenuItem.Name = "grupoFuncionarioToolStripMenuItem";
             this.grupoFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.G)));
-            this.grupoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(355, 28);
+            this.grupoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(379, 30);
             this.grupoFuncionarioToolStripMenuItem.Text = "Grupo Funcionário";
             this.grupoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem_Click);
             // 
@@ -178,7 +178,7 @@
             this.quartoToolStripMenuItem.Name = "quartoToolStripMenuItem";
             this.quartoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.Q)));
-            this.quartoToolStripMenuItem.Size = new System.Drawing.Size(355, 28);
+            this.quartoToolStripMenuItem.Size = new System.Drawing.Size(379, 30);
             this.quartoToolStripMenuItem.Text = "Quarto";
             this.quartoToolStripMenuItem.Click += new System.EventHandler(this.quartoToolStripMenuItem_Click);
             // 
@@ -187,7 +187,7 @@
             this.sobreToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(75, 28);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click_1);
             // 
@@ -195,9 +195,10 @@
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(265, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(353, 49);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 350);
+            this.pictureBox1.Size = new System.Drawing.Size(467, 431);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -205,9 +206,10 @@
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(744, 34);
+            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(992, 42);
+            this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
-            this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(135, 152);
+            this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(180, 187);
             this.pictureBoxCaixaLogin2.TabIndex = 7;
             this.pictureBoxCaixaLogin2.TabStop = false;
             this.pictureBoxCaixaLogin2.Visible = false;
@@ -215,9 +217,10 @@
             // pictureBoxCaixaLogin
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(746, 36);
+            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(995, 44);
+            this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
-            this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(131, 148);
+            this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(175, 182);
             this.pictureBoxCaixaLogin.TabIndex = 8;
             this.pictureBoxCaixaLogin.TabStop = false;
             this.pictureBoxCaixaLogin.Visible = false;
@@ -226,12 +229,12 @@
             // 
             this.textBoxNomeUsuario.BackColor = System.Drawing.Color.PowderBlue;
             this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeUsuario.Location = new System.Drawing.Point(748, 93);
-            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNomeUsuario.Location = new System.Drawing.Point(997, 114);
+            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNomeUsuario.Multiline = true;
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
             this.textBoxNomeUsuario.ReadOnly = true;
-            this.textBoxNomeUsuario.Size = new System.Drawing.Size(128, 50);
+            this.textBoxNomeUsuario.Size = new System.Drawing.Size(169, 61);
             this.textBoxNomeUsuario.TabIndex = 13;
             this.textBoxNomeUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxNomeUsuario.Visible = false;
@@ -240,10 +243,10 @@
             // 
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
-            this.pictureBoxSair.Location = new System.Drawing.Point(798, 149);
-            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxSair.Location = new System.Drawing.Point(1064, 183);
+            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxSair.Name = "pictureBoxSair";
-            this.pictureBoxSair.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxSair.Size = new System.Drawing.Size(40, 37);
             this.pictureBoxSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSair.TabIndex = 14;
             this.pictureBoxSair.TabStop = false;
@@ -255,10 +258,10 @@
             this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
-            this.pictureBoxUsu2.Location = new System.Drawing.Point(787, 40);
-            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUsu2.Location = new System.Drawing.Point(1049, 49);
+            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
-            this.pictureBoxUsu2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxUsu2.Size = new System.Drawing.Size(67, 62);
             this.pictureBoxUsu2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsu2.TabIndex = 15;
             this.pictureBoxUsu2.TabStop = false;
@@ -269,9 +272,10 @@
             // pictureBoxfundo
             // 
             this.pictureBoxfundo.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxfundo.Location = new System.Drawing.Point(796, 147);
+            this.pictureBoxfundo.Location = new System.Drawing.Point(1061, 181);
+            this.pictureBoxfundo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxfundo.Name = "pictureBoxfundo";
-            this.pictureBoxfundo.Size = new System.Drawing.Size(34, 34);
+            this.pictureBoxfundo.Size = new System.Drawing.Size(45, 42);
             this.pictureBoxfundo.TabIndex = 16;
             this.pictureBoxfundo.TabStop = false;
             this.pictureBoxfundo.Visible = false;
@@ -281,10 +285,10 @@
             this.pictureBoxUsu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
-            this.pictureBoxUsu1.Location = new System.Drawing.Point(787, 40);
-            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUsu1.Location = new System.Drawing.Point(1049, 49);
+            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
-            this.pictureBoxUsu1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxUsu1.Size = new System.Drawing.Size(67, 62);
             this.pictureBoxUsu1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsu1.TabIndex = 15;
             this.pictureBoxUsu1.TabStop = false;
@@ -293,11 +297,11 @@
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(882, 556);
+            this.ClientSize = new System.Drawing.Size(1176, 681);
             this.Controls.Add(this.pictureBoxSair);
             this.Controls.Add(this.pictureBoxfundo);
             this.Controls.Add(this.textBoxNomeUsuario);
@@ -309,13 +313,14 @@
             this.Controls.Add(this.pictureBoxUsu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(900, 600);
-            this.MinimumSize = new System.Drawing.Size(900, 600);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1194, 728);
+            this.MinimumSize = new System.Drawing.Size(1194, 728);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Gestão de Hotéis";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

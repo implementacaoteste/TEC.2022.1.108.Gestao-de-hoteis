@@ -228,7 +228,7 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBoxUsu1_Click(object sender, EventArgs e)
         {
             if(pictureBoxUsu2.Visible)
             {
@@ -285,5 +285,18 @@ namespace WindowsFormsPrincipal1
                 pictureBoxfundo.Visible = true;
             }
         }
+
+        private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.U)
+            {
+                pictureBoxUsu1_Click(null, null);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                pictureBoxSair_Click(null,null);
+            }
+        }
+
     }
 }
