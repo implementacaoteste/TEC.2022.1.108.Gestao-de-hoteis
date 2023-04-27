@@ -236,7 +236,7 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.quartosDataGridView.DataSource = this.quartosBindingSource;
-            this.quartosDataGridView.Location = new System.Drawing.Point(678, 190);
+            this.quartosDataGridView.Location = new System.Drawing.Point(717, 190);
             this.quartosDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.quartosDataGridView.Name = "quartosDataGridView";
             this.quartosDataGridView.ReadOnly = true;
@@ -423,7 +423,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(675, 167);
+            this.label4.Location = new System.Drawing.Point(723, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 26;
@@ -451,7 +451,7 @@
             this.diariaDataGridView.ReadOnly = true;
             this.diariaDataGridView.RowHeadersWidth = 51;
             this.diariaDataGridView.RowTemplate.Height = 24;
-            this.diariaDataGridView.Size = new System.Drawing.Size(646, 179);
+            this.diariaDataGridView.Size = new System.Drawing.Size(677, 179);
             this.diariaDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -526,7 +526,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 598);
+            this.ClientSize = new System.Drawing.Size(1144, 598);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonExcluirQuarto);
