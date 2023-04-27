@@ -63,11 +63,5 @@ namespace WindowsFormsPrincipal1
                 Application.Exit();
             }
         }
-
-
-        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
     }
 }
