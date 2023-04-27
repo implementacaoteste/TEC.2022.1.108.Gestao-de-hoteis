@@ -112,14 +112,14 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR , ID_SEXO
-                                    From FUNCIONARIO WHERE ID=@ID";
+                                    FROM FUNCIONARIO WHERE ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@ID", _id);
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (rd.Read())
+                    if (rd.Read())
                     {
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
                         funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);

@@ -163,29 +163,34 @@
             // 
             // buttonSalvarFuncionario
             // 
-            this.buttonSalvarFuncionario.AutoSize = true;
             this.buttonSalvarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvarFuncionario.Location = new System.Drawing.Point(778, 351);
+            this.buttonSalvarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonSalvarFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvarFuncionario.Image")));
+            this.buttonSalvarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSalvarFuncionario.Location = new System.Drawing.Point(716, 347);
             this.buttonSalvarFuncionario.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvarFuncionario.Name = "buttonSalvarFuncionario";
-            this.buttonSalvarFuncionario.Size = new System.Drawing.Size(90, 30);
+            this.buttonSalvarFuncionario.Size = new System.Drawing.Size(110, 35);
             this.buttonSalvarFuncionario.TabIndex = 11;
             this.buttonSalvarFuncionario.Text = "Salvar";
+            this.buttonSalvarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvarFuncionario.UseVisualStyleBackColor = true;
             this.buttonSalvarFuncionario.Click += new System.EventHandler(this.buttonSalvarFuncionario_Click);
             // 
             // buttonCancelarCadastro
             // 
-            this.buttonCancelarCadastro.AutoSize = true;
             this.buttonCancelarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelarCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelarCadastro.Location = new System.Drawing.Point(888, 351);
+            this.buttonCancelarCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonCancelarCadastro.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelarCadastro.Image")));
+            this.buttonCancelarCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelarCadastro.Location = new System.Drawing.Point(848, 347);
             this.buttonCancelarCadastro.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonCancelarCadastro.MinimumSize = new System.Drawing.Size(130, 35);
             this.buttonCancelarCadastro.Name = "buttonCancelarCadastro";
-            this.buttonCancelarCadastro.Size = new System.Drawing.Size(90, 30);
+            this.buttonCancelarCadastro.Size = new System.Drawing.Size(130, 35);
             this.buttonCancelarCadastro.TabIndex = 12;
             this.buttonCancelarCadastro.Text = "Cancelar";
+            this.buttonCancelarCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelarCadastro.UseVisualStyleBackColor = true;
             this.buttonCancelarCadastro.Click += new System.EventHandler(this.buttonCancelarCadastro_Click);
             // 
@@ -198,7 +203,7 @@
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.nomeTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(365, 30);
+            this.nomeTextBox.Size = new System.Drawing.Size(365, 28);
             this.nomeTextBox.TabIndex = 0;
             // 
             // funcionarioBindingSource

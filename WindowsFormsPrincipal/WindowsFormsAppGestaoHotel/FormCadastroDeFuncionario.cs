@@ -46,7 +46,7 @@ namespace WindowsFormsPrincipal1
                 funcionarioBindingSource.AddNew();
             else
             {
-                tituloLabel.Text = "Editar Funcionario";
+                tituloLabel.Text = "Editar Funcionário";
                 funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorId(Id);
             }
 
