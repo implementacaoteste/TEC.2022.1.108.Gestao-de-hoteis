@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label classLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroClasse));
-            this.label1 = new System.Windows.Forms.Label();
+            this.tituloLabel = new System.Windows.Forms.Label();
             this.classeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.classTextBox = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
@@ -43,22 +43,24 @@
             // classLabel
             // 
             classLabel.AutoSize = true;
-            classLabel.Location = new System.Drawing.Point(212, 155);
+            classLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            classLabel.Location = new System.Drawing.Point(54, 74);
             classLabel.Name = "classLabel";
-            classLabel.Size = new System.Drawing.Size(52, 16);
+            classLabel.Size = new System.Drawing.Size(73, 25);
             classLabel.TabIndex = 2;
-            classLabel.Text = "Classe:";
+            classLabel.Text = "Classe";
             // 
-            // label1
+            // tituloLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(186, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadatro de Classe";
+            this.tituloLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tituloLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.tituloLabel.Location = new System.Drawing.Point(0, 0);
+            this.tituloLabel.Name = "tituloLabel";
+            this.tituloLabel.Size = new System.Drawing.Size(452, 46);
+            this.tituloLabel.TabIndex = 0;
+            this.tituloLabel.Text = "Cadatro de Classe";
+            this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // classeBindingSource
             // 
@@ -66,30 +68,47 @@
             // 
             // classTextBox
             // 
+            this.classTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.classTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classeBindingSource, "Class", true));
-            this.classTextBox.Location = new System.Drawing.Point(262, 149);
+            this.classTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.classTextBox.Location = new System.Drawing.Point(59, 102);
             this.classTextBox.Name = "classTextBox";
-            this.classTextBox.Size = new System.Drawing.Size(274, 22);
+            this.classTextBox.Size = new System.Drawing.Size(320, 30);
             this.classTextBox.TabIndex = 3;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(362, 333);
+            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
+            this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSalvar.Location = new System.Drawing.Point(59, 177);
+            this.buttonSalvar.MinimumSize = new System.Drawing.Size(110, 35);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvar.Size = new System.Drawing.Size(110, 35);
             this.buttonSalvar.TabIndex = 4;
             this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(461, 333);
+            this.buttonCancelar.BackColor = System.Drawing.Color.White;
+            this.buttonCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonCancelar.ForeColor = System.Drawing.Color.Black;
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelar.Location = new System.Drawing.Point(249, 177);
+            this.buttonCancelar.MinimumSize = new System.Drawing.Size(110, 35);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(130, 35);
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             this.buttonCancelar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonCancelar_KeyDown);
             // 
@@ -97,16 +116,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(452, 245);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(classLabel);
             this.Controls.Add(this.classTextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tituloLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroClasse";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Classe";
             this.Load += new System.EventHandler(this.FormCadastroClasse_Load);
@@ -118,7 +139,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label tituloLabel;
         private System.Windows.Forms.BindingSource classeBindingSource;
         private System.Windows.Forms.TextBox classTextBox;
         private System.Windows.Forms.Button buttonSalvar;
