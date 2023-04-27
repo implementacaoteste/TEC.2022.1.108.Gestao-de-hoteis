@@ -121,7 +121,7 @@ namespace WindowsFormsPrincipal1
         private void LimparDados()
         {
             Constante.IdLogado = 0;
-            Constante.Nome = null;
+            Constante.Nome = "lala";
             Constante.CPF = null;
             Constante.Email = null;
             Constante.Celular = null;
@@ -230,12 +230,14 @@ namespace WindowsFormsPrincipal1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if(pictureBoxSair.Visible)
+            if(pictureBoxUsu2.Visible)
             {
                 pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
                 pictureBoxCaixaLogin2.Visible = false;
                 textBoxNomeUsuario.Visible = false;
+                pictureBoxUsu2.Visible = false;
+                pictureBoxfundo.Visible = false;
             }
             else
             {
@@ -243,6 +245,8 @@ namespace WindowsFormsPrincipal1
                 pictureBoxCaixaLogin.Visible = true;
                 pictureBoxCaixaLogin2.Visible = true;
                 textBoxNomeUsuario.Visible=true;
+                pictureBoxUsu2.Visible = true;
+                pictureBoxfundo.Visible = true;
             }
             
         }
@@ -257,6 +261,28 @@ namespace WindowsFormsPrincipal1
             using (FormLogin frm = new FormLogin())
             {
                 frm.ShowDialog();
+            }
+        }
+
+        private void pictureBoxUsu2_Click(object sender, EventArgs e)
+        {
+            if (pictureBoxSair.Visible)
+            {
+                pictureBoxSair.Visible = false;
+                pictureBoxCaixaLogin.Visible = false;
+                pictureBoxCaixaLogin2.Visible = false;
+                textBoxNomeUsuario.Visible = false;
+                pictureBoxUsu2.Visible = false;
+                pictureBoxfundo.Visible = false;
+            }
+            else
+            {
+                pictureBoxSair.Visible = true;
+                pictureBoxCaixaLogin.Visible = true;
+                pictureBoxCaixaLogin2.Visible = true;
+                textBoxNomeUsuario.Visible = true;
+                pictureBoxUsu2.Visible = true;
+                pictureBoxfundo.Visible = true;
             }
         }
     }

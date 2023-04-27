@@ -43,17 +43,21 @@
             this.quartoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUsu1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin = new System.Windows.Forms.PictureBox();
             this.textBoxNomeUsuario = new System.Windows.Forms.TextBox();
             this.pictureBoxSair = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUsu2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxfundo = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfundo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -198,24 +202,24 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBoxUsu1
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(783, 43);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.UseWaitCursor = true;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
+            this.pictureBoxUsu1.Location = new System.Drawing.Point(788, 38);
+            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUsu1.Name = "pictureBoxUsu1";
+            this.pictureBoxUsu1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxUsu1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUsu1.TabIndex = 2;
+            this.pictureBoxUsu1.TabStop = false;
+            this.pictureBoxUsu1.UseWaitCursor = true;
+            this.pictureBoxUsu1.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(737, 38);
+            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(745, 33);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
             this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(135, 152);
             this.pictureBoxCaixaLogin2.TabIndex = 7;
@@ -225,7 +229,7 @@
             // pictureBoxCaixaLogin
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(739, 40);
+            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(747, 35);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
             this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(131, 148);
             this.pictureBoxCaixaLogin.TabIndex = 8;
@@ -235,22 +239,23 @@
             // textBoxNomeUsuario
             // 
             this.textBoxNomeUsuario.BackColor = System.Drawing.Color.PowderBlue;
-            this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeUsuario.Location = new System.Drawing.Point(741, 97);
+            this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNomeUsuario.Location = new System.Drawing.Point(749, 92);
             this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomeUsuario.Multiline = true;
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
             this.textBoxNomeUsuario.ReadOnly = true;
             this.textBoxNomeUsuario.Size = new System.Drawing.Size(128, 50);
             this.textBoxNomeUsuario.TabIndex = 13;
+            this.textBoxNomeUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxNomeUsuario.Visible = false;
             // 
             // pictureBoxSair
             // 
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
-            this.pictureBoxSair.Location = new System.Drawing.Point(791, 152);
-            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxSair.Location = new System.Drawing.Point(799, 148);
+            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSair.Name = "pictureBoxSair";
             this.pictureBoxSair.Size = new System.Drawing.Size(30, 30);
             this.pictureBoxSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,6 +263,32 @@
             this.pictureBoxSair.TabStop = false;
             this.pictureBoxSair.Visible = false;
             this.pictureBoxSair.Click += new System.EventHandler(this.pictureBoxSair_Click);
+            // 
+            // pictureBoxUsu2
+            // 
+            this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
+            this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
+            this.pictureBoxUsu2.Location = new System.Drawing.Point(788, 38);
+            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUsu2.Name = "pictureBoxUsu2";
+            this.pictureBoxUsu2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxUsu2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUsu2.TabIndex = 15;
+            this.pictureBoxUsu2.TabStop = false;
+            this.pictureBoxUsu2.UseWaitCursor = true;
+            this.pictureBoxUsu2.Visible = false;
+            this.pictureBoxUsu2.Click += new System.EventHandler(this.pictureBoxUsu2_Click);
+            // 
+            // pictureBoxfundo
+            // 
+            this.pictureBoxfundo.BackColor = System.Drawing.Color.Black;
+            this.pictureBoxfundo.Location = new System.Drawing.Point(797, 146);
+            this.pictureBoxfundo.Name = "pictureBoxfundo";
+            this.pictureBoxfundo.Size = new System.Drawing.Size(34, 34);
+            this.pictureBoxfundo.TabIndex = 16;
+            this.pictureBoxfundo.TabStop = false;
+            this.pictureBoxfundo.Visible = false;
             // 
             // FormPrincipal
             // 
@@ -267,15 +298,17 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(882, 556);
             this.Controls.Add(this.pictureBoxSair);
+            this.Controls.Add(this.pictureBoxfundo);
             this.Controls.Add(this.textBoxNomeUsuario);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBoxCaixaLogin);
+            this.Controls.Add(this.pictureBoxUsu2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBoxCaixaLogin);
             this.Controls.Add(this.pictureBoxCaixaLogin2);
+            this.Controls.Add(this.pictureBoxUsu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(900, 600);
             this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "FormPrincipal";
@@ -285,10 +318,12 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfundo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,10 +352,12 @@
         private System.Windows.Forms.ToolStripMenuItem quartoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diariaToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxUsu1;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin2;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin;
         private System.Windows.Forms.TextBox textBoxNomeUsuario;
         private System.Windows.Forms.PictureBox pictureBoxSair;
+        private System.Windows.Forms.PictureBox pictureBoxUsu2;
+        private System.Windows.Forms.PictureBox pictureBoxfundo;
     }
 }
