@@ -230,16 +230,16 @@ namespace WindowsFormsPrincipal1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if(buttonSair.Visible)
+            if(pictureBoxSair.Visible)
             {
-                buttonSair.Visible = false;
+                pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
                 pictureBoxCaixaLogin2.Visible = false;
                 textBoxNomeUsuario.Visible = false;
             }
             else
             {
-                buttonSair.Visible = true;
+                pictureBoxSair.Visible = true;
                 pictureBoxCaixaLogin.Visible = true;
                 pictureBoxCaixaLogin2.Visible = true;
                 textBoxNomeUsuario.Visible=true;
@@ -247,7 +247,7 @@ namespace WindowsFormsPrincipal1
             
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBoxSair_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja realmente sair do seu usuário", "Cuidado", MessageBoxButtons.YesNo) == DialogResult.No)
             {

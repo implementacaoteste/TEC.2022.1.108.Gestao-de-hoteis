@@ -47,13 +47,13 @@
             this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin = new System.Windows.Forms.PictureBox();
             this.textBoxNomeUsuario = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSair = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -237,9 +237,9 @@
             // 
             // textBoxNomeUsuario
             // 
-            this.textBoxNomeUsuario.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxNomeUsuario.BackColor = System.Drawing.Color.PowderBlue;
             this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeUsuario.Location = new System.Drawing.Point(741, 97);
+            this.textBoxNomeUsuario.Location = new System.Drawing.Point(989, 119);
             this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomeUsuario.Multiline = true;
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
@@ -248,17 +248,18 @@
             this.textBoxNomeUsuario.TabIndex = 13;
             this.textBoxNomeUsuario.Visible = false;
             // 
-            // pictureBox3
+            // pictureBoxSair
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Red;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1055, 185);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
+            this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
+            this.pictureBoxSair.Location = new System.Drawing.Point(1055, 185);
+            this.pictureBoxSair.Name = "pictureBoxSair";
+            this.pictureBoxSair.Size = new System.Drawing.Size(34, 37);
+            this.pictureBoxSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSair.TabIndex = 14;
+            this.pictureBoxSair.TabStop = false;
+            this.pictureBoxSair.Visible = false;
+            this.pictureBoxSair.Click += new System.EventHandler(this.pictureBoxSair_Click);
             // 
             // FormPrincipal
             // 
@@ -267,7 +268,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1176, 681);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBoxSair);
             this.Controls.Add(this.textBoxNomeUsuario);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxCaixaLogin);
@@ -289,7 +290,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,6 +323,6 @@
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin2;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin;
         private System.Windows.Forms.TextBox textBoxNomeUsuario;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBoxSair;
     }
 }
