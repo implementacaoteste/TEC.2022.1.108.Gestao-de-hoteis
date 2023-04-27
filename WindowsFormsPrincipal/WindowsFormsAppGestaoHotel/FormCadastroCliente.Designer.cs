@@ -195,6 +195,7 @@
             // 
             // generoComboBox
             // 
+            this.generoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clienteBindingSource, "IdSexo", true));
             this.generoComboBox.DataSource = this.sexoBindingSource;
             this.generoComboBox.DisplayMember = "Genero";
             this.generoComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -285,7 +286,8 @@
             this.MinimizeBox = false;
             this.Name = "FormCadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HOTELOGIX - Cadastro de cliente";
+            this.Text = "HOTELOGIX - Cadastro de Cliente";
+            this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
             this.ResumeLayout(false);

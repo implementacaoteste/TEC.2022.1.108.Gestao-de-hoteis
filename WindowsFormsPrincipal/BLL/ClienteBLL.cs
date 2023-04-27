@@ -16,40 +16,33 @@ namespace BLL
         {
             new ClienteDAL().Inserir(_cliente);
         }
-
         public void Alterar(Cliente _cliente)
         {
             new ClienteDAL().Alterar(_cliente);
         }
-
-        public List<Cliente> BuscaPorTodos()
-        {
-           return new ClienteDAL().BuscaPorTodos();
-        }
-
         public void Excluir(int _id)
         {
             new ClienteDAL().Excluir(_id);
         }
-
-        public void BuscarPorId(int _id)
+        public List<Cliente> BuscaPorTodos()
         {
-            new ClienteDAL().BuscarPorId(_id);
+           return new ClienteDAL().BuscaPorTodos();
         }
-
+        public Cliente BuscarPorId(int _id)
+        {
+            return new ClienteDAL().BuscarPorId(_id);
+        }
         public void BuscaPorCPF(string _CPF)
         {
             new ClienteDAL().BuscaPorCPF(_CPF);
         }
-
         public List<Cliente> BuscaPorNome(string _Nome)
         {
              return new ClienteDAL().BuscaPorNome(_Nome);
         }
         public void ValidarPermissao(Cliente _cliente)
         {
-            
-        }
 
+        }
     }
 }

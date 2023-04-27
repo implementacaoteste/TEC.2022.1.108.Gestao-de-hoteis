@@ -18,17 +18,16 @@ namespace DALL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO CLIENTE(NOME,  EMAIL,CPF, ATIVO, ENDERECO,CELULAR, DATA_NASCIMENTO, ID_SEXO)
-                                      VALUES(@NOME,  @Email, @CPF,  @ENDERECO, @CELULAR, @DATA_NASCIMENTO, @ID_SEXO)";
-
+                cmd.CommandText = @"INSERT INTO CLIENTE(NOME, EMAIL, CPF, ATIVO, ENDERECO, CELULAR, DATA_NASCIMENTO, ID_SEXO)
+                                      VALUES(@Nome, @Email, @CPF, @Endereco, @Celular, @Data_Nascimento, @Id_Sexo)";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@NOME", _cliente.Nome);
+                cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
                 cmd.Parameters.AddWithValue("@Email", _cliente.Email);
                 cmd.Parameters.AddWithValue("@CPF", _cliente.CPF);
-                cmd.Parameters.AddWithValue("@ENDERECO", _cliente.Endereco);
-                cmd.Parameters.AddWithValue("@CELULAR", _cliente.Celular);
-                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", _cliente.Data_nascimento);
-                cmd.Parameters.AddWithValue("@ID_SEXO", _cliente.IdSexo);
+                cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
+                cmd.Parameters.AddWithValue("@Celular", _cliente.Celular);
+                cmd.Parameters.AddWithValue("@Data_Nascimento", _cliente.Data_nascimento);
+                cmd.Parameters.AddWithValue("@Id_Sexo", _cliente.IdSexo);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -36,7 +35,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um cliente no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir um Cliente no Banco de Dados.", ex);
             }
             finally
             {
@@ -45,16 +44,14 @@ namespace DALL
         }
         public void Excluir(int _id)
         {
-
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"DELETE FROM CLIENTE 
-                                    WHERE ID= @ID";
-
+                                    WHERE ID= @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
-                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@Id", _id);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -63,7 +60,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir um FUNCIONARIO no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar excluir um Cliente no Banco de Dados.", ex);
             }
             finally
             {
@@ -76,18 +73,18 @@ namespace DALL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE CLIENTE SET NOME= @Nome,  EMAIL= @Email, ,CPF = @CPF,
-                                            ENDERECO= @ENDERECO, DATA_NASCIMENTO = @DATA_NASCIMENTO, CELULAR= @CELULAR , ID_SEXO = @ID_SEXO  
-                                        Where ID= @ID ";
-
+                cmd.CommandText = @"UPDATE CLIENTE SET NOME = @Nome,  EMAIL = @Email, CPF = @CPF, ENDERECO = @Endereco, 
+                                    DATA_NASCIMENTO = @Data_Nascimento, CELULAR = @Celular , ID_SEXO = @Id_Sexo  
+                                    WHERE ID = @Id ";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
                 cmd.Parameters.AddWithValue("@Email", _cliente.Email);
                 cmd.Parameters.AddWithValue("@CPF", _cliente.CPF);
-                cmd.Parameters.AddWithValue("@ENDERECO", _cliente.Endereco);
-                cmd.Parameters.AddWithValue("@CELULAR", _cliente.Celular);
-                cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", _cliente.Data_nascimento);
-                cmd.Parameters.AddWithValue("@ID_SEXO", _cliente.IdSexo);
+                cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
+                cmd.Parameters.AddWithValue("@Celular", _cliente.Celular);
+                cmd.Parameters.AddWithValue("@Data_Nascimento", _cliente.Data_nascimento);
+                cmd.Parameters.AddWithValue("@Id_Sexo", _cliente.IdSexo);
+                cmd.Parameters.AddWithValue("@Id", _cliente.Id);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -95,7 +92,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um funcionario no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar um Cliente no Banco de Dados.", ex);
             }
             finally
             {
@@ -110,7 +107,7 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
+                cmd.CommandText = @"SELECT ID, NOME,  EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
                                     FROM CLIENTE WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _CPF);
@@ -122,7 +119,7 @@ namespace DALL
                     {
                         cliente.Id = Convert.ToInt32(rd["ID"]);
                         cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
-                        cliente.Nome = rd["Nome"].ToString();
+                        cliente.Nome = rd["NOME"].ToString();
                         cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
                         cliente.Endereco = rd["ENDERECO"].ToString();
@@ -150,8 +147,8 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
-                                    FROM CLIENTE Where NOME Like @Nome";
+                cmd.CommandText = @"SELECT ID, NOME,  EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
+                                    FROM CLIENTE WHERE NOME LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
                 cn.Open();
@@ -191,7 +188,7 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
+                cmd.CommandText = @"SELECT ID, NOME,  EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
                                     FROM CLIENTE ";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
@@ -202,7 +199,7 @@ namespace DALL
                     {
                         cliente = new Cliente();
                         cliente.Id = Convert.ToInt32(rd["ID"]);
-                          cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         cliente.Nome = rd["NOME"].ToString();
                         cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
@@ -216,7 +213,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuarios: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Clientes.", ex);
             }
             finally
             {
@@ -231,7 +228,7 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  Email, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
+                cmd.CommandText = @"SELECT ID, NOME,  EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
                                     FROM CLIENTE WHERE ID = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -255,7 +252,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o ID: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o ID no Banco de Dados.", ex);
             }
             finally
             {
