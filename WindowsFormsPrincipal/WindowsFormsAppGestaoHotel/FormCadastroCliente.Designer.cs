@@ -100,6 +100,36 @@
             data_nascimentoLabel.TabIndex = 58;
             data_nascimentoLabel.Text = "Data de Nascimento";
             // 
+            // generoLabel
+            // 
+            generoLabel.AutoSize = true;
+            generoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            generoLabel.Location = new System.Drawing.Point(30, 227);
+            generoLabel.Name = "generoLabel";
+            generoLabel.Size = new System.Drawing.Size(77, 25);
+            generoLabel.TabIndex = 60;
+            generoLabel.Text = "Gênero";
+            // 
+            // enderecoLabel
+            // 
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            enderecoLabel.Location = new System.Drawing.Point(187, 227);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(96, 25);
+            enderecoLabel.TabIndex = 62;
+            enderecoLabel.Text = "Endereço";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            emailLabel.Location = new System.Drawing.Point(582, 227);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(67, 25);
+            emailLabel.TabIndex = 64;
+            emailLabel.Text = "E-mail";
+            // 
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataSource = typeof(Models.Cliente);
@@ -127,7 +157,7 @@
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.nomeTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(365, 30);
+            this.nomeTextBox.Size = new System.Drawing.Size(365, 28);
             this.nomeTextBox.TabIndex = 51;
             // 
             // cpfTextBox
@@ -138,7 +168,7 @@
             this.cpfTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.cpfTextBox.MinimumSize = new System.Drawing.Size(150, 30);
             this.cpfTextBox.Name = "cpfTextBox";
-            this.cpfTextBox.Size = new System.Drawing.Size(150, 30);
+            this.cpfTextBox.Size = new System.Drawing.Size(150, 28);
             this.cpfTextBox.TabIndex = 56;
             // 
             // celularTextBox
@@ -149,7 +179,7 @@
             this.celularTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.celularTextBox.MinimumSize = new System.Drawing.Size(150, 30);
             this.celularTextBox.Name = "celularTextBox";
-            this.celularTextBox.Size = new System.Drawing.Size(150, 30);
+            this.celularTextBox.Size = new System.Drawing.Size(150, 28);
             this.celularTextBox.TabIndex = 57;
             // 
             // data_nascimentoTextBox
@@ -160,7 +190,7 @@
             this.data_nascimentoTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.data_nascimentoTextBox.MinimumSize = new System.Drawing.Size(150, 30);
             this.data_nascimentoTextBox.Name = "data_nascimentoTextBox";
-            this.data_nascimentoTextBox.Size = new System.Drawing.Size(230, 30);
+            this.data_nascimentoTextBox.Size = new System.Drawing.Size(230, 28);
             this.data_nascimentoTextBox.TabIndex = 57;
             // 
             // generoComboBox
@@ -177,16 +207,6 @@
             this.generoComboBox.TabIndex = 59;
             this.generoComboBox.ValueMember = "Id";
             // 
-            // generoLabel
-            // 
-            generoLabel.AutoSize = true;
-            generoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            generoLabel.Location = new System.Drawing.Point(30, 227);
-            generoLabel.Name = "generoLabel";
-            generoLabel.Size = new System.Drawing.Size(77, 25);
-            generoLabel.TabIndex = 60;
-            generoLabel.Text = "Gênero";
-            // 
             // enderecoTextBox
             // 
             this.enderecoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -195,18 +215,8 @@
             this.enderecoTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.enderecoTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(385, 30);
+            this.enderecoTextBox.Size = new System.Drawing.Size(385, 28);
             this.enderecoTextBox.TabIndex = 61;
-            // 
-            // enderecoLabel
-            // 
-            enderecoLabel.AutoSize = true;
-            enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            enderecoLabel.Location = new System.Drawing.Point(187, 227);
-            enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(96, 25);
-            enderecoLabel.TabIndex = 62;
-            enderecoLabel.Text = "Endereço";
             // 
             // emailTextBox
             // 
@@ -216,18 +226,8 @@
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.emailTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(365, 30);
+            this.emailTextBox.Size = new System.Drawing.Size(365, 28);
             this.emailTextBox.TabIndex = 63;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            emailLabel.Location = new System.Drawing.Point(582, 227);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(67, 25);
-            emailLabel.TabIndex = 64;
-            emailLabel.Text = "E-mail";
             // 
             // buttonCancelarCadastroCliente
             // 
@@ -241,6 +241,7 @@
             this.buttonCancelarCadastroCliente.TabIndex = 66;
             this.buttonCancelarCadastroCliente.Text = "Cancelar";
             this.buttonCancelarCadastroCliente.UseVisualStyleBackColor = true;
+            this.buttonCancelarCadastroCliente.Click += new System.EventHandler(this.buttonCancelarCadastroCliente_Click);
             // 
             // buttonSalvarCadastroCliente
             // 
@@ -254,6 +255,7 @@
             this.buttonSalvarCadastroCliente.TabIndex = 65;
             this.buttonSalvarCadastroCliente.Text = "Salvar";
             this.buttonSalvarCadastroCliente.UseVisualStyleBackColor = true;
+            this.buttonSalvarCadastroCliente.Click += new System.EventHandler(this.buttonSalvarCadastroCliente_Click);
             // 
             // FormCadastroCliente
             // 
