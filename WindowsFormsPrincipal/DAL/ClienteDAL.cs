@@ -141,7 +141,7 @@ namespace DALL
                 cn.Close();
             }
         }
-        public List<Cliente> BuscaPorNome(Cliente _nome)
+        public List<Cliente> BuscaPorNome(string _nome)
         {
             List<Cliente> clientes = new List<Cliente>();
             Cliente cliente;

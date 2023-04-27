@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -117,6 +118,12 @@
     </Compile>
     <Compile Include="FormConsultaClasse.Designer.cs">
       <DependentUpon>FormConsultaClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaCliente.Designer.cs">
+      <DependentUpon>FormConsultaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormConsultaFuncionario.cs">
       <SubType>Form</SubType>
@@ -203,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaClasse.resx">
       <DependentUpon>FormConsultaClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaCliente.resx">
+      <DependentUpon>FormConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaFuncionario.resx">
       <DependentUpon>FormConsultaFuncionario.cs</DependentUpon>

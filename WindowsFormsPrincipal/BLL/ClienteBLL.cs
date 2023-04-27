@@ -42,7 +42,7 @@ namespace BLL
             new ClienteDAL().BuscaPorCPF(_CPF);
         }
 
-        public List<Cliente> BuscaPorNome(Cliente _Nome)
+        public List<Cliente> BuscaPorNome(string _Nome)
         {
              return new ClienteDAL().BuscaPorNome(_Nome);
         }
