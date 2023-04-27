@@ -1186,6 +1186,9 @@
         c5P4GvHlImcwYNW9XHy0GCkhisJi8f9RIZmENFApBQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="buttonSair.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>49</value>
   </metadata>

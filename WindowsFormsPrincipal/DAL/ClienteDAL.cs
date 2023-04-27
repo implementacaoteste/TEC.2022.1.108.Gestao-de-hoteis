@@ -19,10 +19,10 @@ namespace DALL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"INSERT INTO CLIENTE(NOME,  EMAIL,CPF, ATIVO, ENDERECO,CELULAR, DATA_NASCIMENTO, ID_SEXO)
-                                      VALUES(@Nome,  @Email, @CPF,  @ENDERECO, @CELULAR, @DATA_NASCIMENTO, @ID_SEXO)";
+                                      VALUES(@NOME,  @Email, @CPF,  @ENDERECO, @CELULAR, @DATA_NASCIMENTO, @ID_SEXO)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
+                cmd.Parameters.AddWithValue("@NOME", _cliente.Nome);
                 cmd.Parameters.AddWithValue("@Email", _cliente.Email);
                 cmd.Parameters.AddWithValue("@CPF", _cliente.CPF);
                 cmd.Parameters.AddWithValue("@ENDERECO", _cliente.Endereco);
