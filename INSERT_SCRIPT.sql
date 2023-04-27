@@ -18,6 +18,7 @@ INSERT INTO SEXO VALUES(2,'Masculino')
 
 -- CLIENTE  --7º
 INSERT INTO CLIENTE VALUES('Marcos Antonio','19854267923',1,'1995-06-17','marcoant@hotmail.com','99981506471','Rua dos Jumentos')
+INSERT INTO CLIENTE VALUES('Larissa Silva','95586257412',2,'1994-12-19','larissasilva@gmail.com','82963145789','Aveniva Presidente Dutra')
 INSERT INTO CLIENTE VALUES('Larnivaldo Souza','48215974536',1,'1999-07-01','lsouza_23@hotmail.com','94982653415','Rua dos Jatobás')
 
 -- DIARIA  --12º
