@@ -37,6 +37,11 @@ namespace BLL
         {
             return new DiariaDAL().BuscarPorNomeCliente(_nome);
         }
+
+        public List<Diaria> BuscarPorDataEntrada(string _dataEntrada)
+        {
+            return new DiariaDAL().BuscarPorDataEntrada(_dataEntrada);
+        }
     }
 }
 

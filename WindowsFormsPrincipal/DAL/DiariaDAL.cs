@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -127,11 +128,11 @@ namespace DAL
                 }
                 return Diaria;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias");
             }
-            finally 
+            finally
             {
                 cn.Close();
             }
@@ -153,12 +154,12 @@ namespace DAL
                                     INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
                                     WHERE C.CPF LIKE @cpf";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@cpf", "%"+_cpf+"%");
+                cmd.Parameters.AddWithValue("@cpf", "%" + _cpf + "%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while(rd.Read())
+                    while (rd.Read())
                     {
                         diaria = new Diaria();
                         diaria.Id = Convert.ToInt32(rd["ID"]);
@@ -178,7 +179,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias",ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias", ex);
             }
             finally
             {
@@ -201,12 +202,12 @@ namespace DAL
                                     INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
                                     WHERE C.NOME LIKE @nome";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@nome", "%"+_nome+"%");
+                cmd.Parameters.AddWithValue("@nome", "%" + _nome + "%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while(rd.Read())
+                    while (rd.Read())
                     {
                         diaria = new Diaria();
                         diaria.Id = Convert.ToInt32(rd["ID"]);
@@ -226,14 +227,62 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias",ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias", ex);
             }
             finally
             {
                 cn.Close();
             }
         }
-    } 
- } 
+
+        public List<Diaria> BuscarPorDataEntrada(string _dataEntrada)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            List<Diaria> Diaria = new List<Diaria>();
+            Diaria diaria = new Diaria();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
+                                    D.ID_FUNCIONARIO, D.ID_PAGAMENTO, D.DATA_SAIDA, D.DATA_ENTRADA
+                                    FROM DIARIA D
+                                    INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
+                                    WHERE C.DATA_ENTRADA LIKE @Data_Entrada";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Data_Entrada", "%" + _dataEntrada + "%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        diaria = new Diaria();
+                        diaria.Id = Convert.ToInt32(rd["ID"]);
+                        diaria.Id_funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
+                        diaria.Nome_Cliente = rd["NOME"].ToString();
+                        diaria.Cpf_Cliente = rd["CPF"].ToString();
+                        diaria.Id_cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        diaria.Id_Pagamento = Convert.ToInt32(rd["ID_pagamento"]);
+                        diaria.Valor_Total = Convert.ToSingle(rd["VALOR_TOTAL"]);
+                        diaria.Data_Entrada = rd["DATA_ENTRADA"].ToString();
+                        diaria.Data_Saida = rd["DATA_SAIDA"].ToString();
+                        Diaria.Add(diaria);
+                    }
+
+                }
+                return Diaria;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar a data de entrada no banco de dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+    }
+}
 
 
