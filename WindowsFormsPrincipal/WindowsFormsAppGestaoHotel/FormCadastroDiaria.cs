@@ -45,7 +45,7 @@ namespace WindowsFormsAppGestaoHotel
         }
         private void buttonSelecionarCliente_Click(object sender, EventArgs e)
         {
-            using(FormBuscarCliente frm = new FormBuscarCliente())
+            using(FormConsultaCliente frm = new FormConsultaCliente())
             {
                 frm.ShowDialog();
             } 
