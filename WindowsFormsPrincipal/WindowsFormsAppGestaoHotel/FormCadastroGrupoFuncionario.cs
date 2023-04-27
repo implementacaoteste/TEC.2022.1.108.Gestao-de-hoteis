@@ -20,7 +20,7 @@ namespace WindowsFormsPrincipal1
                 grupoFuncionarioBindingSource.AddNew();
             else
             {
-                labelTitulo.Text = "Editar";
+                tituloLabel.Text = "Editar Grupo de Funcionário";
                 grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarPorId(Id);
             }
         }

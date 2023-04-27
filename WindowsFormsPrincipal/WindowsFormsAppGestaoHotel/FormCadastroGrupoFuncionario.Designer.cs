@@ -35,8 +35,7 @@
             this.nomeGrupoTextBox = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.labelTitulo = new System.Windows.Forms.Label();
+            this.tituloLabel = new System.Windows.Forms.Label();
             nomeGrupoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -44,12 +43,12 @@
             // nomeGrupoLabel
             // 
             nomeGrupoLabel.AutoSize = true;
-            nomeGrupoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeGrupoLabel.Location = new System.Drawing.Point(61, 182);
+            nomeGrupoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            nomeGrupoLabel.Location = new System.Drawing.Point(56, 99);
             nomeGrupoLabel.Name = "nomeGrupoLabel";
-            nomeGrupoLabel.Size = new System.Drawing.Size(161, 28);
+            nomeGrupoLabel.Size = new System.Drawing.Size(150, 25);
             nomeGrupoLabel.TabIndex = 0;
-            nomeGrupoLabel.Text = "Nome do grupo";
+            nomeGrupoLabel.Text = "Nome do Grupo";
             // 
             // grupoFuncionarioBindingSource
             // 
@@ -59,75 +58,66 @@
             // 
             this.nomeGrupoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeGrupoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionarioBindingSource, "NomeGrupo", true));
-            this.nomeGrupoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeGrupoTextBox.Location = new System.Drawing.Point(67, 215);
+            this.nomeGrupoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nomeGrupoTextBox.Location = new System.Drawing.Point(62, 132);
             this.nomeGrupoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
-            this.nomeGrupoTextBox.Size = new System.Drawing.Size(487, 34);
+            this.nomeGrupoTextBox.Size = new System.Drawing.Size(320, 30);
             this.nomeGrupoTextBox.TabIndex = 1;
             // 
             // buttonSalvar
             // 
             this.buttonSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonSalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(176, 295);
+            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
+            this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSalvar.Location = new System.Drawing.Point(62, 192);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(135, 46);
+            this.buttonSalvar.Size = new System.Drawing.Size(110, 35);
             this.buttonSalvar.TabIndex = 2;
             this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(333, 295);
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelar.Location = new System.Drawing.Point(247, 192);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(135, 46);
+            this.buttonCancelar.Size = new System.Drawing.Size(130, 35);
             this.buttonCancelar.TabIndex = 3;
             this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             this.buttonCancelar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonCancelar_KeyDown);
             // 
-            // labelSubTitulo
+            // tituloLabel
             // 
-            this.labelSubTitulo.AutoSize = true;
-            this.labelSubTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.labelSubTitulo.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold);
-            this.labelSubTitulo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSubTitulo.Location = new System.Drawing.Point(19, 63);
-            this.labelSubTitulo.Name = "labelSubTitulo";
-            this.labelSubTitulo.Size = new System.Drawing.Size(496, 54);
-            this.labelSubTitulo.TabIndex = 4;
-            this.labelSubTitulo.Text = "de grupo de funcionário";
-            this.labelSubTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.BackColor = System.Drawing.Color.White;
-            this.labelTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold);
-            this.labelTitulo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTitulo.Location = new System.Drawing.Point(193, 1);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(196, 54);
-            this.labelTitulo.TabIndex = 4;
-            this.labelTitulo.Text = "Cadastro";
-            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tituloLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.tituloLabel.Location = new System.Drawing.Point(0, 0);
+            this.tituloLabel.Name = "tituloLabel";
+            this.tituloLabel.Size = new System.Drawing.Size(452, 90);
+            this.tituloLabel.TabIndex = 4;
+            this.tituloLabel.Text = "Cadastro de Grupo de Funcionário";
+            this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormCadastroGrupoFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(644, 402);
-            this.Controls.Add(this.labelTitulo);
-            this.Controls.Add(this.labelSubTitulo);
+            this.ClientSize = new System.Drawing.Size(452, 248);
+            this.Controls.Add(this.tituloLabel);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(nomeGrupoLabel);
@@ -154,7 +144,6 @@
         private System.Windows.Forms.TextBox nomeGrupoTextBox;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Label labelSubTitulo;
-        private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Label tituloLabel;
     }
 }
