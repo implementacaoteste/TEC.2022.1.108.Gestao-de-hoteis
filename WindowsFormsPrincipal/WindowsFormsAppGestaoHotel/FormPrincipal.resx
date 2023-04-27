@@ -1186,9 +1186,16 @@
         c5P4GvHlImcwYNW9XHy0GCkhisJi8f9RIZmENFApBQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="buttonSair.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
+  <data name="pictureBoxSair.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAAPlJREFUSEvtlt0NgkAQhCmBEizBEizBUuxAO8FOLOFeCH8vlGAJOpPsEUyA5W5R
+        MOFL5kG8uU82ICQ7q1KW5QE5aZHly1DX9RV5zYlU7OAsDkOCsUjNDsfnN62q6tIf61CkZoebefGiG2v8
+        rRi9rGmaTD7OxyLG+pvvBsst4rZtUwhdlNwiJtFyTZzn+ZHHp1IUxRnCZ5CcxSkx7u2H/z4kqvxbYuQu
+        WwyjifHL1VGj+zFqZFpKpDgq1nDOpeh2FxeiS4lFHC0lFjE6/cfpfCmxiAmFwVJiFUezCTH+gX76IrDO
+        qw/Bht3jTYtUloNn3h/pWGT5zpZJkjfMXArq+Ej0FwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>49</value>
   </metadata>

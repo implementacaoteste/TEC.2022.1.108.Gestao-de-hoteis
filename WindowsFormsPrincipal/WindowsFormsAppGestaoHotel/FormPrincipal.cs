@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsAppGestaoHotel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace WindowsFormsPrincipal1
 {
@@ -32,8 +33,7 @@ namespace WindowsFormsPrincipal1
                         Application.Exit();
                     }
                 }
-                Logado log = new Logado();
-                textBoxNomeUsuario.Text = log.NomeUsuario;
+                textBoxNomeUsuario.Text = Constante.NomeUsuario;
             }
             catch (Exception ex)
             {
@@ -111,11 +111,27 @@ namespace WindowsFormsPrincipal1
             {
                 return;
             }
-            new Funcionario().LimparDados();
+            LimparDados();
             using (FormLogin frm = new FormLogin())
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void LimparDados()
+        {
+            Constante.IdLogado = 0;
+            Constante.Nome = null;
+            Constante.CPF = null;
+            Constante.Email = null;
+            Constante.Celular = null;
+            Constante.Endereco = null;
+            Constante.NomeUsuario = null;
+            Constante.Data_nascimento = DateTime.MinValue;
+            Constante.Senha = null;
+            Constante.Ativo = false;
+            Constante.IdSexo = 0;
+            Constante.Sexo = null;
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -214,21 +230,34 @@ namespace WindowsFormsPrincipal1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if(buttonSair.Visible)
+            if(pictureBoxSair.Visible)
             {
-                buttonSair.Visible = false;
+                pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
                 pictureBoxCaixaLogin2.Visible = false;
                 textBoxNomeUsuario.Visible = false;
             }
             else
             {
-                buttonSair.Visible = true;
+                pictureBoxSair.Visible = true;
                 pictureBoxCaixaLogin.Visible = true;
                 pictureBoxCaixaLogin2.Visible = true;
                 textBoxNomeUsuario.Visible=true;
             }
             
+        }
+
+        private void pictureBoxSair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair do seu usuário", "Cuidado", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+            new Logado().LimparDados();
+            using (FormLogin frm = new FormLogin())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

@@ -24,7 +24,17 @@ namespace WindowsFormsPrincipal1
             InitializeComponent();
             Id = _id;
         }
-        private void buttonSalvar_Click(object sender, EventArgs e)
+       
+
+        private void buttonCancelar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void buttonSalvarCadastroCliente_Click(object sender, EventArgs e)
         {
             try
             {
@@ -40,19 +50,10 @@ namespace WindowsFormsPrincipal1
                 throw new Exception("Ocorreu erro ao tentar salvar um cliente no Banco de Dados", ex);
             }
         }
-        private void buttonCancelar_Click(object sender, EventArgs e)
+
+        private void buttonCancelarCadastroCliente_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        private void buttonCancelar_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                Close();
-            }
-        }
-
-
     }
 }
