@@ -230,5 +230,18 @@ namespace WindowsFormsPrincipal1
             }
             
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair do seu usuário", "Cuidado", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+            new Logado().LimparDados();
+            using (FormLogin frm = new FormLogin())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

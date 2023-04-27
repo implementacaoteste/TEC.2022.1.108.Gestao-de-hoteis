@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            System.Windows.Forms.Button buttonSair;
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,12 +47,13 @@
             this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin = new System.Windows.Forms.PictureBox();
             this.textBoxNomeUsuario = new System.Windows.Forms.TextBox();
-            buttonSair = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -192,7 +192,7 @@
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(353, 49);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(467, 431);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,26 +213,11 @@
             this.pictureBox2.UseWaitCursor = true;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // buttonSair
-            // 
-            buttonSair.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            buttonSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            buttonSair.Location = new System.Drawing.Point(1028, 186);
-            buttonSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            buttonSair.Name = "buttonSair";
-            buttonSair.Size = new System.Drawing.Size(97, 37);
-            buttonSair.TabIndex = 5;
-            buttonSair.Text = "Sair";
-            buttonSair.UseVisualStyleBackColor = false;
-            buttonSair.Visible = false;
-            buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
-            // 
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(983, 47);
-            this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
             this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(180, 187);
             this.pictureBoxCaixaLogin2.TabIndex = 7;
@@ -243,7 +228,7 @@
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(985, 49);
-            this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
             this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(175, 182);
             this.pictureBoxCaixaLogin.TabIndex = 8;
@@ -262,6 +247,18 @@
             this.textBoxNomeUsuario.TabIndex = 13;
             this.textBoxNomeUsuario.Visible = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Red;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1055, 185);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,9 +266,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1176, 681);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.textBoxNomeUsuario);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(buttonSair);
             this.Controls.Add(this.pictureBoxCaixaLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -291,6 +288,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +321,6 @@
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin2;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin;
         private System.Windows.Forms.TextBox textBoxNomeUsuario;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
