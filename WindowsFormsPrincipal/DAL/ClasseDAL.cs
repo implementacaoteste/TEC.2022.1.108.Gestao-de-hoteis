@@ -16,18 +16,15 @@ namespace DALL
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"INSERT INTO CLASSE(CLASSE)
                                       VALUES(@Classe)";
-
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Classe", _classe.Descricao);
-            
                 cmd.Connection = cn;
                 cn.Open();
-
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir uma Classe no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir uma Classe no Banco de Dados.", ex);
             }
             finally
             {
@@ -42,12 +39,10 @@ namespace DALL
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE CLASSE SET CLASSE = @Classe 
                                         WHERE ID = @Id";
-
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _classe.Id);
                 cmd.Parameters.AddWithValue("@Classe", _classe.Descricao);
                 cn.Open();
-
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -65,20 +60,17 @@ namespace DALL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM CLASSE 
-                                    WHERE ID= @ID";
-
+                cmd.CommandText = @"DELETE FROM CLASSE
+                                    WHERE ID = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
-                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
-
+                cmd.Parameters.AddWithValue("@Id", _id);
                 cmd.Connection = cn;
                 cn.Open();
-
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir uma Classe no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar excluir uma Classe no Banco de Dados.", ex);
             }
             finally
             {
@@ -107,6 +99,7 @@ namespace DALL
                         classe = new Classe();
                         classe.Id = Convert.ToInt32(rd["ID"]);
                         classe.Descricao = rd["CLASSE"].ToString();
+                        classes.Add(classe);
                     }
                 }
                 return classes;
@@ -141,6 +134,7 @@ namespace DALL
                         classe = new Classe();
                         classe.Id = Convert.ToInt32(rd["ID"]);
                         classe.Descricao = rd["CLASSE"].ToString();
+                        classes.Add(classe);
                     }
                 }
                 return classes;
@@ -154,10 +148,9 @@ namespace DALL
                 cn.Close();
             }
         }
-        public  List<Classe> BuscarPorId(int _id)
+        public  Classe BuscarPorId(int _id)
         {
-            List<Classe> classes = new List<Classe>();
-            Classe classe;
+            Classe classe = new Classe();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -165,10 +158,10 @@ namespace DALL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT ID, CLASSE FROM CLASSE
                                     WHERE ID = @ID";
-
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@ID", _id);
                 cn.Open();
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
@@ -178,11 +171,11 @@ namespace DALL
                         classe.Descricao = rd["CLASSE"].ToString();
                     }
                 }
-                return classes;
+                return classe;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir uma Classe no Banco de Dados", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o ID no Banco de Dados.", ex);
             }
             finally
             {
