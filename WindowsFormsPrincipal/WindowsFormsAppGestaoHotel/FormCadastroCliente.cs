@@ -36,7 +36,7 @@ namespace WindowsFormsPrincipal1
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar salvar um cliente no Banco de Dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar salvar um Cliente no Banco de Dados.", ex);
             }
         }
         private void buttonCancelarCadastroCliente_Click(object sender, EventArgs e)
