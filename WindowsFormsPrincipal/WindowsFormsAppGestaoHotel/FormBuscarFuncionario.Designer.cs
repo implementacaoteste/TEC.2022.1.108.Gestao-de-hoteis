@@ -67,6 +67,7 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grupoFuncionariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.data_nascimentoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.idSexoTextBox = new System.Windows.Forms.TextBox();
             this.celularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cPFMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -85,7 +86,6 @@
             this.buttonAdicionarGrupoFuncionario = new System.Windows.Forms.Button();
             this.buttonExcluirFuncionario = new System.Windows.Forms.Button();
             this.buttonAdicionarFuncionario = new System.Windows.Forms.Button();
-            this.data_nascimentoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             idLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
@@ -541,10 +541,22 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados Pessoais";
             // 
+            // data_nascimentoMaskedTextBox
+            // 
+            this.data_nascimentoMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_nascimentoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Data_nascimento", true));
+            this.data_nascimentoMaskedTextBox.Location = new System.Drawing.Point(433, 84);
+            this.data_nascimentoMaskedTextBox.Mask = "00/00/0000";
+            this.data_nascimentoMaskedTextBox.Name = "data_nascimentoMaskedTextBox";
+            this.data_nascimentoMaskedTextBox.ReadOnly = true;
+            this.data_nascimentoMaskedTextBox.Size = new System.Drawing.Size(100, 22);
+            this.data_nascimentoMaskedTextBox.TabIndex = 12;
+            this.data_nascimentoMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
             // idSexoTextBox
             // 
             this.idSexoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idSexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "IdSexo", true));
+            this.idSexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Sexo", true));
             this.idSexoTextBox.Location = new System.Drawing.Point(433, 55);
             this.idSexoTextBox.Name = "idSexoTextBox";
             this.idSexoTextBox.ReadOnly = true;
@@ -701,11 +713,11 @@
             this.buttonAlterarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonAlterarFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarFuncionario.Image")));
             this.buttonAlterarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(152, 769);
+            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(174, 769);
             this.buttonAlterarFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAlterarFuncionario.MinimumSize = new System.Drawing.Size(109, 34);
+            this.buttonAlterarFuncionario.MinimumSize = new System.Drawing.Size(140, 35);
             this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
-            this.buttonAlterarFuncionario.Size = new System.Drawing.Size(109, 34);
+            this.buttonAlterarFuncionario.Size = new System.Drawing.Size(140, 35);
             this.buttonAlterarFuncionario.TabIndex = 0;
             this.buttonAlterarFuncionario.Text = "Alterar";
             this.buttonAlterarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -719,11 +731,11 @@
             this.buttonExcluirGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluirGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirGrupoFuncionario.Image")));
             this.buttonExcluirGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirGrupoFuncionario.Location = new System.Drawing.Point(897, 769);
+            this.buttonExcluirGrupoFuncionario.Location = new System.Drawing.Point(867, 769);
             this.buttonExcluirGrupoFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonExcluirGrupoFuncionario.MinimumSize = new System.Drawing.Size(109, 34);
+            this.buttonExcluirGrupoFuncionario.MinimumSize = new System.Drawing.Size(140, 35);
             this.buttonExcluirGrupoFuncionario.Name = "buttonExcluirGrupoFuncionario";
-            this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(109, 34);
+            this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(140, 35);
             this.buttonExcluirGrupoFuncionario.TabIndex = 0;
             this.buttonExcluirGrupoFuncionario.Text = "Excluir";
             this.buttonExcluirGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -737,11 +749,11 @@
             this.buttonAdicionarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonAdicionarGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarGrupoFuncionario.Image")));
             this.buttonAdicionarGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdicionarGrupoFuncionario.Location = new System.Drawing.Point(749, 769);
+            this.buttonAdicionarGrupoFuncionario.Location = new System.Drawing.Point(698, 769);
             this.buttonAdicionarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAdicionarGrupoFuncionario.MinimumSize = new System.Drawing.Size(131, 34);
+            this.buttonAdicionarGrupoFuncionario.MinimumSize = new System.Drawing.Size(150, 35);
             this.buttonAdicionarGrupoFuncionario.Name = "buttonAdicionarGrupoFuncionario";
-            this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(131, 34);
+            this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(150, 35);
             this.buttonAdicionarGrupoFuncionario.TabIndex = 0;
             this.buttonAdicionarGrupoFuncionario.Text = "Adicionar";
             this.buttonAdicionarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -755,11 +767,11 @@
             this.buttonExcluirFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluirFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirFuncionario.Image")));
             this.buttonExcluirFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirFuncionario.Location = new System.Drawing.Point(275, 769);
+            this.buttonExcluirFuncionario.Location = new System.Drawing.Point(330, 769);
             this.buttonExcluirFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonExcluirFuncionario.MinimumSize = new System.Drawing.Size(109, 34);
+            this.buttonExcluirFuncionario.MinimumSize = new System.Drawing.Size(140, 35);
             this.buttonExcluirFuncionario.Name = "buttonExcluirFuncionario";
-            this.buttonExcluirFuncionario.Size = new System.Drawing.Size(109, 34);
+            this.buttonExcluirFuncionario.Size = new System.Drawing.Size(140, 35);
             this.buttonExcluirFuncionario.TabIndex = 0;
             this.buttonExcluirFuncionario.Text = "Excluir";
             this.buttonExcluirFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -775,26 +787,14 @@
             this.buttonAdicionarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAdicionarFuncionario.Location = new System.Drawing.Point(12, 769);
             this.buttonAdicionarFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAdicionarFuncionario.MinimumSize = new System.Drawing.Size(131, 34);
+            this.buttonAdicionarFuncionario.MinimumSize = new System.Drawing.Size(150, 35);
             this.buttonAdicionarFuncionario.Name = "buttonAdicionarFuncionario";
-            this.buttonAdicionarFuncionario.Size = new System.Drawing.Size(131, 34);
+            this.buttonAdicionarFuncionario.Size = new System.Drawing.Size(150, 35);
             this.buttonAdicionarFuncionario.TabIndex = 0;
             this.buttonAdicionarFuncionario.Text = "Adicionar";
             this.buttonAdicionarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarFuncionario.UseVisualStyleBackColor = false;
             this.buttonAdicionarFuncionario.Click += new System.EventHandler(this.buttonAdicionarFuncionario_Click);
-            // 
-            // data_nascimentoMaskedTextBox
-            // 
-            this.data_nascimentoMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.data_nascimentoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Data_nascimento", true));
-            this.data_nascimentoMaskedTextBox.Location = new System.Drawing.Point(433, 84);
-            this.data_nascimentoMaskedTextBox.Mask = "00/00/0000";
-            this.data_nascimentoMaskedTextBox.Name = "data_nascimentoMaskedTextBox";
-            this.data_nascimentoMaskedTextBox.ReadOnly = true;
-            this.data_nascimentoMaskedTextBox.Size = new System.Drawing.Size(100, 22);
-            this.data_nascimentoMaskedTextBox.TabIndex = 12;
-            this.data_nascimentoMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // FormBuscarFuncionario
             // 
