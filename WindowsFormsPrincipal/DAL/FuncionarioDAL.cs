@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DAL
 {
@@ -111,8 +112,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR , ID_SEXO
-                                    FROM FUNCIONARIO WHERE ID=@ID";
+                cmd.CommandText = @"SELECT FUNCIONARIO.ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR , ID_SEXO, SEXO.SEXO
+                                    FROM FUNCIONARIO 
+                                    INNER JOIN SEXO ON FUNCIONARIO.ID_SEXO = SEXO.ID
+                                    WHERE FUNCIONARIO.ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@ID", _id);
@@ -131,6 +134,7 @@ namespace DAL
                         funcionario.Senha = rd["SENHA"].ToString();
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
+                        funcionario.Sexo = rd["SEXO"].ToString();
                         funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
                     }
                 }
@@ -155,8 +159,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, ID_SEXO, NOME, NOME_USUARIO, EMAIL ,SENHA , CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR 
-                                    FROM FUNCIONARIO";
+                cmd.CommandText = @"SELECT FUNCIONARIO.ID, ID_SEXO, SEXO.SEXO, NOME, NOME_USUARIO, EMAIL ,SENHA , CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR 
+                                    FROM FUNCIONARIO
+									INNER JOIN SEXO ON SEXO.ID = FUNCIONARIO.ID_SEXO";
+
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -176,6 +182,7 @@ namespace DAL
                         funcionario.Endereco = rd["ENDERECO"].ToString();
                         funcionario.Celular = rd["CELULAR"].ToString();
                         funcionario.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
+                        funcionario.Sexo = rd["SEXO"].ToString();
                         funcionario.GrupoFuncionarios = new GrupoFuncionarioDAL().BuscarPorIdFuncionario(funcionario.Id);
                         funcionarios.Add(funcionario);
                     }
@@ -200,8 +207,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
-                                    ENDERECO, CELULAR, ID_SEXO FROM FUNCIONARIO WHERE NOME LIKE @Nome";
+                cmd.CommandText = @"SELECT FUNCIONARIO.ID, ID_SEXO, SEXO.SEXO, NOME, NOME_USUARIO, EMAIL ,SENHA , CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR
+                                    FROM FUNCIONARIO 
+                                    INNER JOIN SEXO ON SEXO.ID = FUNCIONARIO.ID_SEXO
+                                    WHERE NOME LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
                 cn.Open();
@@ -212,6 +221,7 @@ namespace DAL
                         funcionario = new Funcionario();
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
                         funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        funcionario.Sexo = rd["SEXO"].ToString();
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();
@@ -286,8 +296,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
-                                    ENDERECO, CELULAR, ID_SEXO FROM FUNCIONARIO WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT FUNCIONARIO.ID, ID_SEXO, SEXO.SEXO, NOME, NOME_USUARIO, EMAIL ,SENHA , CPF, ATIVO, DATA_NASCIMENTO, ENDERECO, CELULAR
+                                    FROM FUNCIONARIO
+                                    INNER JOIN SEXO ON SEXO.ID = FUNCIONARIO.ID_SEXO
+                                    WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _cPF);
                 cn.Open();
@@ -298,6 +310,7 @@ namespace DAL
                     {
                         funcionario.Id = Convert.ToInt32(rd["ID"]);
                         funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        funcionario.Sexo = rd["SEXO"].ToString();
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();
