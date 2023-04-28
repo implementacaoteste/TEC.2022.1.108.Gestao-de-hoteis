@@ -388,6 +388,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroDeFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Cadastro de Funcionário";
             this.Load += new System.EventHandler(this.FormCadastroDeFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
