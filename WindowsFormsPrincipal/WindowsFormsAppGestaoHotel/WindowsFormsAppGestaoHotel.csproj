@@ -277,6 +277,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hotelogix.ico" />
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\close1.png" />
+    <None Include="Resources\select.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\edit1.png" />
     <None Include="Resources\Form_Login.png" />
   </ItemGroup>
   <ItemGroup>

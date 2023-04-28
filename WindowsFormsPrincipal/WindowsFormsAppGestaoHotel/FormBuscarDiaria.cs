@@ -111,6 +111,11 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
+                if(diariaBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Selecione uma opção para ser alterada");
+                    return;
+                }
                 int id= ((Diaria)diariaBindingSource.Current).Id;
                 using (FormCadastroDiaria frm = new FormCadastroDiaria())
                 {

@@ -138,16 +138,52 @@
   <metadata name="valor_DiariaLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="diariaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>13, 5</value>
-  </metadata>
   <metadata name="quartosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 1</value>
   </metadata>
+  <metadata name="diariaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>13, 5</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonExcluirQuarto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAANxJREFUSEvtlssNwjAQBV0CJaQESqA0OoFOoANfIvlzSSmwi9YXZCljO1JyyEhP
+        iJfsrIg5xJ0cknmeryGEWy16zW7bnhjjK6X0qUWuve22fmrikZh2ndrwSEy7jpzZXQYWG1z0e0v+Z03L
+        KOfZc3Yjs8daPNJhqJB2GCqkHYYKaYehQtphqJB2GCqkHYYKaYehQtphqJB2GCqkHaY2nHP+vYHop1XV
+        bvPFlE0WS7z+opboTPdiETxtcXfk8T9Mx5HFkwyXN4me6NvHZLp2yuNrif7RvPcXU5zsiXNfCFv3gtct
+        RBgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="buttonADCquarto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAI5JREFUSEvtlt0JwCAQgx3JETqSG9YhxL9lWgMR+uBDkV5b2vsgcARJQDjRKIoC
+        aq0257xCIQRLW56U0lJK2SDMtOXRYtryfLMYa4LQkdoauV4cY3SjM9DUqmFHe/isWoZn3HkeK8brNLo+
+        6HjVmEdnIGQw7hoQ2osx05ZHi2nL879ifgQ8dOtHQFFejDE7R2uVFnSBimwAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="buttonExcluirDiaria.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAANxJREFUSEvtlssNwjAQBV0CJaQESqA0OoFOoANfIvlzSSmwi9YXZCljO1JyyEhP
+        iJfsrIg5xJ0cknmeryGEWy16zW7bnhjjK6X0qUWuve22fmrikZh2ndrwSEy7jpzZXQYWG1z0e0v+Z03L
+        KOfZc3Yjs8daPNJhqJB2GCqkHYYKaYehQtphqJB2GCqkHYYKaYehQtphqJB2GCqkHaY2nHP+vYHop1XV
+        bvPFlE0WS7z+opboTPdiETxtcXfk8T9Mx5HFkwyXN4me6NvHZLp2yuNrif7RvPcXU5zsiXNfCFv3gtct
+        RBgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="buttonADCDiaria.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAI5JREFUSEvtlt0JwCAQgx3JETqSG9YhxL9lWgMR+uBDkV5b2vsgcARJQDjRKIoC
+        aq0257xCIQRLW56U0lJK2SDMtOXRYtryfLMYa4LQkdoauV4cY3SjM9DUqmFHe/isWoZn3HkeK8brNLo+
+        6HjVmEdnIGQw7hoQ2osx05ZHi2nL879ifgQ8dOtHQFFejDE7R2uVFnSBimwAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>50</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAJg6AACYOgAAAAAAAAAA
