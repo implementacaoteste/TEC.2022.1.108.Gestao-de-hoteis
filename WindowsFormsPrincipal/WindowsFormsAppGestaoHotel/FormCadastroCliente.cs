@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsPrincipal1
 {
@@ -61,6 +62,7 @@ namespace WindowsFormsPrincipal1
             }
 
             sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
+            generoComboBox.Text = ((Cliente)clienteBindingSource.Current).Sexo;
         }
     }
 }
