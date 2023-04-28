@@ -57,6 +57,7 @@
             this.idSexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.data_nascimentoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.idSexoTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox1 = new System.Windows.Forms.TextBox();
             this.cPFMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -68,7 +69,6 @@
             this.buttonExcluirCliente = new System.Windows.Forms.Button();
             this.buttonAdicionarCliente = new System.Windows.Forms.Button();
             this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.data_nascimentoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             celularLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
@@ -173,7 +173,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(425, 98);
+            this.groupBox1.Size = new System.Drawing.Size(445, 100);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por";
@@ -240,9 +240,9 @@
             this.buttonBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBuscarCliente.Location = new System.Drawing.Point(309, 58);
             this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonBuscarCliente.MinimumSize = new System.Drawing.Size(109, 34);
+            this.buttonBuscarCliente.MinimumSize = new System.Drawing.Size(130, 35);
             this.buttonBuscarCliente.Name = "buttonBuscarCliente";
-            this.buttonBuscarCliente.Size = new System.Drawing.Size(109, 34);
+            this.buttonBuscarCliente.Size = new System.Drawing.Size(130, 35);
             this.buttonBuscarCliente.TabIndex = 0;
             this.buttonBuscarCliente.Text = "Buscar";
             this.buttonBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -407,10 +407,22 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados Pessoais";
             // 
+            // data_nascimentoMaskedTextBox
+            // 
+            this.data_nascimentoMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_nascimentoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Data_nascimento", true));
+            this.data_nascimentoMaskedTextBox.Location = new System.Drawing.Point(431, 84);
+            this.data_nascimentoMaskedTextBox.Mask = "00/00/0000";
+            this.data_nascimentoMaskedTextBox.Name = "data_nascimentoMaskedTextBox";
+            this.data_nascimentoMaskedTextBox.ReadOnly = true;
+            this.data_nascimentoMaskedTextBox.Size = new System.Drawing.Size(100, 22);
+            this.data_nascimentoMaskedTextBox.TabIndex = 16;
+            this.data_nascimentoMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
             // idSexoTextBox
             // 
             this.idSexoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idSexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "IdSexo", true));
+            this.idSexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Sexo", true));
             this.idSexoTextBox.Location = new System.Drawing.Point(431, 55);
             this.idSexoTextBox.Name = "idSexoTextBox";
             this.idSexoTextBox.ReadOnly = true;
@@ -486,11 +498,11 @@
             this.buttonAlterarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonAlterarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarCliente.Image")));
             this.buttonAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarCliente.Location = new System.Drawing.Point(157, 705);
+            this.buttonAlterarCliente.Location = new System.Drawing.Point(179, 705);
             this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAlterarCliente.MinimumSize = new System.Drawing.Size(109, 34);
+            this.buttonAlterarCliente.MinimumSize = new System.Drawing.Size(130, 35);
             this.buttonAlterarCliente.Name = "buttonAlterarCliente";
-            this.buttonAlterarCliente.Size = new System.Drawing.Size(109, 34);
+            this.buttonAlterarCliente.Size = new System.Drawing.Size(130, 35);
             this.buttonAlterarCliente.TabIndex = 13;
             this.buttonAlterarCliente.Text = "Alterar";
             this.buttonAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -504,11 +516,11 @@
             this.buttonExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluirCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirCliente.Image")));
             this.buttonExcluirCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirCliente.Location = new System.Drawing.Point(280, 705);
+            this.buttonExcluirCliente.Location = new System.Drawing.Point(327, 705);
             this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonExcluirCliente.MinimumSize = new System.Drawing.Size(109, 34);
+            this.buttonExcluirCliente.MinimumSize = new System.Drawing.Size(130, 35);
             this.buttonExcluirCliente.Name = "buttonExcluirCliente";
-            this.buttonExcluirCliente.Size = new System.Drawing.Size(109, 34);
+            this.buttonExcluirCliente.Size = new System.Drawing.Size(130, 35);
             this.buttonExcluirCliente.TabIndex = 14;
             this.buttonExcluirCliente.Text = "Excluir";
             this.buttonExcluirCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -524,9 +536,9 @@
             this.buttonAdicionarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAdicionarCliente.Location = new System.Drawing.Point(17, 705);
             this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAdicionarCliente.MinimumSize = new System.Drawing.Size(131, 34);
+            this.buttonAdicionarCliente.MinimumSize = new System.Drawing.Size(150, 35);
             this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
-            this.buttonAdicionarCliente.Size = new System.Drawing.Size(131, 34);
+            this.buttonAdicionarCliente.Size = new System.Drawing.Size(150, 35);
             this.buttonAdicionarCliente.TabIndex = 15;
             this.buttonAdicionarCliente.Text = "Adicionar";
             this.buttonAdicionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -536,18 +548,6 @@
             // sexoBindingSource
             // 
             this.sexoBindingSource.DataSource = typeof(Models.Sexo);
-            // 
-            // data_nascimentoMaskedTextBox
-            // 
-            this.data_nascimentoMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.data_nascimentoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Data_nascimento", true));
-            this.data_nascimentoMaskedTextBox.Location = new System.Drawing.Point(431, 84);
-            this.data_nascimentoMaskedTextBox.Mask = "00/00/0000";
-            this.data_nascimentoMaskedTextBox.Name = "data_nascimentoMaskedTextBox";
-            this.data_nascimentoMaskedTextBox.ReadOnly = true;
-            this.data_nascimentoMaskedTextBox.Size = new System.Drawing.Size(100, 22);
-            this.data_nascimentoMaskedTextBox.TabIndex = 16;
-            this.data_nascimentoMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // FormBuscarCliente
             // 
@@ -567,6 +567,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Consulta de Clientes";
+            this.Load += new System.EventHandler(this.FormBuscarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

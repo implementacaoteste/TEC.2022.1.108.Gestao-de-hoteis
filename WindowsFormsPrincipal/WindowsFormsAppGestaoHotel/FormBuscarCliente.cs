@@ -18,19 +18,34 @@ namespace WindowsFormsPrincipal1
         {
             InitializeComponent();
         }
-
+        private void FormBuscarCliente_Load(object sender, EventArgs e)
+        {
+            radioButtonTodos.Checked = true;
+            clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+        }
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
         {
             try
             {
-                clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+                if (radioButtonTodos.Checked)
+                {
+                    textBoxBuscar.Clear();
+                    clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+                }
+                else if (radioButtonNome.Checked)
+                {
+                    clienteBindingSource.DataSource = new ClienteBLL().BuscaPorNome(textBoxBuscar.Text);
+                }
+                else if (radioButtonCPF.Checked) 
+                {
+                    clienteBindingSource.DataSource = new ClienteBLL().BuscaPorCPF(textBoxBuscar.Text);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void buttonAdicionarCliente_Click(object sender, EventArgs e)
         {
             using (FormCadastroCliente frm = new FormCadastroCliente())
@@ -38,7 +53,6 @@ namespace WindowsFormsPrincipal1
                 frm.ShowDialog();
             }
         }
-
         private void buttonExcluirCliente_Click(object sender, EventArgs e)
         {
             if (clienteBindingSource.Count <= 0)
@@ -56,8 +70,6 @@ namespace WindowsFormsPrincipal1
             clienteBindingSource.RemoveCurrent();
             MessageBox.Show("Usuário removido com sucesso");
         }
-
-
         private void buttonAlterarCliente_Click(object sender, EventArgs e)
         {
             if (clienteBindingSource.Count <= 0)
