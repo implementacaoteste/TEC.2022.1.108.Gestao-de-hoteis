@@ -167,10 +167,10 @@
             this.buttonSalvarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonSalvarFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvarFuncionario.Image")));
             this.buttonSalvarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvarFuncionario.Location = new System.Drawing.Point(716, 347);
+            this.buttonSalvarFuncionario.Location = new System.Drawing.Point(681, 346);
             this.buttonSalvarFuncionario.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvarFuncionario.Name = "buttonSalvarFuncionario";
-            this.buttonSalvarFuncionario.Size = new System.Drawing.Size(110, 35);
+            this.buttonSalvarFuncionario.Size = new System.Drawing.Size(130, 35);
             this.buttonSalvarFuncionario.TabIndex = 11;
             this.buttonSalvarFuncionario.Text = "Salvar";
             this.buttonSalvarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -183,11 +183,11 @@
             this.buttonCancelarCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonCancelarCadastro.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelarCadastro.Image")));
             this.buttonCancelarCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelarCadastro.Location = new System.Drawing.Point(848, 347);
+            this.buttonCancelarCadastro.Location = new System.Drawing.Point(828, 346);
             this.buttonCancelarCadastro.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCancelarCadastro.MinimumSize = new System.Drawing.Size(130, 35);
             this.buttonCancelarCadastro.Name = "buttonCancelarCadastro";
-            this.buttonCancelarCadastro.Size = new System.Drawing.Size(130, 35);
+            this.buttonCancelarCadastro.Size = new System.Drawing.Size(150, 35);
             this.buttonCancelarCadastro.TabIndex = 12;
             this.buttonCancelarCadastro.Text = "Cancelar";
             this.buttonCancelarCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -389,7 +389,7 @@
             this.MinimizeBox = false;
             this.Name = "FormCadastroDeFuncionario";
             this.Text = "HOTELOGIX - Cadastro de Funcionário";
-            this.Load += new System.EventHandler(this.FormCadastroDeFuncionario_Load_1);
+            this.Load += new System.EventHandler(this.FormCadastroDeFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
             this.ResumeLayout(false);
