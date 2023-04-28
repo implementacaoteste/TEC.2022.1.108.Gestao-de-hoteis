@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DALL
 {
@@ -107,8 +108,10 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
-                                    FROM CLIENTE WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT CLIENTE.ID, NOME, EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO, SEXO.SEXO
+                                    FROM CLIENTE
+                                    INNER JOIN SEXO ON CLIENTE.ID_SEXO = SEXO.ID
+                                    WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _CPF);
                 cn.Open();
@@ -119,6 +122,7 @@ namespace DALL
                     {
                         cliente.Id = Convert.ToInt32(rd["ID"]);
                         cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        cliente.Nome = rd["SEXO"].ToString();
                         cliente.Nome = rd["NOME"].ToString();
                         cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
@@ -147,8 +151,10 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
-                                    FROM CLIENTE WHERE NOME LIKE @Nome";
+                cmd.CommandText = @"SELECT CLIENTE.ID, NOME, EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO, SEXO.SEXO
+                                    FROM CLIENTE
+                                    INNER JOIN SEXO ON CLIENTE.ID_SEXO = SEXO.ID
+                                    WHERE NOME LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
                 cn.Open();
@@ -160,6 +166,7 @@ namespace DALL
                         cliente = new Cliente();
                         cliente.Id = Convert.ToInt32(rd["ID"]);
                         cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        cliente.Nome = rd["SEXO"].ToString();
                         cliente.Nome = rd["NOME"].ToString();
                         cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
@@ -188,8 +195,9 @@ namespace DALL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME,  EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO
-                                    FROM CLIENTE ";
+                cmd.CommandText = @"SELECT CLIENTE.ID, NOME, EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO, SEXO.SEXO
+                                    FROM CLIENTE                                    
+                                    INNER JOIN SEXO ON CLIENTE.ID_SEXO = SEXO.ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -200,6 +208,7 @@ namespace DALL
                         cliente = new Cliente();
                         cliente.Id = Convert.ToInt32(rd["ID"]);
                         cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
+                        cliente.Sexo = rd["SEXO"].ToString();
                         cliente.Nome = rd["NOME"].ToString();
                         cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
@@ -253,6 +262,38 @@ namespace DALL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar o ID no Banco de Dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public bool ValidarPermissao(int _idFuncionario, int _idPermissao)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 FROM PERMISSAO_GRUPO_FUNCIONARIO
+                                    INNER JOIN FUNCIONARIO_GRUPO_FUNCIONARIO ON PERMISSAO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO = FUNCIONARIO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO
+                                    WHERE FUNCIONARIO_GRUPO_FUNCIONARIO.ID_FUNCIONARIO = @IdFuncionario AND PERMISSAO_GRUPO_FUNCIONARIO.ID_PERMISSAO = @IdPermissao";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncionario", _idFuncionario);
+                cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar validar permissões do usuário no banco de dados.", ex);
             }
             finally
             {
