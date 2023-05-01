@@ -6,6 +6,7 @@ namespace Models
     {
         public static int IdLogado;
         public static string Nome;
+        public static string Cargo;
         public static string CPF;
         public static string Email;
         public static string Celular;

@@ -254,8 +254,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO, 
-                                    ENDERECO, CELULAR, ID_SEXO FROM FUNCIONARIO WHERE NOME_USUARIO LIKE @NomeUsuario";
+                cmd.CommandText = @"SELECT F.ID, F.NOME, F.NOME_USUARIO, GF.NOME_GRUPO, F.EMAIL ,F.SENHA ,F.CPF, F.ATIVO, 
+                                    F.DATA_NASCIMENTO,F.ENDERECO, F.CELULAR, F.ID_SEXO FROM FUNCIONARIO F
+                                    INNER JOIN FUNCIONARIO_GRUPO_FUNCIONARIO FGF ON F.ID = FGF.ID_FUNCIONARIO
+                                    INNER JOIN GRUPO_FUNCIONARIO GF ON FGF.ID_GRUPO_FUNCIONARIO = GF.ID
+                                    WHERE NOME_USUARIO LIKE @NomeUsuario";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@NomeUsuario", _nome);
@@ -268,6 +271,7 @@ namespace DAL
                         funcionario.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         funcionario.Nome = rd["NOME"].ToString();
                         funcionario.NomeUsuario = rd["NOME_USUARIO"].ToString();
+                        funcionario.CargoFuncionario = rd["NOME_GRUPO"].ToString();
                         funcionario.Email = rd["EMAIL"].ToString();
                         funcionario.CPF = rd["CPF"].ToString();
                         funcionario.Ativo = Convert.ToBoolean(rd["ATIVO"]);

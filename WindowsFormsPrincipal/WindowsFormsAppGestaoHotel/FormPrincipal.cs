@@ -34,6 +34,7 @@ namespace WindowsFormsPrincipal1
                     }
                 }
                 textBoxNomeUsuario.Text = Constante.NomeUsuario;
+                textBoxCargo.Text = Constante.Cargo;
             }
             catch (Exception ex)
             {
@@ -118,22 +119,6 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void LimparDados()
-        {
-            Constante.IdLogado = 0;
-            Constante.Nome = "lala";
-            Constante.CPF = null;
-            Constante.Email = null;
-            Constante.Celular = null;
-            Constante.Endereco = null;
-            Constante.NomeUsuario = null;
-            Constante.Data_nascimento = DateTime.MinValue;
-            Constante.Senha = null;
-            Constante.Ativo = false;
-            Constante.IdSexo = 0;
-            Constante.Sexo = null;
-        }
-
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FormSobre frm = new FormSobre())
@@ -215,19 +200,6 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void buttonSair_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Deseja realmente sair do seu usuário", "Cuidado", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                return;
-            }
-            new Logado().LimparDados();
-            using (FormLogin frm = new FormLogin())
-            {
-                frm.ShowDialog();
-            }
-        }
-
         private void pictureBoxUsu1_Click(object sender, EventArgs e)
         {
             if(pictureBoxUsu2.Visible)
@@ -238,6 +210,7 @@ namespace WindowsFormsPrincipal1
                 textBoxNomeUsuario.Visible = false;
                 pictureBoxUsu2.Visible = false;
                 pictureBoxfundo.Visible = false;
+                textBoxCargo.Visible = false;
             }
             else
             {
@@ -247,6 +220,7 @@ namespace WindowsFormsPrincipal1
                 textBoxNomeUsuario.Visible=true;
                 pictureBoxUsu2.Visible = true;
                 pictureBoxfundo.Visible = true;
+                textBoxCargo.Visible = true;
             }
             
         }
@@ -257,11 +231,23 @@ namespace WindowsFormsPrincipal1
             {
                 return;
             }
-            new Logado().LimparDados();
-            using (FormLogin frm = new FormLogin())
-            {
-                frm.ShowDialog();
-            }
+            LimparDados();
+            Application.Restart();
+        }
+        private void LimparDados()
+        {
+            Constante.IdLogado = 0;
+            Constante.Nome = null;
+            Constante.CPF = null;
+            Constante.Email = null;
+            Constante.Celular = null;
+            Constante.Endereco = null;
+            Constante.NomeUsuario = null;
+            Constante.Data_nascimento = DateTime.MinValue;
+            Constante.Senha = null;
+            Constante.Ativo = false;
+            Constante.IdSexo = 0;
+            Constante.Sexo = null;
         }
 
         private void pictureBoxUsu2_Click(object sender, EventArgs e)
@@ -274,6 +260,7 @@ namespace WindowsFormsPrincipal1
                 textBoxNomeUsuario.Visible = false;
                 pictureBoxUsu2.Visible = false;
                 pictureBoxfundo.Visible = false;
+                textBoxCargo.Visible = false;
             }
             else
             {
@@ -283,6 +270,7 @@ namespace WindowsFormsPrincipal1
                 textBoxNomeUsuario.Visible = true;
                 pictureBoxUsu2.Visible = true;
                 pictureBoxfundo.Visible = true;
+                textBoxCargo.Visible = true;
             }
         }
 

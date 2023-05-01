@@ -12,6 +12,7 @@ namespace Models
         public string Celular { get; set; }
         public string Endereco { get; set; }
         public string NomeUsuario { get; set; }
+        public string CargoFuncionario { get; set; }
         public DateTime Data_nascimento { get; set; }
         public string Senha { get; set; }
         public bool Ativo { get; set; }
