@@ -43,6 +43,11 @@
             this.textBoxDt_En = new System.Windows.Forms.TextBox();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.quartosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.data_EntradaTextBox = new System.Windows.Forms.TextBox();
             this.id_clienteTextBox = new System.Windows.Forms.TextBox();
@@ -55,7 +60,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.diariaDataGridView = new System.Windows.Forms.DataGridView();
-            this.buttonBuscar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,16 +69,12 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonExcluirQuarto = new System.Windows.Forms.Button();
             this.buttonADCquarto = new System.Windows.Forms.Button();
             this.buttonExcluirDiaria = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonADCDiaria = new System.Windows.Forms.Button();
-            this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idLabel = new System.Windows.Forms.Label();
             data_EntradaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -83,9 +83,9 @@
             descricaoLabel = new System.Windows.Forms.Label();
             valor_DiariaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.quartosDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diariaDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diariaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -234,6 +234,42 @@
             this.quartosDataGridView.Size = new System.Drawing.Size(428, 145);
             this.quartosDataGridView.TabIndex = 7;
             // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Numero";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Número";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Valor_Diaria";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Valor da Diária";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // quartosBindingSource
+            // 
+            this.quartosBindingSource.DataMember = "Quartos";
+            this.quartosBindingSource.DataSource = this.diariaBindingSource;
+            // 
+            // diariaBindingSource
+            // 
+            this.diariaBindingSource.DataSource = typeof(Models.Diaria);
+            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id", true));
@@ -375,21 +411,6 @@
             this.diariaDataGridView.Size = new System.Drawing.Size(583, 145);
             this.diariaDataGridView.TabIndex = 30;
             // 
-            // buttonBuscar
-            // 
-            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search;
-            this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(206, 98);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(89, 33);
-            this.buttonBuscar.TabIndex = 3;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBuscar.UseVisualStyleBackColor = true;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -474,9 +495,20 @@
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 120;
             // 
-            // diariaBindingSource
+            // buttonBuscar
             // 
-            this.diariaBindingSource.DataSource = typeof(Models.Diaria);
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search;
+            this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscar.Location = new System.Drawing.Point(206, 98);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(89, 33);
+            this.buttonBuscar.TabIndex = 3;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // buttonExcluirQuarto
             // 
@@ -558,38 +590,6 @@
             this.buttonADCDiaria.UseVisualStyleBackColor = true;
             this.buttonADCDiaria.Click += new System.EventHandler(this.buttonADCDiaria_Click);
             // 
-            // quartosBindingSource
-            // 
-            this.quartosBindingSource.DataMember = "Quartos";
-            this.quartosBindingSource.DataSource = this.diariaBindingSource;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Numero";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Número";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Descricao";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Valor_Diaria";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Valor da Diária";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
             // FormBuscarDiaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -635,9 +635,9 @@
             this.Text = "Form Buscar de Diária";
             this.Load += new System.EventHandler(this.FormBuscarDiaria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.quartosDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diariaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diariaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

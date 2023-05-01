@@ -116,17 +116,21 @@ namespace WindowsFormsAppGestaoHotel
                     MessageBox.Show("Selecione uma opção para ser alterada");
                     return;
                 }
-                int id= ((Diaria)diariaBindingSource.Current).Id;
-                using (FormCadastroDiaria frm = new FormCadastroDiaria())
+                else
                 {
-                    frm.ShowDialog();
-                }
-                buttonBuscar_Click(null, null);
+                    int id = ((Diaria)diariaBindingSource.Current).Id;
+                    using (FormCadastroDiaria frm = new FormCadastroDiaria())
+                    {
+                        frm.ShowDialog();
+                    }
+                    buttonBuscar_Click(null, null);
+                }                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
         
     }

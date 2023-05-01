@@ -286,5 +286,12 @@ namespace WindowsFormsPrincipal1
             }
         }
 
+        private void diáriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroDiaria frm = new FormCadastroDiaria())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

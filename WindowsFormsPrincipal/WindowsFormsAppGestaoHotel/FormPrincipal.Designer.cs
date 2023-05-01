@@ -51,6 +51,7 @@
             this.pictureBoxfundo = new System.Windows.Forms.PictureBox();
             this.pictureBoxUsu1 = new System.Windows.Forms.PictureBox();
             this.textBoxCargo = new System.Windows.Forms.TextBox();
+            this.diáriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).BeginInit();
@@ -83,6 +84,7 @@
             this.cadastroToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
+            this.diáriaToolStripMenuItem,
             this.funcionarioToolStripMenuItem,
             this.grupoFuncionarioToolStripMenuItem1,
             this.quartoToolStripMenuItem1});
@@ -228,7 +230,7 @@
             this.textBoxNomeUsuario.BackColor = System.Drawing.Color.PowderBlue;
             this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNomeUsuario.Location = new System.Drawing.Point(748, 93);
-            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomeUsuario.Multiline = true;
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
             this.textBoxNomeUsuario.ReadOnly = true;
@@ -242,7 +244,7 @@
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
             this.pictureBoxSair.Location = new System.Drawing.Point(796, 165);
-            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSair.Name = "pictureBoxSair";
             this.pictureBoxSair.Size = new System.Drawing.Size(30, 30);
             this.pictureBoxSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,7 +259,7 @@
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
             this.pictureBoxUsu2.Location = new System.Drawing.Point(787, 40);
-            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
             this.pictureBoxUsu2.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxUsu2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,7 +285,7 @@
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
             this.pictureBoxUsu1.Location = new System.Drawing.Point(787, 40);
-            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
             this.pictureBoxUsu1.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxUsu1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -306,6 +308,14 @@
             this.textBoxCargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxCargo.Visible = false;
             // 
+            // diáriaToolStripMenuItem
+            // 
+            this.diáriaToolStripMenuItem.Name = "diáriaToolStripMenuItem";
+            this.diáriaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.diáriaToolStripMenuItem.Size = new System.Drawing.Size(301, 28);
+            this.diáriaToolStripMenuItem.Text = "Diária";
+            this.diáriaToolStripMenuItem.Click += new System.EventHandler(this.diáriaToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,7 +335,7 @@
             this.Controls.Add(this.pictureBoxCaixaLogin2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(900, 600);
             this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "FormPrincipal";
@@ -378,5 +388,6 @@
         private System.Windows.Forms.PictureBox pictureBoxfundo;
         private System.Windows.Forms.PictureBox pictureBoxUsu1;
         private System.Windows.Forms.TextBox textBoxCargo;
+        private System.Windows.Forms.ToolStripMenuItem diáriaToolStripMenuItem;
     }
 }
