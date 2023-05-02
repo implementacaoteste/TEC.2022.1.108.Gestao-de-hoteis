@@ -18,9 +18,8 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO QUARTO(NUMERO,DESCRICAO,VALOR_DIARIA)
-                                      VALUES(@Numero, @Descricao, @Valor_Diaria)";
-
+                cmd.CommandText = @"INSERT INTO QUARTO (NUMERO, DESCRICAO, VALOR_DIARIA)
+                                    VALUES(@Numero, @Descricao, @Valor_Diaria)";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Numero", _quarto.Numero);
                 cmd.Parameters.AddWithValue("@Descricao", _quarto.Descricao);
@@ -32,7 +31,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um quarto no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir um Quarto no Banco de Dados.", ex);
             }
             finally
             {
@@ -45,14 +44,12 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE QUARTO SET NUMERO= @Numero,DESCRICAO= @Descricao,VALOR_DIARIA = @Valor_Diaria
-                                        Where ID= @ID";
-
+                cmd.CommandText = @"UPDATE QUARTO SET NUMERO = @Numero, DESCRICAO = @Descricao, VALOR_DIARIA = @Valor_Diaria
+                                        WHERE ID= @ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Numero", _quarto.Numero);
                 cmd.Parameters.AddWithValue("@Descricao", _quarto.Descricao);
                 cmd.Parameters.AddWithValue("@Valor_Diaria", _quarto.Valor_Diaria);
-                cmd.Connection = cn;
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -170,6 +167,11 @@ namespace DAL
 
         }
         public bool ValidarPermissao(int idLogado, int idPermissao)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal List<Quarto> BuscarPorIdDiaria(int id)
         {
             throw new NotImplementedException();
         }
