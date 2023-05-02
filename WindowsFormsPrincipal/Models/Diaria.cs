@@ -14,7 +14,7 @@ namespace Models
         public int Id_Pagamento { get; set; }
         public string Nome_Cliente { get; set; }
         public string CPF_Cliente { get; set; }
-        public float Valor_Total { get; set; }
+        public double Valor_Total { get; set; }
         public DateTime Data_Entrada { get; set; }
         public DateTime Data_Saida { get; set; }
         public List<Quarto> Quartos { get; set; }
