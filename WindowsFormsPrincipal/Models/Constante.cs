@@ -2,8 +2,9 @@
 
 namespace Models
 {
-    public class Constante
+    public static class Constante
     {
+        // Dados do funcionario logado
         public static int IdLogado;
         public static string Nome;
         public static string Cargo;
