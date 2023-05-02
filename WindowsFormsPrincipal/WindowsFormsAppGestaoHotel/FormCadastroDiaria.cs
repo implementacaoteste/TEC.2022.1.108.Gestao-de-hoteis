@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsPrincipal1;
 using Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsAppGestaoHotel
 {
@@ -25,9 +26,17 @@ namespace WindowsFormsAppGestaoHotel
 
         private void FormCadastroDiaria_Load(object sender, EventArgs e)
         {
+            if (Id == 0)
+                diariaBindingSource.AddNew();
+            else
+            {
+                tituloLabel.Text = "Editar Diária";
+                diariaBindingSource.DataSource = new DiariaBLL().BuscarPorId(Id);
+            }
 
+            //sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
+            //comboBox1.Text = ((Funcionario)funcionarioBindingSource.Current).Sexo;
         }
-
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();

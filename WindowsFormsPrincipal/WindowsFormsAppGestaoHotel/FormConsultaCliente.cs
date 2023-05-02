@@ -29,7 +29,7 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                clienteBindingSource.DataSource = new ClienteBLL().BuscaPorNome(textBoxBuscar.Text);
+                clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
             }
             catch (Exception ex)
             {

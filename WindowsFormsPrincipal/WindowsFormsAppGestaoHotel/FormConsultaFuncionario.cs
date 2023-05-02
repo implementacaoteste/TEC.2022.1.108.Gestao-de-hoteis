@@ -41,11 +41,14 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 if (funcionarioBindingSource.Count > 0)
-                    Id = ((Funcionario)funcionarioBindingSource.Current).Id;
+                {
+                    Id = ((Permissao)funcionarioBindingSource.Current).Id;
+                    Close();
+                }
                 else
-                    MessageBox.Show("Não existe registro para ser Selecionado");
+                    MessageBox.Show("Não existe registro para ser selecionado");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
