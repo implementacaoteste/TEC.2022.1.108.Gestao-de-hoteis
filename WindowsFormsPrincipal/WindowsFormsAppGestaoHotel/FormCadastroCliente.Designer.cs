@@ -161,7 +161,8 @@
             this.generoComboBox.MinimumSize = new System.Drawing.Size(130, 0);
             this.generoComboBox.Name = "generoComboBox";
             this.generoComboBox.Size = new System.Drawing.Size(145, 30);
-            this.generoComboBox.TabIndex = 59;
+            this.generoComboBox.TabIndex = 4;
+            this.generoComboBox.Text = "SELECIONAR";
             this.generoComboBox.ValueMember = "Id";
             // 
             // buttonCancelarCadastroCliente
@@ -171,11 +172,11 @@
             this.buttonCancelarCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonCancelarCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelarCadastroCliente.Image")));
             this.buttonCancelarCadastroCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelarCadastroCliente.Location = new System.Drawing.Point(817, 316);
+            this.buttonCancelarCadastroCliente.Location = new System.Drawing.Point(802, 314);
             this.buttonCancelarCadastroCliente.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCancelarCadastroCliente.Name = "buttonCancelarCadastroCliente";
-            this.buttonCancelarCadastroCliente.Size = new System.Drawing.Size(130, 38);
-            this.buttonCancelarCadastroCliente.TabIndex = 66;
+            this.buttonCancelarCadastroCliente.Size = new System.Drawing.Size(145, 40);
+            this.buttonCancelarCadastroCliente.TabIndex = 8;
             this.buttonCancelarCadastroCliente.Text = "Cancelar";
             this.buttonCancelarCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelarCadastroCliente.UseVisualStyleBackColor = true;
@@ -188,11 +189,11 @@
             this.buttonSalvarCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonSalvarCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvarCadastroCliente.Image")));
             this.buttonSalvarCadastroCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvarCadastroCliente.Location = new System.Drawing.Point(690, 316);
+            this.buttonSalvarCadastroCliente.Location = new System.Drawing.Point(651, 314);
             this.buttonSalvarCadastroCliente.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvarCadastroCliente.Name = "buttonSalvarCadastroCliente";
-            this.buttonSalvarCadastroCliente.Size = new System.Drawing.Size(110, 38);
-            this.buttonSalvarCadastroCliente.TabIndex = 65;
+            this.buttonSalvarCadastroCliente.Size = new System.Drawing.Size(135, 40);
+            this.buttonSalvarCadastroCliente.TabIndex = 7;
             this.buttonSalvarCadastroCliente.Text = "Salvar";
             this.buttonSalvarCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvarCadastroCliente.UseVisualStyleBackColor = true;
@@ -207,7 +208,7 @@
             this.cPFMaskedTextBox.Mask = "000,000,000-00";
             this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
             this.cPFMaskedTextBox.Size = new System.Drawing.Size(170, 30);
-            this.cPFMaskedTextBox.TabIndex = 67;
+            this.cPFMaskedTextBox.TabIndex = 1;
             // 
             // celularMaskedTextBox
             // 
@@ -218,7 +219,7 @@
             this.celularMaskedTextBox.Mask = "(99) 00000-0000";
             this.celularMaskedTextBox.Name = "celularMaskedTextBox";
             this.celularMaskedTextBox.Size = new System.Drawing.Size(170, 30);
-            this.celularMaskedTextBox.TabIndex = 68;
+            this.celularMaskedTextBox.TabIndex = 2;
             // 
             // data_nascimentoDateTimePicker
             // 
@@ -228,7 +229,7 @@
             this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(740, 151);
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(207, 30);
-            this.data_nascimentoDateTimePicker.TabIndex = 69;
+            this.data_nascimentoDateTimePicker.TabIndex = 3;
             // 
             // emailTextBox1
             // 
@@ -238,7 +239,7 @@
             this.emailTextBox1.Location = new System.Drawing.Point(582, 242);
             this.emailTextBox1.Name = "emailTextBox1";
             this.emailTextBox1.Size = new System.Drawing.Size(365, 30);
-            this.emailTextBox1.TabIndex = 70;
+            this.emailTextBox1.TabIndex = 6;
             // 
             // enderecoTextBox1
             // 
@@ -248,7 +249,7 @@
             this.enderecoTextBox1.Location = new System.Drawing.Point(187, 242);
             this.enderecoTextBox1.Name = "enderecoTextBox1";
             this.enderecoTextBox1.Size = new System.Drawing.Size(385, 30);
-            this.enderecoTextBox1.TabIndex = 71;
+            this.enderecoTextBox1.TabIndex = 5;
             // 
             // nomeTextBox1
             // 
@@ -258,7 +259,7 @@
             this.nomeTextBox1.Location = new System.Drawing.Point(30, 151);
             this.nomeTextBox1.Name = "nomeTextBox1";
             this.nomeTextBox1.Size = new System.Drawing.Size(350, 30);
-            this.nomeTextBox1.TabIndex = 72;
+            this.nomeTextBox1.TabIndex = 0;
             // 
             // FormCadastroCliente
             // 
