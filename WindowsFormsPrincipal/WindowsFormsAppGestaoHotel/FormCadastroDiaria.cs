@@ -44,9 +44,24 @@ namespace WindowsFormsAppGestaoHotel
 
         private void buttonSelecionarFuncionario_Click(object sender, EventArgs e)
         {
-            using(FormConsultaFuncionario frm = new FormConsultaFuncionario())
+           
+            try
             {
-                frm.ShowDialog();
+                using (FormConsultaFuncionario frm = new FormConsultaFuncionario())
+                {
+                    frm.ShowDialog();
+
+                    if (frm.Id != 0)
+                    {
+                        int idUsuario = ((Funcionario)funcionarioBindingSource.Current).Id;
+                        new FuncionarioBLL().AdicionarGrupoUsuario(idUsuario, frm.Id);
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void buttonSelecionarPagamento_Click(object sender, EventArgs e)
