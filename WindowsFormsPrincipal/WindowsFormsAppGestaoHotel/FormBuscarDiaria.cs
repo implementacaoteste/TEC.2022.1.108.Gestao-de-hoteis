@@ -136,10 +136,5 @@ namespace WindowsFormsAppGestaoHotel
 
             MessageBox.Show("Registro excluido com sucesso!");
         }
-
-        private void buttonBuscar_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -178,9 +178,9 @@
             this.groupBox1.Controls.Add(this.buttonBuscarCliente);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 9);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(350, 82);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
@@ -193,7 +193,7 @@
             this.radioButtonTodos.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radioButtonTodos.Location = new System.Drawing.Point(4, 18);
-            this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonTodos.Name = "radioButtonTodos";
             this.radioButtonTodos.Size = new System.Drawing.Size(81, 25);
             this.radioButtonTodos.TabIndex = 2;
@@ -207,7 +207,7 @@
             this.radioButtonCPF.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radioButtonCPF.Location = new System.Drawing.Point(159, 17);
-            this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCPF.Name = "radioButtonCPF";
             this.radioButtonCPF.Size = new System.Drawing.Size(68, 25);
             this.radioButtonCPF.TabIndex = 2;
@@ -221,7 +221,7 @@
             this.radioButtonNome.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radioButtonNome.Location = new System.Drawing.Point(89, 17);
-            this.radioButtonNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonNome.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonNome.Name = "radioButtonNome";
             this.radioButtonNome.Size = new System.Drawing.Size(79, 25);
             this.radioButtonNome.TabIndex = 2;
@@ -234,7 +234,7 @@
             this.textBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxBuscar.Location = new System.Drawing.Point(4, 50);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(223, 28);
             this.textBoxBuscar.TabIndex = 1;
@@ -247,7 +247,7 @@
             this.buttonBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarCliente.Image")));
             this.buttonBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBuscarCliente.Location = new System.Drawing.Point(237, 45);
-            this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonBuscarCliente.Name = "buttonBuscarCliente";
             this.buttonBuscarCliente.Size = new System.Drawing.Size(109, 32);
@@ -262,9 +262,9 @@
             this.groupBox2.Controls.Add(this.funcionarioDataGridView);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.groupBox2.Location = new System.Drawing.Point(13, 110);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(409, 240);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
@@ -291,7 +291,7 @@
             this.funcionarioDataGridView.DataSource = this.clienteBindingSource;
             this.funcionarioDataGridView.GridColor = System.Drawing.SystemColors.ControlLight;
             this.funcionarioDataGridView.Location = new System.Drawing.Point(4, 17);
-            this.funcionarioDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.funcionarioDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.funcionarioDataGridView.Name = "funcionarioDataGridView";
             this.funcionarioDataGridView.ReadOnly = true;
             this.funcionarioDataGridView.RowHeadersVisible = false;
@@ -407,9 +407,9 @@
             this.groupBox4.Controls.Add(cPFLabel);
             this.groupBox4.Controls.Add(nomeLabel);
             this.groupBox4.Location = new System.Drawing.Point(13, 369);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(409, 172);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
@@ -420,7 +420,7 @@
             this.data_nascimentoMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.data_nascimentoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Data_nascimento", true));
             this.data_nascimentoMaskedTextBox.Location = new System.Drawing.Point(323, 68);
-            this.data_nascimentoMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_nascimentoMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.data_nascimentoMaskedTextBox.Mask = "00/00/0000";
             this.data_nascimentoMaskedTextBox.Name = "data_nascimentoMaskedTextBox";
             this.data_nascimentoMaskedTextBox.ReadOnly = true;
@@ -433,7 +433,7 @@
             this.idSexoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idSexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Sexo", true));
             this.idSexoTextBox.Location = new System.Drawing.Point(323, 45);
-            this.idSexoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idSexoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idSexoTextBox.Name = "idSexoTextBox";
             this.idSexoTextBox.ReadOnly = true;
             this.idSexoTextBox.Size = new System.Drawing.Size(76, 20);
@@ -444,7 +444,7 @@
             this.nomeTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
             this.nomeTextBox1.Location = new System.Drawing.Point(66, 45);
-            this.nomeTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox1.Name = "nomeTextBox1";
             this.nomeTextBox1.ReadOnly = true;
             this.nomeTextBox1.Size = new System.Drawing.Size(188, 20);
@@ -455,7 +455,7 @@
             this.cPFMaskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cPFMaskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
             this.cPFMaskedTextBox1.Location = new System.Drawing.Point(66, 68);
-            this.cPFMaskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cPFMaskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.cPFMaskedTextBox1.Mask = "000,000,000-00";
             this.cPFMaskedTextBox1.Name = "cPFMaskedTextBox1";
             this.cPFMaskedTextBox1.ReadOnly = true;
@@ -467,7 +467,7 @@
             this.emailTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Email", true));
             this.emailTextBox1.Location = new System.Drawing.Point(66, 119);
-            this.emailTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.emailTextBox1.Name = "emailTextBox1";
             this.emailTextBox1.ReadOnly = true;
             this.emailTextBox1.Size = new System.Drawing.Size(334, 20);
@@ -478,7 +478,7 @@
             this.enderecoTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.enderecoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
             this.enderecoTextBox1.Location = new System.Drawing.Point(66, 93);
-            this.enderecoTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enderecoTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.enderecoTextBox1.Name = "enderecoTextBox1";
             this.enderecoTextBox1.ReadOnly = true;
             this.enderecoTextBox1.Size = new System.Drawing.Size(334, 20);
@@ -489,7 +489,7 @@
             this.idTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Id", true));
             this.idTextBox1.Location = new System.Drawing.Point(66, 21);
-            this.idTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox1.Name = "idTextBox1";
             this.idTextBox1.ReadOnly = true;
             this.idTextBox1.Size = new System.Drawing.Size(38, 20);
@@ -500,7 +500,7 @@
             this.celularMaskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.celularMaskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Celular", true));
             this.celularMaskedTextBox1.Location = new System.Drawing.Point(66, 141);
-            this.celularMaskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.celularMaskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.celularMaskedTextBox1.Mask = "(99) 00000-0000";
             this.celularMaskedTextBox1.Name = "celularMaskedTextBox1";
             this.celularMaskedTextBox1.ReadOnly = true;
@@ -515,7 +515,7 @@
             this.buttonAlterarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarCliente.Image")));
             this.buttonAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAlterarCliente.Location = new System.Drawing.Point(134, 575);
-            this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterarCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonAlterarCliente.Name = "buttonAlterarCliente";
             this.buttonAlterarCliente.Size = new System.Drawing.Size(109, 32);
@@ -533,7 +533,7 @@
             this.buttonExcluirCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirCliente.Image")));
             this.buttonExcluirCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExcluirCliente.Location = new System.Drawing.Point(254, 575);
-            this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonExcluirCliente.Name = "buttonExcluirCliente";
             this.buttonExcluirCliente.Size = new System.Drawing.Size(109, 32);
@@ -551,7 +551,7 @@
             this.buttonAdicionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarCliente.Image")));
             this.buttonAdicionarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAdicionarCliente.Location = new System.Drawing.Point(13, 575);
-            this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
             this.buttonAdicionarCliente.Size = new System.Drawing.Size(109, 32);

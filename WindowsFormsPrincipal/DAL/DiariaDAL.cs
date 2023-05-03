@@ -150,9 +150,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, VALOR_TOTAL, ID_CLIENTE, ID_FUNCIONARIO, 
-                                    ID_PAGAMENTO, DATA_ENTRADA, DATA_SAIDA
-                                    FROM DIARIA";
+                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
+                                    D.ID_FUNCIONARIO, D.ID_PAGAMENTO, D.DATA_SAIDA, D.DATA_ENTRADA
+                                    FROM DIARIA D
+                                    INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -163,12 +164,14 @@ namespace DAL
                         diaria = new Diaria();
                         diaria.Id = Convert.ToInt32(rd["ID"]);
                         diaria.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
+                        diaria.Nome_Cliente = rd["NOME"].ToString();
+                        diaria.CPF_Cliente = rd["CPF"].ToString();
                         diaria.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
                         diaria.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         diaria.Valor_Total = (double)rd["VALOR_TOTAL"];
                         diaria.Data_Entrada = Convert.ToDateTime(rd["DATA_ENTRADA"]);
                         diaria.Data_Saida = Convert.ToDateTime(rd["DATA_SAIDA"]);
-                        diaria.Quartos = new QuartoDAL().BuscarPorIdDiaria(diaria.Id);
+                        //diaria.Quartos = new QuartoDAL().BuscarPorIdDiaria(diaria.Id);
                         diarias.Add(diaria);
                     }
                 }
@@ -250,7 +253,7 @@ namespace DAL
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (rd.Read())
+                    while(rd.Read())
                     {
                         diaria = new Diaria();
                         diaria.Id = Convert.ToInt32(rd["ID"]);

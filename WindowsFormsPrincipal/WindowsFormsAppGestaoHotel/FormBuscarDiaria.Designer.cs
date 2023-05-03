@@ -54,6 +54,13 @@
             this.numeroTextBox = new System.Windows.Forms.TextBox();
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.diariaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonExcluirQuarto = new System.Windows.Forms.Button();
             this.buttonADCquarto = new System.Windows.Forms.Button();
             this.buttonExcluirDiaria = new System.Windows.Forms.Button();
@@ -79,13 +86,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.buttonBuscarData = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idLabel = new System.Windows.Forms.Label();
             data_EntradaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -244,7 +244,7 @@
             this.dataGridViewTextBoxColumn10});
             this.quartosDataGridView.DataSource = this.quartosBindingSource;
             this.quartosDataGridView.Location = new System.Drawing.Point(4, 16);
-            this.quartosDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quartosDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.quartosDataGridView.Name = "quartosDataGridView";
             this.quartosDataGridView.ReadOnly = true;
             this.quartosDataGridView.RowHeadersVisible = false;
@@ -294,7 +294,7 @@
             this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(84, 25);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(38, 20);
@@ -305,7 +305,7 @@
             this.id_clienteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id_cliente", true));
             this.id_clienteTextBox.Location = new System.Drawing.Point(84, 50);
-            this.id_clienteTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id_clienteTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_clienteTextBox.Name = "id_clienteTextBox";
             this.id_clienteTextBox.ReadOnly = true;
             this.id_clienteTextBox.Size = new System.Drawing.Size(113, 20);
@@ -316,7 +316,7 @@
             this.id_funcionarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.id_funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id_funcionario", true));
             this.id_funcionarioTextBox.Location = new System.Drawing.Point(84, 76);
-            this.id_funcionarioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id_funcionarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_funcionarioTextBox.Name = "id_funcionarioTextBox";
             this.id_funcionarioTextBox.ReadOnly = true;
             this.id_funcionarioTextBox.Size = new System.Drawing.Size(113, 20);
@@ -327,7 +327,7 @@
             this.numeroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Numero", true));
             this.numeroTextBox.Location = new System.Drawing.Point(88, 47);
-            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.ReadOnly = true;
             this.numeroTextBox.Size = new System.Drawing.Size(38, 20);
@@ -338,7 +338,7 @@
             this.descricaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Descricao", true));
             this.descricaoTextBox.Location = new System.Drawing.Point(88, 70);
-            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.ReadOnly = true;
@@ -363,7 +363,7 @@
             this.dataGridViewTextBoxColumn11});
             this.diariaDataGridView.DataSource = this.diariaBindingSource;
             this.diariaDataGridView.Location = new System.Drawing.Point(4, 16);
-            this.diariaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.diariaDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.diariaDataGridView.Name = "diariaDataGridView";
             this.diariaDataGridView.ReadOnly = true;
             this.diariaDataGridView.RowHeadersVisible = false;
@@ -371,384 +371,6 @@
             this.diariaDataGridView.RowTemplate.Height = 24;
             this.diariaDataGridView.Size = new System.Drawing.Size(563, 222);
             this.diariaDataGridView.TabIndex = 30;
-            // 
-            // buttonExcluirQuarto
-            // 
-            this.buttonExcluirQuarto.BackColor = System.Drawing.Color.White;
-            this.buttonExcluirQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcluirQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonExcluirQuarto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonExcluirQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirQuarto.Image")));
-            this.buttonExcluirQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirQuarto.Location = new System.Drawing.Point(822, 600);
-            this.buttonExcluirQuarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonExcluirQuarto.Name = "buttonExcluirQuarto";
-            this.buttonExcluirQuarto.Size = new System.Drawing.Size(106, 33);
-            this.buttonExcluirQuarto.TabIndex = 24;
-            this.buttonExcluirQuarto.Text = "Excluir";
-            this.buttonExcluirQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExcluirQuarto.UseVisualStyleBackColor = false;
-            this.buttonExcluirQuarto.Click += new System.EventHandler(this.buttonExcluirQuarto_Click);
-            // 
-            // buttonADCquarto
-            // 
-            this.buttonADCquarto.BackColor = System.Drawing.Color.White;
-            this.buttonADCquarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonADCquarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonADCquarto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonADCquarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonADCquarto.Image")));
-            this.buttonADCquarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonADCquarto.Location = new System.Drawing.Point(690, 600);
-            this.buttonADCquarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonADCquarto.Name = "buttonADCquarto";
-            this.buttonADCquarto.Size = new System.Drawing.Size(128, 33);
-            this.buttonADCquarto.TabIndex = 24;
-            this.buttonADCquarto.Text = "Adicionar";
-            this.buttonADCquarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonADCquarto.UseVisualStyleBackColor = false;
-            this.buttonADCquarto.Click += new System.EventHandler(this.buttonAdicionarQuarto_Click);
-            // 
-            // buttonExcluirDiaria
-            // 
-            this.buttonExcluirDiaria.BackColor = System.Drawing.Color.White;
-            this.buttonExcluirDiaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcluirDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonExcluirDiaria.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonExcluirDiaria.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirDiaria.Image")));
-            this.buttonExcluirDiaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirDiaria.Location = new System.Drawing.Point(252, 600);
-            this.buttonExcluirDiaria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonExcluirDiaria.MinimumSize = new System.Drawing.Size(109, 32);
-            this.buttonExcluirDiaria.Name = "buttonExcluirDiaria";
-            this.buttonExcluirDiaria.Size = new System.Drawing.Size(109, 32);
-            this.buttonExcluirDiaria.TabIndex = 24;
-            this.buttonExcluirDiaria.Text = "Excluir";
-            this.buttonExcluirDiaria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExcluirDiaria.UseVisualStyleBackColor = false;
-            this.buttonExcluirDiaria.Click += new System.EventHandler(this.buttonExcluirDiaria_Click);
-            // 
-            // buttonAlterarDiaria
-            // 
-            this.buttonAlterarDiaria.BackColor = System.Drawing.Color.White;
-            this.buttonAlterarDiaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAlterarDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonAlterarDiaria.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAlterarDiaria.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.edit;
-            this.buttonAlterarDiaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarDiaria.Location = new System.Drawing.Point(139, 600);
-            this.buttonAlterarDiaria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonAlterarDiaria.MinimumSize = new System.Drawing.Size(109, 32);
-            this.buttonAlterarDiaria.Name = "buttonAlterarDiaria";
-            this.buttonAlterarDiaria.Size = new System.Drawing.Size(109, 32);
-            this.buttonAlterarDiaria.TabIndex = 24;
-            this.buttonAlterarDiaria.Text = "Alterar";
-            this.buttonAlterarDiaria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAlterarDiaria.UseVisualStyleBackColor = false;
-            this.buttonAlterarDiaria.Click += new System.EventHandler(this.buttonAlterarDiaria_Click);
-            // 
-            // buttonAdicionarDiaria
-            // 
-            this.buttonAdicionarDiaria.BackColor = System.Drawing.Color.White;
-            this.buttonAdicionarDiaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdicionarDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonAdicionarDiaria.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAdicionarDiaria.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarDiaria.Image")));
-            this.buttonAdicionarDiaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdicionarDiaria.Location = new System.Drawing.Point(9, 600);
-            this.buttonAdicionarDiaria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonAdicionarDiaria.MinimumSize = new System.Drawing.Size(109, 32);
-            this.buttonAdicionarDiaria.Name = "buttonAdicionarDiaria";
-            this.buttonAdicionarDiaria.Size = new System.Drawing.Size(126, 32);
-            this.buttonAdicionarDiaria.TabIndex = 24;
-            this.buttonAdicionarDiaria.Text = "Adicionar";
-            this.buttonAdicionarDiaria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAdicionarDiaria.UseVisualStyleBackColor = false;
-            this.buttonAdicionarDiaria.Click += new System.EventHandler(this.buttonAdicionarDiaria_Click);
-            // 
-            // groupBoxDiaria
-            // 
-            this.groupBoxDiaria.Controls.Add(data_SaidaLabel);
-            this.groupBoxDiaria.Controls.Add(this.data_SaidaMaskedTextBox);
-            this.groupBoxDiaria.Controls.Add(cpf_ClienteLabel);
-            this.groupBoxDiaria.Controls.Add(this.cpf_ClienteMaskedTextBox);
-            this.groupBoxDiaria.Controls.Add(this.data_EntradaMaskedTextBox);
-            this.groupBoxDiaria.Controls.Add(idLabel);
-            this.groupBoxDiaria.Controls.Add(this.idTextBox);
-            this.groupBoxDiaria.Controls.Add(data_EntradaLabel);
-            this.groupBoxDiaria.Controls.Add(this.id_clienteTextBox);
-            this.groupBoxDiaria.Controls.Add(id_clienteLabel);
-            this.groupBoxDiaria.Controls.Add(this.id_funcionarioTextBox);
-            this.groupBoxDiaria.Controls.Add(id_funcionarioLabel);
-            this.groupBoxDiaria.Location = new System.Drawing.Point(9, 375);
-            this.groupBoxDiaria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxDiaria.Name = "groupBoxDiaria";
-            this.groupBoxDiaria.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxDiaria.Size = new System.Drawing.Size(386, 126);
-            this.groupBoxDiaria.TabIndex = 31;
-            this.groupBoxDiaria.TabStop = false;
-            this.groupBoxDiaria.Text = "Dados da Diária";
-            // 
-            // data_SaidaMaskedTextBox
-            // 
-            this.data_SaidaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.data_SaidaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Data_Saida", true));
-            this.data_SaidaMaskedTextBox.Location = new System.Drawing.Point(239, 102);
-            this.data_SaidaMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.data_SaidaMaskedTextBox.Mask = "00/00/0000";
-            this.data_SaidaMaskedTextBox.Name = "data_SaidaMaskedTextBox";
-            this.data_SaidaMaskedTextBox.ReadOnly = true;
-            this.data_SaidaMaskedTextBox.Size = new System.Drawing.Size(76, 20);
-            this.data_SaidaMaskedTextBox.TabIndex = 33;
-            this.data_SaidaMaskedTextBox.ValidatingType = typeof(System.DateTime);
-            // 
-            // cpf_ClienteMaskedTextBox
-            // 
-            this.cpf_ClienteMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpf_ClienteMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Cpf_Cliente", true));
-            this.cpf_ClienteMaskedTextBox.Location = new System.Drawing.Point(239, 49);
-            this.cpf_ClienteMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cpf_ClienteMaskedTextBox.Mask = "000,000,000-00";
-            this.cpf_ClienteMaskedTextBox.Name = "cpf_ClienteMaskedTextBox";
-            this.cpf_ClienteMaskedTextBox.ReadOnly = true;
-            this.cpf_ClienteMaskedTextBox.Size = new System.Drawing.Size(113, 20);
-            this.cpf_ClienteMaskedTextBox.TabIndex = 33;
-            // 
-            // data_EntradaMaskedTextBox
-            // 
-            this.data_EntradaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.data_EntradaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Data_Entrada", true));
-            this.data_EntradaMaskedTextBox.Location = new System.Drawing.Point(84, 102);
-            this.data_EntradaMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.data_EntradaMaskedTextBox.Mask = "00/00/0000";
-            this.data_EntradaMaskedTextBox.Name = "data_EntradaMaskedTextBox";
-            this.data_EntradaMaskedTextBox.ReadOnly = true;
-            this.data_EntradaMaskedTextBox.Size = new System.Drawing.Size(76, 20);
-            this.data_EntradaMaskedTextBox.TabIndex = 33;
-            this.data_EntradaMaskedTextBox.ValidatingType = typeof(System.DateTime);
-            // 
-            // groupBoxQuarto
-            // 
-            this.groupBoxQuarto.Controls.Add(this.valor_DiariaMaskedTextBox);
-            this.groupBoxQuarto.Controls.Add(id_StatusLabel);
-            this.groupBoxQuarto.Controls.Add(id_ClasseLabel);
-            this.groupBoxQuarto.Controls.Add(this.id_StatusTextBox);
-            this.groupBoxQuarto.Controls.Add(this.id_ClasseTextBox);
-            this.groupBoxQuarto.Controls.Add(idLabel1);
-            this.groupBoxQuarto.Controls.Add(this.idTextBox1);
-            this.groupBoxQuarto.Controls.Add(numeroLabel);
-            this.groupBoxQuarto.Controls.Add(this.numeroTextBox);
-            this.groupBoxQuarto.Controls.Add(this.descricaoTextBox);
-            this.groupBoxQuarto.Controls.Add(descricaoLabel);
-            this.groupBoxQuarto.Controls.Add(valor_DiariaLabel);
-            this.groupBoxQuarto.Location = new System.Drawing.Point(580, 375);
-            this.groupBoxQuarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxQuarto.Name = "groupBoxQuarto";
-            this.groupBoxQuarto.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxQuarto.Size = new System.Drawing.Size(348, 187);
-            this.groupBoxQuarto.TabIndex = 31;
-            this.groupBoxQuarto.TabStop = false;
-            this.groupBoxQuarto.Text = "Dados da Quarto";
-            // 
-            // valor_DiariaMaskedTextBox
-            // 
-            this.valor_DiariaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.valor_DiariaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
-            this.valor_DiariaMaskedTextBox.Location = new System.Drawing.Point(88, 162);
-            this.valor_DiariaMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.valor_DiariaMaskedTextBox.Mask = "$";
-            this.valor_DiariaMaskedTextBox.Name = "valor_DiariaMaskedTextBox";
-            this.valor_DiariaMaskedTextBox.ReadOnly = true;
-            this.valor_DiariaMaskedTextBox.Size = new System.Drawing.Size(76, 20);
-            this.valor_DiariaMaskedTextBox.TabIndex = 33;
-            this.valor_DiariaMaskedTextBox.ValidatingType = typeof(System.DateTime);
-            // 
-            // id_StatusTextBox
-            // 
-            this.id_StatusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_StatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Id_Status", true));
-            this.id_StatusTextBox.Location = new System.Drawing.Point(208, 136);
-            this.id_StatusTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.id_StatusTextBox.Name = "id_StatusTextBox";
-            this.id_StatusTextBox.ReadOnly = true;
-            this.id_StatusTextBox.Size = new System.Drawing.Size(76, 20);
-            this.id_StatusTextBox.TabIndex = 33;
-            // 
-            // id_ClasseTextBox
-            // 
-            this.id_ClasseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_ClasseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Id_Classe", true));
-            this.id_ClasseTextBox.Location = new System.Drawing.Point(88, 136);
-            this.id_ClasseTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.id_ClasseTextBox.Name = "id_ClasseTextBox";
-            this.id_ClasseTextBox.ReadOnly = true;
-            this.id_ClasseTextBox.Size = new System.Drawing.Size(76, 20);
-            this.id_ClasseTextBox.TabIndex = 23;
-            // 
-            // idTextBox1
-            // 
-            this.idTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Id", true));
-            this.idTextBox1.Location = new System.Drawing.Point(88, 24);
-            this.idTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.idTextBox1.Name = "idTextBox1";
-            this.idTextBox1.ReadOnly = true;
-            this.idTextBox1.Size = new System.Drawing.Size(38, 20);
-            this.idTextBox1.TabIndex = 22;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.diariaDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(9, 120);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(567, 244);
-            this.groupBox1.TabIndex = 31;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Diárias cadastradas";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.radioButtonTodos);
-            this.groupBox2.Controls.Add(this.radioButtonCPF);
-            this.groupBox2.Controls.Add(this.radioButtonNome);
-            this.groupBox2.Controls.Add(this.textBoxBuscar);
-            this.groupBox2.Controls.Add(this.buttonBuscar);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(9, 9);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(350, 82);
-            this.groupBox2.TabIndex = 32;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Pesquisar por";
-            // 
-            // radioButtonTodos
-            // 
-            this.radioButtonTodos.AutoSize = true;
-            this.radioButtonTodos.BackColor = System.Drawing.Color.Transparent;
-            this.radioButtonTodos.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonTodos.Location = new System.Drawing.Point(4, 18);
-            this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButtonTodos.Name = "radioButtonTodos";
-            this.radioButtonTodos.Size = new System.Drawing.Size(81, 25);
-            this.radioButtonTodos.TabIndex = 2;
-            this.radioButtonTodos.TabStop = true;
-            this.radioButtonTodos.Text = "Todos";
-            this.radioButtonTodos.UseVisualStyleBackColor = false;
-            // 
-            // radioButtonCPF
-            // 
-            this.radioButtonCPF.AutoSize = true;
-            this.radioButtonCPF.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonCPF.Location = new System.Drawing.Point(159, 17);
-            this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButtonCPF.Name = "radioButtonCPF";
-            this.radioButtonCPF.Size = new System.Drawing.Size(68, 25);
-            this.radioButtonCPF.TabIndex = 2;
-            this.radioButtonCPF.TabStop = true;
-            this.radioButtonCPF.Text = "CPF";
-            this.radioButtonCPF.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNome
-            // 
-            this.radioButtonNome.AutoSize = true;
-            this.radioButtonNome.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonNome.Location = new System.Drawing.Point(89, 17);
-            this.radioButtonNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButtonNome.Name = "radioButtonNome";
-            this.radioButtonNome.Size = new System.Drawing.Size(79, 25);
-            this.radioButtonNome.TabIndex = 2;
-            this.radioButtonNome.TabStop = true;
-            this.radioButtonNome.Text = "Nome";
-            this.radioButtonNome.UseVisualStyleBackColor = true;
-            // 
-            // textBoxBuscar
-            // 
-            this.textBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxBuscar.Location = new System.Drawing.Point(4, 50);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(223, 28);
-            this.textBoxBuscar.TabIndex = 1;
-            // 
-            // buttonBuscar
-            // 
-            this.buttonBuscar.BackColor = System.Drawing.Color.White;
-            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscar.Image")));
-            this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(231, 47);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonBuscar.MinimumSize = new System.Drawing.Size(109, 32);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(109, 32);
-            this.buttonBuscar.TabIndex = 0;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBuscar.UseVisualStyleBackColor = false;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click_1);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.quartosDataGridView);
-            this.groupBox3.Location = new System.Drawing.Point(580, 120);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(348, 244);
-            this.groupBox3.TabIndex = 31;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Quartos";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.maskedTextBox1);
-            this.groupBox4.Controls.Add(this.buttonBuscarData);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(580, 9);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox4.Size = new System.Drawing.Size(218, 58);
-            this.groupBox4.TabIndex = 32;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Pesquisar por Data";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(4, 24);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(93, 28);
-            this.maskedTextBox1.TabIndex = 1;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // buttonBuscarData
-            // 
-            this.buttonBuscarData.BackColor = System.Drawing.Color.White;
-            this.buttonBuscarData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscarData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarData.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarData.Image")));
-            this.buttonBuscarData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscarData.Location = new System.Drawing.Point(105, 20);
-            this.buttonBuscarData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonBuscarData.MinimumSize = new System.Drawing.Size(109, 32);
-            this.buttonBuscarData.Name = "buttonBuscarData";
-            this.buttonBuscarData.Size = new System.Drawing.Size(109, 32);
-            this.buttonBuscarData.TabIndex = 0;
-            this.buttonBuscarData.Text = "Buscar";
-            this.buttonBuscarData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBuscarData.UseVisualStyleBackColor = false;
-            this.buttonBuscarData.Click += new System.EventHandler(this.buttonBuscarData_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -767,6 +389,7 @@
             this.Id_Funcionario.MinimumWidth = 6;
             this.Id_Funcionario.Name = "Id_Funcionario";
             this.Id_Funcionario.ReadOnly = true;
+            this.Id_Funcionario.Width = 115;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -784,6 +407,7 @@
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 115;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -813,6 +437,384 @@
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 120;
             // 
+            // buttonExcluirQuarto
+            // 
+            this.buttonExcluirQuarto.BackColor = System.Drawing.Color.White;
+            this.buttonExcluirQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcluirQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonExcluirQuarto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonExcluirQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirQuarto.Image")));
+            this.buttonExcluirQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExcluirQuarto.Location = new System.Drawing.Point(822, 600);
+            this.buttonExcluirQuarto.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExcluirQuarto.Name = "buttonExcluirQuarto";
+            this.buttonExcluirQuarto.Size = new System.Drawing.Size(106, 33);
+            this.buttonExcluirQuarto.TabIndex = 24;
+            this.buttonExcluirQuarto.Text = "Excluir";
+            this.buttonExcluirQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonExcluirQuarto.UseVisualStyleBackColor = false;
+            this.buttonExcluirQuarto.Click += new System.EventHandler(this.buttonExcluirQuarto_Click);
+            // 
+            // buttonADCquarto
+            // 
+            this.buttonADCquarto.BackColor = System.Drawing.Color.White;
+            this.buttonADCquarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonADCquarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonADCquarto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonADCquarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonADCquarto.Image")));
+            this.buttonADCquarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonADCquarto.Location = new System.Drawing.Point(690, 600);
+            this.buttonADCquarto.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonADCquarto.Name = "buttonADCquarto";
+            this.buttonADCquarto.Size = new System.Drawing.Size(128, 33);
+            this.buttonADCquarto.TabIndex = 24;
+            this.buttonADCquarto.Text = "Adicionar";
+            this.buttonADCquarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonADCquarto.UseVisualStyleBackColor = false;
+            this.buttonADCquarto.Click += new System.EventHandler(this.buttonAdicionarQuarto_Click);
+            // 
+            // buttonExcluirDiaria
+            // 
+            this.buttonExcluirDiaria.BackColor = System.Drawing.Color.White;
+            this.buttonExcluirDiaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcluirDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonExcluirDiaria.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonExcluirDiaria.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirDiaria.Image")));
+            this.buttonExcluirDiaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExcluirDiaria.Location = new System.Drawing.Point(252, 600);
+            this.buttonExcluirDiaria.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExcluirDiaria.MinimumSize = new System.Drawing.Size(109, 32);
+            this.buttonExcluirDiaria.Name = "buttonExcluirDiaria";
+            this.buttonExcluirDiaria.Size = new System.Drawing.Size(109, 32);
+            this.buttonExcluirDiaria.TabIndex = 24;
+            this.buttonExcluirDiaria.Text = "Excluir";
+            this.buttonExcluirDiaria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonExcluirDiaria.UseVisualStyleBackColor = false;
+            this.buttonExcluirDiaria.Click += new System.EventHandler(this.buttonExcluirDiaria_Click);
+            // 
+            // buttonAlterarDiaria
+            // 
+            this.buttonAlterarDiaria.BackColor = System.Drawing.Color.White;
+            this.buttonAlterarDiaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAlterarDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonAlterarDiaria.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAlterarDiaria.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.edit;
+            this.buttonAlterarDiaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAlterarDiaria.Location = new System.Drawing.Point(139, 600);
+            this.buttonAlterarDiaria.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAlterarDiaria.MinimumSize = new System.Drawing.Size(109, 32);
+            this.buttonAlterarDiaria.Name = "buttonAlterarDiaria";
+            this.buttonAlterarDiaria.Size = new System.Drawing.Size(109, 32);
+            this.buttonAlterarDiaria.TabIndex = 24;
+            this.buttonAlterarDiaria.Text = "Alterar";
+            this.buttonAlterarDiaria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAlterarDiaria.UseVisualStyleBackColor = false;
+            this.buttonAlterarDiaria.Click += new System.EventHandler(this.buttonAlterarDiaria_Click);
+            // 
+            // buttonAdicionarDiaria
+            // 
+            this.buttonAdicionarDiaria.BackColor = System.Drawing.Color.White;
+            this.buttonAdicionarDiaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdicionarDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonAdicionarDiaria.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAdicionarDiaria.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarDiaria.Image")));
+            this.buttonAdicionarDiaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAdicionarDiaria.Location = new System.Drawing.Point(9, 600);
+            this.buttonAdicionarDiaria.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdicionarDiaria.MinimumSize = new System.Drawing.Size(109, 32);
+            this.buttonAdicionarDiaria.Name = "buttonAdicionarDiaria";
+            this.buttonAdicionarDiaria.Size = new System.Drawing.Size(126, 32);
+            this.buttonAdicionarDiaria.TabIndex = 24;
+            this.buttonAdicionarDiaria.Text = "Adicionar";
+            this.buttonAdicionarDiaria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAdicionarDiaria.UseVisualStyleBackColor = false;
+            this.buttonAdicionarDiaria.Click += new System.EventHandler(this.buttonAdicionarDiaria_Click);
+            // 
+            // groupBoxDiaria
+            // 
+            this.groupBoxDiaria.Controls.Add(data_SaidaLabel);
+            this.groupBoxDiaria.Controls.Add(this.data_SaidaMaskedTextBox);
+            this.groupBoxDiaria.Controls.Add(cpf_ClienteLabel);
+            this.groupBoxDiaria.Controls.Add(this.cpf_ClienteMaskedTextBox);
+            this.groupBoxDiaria.Controls.Add(this.data_EntradaMaskedTextBox);
+            this.groupBoxDiaria.Controls.Add(idLabel);
+            this.groupBoxDiaria.Controls.Add(this.idTextBox);
+            this.groupBoxDiaria.Controls.Add(data_EntradaLabel);
+            this.groupBoxDiaria.Controls.Add(this.id_clienteTextBox);
+            this.groupBoxDiaria.Controls.Add(id_clienteLabel);
+            this.groupBoxDiaria.Controls.Add(this.id_funcionarioTextBox);
+            this.groupBoxDiaria.Controls.Add(id_funcionarioLabel);
+            this.groupBoxDiaria.Location = new System.Drawing.Point(9, 375);
+            this.groupBoxDiaria.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxDiaria.Name = "groupBoxDiaria";
+            this.groupBoxDiaria.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxDiaria.Size = new System.Drawing.Size(386, 126);
+            this.groupBoxDiaria.TabIndex = 31;
+            this.groupBoxDiaria.TabStop = false;
+            this.groupBoxDiaria.Text = "Dados da Diária";
+            // 
+            // data_SaidaMaskedTextBox
+            // 
+            this.data_SaidaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_SaidaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Data_Saida", true));
+            this.data_SaidaMaskedTextBox.Location = new System.Drawing.Point(239, 102);
+            this.data_SaidaMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.data_SaidaMaskedTextBox.Mask = "00/00/0000";
+            this.data_SaidaMaskedTextBox.Name = "data_SaidaMaskedTextBox";
+            this.data_SaidaMaskedTextBox.ReadOnly = true;
+            this.data_SaidaMaskedTextBox.Size = new System.Drawing.Size(76, 20);
+            this.data_SaidaMaskedTextBox.TabIndex = 33;
+            this.data_SaidaMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // cpf_ClienteMaskedTextBox
+            // 
+            this.cpf_ClienteMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpf_ClienteMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Cpf_Cliente", true));
+            this.cpf_ClienteMaskedTextBox.Location = new System.Drawing.Point(239, 49);
+            this.cpf_ClienteMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.cpf_ClienteMaskedTextBox.Mask = "000,000,000-00";
+            this.cpf_ClienteMaskedTextBox.Name = "cpf_ClienteMaskedTextBox";
+            this.cpf_ClienteMaskedTextBox.ReadOnly = true;
+            this.cpf_ClienteMaskedTextBox.Size = new System.Drawing.Size(113, 20);
+            this.cpf_ClienteMaskedTextBox.TabIndex = 33;
+            // 
+            // data_EntradaMaskedTextBox
+            // 
+            this.data_EntradaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_EntradaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Data_Entrada", true));
+            this.data_EntradaMaskedTextBox.Location = new System.Drawing.Point(84, 102);
+            this.data_EntradaMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.data_EntradaMaskedTextBox.Mask = "00/00/0000";
+            this.data_EntradaMaskedTextBox.Name = "data_EntradaMaskedTextBox";
+            this.data_EntradaMaskedTextBox.ReadOnly = true;
+            this.data_EntradaMaskedTextBox.Size = new System.Drawing.Size(76, 20);
+            this.data_EntradaMaskedTextBox.TabIndex = 33;
+            this.data_EntradaMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // groupBoxQuarto
+            // 
+            this.groupBoxQuarto.Controls.Add(this.valor_DiariaMaskedTextBox);
+            this.groupBoxQuarto.Controls.Add(id_StatusLabel);
+            this.groupBoxQuarto.Controls.Add(id_ClasseLabel);
+            this.groupBoxQuarto.Controls.Add(this.id_StatusTextBox);
+            this.groupBoxQuarto.Controls.Add(this.id_ClasseTextBox);
+            this.groupBoxQuarto.Controls.Add(idLabel1);
+            this.groupBoxQuarto.Controls.Add(this.idTextBox1);
+            this.groupBoxQuarto.Controls.Add(numeroLabel);
+            this.groupBoxQuarto.Controls.Add(this.numeroTextBox);
+            this.groupBoxQuarto.Controls.Add(this.descricaoTextBox);
+            this.groupBoxQuarto.Controls.Add(descricaoLabel);
+            this.groupBoxQuarto.Controls.Add(valor_DiariaLabel);
+            this.groupBoxQuarto.Location = new System.Drawing.Point(580, 375);
+            this.groupBoxQuarto.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxQuarto.Name = "groupBoxQuarto";
+            this.groupBoxQuarto.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxQuarto.Size = new System.Drawing.Size(348, 187);
+            this.groupBoxQuarto.TabIndex = 31;
+            this.groupBoxQuarto.TabStop = false;
+            this.groupBoxQuarto.Text = "Dados da Quarto";
+            // 
+            // valor_DiariaMaskedTextBox
+            // 
+            this.valor_DiariaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_DiariaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
+            this.valor_DiariaMaskedTextBox.Location = new System.Drawing.Point(88, 162);
+            this.valor_DiariaMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.valor_DiariaMaskedTextBox.Mask = "$";
+            this.valor_DiariaMaskedTextBox.Name = "valor_DiariaMaskedTextBox";
+            this.valor_DiariaMaskedTextBox.ReadOnly = true;
+            this.valor_DiariaMaskedTextBox.Size = new System.Drawing.Size(76, 20);
+            this.valor_DiariaMaskedTextBox.TabIndex = 33;
+            this.valor_DiariaMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // id_StatusTextBox
+            // 
+            this.id_StatusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_StatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Id_Status", true));
+            this.id_StatusTextBox.Location = new System.Drawing.Point(208, 136);
+            this.id_StatusTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.id_StatusTextBox.Name = "id_StatusTextBox";
+            this.id_StatusTextBox.ReadOnly = true;
+            this.id_StatusTextBox.Size = new System.Drawing.Size(76, 20);
+            this.id_StatusTextBox.TabIndex = 33;
+            // 
+            // id_ClasseTextBox
+            // 
+            this.id_ClasseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_ClasseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Id_Classe", true));
+            this.id_ClasseTextBox.Location = new System.Drawing.Point(88, 136);
+            this.id_ClasseTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.id_ClasseTextBox.Name = "id_ClasseTextBox";
+            this.id_ClasseTextBox.ReadOnly = true;
+            this.id_ClasseTextBox.Size = new System.Drawing.Size(76, 20);
+            this.id_ClasseTextBox.TabIndex = 23;
+            // 
+            // idTextBox1
+            // 
+            this.idTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Id", true));
+            this.idTextBox1.Location = new System.Drawing.Point(88, 24);
+            this.idTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.idTextBox1.Name = "idTextBox1";
+            this.idTextBox1.ReadOnly = true;
+            this.idTextBox1.Size = new System.Drawing.Size(38, 20);
+            this.idTextBox1.TabIndex = 22;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.diariaDataGridView);
+            this.groupBox1.Location = new System.Drawing.Point(9, 120);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(567, 244);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Diárias cadastradas";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButtonTodos);
+            this.groupBox2.Controls.Add(this.radioButtonCPF);
+            this.groupBox2.Controls.Add(this.radioButtonNome);
+            this.groupBox2.Controls.Add(this.textBoxBuscar);
+            this.groupBox2.Controls.Add(this.buttonBuscar);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(9, 9);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(350, 82);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Pesquisar por";
+            // 
+            // radioButtonTodos
+            // 
+            this.radioButtonTodos.AutoSize = true;
+            this.radioButtonTodos.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonTodos.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioButtonTodos.Location = new System.Drawing.Point(4, 18);
+            this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonTodos.Name = "radioButtonTodos";
+            this.radioButtonTodos.Size = new System.Drawing.Size(81, 25);
+            this.radioButtonTodos.TabIndex = 2;
+            this.radioButtonTodos.TabStop = true;
+            this.radioButtonTodos.Text = "Todos";
+            this.radioButtonTodos.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonCPF
+            // 
+            this.radioButtonCPF.AutoSize = true;
+            this.radioButtonCPF.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioButtonCPF.Location = new System.Drawing.Point(159, 17);
+            this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonCPF.Name = "radioButtonCPF";
+            this.radioButtonCPF.Size = new System.Drawing.Size(68, 25);
+            this.radioButtonCPF.TabIndex = 2;
+            this.radioButtonCPF.TabStop = true;
+            this.radioButtonCPF.Text = "CPF";
+            this.radioButtonCPF.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNome
+            // 
+            this.radioButtonNome.AutoSize = true;
+            this.radioButtonNome.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButtonNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioButtonNome.Location = new System.Drawing.Point(89, 17);
+            this.radioButtonNome.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonNome.Name = "radioButtonNome";
+            this.radioButtonNome.Size = new System.Drawing.Size(79, 25);
+            this.radioButtonNome.TabIndex = 2;
+            this.radioButtonNome.TabStop = true;
+            this.radioButtonNome.Text = "Nome";
+            this.radioButtonNome.UseVisualStyleBackColor = true;
+            // 
+            // textBoxBuscar
+            // 
+            this.textBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxBuscar.Location = new System.Drawing.Point(4, 50);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(223, 28);
+            this.textBoxBuscar.TabIndex = 1;
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.BackColor = System.Drawing.Color.White;
+            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscar.Image")));
+            this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscar.Location = new System.Drawing.Point(231, 47);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscar.MinimumSize = new System.Drawing.Size(109, 32);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(109, 32);
+            this.buttonBuscar.TabIndex = 0;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.quartosDataGridView);
+            this.groupBox3.Location = new System.Drawing.Point(580, 120);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(348, 244);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Quartos";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.maskedTextBox1);
+            this.groupBox4.Controls.Add(this.buttonBuscarData);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(580, 9);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(218, 58);
+            this.groupBox4.TabIndex = 32;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Pesquisar por Data";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.maskedTextBox1.Location = new System.Drawing.Point(4, 24);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(93, 28);
+            this.maskedTextBox1.TabIndex = 1;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // buttonBuscarData
+            // 
+            this.buttonBuscarData.BackColor = System.Drawing.Color.White;
+            this.buttonBuscarData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscarData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarData.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarData.Image")));
+            this.buttonBuscarData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscarData.Location = new System.Drawing.Point(105, 20);
+            this.buttonBuscarData.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscarData.MinimumSize = new System.Drawing.Size(109, 32);
+            this.buttonBuscarData.Name = "buttonBuscarData";
+            this.buttonBuscarData.Size = new System.Drawing.Size(109, 32);
+            this.buttonBuscarData.TabIndex = 0;
+            this.buttonBuscarData.Text = "Buscar";
+            this.buttonBuscarData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonBuscarData.UseVisualStyleBackColor = false;
+            this.buttonBuscarData.Click += new System.EventHandler(this.buttonBuscarData_Click);
+            // 
             // FormBuscarDiaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -830,7 +832,7 @@
             this.Controls.Add(this.buttonAlterarDiaria);
             this.Controls.Add(this.buttonAdicionarDiaria);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormBuscarDiaria";
