@@ -15,6 +15,7 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormConsultaCliente : Form
     {
         public int Id;
+        public string NomeCliente;
         public FormConsultaCliente()
         {
             InitializeComponent();
@@ -43,7 +44,9 @@ namespace WindowsFormsAppGestaoHotel
                 if (clienteBindingSource.Count > 0)
                 {
                     Id = ((Cliente)clienteBindingSource.Current).Id;
-                }
+                    NomeCliente = ((Cliente)clienteBindingSource.Current).Nome;
+                    Close();
+                        }
                 else
                     MessageBox.Show("Não existe registro para ser Selecionado");
             }

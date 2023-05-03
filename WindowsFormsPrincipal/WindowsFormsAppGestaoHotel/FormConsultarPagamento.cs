@@ -14,6 +14,7 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormConsultarPagamento : Form
     {
         public int Id;
+        public string TipoPagamento;
         public FormConsultarPagamento()
         {
             InitializeComponent();
@@ -41,8 +42,10 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 if (pagamentoBindingSource.Count > 0)
-                {
+                { 
                     Id = ((Pagamento)pagamentoBindingSource.Current).Id;
+                TipoPagamento = ((Pagamento)pagamentoBindingSource.Current).Forma_pagamento;
+                Close();
                 }
                 else
                     MessageBox.Show("Não existe registro para ser Selecionador");

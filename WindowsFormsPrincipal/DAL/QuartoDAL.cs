@@ -18,12 +18,15 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO QUARTO (NUMERO, DESCRICAO, VALOR_DIARIA)
-                                    VALUES(@Numero, @Descricao, @Valor_Diaria)";
+                cmd.CommandText = @"INSERT INTO QUARTO (NUMERO, ID_CLASSE, DESCRICAO, VALOR_DIARIA, ANDAR, ID_STATUS)
+                                    VALUES(@Numero, @Id_Classe, @Descricao, @Valor_Diaria, @Andar, @Id_Status)";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Numero", _quarto.Numero);
+                cmd.Parameters.AddWithValue("@Id_Classe", _quarto.Id_Classe);
                 cmd.Parameters.AddWithValue("@Descricao", _quarto.Descricao);
                 cmd.Parameters.AddWithValue("@Valor_Diaria", _quarto.Valor_Diaria);
+                cmd.Parameters.AddWithValue("@Andar", _quarto.Andar);
+                cmd.Parameters.AddWithValue("@Id_Status", _quarto.Id_Status);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -44,12 +47,17 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE QUARTO SET NUMERO = @Numero, DESCRICAO = @Descricao, VALOR_DIARIA = @Valor_Diaria
-                                        WHERE ID= @ID";
+                cmd.CommandText = @"UPDATE QUARTO SET NUMERO = @Numero, ID_CLASSE = @Id_Classe, DESCRICAO = @Descricao, 
+                                    VALOR_DIARIA = @Valor_Diaria, ANDAR = @Andar, ID_STATUS = @Id_Status
+                                    WHERE ID= @ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Numero", _quarto.Numero);
+                cmd.Parameters.AddWithValue("@Id_Classe", _quarto.Id_Classe);
                 cmd.Parameters.AddWithValue("@Descricao", _quarto.Descricao);
                 cmd.Parameters.AddWithValue("@Valor_Diaria", _quarto.Valor_Diaria);
+                cmd.Parameters.AddWithValue("@Andar", _quarto.Andar);
+                cmd.Parameters.AddWithValue("@Id_Status", _quarto.Id_Status);
+                cmd.Parameters.AddWithValue("@ID", _quarto.Id);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -57,7 +65,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um quarto no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar um Quarto no Banco de Dados.", ex);
             }
             finally
             {
@@ -82,7 +90,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir um quarto no Banco de Dados", ex);
+                throw new Exception("Ocorreu erro ao tentar excluir um Quarto no Banco de Dados.", ex);
             }
             finally
             {
@@ -98,7 +106,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NUMERO, ID_CLASSE, DESCRICAO, VALOR_DIARIA, ID_STATUS
+                cmd.CommandText = @"SELECT ID, NUMERO, ID_CLASSE, DESCRICAO, VALOR_DIARIA, ANDAR, ID_STATUS
                                     FROM QUARTO";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
@@ -113,6 +121,7 @@ namespace DAL
                         quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Descricao = rd["DESCRICAO"].ToString();
                         quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
                         quartos.Add(quarto);
                     }
@@ -121,7 +130,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os quartos: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Quartos.", ex);
             }
             finally
             {
@@ -137,7 +146,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NUMERO,DESCICAO,VALOR_DIARIA
+                cmd.CommandText = @"SELECT ID, NUMERO, ID_CLASSE, DESCRICAO, VALOR_DIARIA, ANDAR, ID_STATUS
                                     FROM QUARTO WHERE NUMERO = @Numero";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Numero", _numero);
@@ -148,17 +157,20 @@ namespace DAL
                     if (rd.Read())
                     {
                         quarto = new Quarto();
-                        quarto.Id = Convert.ToInt32(rd["Id"]);
-                        quarto.Numero = rd["Numero"].ToString();
-                        quarto.Descricao = rd["Descricao"].ToString();
-                        quarto.Valor_Diaria = Convert.ToInt32(rd["Valor_Diaria"]);
+                        quarto.Id = Convert.ToInt32(rd["ID"]);
+                        quarto.Numero = rd["NUMERO"].ToString();
+                        quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
+                        quarto.Descricao = rd["DESCRICAO"].ToString();
+                        quarto.Valor_Diaria = Convert.ToInt32(rd["VALOR_DIARIA"]);
+                        quarto.Andar = rd["ANDAR"].ToString();
+                        quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
                     }
                 }
                 return quarto;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o número no banco de dados: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o número do Quarto no banco de dados.", ex);
             }
             finally
             {
@@ -166,14 +178,79 @@ namespace DAL
             }
 
         }
-        public bool ValidarPermissao(int idLogado, int idPermissao)
+        public bool ValidarPermissao(int _idFuncionario, int _idPermissao)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 FROM PERMISSAO_GRUPO_FUNCIONARIO
+                                    LEFT JOIN FUNCIONARIO_GRUPO_FUNCIONARIO ON PERMISSAO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO = FUNCIONARIO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO
+                                    WHERE FUNCIONARIO_GRUPO_FUNCIONARIO.ID_FUNCIONARIO = @IdFuncionario AND PERMISSAO_GRUPO_FUNCIONARIO.ID_PERMISSAO = @IdPermissao";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncionario", _idFuncionario);
+                cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar validar permissões do usuário no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        internal List<Quarto> BuscarPorIdDiaria(int id)
+        internal List<Quarto> BuscarPorIdDiaria(int _idDiaria)
         {
-            throw new NotImplementedException();
+            List<Quarto> quartos = new List<Quarto>();
+            Quarto quarto;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE, QUARTO.DESCRICAO, QUARTO.VALOR_DIARIA, QUARTO.ANDAR, QUARTO.ID_STATUS FROM QUARTO
+                                    INNER JOIN DIARIA_QUARTO ON QUARTO.ID = DIARIA_QUARTO.ID_QUARTO
+                                    WHERE DIARIA_QUARTO.ID_DIARIA = @IdDiaria";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdDiaria", _idDiaria);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        quarto = new Quarto();
+                        quarto.Id = Convert.ToInt32(rd["ID"]);
+                        quarto.Numero = rd["NUMERO"].ToString();
+                        quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
+                        quarto.Descricao = rd["DESCRICAO"].ToString();
+                        quarto.Valor_Diaria = Convert.ToInt32(rd["VALOR_DIARIA"]);
+                        quarto.Andar = rd["ANDAR"].ToString();
+                        quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
+                        quartos.Add(quarto);
+                    }
+                }
+                return quartos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar a diária por Id do Quarto.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
     }
 }

@@ -44,7 +44,7 @@ namespace WindowsFormsAppGestaoHotel
                 if (funcionarioBindingSource.Count > 0)
                 {
                     Id = ((Funcionario)funcionarioBindingSource.Current).Id;
-                    NomeUsuario = ((Funcionario)funcionarioBindingSource.Current).NomeUsuario;
+                    NomeUsuario = ((Funcionario)funcionarioBindingSource.Current).Nome;
                     Close();
                 }
                 else

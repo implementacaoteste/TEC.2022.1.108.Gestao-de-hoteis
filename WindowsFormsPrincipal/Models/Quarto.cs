@@ -14,5 +14,6 @@ namespace Models
         public string Descricao { get; set; }
         public double Valor_Diaria { get; set; }
         public int Id_Status { get; set; }
+        public string Andar { get; set; }
     }
 }
