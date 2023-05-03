@@ -41,7 +41,9 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 if (pagamentoBindingSource.Count > 0)
+                {
                     Id = ((Pagamento)pagamentoBindingSource.Current).Id;
+                }
                 else
                     MessageBox.Show("Não existe registro para ser Selecionador");
             }
