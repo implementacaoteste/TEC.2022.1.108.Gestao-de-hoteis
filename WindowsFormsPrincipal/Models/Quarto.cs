@@ -11,9 +11,11 @@ namespace Models
         public int Id { get; set; }
         public string Numero { get; set; }
         public int Id_Classe { get; set; }
+        public string Classe { get; set; }
         public string Descricao { get; set; }
         public double Valor_Diaria { get; set; }
         public int Id_Status { get; set; }
+        public string Status { get; set; }
         public string Andar { get; set; }
     }
 }

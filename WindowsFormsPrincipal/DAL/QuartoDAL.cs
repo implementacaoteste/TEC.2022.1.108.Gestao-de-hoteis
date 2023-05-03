@@ -106,8 +106,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NUMERO, ID_CLASSE, DESCRICAO, VALOR_DIARIA, ANDAR, ID_STATUS
-                                    FROM QUARTO";
+                cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, Q.ANDAR, Q.ID_STATUS, STATUS.STATUS
+                                    FROM QUARTO Q
+                                    INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
+                                    INNER JOIN STATUS ON STATUS.ID = Q.ID_STATUS";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -118,11 +120,13 @@ namespace DAL
                         quarto = new Quarto();
                         quarto.Id = Convert.ToInt32(rd["ID"]);
                         quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
+                        quarto.Classe = rd["CLASSE"].ToString();
                         quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Descricao = rd["DESCRICAO"].ToString();
                         quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
                         quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
+                        quarto.Status = rd["STATUS"].ToString();
                         quartos.Add(quarto);
                     }
                 }
@@ -146,10 +150,13 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT ID, NUMERO, ID_CLASSE, DESCRICAO, VALOR_DIARIA, ANDAR, ID_STATUS
-                                    FROM QUARTO WHERE NUMERO = @Numero";
+                cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, Q.ANDAR, Q.ID_STATUS, STATUS.STATUS
+                                    FROM QUARTO Q
+                                    INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
+                                    INNER JOIN STATUS ON STATUS.ID = Q.ID_STATUS
+                                    WHERE NUMERO LIKE @Numero";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Numero", _numero);
+                cmd.Parameters.AddWithValue("@Numero", "%" + _numero + "%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -158,12 +165,14 @@ namespace DAL
                     {
                         quarto = new Quarto();
                         quarto.Id = Convert.ToInt32(rd["ID"]);
-                        quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
+                        quarto.Classe = rd["CLASSE"].ToString();
+                        quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = Convert.ToInt32(rd["VALOR_DIARIA"]);
+                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
                         quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
+                        quarto.Status = rd["STATUS"].ToString();
                     }
                 }
                 return quarto;
@@ -209,7 +218,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         internal List<Quarto> BuscarPorIdDiaria(int _idDiaria)
         {
             List<Quarto> quartos = new List<Quarto>();
