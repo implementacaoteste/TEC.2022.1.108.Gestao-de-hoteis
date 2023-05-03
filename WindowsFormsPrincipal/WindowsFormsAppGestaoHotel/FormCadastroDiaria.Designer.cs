@@ -49,6 +49,7 @@
             this.buttonSelecionarPagamento = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             id_PagamentoLabel = new System.Windows.Forms.Label();
             valor_TotalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // data_EntradaLabel
@@ -237,6 +239,10 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataSource = typeof(Models.Funcionario);
+            // 
             // FormCadastroDiaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,6 +275,7 @@
             this.Text = "Cadastro de Diaria";
             this.Load += new System.EventHandler(this.FormCadastroDiaria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +296,6 @@
         private System.Windows.Forms.Button buttonSelecionarPagamento;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource;
     }
 }
