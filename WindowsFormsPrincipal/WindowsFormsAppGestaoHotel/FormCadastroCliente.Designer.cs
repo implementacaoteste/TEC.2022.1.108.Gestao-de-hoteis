@@ -162,7 +162,6 @@
             this.generoComboBox.Name = "generoComboBox";
             this.generoComboBox.Size = new System.Drawing.Size(145, 30);
             this.generoComboBox.TabIndex = 4;
-            this.generoComboBox.Text = "SELECIONAR";
             this.generoComboBox.ValueMember = "Id";
             // 
             // buttonCancelarCadastroCliente

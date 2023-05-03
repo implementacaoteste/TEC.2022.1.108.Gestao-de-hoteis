@@ -114,7 +114,7 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT FUNCIONARIO.ID, NOME, NOME_USUARIO, EMAIL ,SENHA ,CPF, ATIVO, DATA_NASCIMENTO,  ENDERECO,CELULAR , ID_SEXO, SEXO.SEXO
                                     FROM FUNCIONARIO 
-                                    INNER JOIN SEXO ON FUNCIONARIO.ID_SEXO = SEXO.ID
+                                    LEFT JOIN SEXO ON FUNCIONARIO.ID_SEXO = SEXO.ID
                                     WHERE FUNCIONARIO.ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -161,9 +161,9 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT F.ID, F.NOME, F.ID_SEXO, SEXO.SEXO,F.NOME_USUARIO, GF.NOME_GRUPO, F.EMAIL ,F.SENHA ,F.CPF, 
                                     F.ATIVO, F.DATA_NASCIMENTO,F.ENDERECO, F.CELULAR, F.ID_SEXO FROM FUNCIONARIO F
-                                    INNER JOIN FUNCIONARIO_GRUPO_FUNCIONARIO FGF ON F.ID = FGF.ID_FUNCIONARIO
-                                    INNER JOIN GRUPO_FUNCIONARIO GF ON FGF.ID_GRUPO_FUNCIONARIO = GF.ID
-                                    INNER JOIN SEXO ON SEXO.ID = F.ID_SEXO";
+                                    LEFT JOIN FUNCIONARIO_GRUPO_FUNCIONARIO FGF ON F.ID = FGF.ID_FUNCIONARIO
+                                    LEFT JOIN GRUPO_FUNCIONARIO GF ON FGF.ID_GRUPO_FUNCIONARIO = GF.ID
+                                    LEFT JOIN SEXO ON SEXO.ID = F.ID_SEXO";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
@@ -212,9 +212,9 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT F.ID, F.NOME, F.ID_SEXO, SEXO.SEXO,F.NOME_USUARIO, GF.NOME_GRUPO, F.EMAIL ,F.SENHA ,F.CPF, 
                                     F.ATIVO, F.DATA_NASCIMENTO,F.ENDERECO, F.CELULAR, F.ID_SEXO FROM FUNCIONARIO F
-                                    INNER JOIN FUNCIONARIO_GRUPO_FUNCIONARIO FGF ON F.ID = FGF.ID_FUNCIONARIO
-                                    INNER JOIN GRUPO_FUNCIONARIO GF ON FGF.ID_GRUPO_FUNCIONARIO = GF.ID
-                                    INNER JOIN SEXO ON SEXO.ID = F.ID_SEXO
+                                    LEFT JOIN FUNCIONARIO_GRUPO_FUNCIONARIO FGF ON F.ID = FGF.ID_FUNCIONARIO
+                                    LEFT JOIN GRUPO_FUNCIONARIO GF ON FGF.ID_GRUPO_FUNCIONARIO = GF.ID
+                                    LEFT JOIN SEXO ON SEXO.ID = F.ID_SEXO
                                     WHERE NOME LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
@@ -309,9 +309,9 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT F.ID, F.NOME, F.ID_SEXO, SEXO.SEXO,F.NOME_USUARIO, GF.NOME_GRUPO, F.EMAIL ,F.SENHA ,F.CPF, 
                                     F.ATIVO, F.DATA_NASCIMENTO,F.ENDERECO, F.CELULAR, F.ID_SEXO FROM FUNCIONARIO F
-                                    INNER JOIN FUNCIONARIO_GRUPO_FUNCIONARIO FGF ON F.ID = FGF.ID_FUNCIONARIO
-                                    INNER JOIN GRUPO_FUNCIONARIO GF ON FGF.ID_GRUPO_FUNCIONARIO = GF.ID
-                                    INNER JOIN SEXO ON SEXO.ID = F.ID_SEXO
+                                    LEFT JOIN FUNCIONARIO_GRUPO_FUNCIONARIO FGF ON F.ID = FGF.ID_FUNCIONARIO
+                                    LEFT JOIN GRUPO_FUNCIONARIO GF ON FGF.ID_GRUPO_FUNCIONARIO = GF.ID
+                                    LEFT JOIN SEXO ON SEXO.ID = F.ID_SEXO
                                     WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _cPF);
@@ -356,7 +356,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT 1 FROM PERMISSAO_GRUPO_FUNCIONARIO
-                                    INNER JOIN FUNCIONARIO_GRUPO_FUNCIONARIO ON PERMISSAO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO = FUNCIONARIO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO
+                                    LEFT JOIN FUNCIONARIO_GRUPO_FUNCIONARIO ON PERMISSAO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO = FUNCIONARIO_GRUPO_FUNCIONARIO.ID_GRUPO_FUNCIONARIO
                                     WHERE FUNCIONARIO_GRUPO_FUNCIONARIO.ID_FUNCIONARIO = @IdFuncionario AND PERMISSAO_GRUPO_FUNCIONARIO.ID_PERMISSAO = @IdPermissao";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@IdFuncionario", _idFuncionario);

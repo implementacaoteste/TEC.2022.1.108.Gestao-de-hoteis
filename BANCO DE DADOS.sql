@@ -1,4 +1,6 @@
 USE [master]
+DROP DATABASE GESTAO_HOTEL 
+
 GO
 /****** Object:  Database [GESTAO_HOTEL]    Script Date: 02/05/2023 14:03:03 ******/
 CREATE DATABASE [GESTAO_HOTEL]
@@ -359,3 +361,5 @@ USE [master]
 GO
 ALTER DATABASE [GESTAO_HOTEL] SET  READ_WRITE 
 GO
+
+

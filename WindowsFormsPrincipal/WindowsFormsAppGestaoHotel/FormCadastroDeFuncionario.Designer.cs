@@ -56,6 +56,7 @@
             this.cPFMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.celularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.statusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nomeLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             senhaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel
@@ -250,7 +252,7 @@
             // 
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.funcionarioBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ativoCheckBox.Location = new System.Drawing.Point(308, 271);
+            this.ativoCheckBox.Location = new System.Drawing.Point(288, 271);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(0);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(95, 30);
@@ -283,7 +285,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(145, 30);
             this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "SELECIONAR";
             this.comboBox1.ValueMember = "Id";
             // 
             // sexoBindingSource
@@ -357,6 +358,10 @@
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(194, 28);
             this.data_nascimentoDateTimePicker.TabIndex = 45;
             // 
+            // statusesBindingSource
+            // 
+            this.statusesBindingSource.DataSource = typeof(Models.Statuses);
+            // 
             // FormCadastroDeFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -397,6 +402,7 @@
             this.Load += new System.EventHandler(this.FormCadastroDeFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,5 +426,6 @@
         private System.Windows.Forms.MaskedTextBox cPFMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox celularMaskedTextBox;
         private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
+        private System.Windows.Forms.BindingSource statusesBindingSource;
     }
 }
