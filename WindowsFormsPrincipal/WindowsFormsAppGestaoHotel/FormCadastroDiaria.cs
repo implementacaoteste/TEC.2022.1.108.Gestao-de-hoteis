@@ -44,20 +44,15 @@ namespace WindowsFormsAppGestaoHotel
 
         private void buttonSelecionarFuncionario_Click(object sender, EventArgs e)
         {
-           
             try
             {
                 using (FormConsultaFuncionario frm = new FormConsultaFuncionario())
                 {
                     frm.ShowDialog();
-
-                    if (frm.Id != 0)
-                    {
-                        int idUsuario = ((Funcionario)funcionarioBindingSource.Current).Id;
-                        new FuncionarioBLL().AdicionarGrupoUsuario(idUsuario, frm.Id);
-                    }
+                    ((Diaria)diariaBindingSource.Current).Id_Funcionario = frm.Id;
+                    ((Diaria)diariaBindingSource.Current).Funcionario = frm.NomeUsuario;
+                    funcionarioTextBox.Text = frm.NomeUsuario;
                 }
-                
             }
             catch (Exception ex)
             {

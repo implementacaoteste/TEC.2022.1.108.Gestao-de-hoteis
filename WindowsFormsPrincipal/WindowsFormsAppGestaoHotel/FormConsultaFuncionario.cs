@@ -14,6 +14,7 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormConsultaFuncionario : Form
     {
         public int Id;
+        public string NomeUsuario;
         public FormConsultaFuncionario()
         {
             InitializeComponent();
@@ -42,7 +43,8 @@ namespace WindowsFormsAppGestaoHotel
             {
                 if (funcionarioBindingSource.Count > 0)
                 {
-                    Id = ((Permissao)funcionarioBindingSource.Current).Id;
+                    Id = ((Funcionario)funcionarioBindingSource.Current).Id;
+                    NomeUsuario = ((Funcionario)funcionarioBindingSource.Current).NomeUsuario;
                     Close();
                 }
                 else

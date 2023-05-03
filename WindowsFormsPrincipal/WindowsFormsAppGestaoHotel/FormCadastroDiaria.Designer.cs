@@ -36,12 +36,8 @@
             System.Windows.Forms.Label id_PagamentoLabel;
             System.Windows.Forms.Label valor_TotalLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroDiaria));
-            this.diariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.data_EntradaTextBox = new System.Windows.Forms.TextBox();
             this.data_SaidaTextBox = new System.Windows.Forms.TextBox();
-            this.id_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.id_funcionarioTextBox = new System.Windows.Forms.TextBox();
-            this.id_PagamentoTextBox = new System.Windows.Forms.TextBox();
             this.valor_TotalTextBox = new System.Windows.Forms.TextBox();
             this.tituloLabel = new System.Windows.Forms.Label();
             this.buttonSelecionarFuncionario = new System.Windows.Forms.Button();
@@ -49,7 +45,10 @@
             this.buttonSelecionarPagamento = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionarioTextBox = new System.Windows.Forms.TextBox();
+            this.id_ClienteTextBox = new System.Windows.Forms.TextBox();
+            this.id_PagamentoTextBox = new System.Windows.Forms.TextBox();
+            this.diariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -57,7 +56,6 @@
             id_PagamentoLabel = new System.Windows.Forms.Label();
             valor_TotalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // data_EntradaLabel
@@ -81,7 +79,7 @@
             // id_clienteLabel
             // 
             id_clienteLabel.AutoSize = true;
-            id_clienteLabel.Location = new System.Drawing.Point(375, 177);
+            id_clienteLabel.Location = new System.Drawing.Point(375, 180);
             id_clienteLabel.Name = "id_clienteLabel";
             id_clienteLabel.Size = new System.Drawing.Size(82, 16);
             id_clienteLabel.TabIndex = 4;
@@ -99,7 +97,7 @@
             // id_PagamentoLabel
             // 
             id_PagamentoLabel.AutoSize = true;
-            id_PagamentoLabel.Location = new System.Drawing.Point(347, 223);
+            id_PagamentoLabel.Location = new System.Drawing.Point(347, 227);
             id_PagamentoLabel.Name = "id_PagamentoLabel";
             id_PagamentoLabel.Size = new System.Drawing.Size(111, 16);
             id_PagamentoLabel.TabIndex = 8;
@@ -113,10 +111,6 @@
             valor_TotalLabel.Size = new System.Drawing.Size(76, 16);
             valor_TotalLabel.TabIndex = 10;
             valor_TotalLabel.Text = "Valor Total:";
-            // 
-            // diariaBindingSource
-            // 
-            this.diariaBindingSource.DataSource = typeof(Models.Diaria);
             // 
             // data_EntradaTextBox
             // 
@@ -135,33 +129,6 @@
             this.data_SaidaTextBox.Name = "data_SaidaTextBox";
             this.data_SaidaTextBox.Size = new System.Drawing.Size(100, 22);
             this.data_SaidaTextBox.TabIndex = 3;
-            // 
-            // id_clienteTextBox
-            // 
-            this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id_cliente", true));
-            this.id_clienteTextBox.Location = new System.Drawing.Point(463, 174);
-            this.id_clienteTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.id_clienteTextBox.Name = "id_clienteTextBox";
-            this.id_clienteTextBox.Size = new System.Drawing.Size(100, 22);
-            this.id_clienteTextBox.TabIndex = 5;
-            // 
-            // id_funcionarioTextBox
-            // 
-            this.id_funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id_funcionario", true));
-            this.id_funcionarioTextBox.Location = new System.Drawing.Point(463, 135);
-            this.id_funcionarioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.id_funcionarioTextBox.Name = "id_funcionarioTextBox";
-            this.id_funcionarioTextBox.Size = new System.Drawing.Size(100, 22);
-            this.id_funcionarioTextBox.TabIndex = 7;
-            // 
-            // id_PagamentoTextBox
-            // 
-            this.id_PagamentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Id_Pagamento", true));
-            this.id_PagamentoTextBox.Location = new System.Drawing.Point(463, 220);
-            this.id_PagamentoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.id_PagamentoTextBox.Name = "id_PagamentoTextBox";
-            this.id_PagamentoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.id_PagamentoTextBox.TabIndex = 9;
             // 
             // valor_TotalTextBox
             // 
@@ -186,7 +153,7 @@
             // 
             // buttonSelecionarFuncionario
             // 
-            this.buttonSelecionarFuncionario.Location = new System.Drawing.Point(569, 135);
+            this.buttonSelecionarFuncionario.Location = new System.Drawing.Point(571, 132);
             this.buttonSelecionarFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionarFuncionario.Name = "buttonSelecionarFuncionario";
             this.buttonSelecionarFuncionario.Size = new System.Drawing.Size(91, 23);
@@ -197,7 +164,7 @@
             // 
             // buttonSelecionarCliente
             // 
-            this.buttonSelecionarCliente.Location = new System.Drawing.Point(571, 174);
+            this.buttonSelecionarCliente.Location = new System.Drawing.Point(571, 177);
             this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionarCliente.Name = "buttonSelecionarCliente";
             this.buttonSelecionarCliente.Size = new System.Drawing.Size(91, 23);
@@ -239,15 +206,42 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // funcionarioBindingSource
+            // funcionarioTextBox
             // 
-            this.funcionarioBindingSource.DataSource = typeof(Models.Funcionario);
+            this.funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Funcionario", true));
+            this.funcionarioTextBox.Location = new System.Drawing.Point(463, 129);
+            this.funcionarioTextBox.Name = "funcionarioTextBox";
+            this.funcionarioTextBox.Size = new System.Drawing.Size(100, 22);
+            this.funcionarioTextBox.TabIndex = 18;
+            // 
+            // id_ClienteTextBox
+            // 
+            this.id_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Nome_Cliente", true));
+            this.id_ClienteTextBox.Location = new System.Drawing.Point(463, 177);
+            this.id_ClienteTextBox.Name = "id_ClienteTextBox";
+            this.id_ClienteTextBox.Size = new System.Drawing.Size(100, 22);
+            this.id_ClienteTextBox.TabIndex = 19;
+            // 
+            // id_PagamentoTextBox
+            // 
+            this.id_PagamentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Pagamento", true));
+            this.id_PagamentoTextBox.Location = new System.Drawing.Point(463, 224);
+            this.id_PagamentoTextBox.Name = "id_PagamentoTextBox";
+            this.id_PagamentoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.id_PagamentoTextBox.TabIndex = 20;
+            // 
+            // diariaBindingSource
+            // 
+            this.diariaBindingSource.DataSource = typeof(Models.Diaria);
             // 
             // FormCadastroDiaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.id_PagamentoTextBox);
+            this.Controls.Add(this.id_ClienteTextBox);
+            this.Controls.Add(this.funcionarioTextBox);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonSelecionarPagamento);
@@ -257,11 +251,8 @@
             this.Controls.Add(valor_TotalLabel);
             this.Controls.Add(this.valor_TotalTextBox);
             this.Controls.Add(id_PagamentoLabel);
-            this.Controls.Add(this.id_PagamentoTextBox);
             this.Controls.Add(id_funcionarioLabel);
-            this.Controls.Add(this.id_funcionarioTextBox);
             this.Controls.Add(id_clienteLabel);
-            this.Controls.Add(this.id_clienteTextBox);
             this.Controls.Add(data_SaidaLabel);
             this.Controls.Add(this.data_SaidaTextBox);
             this.Controls.Add(data_EntradaLabel);
@@ -275,7 +266,6 @@
             this.Text = "Cadastro de Diaria";
             this.Load += new System.EventHandler(this.FormCadastroDiaria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,9 +276,6 @@
         private System.Windows.Forms.BindingSource diariaBindingSource;
         private System.Windows.Forms.TextBox data_EntradaTextBox;
         private System.Windows.Forms.TextBox data_SaidaTextBox;
-        private System.Windows.Forms.TextBox id_clienteTextBox;
-        private System.Windows.Forms.TextBox id_funcionarioTextBox;
-        private System.Windows.Forms.TextBox id_PagamentoTextBox;
         private System.Windows.Forms.TextBox valor_TotalTextBox;
         private System.Windows.Forms.Label tituloLabel;
         private System.Windows.Forms.Button buttonSelecionarFuncionario;
@@ -296,6 +283,8 @@
         private System.Windows.Forms.Button buttonSelecionarPagamento;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.BindingSource funcionarioBindingSource;
+        private System.Windows.Forms.TextBox funcionarioTextBox;
+        private System.Windows.Forms.TextBox id_ClienteTextBox;
+        private System.Windows.Forms.TextBox id_PagamentoTextBox;
     }
 }
