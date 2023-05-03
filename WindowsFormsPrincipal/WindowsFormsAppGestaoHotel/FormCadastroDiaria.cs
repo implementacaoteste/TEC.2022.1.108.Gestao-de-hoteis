@@ -61,17 +61,38 @@ namespace WindowsFormsAppGestaoHotel
         }
         private void buttonSelecionarPagamento_Click(object sender, EventArgs e)
         {
+            try {
             using(FormConsultarPagamento frm = new FormConsultarPagamento())
             {
                 frm.ShowDialog();
+                    ((Diaria)diariaBindingSource.Current).Id_Pagamento = frm.Id;
+                    ((Diaria)diariaBindingSource.Current).Pagamento = frm.TipoPagamento;
+                  id_PagamentoTextBox.Text = frm.TipoPagamento;
+
+            } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void buttonSelecionarCliente_Click(object sender, EventArgs e)
         {
-            using(FormConsultaCliente frm = new FormConsultaCliente())
+            try
             {
+            using(FormConsultaCliente frm = new FormConsultaCliente())
+               {
                 frm.ShowDialog();
-            } 
+                ((Diaria)diariaBindingSource.Current).Id_Cliente= frm.Id;
+                    ((Diaria)diariaBindingSource.Current).Nome_Cliente = frm.NomeCliente;
+                    id_ClienteTextBox.Text = frm.NomeCliente;
+               } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
