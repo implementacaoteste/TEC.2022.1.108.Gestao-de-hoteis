@@ -34,23 +34,26 @@
             System.Windows.Forms.Label id_ClasseLabel;
             System.Windows.Forms.Label numeroLabel;
             System.Windows.Forms.Label valor_DiariaLabel;
+            System.Windows.Forms.Label andarLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroQuarto));
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.statusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.numeroTextBox = new System.Windows.Forms.TextBox();
             this.valor_DiariaTextBox = new System.Windows.Forms.TextBox();
             this.tituloLabel = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.id_ClasseComboBox = new System.Windows.Forms.ComboBox();
             this.classeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.StatusComboBox = new System.Windows.Forms.ComboBox();
+            this.numeroTextBox = new System.Windows.Forms.TextBox();
+            this.andarTextBox = new System.Windows.Forms.TextBox();
+            this.ClasseComboBox = new System.Windows.Forms.ComboBox();
             descricaoLabel = new System.Windows.Forms.Label();
             id_StatusLabel = new System.Windows.Forms.Label();
             id_ClasseLabel = new System.Windows.Forms.Label();
             numeroLabel = new System.Windows.Forms.Label();
             valor_DiariaLabel = new System.Windows.Forms.Label();
+            andarLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).BeginInit();
@@ -60,7 +63,7 @@
             // 
             descricaoLabel.AutoSize = true;
             descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.Location = new System.Drawing.Point(31, 208);
+            descricaoLabel.Location = new System.Drawing.Point(148, 202);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(99, 25);
             descricaoLabel.TabIndex = 1;
@@ -111,45 +114,20 @@
             this.descricaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Descricao", true));
             this.descricaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.descricaoTextBox.Location = new System.Drawing.Point(36, 243);
+            this.descricaoTextBox.Location = new System.Drawing.Point(153, 232);
             this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(551, 66);
+            this.descricaoTextBox.Size = new System.Drawing.Size(434, 77);
             this.descricaoTextBox.TabIndex = 2;
             // 
             // quartoBindingSource
             // 
             this.quartoBindingSource.DataSource = typeof(Models.Quarto);
             // 
-            // comboBoxStatus
-            // 
-            this.comboBoxStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.quartoBindingSource, "Id_Status", true));
-            this.comboBoxStatus.DataSource = this.statusesBindingSource;
-            this.comboBoxStatus.DisplayMember = "Status";
-            this.comboBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(313, 154);
-            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(130, 30);
-            this.comboBoxStatus.TabIndex = 7;
-            this.comboBoxStatus.ValueMember = "Id";
-            // 
             // statusesBindingSource
             // 
             this.statusesBindingSource.DataSource = typeof(Models.Statuses);
-            // 
-            // numeroTextBox
-            // 
-            this.numeroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Numero", true));
-            this.numeroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.numeroTextBox.Location = new System.Drawing.Point(36, 154);
-            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numeroTextBox.Name = "numeroTextBox";
-            this.numeroTextBox.Size = new System.Drawing.Size(100, 30);
-            this.numeroTextBox.TabIndex = 8;
             // 
             // valor_DiariaTextBox
             // 
@@ -180,7 +158,7 @@
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.save;
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(284, 358);
+            this.buttonSalvar.Location = new System.Drawing.Point(284, 352);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvar.MinimumSize = new System.Drawing.Size(145, 40);
             this.buttonSalvar.Name = "buttonSalvar";
@@ -197,7 +175,7 @@
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(442, 356);
+            this.buttonCancelar.Location = new System.Drawing.Point(442, 350);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.MinimumSize = new System.Drawing.Size(145, 40);
             this.buttonCancelar.Name = "buttonCancelar";
@@ -208,40 +186,81 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // id_ClasseComboBox
-            // 
-            this.id_ClasseComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Id_Classe", true));
-            this.id_ClasseComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.quartoBindingSource, "Id_Status", true));
-            this.id_ClasseComboBox.DataSource = this.classeBindingSource;
-            this.id_ClasseComboBox.DisplayMember = "Descricao";
-            this.id_ClasseComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.id_ClasseComboBox.FormattingEnabled = true;
-            this.id_ClasseComboBox.Location = new System.Drawing.Point(457, 154);
-            this.id_ClasseComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.id_ClasseComboBox.Name = "id_ClasseComboBox";
-            this.id_ClasseComboBox.Size = new System.Drawing.Size(130, 30);
-            this.id_ClasseComboBox.TabIndex = 13;
-            this.id_ClasseComboBox.ValueMember = "Id";
-            // 
             // classeBindingSource
             // 
             this.classeBindingSource.DataSource = typeof(Models.Classe);
+            // 
+            // StatusComboBox
+            // 
+            this.StatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Id_Status", true));
+            this.StatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.quartoBindingSource, "Id_Classe", true));
+            this.StatusComboBox.DataSource = this.statusesBindingSource;
+            this.StatusComboBox.DisplayMember = "Status";
+            this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.StatusComboBox.FormattingEnabled = true;
+            this.StatusComboBox.Location = new System.Drawing.Point(313, 155);
+            this.StatusComboBox.Name = "StatusComboBox";
+            this.StatusComboBox.Size = new System.Drawing.Size(130, 30);
+            this.StatusComboBox.TabIndex = 14;
+            this.StatusComboBox.ValueMember = "Id";
+            // 
+            // numeroTextBox
+            // 
+            this.numeroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Numero", true));
+            this.numeroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.numeroTextBox.Location = new System.Drawing.Point(36, 154);
+            this.numeroTextBox.Name = "numeroTextBox";
+            this.numeroTextBox.Size = new System.Drawing.Size(100, 30);
+            this.numeroTextBox.TabIndex = 15;
+            // 
+            // andarLabel
+            // 
+            andarLabel.AutoSize = true;
+            andarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            andarLabel.Location = new System.Drawing.Point(31, 202);
+            andarLabel.Name = "andarLabel";
+            andarLabel.Size = new System.Drawing.Size(65, 25);
+            andarLabel.TabIndex = 15;
+            andarLabel.Text = "Andar";
+            // 
+            // andarTextBox
+            // 
+            this.andarTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.andarTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Andar", true));
+            this.andarTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.andarTextBox.Location = new System.Drawing.Point(36, 232);
+            this.andarTextBox.Name = "andarTextBox";
+            this.andarTextBox.Size = new System.Drawing.Size(100, 30);
+            this.andarTextBox.TabIndex = 16;
+            // 
+            // ClasseComboBox
+            // 
+            this.ClasseComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Id_Classe", true));
+            this.ClasseComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ClasseComboBox.FormattingEnabled = true;
+            this.ClasseComboBox.Location = new System.Drawing.Point(457, 155);
+            this.ClasseComboBox.Name = "ClasseComboBox";
+            this.ClasseComboBox.Size = new System.Drawing.Size(130, 30);
+            this.ClasseComboBox.TabIndex = 17;
             // 
             // FormCadastroQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(624, 407);
-            this.Controls.Add(this.id_ClasseComboBox);
+            this.ClientSize = new System.Drawing.Size(624, 401);
+            this.Controls.Add(this.ClasseComboBox);
+            this.Controls.Add(andarLabel);
+            this.Controls.Add(this.andarTextBox);
+            this.Controls.Add(this.numeroTextBox);
+            this.Controls.Add(this.StatusComboBox);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.tituloLabel);
             this.Controls.Add(valor_DiariaLabel);
             this.Controls.Add(this.valor_DiariaTextBox);
             this.Controls.Add(numeroLabel);
-            this.Controls.Add(this.numeroTextBox);
-            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(id_ClasseLabel);
             this.Controls.Add(id_StatusLabel);
             this.Controls.Add(descricaoLabel);
@@ -267,14 +286,15 @@
 
         private System.Windows.Forms.BindingSource quartoBindingSource;
         private System.Windows.Forms.TextBox descricaoTextBox;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
-        private System.Windows.Forms.TextBox numeroTextBox;
         private System.Windows.Forms.TextBox valor_DiariaTextBox;
         private System.Windows.Forms.BindingSource statusesBindingSource;
         private System.Windows.Forms.Label tituloLabel;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.ComboBox id_ClasseComboBox;
         private System.Windows.Forms.BindingSource classeBindingSource;
+        private System.Windows.Forms.ComboBox StatusComboBox;
+        private System.Windows.Forms.TextBox numeroTextBox;
+        private System.Windows.Forms.TextBox andarTextBox;
+        private System.Windows.Forms.ComboBox ClasseComboBox;
     }
 }

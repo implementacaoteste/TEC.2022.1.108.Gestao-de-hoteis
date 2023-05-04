@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
 using System.Security.Cryptography;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsPrincipal1
 {
@@ -20,22 +21,18 @@ namespace WindowsFormsPrincipal1
             InitializeComponent();
             Id = _id;
         }
-
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             try
             {
-               QuartoBLL quartoBLL = new QuartoBLL();
-               quartoBindingSource.EndEdit();
+                QuartoBLL quartoBLL = new QuartoBLL();
+                quartoBindingSource.EndEdit();
+
                 if (Id == 0)
                     quartoBLL.Inserir((Quarto)quartoBindingSource.Current);
                 else
                     quartoBLL.Alterar((Quarto)quartoBindingSource.Current);
+
                 MessageBox.Show("Registro salvo com sucesso!");
                 Close();
             }
@@ -44,10 +41,25 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
         private void FormCadastroQuarto_Load(object sender, EventArgs e)
         {
+            if (Id == 0)
+                quartoBindingSource.AddNew();
+            else
+            {
+                tituloLabel.Text = "Editar Quarto";
+                quartoBindingSource.DataSource = new QuartoBLL().BuscarPorId(Id);
+            }
 
+            statusesBindingSource.DataSource = new StatusBLL().BuscaPorTodos();
+            classeBindingSource.DataSource = new ClasseBLL().BuscaPorTodos();
+            StatusComboBox.Text = ((Statuses)statusesBindingSource.Current).Status;
+            ClasseComboBox.Text = ((Classe)classeBindingSource.Current).Descricao;
         }
     }
 }
