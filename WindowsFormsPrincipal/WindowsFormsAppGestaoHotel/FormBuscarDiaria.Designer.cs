@@ -484,7 +484,7 @@
             // 
             this.data_SaidaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.data_SaidaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Data_Saida", true));
-            this.data_SaidaMaskedTextBox.Location = new System.Drawing.Point(319, 126);
+            this.data_SaidaMaskedTextBox.Location = new System.Drawing.Point(322, 126);
             this.data_SaidaMaskedTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_SaidaMaskedTextBox.Mask = "00/00/0000";
             this.data_SaidaMaskedTextBox.Name = "data_SaidaMaskedTextBox";
@@ -497,7 +497,7 @@
             // 
             this.cpf_ClienteMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpf_ClienteMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Cpf_Cliente", true));
-            this.cpf_ClienteMaskedTextBox.Location = new System.Drawing.Point(319, 60);
+            this.cpf_ClienteMaskedTextBox.Location = new System.Drawing.Point(322, 62);
             this.cpf_ClienteMaskedTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cpf_ClienteMaskedTextBox.Mask = "000,000,000-00";
             this.cpf_ClienteMaskedTextBox.Name = "cpf_ClienteMaskedTextBox";
