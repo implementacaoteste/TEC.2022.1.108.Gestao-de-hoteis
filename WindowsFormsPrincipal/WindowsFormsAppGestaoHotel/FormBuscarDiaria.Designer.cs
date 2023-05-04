@@ -69,8 +69,8 @@
             this.data_EntradaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.groupBoxQuarto = new System.Windows.Forms.GroupBox();
             this.valor_DiariaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.id_StatusTextBox = new System.Windows.Forms.TextBox();
-            this.id_ClasseTextBox = new System.Windows.Forms.TextBox();
+            this.StatusTextBox = new System.Windows.Forms.TextBox();
+            this.ClasseTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -523,8 +523,8 @@
             this.groupBoxQuarto.Controls.Add(this.valor_DiariaMaskedTextBox);
             this.groupBoxQuarto.Controls.Add(id_StatusLabel);
             this.groupBoxQuarto.Controls.Add(id_ClasseLabel);
-            this.groupBoxQuarto.Controls.Add(this.id_StatusTextBox);
-            this.groupBoxQuarto.Controls.Add(this.id_ClasseTextBox);
+            this.groupBoxQuarto.Controls.Add(this.StatusTextBox);
+            this.groupBoxQuarto.Controls.Add(this.ClasseTextBox);
             this.groupBoxQuarto.Controls.Add(idLabel1);
             this.groupBoxQuarto.Controls.Add(this.idTextBox1);
             this.groupBoxQuarto.Controls.Add(numeroLabel);
@@ -554,27 +554,27 @@
             this.valor_DiariaMaskedTextBox.TabIndex = 33;
             this.valor_DiariaMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
-            // id_StatusTextBox
+            // StatusTextBox
             // 
-            this.id_StatusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_StatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Id_Status", true));
-            this.id_StatusTextBox.Location = new System.Drawing.Point(277, 167);
-            this.id_StatusTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.id_StatusTextBox.Name = "id_StatusTextBox";
-            this.id_StatusTextBox.ReadOnly = true;
-            this.id_StatusTextBox.Size = new System.Drawing.Size(101, 22);
-            this.id_StatusTextBox.TabIndex = 33;
+            this.StatusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.StatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Status", true));
+            this.StatusTextBox.Location = new System.Drawing.Point(277, 167);
+            this.StatusTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StatusTextBox.Name = "StatusTextBox";
+            this.StatusTextBox.ReadOnly = true;
+            this.StatusTextBox.Size = new System.Drawing.Size(101, 22);
+            this.StatusTextBox.TabIndex = 33;
             // 
-            // id_ClasseTextBox
+            // ClasseTextBox
             // 
-            this.id_ClasseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_ClasseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Id_Classe", true));
-            this.id_ClasseTextBox.Location = new System.Drawing.Point(117, 167);
-            this.id_ClasseTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.id_ClasseTextBox.Name = "id_ClasseTextBox";
-            this.id_ClasseTextBox.ReadOnly = true;
-            this.id_ClasseTextBox.Size = new System.Drawing.Size(101, 22);
-            this.id_ClasseTextBox.TabIndex = 23;
+            this.ClasseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ClasseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Classe", true));
+            this.ClasseTextBox.Location = new System.Drawing.Point(117, 167);
+            this.ClasseTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClasseTextBox.Name = "ClasseTextBox";
+            this.ClasseTextBox.ReadOnly = true;
+            this.ClasseTextBox.Size = new System.Drawing.Size(101, 22);
+            this.ClasseTextBox.TabIndex = 23;
             // 
             // idTextBox1
             // 
@@ -891,8 +891,8 @@
         private System.Windows.Forms.MaskedTextBox cpf_ClienteMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox data_EntradaMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox data_SaidaMaskedTextBox;
-        private System.Windows.Forms.TextBox id_StatusTextBox;
-        private System.Windows.Forms.TextBox id_ClasseTextBox;
+        private System.Windows.Forms.TextBox StatusTextBox;
+        private System.Windows.Forms.TextBox ClasseTextBox;
         private System.Windows.Forms.TextBox idTextBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
