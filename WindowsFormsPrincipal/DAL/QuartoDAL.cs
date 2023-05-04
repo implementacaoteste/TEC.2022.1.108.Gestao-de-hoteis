@@ -227,7 +227,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE, QUARTO.DESCRICAO, QUARTO.VALOR_DIARIA, QUARTO.ANDAR, QUARTO.ID_STATUS FROM QUARTO
+                cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE, QUARTO.DESCRICAO, QUARTO.VALOR_DIARIA, QUARTO.ANDAR, QUARTO.ID_STATUS, CLASSE.CLASSE, STATUS.STATUS FROM QUARTO
+                                    INNER JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
+                                    INNER JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
                                     INNER JOIN DIARIA_QUARTO ON QUARTO.ID = DIARIA_QUARTO.ID_QUARTO
                                     WHERE DIARIA_QUARTO.ID_DIARIA = @IdDiaria";
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -246,6 +248,8 @@ namespace DAL
                         quarto.Valor_Diaria = Convert.ToInt32(rd["VALOR_DIARIA"]);
                         quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
+                        quarto.Classe = rd["CLASSE"].ToString();
+                        quarto.Status = rd["STATUS"].ToString();
                         quartos.Add(quarto);
                     }
                 }
