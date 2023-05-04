@@ -171,7 +171,7 @@ namespace DAL
                         diaria.Valor_Total = (double)rd["VALOR_TOTAL"];
                         diaria.Data_Entrada = Convert.ToDateTime(rd["DATA_ENTRADA"]);
                         diaria.Data_Saida = Convert.ToDateTime(rd["DATA_SAIDA"]);
-                        //diaria.Quartos = new QuartoDAL().BuscarPorIdDiaria(diaria.Id);
+                        diaria.Quartos = new QuartoDAL().BuscarPorIdDiaria(diaria.Id);
                         diarias.Add(diaria);
                     }
                 }

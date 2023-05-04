@@ -813,7 +813,6 @@
             this.buttonBuscarData.Text = "Buscar";
             this.buttonBuscarData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscarData.UseVisualStyleBackColor = false;
-            this.buttonBuscarData.Click += new System.EventHandler(this.buttonBuscarData_Click);
             // 
             // FormBuscarDiaria
             // 
@@ -887,7 +886,6 @@
         private System.Windows.Forms.MaskedTextBox cpf_ClienteMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox data_EntradaMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox data_SaidaMaskedTextBox;
-        private System.Windows.Forms.MaskedTextBox valor_DiariaMaskedTextBox;
         private System.Windows.Forms.TextBox id_StatusTextBox;
         private System.Windows.Forms.TextBox id_ClasseTextBox;
         private System.Windows.Forms.TextBox idTextBox1;
@@ -902,5 +900,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.MaskedTextBox valor_DiariaMaskedTextBox;
     }
 }

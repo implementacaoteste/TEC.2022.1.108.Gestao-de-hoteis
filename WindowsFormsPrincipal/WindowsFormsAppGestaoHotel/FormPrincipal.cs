@@ -22,7 +22,7 @@ namespace WindowsFormsPrincipal1
         }
 
        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
+       {
             try
             {
                 using (FormLogin frm = new FormLogin())
@@ -41,81 +41,50 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
             
-        }
+       }
 
-        private void cadastroFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (FormCadastroDeFuncionario frm = new FormCadastroDeFuncionario())
-            {
-                frm.ShowDialog();
-            }
-        }
-
-        private void cadastroGrupoDeFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (FormCadastroGrupoFuncionario frm = new FormCadastroGrupoFuncionario())
-            {
-                frm.ShowDialog();
-            }
-        }
-
-        private void consultaFuncionárioToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            using (FormBuscarFuncionario frm = new FormBuscarFuncionario())
-            {
-                frm.ShowDialog();
-            }
-        }
-
-        private void consultagrupoDeFuncionárioToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
-            {
-                frm.ShowDialog();
-            }
-        }
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormCadastroCliente frm = new FormCadastroCliente())
+            try
             {
-                frm.ShowDialog();
+                using (FormCadastroCliente frm = new FormCadastroCliente())
+                {
+                    frm.ShowDialog();
+                }
             }
-        }
-
-        private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            using (FormBuscarCliente frm = new FormBuscarCliente())
+            catch(Exception ex)
             {
-                frm.ShowDialog();
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void quartoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using(FormBuscarQuarto frm = new FormBuscarQuarto())
+            try
             {
-                frm.ShowDialog();
+                using (FormBuscarQuarto frm = new FormBuscarQuarto())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void clienteToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
-            using (FormBuscarCliente frm = new FormBuscarCliente())
+            try
             {
-                frm.ShowDialog();
+                using (FormBuscarCliente frm = new FormBuscarCliente())
+                {
+                    frm.ShowDialog();
+                }
             }
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Deseja realmente sair do seu usuário", "Cuidado", MessageBoxButtons.YesNo) == DialogResult.No)
+            catch (Exception ex)
             {
-                return;
-            }
-            LimparDados();
-            using (FormLogin frm = new FormLogin())
-            {
-                frm.ShowDialog();
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -127,76 +96,92 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void sobreToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            using (FormSobre frm = new FormSobre())
-            {
-                frm.ShowDialog();
-            }
-        }         
-        
-
-        private void buscarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (FormBuscarFuncionario frm = new FormBuscarFuncionario())
-            {
-                frm.ShowDialog();
-            }
-        }
-
-        private void grupoFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
-            {
-                frm.ShowDialog();
-            }
-        }
-
         private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormCadastroDeFuncionario frm = new FormCadastroDeFuncionario())
+            try
             {
-                frm.ShowDialog();
+                using (FormCadastroDeFuncionario frm = new FormCadastroDeFuncionario())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void quartoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            using (FormCadastroQuarto frm = new FormCadastroQuarto())
+            try
             {
-                frm.ShowDialog();
+                using (FormCadastroQuarto frm = new FormCadastroQuarto())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void grupoFuncionarioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            using (FormCadastroGrupoFuncionario frm = new FormCadastroGrupoFuncionario())
+            try
             {
-                frm.ShowDialog();
+                using (FormCadastroGrupoFuncionario frm = new FormCadastroGrupoFuncionario())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
-
         private void buscarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using(FormBuscarFuncionario frm = new FormBuscarFuncionario())
+            try
             {
-                frm.ShowDialog();
+                using (FormBuscarFuncionario frm = new FormBuscarFuncionario())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void grupoFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
+            try
             {
-                frm.ShowDialog();
+                using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void diariaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormBuscarDiaria frm = new FormBuscarDiaria())
+            try
             {
-                frm.ShowDialog();
+                using (FormBuscarDiaria frm = new FormBuscarDiaria())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -288,9 +273,16 @@ namespace WindowsFormsPrincipal1
 
         private void diáriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormCadastroDiaria frm = new FormCadastroDiaria())
+            try
             {
-                frm.ShowDialog();
+                using (FormCadastroDiaria frm = new FormCadastroDiaria())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -20,8 +20,17 @@ namespace WindowsFormsPrincipal1
         }
         private void FormBuscarCliente_Load(object sender, EventArgs e)
         {
-            radioButtonTodos.Checked = true;
-            clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+
+            try
+            {
+                radioButtonTodos.Checked = true;
+                clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
         {

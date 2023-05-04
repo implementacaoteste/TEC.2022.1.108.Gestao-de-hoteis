@@ -53,6 +53,7 @@ namespace BLL
         {
             if (!new ClienteDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
                 throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
+            return;
         }
         private void ValidarDados(Cliente _cliente)
         {
