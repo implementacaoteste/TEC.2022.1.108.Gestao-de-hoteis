@@ -20,8 +20,16 @@ namespace WindowsFormsPrincipal1
         }
         private void FormBuscarGrupoFuncionario_Load(object sender, EventArgs e)
         {
-            radioButtonTodos.Checked = true;
-            grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarTodos();
+            try
+            {
+                radioButtonTodos.Checked = true;
+                grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarTodos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Close();
+            }
         }
 
         private void buttonBuscarGrupoFuncionario_Click(object sender, EventArgs e)

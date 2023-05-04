@@ -30,9 +30,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-
-
-                QuartoBLL quartoBLL = new QuartoBLL();
+               QuartoBLL quartoBLL = new QuartoBLL();
                quartoBindingSource.EndEdit();
                 if (Id == 0)
                     quartoBLL.Inserir((Quarto)quartoBindingSource.Current);
@@ -45,6 +43,11 @@ namespace WindowsFormsPrincipal1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FormCadastroQuarto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

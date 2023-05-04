@@ -250,6 +250,7 @@
             this.Name = "FormCadastroQuarto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Quarto";
+            this.Load += new System.EventHandler(this.FormCadastroQuarto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).EndInit();

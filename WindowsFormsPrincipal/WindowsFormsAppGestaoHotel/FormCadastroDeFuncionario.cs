@@ -42,16 +42,23 @@ namespace WindowsFormsPrincipal1
 
         private void FormCadastroDeFuncionario_Load(object sender, EventArgs e)
         {
-            if (Id == 0)
-                funcionarioBindingSource.AddNew();
-            else
+            try
             {
-                tituloLabel.Text = "Editar Funcionário";
-                funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorId(Id);
-            }
+                if (Id == 0)
+                    funcionarioBindingSource.AddNew();
+                else
+                {
+                    tituloLabel.Text = "Editar Funcionário";
+                    funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarPorId(Id);
+                }
 
-            sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
-            comboBox1.Text = ((Funcionario)funcionarioBindingSource.Current).Sexo;
+                sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
+                comboBox1.Text = ((Funcionario)funcionarioBindingSource.Current).Sexo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

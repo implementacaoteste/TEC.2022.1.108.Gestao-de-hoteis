@@ -53,16 +53,23 @@ namespace WindowsFormsPrincipal1
         }
         private void FormCadastroCliente_Load(object sender, EventArgs e)
         {
-            if (Id == 0)
-                clienteBindingSource.AddNew();
-            else
+            try
             {
-                tituloLabel.Text = "Editar Cliente";
-                clienteBindingSource.DataSource = new ClienteBLL().BuscarPorId(Id);
-            }
+                if (Id == 0)
+                    clienteBindingSource.AddNew();
+                else
+                {
+                    tituloLabel.Text = "Editar Cliente";
+                    clienteBindingSource.DataSource = new ClienteBLL().BuscarPorId(Id);
+                }
 
-            sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
-            generoComboBox.Text = ((Cliente)clienteBindingSource.Current).Sexo;
+                sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
+                generoComboBox.Text = ((Cliente)clienteBindingSource.Current).Sexo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

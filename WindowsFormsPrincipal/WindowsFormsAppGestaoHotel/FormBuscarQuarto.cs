@@ -27,8 +27,16 @@ namespace WindowsFormsAppGestaoHotel
         }
         private void FormBuscarQuarto_Load(object sender, EventArgs e)
         {
-            radioButtonTodos.Checked = true;
-            quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
+            try
+            {
+                radioButtonTodos.Checked = true;
+                quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Close();
+            }
         }
 
         private void buttonBuscarQuarto_Click(object sender, EventArgs e)

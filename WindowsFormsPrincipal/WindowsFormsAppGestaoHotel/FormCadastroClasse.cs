@@ -51,6 +51,7 @@ namespace WindowsFormsPrincipal1
                 tituloLabel.Text = "Editar Classe";
                 classeBindingSource.DataSource = new ClasseBLL().BuscarPorId(Id);
             }
+                
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
         {

@@ -21,8 +21,16 @@ namespace WindowsFormsPrincipal1
         }
         private void FormBuscarFuncionario_Load(object sender, EventArgs e)
         {
-            radioButtonTodos.Checked = true;
-            funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarTodos();
+            try
+            {
+                radioButtonTodos.Checked = true;
+                funcionarioBindingSource.DataSource = new FuncionarioBLL().BuscarTodos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Close();
+            }
         }
         private void buttonBuscarFuncionario_Click(object sender, EventArgs e)
         {

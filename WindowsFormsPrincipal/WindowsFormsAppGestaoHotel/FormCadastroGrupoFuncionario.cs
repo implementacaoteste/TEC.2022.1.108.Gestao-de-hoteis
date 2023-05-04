@@ -16,12 +16,19 @@ namespace WindowsFormsPrincipal1
 
         private void FormCadastroGrupoFuncionario_Load(object sender, EventArgs e)
         {
-            if (Id == 0)
-                grupoFuncionarioBindingSource.AddNew();
-            else
+            try
             {
-                tituloLabel.Text = "Editar Grupo de Funcionário";
-                grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarPorId(Id);
+                if (Id == 0)
+                    grupoFuncionarioBindingSource.AddNew();
+                else
+                {
+                    tituloLabel.Text = "Editar Grupo de Funcionário";
+                    grupoFuncionarioBindingSource.DataSource = new GrupoFuncionarioBLL().BuscarPorId(Id);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

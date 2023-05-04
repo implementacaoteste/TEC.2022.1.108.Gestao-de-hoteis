@@ -22,15 +22,16 @@ namespace WindowsFormsAppGestaoHotel
 
         private void FormBuscarDiaria_Load(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 radioButtonTodos.Checked = true;
                 diariaBindingSource.DataSource = new DiariaBLL().BuscarPorTodos();
-           // }
-          //  catch (Exception ex)
-           // {
-           //     MessageBox.Show(ex.Message);
-          //  }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Close();
+            }
         }
         private void buttonBuscar_Click(object sender, EventArgs e)
         {

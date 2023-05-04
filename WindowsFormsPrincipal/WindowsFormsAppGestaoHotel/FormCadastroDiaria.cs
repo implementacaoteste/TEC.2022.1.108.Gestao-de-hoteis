@@ -26,12 +26,19 @@ namespace WindowsFormsAppGestaoHotel
 
         private void FormCadastroDiaria_Load(object sender, EventArgs e)
         {
-            if (Id == 0)
-                diariaBindingSource.AddNew();
-            else
+            try
             {
-                tituloLabel.Text = "Editar Diária";
-                diariaBindingSource.DataSource = new DiariaBLL().BuscarPorId(Id);
+                if (Id == 0)
+                    diariaBindingSource.AddNew();
+                else
+                {
+                    tituloLabel.Text = "Editar Diária";
+                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorId(Id);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
             //sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
