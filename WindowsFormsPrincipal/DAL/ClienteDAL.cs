@@ -156,7 +156,7 @@ namespace DALL
                                     INNER JOIN SEXO ON CLIENTE.ID_SEXO = SEXO.ID
                                     WHERE NOME LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
+                cmd.Parameters.AddWithValue("@Nome", "%"+_nome+"%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())

@@ -60,9 +60,10 @@
             // 
             descricaoLabel.AutoSize = true;
             descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.Location = new System.Drawing.Point(35, 121);
+            descricaoLabel.Location = new System.Drawing.Point(26, 98);
+            descricaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(105, 25);
+            descricaoLabel.Size = new System.Drawing.Size(99, 24);
             descricaoLabel.TabIndex = 1;
             descricaoLabel.Text = "Descrição:";
             // 
@@ -70,9 +71,10 @@
             // 
             id_StatusLabel.AutoSize = true;
             id_StatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_StatusLabel.Location = new System.Drawing.Point(66, 194);
+            id_StatusLabel.Location = new System.Drawing.Point(50, 158);
+            id_StatusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_StatusLabel.Name = "id_StatusLabel";
-            id_StatusLabel.Size = new System.Drawing.Size(74, 25);
+            id_StatusLabel.Size = new System.Drawing.Size(65, 24);
             id_StatusLabel.TabIndex = 3;
             id_StatusLabel.Text = "Status:";
             // 
@@ -80,9 +82,10 @@
             // 
             id_ClasseLabel.AutoSize = true;
             id_ClasseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_ClasseLabel.Location = new System.Drawing.Point(326, 194);
+            id_ClasseLabel.Location = new System.Drawing.Point(244, 158);
+            id_ClasseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_ClasseLabel.Name = "id_ClasseLabel";
-            id_ClasseLabel.Size = new System.Drawing.Size(79, 25);
+            id_ClasseLabel.Size = new System.Drawing.Size(71, 24);
             id_ClasseLabel.TabIndex = 5;
             id_ClasseLabel.Text = "Classe:";
             // 
@@ -90,9 +93,10 @@
             // 
             numeroLabel.AutoSize = true;
             numeroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            numeroLabel.Location = new System.Drawing.Point(53, 266);
+            numeroLabel.Location = new System.Drawing.Point(40, 216);
+            numeroLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             numeroLabel.Name = "numeroLabel";
-            numeroLabel.Size = new System.Drawing.Size(87, 25);
+            numeroLabel.Size = new System.Drawing.Size(84, 24);
             numeroLabel.TabIndex = 7;
             numeroLabel.Text = "Numero:";
             // 
@@ -100,19 +104,20 @@
             // 
             valor_DiariaLabel.AutoSize = true;
             valor_DiariaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            valor_DiariaLabel.Location = new System.Drawing.Point(21, 337);
+            valor_DiariaLabel.Location = new System.Drawing.Point(16, 274);
+            valor_DiariaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             valor_DiariaLabel.Name = "valor_DiariaLabel";
-            valor_DiariaLabel.Size = new System.Drawing.Size(119, 25);
+            valor_DiariaLabel.Size = new System.Drawing.Size(111, 24);
             valor_DiariaLabel.TabIndex = 9;
             valor_DiariaLabel.Text = "Valor Diaria:";
             // 
             // descricaoTextBox
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Descricao", true));
-            this.descricaoTextBox.Location = new System.Drawing.Point(167, 126);
-            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.descricaoTextBox.Location = new System.Drawing.Point(125, 102);
+            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(449, 22);
+            this.descricaoTextBox.Size = new System.Drawing.Size(338, 20);
             this.descricaoTextBox.TabIndex = 2;
             // 
             // quartoBindingSource
@@ -125,10 +130,10 @@
             this.comboBoxStatus.DataSource = this.statusesBindingSource;
             this.comboBoxStatus.DisplayMember = "Status";
             this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(167, 198);
-            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxStatus.Location = new System.Drawing.Point(125, 161);
+            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxStatus.Size = new System.Drawing.Size(92, 21);
             this.comboBoxStatus.TabIndex = 7;
             this.comboBoxStatus.ValueMember = "Id";
             // 
@@ -139,19 +144,19 @@
             // numeroTextBox
             // 
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Numero", true));
-            this.numeroTextBox.Location = new System.Drawing.Point(167, 270);
-            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numeroTextBox.Location = new System.Drawing.Point(125, 219);
+            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numeroTextBox.Name = "numeroTextBox";
-            this.numeroTextBox.Size = new System.Drawing.Size(131, 22);
+            this.numeroTextBox.Size = new System.Drawing.Size(99, 20);
             this.numeroTextBox.TabIndex = 8;
             // 
             // valor_DiariaTextBox
             // 
             this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Valor_Diaria", true));
-            this.valor_DiariaTextBox.Location = new System.Drawing.Point(167, 341);
-            this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.valor_DiariaTextBox.Location = new System.Drawing.Point(125, 277);
+            this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
-            this.valor_DiariaTextBox.Size = new System.Drawing.Size(144, 22);
+            this.valor_DiariaTextBox.Size = new System.Drawing.Size(109, 20);
             this.valor_DiariaTextBox.TabIndex = 10;
             // 
             // label1
@@ -160,8 +165,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 91);
+            this.label1.Size = new System.Drawing.Size(600, 74);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cadastro de Quarto";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,10 +178,10 @@
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.save;
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(491, 396);
+            this.buttonSalvar.Location = new System.Drawing.Point(359, 322);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(139, 41);
+            this.buttonSalvar.Size = new System.Drawing.Size(101, 33);
             this.buttonSalvar.TabIndex = 12;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -188,11 +194,11 @@
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(632, 396);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(465, 322);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(153, 41);
-            this.buttonCancelar.TabIndex = 12;
+            this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
+            this.buttonCancelar.TabIndex = 8;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -205,10 +211,10 @@
             this.id_ClasseComboBox.DataSource = this.classeBindingSource;
             this.id_ClasseComboBox.DisplayMember = "Descricao";
             this.id_ClasseComboBox.FormattingEnabled = true;
-            this.id_ClasseComboBox.Location = new System.Drawing.Point(420, 195);
-            this.id_ClasseComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.id_ClasseComboBox.Location = new System.Drawing.Point(315, 158);
+            this.id_ClasseComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id_ClasseComboBox.Name = "id_ClasseComboBox";
-            this.id_ClasseComboBox.Size = new System.Drawing.Size(121, 24);
+            this.id_ClasseComboBox.Size = new System.Drawing.Size(92, 21);
             this.id_ClasseComboBox.TabIndex = 13;
             this.id_ClasseComboBox.ValueMember = "Id";
             // 
@@ -218,9 +224,10 @@
             // 
             // FormCadastroQuarto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.id_ClasseComboBox);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
@@ -235,7 +242,7 @@
             this.Controls.Add(descricaoLabel);
             this.Controls.Add(this.descricaoTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroQuarto";

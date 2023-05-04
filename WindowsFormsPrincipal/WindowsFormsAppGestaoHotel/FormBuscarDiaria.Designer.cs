@@ -250,7 +250,7 @@
             this.quartosDataGridView.RowHeadersVisible = false;
             this.quartosDataGridView.RowHeadersWidth = 51;
             this.quartosDataGridView.RowTemplate.Height = 24;
-            this.quartosDataGridView.Size = new System.Drawing.Size(339, 222);
+            this.quartosDataGridView.Size = new System.Drawing.Size(340, 222);
             this.quartosDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn7
@@ -369,7 +369,7 @@
             this.diariaDataGridView.RowHeadersVisible = false;
             this.diariaDataGridView.RowHeadersWidth = 51;
             this.diariaDataGridView.RowTemplate.Height = 24;
-            this.diariaDataGridView.Size = new System.Drawing.Size(563, 222);
+            this.diariaDataGridView.Size = new System.Drawing.Size(559, 222);
             this.diariaDataGridView.TabIndex = 30;
             // 
             // dataGridViewTextBoxColumn1
@@ -393,12 +393,12 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Nome_Cliente";
             this.dataGridViewTextBoxColumn3.HeaderText = "Nome do Cliente";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 120;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -426,7 +426,7 @@
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 120;
+            this.dataGridViewTextBoxColumn6.Width = 115;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -435,7 +435,7 @@
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 120;
+            this.dataGridViewTextBoxColumn11.Width = 115;
             // 
             // buttonExcluirQuarto
             // 
@@ -833,7 +833,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(957, 686);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(957, 686);
             this.Name = "FormBuscarDiaria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Consulta de Diária";
@@ -893,6 +895,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button buttonBuscarData;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox valor_DiariaMaskedTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Funcionario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -900,6 +903,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.MaskedTextBox valor_DiariaMaskedTextBox;
     }
 }

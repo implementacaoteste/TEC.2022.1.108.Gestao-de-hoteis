@@ -83,7 +83,7 @@ namespace WindowsFormsAppGestaoHotel
                 else
                 {
                     int id = ((Diaria)diariaBindingSource.Current).Id;
-                    using (FormCadastroDiaria frm = new FormCadastroDiaria())
+                    using (FormCadastroDiaria frm = new FormCadastroDiaria(id))
                     {
                         frm.ShowDialog();
                     }
