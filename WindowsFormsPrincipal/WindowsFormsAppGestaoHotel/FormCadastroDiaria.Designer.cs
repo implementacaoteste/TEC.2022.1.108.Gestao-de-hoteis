@@ -65,7 +65,7 @@
             data_EntradaLabel.Location = new System.Drawing.Point(391, 90);
             data_EntradaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_EntradaLabel.Name = "data_EntradaLabel";
-            data_EntradaLabel.Size = new System.Drawing.Size(146, 22);
+            data_EntradaLabel.Size = new System.Drawing.Size(148, 24);
             data_EntradaLabel.TabIndex = 1;
             data_EntradaLabel.Text = "Data da Entrada:";
             // 
@@ -76,7 +76,7 @@
             data_SaidaLabel.Location = new System.Drawing.Point(408, 147);
             data_SaidaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_SaidaLabel.Name = "data_SaidaLabel";
-            data_SaidaLabel.Size = new System.Drawing.Size(129, 22);
+            data_SaidaLabel.Size = new System.Drawing.Size(130, 24);
             data_SaidaLabel.TabIndex = 2;
             data_SaidaLabel.Text = "Data da Saida:";
             // 
@@ -87,7 +87,7 @@
             id_clienteLabel.Location = new System.Drawing.Point(50, 144);
             id_clienteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_clienteLabel.Name = "id_clienteLabel";
-            id_clienteLabel.Size = new System.Drawing.Size(114, 22);
+            id_clienteLabel.Size = new System.Drawing.Size(118, 24);
             id_clienteLabel.TabIndex = 4;
             id_clienteLabel.Text = "Cód. Cliente:";
             // 
@@ -98,7 +98,7 @@
             id_funcionarioLabel.Location = new System.Drawing.Point(12, 86);
             id_funcionarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_funcionarioLabel.Name = "id_funcionarioLabel";
-            id_funcionarioLabel.Size = new System.Drawing.Size(152, 22);
+            id_funcionarioLabel.Size = new System.Drawing.Size(161, 24);
             id_funcionarioLabel.TabIndex = 6;
             id_funcionarioLabel.Text = "Cód. Funcionario:";
             // 
@@ -109,7 +109,7 @@
             id_PagamentoLabel.Location = new System.Drawing.Point(15, 200);
             id_PagamentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_PagamentoLabel.Name = "id_PagamentoLabel";
-            id_PagamentoLabel.Size = new System.Drawing.Size(149, 22);
+            id_PagamentoLabel.Size = new System.Drawing.Size(156, 24);
             id_PagamentoLabel.TabIndex = 8;
             id_PagamentoLabel.Text = "Cód. Pagamento:";
             // 
@@ -120,7 +120,7 @@
             valor_TotalLabel.Location = new System.Drawing.Point(434, 204);
             valor_TotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             valor_TotalLabel.Name = "valor_TotalLabel";
-            valor_TotalLabel.Size = new System.Drawing.Size(103, 22);
+            valor_TotalLabel.Size = new System.Drawing.Size(105, 24);
             valor_TotalLabel.TabIndex = 10;
             valor_TotalLabel.Text = "Valor Total:";
             // 
@@ -128,7 +128,7 @@
             // 
             this.data_EntradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Data_Entrada", true));
             this.data_EntradaTextBox.Location = new System.Drawing.Point(541, 92);
-            this.data_EntradaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_EntradaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.data_EntradaTextBox.Name = "data_EntradaTextBox";
             this.data_EntradaTextBox.Size = new System.Drawing.Size(117, 20);
             this.data_EntradaTextBox.TabIndex = 2;
@@ -141,7 +141,7 @@
             // 
             this.data_SaidaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Data_Saida", true));
             this.data_SaidaTextBox.Location = new System.Drawing.Point(541, 150);
-            this.data_SaidaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_SaidaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.data_SaidaTextBox.Name = "data_SaidaTextBox";
             this.data_SaidaTextBox.Size = new System.Drawing.Size(117, 20);
             this.data_SaidaTextBox.TabIndex = 3;
@@ -150,7 +150,7 @@
             // 
             this.valor_TotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Valor_Total", true));
             this.valor_TotalTextBox.Location = new System.Drawing.Point(541, 206);
-            this.valor_TotalTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.valor_TotalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.valor_TotalTextBox.Name = "valor_TotalTextBox";
             this.valor_TotalTextBox.Size = new System.Drawing.Size(117, 20);
             this.valor_TotalTextBox.TabIndex = 11;
@@ -172,7 +172,7 @@
             // 
             this.buttonSelecionarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionarFuncionario.Location = new System.Drawing.Point(278, 88);
-            this.buttonSelecionarFuncionario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionarFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarFuncionario.Name = "buttonSelecionarFuncionario";
             this.buttonSelecionarFuncionario.Size = new System.Drawing.Size(88, 25);
             this.buttonSelecionarFuncionario.TabIndex = 13;
@@ -184,7 +184,7 @@
             // 
             this.buttonSelecionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionarCliente.Location = new System.Drawing.Point(278, 147);
-            this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarCliente.Name = "buttonSelecionarCliente";
             this.buttonSelecionarCliente.Size = new System.Drawing.Size(88, 25);
             this.buttonSelecionarCliente.TabIndex = 14;
@@ -196,7 +196,7 @@
             // 
             this.buttonSelecionarPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionarPagamento.Location = new System.Drawing.Point(278, 202);
-            this.buttonSelecionarPagamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionarPagamento.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarPagamento.Name = "buttonSelecionarPagamento";
             this.buttonSelecionarPagamento.Size = new System.Drawing.Size(88, 25);
             this.buttonSelecionarPagamento.TabIndex = 15;
@@ -211,7 +211,7 @@
             this.buttonSalvar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.save;
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSalvar.Location = new System.Drawing.Point(436, 322);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(101, 33);
             this.buttonSalvar.TabIndex = 16;
@@ -227,7 +227,7 @@
             this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(545, 322);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
             this.buttonCancelar.TabIndex = 8;
@@ -240,7 +240,7 @@
             // 
             this.funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Funcionario", true));
             this.funcionarioTextBox.Location = new System.Drawing.Point(168, 90);
-            this.funcionarioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.funcionarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.funcionarioTextBox.Name = "funcionarioTextBox";
             this.funcionarioTextBox.Size = new System.Drawing.Size(106, 20);
             this.funcionarioTextBox.TabIndex = 18;
@@ -249,7 +249,7 @@
             // 
             this.id_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Nome_Cliente", true));
             this.id_ClienteTextBox.Location = new System.Drawing.Point(168, 146);
-            this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_ClienteTextBox.Name = "id_ClienteTextBox";
             this.id_ClienteTextBox.Size = new System.Drawing.Size(106, 20);
             this.id_ClienteTextBox.TabIndex = 19;
@@ -258,7 +258,7 @@
             // 
             this.id_PagamentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Pagamento", true));
             this.id_PagamentoTextBox.Location = new System.Drawing.Point(168, 204);
-            this.id_PagamentoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id_PagamentoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_PagamentoTextBox.Name = "id_PagamentoTextBox";
             this.id_PagamentoTextBox.Size = new System.Drawing.Size(106, 20);
             this.id_PagamentoTextBox.TabIndex = 20;
@@ -288,9 +288,11 @@
             this.Controls.Add(data_EntradaLabel);
             this.Controls.Add(this.data_EntradaTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(698, 410);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(698, 410);
             this.Name = "FormCadastroDiaria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Diaria";

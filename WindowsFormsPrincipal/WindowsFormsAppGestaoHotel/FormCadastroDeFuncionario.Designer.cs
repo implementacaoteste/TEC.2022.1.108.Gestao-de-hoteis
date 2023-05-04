@@ -404,7 +404,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(819, 396);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(819, 396);
             this.Name = "FormCadastroDeFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Cadastro de Funcionário";
