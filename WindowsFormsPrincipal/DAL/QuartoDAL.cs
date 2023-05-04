@@ -264,6 +264,52 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public List<Quarto> BuscarPorId(int _id)
+        {
+            List<Quarto> quartos = new List<Quarto>();
+            Quarto quarto = new Quarto();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE, QUARTO.DESCRICAO, QUARTO.VALOR_DIARIA, QUARTO.ANDAR, QUARTO.ID_STATUS, CLASSE.CLASSE, STATUS.STATUS FROM QUARTO
+                                    INNER JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
+                                    INNER JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
+                                    INNER JOIN DIARIA_QUARTO ON QUARTO.ID = DIARIA_QUARTO.ID_QUARTO
+                                    WHERE QUARTO.ID = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _id);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        quarto.Id = Convert.ToInt32(rd["ID"]);
+                        quarto.Numero = rd["NUMERO"].ToString();
+                        quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
+                        quarto.Descricao = rd["DESCRICAO"].ToString();
+                        quarto.Valor_Diaria = Convert.ToInt32(rd["VALOR_DIARIA"]);
+                        quarto.Andar = rd["ANDAR"].ToString();
+                        quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
+                        quarto.Classe = rd["CLASSE"].ToString();
+                        quarto.Status = rd["STATUS"].ToString();
+                        quartos.Add(quarto);
+                    }
+                }
+                return quartos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar o ID.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
 

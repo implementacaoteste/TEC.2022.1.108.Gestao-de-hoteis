@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
@@ -24,6 +25,11 @@ namespace BLL
         {
             ValidarPermissao(20);
             new QuartoDAL().Excluir(_id);
+        }
+        public List<Quarto> BuscarPorId(int _id)
+        {
+            ValidarPermissao(17);
+            return new QuartoDAL().BuscarPorId(_id);
         }
         public List<Quarto> BuscarPorTodos()
         {
