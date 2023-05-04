@@ -150,10 +150,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
+                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, F.NOME NOME_FUNCIONARIO, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
                                     D.ID_FUNCIONARIO, D.ID_PAGAMENTO, D.DATA_SAIDA, D.DATA_ENTRADA
                                     FROM DIARIA D
-                                    INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID";
+                                    INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
+									INNER JOIN FUNCIONARIO F ON D.ID_FUNCIONARIO = F.ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -166,6 +167,7 @@ namespace DAL
                         diaria.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         diaria.Nome_Cliente = rd["NOME"].ToString();
                         diaria.CPF_Cliente = rd["CPF"].ToString();
+                        diaria.Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         diaria.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
                         diaria.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         diaria.Valor_Total = (double)rd["VALOR_TOTAL"];
@@ -195,10 +197,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE, 
+                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, F.NOME NOME_FUNCIONARIO, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
                                     D.ID_FUNCIONARIO, D.ID_PAGAMENTO, D.DATA_SAIDA, D.DATA_ENTRADA
                                     FROM DIARIA D
                                     INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
+									INNER JOIN FUNCIONARIO F ON D.ID_FUNCIONARIO = F.ID
                                     WHERE C.CPF LIKE @cpf";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@cpf", "%" + _cpf + "%");
@@ -208,16 +211,17 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        diaria = new Diaria();
                         diaria.Id = Convert.ToInt32(rd["ID"]);
                         diaria.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         diaria.Nome_Cliente = rd["NOME"].ToString();
                         diaria.CPF_Cliente = rd["CPF"].ToString();
+                        diaria.Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         diaria.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
-                        diaria.Id_Pagamento = Convert.ToInt32(rd["ID_pagamento"]);
-                        diaria.Valor_Total = Convert.ToSingle(rd["VALOR_TOTAL"]);
+                        diaria.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
+                        diaria.Valor_Total = (double)rd["VALOR_TOTAL"];
                         diaria.Data_Entrada = Convert.ToDateTime(rd["DATA_ENTRADA"]);
                         diaria.Data_Saida = Convert.ToDateTime(rd["DATA_SAIDA"]);
+                        diaria.Quartos = new QuartoDAL().BuscarPorIdDiaria(diaria.Id);
                         Diaria.Add(diaria);
                     }
 
@@ -226,7 +230,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar a Diária pelo CPF do Cliente.", ex);
             }
             finally
             {
@@ -242,10 +246,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
+                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, F.NOME NOME_FUNCIONARIO, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
                                     D.ID_FUNCIONARIO, D.ID_PAGAMENTO, D.DATA_SAIDA, D.DATA_ENTRADA
                                     FROM DIARIA D
                                     INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
+									INNER JOIN FUNCIONARIO F ON D.ID_FUNCIONARIO = F.ID
                                     WHERE C.NOME LIKE @nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@nome", "%" + _nome + "%");
@@ -260,11 +265,13 @@ namespace DAL
                         diaria.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         diaria.Nome_Cliente = rd["NOME"].ToString();
                         diaria.CPF_Cliente = rd["CPF"].ToString();
+                        diaria.Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         diaria.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
-                        diaria.Id_Pagamento = Convert.ToInt32(rd["ID_pagamento"]);
-                        diaria.Valor_Total = Convert.ToSingle(rd["VALOR_TOTAL"]);
+                        diaria.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
+                        diaria.Valor_Total = (double)rd["VALOR_TOTAL"];
                         diaria.Data_Entrada = Convert.ToDateTime(rd["DATA_ENTRADA"]);
                         diaria.Data_Saida = Convert.ToDateTime(rd["DATA_SAIDA"]);
+                        diaria.Quartos = new QuartoDAL().BuscarPorIdDiaria(diaria.Id);
                         Diaria.Add(diaria);
                     }
 
@@ -273,7 +280,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todas as diarias", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar a Diária pelo nome do Cliente.", ex);
             }
             finally
             {
@@ -289,10 +296,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
+                cmd.CommandText = @"SELECT D.ID, C.NOME, C.CPF, F.NOME NOME_FUNCIONARIO, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
                                     D.ID_FUNCIONARIO, D.ID_PAGAMENTO, D.DATA_SAIDA, D.DATA_ENTRADA
                                     FROM DIARIA D
                                     INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
+									INNER JOIN FUNCIONARIO F ON D.ID_FUNCIONARIO = F.ID
                                     WHERE C.DATA_ENTRADA LIKE @Data_Entrada";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Data_Entrada", "%" + _dataEntrada + "%");
@@ -307,20 +315,21 @@ namespace DAL
                         diaria.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         diaria.Nome_Cliente = rd["NOME"].ToString();
                         diaria.CPF_Cliente = rd["CPF"].ToString();
+                        diaria.Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         diaria.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
                         diaria.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         diaria.Valor_Total = (double)rd["VALOR_TOTAL"];
                         diaria.Data_Entrada = Convert.ToDateTime(rd["DATA_ENTRADA"]);
                         diaria.Data_Saida = Convert.ToDateTime(rd["DATA_SAIDA"]);
+                        diaria.Quartos = new QuartoDAL().BuscarPorIdDiaria(diaria.Id);
                         Diaria.Add(diaria);
                     }
-
                 }
                 return Diaria;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar a data de entrada no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar a data de entrada da Diária no banco de dados.", ex);
             }
             finally
             {
