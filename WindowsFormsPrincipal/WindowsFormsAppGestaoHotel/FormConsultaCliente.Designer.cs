@@ -73,7 +73,7 @@
             this.dataGridViewTextBoxColumn9});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
             this.clienteDataGridView.Location = new System.Drawing.Point(6, 120);
-            this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.ReadOnly = true;
             this.clienteDataGridView.RowHeadersWidth = 51;
@@ -173,7 +173,7 @@
             this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBuscar.Location = new System.Drawing.Point(439, 79);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(101, 33);
             this.buttonBuscar.TabIndex = 2;
@@ -186,10 +186,10 @@
             // 
             this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.select1;
+            this.buttonSelecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.check1;
             this.buttonSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSelecionar.Location = new System.Drawing.Point(543, 79);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(128, 33);
             this.buttonSelecionar.TabIndex = 2;
@@ -205,7 +205,7 @@
             this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(548, 322);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
             this.buttonCancelar.TabIndex = 2;
@@ -217,7 +217,7 @@
             // textBoxBuscar
             // 
             this.textBoxBuscar.Location = new System.Drawing.Point(6, 82);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Multiline = true;
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(360, 28);
@@ -250,7 +250,7 @@
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.clienteDataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(700, 410);
             this.MinimizeBox = false;

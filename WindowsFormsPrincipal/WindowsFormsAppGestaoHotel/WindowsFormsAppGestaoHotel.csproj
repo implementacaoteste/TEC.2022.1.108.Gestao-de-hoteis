@@ -287,6 +287,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hotelogix.ico" />
+    <None Include="Resources\check1.png" />
+    <None Include="Resources\check.png" />
     <None Include="Resources\select1.png" />
     <None Include="Resources\save1.png" />
     <None Include="Resources\close1.png" />

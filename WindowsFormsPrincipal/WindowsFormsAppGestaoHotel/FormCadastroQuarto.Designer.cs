@@ -115,7 +115,7 @@
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Descricao", true));
             this.descricaoTextBox.Location = new System.Drawing.Point(131, 102);
-            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(338, 20);
             this.descricaoTextBox.TabIndex = 2;
@@ -131,7 +131,7 @@
             this.comboBoxStatus.DisplayMember = "Status";
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.Location = new System.Drawing.Point(131, 161);
-            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(92, 21);
             this.comboBoxStatus.TabIndex = 7;
@@ -145,7 +145,7 @@
             // 
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Numero", true));
             this.numeroTextBox.Location = new System.Drawing.Point(131, 220);
-            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.Size = new System.Drawing.Size(99, 20);
             this.numeroTextBox.TabIndex = 8;
@@ -154,7 +154,7 @@
             // 
             this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Valor_Diaria", true));
             this.valor_DiariaTextBox.Location = new System.Drawing.Point(131, 278);
-            this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(109, 20);
             this.valor_DiariaTextBox.TabIndex = 10;
@@ -195,7 +195,7 @@
             this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(465, 322);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
             this.buttonCancelar.TabIndex = 8;
@@ -212,7 +212,7 @@
             this.id_ClasseComboBox.DisplayMember = "Descricao";
             this.id_ClasseComboBox.FormattingEnabled = true;
             this.id_ClasseComboBox.Location = new System.Drawing.Point(315, 158);
-            this.id_ClasseComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id_ClasseComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_ClasseComboBox.Name = "id_ClasseComboBox";
             this.id_ClasseComboBox.Size = new System.Drawing.Size(92, 21);
             this.id_ClasseComboBox.TabIndex = 13;
@@ -242,7 +242,7 @@
             this.Controls.Add(descricaoLabel);
             this.Controls.Add(this.descricaoTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(618, 410);
             this.MinimizeBox = false;

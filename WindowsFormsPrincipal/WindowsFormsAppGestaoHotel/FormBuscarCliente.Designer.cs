@@ -405,11 +405,11 @@
             this.buttonAlterarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonAlterarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarCliente.Image")));
             this.buttonAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarCliente.Location = new System.Drawing.Point(134, 575);
+            this.buttonAlterarCliente.Location = new System.Drawing.Point(141, 575);
             this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterarCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonAlterarCliente.Name = "buttonAlterarCliente";
-            this.buttonAlterarCliente.Size = new System.Drawing.Size(109, 32);
+            this.buttonAlterarCliente.Size = new System.Drawing.Size(109, 33);
             this.buttonAlterarCliente.TabIndex = 13;
             this.buttonAlterarCliente.Text = "Alterar";
             this.buttonAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -427,7 +427,7 @@
             this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonExcluirCliente.Name = "buttonExcluirCliente";
-            this.buttonExcluirCliente.Size = new System.Drawing.Size(109, 32);
+            this.buttonExcluirCliente.Size = new System.Drawing.Size(109, 33);
             this.buttonExcluirCliente.TabIndex = 14;
             this.buttonExcluirCliente.Text = "Excluir";
             this.buttonExcluirCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -437,7 +437,6 @@
             // buttonAdicionarCliente
             // 
             this.buttonAdicionarCliente.BackColor = System.Drawing.Color.White;
-            this.buttonAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonAdicionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarCliente.Image")));
             this.buttonAdicionarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -445,7 +444,7 @@
             this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
-            this.buttonAdicionarCliente.Size = new System.Drawing.Size(109, 32);
+            this.buttonAdicionarCliente.Size = new System.Drawing.Size(124, 33);
             this.buttonAdicionarCliente.TabIndex = 15;
             this.buttonAdicionarCliente.Text = "Adicionar";
             this.buttonAdicionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -546,7 +545,6 @@
             // buttonBuscarCliente
             // 
             this.buttonBuscarCliente.BackColor = System.Drawing.Color.White;
-            this.buttonBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarCliente.Image")));
             this.buttonBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

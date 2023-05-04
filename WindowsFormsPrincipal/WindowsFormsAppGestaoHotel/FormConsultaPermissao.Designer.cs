@@ -70,7 +70,7 @@
             // textBoxBuscar
             // 
             this.textBoxBuscar.Location = new System.Drawing.Point(7, 89);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Multiline = true;
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(337, 25);
@@ -80,12 +80,11 @@
             // 
             this.buttonBuscar.AllowDrop = true;
             this.buttonBuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBuscar.Location = new System.Drawing.Point(362, 82);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(101, 33);
             this.buttonBuscar.TabIndex = 12;
@@ -105,7 +104,7 @@
             this.dataGridViewTextBoxColumn2});
             this.permissaoDataGridView.DataSource = this.permissaoBindingSource;
             this.permissaoDataGridView.Location = new System.Drawing.Point(10, 124);
-            this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.permissaoDataGridView.Name = "permissaoDataGridView";
             this.permissaoDataGridView.ReadOnly = true;
             this.permissaoDataGridView.RowHeadersWidth = 51;
@@ -135,7 +134,7 @@
             this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(471, 339);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
             this.buttonCancelar.TabIndex = 12;
@@ -149,12 +148,11 @@
             // 
             this.buttonSelecionar.AllowDrop = true;
             this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSelecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.select1;
+            this.buttonSelecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.check1;
             this.buttonSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSelecionar.Location = new System.Drawing.Point(467, 82);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(128, 33);
             this.buttonSelecionar.TabIndex = 12;
@@ -177,7 +175,7 @@
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(624, 427);
             this.MinimizeBox = false;

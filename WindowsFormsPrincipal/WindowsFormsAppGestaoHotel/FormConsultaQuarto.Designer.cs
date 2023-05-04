@@ -178,7 +178,7 @@
             // 
             this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.select1;
+            this.buttonSelecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.check1;
             this.buttonSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSelecionar.Location = new System.Drawing.Point(603, 77);
             this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);

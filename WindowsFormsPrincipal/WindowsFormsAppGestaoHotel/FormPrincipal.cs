@@ -45,17 +45,17 @@ namespace WindowsFormsPrincipal1
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 using (FormCadastroCliente frm = new FormCadastroCliente())
                 {
                     frm.ShowDialog();
                 }
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-           // }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void quartoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,17 +172,17 @@ namespace WindowsFormsPrincipal1
 
         private void diariaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 using (FormBuscarDiaria frm = new FormBuscarDiaria())
                 {
                     frm.ShowDialog();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void pictureBoxUsu1_Click(object sender, EventArgs e)
