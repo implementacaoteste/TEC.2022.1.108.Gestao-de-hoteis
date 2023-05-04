@@ -211,7 +211,7 @@
             this.id_ClasseComboBox.DataSource = this.classeBindingSource;
             this.id_ClasseComboBox.DisplayMember = "Descricao";
             this.id_ClasseComboBox.FormattingEnabled = true;
-            this.id_ClasseComboBox.Location = new System.Drawing.Point(315, 158);
+            this.id_ClasseComboBox.Location = new System.Drawing.Point(319, 162);
             this.id_ClasseComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_ClasseComboBox.Name = "id_ClasseComboBox";
             this.id_ClasseComboBox.Size = new System.Drawing.Size(92, 21);
