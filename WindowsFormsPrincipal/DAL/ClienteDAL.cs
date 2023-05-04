@@ -19,7 +19,7 @@ namespace DALL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO CLIENTE(NOME, EMAIL, CPF, ATIVO, ENDERECO, CELULAR, DATA_NASCIMENTO, ID_SEXO)
+                cmd.CommandText = @"INSERT INTO CLIENTE(NOME, EMAIL, CPF, ENDERECO, CELULAR, DATA_NASCIMENTO, ID_SEXO)
                                       VALUES(@Nome, @Email, @CPF, @Endereco, @Celular, @Data_Nascimento, @Id_Sexo)";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
@@ -27,7 +27,7 @@ namespace DALL
                 cmd.Parameters.AddWithValue("@CPF", _cliente.CPF);
                 cmd.Parameters.AddWithValue("@Endereco", _cliente.Endereco);
                 cmd.Parameters.AddWithValue("@Celular", _cliente.Celular);
-                cmd.Parameters.AddWithValue("@Data_Nascimento", _cliente.Data_nascimento);
+                cmd.Parameters.AddWithValue("@Data_Nascimento", Convert.ToDateTime(_cliente.Data_nascimento));
                 cmd.Parameters.AddWithValue("@Id_Sexo", _cliente.IdSexo);
                 cmd.Connection = cn;
                 cn.Open();

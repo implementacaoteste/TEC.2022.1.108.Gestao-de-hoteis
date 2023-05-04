@@ -23,8 +23,8 @@ namespace WindowsFormsPrincipal1
         }
         private void buttonSalvarCadastroCliente_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 ClienteBLL clienteBLL = new ClienteBLL();
                 clienteBindingSource.EndEdit();
                 if (Id == 0)
@@ -34,11 +34,11 @@ namespace WindowsFormsPrincipal1
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu erro ao tentar salvar um Cliente no Banco de Dados.", ex);
-            }
+            //}
+            //catch (Exception ex)
+           // {
+           //     throw new Exception("Ocorreu erro ao tentar salvar um Cliente no Banco de Dados.", ex);
+           // }
         }
         private void buttonCancelarCadastroCliente_Click(object sender, EventArgs e)
         {
