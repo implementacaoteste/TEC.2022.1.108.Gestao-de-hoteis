@@ -43,8 +43,19 @@
             this.radioButtonCPF = new System.Windows.Forms.RadioButton();
             this.radioButtonNome = new System.Windows.Forms.RadioButton();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.buttonBuscarCliente = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.funcionarioDataGridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datanascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idSexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.data_nascimentoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.idSexoTextBox = new System.Windows.Forms.TextBox();
@@ -57,17 +68,6 @@
             this.buttonAlterarCliente = new System.Windows.Forms.Button();
             this.buttonExcluirCliente = new System.Windows.Forms.Button();
             this.buttonAdicionarCliente = new System.Windows.Forms.Button();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datanascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idSexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonBuscarCliente = new System.Windows.Forms.Button();
             this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             celularLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
@@ -80,8 +80,8 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).BeginInit();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,6 +235,22 @@
             this.textBoxBuscar.Size = new System.Drawing.Size(223, 28);
             this.textBoxBuscar.TabIndex = 1;
             // 
+            // buttonBuscarCliente
+            // 
+            this.buttonBuscarCliente.BackColor = System.Drawing.Color.White;
+            this.buttonBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarCliente.Image")));
+            this.buttonBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscarCliente.Location = new System.Drawing.Point(237, 45);
+            this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscarCliente.Name = "buttonBuscarCliente";
+            this.buttonBuscarCliente.Size = new System.Drawing.Size(101, 33);
+            this.buttonBuscarCliente.TabIndex = 0;
+            this.buttonBuscarCliente.Text = "Buscar";
+            this.buttonBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonBuscarCliente.UseVisualStyleBackColor = false;
+            this.buttonBuscarCliente.Click += new System.EventHandler(this.buttonBuscarCliente_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.funcionarioDataGridView);
@@ -278,6 +294,97 @@
             this.funcionarioDataGridView.RowTemplate.Height = 24;
             this.funcionarioDataGridView.Size = new System.Drawing.Size(400, 216);
             this.funcionarioDataGridView.TabIndex = 6;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cPFDataGridViewTextBoxColumn
+            // 
+            this.cPFDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
+            this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
+            this.cPFDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
+            this.cPFDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Visible = false;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // celularDataGridViewTextBoxColumn
+            // 
+            this.celularDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.celularDataGridViewTextBoxColumn.DataPropertyName = "Celular";
+            this.celularDataGridViewTextBoxColumn.HeaderText = "Celular";
+            this.celularDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.celularDataGridViewTextBoxColumn.Name = "celularDataGridViewTextBoxColumn";
+            this.celularDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // enderecoDataGridViewTextBoxColumn
+            // 
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.enderecoDataGridViewTextBoxColumn.Visible = false;
+            this.enderecoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // datanascimentoDataGridViewTextBoxColumn
+            // 
+            this.datanascimentoDataGridViewTextBoxColumn.DataPropertyName = "Data_nascimento";
+            this.datanascimentoDataGridViewTextBoxColumn.HeaderText = "Data_nascimento";
+            this.datanascimentoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.datanascimentoDataGridViewTextBoxColumn.Name = "datanascimentoDataGridViewTextBoxColumn";
+            this.datanascimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.datanascimentoDataGridViewTextBoxColumn.Visible = false;
+            this.datanascimentoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idSexoDataGridViewTextBoxColumn
+            // 
+            this.idSexoDataGridViewTextBoxColumn.DataPropertyName = "IdSexo";
+            this.idSexoDataGridViewTextBoxColumn.HeaderText = "IdSexo";
+            this.idSexoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idSexoDataGridViewTextBoxColumn.Name = "idSexoDataGridViewTextBoxColumn";
+            this.idSexoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idSexoDataGridViewTextBoxColumn.Visible = false;
+            this.idSexoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sexoDataGridViewTextBoxColumn
+            // 
+            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            this.sexoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sexoDataGridViewTextBoxColumn.Visible = false;
+            this.sexoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
             // 
             // groupBox4
             // 
@@ -451,113 +558,6 @@
             this.buttonAdicionarCliente.UseVisualStyleBackColor = false;
             this.buttonAdicionarCliente.Click += new System.EventHandler(this.buttonAdicionarCliente_Click);
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cPFDataGridViewTextBoxColumn
-            // 
-            this.cPFDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
-            this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
-            this.cPFDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
-            this.cPFDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Visible = false;
-            this.emailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // celularDataGridViewTextBoxColumn
-            // 
-            this.celularDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.celularDataGridViewTextBoxColumn.DataPropertyName = "Celular";
-            this.celularDataGridViewTextBoxColumn.HeaderText = "Celular";
-            this.celularDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.celularDataGridViewTextBoxColumn.Name = "celularDataGridViewTextBoxColumn";
-            this.celularDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.enderecoDataGridViewTextBoxColumn.Visible = false;
-            this.enderecoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // datanascimentoDataGridViewTextBoxColumn
-            // 
-            this.datanascimentoDataGridViewTextBoxColumn.DataPropertyName = "Data_nascimento";
-            this.datanascimentoDataGridViewTextBoxColumn.HeaderText = "Data_nascimento";
-            this.datanascimentoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.datanascimentoDataGridViewTextBoxColumn.Name = "datanascimentoDataGridViewTextBoxColumn";
-            this.datanascimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datanascimentoDataGridViewTextBoxColumn.Visible = false;
-            this.datanascimentoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idSexoDataGridViewTextBoxColumn
-            // 
-            this.idSexoDataGridViewTextBoxColumn.DataPropertyName = "IdSexo";
-            this.idSexoDataGridViewTextBoxColumn.HeaderText = "IdSexo";
-            this.idSexoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idSexoDataGridViewTextBoxColumn.Name = "idSexoDataGridViewTextBoxColumn";
-            this.idSexoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idSexoDataGridViewTextBoxColumn.Visible = false;
-            this.idSexoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sexoDataGridViewTextBoxColumn
-            // 
-            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo";
-            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
-            this.sexoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
-            this.sexoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sexoDataGridViewTextBoxColumn.Visible = false;
-            this.sexoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // buttonBuscarCliente
-            // 
-            this.buttonBuscarCliente.BackColor = System.Drawing.Color.White;
-            this.buttonBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarCliente.Image")));
-            this.buttonBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscarCliente.Location = new System.Drawing.Point(237, 45);
-            this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBuscarCliente.Name = "buttonBuscarCliente";
-            this.buttonBuscarCliente.Size = new System.Drawing.Size(101, 33);
-            this.buttonBuscarCliente.TabIndex = 0;
-            this.buttonBuscarCliente.Text = "Buscar";
-            this.buttonBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBuscarCliente.UseVisualStyleBackColor = false;
-            this.buttonBuscarCliente.Click += new System.EventHandler(this.buttonBuscarCliente_Click);
-            // 
             // sexoBindingSource
             // 
             this.sexoBindingSource.DataSource = typeof(Models.Sexo);
@@ -583,13 +583,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Consulta de Clientes";
             this.Load += new System.EventHandler(this.FormBuscarCliente_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormBuscarCliente_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
             this.ResumeLayout(false);
 

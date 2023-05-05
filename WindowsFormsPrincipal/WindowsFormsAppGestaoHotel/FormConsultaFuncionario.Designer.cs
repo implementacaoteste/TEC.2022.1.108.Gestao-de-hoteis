@@ -278,6 +278,7 @@
             this.Name = "FormConsultaFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Consulta de Funcionario";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaFuncionario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).EndInit();
             this.ResumeLayout(false);

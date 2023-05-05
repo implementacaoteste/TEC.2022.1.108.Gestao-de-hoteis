@@ -140,5 +140,13 @@ namespace WindowsFormsAppGestaoHotel
 
             MessageBox.Show("Registro excluido com sucesso!");
         }
+
+        private void FormBuscarDiaria_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

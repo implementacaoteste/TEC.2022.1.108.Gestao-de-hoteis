@@ -177,6 +177,7 @@
             this.MinimumSize = new System.Drawing.Size(618, 440);
             this.Name = "FormConsultaGrupoFuncionario";
             this.Text = "Consulta de Grupo de Funcionário";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaGrupoFuncionario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionariosDataGridView)).EndInit();
             this.ResumeLayout(false);

@@ -176,6 +176,7 @@
             this.MinimumSize = new System.Drawing.Size(559, 396);
             this.Name = "FormConsultaClasse";
             this.Text = "Consulta de Classe";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaClasse_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.classeDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).EndInit();
             this.ResumeLayout(false);

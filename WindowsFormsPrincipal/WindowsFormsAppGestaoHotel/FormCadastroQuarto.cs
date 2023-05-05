@@ -61,5 +61,13 @@ namespace WindowsFormsPrincipal1
             StatusComboBox.Text = ((Statuses)statusesBindingSource.Current).Status;
             ClasseComboBox.Text = ((Classe)classeBindingSource.Current).Descricao;
         }
+
+        private void FormCadastroQuarto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                buttonCancelar_Click(null, null);
+            }
+        }
     }
 }

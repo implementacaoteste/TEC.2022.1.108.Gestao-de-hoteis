@@ -182,6 +182,7 @@
             this.MinimumSize = new System.Drawing.Size(624, 427);
             this.Name = "FormConsultaPermissao";
             this.Text = "Consulta de Permissão";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaPermissao_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).EndInit();
             this.ResumeLayout(false);

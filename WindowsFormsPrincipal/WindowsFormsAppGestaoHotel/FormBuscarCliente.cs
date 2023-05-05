@@ -97,5 +97,13 @@ namespace WindowsFormsPrincipal1
                 buttonBuscarCliente_Click(null, null);
             }
         }
+
+        private void FormBuscarCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

@@ -226,6 +226,7 @@
             this.MinimumSize = new System.Drawing.Size(760, 470);
             this.Name = "FormConsultaQuarto";
             this.Text = "Consulta de Quarto";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaQuarto_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.quartoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
             this.ResumeLayout(false);

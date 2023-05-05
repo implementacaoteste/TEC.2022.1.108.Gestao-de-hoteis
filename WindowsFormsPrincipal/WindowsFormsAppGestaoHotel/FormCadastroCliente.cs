@@ -71,5 +71,13 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FormCadastroCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                buttonCancelarCadastroCliente_Click(null, null);
+            }
+        }
     }
 }

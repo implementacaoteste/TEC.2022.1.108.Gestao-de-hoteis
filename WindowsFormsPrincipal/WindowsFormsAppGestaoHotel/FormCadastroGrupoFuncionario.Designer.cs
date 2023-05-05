@@ -61,7 +61,7 @@
             this.nomeGrupoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionarioBindingSource, "NomeGrupo", true));
             this.nomeGrupoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.nomeGrupoTextBox.Location = new System.Drawing.Point(49, 114);
-            this.nomeGrupoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeGrupoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
             this.nomeGrupoTextBox.Size = new System.Drawing.Size(240, 28);
             this.nomeGrupoTextBox.TabIndex = 1;
@@ -75,7 +75,7 @@
             this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSalvar.Location = new System.Drawing.Point(118, 164);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(101, 33);
             this.buttonSalvar.TabIndex = 2;
@@ -93,7 +93,7 @@
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(223, 164);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
             this.buttonCancelar.TabIndex = 3;
@@ -128,7 +128,7 @@
             this.Controls.Add(this.nomeGrupoTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(372, 252);
             this.MinimizeBox = false;
@@ -138,6 +138,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Cadastro de Grupo de Funcionário";
             this.Load += new System.EventHandler(this.FormCadastroGrupoFuncionario_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroGrupoFuncionario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

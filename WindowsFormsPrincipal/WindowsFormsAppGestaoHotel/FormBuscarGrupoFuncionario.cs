@@ -127,5 +127,13 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FormBuscarGrupoFuncionario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

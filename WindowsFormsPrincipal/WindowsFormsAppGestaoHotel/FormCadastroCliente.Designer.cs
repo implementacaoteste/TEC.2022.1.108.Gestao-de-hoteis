@@ -307,6 +307,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Cadastro de Cliente";
             this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroCliente_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexoBindingSource)).EndInit();
             this.ResumeLayout(false);

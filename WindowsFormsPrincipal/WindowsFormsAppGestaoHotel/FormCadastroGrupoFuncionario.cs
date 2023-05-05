@@ -58,5 +58,13 @@ namespace WindowsFormsPrincipal1
                 Close();
             }
         }
+
+        private void FormCadastroGrupoFuncionario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                buttonCancelar_Click(null, null);
+            }
+        }
     }
 }

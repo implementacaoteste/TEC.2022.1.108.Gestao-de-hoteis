@@ -174,6 +174,7 @@
             this.Name = "FormConsultarPagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar de Pagamento";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultarPagamento_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pagamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pagamentoDataGridView)).EndInit();
             this.ResumeLayout(false);

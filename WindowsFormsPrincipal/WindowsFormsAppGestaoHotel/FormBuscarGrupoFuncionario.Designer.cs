@@ -35,11 +35,17 @@
             System.Windows.Forms.Label descricaoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarGrupoFuncionario));
             this.grupoFuncionarioDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupoFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.permissoesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.permissoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             this.radioButtonNome = new System.Windows.Forms.RadioButton();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.buttonBuscarGrupoFuncionario = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -48,14 +54,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
-            this.permissoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.grupoFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonExcluirPermissao = new System.Windows.Forms.Button();
             this.buttonAdicionarPermissao = new System.Windows.Forms.Button();
-            this.buttonBuscarGrupoFuncionario = new System.Windows.Forms.Button();
             this.buttonExcluirGrupoFuncionario = new System.Windows.Forms.Button();
             this.buttonAlterarGrupoFuncionario = new System.Windows.Forms.Button();
             this.buttonAdicionarGrupoFuncionario = new System.Windows.Forms.Button();
@@ -64,14 +64,14 @@
             label2 = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissoesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeGrupoLabel
@@ -136,6 +136,28 @@
             this.grupoFuncionarioDataGridView.Size = new System.Drawing.Size(397, 218);
             this.grupoFuncionarioDataGridView.TabIndex = 7;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cód.";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NomeGrupo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Grupo de Funcionários";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // grupoFuncionarioBindingSource
+            // 
+            this.grupoFuncionarioBindingSource.DataSource = typeof(Models.GrupoFuncionario);
+            // 
             // permissoesDataGridView
             // 
             this.permissoesDataGridView.AllowUserToAddRows = false;
@@ -156,6 +178,20 @@
             this.permissoesDataGridView.RowTemplate.Height = 24;
             this.permissoesDataGridView.Size = new System.Drawing.Size(318, 218);
             this.permissoesDataGridView.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // permissoesBindingSource
+            // 
+            this.permissoesBindingSource.DataMember = "Permissoes";
+            this.permissoesBindingSource.DataSource = this.grupoFuncionarioBindingSource;
             // 
             // groupBox1
             // 
@@ -211,6 +247,24 @@
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(223, 28);
             this.textBoxBuscar.TabIndex = 1;
+            // 
+            // buttonBuscarGrupoFuncionario
+            // 
+            this.buttonBuscarGrupoFuncionario.BackColor = System.Drawing.Color.White;
+            this.buttonBuscarGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarGrupoFuncionario.Image")));
+            this.buttonBuscarGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscarGrupoFuncionario.Location = new System.Drawing.Point(237, 46);
+            this.buttonBuscarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscarGrupoFuncionario.MinimumSize = new System.Drawing.Size(82, 28);
+            this.buttonBuscarGrupoFuncionario.Name = "buttonBuscarGrupoFuncionario";
+            this.buttonBuscarGrupoFuncionario.Size = new System.Drawing.Size(105, 33);
+            this.buttonBuscarGrupoFuncionario.TabIndex = 0;
+            this.buttonBuscarGrupoFuncionario.Text = "Buscar";
+            this.buttonBuscarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonBuscarGrupoFuncionario.UseVisualStyleBackColor = false;
+            this.buttonBuscarGrupoFuncionario.Click += new System.EventHandler(this.buttonBuscarGrupoFuncionario_Click);
             // 
             // groupBox2
             // 
@@ -312,42 +366,6 @@
             this.descricaoTextBox.Size = new System.Drawing.Size(184, 20);
             this.descricaoTextBox.TabIndex = 19;
             // 
-            // permissoesBindingSource
-            // 
-            this.permissoesBindingSource.DataMember = "Permissoes";
-            this.permissoesBindingSource.DataSource = this.grupoFuncionarioBindingSource;
-            // 
-            // grupoFuncionarioBindingSource
-            // 
-            this.grupoFuncionarioBindingSource.DataSource = typeof(Models.GrupoFuncionario);
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Descricao";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cód.";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NomeGrupo";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Grupo de Funcionários";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // buttonExcluirPermissao
             // 
             this.buttonExcluirPermissao.BackColor = System.Drawing.Color.White;
@@ -383,24 +401,6 @@
             this.buttonAdicionarPermissao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarPermissao.UseVisualStyleBackColor = false;
             this.buttonAdicionarPermissao.Click += new System.EventHandler(this.buttonAdicionarPermissão_Click);
-            // 
-            // buttonBuscarGrupoFuncionario
-            // 
-            this.buttonBuscarGrupoFuncionario.BackColor = System.Drawing.Color.White;
-            this.buttonBuscarGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarGrupoFuncionario.Image")));
-            this.buttonBuscarGrupoFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscarGrupoFuncionario.Location = new System.Drawing.Point(237, 46);
-            this.buttonBuscarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBuscarGrupoFuncionario.MinimumSize = new System.Drawing.Size(82, 28);
-            this.buttonBuscarGrupoFuncionario.Name = "buttonBuscarGrupoFuncionario";
-            this.buttonBuscarGrupoFuncionario.Size = new System.Drawing.Size(105, 33);
-            this.buttonBuscarGrupoFuncionario.TabIndex = 0;
-            this.buttonBuscarGrupoFuncionario.Text = "Buscar";
-            this.buttonBuscarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBuscarGrupoFuncionario.UseVisualStyleBackColor = false;
-            this.buttonBuscarGrupoFuncionario.Click += new System.EventHandler(this.buttonBuscarGrupoFuncionario_Click);
             // 
             // buttonExcluirGrupoFuncionario
             // 
@@ -479,8 +479,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Consulta de Grupo de Funcionários";
             this.Load += new System.EventHandler(this.FormBuscarGrupoFuncionario_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormBuscarGrupoFuncionario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissoesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -489,8 +492,6 @@
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
