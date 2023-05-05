@@ -52,6 +52,10 @@ namespace WindowsFormsAppGestaoHotel
                 {
                     quartoBindingSource.DataSource = new QuartoBLL().BuscarPorNumero(Numero);
                 }
+                else if (radioButtonStatus.Checked) 
+                {
+                    quartoBindingSource.DataSource = new QuartoBLL().BuscarPorStatus(textBoxBuscar.Text);
+                }
             }
             catch (Exception ex)
             {

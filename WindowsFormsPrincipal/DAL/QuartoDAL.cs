@@ -310,6 +310,52 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public List<Quarto> BuscarPorQuartoDisponivel()
+        {
+            List<Quarto> quartos = new List<Quarto>();
+            Quarto quarto;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, Q.ANDAR, Q.ID_STATUS, S.STATUS
+                                    FROM QUARTO Q
+                                    INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
+                                    INNER JOIN STATUS S ON S.ID = Q.ID_STATUS
+                                    WHERE S.STATUS LIKE 'Disponível'";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        quarto = new Quarto();
+                        quarto.Id = Convert.ToInt32(rd["ID"]);
+                        quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
+                        quarto.Classe = rd["CLASSE"].ToString();
+                        quarto.Numero = rd["NUMERO"].ToString();
+                        quarto.Descricao = rd["DESCRICAO"].ToString();
+                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Andar = rd["ANDAR"].ToString();
+                        quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
+                        quarto.Status = rd["STATUS"].ToString();
+                        quartos.Add(quarto);
+                    }
+                }
+                return quartos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar um Quarto disponível.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
 

@@ -36,6 +36,10 @@ namespace BLL
             ValidarPermissao(17);
             return new QuartoDAL().BuscarPorTodos();
         }
+        public List<Quarto> BuscarPorQuartoDisponivel()
+        {
+            return new QuartoDAL().BuscarPorQuartoDisponivel();
+        }
         public Quarto BuscarPorNumero(int _numero)
         {
             ValidarPermissao(17);
@@ -45,6 +49,11 @@ namespace BLL
         {
             if (!new QuartoDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))//Implementar o método "ValidarPermissao" na DAL
                 throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
+        }
+
+        public object BuscarPorStatus(string _status)
+        {
+            throw new NotImplementedException();
         }
     }
 }
