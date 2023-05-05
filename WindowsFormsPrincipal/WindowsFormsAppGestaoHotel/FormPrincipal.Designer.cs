@@ -212,7 +212,7 @@
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
             this.textBoxNomeUsuario.ReadOnly = true;
             this.textBoxNomeUsuario.Size = new System.Drawing.Size(128, 52);
-            this.textBoxNomeUsuario.TabIndex = 13;
+            this.textBoxNomeUsuario.TabIndex = 1;
             this.textBoxNomeUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxNomeUsuario.Visible = false;
             // 
@@ -226,7 +226,7 @@
             this.textBoxCargo.Name = "textBoxCargo";
             this.textBoxCargo.ReadOnly = true;
             this.textBoxCargo.Size = new System.Drawing.Size(128, 25);
-            this.textBoxCargo.TabIndex = 17;
+            this.textBoxCargo.TabIndex = 2;
             this.textBoxCargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxCargo.Visible = false;
             // 
