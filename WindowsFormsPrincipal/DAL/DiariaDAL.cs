@@ -368,6 +368,62 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public bool DiariaPertenceQuarto(int _idDiaria, int _idQuarto)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 FROM DIARIA_QUARTO
+                                    WHERE ID_DIARIA = @ID_DIARIA AND ID_QUARTO = @ID_QUARTO";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@ID_DIARIA", _idDiaria);
+                cmd.Parameters.AddWithValue("@ID_QUARTO", _idQuarto);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar validar a existencia.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public void SelecionarQuarto(int _idDiaria, int _idQuarto)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO DIARIA_QUARTO(ID_DIARIA, ID_QUARTO)
+                                    VALUES(@ID_DIARIA, @ID_QUARTO)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@ID_DIARIA", _idDiaria);
+                cmd.Parameters.AddWithValue("@ID_QUARTO", _idQuarto);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar vincular uma Quarto em uma diaria no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
 
