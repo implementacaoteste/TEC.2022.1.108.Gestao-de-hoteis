@@ -170,6 +170,7 @@
             this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.buttonCancelar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(618, 440);

@@ -250,6 +250,7 @@
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.clienteDataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(700, 410);
