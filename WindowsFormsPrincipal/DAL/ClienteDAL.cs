@@ -156,23 +156,24 @@ namespace DALL
                                     INNER JOIN SEXO ON CLIENTE.ID_SEXO = SEXO.ID
                                     WHERE NOME LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", "%"+_nome+"%");
+                cmd.Parameters.AddWithValue("@Nome","%"+_nome+"%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (rd.Read())
+                    while(rd.Read())
                     {
                         cliente = new Cliente();
                         cliente.Id = Convert.ToInt32(rd["ID"]);
                         cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
-                        cliente.Nome = rd["SEXO"].ToString();
+                        cliente.Sexo = rd["SEXO"].ToString();
                         cliente.Nome = rd["NOME"].ToString();
                         cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
                         cliente.Endereco = rd["ENDERECO"].ToString();
                         cliente.Celular = rd["CELULAR"].ToString();
                         cliente.Data_nascimento = Convert.ToDateTime(rd["DATA_NASCIMENTO"]);
+                        clientes.Add(cliente);
                     }
                 }
                 return clientes;

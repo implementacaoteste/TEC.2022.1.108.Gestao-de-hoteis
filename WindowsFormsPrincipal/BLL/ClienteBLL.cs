@@ -44,10 +44,10 @@ namespace BLL
             ValidarPermissao(9);
             return new ClienteDAL().BuscaPorCPF(_CPF);
         }
-        public List<Cliente> BuscaPorNome(string _Nome)
+        public List<Cliente> BuscaPorNome(string _nome)
         {
             ValidarPermissao(9);
-            return new ClienteDAL().BuscaPorNome(_Nome);
+            return new ClienteDAL().BuscaPorNome(_nome);
         }
         public void ValidarPermissao(int _idPermissao)
         {
