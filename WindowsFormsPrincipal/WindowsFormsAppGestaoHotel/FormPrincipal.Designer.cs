@@ -323,7 +323,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(882, 556);
-            this.ControlBox = false;
             this.Controls.Add(this.textBoxCargo);
             this.Controls.Add(this.pictureBoxSair);
             this.Controls.Add(this.pictureBoxfundo);
