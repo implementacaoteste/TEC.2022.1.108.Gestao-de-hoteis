@@ -36,6 +36,15 @@ namespace BLL
             ValidarPermissao(17);
             return new QuartoDAL().BuscarPorTodos();
         }
+        public List<Quarto> BuscarPorQuartoDisponivel()
+        {
+            return new QuartoDAL().BuscarPorQuartoDisponivel();
+        }
+        public List<Quarto> BuscarPorStatus(string _status)
+        {
+            ValidarPermissao(17);
+            return new QuartoDAL().BuscarPorStatus(_status);
+        }
         public Quarto BuscarPorNumero(int _numero)
         {
             ValidarPermissao(17);

@@ -38,7 +38,7 @@ INSERT INTO DIARIA_QUARTO VALUES(1,1)
 INSERT INTO DIARIA_QUARTO VALUES(2,2)
 
 -- STATUS  --8º
-INSERT INTO STATUS VALUES(1,'Vago')
+INSERT INTO STATUS VALUES(1,'Disponível')
 INSERT INTO STATUS VALUES(2,'Ocupado')
 
 -- CLASSE  --9º
@@ -188,3 +188,9 @@ SELECT D.ID, C.NOME, C.CPF, D.VALOR_TOTAL, D.DATA_ENTRADA, D.ID_CLIENTE,
                                     FROM DIARIA D
                                     INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
                                     WHERE C.NOME LIKE '%Laris%'
+
+SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, Q.ANDAR, Q.ID_STATUS, S.STATUS
+                                    FROM QUARTO Q
+                                    INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
+                                    INNER JOIN STATUS S ON S.ID = Q.ID_STATUS
+                                    WHERE S.STATUS LIKE 'Disponível'

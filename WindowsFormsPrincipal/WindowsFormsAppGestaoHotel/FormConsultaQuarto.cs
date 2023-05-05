@@ -24,7 +24,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
+                quartoBindingSource.DataSource = new QuartoBLL().BuscarPorQuartoDisponivel();
             }
             catch(Exception ex)
             {
