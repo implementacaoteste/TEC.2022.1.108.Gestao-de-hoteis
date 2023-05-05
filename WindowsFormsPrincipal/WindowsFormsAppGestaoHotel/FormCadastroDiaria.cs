@@ -175,7 +175,7 @@ namespace WindowsFormsAppGestaoHotel
                 if (diariaBindingSource.Count == 0)
                     throw new Exception("Não existe um grupo selecionado para adicionar uma permissão.");
 
-                using (FormConsultaPermissao frm = new FormConsultaPermissao())
+                using (FormConsultaQuarto frm = new FormConsultaQuarto())
                 {
                     frm.ShowDialog();
                     if (frm.Id != 0)
