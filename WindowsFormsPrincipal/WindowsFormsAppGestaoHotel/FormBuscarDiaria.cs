@@ -35,8 +35,8 @@ namespace WindowsFormsAppGestaoHotel
         }
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-           //try
-           //{
+           try
+           {
                 if (radioButtonTodos.Checked)
                 {
                     textBoxBuscar.Clear();
@@ -50,12 +50,12 @@ namespace WindowsFormsAppGestaoHotel
                 {
                     diariaBindingSource.DataSource = new DiariaBLL().BuscarPorCPFCliente(textBoxBuscar.Text);
                 }
-                //quartosBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
-          // }
-          // catch(Exception ex )
-          // {
-          //     MessageBox.Show(ex.Message);
-          // }
+                quartosBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
+           }
+           catch(Exception ex )
+           {
+               MessageBox.Show(ex.Message);
+           }
         }
         private void buttonAdicionarDiaria_Click(object sender, EventArgs e)
         {

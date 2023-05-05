@@ -192,7 +192,7 @@ namespace DAL
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             List<Diaria> Diaria = new List<Diaria>();
-            Diaria diaria = new Diaria();
+            Diaria diaria;
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -204,13 +204,14 @@ namespace DAL
 									INNER JOIN FUNCIONARIO F ON D.ID_FUNCIONARIO = F.ID
                                     WHERE C.CPF LIKE @cpf";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@cpf", "%" + _cpf + "%");
+                cmd.Parameters.AddWithValue("@cpf",_cpf);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
                     {
+                        diaria = new Diaria();
                         diaria.Id = Convert.ToInt32(rd["ID"]);
                         diaria.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         diaria.Nome_Cliente = rd["NOME"].ToString();
