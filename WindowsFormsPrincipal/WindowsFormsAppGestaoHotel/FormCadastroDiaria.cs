@@ -7,6 +7,15 @@ using BLL;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using BLL;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsPrincipal1;
@@ -36,7 +45,7 @@ namespace WindowsFormsAppGestaoHotel
                     diariaBindingSource.DataSource = new DiariaBLL().BuscarPorId(Id);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -68,15 +77,16 @@ namespace WindowsFormsAppGestaoHotel
         }
         private void buttonSelecionarPagamento_Click(object sender, EventArgs e)
         {
-            try {
-            using(FormConsultarPagamento frm = new FormConsultarPagamento())
+            try
             {
-                frm.ShowDialog();
+                using (FormConsultarPagamento frm = new FormConsultarPagamento())
+                {
+                    frm.ShowDialog();
                     ((Diaria)diariaBindingSource.Current).Id_Pagamento = frm.Id;
                     ((Diaria)diariaBindingSource.Current).Pagamento = frm.TipoPagamento;
-                  id_PagamentoTextBox.Text = frm.TipoPagamento;
+                    id_PagamentoTextBox.Text = frm.TipoPagamento;
 
-            } 
+                }
             }
             catch (Exception ex)
             {
@@ -87,13 +97,13 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-            using(FormConsultaCliente frm = new FormConsultaCliente())
-               {
-                frm.ShowDialog();
-                ((Diaria)diariaBindingSource.Current).Id_Cliente= frm.Id;
+                using (FormConsultaCliente frm = new FormConsultaCliente())
+                {
+                    frm.ShowDialog();
+                    ((Diaria)diariaBindingSource.Current).Id_Cliente = frm.Id;
                     ((Diaria)diariaBindingSource.Current).Nome_Cliente = frm.NomeCliente;
                     id_ClienteTextBox.Text = frm.NomeCliente;
-               } 
+                }
             }
             catch (Exception ex)
             {
@@ -124,7 +134,30 @@ namespace WindowsFormsAppGestaoHotel
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
+        }
+
+        private void buttonSelecionarQuarto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (diariaBindingSource.Count == 0)
+                    throw new Exception("Não existe um grupo selecionado para adicionar uma permissão.");
+
+                using (FormConsultaQuarto frm = new FormConsultaQuarto())
+                {
+                    frm.ShowDialog();
+                    if (frm.Id != 0)
+                    {
+                        int idDiaria = ((Diaria)diariaBindingSource.Current).Id;
+                        new DiariaBLL().SelecionarQuarto(idDiaria, frm.Id);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void FormCadastroDiaria_KeyDown(object sender, KeyEventArgs e)
@@ -132,6 +165,29 @@ namespace WindowsFormsAppGestaoHotel
             if (e.KeyCode == Keys.Escape)
             {
                 buttonCancelar_Click(null, null);
+            }
+        }
+
+        private void buttonSelecionarQuarto_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (diariaBindingSource.Count == 0)
+                    throw new Exception("Não existe um grupo selecionado para adicionar uma permissão.");
+
+                using (FormConsultaPermissao frm = new FormConsultaPermissao())
+                {
+                    frm.ShowDialog();
+                    if (frm.Id != 0)
+                    {
+                        int idDiaria = ((Diaria)diariaBindingSource.Current).Id;
+                        new DiariaBLL().SelecionarQuarto(idDiaria, frm.Id);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
