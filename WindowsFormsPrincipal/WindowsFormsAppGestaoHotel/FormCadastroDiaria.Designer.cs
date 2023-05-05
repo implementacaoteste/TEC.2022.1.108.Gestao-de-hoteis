@@ -48,7 +48,6 @@
             this.id_ClienteTextBox = new System.Windows.Forms.TextBox();
             this.id_PagamentoTextBox = new System.Windows.Forms.TextBox();
             this.data_EntradaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.data_SaidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
@@ -57,7 +56,6 @@
             id_PagamentoLabel = new System.Windows.Forms.Label();
             valor_TotalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // data_EntradaLabel
@@ -249,16 +247,6 @@
             this.data_EntradaDateTimePicker.Size = new System.Drawing.Size(155, 22);
             this.data_EntradaDateTimePicker.TabIndex = 21;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(878, 111);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(8, 8);
-            this.dataGridView1.TabIndex = 22;
-            // 
             // data_SaidaDateTimePicker
             // 
             this.data_SaidaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.diariaBindingSource, "Data_Saida", true));
@@ -276,7 +264,6 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(907, 447);
             this.Controls.Add(this.data_SaidaDateTimePicker);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.data_EntradaDateTimePicker);
             this.Controls.Add(this.id_PagamentoTextBox);
             this.Controls.Add(this.id_ClienteTextBox);
@@ -305,7 +292,6 @@
             this.Text = "Cadastro de Diaria";
             this.Load += new System.EventHandler(this.FormCadastroDiaria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,7 +311,6 @@
         private System.Windows.Forms.TextBox id_ClienteTextBox;
         private System.Windows.Forms.TextBox id_PagamentoTextBox;
         private System.Windows.Forms.DateTimePicker data_EntradaDateTimePicker;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker data_SaidaDateTimePicker;
     }
 }
