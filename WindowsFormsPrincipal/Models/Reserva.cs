@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class ClassReserva
+    public class Reserva
     {
+
     }
 }

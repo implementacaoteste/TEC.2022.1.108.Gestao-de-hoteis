@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classe.cs" />
+    <Compile Include="Reserva.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Constante.cs" />
     <Compile Include="Diaria.cs" />
