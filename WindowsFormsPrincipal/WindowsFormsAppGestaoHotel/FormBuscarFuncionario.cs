@@ -142,5 +142,22 @@ namespace WindowsFormsPrincipal1
                 Close();
             }
         }
+
+        private void buttonExcluirFuncionario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                buttonExcluirFuncionário_Click(null, null);
+            }
+        }
+
+        private void buttonExcluirGrupoFuncionario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                buttonExcluirGrupoFuncionario_Click(null, null);
+            }
+            
+        }
     }
 }
