@@ -26,7 +26,7 @@ namespace BLL
             ValidarPermissao(20);
             new QuartoDAL().Excluir(_id);
         }
-        public List<Quarto> BuscarPorId(int _id)
+        public Quarto BuscarPorId(int _id)
         {
             ValidarPermissao(17);
             return new QuartoDAL().BuscarPorId(_id);
@@ -45,7 +45,7 @@ namespace BLL
             ValidarPermissao(17);
             return new QuartoDAL().BuscarPorStatus(_status);
         }
-        public Quarto BuscarPorNumero(int _numero)
+        public Quarto BuscarPorNumero(string _numero)
         {
             ValidarPermissao(17);
             return new QuartoDAL().BuscarPorNumero(_numero);
