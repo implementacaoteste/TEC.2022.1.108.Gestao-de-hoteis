@@ -33,11 +33,10 @@ namespace WindowsFormsPrincipal1
                     clienteBLL.Alterar((Cliente)clienteBindingSource.Current);
 
                 MessageBox.Show("Registro salvo com sucesso!");
-                Close();
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar salvar um Cliente no Banco de Dados.", ex);
+                throw new Exception(ex.Message);
             }
         }
         private void buttonCancelarCadastroCliente_Click(object sender, EventArgs e)

@@ -75,8 +75,13 @@
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             nomeLabel.Location = new System.Drawing.Point(59, 84);
             nomeLabel.Name = "nomeLabel";
+<<<<<<< Updated upstream
             nomeLabel.Size = new System.Drawing.Size(64, 25);
             nomeLabel.TabIndex = 30;
+=======
+            nomeLabel.Size = new System.Drawing.Size(62, 24);
+            nomeLabel.TabIndex = 1;
+>>>>>>> Stashed changes
             nomeLabel.Text = "Nome";
             // 
             // emailLabel
@@ -85,8 +90,13 @@
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             emailLabel.Location = new System.Drawing.Point(651, 165);
             emailLabel.Name = "emailLabel";
+<<<<<<< Updated upstream
             emailLabel.Size = new System.Drawing.Size(67, 25);
             emailLabel.TabIndex = 31;
+=======
+            emailLabel.Size = new System.Drawing.Size(63, 24);
+            emailLabel.TabIndex = 13;
+>>>>>>> Stashed changes
             emailLabel.Text = "E-mail";
             // 
             // cPFLabel
@@ -95,8 +105,13 @@
             cPFLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             cPFLabel.Location = new System.Drawing.Point(437, 86);
             cPFLabel.Name = "cPFLabel";
+<<<<<<< Updated upstream
             cPFLabel.Size = new System.Drawing.Size(52, 25);
             cPFLabel.TabIndex = 32;
+=======
+            cPFLabel.Size = new System.Drawing.Size(47, 24);
+            cPFLabel.TabIndex = 3;
+>>>>>>> Stashed changes
             cPFLabel.Text = "CPF";
             // 
             // celularLabel
@@ -105,8 +120,13 @@
             celularLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             celularLabel.Location = new System.Drawing.Point(627, 87);
             celularLabel.Name = "celularLabel";
+<<<<<<< Updated upstream
             celularLabel.Size = new System.Drawing.Size(74, 25);
             celularLabel.TabIndex = 33;
+=======
+            celularLabel.Size = new System.Drawing.Size(69, 24);
+            celularLabel.TabIndex = 5;
+>>>>>>> Stashed changes
             celularLabel.Text = "Celular";
             // 
             // enderecoLabel
@@ -115,8 +135,13 @@
             enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             enderecoLabel.Location = new System.Drawing.Point(219, 165);
             enderecoLabel.Name = "enderecoLabel";
+<<<<<<< Updated upstream
             enderecoLabel.Size = new System.Drawing.Size(96, 25);
             enderecoLabel.TabIndex = 34;
+=======
+            enderecoLabel.Size = new System.Drawing.Size(94, 24);
+            enderecoLabel.TabIndex = 11;
+>>>>>>> Stashed changes
             enderecoLabel.Text = "Endereço";
             // 
             // data_nascimentoLabel
@@ -126,8 +151,13 @@
             data_nascimentoLabel.Location = new System.Drawing.Point(820, 84);
             data_nascimentoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             data_nascimentoLabel.Name = "data_nascimentoLabel";
+<<<<<<< Updated upstream
             data_nascimentoLabel.Size = new System.Drawing.Size(188, 25);
             data_nascimentoLabel.TabIndex = 37;
+=======
+            data_nascimentoLabel.Size = new System.Drawing.Size(179, 24);
+            data_nascimentoLabel.TabIndex = 7;
+>>>>>>> Stashed changes
             data_nascimentoLabel.Text = "Data de Nascimento";
             // 
             // nomeUsuarioLabel
@@ -137,8 +167,13 @@
             nomeUsuarioLabel.Location = new System.Drawing.Point(59, 244);
             nomeUsuarioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeUsuarioLabel.Name = "nomeUsuarioLabel";
+<<<<<<< Updated upstream
             nomeUsuarioLabel.Size = new System.Drawing.Size(160, 25);
             nomeUsuarioLabel.TabIndex = 38;
+=======
+            nomeUsuarioLabel.Size = new System.Drawing.Size(156, 24);
+            nomeUsuarioLabel.TabIndex = 15;
+>>>>>>> Stashed changes
             nomeUsuarioLabel.Text = "Nome de usuario";
             // 
             // confirmar_senhaLabel
@@ -147,8 +182,13 @@
             confirmar_senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             confirmar_senhaLabel.Location = new System.Drawing.Point(305, 324);
             confirmar_senhaLabel.Name = "confirmar_senhaLabel";
+<<<<<<< Updated upstream
             confirmar_senhaLabel.Size = new System.Drawing.Size(156, 25);
             confirmar_senhaLabel.TabIndex = 42;
+=======
+            confirmar_senhaLabel.Size = new System.Drawing.Size(148, 24);
+            confirmar_senhaLabel.TabIndex = 20;
+>>>>>>> Stashed changes
             confirmar_senhaLabel.Text = "Confirmar senha";
             // 
             // senhaLabel
@@ -157,8 +197,13 @@
             senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             senhaLabel.Location = new System.Drawing.Point(59, 324);
             senhaLabel.Name = "senhaLabel";
+<<<<<<< Updated upstream
             senhaLabel.Size = new System.Drawing.Size(70, 25);
             senhaLabel.TabIndex = 44;
+=======
+            senhaLabel.Size = new System.Drawing.Size(65, 24);
+            senhaLabel.TabIndex = 18;
+>>>>>>> Stashed changes
             senhaLabel.Text = "Senha";
             // 
             // buttonSalvarFuncionario
@@ -171,8 +216,13 @@
             this.buttonSalvarFuncionario.Location = new System.Drawing.Point(747, 383);
             this.buttonSalvarFuncionario.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvarFuncionario.Name = "buttonSalvarFuncionario";
+<<<<<<< Updated upstream
             this.buttonSalvarFuncionario.Size = new System.Drawing.Size(135, 39);
             this.buttonSalvarFuncionario.TabIndex = 11;
+=======
+            this.buttonSalvarFuncionario.Size = new System.Drawing.Size(101, 32);
+            this.buttonSalvarFuncionario.TabIndex = 22;
+>>>>>>> Stashed changes
             this.buttonSalvarFuncionario.Text = "Salvar";
             this.buttonSalvarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvarFuncionario.UseVisualStyleBackColor = false;
@@ -189,8 +239,13 @@
             this.buttonCancelarCadastro.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCancelarCadastro.MinimumSize = new System.Drawing.Size(131, 34);
             this.buttonCancelarCadastro.Name = "buttonCancelarCadastro";
+<<<<<<< Updated upstream
             this.buttonCancelarCadastro.Size = new System.Drawing.Size(165, 39);
             this.buttonCancelarCadastro.TabIndex = 12;
+=======
+            this.buttonCancelarCadastro.Size = new System.Drawing.Size(124, 32);
+            this.buttonCancelarCadastro.TabIndex = 23;
+>>>>>>> Stashed changes
             this.buttonCancelarCadastro.Text = "Cancelar";
             this.buttonCancelarCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelarCadastro.UseVisualStyleBackColor = false;
@@ -205,8 +260,13 @@
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.nomeTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.nomeTextBox.Name = "nomeTextBox";
+<<<<<<< Updated upstream
             this.nomeTextBox.Size = new System.Drawing.Size(365, 28);
             this.nomeTextBox.TabIndex = 0;
+=======
+            this.nomeTextBox.Size = new System.Drawing.Size(274, 27);
+            this.nomeTextBox.TabIndex = 2;
+>>>>>>> Stashed changes
             // 
             // funcionarioBindingSource
             // 
@@ -221,8 +281,13 @@
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.emailTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.emailTextBox.Name = "emailTextBox";
+<<<<<<< Updated upstream
             this.emailTextBox.Size = new System.Drawing.Size(365, 28);
             this.emailTextBox.TabIndex = 6;
+=======
+            this.emailTextBox.Size = new System.Drawing.Size(274, 27);
+            this.emailTextBox.TabIndex = 14;
+>>>>>>> Stashed changes
             // 
             // enderecoTextBox
             // 
@@ -233,8 +298,13 @@
             this.enderecoTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.enderecoTextBox.MinimumSize = new System.Drawing.Size(365, 30);
             this.enderecoTextBox.Name = "enderecoTextBox";
+<<<<<<< Updated upstream
             this.enderecoTextBox.Size = new System.Drawing.Size(425, 28);
             this.enderecoTextBox.TabIndex = 5;
+=======
+            this.enderecoTextBox.Size = new System.Drawing.Size(319, 27);
+            this.enderecoTextBox.TabIndex = 12;
+>>>>>>> Stashed changes
             // 
             // senhaTextBox
             // 
@@ -245,8 +315,13 @@
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.senhaTextBox.MinimumSize = new System.Drawing.Size(205, 30);
             this.senhaTextBox.Name = "senhaTextBox";
+<<<<<<< Updated upstream
             this.senhaTextBox.Size = new System.Drawing.Size(205, 28);
             this.senhaTextBox.TabIndex = 8;
+=======
+            this.senhaTextBox.Size = new System.Drawing.Size(154, 27);
+            this.senhaTextBox.TabIndex = 19;
+>>>>>>> Stashed changes
             // 
             // ativoCheckBox
             // 
@@ -255,8 +330,13 @@
             this.ativoCheckBox.Location = new System.Drawing.Point(293, 273);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(0);
             this.ativoCheckBox.Name = "ativoCheckBox";
+<<<<<<< Updated upstream
             this.ativoCheckBox.Size = new System.Drawing.Size(95, 30);
             this.ativoCheckBox.TabIndex = 10;
+=======
+            this.ativoCheckBox.Size = new System.Drawing.Size(71, 24);
+            this.ativoCheckBox.TabIndex = 17;
+>>>>>>> Stashed changes
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -269,8 +349,13 @@
             this.nomeUsuarioTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.nomeUsuarioTextBox.MinimumSize = new System.Drawing.Size(205, 30);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
+<<<<<<< Updated upstream
             this.nomeUsuarioTextBox.Size = new System.Drawing.Size(205, 28);
             this.nomeUsuarioTextBox.TabIndex = 7;
+=======
+            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(154, 27);
+            this.nomeUsuarioTextBox.TabIndex = 16;
+>>>>>>> Stashed changes
             // 
             // comboBox1
             // 
@@ -283,8 +368,13 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox1.MinimumSize = new System.Drawing.Size(129, 0);
             this.comboBox1.Name = "comboBox1";
+<<<<<<< Updated upstream
             this.comboBox1.Size = new System.Drawing.Size(145, 30);
             this.comboBox1.TabIndex = 4;
+=======
+            this.comboBox1.Size = new System.Drawing.Size(110, 28);
+            this.comboBox1.TabIndex = 10;
+>>>>>>> Stashed changes
             this.comboBox1.ValueMember = "Id";
             // 
             // sexoBindingSource
@@ -299,8 +389,13 @@
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxConfirmarSenha.MinimumSize = new System.Drawing.Size(205, 30);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
+<<<<<<< Updated upstream
             this.textBoxConfirmarSenha.Size = new System.Drawing.Size(205, 28);
             this.textBoxConfirmarSenha.TabIndex = 9;
+=======
+            this.textBoxConfirmarSenha.Size = new System.Drawing.Size(154, 27);
+            this.textBoxConfirmarSenha.TabIndex = 21;
+>>>>>>> Stashed changes
             // 
             // label2
             // 
@@ -308,8 +403,13 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.Location = new System.Drawing.Point(59, 165);
             this.label2.Name = "label2";
+<<<<<<< Updated upstream
             this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 43;
+=======
+            this.label2.Size = new System.Drawing.Size(74, 24);
+            this.label2.TabIndex = 9;
+>>>>>>> Stashed changes
             this.label2.Text = "Genero";
             // 
             // tituloLabel
@@ -318,8 +418,13 @@
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Name = "tituloLabel";
+<<<<<<< Updated upstream
             this.tituloLabel.Size = new System.Drawing.Size(1068, 68);
             this.tituloLabel.TabIndex = 44;
+=======
+            this.tituloLabel.Size = new System.Drawing.Size(801, 55);
+            this.tituloLabel.TabIndex = 0;
+>>>>>>> Stashed changes
             this.tituloLabel.Text = "Cadastro de Funcionário";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -332,8 +437,13 @@
             this.cPFMaskedTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cPFMaskedTextBox.Mask = "000,000,000-00";
             this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
+<<<<<<< Updated upstream
             this.cPFMaskedTextBox.Size = new System.Drawing.Size(178, 28);
             this.cPFMaskedTextBox.TabIndex = 1;
+=======
+            this.cPFMaskedTextBox.Size = new System.Drawing.Size(134, 27);
+            this.cPFMaskedTextBox.TabIndex = 4;
+>>>>>>> Stashed changes
             // 
             // celularMaskedTextBox
             // 
@@ -344,8 +454,13 @@
             this.celularMaskedTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.celularMaskedTextBox.Mask = "(99) 00000-0000";
             this.celularMaskedTextBox.Name = "celularMaskedTextBox";
+<<<<<<< Updated upstream
             this.celularMaskedTextBox.Size = new System.Drawing.Size(183, 28);
             this.celularMaskedTextBox.TabIndex = 2;
+=======
+            this.celularMaskedTextBox.Size = new System.Drawing.Size(138, 27);
+            this.celularMaskedTextBox.TabIndex = 6;
+>>>>>>> Stashed changes
             // 
             // data_nascimentoDateTimePicker
             // 
@@ -355,8 +470,13 @@
             this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(827, 116);
             this.data_nascimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
+<<<<<<< Updated upstream
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(193, 28);
             this.data_nascimentoDateTimePicker.TabIndex = 45;
+=======
+            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(146, 27);
+            this.data_nascimentoDateTimePicker.TabIndex = 8;
+>>>>>>> Stashed changes
             // 
             // FormCadastroDeFuncionario
             // 

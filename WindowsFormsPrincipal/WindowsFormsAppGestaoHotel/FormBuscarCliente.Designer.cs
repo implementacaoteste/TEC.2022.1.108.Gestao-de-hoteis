@@ -69,6 +69,7 @@
             this.buttonExcluirCliente = new System.Windows.Forms.Button();
             this.buttonAdicionarCliente = new System.Windows.Forms.Button();
             this.sexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             celularLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
@@ -562,11 +563,20 @@
             // 
             this.sexoBindingSource.DataSource = typeof(Models.Sexo);
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(520, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "label1";
+            // 
             // FormBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 617);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAlterarCliente);
             this.Controls.Add(this.buttonExcluirCliente);
             this.Controls.Add(this.buttonAdicionarCliente);
@@ -630,5 +640,6 @@
         private System.Windows.Forms.Button buttonAdicionarCliente;
         private System.Windows.Forms.BindingSource sexoBindingSource;
         private System.Windows.Forms.MaskedTextBox data_nascimentoMaskedTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }

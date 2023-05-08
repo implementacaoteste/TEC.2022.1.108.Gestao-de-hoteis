@@ -23,8 +23,10 @@ namespace WindowsFormsPrincipal1
 
             try
             {
+                Cliente cliente = new Cliente();    
                 radioButtonTodos.Checked = true;
                 clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+                label1.Text = Convert.ToString(cliente.Data_nascimento);
             }
             catch(Exception ex)
             {
