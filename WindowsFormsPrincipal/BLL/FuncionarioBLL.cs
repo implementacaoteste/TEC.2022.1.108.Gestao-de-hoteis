@@ -57,6 +57,12 @@ namespace BLL
             if (_funcionario.Nome.Length <= 2)
                 throw new Exception("O nome deve ter mais de 2 caracteres");
 
+            if (_funcionario.Data_nascimento.Year < 1900)
+                throw new Exception("Selecione a data de nascimento válida para o funcionário");
+
+            if (_funcionario.IdSexo == 0)
+                throw new Exception("Selecione o sexo do funcionário");
+
             if (_funcionario.NomeUsuario == null)
                 throw new Exception("Insira o nome de usuario do funcionario");
 
@@ -72,11 +78,6 @@ namespace BLL
             if (_funcionario.Senha != _confirmacaoSenha)
                 throw new Exception("A senha e a confirmação de senha devem ser iguais.");
 
-            if (_funcionario.Data_nascimento.Year < 1900)
-                throw new Exception("Selecione a data de nascimento válida para o funcionário");
-
-            if (_funcionario.IdSexo == 0)
-                throw new Exception("Selecione o sexo do funcionário");
         }
         public void ValidarPermissao(int _idPermissao)
         {
