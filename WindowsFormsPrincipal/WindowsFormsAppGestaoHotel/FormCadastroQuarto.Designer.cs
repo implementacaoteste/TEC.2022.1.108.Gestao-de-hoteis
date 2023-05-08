@@ -149,6 +149,7 @@
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(145, 30);
             this.valor_DiariaTextBox.TabIndex = 10;
+            this.valor_DiariaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tituloLabel
             // 
@@ -224,6 +225,7 @@
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.Size = new System.Drawing.Size(101, 30);
             this.numeroTextBox.TabIndex = 15;
+            this.numeroTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // andarTextBox
             // 
@@ -235,6 +237,7 @@
             this.andarTextBox.Name = "andarTextBox";
             this.andarTextBox.Size = new System.Drawing.Size(101, 30);
             this.andarTextBox.TabIndex = 16;
+            this.andarTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ClasseComboBox
             // 
