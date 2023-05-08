@@ -57,8 +57,17 @@ namespace BLL
         }
         private void ValidarDados(Cliente _cliente)
         {
+            if (_cliente.Nome == null)
+                throw new Exception("Insira o nome do cliente");
+
             if (_cliente.Nome.Length <= 2)
                 throw new Exception("O nome deve ter mais de 2 caracteres.");
+
+            if (_cliente.Data_nascimento.Year < 1900)
+                throw new Exception("Selecione a data de nascimento válida para o cliente");
+
+            if (_cliente.Sexo == null)
+                throw new Exception("Selecione o sexo do cliente");
         }
     }
 }

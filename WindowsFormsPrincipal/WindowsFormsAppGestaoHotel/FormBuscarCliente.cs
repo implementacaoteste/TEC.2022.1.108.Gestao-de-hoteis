@@ -23,8 +23,10 @@ namespace WindowsFormsPrincipal1
 
             try
             {
+                Cliente cliente = new Cliente();    
                 radioButtonTodos.Checked = true;
                 clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+                label1.Text = Convert.ToString(cliente.Data_nascimento);
             }
             catch(Exception ex)
             {
@@ -103,6 +105,14 @@ namespace WindowsFormsPrincipal1
             if (e.KeyCode == Keys.Escape)
             {
                 Close();
+            }
+        }
+
+        private void buttonExcluirCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                buttonExcluirCliente_Click(null, null);
             }
         }
     }

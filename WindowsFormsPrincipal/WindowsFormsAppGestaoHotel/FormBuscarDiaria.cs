@@ -148,5 +148,21 @@ namespace WindowsFormsAppGestaoHotel
                 Close();
             }
         }
+
+        private void buttonExcluirDiaria_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                buttonExcluirDiaria_Click(null, null);
+            }
+        }
+
+        private void buttonExcluirQuarto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                buttonExcluirQuarto_Click(null, null);
+            }
+        }
     }
 }
