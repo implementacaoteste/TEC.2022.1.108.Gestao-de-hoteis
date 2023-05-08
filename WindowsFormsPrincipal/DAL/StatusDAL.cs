@@ -93,7 +93,7 @@ namespace DALL
 
                 using (SqlDataReader Ler = cmd.ExecuteReader())
                 {
-                    if(Ler.Read())
+                    while(Ler.Read())
                     {
                         status = new Statuses();
                         status.Id = Convert.ToInt32(Ler["ID"]);
