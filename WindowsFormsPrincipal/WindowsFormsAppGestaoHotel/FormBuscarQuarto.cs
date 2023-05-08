@@ -19,16 +19,18 @@ namespace WindowsFormsAppGestaoHotel
 {
     public partial class FormBuscarQuarto : Form
     {
-        public int Numero;
-        public FormBuscarQuarto(int _numero = 0)
+        public FormBuscarQuarto()
         {
             InitializeComponent();
-            Numero = _numero;
         }
         private void FormBuscarQuarto_Load(object sender, EventArgs e)
         {
             try
             {
+                Double value;
+                if (Double.TryParse(valor_DiariaTextBox.Text, out value))
+                    valor_DiariaTextBox.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", value);
+
                 radioButtonTodos.Checked = true;
                 quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
             }
