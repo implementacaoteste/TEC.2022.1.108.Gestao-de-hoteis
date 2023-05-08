@@ -105,5 +105,13 @@ namespace WindowsFormsPrincipal1
                 Close();
             }
         }
+
+        private void buttonExcluirCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                buttonExcluirCliente_Click(null, null);
+            }
+        }
     }
 }
