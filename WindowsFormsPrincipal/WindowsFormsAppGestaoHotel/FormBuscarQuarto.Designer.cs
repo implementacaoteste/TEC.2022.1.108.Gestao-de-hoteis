@@ -37,8 +37,8 @@
             System.Windows.Forms.Label valor_DiariaLabel;
             System.Windows.Forms.Label andarLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarQuarto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             this.radioButtonStatus = new System.Windows.Forms.RadioButton();
@@ -287,8 +287,8 @@
             // 
             this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.numeroDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.numeroDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.numeroDataGridViewTextBoxColumn.HeaderText = "Número";
             this.numeroDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
@@ -326,10 +326,10 @@
             // 
             this.valorDiariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.valorDiariaDataGridViewTextBoxColumn.DataPropertyName = "Valor_Diaria";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.valorDiariaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.valorDiariaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.valorDiariaDataGridViewTextBoxColumn.HeaderText = "Valor da diária";
             this.valorDiariaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valorDiariaDataGridViewTextBoxColumn.Name = "valorDiariaDataGridViewTextBoxColumn";
@@ -489,6 +489,7 @@
             this.buttonExcluirQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirQuarto.UseVisualStyleBackColor = false;
             this.buttonExcluirQuarto.Click += new System.EventHandler(this.buttonExcluirQuarto_Click);
+            this.buttonExcluirQuarto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonExcluirQuarto_KeyDown);
             // 
             // buttonAdicionarQuarto
             // 

@@ -135,5 +135,13 @@ namespace WindowsFormsPrincipal1
                 Close();
             }
         }
+
+        private void buttonExcluirPermissao_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                buttonExcluirPermissão_Click(null, null);
+            }
+        }
     }
 }

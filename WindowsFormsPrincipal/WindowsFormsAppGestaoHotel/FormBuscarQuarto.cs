@@ -117,5 +117,13 @@ namespace WindowsFormsAppGestaoHotel
                 Close();
             }
         }
+
+        private void buttonExcluirQuarto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                buttonExcluirQuarto_Click(null, null);
+            }
+        }
     }
 }
