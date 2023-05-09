@@ -19,7 +19,7 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"INSERT INTO DIARIA (VALOR_TOTAL, ID_CLIENTE, ID_FUNCIONARIO, ID_PAGAMENTO, DATA_ENTRADA, DATA_SAIDA)
-                                       VALUES(@VALOR_TOTAL, @ID_CLIENTE, @ID_FUNCIONARIO, @ID_PAGAMENTO, @DATA_ENTRADA, @DATA_SAIDA)";
+                                       VALUES(@VALOR_TOTAL, @ID_CLIENTE, @ID_FUNCIONARIO, @ID_PAGAMENTO, @DATA_ENTRADA, @DATA_SAIDA) SELECT SCOPE_IDENTITY() AS Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@VALOR_TOTAL", _diaria.Valor_Total);
                 cmd.Parameters.AddWithValue("@ID_CLIENTE", _diaria.Id_Cliente);
@@ -27,6 +27,36 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@ID_PAGAMENTO", _diaria.Id_Pagamento);
                 cmd.Parameters.AddWithValue("DATA_ENTRADA", _diaria.Data_Entrada);
                 cmd.Parameters.AddWithValue("@DATA_SAIDA", _diaria.Data_Saida);
+                cmd.Connection = cn;
+                cn.Open();
+
+                _diaria.Id = Convert.ToInt32(cmd.ExecuteScalar());
+                VincularQuarto(_diaria);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar inserir a Diária no Banco de Dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private void VincularQuarto(Diaria _diaria)
+        {
+            if (_diaria.Quartos.Count == 0)
+                return;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO DIARIA_QUARTO(ID_DIARIA, ID_QUARTO)
+                                       VALUES(@ID_DIARIA, @ID_QUARTO)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@ID_DIARIA", _diaria.Id);
+                cmd.Parameters.AddWithValue("@ID_QUARTO", _diaria.Quartos[0].Id);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -41,6 +71,7 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public void Alterar(Diaria _diaria)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -204,7 +235,7 @@ namespace DAL
 									INNER JOIN FUNCIONARIO F ON D.ID_FUNCIONARIO = F.ID
                                     WHERE C.CPF LIKE @cpf";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@cpf",_cpf);
+                cmd.Parameters.AddWithValue("@cpf", _cpf);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -259,7 +290,7 @@ namespace DAL
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while(rd.Read())
+                    while (rd.Read())
                     {
                         diaria = new Diaria();
                         diaria.Id = Convert.ToInt32(rd["ID"]);

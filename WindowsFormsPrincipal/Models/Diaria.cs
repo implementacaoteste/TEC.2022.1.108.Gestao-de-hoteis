@@ -20,5 +20,9 @@ namespace Models
         public DateTime Data_Entrada { get; set; }
         public DateTime Data_Saida { get; set; }
         public List<Quarto> Quartos { get; set; }
+        public Diaria()
+        {
+            Quartos = new List<Quarto>();
+        }
     }
 }

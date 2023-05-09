@@ -27,6 +27,9 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormCadastroDiaria : Form
     {
         public int Id;
+        private int idDiaria;
+        private int idQuarto;
+
         public FormCadastroDiaria(int _id = 0)
         {
             Id = _id;
@@ -180,8 +183,8 @@ namespace WindowsFormsAppGestaoHotel
                     frm.ShowDialog();
                     if (frm.Id != 0)
                     {
-                        int idDiaria = ((Diaria)diariaBindingSource.Current).Id;
-                        new DiariaBLL().SelecionarQuarto(idDiaria, frm.Id);
+                        ((Diaria)diariaBindingSource.Current).Quartos.Add(new Quarto() { Id = frm.Id, Numero = frm.Numero});
+                        textBox1.Text = frm.Numero.ToString();
                     }
                 }
             }

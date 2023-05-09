@@ -15,6 +15,8 @@ namespace WindowsFormsPrincipal1
     public partial class FormConsultaQuarto : Form
     {
         public int Id;
+        public string Numero;
+
         public FormConsultaQuarto()
         {
             InitializeComponent();
@@ -39,6 +41,7 @@ namespace WindowsFormsPrincipal1
                 if (quartoBindingSource.Count > 0)
                 {
                     Id = ((Quarto)quartoBindingSource.Current).Id;
+                    Numero = ((Quarto)quartoBindingSource.Current).Numero;
                     Close();
                 }
                 else

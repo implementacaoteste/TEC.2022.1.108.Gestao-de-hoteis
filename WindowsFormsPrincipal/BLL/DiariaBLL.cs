@@ -56,7 +56,7 @@ namespace BLL
 
         public void SelecionarQuarto(int _idDiaria, int _idQuarto)
         {
-            if (new DiariaDAL().DiariaPertenceQuarto(_idDiaria, _idQuarto))
+            if (!new DiariaDAL().DiariaPertenceQuarto(_idDiaria, _idQuarto))
                 new DiariaDAL().SelecionarQuarto(_idDiaria, _idQuarto);
         }
     }
