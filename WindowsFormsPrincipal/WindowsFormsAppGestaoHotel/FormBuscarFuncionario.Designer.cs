@@ -134,7 +134,7 @@
             cPFLabel.Location = new System.Drawing.Point(43, 86);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(36, 16);
-            cPFLabel.TabIndex = 4;
+            cPFLabel.TabIndex = 6;
             cPFLabel.Text = "CPF:";
             // 
             // sexoLabel
@@ -143,7 +143,7 @@
             sexoLabel.Location = new System.Drawing.Point(377, 57);
             sexoLabel.Name = "sexoLabel";
             sexoLabel.Size = new System.Drawing.Size(41, 16);
-            sexoLabel.TabIndex = 6;
+            sexoLabel.TabIndex = 4;
             sexoLabel.Text = "Sexo:";
             // 
             // data_nascimentoLabel
@@ -197,7 +197,7 @@
             senhaLabel.Location = new System.Drawing.Point(77, 59);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new System.Drawing.Size(49, 16);
-            senhaLabel.TabIndex = 0;
+            senhaLabel.TabIndex = 2;
             senhaLabel.Text = "Senha:";
             // 
             // idLabel1
@@ -215,7 +215,7 @@
             nomeGrupoLabel.Location = new System.Drawing.Point(12, 57);
             nomeGrupoLabel.Name = "nomeGrupoLabel";
             nomeGrupoLabel.Size = new System.Drawing.Size(106, 16);
-            nomeGrupoLabel.TabIndex = 0;
+            nomeGrupoLabel.TabIndex = 2;
             nomeGrupoLabel.Text = "Nome do Grupo:";
             // 
             // textBoxBuscar
@@ -226,7 +226,7 @@
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(323, 30);
-            this.textBoxBuscar.TabIndex = 1;
+            this.textBoxBuscar.TabIndex = 3;
             // 
             // funcionarioDataGridView
             // 
@@ -405,7 +405,7 @@
             this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonCPF.Name = "radioButtonCPF";
             this.radioButtonCPF.Size = new System.Drawing.Size(72, 25);
-            this.radioButtonCPF.TabIndex = 0;
+            this.radioButtonCPF.TabIndex = 2;
             this.radioButtonCPF.TabStop = true;
             this.radioButtonCPF.Text = "CPF";
             this.radioButtonCPF.UseVisualStyleBackColor = true;
@@ -419,7 +419,7 @@
             this.radioButtonNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNome.Name = "radioButtonNome";
             this.radioButtonNome.Size = new System.Drawing.Size(83, 25);
-            this.radioButtonNome.TabIndex = 0;
+            this.radioButtonNome.TabIndex = 1;
             this.radioButtonNome.TabStop = true;
             this.radioButtonNome.Text = "Nome";
             this.radioButtonNome.UseVisualStyleBackColor = true;
@@ -436,7 +436,7 @@
             this.buttonBuscarFuncionario.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonBuscarFuncionario.Name = "buttonBuscarFuncionario";
             this.buttonBuscarFuncionario.Size = new System.Drawing.Size(145, 39);
-            this.buttonBuscarFuncionario.TabIndex = 2;
+            this.buttonBuscarFuncionario.TabIndex = 4;
             this.buttonBuscarFuncionario.Text = "Buscar";
             this.buttonBuscarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscarFuncionario.UseVisualStyleBackColor = false;
@@ -464,7 +464,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Size = new System.Drawing.Size(436, 295);
-            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pertence ao grupo";
             // 
@@ -537,7 +537,7 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Size = new System.Drawing.Size(545, 212);
-            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados Pessoais";
             // 
@@ -551,7 +551,7 @@
             this.data_nascimentoMaskedTextBox.Name = "data_nascimentoMaskedTextBox";
             this.data_nascimentoMaskedTextBox.ReadOnly = true;
             this.data_nascimentoMaskedTextBox.Size = new System.Drawing.Size(101, 22);
-            this.data_nascimentoMaskedTextBox.TabIndex = 8;
+            this.data_nascimentoMaskedTextBox.TabIndex = 9;
             this.data_nascimentoMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // idSexoTextBox
@@ -563,7 +563,7 @@
             this.idSexoTextBox.Name = "idSexoTextBox";
             this.idSexoTextBox.ReadOnly = true;
             this.idSexoTextBox.Size = new System.Drawing.Size(101, 22);
-            this.idSexoTextBox.TabIndex = 7;
+            this.idSexoTextBox.TabIndex = 5;
             // 
             // celularMaskedTextBox
             // 
@@ -575,7 +575,7 @@
             this.celularMaskedTextBox.Name = "celularMaskedTextBox";
             this.celularMaskedTextBox.ReadOnly = true;
             this.celularMaskedTextBox.Size = new System.Drawing.Size(150, 22);
-            this.celularMaskedTextBox.TabIndex = 6;
+            this.celularMaskedTextBox.TabIndex = 15;
             // 
             // cPFMaskedTextBox
             // 
@@ -587,7 +587,7 @@
             this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
             this.cPFMaskedTextBox.ReadOnly = true;
             this.cPFMaskedTextBox.Size = new System.Drawing.Size(250, 22);
-            this.cPFMaskedTextBox.TabIndex = 3;
+            this.cPFMaskedTextBox.TabIndex = 7;
             // 
             // emailTextBox
             // 
@@ -598,7 +598,7 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.ReadOnly = true;
             this.emailTextBox.Size = new System.Drawing.Size(445, 22);
-            this.emailTextBox.TabIndex = 5;
+            this.emailTextBox.TabIndex = 13;
             // 
             // enderecoTextBox
             // 
@@ -609,7 +609,7 @@
             this.enderecoTextBox.Name = "enderecoTextBox";
             this.enderecoTextBox.ReadOnly = true;
             this.enderecoTextBox.Size = new System.Drawing.Size(445, 22);
-            this.enderecoTextBox.TabIndex = 4;
+            this.enderecoTextBox.TabIndex = 11;
             // 
             // nomeTextBox
             // 
@@ -620,7 +620,7 @@
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.ReadOnly = true;
             this.nomeTextBox.Size = new System.Drawing.Size(250, 22);
-            this.nomeTextBox.TabIndex = 2;
+            this.nomeTextBox.TabIndex = 3;
             // 
             // idTextBox
             // 
@@ -644,7 +644,7 @@
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Size = new System.Drawing.Size(436, 100);
-            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dados do Grupo";
             // 
@@ -657,7 +657,7 @@
             this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
             this.nomeGrupoTextBox.ReadOnly = true;
             this.nomeGrupoTextBox.Size = new System.Drawing.Size(199, 22);
-            this.nomeGrupoTextBox.TabIndex = 2;
+            this.nomeGrupoTextBox.TabIndex = 3;
             // 
             // idTextBox1
             // 
@@ -681,7 +681,7 @@
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Size = new System.Drawing.Size(545, 92);
-            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Dados Usuário";
             // 
@@ -695,7 +695,7 @@
             this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.ReadOnly = true;
             this.senhaTextBox.Size = new System.Drawing.Size(150, 22);
-            this.senhaTextBox.TabIndex = 2;
+            this.senhaTextBox.TabIndex = 3;
             // 
             // nomeUsuarioTextBox
             // 
@@ -720,7 +720,7 @@
             this.buttonAlterarFuncionario.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
             this.buttonAlterarFuncionario.Size = new System.Drawing.Size(145, 39);
-            this.buttonAlterarFuncionario.TabIndex = 5;
+            this.buttonAlterarFuncionario.TabIndex = 6;
             this.buttonAlterarFuncionario.Text = "Alterar";
             this.buttonAlterarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAlterarFuncionario.UseVisualStyleBackColor = false;
@@ -738,7 +738,7 @@
             this.buttonExcluirGrupoFuncionario.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonExcluirGrupoFuncionario.Name = "buttonExcluirGrupoFuncionario";
             this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(145, 39);
-            this.buttonExcluirGrupoFuncionario.TabIndex = 10;
+            this.buttonExcluirGrupoFuncionario.TabIndex = 2;
             this.buttonExcluirGrupoFuncionario.Text = "Excluir";
             this.buttonExcluirGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = true;
@@ -757,7 +757,7 @@
             this.buttonAdicionarGrupoFuncionario.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonAdicionarGrupoFuncionario.Name = "buttonAdicionarGrupoFuncionario";
             this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(145, 39);
-            this.buttonAdicionarGrupoFuncionario.TabIndex = 9;
+            this.buttonAdicionarGrupoFuncionario.TabIndex = 10;
             this.buttonAdicionarGrupoFuncionario.Text = "Adicionar";
             this.buttonAdicionarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarGrupoFuncionario.UseVisualStyleBackColor = false;
@@ -775,7 +775,7 @@
             this.buttonExcluirFuncionario.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonExcluirFuncionario.Name = "buttonExcluirFuncionario";
             this.buttonExcluirFuncionario.Size = new System.Drawing.Size(145, 39);
-            this.buttonExcluirFuncionario.TabIndex = 6;
+            this.buttonExcluirFuncionario.TabIndex = 7;
             this.buttonExcluirFuncionario.Text = "Excluir";
             this.buttonExcluirFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirFuncionario.UseVisualStyleBackColor = false;
@@ -794,7 +794,7 @@
             this.buttonAdicionarFuncionario.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonAdicionarFuncionario.Name = "buttonAdicionarFuncionario";
             this.buttonAdicionarFuncionario.Size = new System.Drawing.Size(145, 39);
-            this.buttonAdicionarFuncionario.TabIndex = 4;
+            this.buttonAdicionarFuncionario.TabIndex = 5;
             this.buttonAdicionarFuncionario.Text = "Adicionar";
             this.buttonAdicionarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarFuncionario.UseVisualStyleBackColor = false;
@@ -826,7 +826,7 @@
             this.MinimumSize = new System.Drawing.Size(1043, 868);
             this.Name = "FormBuscarFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HOTELOGIX - Consulta de Funcionários";
+            this.Text = "Buscar Funcionário";
             this.Load += new System.EventHandler(this.FormBuscarFuncionario_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormBuscarFuncionario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioDataGridView)).EndInit();
