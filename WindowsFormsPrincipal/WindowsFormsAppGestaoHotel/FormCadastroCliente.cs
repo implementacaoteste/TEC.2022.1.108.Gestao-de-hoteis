@@ -69,6 +69,7 @@ namespace WindowsFormsPrincipal1
             {
                 MessageBox.Show(ex.Message);
             }
+            return;
         }
 
         private void FormCadastroCliente_KeyDown(object sender, KeyEventArgs e)
@@ -76,6 +77,25 @@ namespace WindowsFormsPrincipal1
             if (e.KeyCode == Keys.Escape)
             {
                 buttonCancelarCadastroCliente_Click(null, null);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClienteBLL clienteBLL = new ClienteBLL();
+                clienteBindingSource.EndEdit();
+                if (Id == 0)
+                    clienteBLL.Inserir((Cliente)clienteBindingSource.Current);
+                else
+                    clienteBLL.Alterar((Cliente)clienteBindingSource.Current);
+
+                MessageBox.Show("Registro salvo com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
     }

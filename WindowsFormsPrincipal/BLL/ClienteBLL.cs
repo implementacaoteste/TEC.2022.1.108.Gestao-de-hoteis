@@ -68,6 +68,7 @@ namespace BLL
 
             if (_cliente.Sexo == null)
                 throw new Exception("Selecione o sexo do cliente");
+            return;
         }
     }
 }

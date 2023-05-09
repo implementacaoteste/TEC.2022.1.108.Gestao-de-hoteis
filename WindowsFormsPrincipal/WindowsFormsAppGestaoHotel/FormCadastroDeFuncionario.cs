@@ -5,7 +5,6 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPrincipal1
 {
-
     public partial class FormCadastroDeFuncionario : Form
     {
         public int Id;
@@ -27,7 +26,7 @@ namespace WindowsFormsPrincipal1
                     funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
 
                 MessageBox.Show("Registro salvo com sucesso!");
-                Close();
+                //Close();
             }
             catch (Exception ex)
             {

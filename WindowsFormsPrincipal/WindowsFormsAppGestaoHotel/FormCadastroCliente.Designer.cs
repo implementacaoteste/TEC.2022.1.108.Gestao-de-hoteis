@@ -196,7 +196,7 @@
             this.buttonSalvarCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buttonSalvarCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvarCadastroCliente.Image")));
             this.buttonSalvarCadastroCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvarCadastroCliente.Location = new System.Drawing.Point(526, 269);
+            this.buttonSalvarCadastroCliente.Location = new System.Drawing.Point(525, 269);
             this.buttonSalvarCadastroCliente.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvarCadastroCliente.Name = "buttonSalvarCadastroCliente";
             this.buttonSalvarCadastroCliente.Size = new System.Drawing.Size(101, 33);

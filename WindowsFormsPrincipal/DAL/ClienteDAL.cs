@@ -31,7 +31,6 @@ namespace DALL
                 cmd.Parameters.AddWithValue("@Id_Sexo", _cliente.IdSexo);
                 cmd.Connection = cn;
                 cn.Open();
-
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

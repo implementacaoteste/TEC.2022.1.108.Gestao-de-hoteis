@@ -330,9 +330,9 @@
             this.Controls.Add(this.pictureBoxUsu2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.pictureBoxUsu1);
             this.Controls.Add(this.pictureBoxCaixaLogin);
             this.Controls.Add(this.pictureBoxCaixaLogin2);
+            this.Controls.Add(this.pictureBoxUsu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);

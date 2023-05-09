@@ -43,6 +43,9 @@ namespace BLL
         }
         private void ValidarDados(GrupoFuncionario _grupoFuncionario)
         {
+            if (_grupoFuncionario.NomeGrupo == null)
+                throw new Exception("Insira o nome do grupo");
+
             if (_grupoFuncionario.NomeGrupo.Length <= 2)
                 throw new Exception("O nome deve ter mais de 2 caracteres.");
         }
