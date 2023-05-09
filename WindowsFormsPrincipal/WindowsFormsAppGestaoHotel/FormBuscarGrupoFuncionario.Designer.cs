@@ -107,7 +107,7 @@
             descricaoLabel.Location = new System.Drawing.Point(45, 57);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(72, 16);
-            descricaoLabel.TabIndex = 18;
+            descricaoLabel.TabIndex = 2;
             descricaoLabel.Text = "Descrição:";
             // 
             // grupoFuncionarioDataGridView
@@ -130,7 +130,7 @@
             this.grupoFuncionarioDataGridView.RowHeadersWidth = 51;
             this.grupoFuncionarioDataGridView.RowTemplate.Height = 24;
             this.grupoFuncionarioDataGridView.Size = new System.Drawing.Size(529, 268);
-            this.grupoFuncionarioDataGridView.TabIndex = 7;
+            this.grupoFuncionarioDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -173,7 +173,7 @@
             this.permissoesDataGridView.RowHeadersWidth = 51;
             this.permissoesDataGridView.RowTemplate.Height = 24;
             this.permissoesDataGridView.Size = new System.Drawing.Size(424, 268);
-            this.permissoesDataGridView.TabIndex = 8;
+            this.permissoesDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -201,7 +201,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(515, 98);
-            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por";
             // 
@@ -215,7 +215,7 @@
             this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonTodos.Name = "radioButtonTodos";
             this.radioButtonTodos.Size = new System.Drawing.Size(85, 25);
-            this.radioButtonTodos.TabIndex = 2;
+            this.radioButtonTodos.TabIndex = 0;
             this.radioButtonTodos.TabStop = true;
             this.radioButtonTodos.Text = "Todos";
             this.radioButtonTodos.UseVisualStyleBackColor = false;
@@ -229,7 +229,7 @@
             this.radioButtonNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNome.Name = "radioButtonNome";
             this.radioButtonNome.Size = new System.Drawing.Size(83, 25);
-            this.radioButtonNome.TabIndex = 2;
+            this.radioButtonNome.TabIndex = 1;
             this.radioButtonNome.TabStop = true;
             this.radioButtonNome.Text = "Nome";
             this.radioButtonNome.UseVisualStyleBackColor = true;
@@ -242,7 +242,7 @@
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(297, 30);
-            this.textBoxBuscar.TabIndex = 1;
+            this.textBoxBuscar.TabIndex = 2;
             // 
             // buttonBuscarGrupoFuncionario
             // 
@@ -256,7 +256,7 @@
             this.buttonBuscarGrupoFuncionario.MinimumSize = new System.Drawing.Size(109, 34);
             this.buttonBuscarGrupoFuncionario.Name = "buttonBuscarGrupoFuncionario";
             this.buttonBuscarGrupoFuncionario.Size = new System.Drawing.Size(140, 41);
-            this.buttonBuscarGrupoFuncionario.TabIndex = 0;
+            this.buttonBuscarGrupoFuncionario.TabIndex = 3;
             this.buttonBuscarGrupoFuncionario.Text = "Buscar";
             this.buttonBuscarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscarGrupoFuncionario.UseVisualStyleBackColor = false;
@@ -271,7 +271,7 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Size = new System.Drawing.Size(541, 295);
-            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Grupos cadastrados";
             // 
@@ -284,7 +284,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Size = new System.Drawing.Size(436, 295);
-            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Permissões";
             // 
@@ -299,7 +299,7 @@
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Size = new System.Drawing.Size(541, 100);
-            this.groupBox5.TabIndex = 17;
+            this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dados do Grupo";
             // 
@@ -312,7 +312,7 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(50, 22);
-            this.idTextBox.TabIndex = 18;
+            this.idTextBox.TabIndex = 1;
             // 
             // nomeGrupoTextBox1
             // 
@@ -323,7 +323,7 @@
             this.nomeGrupoTextBox1.Name = "nomeGrupoTextBox1";
             this.nomeGrupoTextBox1.ReadOnly = true;
             this.nomeGrupoTextBox1.Size = new System.Drawing.Size(245, 22);
-            this.nomeGrupoTextBox1.TabIndex = 19;
+            this.nomeGrupoTextBox1.TabIndex = 3;
             // 
             // groupBox4
             // 
@@ -336,7 +336,7 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Size = new System.Drawing.Size(436, 100);
-            this.groupBox4.TabIndex = 17;
+            this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados da Permissão";
             // 
@@ -349,7 +349,7 @@
             this.idTextBox1.Name = "idTextBox1";
             this.idTextBox1.ReadOnly = true;
             this.idTextBox1.Size = new System.Drawing.Size(50, 22);
-            this.idTextBox1.TabIndex = 20;
+            this.idTextBox1.TabIndex = 1;
             // 
             // descricaoTextBox
             // 
@@ -360,7 +360,7 @@
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.ReadOnly = true;
             this.descricaoTextBox.Size = new System.Drawing.Size(245, 22);
-            this.descricaoTextBox.TabIndex = 19;
+            this.descricaoTextBox.TabIndex = 3;
             // 
             // buttonExcluirPermissao
             // 
@@ -374,7 +374,7 @@
             this.buttonExcluirPermissao.MinimumSize = new System.Drawing.Size(109, 34);
             this.buttonExcluirPermissao.Name = "buttonExcluirPermissao";
             this.buttonExcluirPermissao.Size = new System.Drawing.Size(143, 41);
-            this.buttonExcluirPermissao.TabIndex = 11;
+            this.buttonExcluirPermissao.TabIndex = 9;
             this.buttonExcluirPermissao.Text = "Excluir";
             this.buttonExcluirPermissao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirPermissao.UseVisualStyleBackColor = true;
@@ -393,7 +393,7 @@
             this.buttonAdicionarPermissao.MinimumSize = new System.Drawing.Size(131, 34);
             this.buttonAdicionarPermissao.Name = "buttonAdicionarPermissao";
             this.buttonAdicionarPermissao.Size = new System.Drawing.Size(164, 41);
-            this.buttonAdicionarPermissao.TabIndex = 12;
+            this.buttonAdicionarPermissao.TabIndex = 8;
             this.buttonAdicionarPermissao.Text = "Adicionar";
             this.buttonAdicionarPermissao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarPermissao.UseVisualStyleBackColor = false;
@@ -410,7 +410,7 @@
             this.buttonExcluirGrupoFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirGrupoFuncionario.Name = "buttonExcluirGrupoFuncionario";
             this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(148, 41);
-            this.buttonExcluirGrupoFuncionario.TabIndex = 4;
+            this.buttonExcluirGrupoFuncionario.TabIndex = 6;
             this.buttonExcluirGrupoFuncionario.Text = "Excluir";
             this.buttonExcluirGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = false;
@@ -427,7 +427,7 @@
             this.buttonAlterarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterarGrupoFuncionario.Name = "buttonAlterarGrupoFuncionario";
             this.buttonAlterarGrupoFuncionario.Size = new System.Drawing.Size(133, 41);
-            this.buttonAlterarGrupoFuncionario.TabIndex = 3;
+            this.buttonAlterarGrupoFuncionario.TabIndex = 5;
             this.buttonAlterarGrupoFuncionario.Text = "Alterar";
             this.buttonAlterarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAlterarGrupoFuncionario.UseVisualStyleBackColor = false;
@@ -444,7 +444,7 @@
             this.buttonAdicionarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdicionarGrupoFuncionario.Name = "buttonAdicionarGrupoFuncionario";
             this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(172, 41);
-            this.buttonAdicionarGrupoFuncionario.TabIndex = 2;
+            this.buttonAdicionarGrupoFuncionario.TabIndex = 4;
             this.buttonAdicionarGrupoFuncionario.Text = "Adicionar";
             this.buttonAdicionarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarGrupoFuncionario.UseVisualStyleBackColor = false;
@@ -475,7 +475,7 @@
             this.Name = "FormBuscarGrupoFuncionario";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HOTELOGIX - Consulta de Grupo de Funcionários";
+            this.Text = "HOTELOGIX - Buscar Grupo de Funcionários";
             this.Load += new System.EventHandler(this.FormBuscarGrupoFuncionario_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormBuscarGrupoFuncionario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionarioDataGridView)).EndInit();
