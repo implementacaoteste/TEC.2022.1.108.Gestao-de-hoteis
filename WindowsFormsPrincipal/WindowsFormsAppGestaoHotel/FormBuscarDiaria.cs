@@ -76,7 +76,7 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                if (diariaBindingSource.Count == 0)
+                if (diariaBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não há registro selecionado para ser alterado.");
                     return;

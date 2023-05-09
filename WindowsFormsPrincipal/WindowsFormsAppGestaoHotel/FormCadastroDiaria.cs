@@ -27,8 +27,6 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormCadastroDiaria : Form
     {
         public int Id;
-        private int idDiaria;
-        private int idQuarto;
 
         public FormCadastroDiaria(int _id = 0)
         {

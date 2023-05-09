@@ -51,8 +51,8 @@
             this.data_EntradaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.data_SaidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonSelecionarQuarto = new System.Windows.Forms.Button();
             this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonSelecionarQuarto = new System.Windows.Forms.Button();
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -283,6 +283,11 @@
             this.textBox1.Size = new System.Drawing.Size(140, 22);
             this.textBox1.TabIndex = 26;
             // 
+            // quartosBindingSource
+            // 
+            this.quartosBindingSource.DataMember = "Quartos";
+            this.quartosBindingSource.DataSource = this.diariaBindingSource;
+            // 
             // buttonSelecionarQuarto
             // 
             this.buttonSelecionarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,11 +299,6 @@
             this.buttonSelecionarQuarto.Text = "Selecionar";
             this.buttonSelecionarQuarto.UseVisualStyleBackColor = true;
             this.buttonSelecionarQuarto.Click += new System.EventHandler(this.buttonSelecionarQuarto_Click_1);
-            // 
-            // quartosBindingSource
-            // 
-            this.quartosBindingSource.DataMember = "Quartos";
-            this.quartosBindingSource.DataSource = this.diariaBindingSource;
             // 
             // FormCadastroDiaria
             // 
