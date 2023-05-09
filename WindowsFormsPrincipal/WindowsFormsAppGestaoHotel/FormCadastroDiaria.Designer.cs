@@ -51,8 +51,8 @@
             this.data_EntradaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.data_SaidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonSelecionarQuarto = new System.Windows.Forms.Button();
             this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonSelecionarQuarto = new System.Windows.Forms.Button();
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             data_EntradaLabel.Location = new System.Drawing.Point(521, 111);
             data_EntradaLabel.Name = "data_EntradaLabel";
             data_EntradaLabel.Size = new System.Drawing.Size(159, 25);
-            data_EntradaLabel.TabIndex = 1;
+            data_EntradaLabel.TabIndex = 13;
             data_EntradaLabel.Text = "Data da Entrada:";
             // 
             // data_SaidaLabel
@@ -81,7 +81,7 @@
             data_SaidaLabel.Location = new System.Drawing.Point(544, 181);
             data_SaidaLabel.Name = "data_SaidaLabel";
             data_SaidaLabel.Size = new System.Drawing.Size(142, 25);
-            data_SaidaLabel.TabIndex = 2;
+            data_SaidaLabel.TabIndex = 15;
             data_SaidaLabel.Text = "Data da Saida:";
             // 
             // id_clienteLabel
@@ -101,7 +101,7 @@
             id_funcionarioLabel.Location = new System.Drawing.Point(16, 106);
             id_funcionarioLabel.Name = "id_funcionarioLabel";
             id_funcionarioLabel.Size = new System.Drawing.Size(167, 25);
-            id_funcionarioLabel.TabIndex = 6;
+            id_funcionarioLabel.TabIndex = 1;
             id_funcionarioLabel.Text = "Cód. Funcionario:";
             // 
             // id_PagamentoLabel
@@ -111,7 +111,7 @@
             id_PagamentoLabel.Location = new System.Drawing.Point(20, 246);
             id_PagamentoLabel.Name = "id_PagamentoLabel";
             id_PagamentoLabel.Size = new System.Drawing.Size(165, 25);
-            id_PagamentoLabel.TabIndex = 8;
+            id_PagamentoLabel.TabIndex = 7;
             id_PagamentoLabel.Text = "Cód. Pagamento:";
             // 
             // valor_TotalLabel
@@ -121,7 +121,7 @@
             valor_TotalLabel.Location = new System.Drawing.Point(579, 251);
             valor_TotalLabel.Name = "valor_TotalLabel";
             valor_TotalLabel.Size = new System.Drawing.Size(113, 25);
-            valor_TotalLabel.TabIndex = 10;
+            valor_TotalLabel.TabIndex = 17;
             valor_TotalLabel.Text = "Valor Total:";
             // 
             // label1
@@ -131,7 +131,7 @@
             label1.Location = new System.Drawing.Point(60, 313);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(125, 25);
-            label1.TabIndex = 24;
+            label1.TabIndex = 10;
             label1.Text = "Cód. Quarto:";
             // 
             // diariaBindingSource
@@ -145,7 +145,7 @@
             this.valor_TotalTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.valor_TotalTextBox.Name = "valor_TotalTextBox";
             this.valor_TotalTextBox.Size = new System.Drawing.Size(155, 22);
-            this.valor_TotalTextBox.TabIndex = 11;
+            this.valor_TotalTextBox.TabIndex = 18;
             // 
             // tituloLabel
             // 
@@ -155,7 +155,7 @@
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Name = "tituloLabel";
             this.tituloLabel.Size = new System.Drawing.Size(907, 68);
-            this.tituloLabel.TabIndex = 12;
+            this.tituloLabel.TabIndex = 0;
             this.tituloLabel.Text = "Cadastro de Diária";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -166,7 +166,7 @@
             this.buttonSelecionarFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionarFuncionario.Name = "buttonSelecionarFuncionario";
             this.buttonSelecionarFuncionario.Size = new System.Drawing.Size(117, 31);
-            this.buttonSelecionarFuncionario.TabIndex = 13;
+            this.buttonSelecionarFuncionario.TabIndex = 3;
             this.buttonSelecionarFuncionario.Text = "Selecionar";
             this.buttonSelecionarFuncionario.UseVisualStyleBackColor = true;
             this.buttonSelecionarFuncionario.Click += new System.EventHandler(this.buttonSelecionarFuncionario_Click);
@@ -178,7 +178,7 @@
             this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionarCliente.Name = "buttonSelecionarCliente";
             this.buttonSelecionarCliente.Size = new System.Drawing.Size(117, 31);
-            this.buttonSelecionarCliente.TabIndex = 14;
+            this.buttonSelecionarCliente.TabIndex = 6;
             this.buttonSelecionarCliente.Text = "Selecionar";
             this.buttonSelecionarCliente.UseVisualStyleBackColor = true;
             this.buttonSelecionarCliente.Click += new System.EventHandler(this.buttonSelecionarCliente_Click);
@@ -190,7 +190,7 @@
             this.buttonSelecionarPagamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionarPagamento.Name = "buttonSelecionarPagamento";
             this.buttonSelecionarPagamento.Size = new System.Drawing.Size(117, 31);
-            this.buttonSelecionarPagamento.TabIndex = 15;
+            this.buttonSelecionarPagamento.TabIndex = 9;
             this.buttonSelecionarPagamento.Text = "Selecionar";
             this.buttonSelecionarPagamento.UseVisualStyleBackColor = true;
             this.buttonSelecionarPagamento.Click += new System.EventHandler(this.buttonSelecionarPagamento_Click);
@@ -205,7 +205,7 @@
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(135, 41);
-            this.buttonSalvar.TabIndex = 16;
+            this.buttonSalvar.TabIndex = 19;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -221,7 +221,7 @@
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(165, 41);
-            this.buttonCancelar.TabIndex = 8;
+            this.buttonCancelar.TabIndex = 20;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -234,7 +234,7 @@
             this.funcionarioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.funcionarioTextBox.Name = "funcionarioTextBox";
             this.funcionarioTextBox.Size = new System.Drawing.Size(140, 22);
-            this.funcionarioTextBox.TabIndex = 18;
+            this.funcionarioTextBox.TabIndex = 2;
             // 
             // id_ClienteTextBox
             // 
@@ -243,7 +243,7 @@
             this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.id_ClienteTextBox.Name = "id_ClienteTextBox";
             this.id_ClienteTextBox.Size = new System.Drawing.Size(140, 22);
-            this.id_ClienteTextBox.TabIndex = 19;
+            this.id_ClienteTextBox.TabIndex = 5;
             // 
             // id_PagamentoTextBox
             // 
@@ -252,7 +252,7 @@
             this.id_PagamentoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.id_PagamentoTextBox.Name = "id_PagamentoTextBox";
             this.id_PagamentoTextBox.Size = new System.Drawing.Size(140, 22);
-            this.id_PagamentoTextBox.TabIndex = 20;
+            this.id_PagamentoTextBox.TabIndex = 8;
             // 
             // data_EntradaDateTimePicker
             // 
@@ -262,7 +262,7 @@
             this.data_EntradaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_EntradaDateTimePicker.Name = "data_EntradaDateTimePicker";
             this.data_EntradaDateTimePicker.Size = new System.Drawing.Size(155, 22);
-            this.data_EntradaDateTimePicker.TabIndex = 21;
+            this.data_EntradaDateTimePicker.TabIndex = 14;
             // 
             // data_SaidaDateTimePicker
             // 
@@ -272,7 +272,7 @@
             this.data_SaidaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_SaidaDateTimePicker.Name = "data_SaidaDateTimePicker";
             this.data_SaidaDateTimePicker.Size = new System.Drawing.Size(159, 22);
-            this.data_SaidaDateTimePicker.TabIndex = 23;
+            this.data_SaidaDateTimePicker.TabIndex = 16;
             // 
             // textBox1
             // 
@@ -281,7 +281,12 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 22);
-            this.textBox1.TabIndex = 26;
+            this.textBox1.TabIndex = 11;
+            // 
+            // quartosBindingSource
+            // 
+            this.quartosBindingSource.DataMember = "Quartos";
+            this.quartosBindingSource.DataSource = this.diariaBindingSource;
             // 
             // buttonSelecionarQuarto
             // 
@@ -290,15 +295,10 @@
             this.buttonSelecionarQuarto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionarQuarto.Name = "buttonSelecionarQuarto";
             this.buttonSelecionarQuarto.Size = new System.Drawing.Size(117, 31);
-            this.buttonSelecionarQuarto.TabIndex = 25;
+            this.buttonSelecionarQuarto.TabIndex = 12;
             this.buttonSelecionarQuarto.Text = "Selecionar";
             this.buttonSelecionarQuarto.UseVisualStyleBackColor = true;
             this.buttonSelecionarQuarto.Click += new System.EventHandler(this.buttonSelecionarQuarto_Click_1);
-            // 
-            // quartosBindingSource
-            // 
-            this.quartosBindingSource.DataMember = "Quartos";
-            this.quartosBindingSource.DataSource = this.diariaBindingSource;
             // 
             // FormCadastroDiaria
             // 

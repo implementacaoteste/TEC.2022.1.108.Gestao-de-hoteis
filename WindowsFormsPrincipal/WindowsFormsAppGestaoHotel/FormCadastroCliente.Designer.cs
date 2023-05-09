@@ -67,7 +67,7 @@
             nomeLabel.Location = new System.Drawing.Point(25, 123);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(64, 25);
-            nomeLabel.TabIndex = 52;
+            nomeLabel.TabIndex = 1;
             nomeLabel.Text = "Nome";
             // 
             // celularLabel
@@ -77,7 +77,7 @@
             celularLabel.Location = new System.Drawing.Point(577, 123);
             celularLabel.Name = "celularLabel";
             celularLabel.Size = new System.Drawing.Size(74, 25);
-            celularLabel.TabIndex = 54;
+            celularLabel.TabIndex = 5;
             celularLabel.Text = "Celular";
             // 
             // cpfLabel
@@ -87,7 +87,7 @@
             cpfLabel.Location = new System.Drawing.Point(381, 123);
             cpfLabel.Name = "cpfLabel";
             cpfLabel.Size = new System.Drawing.Size(52, 25);
-            cpfLabel.TabIndex = 55;
+            cpfLabel.TabIndex = 3;
             cpfLabel.Text = "CPF";
             // 
             // data_nascimentoLabel
@@ -97,7 +97,7 @@
             data_nascimentoLabel.Location = new System.Drawing.Point(788, 123);
             data_nascimentoLabel.Name = "data_nascimentoLabel";
             data_nascimentoLabel.Size = new System.Drawing.Size(188, 25);
-            data_nascimentoLabel.TabIndex = 58;
+            data_nascimentoLabel.TabIndex = 7;
             data_nascimentoLabel.Text = "Data de Nascimento";
             // 
             // generoLabel
@@ -107,7 +107,7 @@
             generoLabel.Location = new System.Drawing.Point(25, 217);
             generoLabel.Name = "generoLabel";
             generoLabel.Size = new System.Drawing.Size(77, 25);
-            generoLabel.TabIndex = 60;
+            generoLabel.TabIndex = 9;
             generoLabel.Text = "Gênero";
             // 
             // enderecoLabel
@@ -117,7 +117,7 @@
             enderecoLabel.Location = new System.Drawing.Point(181, 217);
             enderecoLabel.Name = "enderecoLabel";
             enderecoLabel.Size = new System.Drawing.Size(96, 25);
-            enderecoLabel.TabIndex = 62;
+            enderecoLabel.TabIndex = 11;
             enderecoLabel.Text = "Endereço";
             // 
             // emailLabel
@@ -127,7 +127,7 @@
             emailLabel.Location = new System.Drawing.Point(544, 217);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(67, 25);
-            emailLabel.TabIndex = 64;
+            emailLabel.TabIndex = 13;
             emailLabel.Text = "E-mail";
             // 
             // clienteBindingSource
@@ -145,7 +145,7 @@
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Name = "tituloLabel";
             this.tituloLabel.Size = new System.Drawing.Size(1025, 73);
-            this.tituloLabel.TabIndex = 50;
+            this.tituloLabel.TabIndex = 0;
             this.tituloLabel.Text = "Cadastro de Cliente";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -161,7 +161,7 @@
             this.generoComboBox.MinimumSize = new System.Drawing.Size(129, 0);
             this.generoComboBox.Name = "generoComboBox";
             this.generoComboBox.Size = new System.Drawing.Size(145, 30);
-            this.generoComboBox.TabIndex = 4;
+            this.generoComboBox.TabIndex = 10;
             this.generoComboBox.ValueMember = "Id";
             // 
             // buttonCancelarCadastroCliente
@@ -175,7 +175,7 @@
             this.buttonCancelarCadastroCliente.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCancelarCadastroCliente.Name = "buttonCancelarCadastroCliente";
             this.buttonCancelarCadastroCliente.Size = new System.Drawing.Size(165, 41);
-            this.buttonCancelarCadastroCliente.TabIndex = 8;
+            this.buttonCancelarCadastroCliente.TabIndex = 16;
             this.buttonCancelarCadastroCliente.Text = "Cancelar";
             this.buttonCancelarCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelarCadastroCliente.UseVisualStyleBackColor = false;
@@ -189,11 +189,10 @@
             this.buttonSalvarCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvarCadastroCliente.Image")));
             this.buttonSalvarCadastroCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSalvarCadastroCliente.Location = new System.Drawing.Point(701, 331);
-
             this.buttonSalvarCadastroCliente.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvarCadastroCliente.Name = "buttonSalvarCadastroCliente";
             this.buttonSalvarCadastroCliente.Size = new System.Drawing.Size(135, 41);
-            this.buttonSalvarCadastroCliente.TabIndex = 7;
+            this.buttonSalvarCadastroCliente.TabIndex = 15;
             this.buttonSalvarCadastroCliente.Text = "Salvar";
             this.buttonSalvarCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvarCadastroCliente.UseVisualStyleBackColor = false;
@@ -209,7 +208,7 @@
             this.cPFMaskedTextBox.Mask = "000,000,000-00";
             this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
             this.cPFMaskedTextBox.Size = new System.Drawing.Size(190, 30);
-            this.cPFMaskedTextBox.TabIndex = 1;
+            this.cPFMaskedTextBox.TabIndex = 4;
             // 
             // celularMaskedTextBox
             // 
@@ -221,7 +220,7 @@
             this.celularMaskedTextBox.Mask = "(99) 00000-0000";
             this.celularMaskedTextBox.Name = "celularMaskedTextBox";
             this.celularMaskedTextBox.Size = new System.Drawing.Size(202, 30);
-            this.celularMaskedTextBox.TabIndex = 2;
+            this.celularMaskedTextBox.TabIndex = 6;
             // 
             // data_nascimentoDateTimePicker
             // 
@@ -232,7 +231,7 @@
             this.data_nascimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(207, 30);
-            this.data_nascimentoDateTimePicker.TabIndex = 3;
+            this.data_nascimentoDateTimePicker.TabIndex = 8;
             // 
             // emailTextBox1
             // 
@@ -243,7 +242,7 @@
             this.emailTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox1.Name = "emailTextBox1";
             this.emailTextBox1.Size = new System.Drawing.Size(451, 30);
-            this.emailTextBox1.TabIndex = 6;
+            this.emailTextBox1.TabIndex = 14;
             // 
             // enderecoTextBox1
             // 
@@ -254,7 +253,7 @@
             this.enderecoTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.enderecoTextBox1.Name = "enderecoTextBox1";
             this.enderecoTextBox1.Size = new System.Drawing.Size(355, 30);
-            this.enderecoTextBox1.TabIndex = 5;
+            this.enderecoTextBox1.TabIndex = 12;
             // 
             // nomeTextBox1
             // 
@@ -265,7 +264,7 @@
             this.nomeTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox1.Name = "nomeTextBox1";
             this.nomeTextBox1.Size = new System.Drawing.Size(350, 30);
-            this.nomeTextBox1.TabIndex = 0;
+            this.nomeTextBox1.TabIndex = 2;
             // 
             // FormCadastroCliente
             // 

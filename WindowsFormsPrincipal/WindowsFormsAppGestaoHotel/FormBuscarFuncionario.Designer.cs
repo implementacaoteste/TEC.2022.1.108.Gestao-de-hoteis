@@ -738,7 +738,7 @@
             this.buttonExcluirGrupoFuncionario.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonExcluirGrupoFuncionario.Name = "buttonExcluirGrupoFuncionario";
             this.buttonExcluirGrupoFuncionario.Size = new System.Drawing.Size(145, 39);
-            this.buttonExcluirGrupoFuncionario.TabIndex = 2;
+            this.buttonExcluirGrupoFuncionario.TabIndex = 11;
             this.buttonExcluirGrupoFuncionario.Text = "Excluir";
             this.buttonExcluirGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirGrupoFuncionario.UseVisualStyleBackColor = true;
