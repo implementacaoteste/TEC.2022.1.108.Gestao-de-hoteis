@@ -239,7 +239,7 @@ namespace DALL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT CLIENTE.ID, NOME, EMAIL, CPF, DATA_NASCIMENTO, CELULAR, ENDERECO, ID_SEXO, SEXO.SEXO
                                     FROM CLIENTE                                    
-                                    INNER JOIN SEXO ON CLIENTE.ID_SEXO = SEXO.ID
+                                    LEFT JOIN SEXO ON CLIENTE.ID_SEXO = SEXO.ID
                                     WHERE CLIENTE.ID = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -251,7 +251,7 @@ namespace DALL
                     {
                         cliente.Id = Convert.ToInt32(rd["ID"]);
                         cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
-                        cliente.Nome = rd["SEXO"].ToString();
+                        cliente.Sexo = rd["SEXO"].ToString();
                         cliente.Nome = rd["NOME"].ToString();
                         cliente.Email = rd["EMAIL"].ToString();
                         cliente.CPF = rd["CPF"].ToString();

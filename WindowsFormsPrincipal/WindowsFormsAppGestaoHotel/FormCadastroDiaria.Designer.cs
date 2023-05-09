@@ -52,6 +52,7 @@
             this.data_SaidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonSelecionarQuarto = new System.Windows.Forms.Button();
+            this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -60,6 +61,7 @@
             valor_TotalLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // data_EntradaLabel
@@ -121,6 +123,16 @@
             valor_TotalLabel.Size = new System.Drawing.Size(113, 25);
             valor_TotalLabel.TabIndex = 10;
             valor_TotalLabel.Text = "Valor Total:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(60, 313);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(125, 25);
+            label1.TabIndex = 24;
+            label1.Text = "Cód. Quarto:";
             // 
             // diariaBindingSource
             // 
@@ -264,7 +276,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Pagamento", true));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Numero", true));
             this.textBox1.Location = new System.Drawing.Point(224, 316);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
@@ -283,15 +295,10 @@
             this.buttonSelecionarQuarto.UseVisualStyleBackColor = true;
             this.buttonSelecionarQuarto.Click += new System.EventHandler(this.buttonSelecionarQuarto_Click_1);
             // 
-            // label1
+            // quartosBindingSource
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(60, 313);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(125, 25);
-            label1.TabIndex = 24;
-            label1.Text = "Cód. Quarto:";
+            this.quartosBindingSource.DataMember = "Quartos";
+            this.quartosBindingSource.DataSource = this.diariaBindingSource;
             // 
             // FormCadastroDiaria
             // 
@@ -334,6 +341,7 @@
             this.Load += new System.EventHandler(this.FormCadastroDiaria_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroDiaria_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +364,6 @@
         private System.Windows.Forms.DateTimePicker data_SaidaDateTimePicker;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonSelecionarQuarto;
+        private System.Windows.Forms.BindingSource quartosBindingSource;
     }
 }

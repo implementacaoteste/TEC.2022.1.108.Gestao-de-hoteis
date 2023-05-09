@@ -17,5 +17,6 @@ namespace Models
         public int Id_Status { get; set; }
         public string Status { get; set; }
         public string Andar { get; set; }
+        public List<Diaria> Diarias { get; set; }
     }
 }
