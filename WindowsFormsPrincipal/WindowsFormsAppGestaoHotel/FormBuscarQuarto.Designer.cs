@@ -37,8 +37,9 @@
             System.Windows.Forms.Label valor_DiariaLabel;
             System.Windows.Forms.Label andarLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarQuarto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             this.radioButtonStatus = new System.Windows.Forms.RadioButton();
@@ -47,13 +48,6 @@
             this.buttonBuscarQuarto = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.funcionarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Andar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClasseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDiariaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
@@ -66,6 +60,13 @@
             this.buttonAlterarQuarto = new System.Windows.Forms.Button();
             this.buttonExcluirQuarto = new System.Windows.Forms.Button();
             this.buttonAdicionarQuarto = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Andar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClasseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDiariaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             id_ClasseLabel = new System.Windows.Forms.Label();
@@ -273,77 +274,6 @@
             this.funcionarioDataGridView.Size = new System.Drawing.Size(619, 266);
             this.funcionarioDataGridView.TabIndex = 0;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // numeroDataGridViewTextBoxColumn
-            // 
-            this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.numeroDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "Número";
-            this.numeroDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
-            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Andar
-            // 
-            this.Andar.DataPropertyName = "Andar";
-            this.Andar.HeaderText = "Andar";
-            this.Andar.MinimumWidth = 6;
-            this.Andar.Name = "Andar";
-            this.Andar.ReadOnly = true;
-            this.Andar.Width = 125;
-            // 
-            // idClasseDataGridViewTextBoxColumn
-            // 
-            this.idClasseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idClasseDataGridViewTextBoxColumn.DataPropertyName = "Classe";
-            this.idClasseDataGridViewTextBoxColumn.HeaderText = "Classe";
-            this.idClasseDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idClasseDataGridViewTextBoxColumn.Name = "idClasseDataGridViewTextBoxColumn";
-            this.idClasseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
-            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // valorDiariaDataGridViewTextBoxColumn
-            // 
-            this.valorDiariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.valorDiariaDataGridViewTextBoxColumn.DataPropertyName = "Valor_Diaria";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.valorDiariaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.valorDiariaDataGridViewTextBoxColumn.HeaderText = "Valor da diária";
-            this.valorDiariaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorDiariaDataGridViewTextBoxColumn.Name = "valorDiariaDataGridViewTextBoxColumn";
-            this.valorDiariaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idStatusDataGridViewTextBoxColumn
-            // 
-            this.idStatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idStatusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.idStatusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.idStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idStatusDataGridViewTextBoxColumn.Name = "idStatusDataGridViewTextBoxColumn";
-            this.idStatusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // quartoBindingSource
             // 
             this.quartoBindingSource.DataSource = typeof(Models.Quarto);
@@ -442,6 +372,7 @@
             this.valor_DiariaTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(101, 22);
             this.valor_DiariaTextBox.TabIndex = 9;
+            this.valor_DiariaTextBox.TextChanged += new System.EventHandler(this.valor_DiariaTextBox_TextChanged);
             // 
             // andarTextBox
             // 
@@ -453,6 +384,7 @@
             this.andarTextBox.ReadOnly = true;
             this.andarTextBox.Size = new System.Drawing.Size(50, 22);
             this.andarTextBox.TabIndex = 5;
+            this.andarTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // buttonAlterarQuarto
             // 
@@ -508,6 +440,79 @@
             this.buttonAdicionarQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarQuarto.UseVisualStyleBackColor = false;
             this.buttonAdicionarQuarto.Click += new System.EventHandler(this.buttonAdicionarQuarto_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.numeroDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Número";
+            this.numeroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Andar
+            // 
+            this.Andar.DataPropertyName = "Andar";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Andar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Andar.HeaderText = "Andar";
+            this.Andar.MinimumWidth = 6;
+            this.Andar.Name = "Andar";
+            this.Andar.ReadOnly = true;
+            this.Andar.Width = 125;
+            // 
+            // idClasseDataGridViewTextBoxColumn
+            // 
+            this.idClasseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idClasseDataGridViewTextBoxColumn.DataPropertyName = "Classe";
+            this.idClasseDataGridViewTextBoxColumn.HeaderText = "Classe";
+            this.idClasseDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idClasseDataGridViewTextBoxColumn.Name = "idClasseDataGridViewTextBoxColumn";
+            this.idClasseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // valorDiariaDataGridViewTextBoxColumn
+            // 
+            this.valorDiariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.valorDiariaDataGridViewTextBoxColumn.DataPropertyName = "Valor_Diaria";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.valorDiariaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.valorDiariaDataGridViewTextBoxColumn.HeaderText = "Valor da diária";
+            this.valorDiariaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorDiariaDataGridViewTextBoxColumn.Name = "valorDiariaDataGridViewTextBoxColumn";
+            this.valorDiariaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idStatusDataGridViewTextBoxColumn
+            // 
+            this.idStatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idStatusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.idStatusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.idStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idStatusDataGridViewTextBoxColumn.Name = "idStatusDataGridViewTextBoxColumn";
+            this.idStatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormBuscarQuarto
             // 

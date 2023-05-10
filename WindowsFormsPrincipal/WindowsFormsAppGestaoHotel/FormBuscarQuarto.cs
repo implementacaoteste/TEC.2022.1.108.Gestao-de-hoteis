@@ -27,12 +27,10 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                Double value;
-                if (Double.TryParse(valor_DiariaTextBox.Text, out value))
-                    valor_DiariaTextBox.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", value);
-
                 radioButtonTodos.Checked = true;
                 quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
+                //valor_DiariaTextBox.Text = "R$ 0,00";
+                
             }
             catch (Exception ex)
             {
@@ -45,6 +43,11 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
+                //double value = ((Quarto)quartoBindingSource.Current).Valor_Diaria;
+                //Double value;
+                /*if (Double.TryParse(valor_DiariaTextBox.Text, out value))
+                    valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);*/
+
                 if (radioButtonTodos.Checked)
                 {
                     textBoxBuscar.Clear();
@@ -124,6 +127,13 @@ namespace WindowsFormsAppGestaoHotel
             {
                 buttonExcluirQuarto_Click(null, null);
             }
+        }
+
+        private void valor_DiariaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double value = ((Quarto)quartoBindingSource.Current).Valor_Diaria;
+            if (Double.TryParse(valor_DiariaTextBox.Text, out value))
+                valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
         }
     }
 }
