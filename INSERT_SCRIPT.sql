@@ -196,3 +196,19 @@ SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, 
                                     INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
                                     INNER JOIN STATUS S ON S.ID = Q.ID_STATUS
                                     WHERE S.STATUS LIKE 'Disponível'
+
+----------------------------------TRIGGER---------------------------------------
+Create trigger QUARTO_DIARIA 
+on DIARIA
+for insert 
+as 
+begin
+Declare 
+   @status int
+   select @status = 2 from inserted
+
+   update QUARTO set ID_STATUS = @status
+   end 
+------------------------------APAGER A TRIGGER---------------------------------------
+   Drop trigger QUARTO_DIARIA
+   --------------------------------------------------------------------------------
