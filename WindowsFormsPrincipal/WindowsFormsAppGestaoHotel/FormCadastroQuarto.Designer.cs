@@ -66,7 +66,7 @@
             descricaoLabel.Location = new System.Drawing.Point(148, 202);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(99, 25);
-            descricaoLabel.TabIndex = 1;
+            descricaoLabel.TabIndex = 11;
             descricaoLabel.Text = "Descrição";
             // 
             // id_StatusLabel
@@ -76,7 +76,7 @@
             id_StatusLabel.Location = new System.Drawing.Point(308, 118);
             id_StatusLabel.Name = "id_StatusLabel";
             id_StatusLabel.Size = new System.Drawing.Size(68, 25);
-            id_StatusLabel.TabIndex = 3;
+            id_StatusLabel.TabIndex = 5;
             id_StatusLabel.Text = "Status";
             // 
             // id_ClasseLabel
@@ -86,7 +86,7 @@
             id_ClasseLabel.Location = new System.Drawing.Point(452, 114);
             id_ClasseLabel.Name = "id_ClasseLabel";
             id_ClasseLabel.Size = new System.Drawing.Size(73, 25);
-            id_ClasseLabel.TabIndex = 5;
+            id_ClasseLabel.TabIndex = 7;
             id_ClasseLabel.Text = "Classe";
             // 
             // numeroLabel
@@ -96,7 +96,7 @@
             numeroLabel.Location = new System.Drawing.Point(31, 119);
             numeroLabel.Name = "numeroLabel";
             numeroLabel.Size = new System.Drawing.Size(81, 25);
-            numeroLabel.TabIndex = 7;
+            numeroLabel.TabIndex = 1;
             numeroLabel.Text = "Numero";
             // 
             // valor_DiariaLabel
@@ -106,7 +106,7 @@
             valor_DiariaLabel.Location = new System.Drawing.Point(148, 119);
             valor_DiariaLabel.Name = "valor_DiariaLabel";
             valor_DiariaLabel.Size = new System.Drawing.Size(113, 25);
-            valor_DiariaLabel.TabIndex = 9;
+            valor_DiariaLabel.TabIndex = 3;
             valor_DiariaLabel.Text = "Valor Diária";
             // 
             // andarLabel
@@ -116,7 +116,7 @@
             andarLabel.Location = new System.Drawing.Point(31, 202);
             andarLabel.Name = "andarLabel";
             andarLabel.Size = new System.Drawing.Size(65, 25);
-            andarLabel.TabIndex = 15;
+            andarLabel.TabIndex = 9;
             andarLabel.Text = "Andar";
             // 
             // descricaoTextBox
@@ -129,7 +129,7 @@
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(434, 77);
-            this.descricaoTextBox.TabIndex = 2;
+            this.descricaoTextBox.TabIndex = 12;
             // 
             // quartoBindingSource
             // 
@@ -148,7 +148,7 @@
             this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(145, 30);
-            this.valor_DiariaTextBox.TabIndex = 10;
+            this.valor_DiariaTextBox.TabIndex = 4;
             this.valor_DiariaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tituloLabel
@@ -159,7 +159,7 @@
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Name = "tituloLabel";
             this.tituloLabel.Size = new System.Drawing.Size(624, 91);
-            this.tituloLabel.TabIndex = 11;
+            this.tituloLabel.TabIndex = 0;
             this.tituloLabel.Text = "Cadastro de Quarto";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -174,7 +174,7 @@
             this.buttonSalvar.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(145, 39);
-            this.buttonSalvar.TabIndex = 12;
+            this.buttonSalvar.TabIndex = 13;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -191,7 +191,7 @@
             this.buttonCancelar.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(145, 39);
-            this.buttonCancelar.TabIndex = 8;
+            this.buttonCancelar.TabIndex = 14;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -212,7 +212,7 @@
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.Size = new System.Drawing.Size(129, 30);
-            this.StatusComboBox.TabIndex = 14;
+            this.StatusComboBox.TabIndex = 6;
             this.StatusComboBox.ValueMember = "Id";
             // 
             // numeroTextBox
@@ -224,7 +224,7 @@
             this.numeroTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.Size = new System.Drawing.Size(101, 30);
-            this.numeroTextBox.TabIndex = 15;
+            this.numeroTextBox.TabIndex = 2;
             this.numeroTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // andarTextBox
@@ -236,7 +236,7 @@
             this.andarTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.andarTextBox.Name = "andarTextBox";
             this.andarTextBox.Size = new System.Drawing.Size(101, 30);
-            this.andarTextBox.TabIndex = 16;
+            this.andarTextBox.TabIndex = 10;
             this.andarTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ClasseComboBox
@@ -250,7 +250,7 @@
             this.ClasseComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ClasseComboBox.Name = "ClasseComboBox";
             this.ClasseComboBox.Size = new System.Drawing.Size(129, 30);
-            this.ClasseComboBox.TabIndex = 17;
+            this.ClasseComboBox.TabIndex = 8;
             this.ClasseComboBox.ValueMember = "Id";
             // 
             // FormCadastroQuarto

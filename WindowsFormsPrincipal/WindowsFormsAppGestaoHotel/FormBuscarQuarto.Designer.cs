@@ -86,7 +86,7 @@
             descricaoLabel.Location = new System.Drawing.Point(251, 58);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(72, 16);
-            descricaoLabel.TabIndex = 11;
+            descricaoLabel.TabIndex = 10;
             descricaoLabel.Text = "Descrição:";
             // 
             // idLabel
@@ -95,7 +95,7 @@
             idLabel.Location = new System.Drawing.Point(35, 32);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(38, 16);
-            idLabel.TabIndex = 12;
+            idLabel.TabIndex = 0;
             idLabel.Text = "Cód.:";
             // 
             // id_ClasseLabel
@@ -104,7 +104,7 @@
             id_ClasseLabel.Location = new System.Drawing.Point(21, 114);
             id_ClasseLabel.Name = "id_ClasseLabel";
             id_ClasseLabel.Size = new System.Drawing.Size(52, 16);
-            id_ClasseLabel.TabIndex = 13;
+            id_ClasseLabel.TabIndex = 6;
             id_ClasseLabel.Text = "Classe:";
             // 
             // id_StatusLabel
@@ -113,7 +113,7 @@
             id_StatusLabel.Location = new System.Drawing.Point(276, 113);
             id_StatusLabel.Name = "id_StatusLabel";
             id_StatusLabel.Size = new System.Drawing.Size(47, 16);
-            id_StatusLabel.TabIndex = 14;
+            id_StatusLabel.TabIndex = 12;
             id_StatusLabel.Text = "Status:";
             // 
             // numeroLabel
@@ -122,7 +122,7 @@
             numeroLabel.Location = new System.Drawing.Point(15, 60);
             numeroLabel.Name = "numeroLabel";
             numeroLabel.Size = new System.Drawing.Size(58, 16);
-            numeroLabel.TabIndex = 15;
+            numeroLabel.TabIndex = 2;
             numeroLabel.Text = "Número:";
             // 
             // valor_DiariaLabel
@@ -131,7 +131,7 @@
             valor_DiariaLabel.Location = new System.Drawing.Point(223, 27);
             valor_DiariaLabel.Name = "valor_DiariaLabel";
             valor_DiariaLabel.Size = new System.Drawing.Size(100, 16);
-            valor_DiariaLabel.TabIndex = 16;
+            valor_DiariaLabel.TabIndex = 8;
             valor_DiariaLabel.Text = "Valor da Diária:";
             // 
             // andarLabel
@@ -140,7 +140,7 @@
             andarLabel.Location = new System.Drawing.Point(27, 90);
             andarLabel.Name = "andarLabel";
             andarLabel.Size = new System.Drawing.Size(46, 16);
-            andarLabel.TabIndex = 21;
+            andarLabel.TabIndex = 4;
             andarLabel.Text = "Andar:";
             // 
             // groupBox1
@@ -156,7 +156,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(460, 110);
-            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por";
             // 
@@ -170,7 +170,7 @@
             this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonTodos.Name = "radioButtonTodos";
             this.radioButtonTodos.Size = new System.Drawing.Size(85, 25);
-            this.radioButtonTodos.TabIndex = 2;
+            this.radioButtonTodos.TabIndex = 0;
             this.radioButtonTodos.TabStop = true;
             this.radioButtonTodos.Text = "Todos";
             this.radioButtonTodos.UseVisualStyleBackColor = false;
@@ -198,7 +198,7 @@
             this.radioButtonNumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNumero.Name = "radioButtonNumero";
             this.radioButtonNumero.Size = new System.Drawing.Size(98, 25);
-            this.radioButtonNumero.TabIndex = 2;
+            this.radioButtonNumero.TabIndex = 1;
             this.radioButtonNumero.TabStop = true;
             this.radioButtonNumero.Text = "Número";
             this.radioButtonNumero.UseVisualStyleBackColor = true;
@@ -211,7 +211,7 @@
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(297, 30);
-            this.textBoxBuscar.TabIndex = 1;
+            this.textBoxBuscar.TabIndex = 3;
             // 
             // buttonBuscarQuarto
             // 
@@ -225,7 +225,7 @@
             this.buttonBuscarQuarto.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonBuscarQuarto.Name = "buttonBuscarQuarto";
             this.buttonBuscarQuarto.Size = new System.Drawing.Size(145, 39);
-            this.buttonBuscarQuarto.TabIndex = 0;
+            this.buttonBuscarQuarto.TabIndex = 4;
             this.buttonBuscarQuarto.Text = "Buscar";
             this.buttonBuscarQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscarQuarto.UseVisualStyleBackColor = false;
@@ -240,7 +240,7 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Size = new System.Drawing.Size(629, 295);
-            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quartos cadastrados";
             // 
@@ -271,7 +271,7 @@
             this.funcionarioDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.funcionarioDataGridView.RowTemplate.Height = 24;
             this.funcionarioDataGridView.Size = new System.Drawing.Size(619, 266);
-            this.funcionarioDataGridView.TabIndex = 6;
+            this.funcionarioDataGridView.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -358,7 +358,7 @@
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.ReadOnly = true;
             this.descricaoTextBox.Size = new System.Drawing.Size(250, 49);
-            this.descricaoTextBox.TabIndex = 12;
+            this.descricaoTextBox.TabIndex = 11;
             // 
             // idTextBox
             // 
@@ -370,7 +370,7 @@
             this.idTextBox.ReadOnly = true;
             this.idTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.idTextBox.Size = new System.Drawing.Size(50, 22);
-            this.idTextBox.TabIndex = 13;
+            this.idTextBox.TabIndex = 1;
             // 
             // ClasseTextBox
             // 
@@ -381,7 +381,7 @@
             this.ClasseTextBox.Name = "ClasseTextBox";
             this.ClasseTextBox.ReadOnly = true;
             this.ClasseTextBox.Size = new System.Drawing.Size(125, 22);
-            this.ClasseTextBox.TabIndex = 14;
+            this.ClasseTextBox.TabIndex = 7;
             // 
             // StatusTextBox
             // 
@@ -392,7 +392,7 @@
             this.StatusTextBox.Name = "StatusTextBox";
             this.StatusTextBox.ReadOnly = true;
             this.StatusTextBox.Size = new System.Drawing.Size(125, 22);
-            this.StatusTextBox.TabIndex = 15;
+            this.StatusTextBox.TabIndex = 13;
             // 
             // numeroTextBox
             // 
@@ -404,7 +404,7 @@
             this.numeroTextBox.ReadOnly = true;
             this.numeroTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.numeroTextBox.Size = new System.Drawing.Size(50, 22);
-            this.numeroTextBox.TabIndex = 16;
+            this.numeroTextBox.TabIndex = 3;
             // 
             // groupBox4
             // 
@@ -427,7 +427,7 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Size = new System.Drawing.Size(629, 145);
-            this.groupBox4.TabIndex = 18;
+            this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Informações do Quarto";
             // 
@@ -441,7 +441,7 @@
             this.valor_DiariaTextBox.ReadOnly = true;
             this.valor_DiariaTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(101, 22);
-            this.valor_DiariaTextBox.TabIndex = 17;
+            this.valor_DiariaTextBox.TabIndex = 9;
             // 
             // andarTextBox
             // 
@@ -452,7 +452,7 @@
             this.andarTextBox.Name = "andarTextBox";
             this.andarTextBox.ReadOnly = true;
             this.andarTextBox.Size = new System.Drawing.Size(50, 22);
-            this.andarTextBox.TabIndex = 22;
+            this.andarTextBox.TabIndex = 5;
             // 
             // buttonAlterarQuarto
             // 
@@ -466,7 +466,7 @@
             this.buttonAlterarQuarto.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonAlterarQuarto.Name = "buttonAlterarQuarto";
             this.buttonAlterarQuarto.Size = new System.Drawing.Size(145, 39);
-            this.buttonAlterarQuarto.TabIndex = 19;
+            this.buttonAlterarQuarto.TabIndex = 4;
             this.buttonAlterarQuarto.Text = "Alterar";
             this.buttonAlterarQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAlterarQuarto.UseVisualStyleBackColor = false;
@@ -484,7 +484,7 @@
             this.buttonExcluirQuarto.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonExcluirQuarto.Name = "buttonExcluirQuarto";
             this.buttonExcluirQuarto.Size = new System.Drawing.Size(145, 39);
-            this.buttonExcluirQuarto.TabIndex = 20;
+            this.buttonExcluirQuarto.TabIndex = 5;
             this.buttonExcluirQuarto.Text = "Excluir";
             this.buttonExcluirQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirQuarto.UseVisualStyleBackColor = false;
@@ -503,7 +503,7 @@
             this.buttonAdicionarQuarto.MinimumSize = new System.Drawing.Size(145, 39);
             this.buttonAdicionarQuarto.Name = "buttonAdicionarQuarto";
             this.buttonAdicionarQuarto.Size = new System.Drawing.Size(145, 39);
-            this.buttonAdicionarQuarto.TabIndex = 21;
+            this.buttonAdicionarQuarto.TabIndex = 3;
             this.buttonAdicionarQuarto.Text = "Adicionar";
             this.buttonAdicionarQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarQuarto.UseVisualStyleBackColor = false;
