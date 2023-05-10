@@ -43,11 +43,6 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                //double value = ((Quarto)quartoBindingSource.Current).Valor_Diaria;
-                //Double value;
-                /*if (Double.TryParse(valor_DiariaTextBox.Text, out value))
-                    valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);*/
-
                 if (radioButtonTodos.Checked)
                 {
                     textBoxBuscar.Clear();
