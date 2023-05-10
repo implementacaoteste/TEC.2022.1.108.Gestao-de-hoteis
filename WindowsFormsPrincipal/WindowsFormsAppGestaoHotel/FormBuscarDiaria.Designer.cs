@@ -77,7 +77,6 @@
             this.cpf_ClienteMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.data_EntradaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.groupBoxQuarto = new System.Windows.Forms.GroupBox();
-            this.valor_DiariaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.StatusTextBox = new System.Windows.Forms.TextBox();
             this.ClasseTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
@@ -96,6 +95,7 @@
             this.buttonExcluirDiaria = new System.Windows.Forms.Button();
             this.buttonAlterarDiaria = new System.Windows.Forms.Button();
             this.buttonAdicionarDiaria = new System.Windows.Forms.Button();
+            this.valor_DiariaTextBox = new System.Windows.Forms.TextBox();
             idLabel = new System.Windows.Forms.Label();
             data_EntradaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -178,11 +178,11 @@
             // valor_DiariaLabel
             // 
             valor_DiariaLabel.AutoSize = true;
-            valor_DiariaLabel.Location = new System.Drawing.Point(12, 203);
+            valor_DiariaLabel.Location = new System.Drawing.Point(65, 202);
             valor_DiariaLabel.Name = "valor_DiariaLabel";
-            valor_DiariaLabel.Size = new System.Drawing.Size(100, 16);
+            valor_DiariaLabel.Size = new System.Drawing.Size(46, 16);
             valor_DiariaLabel.TabIndex = 10;
-            valor_DiariaLabel.Text = "Valor da Diária:";
+            valor_DiariaLabel.Text = "Diária:";
             // 
             // cpf_ClienteLabel
             // 
@@ -590,7 +590,7 @@
             // 
             // groupBoxQuarto
             // 
-            this.groupBoxQuarto.Controls.Add(this.valor_DiariaMaskedTextBox);
+            this.groupBoxQuarto.Controls.Add(this.valor_DiariaTextBox);
             this.groupBoxQuarto.Controls.Add(id_StatusLabel);
             this.groupBoxQuarto.Controls.Add(id_ClasseLabel);
             this.groupBoxQuarto.Controls.Add(this.StatusTextBox);
@@ -610,20 +610,6 @@
             this.groupBoxQuarto.TabIndex = 8;
             this.groupBoxQuarto.TabStop = false;
             this.groupBoxQuarto.Text = "Dados da Quarto";
-            // 
-            // valor_DiariaMaskedTextBox
-            // 
-            this.valor_DiariaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.valor_DiariaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
-            this.valor_DiariaMaskedTextBox.Location = new System.Drawing.Point(117, 199);
-            this.valor_DiariaMaskedTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.valor_DiariaMaskedTextBox.Mask = "$";
-            this.valor_DiariaMaskedTextBox.Name = "valor_DiariaMaskedTextBox";
-            this.valor_DiariaMaskedTextBox.ReadOnly = true;
-            this.valor_DiariaMaskedTextBox.Size = new System.Drawing.Size(101, 22);
-            this.valor_DiariaMaskedTextBox.TabIndex = 11;
-            this.valor_DiariaMaskedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.valor_DiariaMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // StatusTextBox
             // 
@@ -892,10 +878,23 @@
             this.buttonAdicionarDiaria.UseVisualStyleBackColor = false;
             this.buttonAdicionarDiaria.Click += new System.EventHandler(this.buttonAdicionarDiaria_Click);
             // 
+            // valor_DiariaTextBox
+            // 
+            this.valor_DiariaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
+            this.valor_DiariaTextBox.Location = new System.Drawing.Point(117, 200);
+            this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
+            this.valor_DiariaTextBox.ReadOnly = true;
+            this.valor_DiariaTextBox.Size = new System.Drawing.Size(101, 22);
+            this.valor_DiariaTextBox.TabIndex = 12;
+            this.valor_DiariaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valor_DiariaTextBox.TextChanged += new System.EventHandler(this.valor_DiariaTextBox_TextChanged);
+            // 
             // FormBuscarDiaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1252, 785);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -971,7 +970,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button buttonBuscarData;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox valor_DiariaMaskedTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Andar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -986,5 +984,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Funcionario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.TextBox valor_DiariaTextBox;
     }
 }

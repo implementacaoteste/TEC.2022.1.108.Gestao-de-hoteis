@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -163,6 +164,13 @@ namespace WindowsFormsAppGestaoHotel
             {
                 buttonExcluirQuarto_Click(null, null);
             }
+        }
+
+        private void valor_DiariaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double value = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
+            if (Double.TryParse(valor_DiariaTextBox.Text, out value))
+                valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
         }
     }
 }
