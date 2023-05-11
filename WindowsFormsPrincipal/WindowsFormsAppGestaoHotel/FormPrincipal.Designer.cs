@@ -92,7 +92,6 @@
             this.funcionarioToolStripMenuItem});
             this.cadastroToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cadastroToolStripMenuItem.Image")));
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(120, 29);
             this.cadastroToolStripMenuItem.Text = "Pessoas";
             // 
@@ -122,15 +121,13 @@
             this.acessosToolStripMenuItem});
             this.consultaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaToolStripMenuItem.Image")));
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(134, 29);
             this.consultaToolStripMenuItem.Text = "Cadastros";
             // 
             // grupoFuncionarioToolStripMenuItem
             // 
             this.grupoFuncionarioToolStripMenuItem.Name = "grupoFuncionarioToolStripMenuItem";
-            this.grupoFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
+            this.grupoFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.grupoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
             this.grupoFuncionarioToolStripMenuItem.Text = "Cargos";
             this.grupoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem_Click);
@@ -279,7 +276,6 @@
             this.quartosDisponíveisToolStripMenuItem});
             this.reservasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reservasToolStripMenuItem.Image")));
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.reservasToolStripMenuItem.Size = new System.Drawing.Size(126, 29);
             this.reservasToolStripMenuItem.Text = "Reservas";
             // 
@@ -287,7 +283,7 @@
             // 
             this.reservasToolStripMenuItem1.Name = "reservasToolStripMenuItem1";
             this.reservasToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(391, 30);
+            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(394, 30);
             this.reservasToolStripMenuItem1.Text = "Reservas";
             this.reservasToolStripMenuItem1.Click += new System.EventHandler(this.reservasToolStripMenuItem1_Click);
             // 
@@ -308,30 +304,30 @@
             this.relatóriosToolStripMenuItem});
             this.financeiroToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("financeiroToolStripMenuItem.Image")));
             this.financeiroToolStripMenuItem.Name = "financeiroToolStripMenuItem";
-            this.financeiroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.F)));
             this.financeiroToolStripMenuItem.Size = new System.Drawing.Size(135, 29);
             this.financeiroToolStripMenuItem.Text = "Financeiro";
             // 
             // contasAPagarToolStripMenuItem
             // 
             this.contasAPagarToolStripMenuItem.Name = "contasAPagarToolStripMenuItem";
-            this.contasAPagarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(373, 30);
+            this.contasAPagarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(372, 30);
             this.contasAPagarToolStripMenuItem.Text = "Contas a Pagar";
             // 
             // contasAReceberToolStripMenuItem
             // 
             this.contasAReceberToolStripMenuItem.Name = "contasAReceberToolStripMenuItem";
             this.contasAReceberToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.R)));
-            this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(373, 30);
+            | System.Windows.Forms.Keys.F)));
+            this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(372, 30);
             this.contasAReceberToolStripMenuItem.Text = "Contas a Receber";
             // 
             // relatóriosToolStripMenuItem
             // 
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(373, 30);
+            this.relatóriosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.R)));
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(372, 30);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
             // 
             // tipoDeQuartoToolStripMenuItem
