@@ -47,12 +47,12 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                using (FormCadastroCliente frm = new FormCadastroCliente())
+                using (FormBuscarCliente frm = new FormBuscarCliente())
                 {
                     frm.ShowDialog();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -75,17 +75,7 @@ namespace WindowsFormsPrincipal1
 
         private void clienteToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                using (FormBuscarCliente frm = new FormBuscarCliente())
-                {
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,7 +90,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                using (FormCadastroDeFuncionario frm = new FormCadastroDeFuncionario())
+                using (FormBuscarFuncionario frm = new FormBuscarFuncionario())
                 {
                     frm.ShowDialog();
                 }
@@ -142,17 +132,7 @@ namespace WindowsFormsPrincipal1
         }
         private void buscarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (FormBuscarFuncionario frm = new FormBuscarFuncionario())
-                {
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void grupoFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,17 +152,7 @@ namespace WindowsFormsPrincipal1
 
         private void diariaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (FormBuscarDiaria frm = new FormBuscarDiaria())
-                {
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void pictureBoxUsu1_Click(object sender, EventArgs e)
@@ -273,9 +243,14 @@ namespace WindowsFormsPrincipal1
 
         private void diáriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void reservasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             try
             {
-                using (FormCadastroDiaria frm = new FormCadastroDiaria())
+                using (FormBuscarDiaria frm = new FormBuscarDiaria())
                 {
                     frm.ShowDialog();
                 }

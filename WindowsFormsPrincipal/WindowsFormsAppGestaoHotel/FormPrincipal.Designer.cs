@@ -32,14 +32,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.diáriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grupoFuncionarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.quartoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.diariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grupoFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quartoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +46,15 @@
             this.pictureBoxUsu1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
+            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.quartosDisponíveisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.financeiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasAPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasAReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeQuartoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfundo)).BeginInit();
@@ -70,11 +73,13 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.consultaToolStripMenuItem,
+            this.reservasToolStripMenuItem,
+            this.financeiroToolStripMenuItem,
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(882, 32);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1176, 33);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -84,121 +89,67 @@
             this.cadastroToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
-            this.diáriaToolStripMenuItem,
-            this.funcionarioToolStripMenuItem,
-            this.grupoFuncionarioToolStripMenuItem1,
-            this.quartoToolStripMenuItem1});
+            this.funcionarioToolStripMenuItem});
+            this.cadastroToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cadastroToolStripMenuItem.Image")));
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
-            this.cadastroToolStripMenuItem.Text = "Cadastros";
+            this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(120, 29);
+            this.cadastroToolStripMenuItem.Text = "Pessoas";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(301, 28);
-            this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(276, 30);
+            this.clienteToolStripMenuItem.Text = "Hóspedes";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
-            // 
-            // diáriaToolStripMenuItem
-            // 
-            this.diáriaToolStripMenuItem.Name = "diáriaToolStripMenuItem";
-            this.diáriaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.diáriaToolStripMenuItem.Size = new System.Drawing.Size(301, 28);
-            this.diáriaToolStripMenuItem.Text = "Diária";
-            this.diáriaToolStripMenuItem.Click += new System.EventHandler(this.diáriaToolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(301, 28);
-            this.funcionarioToolStripMenuItem.Text = "Funcionário";
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(276, 30);
+            this.funcionarioToolStripMenuItem.Text = "Funcionários";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
-            // 
-            // grupoFuncionarioToolStripMenuItem1
-            // 
-            this.grupoFuncionarioToolStripMenuItem1.Name = "grupoFuncionarioToolStripMenuItem1";
-            this.grupoFuncionarioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.grupoFuncionarioToolStripMenuItem1.Size = new System.Drawing.Size(301, 28);
-            this.grupoFuncionarioToolStripMenuItem1.Text = "Grupo funcionário";
-            this.grupoFuncionarioToolStripMenuItem1.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem1_Click);
-            // 
-            // quartoToolStripMenuItem1
-            // 
-            this.quartoToolStripMenuItem1.Name = "quartoToolStripMenuItem1";
-            this.quartoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.quartoToolStripMenuItem1.Size = new System.Drawing.Size(301, 28);
-            this.quartoToolStripMenuItem1.Text = "Quarto";
-            this.quartoToolStripMenuItem1.Click += new System.EventHandler(this.quartoToolStripMenuItem1_Click);
             // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clienteToolStripMenuItem1,
-            this.diariaToolStripMenuItem,
-            this.buscarFuncionarioToolStripMenuItem,
+            this.tipoDeQuartoToolStripMenuItem,
+            this.quartoToolStripMenuItem,
             this.grupoFuncionarioToolStripMenuItem,
-            this.quartoToolStripMenuItem});
+            this.acessosToolStripMenuItem});
+            this.consultaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaToolStripMenuItem.Image")));
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(106, 28);
-            this.consultaToolStripMenuItem.Text = "Consultas";
-            // 
-            // clienteToolStripMenuItem1
-            // 
-            this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
-            this.clienteToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
-            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(355, 28);
-            this.clienteToolStripMenuItem1.Text = "Cliente";
-            this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click_1);
-            // 
-            // diariaToolStripMenuItem
-            // 
-            this.diariaToolStripMenuItem.Name = "diariaToolStripMenuItem";
-            this.diariaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-            this.diariaToolStripMenuItem.Size = new System.Drawing.Size(355, 28);
-            this.diariaToolStripMenuItem.Text = "Diária";
-            this.diariaToolStripMenuItem.Click += new System.EventHandler(this.diariaToolStripMenuItem_Click);
-            // 
-            // buscarFuncionarioToolStripMenuItem
-            // 
-            this.buscarFuncionarioToolStripMenuItem.Name = "buscarFuncionarioToolStripMenuItem";
-            this.buscarFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.F)));
-            this.buscarFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(355, 28);
-            this.buscarFuncionarioToolStripMenuItem.Text = "Funcionário";
-            this.buscarFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.buscarFuncionarioToolStripMenuItem_Click);
+            this.consultaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(134, 29);
+            this.consultaToolStripMenuItem.Text = "Cadastros";
             // 
             // grupoFuncionarioToolStripMenuItem
             // 
             this.grupoFuncionarioToolStripMenuItem.Name = "grupoFuncionarioToolStripMenuItem";
             this.grupoFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.G)));
-            this.grupoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(355, 28);
-            this.grupoFuncionarioToolStripMenuItem.Text = "Grupo Funcionário";
+            | System.Windows.Forms.Keys.C)));
+            this.grupoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
+            this.grupoFuncionarioToolStripMenuItem.Text = "Cargos";
             this.grupoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem_Click);
             // 
             // quartoToolStripMenuItem
             // 
             this.quartoToolStripMenuItem.Name = "quartoToolStripMenuItem";
-            this.quartoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.Q)));
-            this.quartoToolStripMenuItem.Size = new System.Drawing.Size(355, 28);
-            this.quartoToolStripMenuItem.Text = "Quarto";
+            this.quartoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.quartoToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
+            this.quartoToolStripMenuItem.Text = "Quartos";
             this.quartoToolStripMenuItem.Click += new System.EventHandler(this.quartoToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.sobreToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sobreToolStripMenuItem.Image")));
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(75, 28);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -206,12 +157,12 @@
             // 
             this.textBoxNomeUsuario.BackColor = System.Drawing.Color.PowderBlue;
             this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeUsuario.Location = new System.Drawing.Point(748, 93);
-            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNomeUsuario.Location = new System.Drawing.Point(997, 114);
+            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNomeUsuario.Multiline = true;
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
             this.textBoxNomeUsuario.ReadOnly = true;
-            this.textBoxNomeUsuario.Size = new System.Drawing.Size(128, 52);
+            this.textBoxNomeUsuario.Size = new System.Drawing.Size(169, 63);
             this.textBoxNomeUsuario.TabIndex = 1;
             this.textBoxNomeUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxNomeUsuario.Visible = false;
@@ -220,12 +171,12 @@
             // 
             this.textBoxCargo.BackColor = System.Drawing.Color.PowderBlue;
             this.textBoxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCargo.Location = new System.Drawing.Point(748, 149);
-            this.textBoxCargo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxCargo.Location = new System.Drawing.Point(997, 183);
+            this.textBoxCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCargo.Multiline = true;
             this.textBoxCargo.Name = "textBoxCargo";
             this.textBoxCargo.ReadOnly = true;
-            this.textBoxCargo.Size = new System.Drawing.Size(128, 25);
+            this.textBoxCargo.Size = new System.Drawing.Size(169, 30);
             this.textBoxCargo.TabIndex = 2;
             this.textBoxCargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxCargo.Visible = false;
@@ -234,10 +185,10 @@
             // 
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
-            this.pictureBoxSair.Location = new System.Drawing.Point(797, 182);
-            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxSair.Location = new System.Drawing.Point(1063, 224);
+            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxSair.Name = "pictureBoxSair";
-            this.pictureBoxSair.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxSair.Size = new System.Drawing.Size(40, 37);
             this.pictureBoxSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSair.TabIndex = 14;
             this.pictureBoxSair.TabStop = false;
@@ -247,9 +198,10 @@
             // pictureBoxfundo
             // 
             this.pictureBoxfundo.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxfundo.Location = new System.Drawing.Point(795, 180);
+            this.pictureBoxfundo.Location = new System.Drawing.Point(1060, 222);
+            this.pictureBoxfundo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxfundo.Name = "pictureBoxfundo";
-            this.pictureBoxfundo.Size = new System.Drawing.Size(34, 34);
+            this.pictureBoxfundo.Size = new System.Drawing.Size(45, 42);
             this.pictureBoxfundo.TabIndex = 16;
             this.pictureBoxfundo.TabStop = false;
             this.pictureBoxfundo.Visible = false;
@@ -259,10 +211,10 @@
             this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
-            this.pictureBoxUsu2.Location = new System.Drawing.Point(787, 40);
-            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUsu2.Location = new System.Drawing.Point(1049, 49);
+            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
-            this.pictureBoxUsu2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxUsu2.Size = new System.Drawing.Size(67, 62);
             this.pictureBoxUsu2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsu2.TabIndex = 15;
             this.pictureBoxUsu2.TabStop = false;
@@ -274,9 +226,10 @@
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(265, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(353, 49);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 350);
+            this.pictureBox1.Size = new System.Drawing.Size(467, 431);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -286,10 +239,10 @@
             this.pictureBoxUsu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
-            this.pictureBoxUsu1.Location = new System.Drawing.Point(787, 40);
-            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUsu1.Location = new System.Drawing.Point(1049, 49);
+            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
-            this.pictureBoxUsu1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxUsu1.Size = new System.Drawing.Size(67, 62);
             this.pictureBoxUsu1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsu1.TabIndex = 15;
             this.pictureBoxUsu1.TabStop = false;
@@ -299,9 +252,10 @@
             // pictureBoxCaixaLogin
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(746, 36);
+            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(995, 44);
+            this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
-            this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(132, 183);
+            this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(176, 225);
             this.pictureBoxCaixaLogin.TabIndex = 8;
             this.pictureBoxCaixaLogin.TabStop = false;
             this.pictureBoxCaixaLogin.Visible = false;
@@ -309,20 +263,98 @@
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(744, 34);
+            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(992, 42);
+            this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
-            this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(136, 187);
+            this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(181, 230);
             this.pictureBoxCaixaLogin2.TabIndex = 7;
             this.pictureBoxCaixaLogin2.TabStop = false;
             this.pictureBoxCaixaLogin2.Visible = false;
             // 
+            // reservasToolStripMenuItem
+            // 
+            this.reservasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.reservasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reservasToolStripMenuItem1,
+            this.quartosDisponíveisToolStripMenuItem});
+            this.reservasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reservasToolStripMenuItem.Image")));
+            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
+            this.reservasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(126, 29);
+            this.reservasToolStripMenuItem.Text = "Reservas";
+            // 
+            // reservasToolStripMenuItem1
+            // 
+            this.reservasToolStripMenuItem1.Name = "reservasToolStripMenuItem1";
+            this.reservasToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(391, 30);
+            this.reservasToolStripMenuItem1.Text = "Reservas";
+            this.reservasToolStripMenuItem1.Click += new System.EventHandler(this.reservasToolStripMenuItem1_Click);
+            // 
+            // quartosDisponíveisToolStripMenuItem
+            // 
+            this.quartosDisponíveisToolStripMenuItem.Name = "quartosDisponíveisToolStripMenuItem";
+            this.quartosDisponíveisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Q)));
+            this.quartosDisponíveisToolStripMenuItem.Size = new System.Drawing.Size(394, 30);
+            this.quartosDisponíveisToolStripMenuItem.Text = "Quartos Disponíveis";
+            // 
+            // financeiroToolStripMenuItem
+            // 
+            this.financeiroToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.financeiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contasAPagarToolStripMenuItem,
+            this.contasAReceberToolStripMenuItem,
+            this.relatóriosToolStripMenuItem});
+            this.financeiroToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("financeiroToolStripMenuItem.Image")));
+            this.financeiroToolStripMenuItem.Name = "financeiroToolStripMenuItem";
+            this.financeiroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
+            this.financeiroToolStripMenuItem.Size = new System.Drawing.Size(135, 29);
+            this.financeiroToolStripMenuItem.Text = "Financeiro";
+            // 
+            // contasAPagarToolStripMenuItem
+            // 
+            this.contasAPagarToolStripMenuItem.Name = "contasAPagarToolStripMenuItem";
+            this.contasAPagarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(373, 30);
+            this.contasAPagarToolStripMenuItem.Text = "Contas a Pagar";
+            // 
+            // contasAReceberToolStripMenuItem
+            // 
+            this.contasAReceberToolStripMenuItem.Name = "contasAReceberToolStripMenuItem";
+            this.contasAReceberToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.R)));
+            this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(373, 30);
+            this.contasAReceberToolStripMenuItem.Text = "Contas a Receber";
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(373, 30);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // tipoDeQuartoToolStripMenuItem
+            // 
+            this.tipoDeQuartoToolStripMenuItem.Name = "tipoDeQuartoToolStripMenuItem";
+            this.tipoDeQuartoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.tipoDeQuartoToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
+            this.tipoDeQuartoToolStripMenuItem.Text = "Tipo de Quarto";
+            // 
+            // acessosToolStripMenuItem
+            // 
+            this.acessosToolStripMenuItem.Name = "acessosToolStripMenuItem";
+            this.acessosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.acessosToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
+            this.acessosToolStripMenuItem.Text = "Acessos";
+            // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(882, 556);
+            this.ClientSize = new System.Drawing.Size(1176, 681);
             this.Controls.Add(this.textBoxCargo);
             this.Controls.Add(this.pictureBoxSair);
             this.Controls.Add(this.pictureBoxfundo);
@@ -335,11 +367,11 @@
             this.Controls.Add(this.pictureBoxUsu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(900, 600);
+            this.MaximumSize = new System.Drawing.Size(1194, 728);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(900, 600);
+            this.MinimumSize = new System.Drawing.Size(1194, 728);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Gestão de Hotéis";
@@ -373,15 +405,8 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripMenuItem quartoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem buscarFuncionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grupoFuncionarioToolStripMenuItem;
-
-        // private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem grupoFuncionarioToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem quartoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem diariaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin2;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin;
         private System.Windows.Forms.TextBox textBoxNomeUsuario;
@@ -390,6 +415,14 @@
         private System.Windows.Forms.PictureBox pictureBoxfundo;
         private System.Windows.Forms.PictureBox pictureBoxUsu1;
         private System.Windows.Forms.TextBox textBoxCargo;
-        private System.Windows.Forms.ToolStripMenuItem diáriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem quartosDisponíveisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem financeiroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contasAPagarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contasAReceberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeQuartoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acessosToolStripMenuItem;
     }
 }
