@@ -11,6 +11,7 @@ namespace BLL
         public void Inserir(Diaria _diaria)
         {
             ValidarPermissao(14);
+            ValidarDados(_diaria);
             new DiariaDAL().Inserir(_diaria);
         }
         public void Alterar(Diaria _diaria)
@@ -52,6 +53,14 @@ namespace BLL
         {
             if (!new DiariaDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
                 throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
+        }
+        private void ValidarDados(Diaria _diaria)
+        {
+            if (_diaria.Data_Entrada < DateTime.Now.Date)
+                throw new Exception("Data Inválida! Você não pode colocar uma data Retroativa!");
+
+            if (_diaria.Data_Saida < DateTime.Now.Date.AddDays(1))
+                throw new Exception("Data Inválida! Você não pode colocar uma data Retroativa!");
         }
 
         public void SelecionarQuarto(int _idDiaria, int _idQuarto)
