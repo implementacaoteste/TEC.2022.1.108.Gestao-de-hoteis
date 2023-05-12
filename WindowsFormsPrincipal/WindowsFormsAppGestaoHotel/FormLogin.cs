@@ -63,5 +63,23 @@ namespace WindowsFormsPrincipal1
                 Application.Exit();
             }
         }
+
+        public void linkLabelsuporte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://rangersonti.github.io/hotelogix-suporte/index.html");
+        }
+
+        private void buttonSuporte_Click(object sender, EventArgs e)
+        {
+            linkLabelsuporte_LinkClicked(null, null);
+        }
+
+        private void buttonSuporte_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1)
+            {
+                linkLabelsuporte_LinkClicked(null, null);
+            }
+        }
     }
 }

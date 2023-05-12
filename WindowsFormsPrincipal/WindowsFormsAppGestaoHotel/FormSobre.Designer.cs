@@ -34,6 +34,7 @@
             this.labelSobre = new System.Windows.Forms.Label();
             this.buttonOK = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonSuporte = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,8 +50,8 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 97.88732F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(269, 304);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(269, 291);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -58,7 +59,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 283);
+            this.pictureBox1.Size = new System.Drawing.Size(265, 271);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -71,17 +72,17 @@
             this.labelSobre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSobre.Name = "labelSobre";
             this.labelSobre.Size = new System.Drawing.Size(638, 46);
-            this.labelSobre.TabIndex = 1;
+            this.labelSobre.TabIndex = 0;
             this.labelSobre.Text = "Sobre";
             this.labelSobre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // buttonOK
             // 
             this.buttonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOK.Location = new System.Drawing.Point(526, 367);
+            this.buttonOK.Location = new System.Drawing.Point(523, 364);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(100, 35);
-            this.buttonOK.TabIndex = 3;
+            this.buttonOK.Size = new System.Drawing.Size(103, 41);
+            this.buttonOK.TabIndex = 4;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -94,8 +95,29 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(300, 205);
-            this.textBox1.TabIndex = 4;
+            this.textBox1.TabIndex = 2;
             this.textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // buttonSuporte
+            // 
+            this.buttonSuporte.BackColor = System.Drawing.Color.Teal;
+            this.buttonSuporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSuporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Bold);
+            this.buttonSuporte.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonSuporte.Image = ((System.Drawing.Image)(resources.GetObject("buttonSuporte.Image")));
+            this.buttonSuporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSuporte.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonSuporte.Location = new System.Drawing.Point(9, 364);
+            this.buttonSuporte.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonSuporte.MinimumSize = new System.Drawing.Size(98, 28);
+            this.buttonSuporte.Name = "buttonSuporte";
+            this.buttonSuporte.Size = new System.Drawing.Size(158, 41);
+            this.buttonSuporte.TabIndex = 3;
+            this.buttonSuporte.Text = "Suporte";
+            this.buttonSuporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSuporte.UseVisualStyleBackColor = false;
+            this.buttonSuporte.Click += new System.EventHandler(this.buttonSuporte_Click);
+            this.buttonSuporte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonSuporte_KeyDown);
             // 
             // FormSobre
             // 
@@ -103,12 +125,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 414);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonSuporte);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelSobre);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -129,5 +153,6 @@
         private System.Windows.Forms.Label labelSobre;
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonSuporte;
     }
 }

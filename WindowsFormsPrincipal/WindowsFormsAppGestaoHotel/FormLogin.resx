@@ -132,7 +132,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;textBoxUsuario.Name" xml:space="preserve">
     <value>textBoxUsuario</value>
@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxUsuario.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="textBoxSenha.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.8pt</value>
@@ -159,7 +159,7 @@
     <value>266, 29</value>
   </data>
   <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;textBoxSenha.Name" xml:space="preserve">
     <value>textBoxSenha</value>
@@ -171,7 +171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxSenha.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -208,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="pictureBoxEntrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -242,7 +242,7 @@
 </value>
   </data>
   <data name="pictureBoxEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 455</value>
+    <value>608, 446</value>
   </data>
   <data name="pictureBoxEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -266,7 +266,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxEntrar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="pictureBoxClose.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -329,6 +329,121 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxClose.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="linkLabelsuporte.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabelsuporte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>902, 561</value>
+  </data>
+  <data name="linkLabelsuporte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="linkLabelsuporte.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="linkLabelsuporte.Text" xml:space="preserve">
+    <value>Suporte</value>
+  </data>
+  <data name="linkLabelsuporte.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;linkLabelsuporte.Name" xml:space="preserve">
+    <value>linkLabelsuporte</value>
+  </data>
+  <data name="&gt;&gt;linkLabelsuporte.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabelsuporte.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;linkLabelsuporte.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonSuporte.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonSuporte.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 13.7454548pt, style=Bold</value>
+  </data>
+  <data name="buttonSuporte.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        OY5TBp8B4L/1CdGYfkZRkAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="buttonSuporte.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonSuporte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>799, 539</value>
+  </data>
+  <data name="buttonSuporte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="buttonSuporte.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>98, 28</value>
+  </data>
+  <data name="buttonSuporte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 43</value>
+  </data>
+  <data name="buttonSuporte.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonSuporte.Text" xml:space="preserve">
+    <value>Suporte</value>
+  </data>
+  <data name="buttonSuporte.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonSuporte.Name" xml:space="preserve">
+    <value>buttonSuporte</value>
+  </data>
+  <data name="&gt;&gt;buttonSuporte.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSuporte.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonSuporte.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
