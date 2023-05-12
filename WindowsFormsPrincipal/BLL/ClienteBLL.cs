@@ -66,7 +66,7 @@ namespace BLL
             if (_cliente.Data_nascimento.Year < 1900)
                 throw new Exception("Selecione a data de nascimento válida para o cliente");
 
-            if (_cliente.Sexo == null)
+            if (_cliente.IdSexo == 0)
                 throw new Exception("Selecione o sexo do cliente");
             return;
         }
