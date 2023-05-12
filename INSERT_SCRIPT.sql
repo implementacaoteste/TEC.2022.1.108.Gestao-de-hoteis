@@ -199,15 +199,18 @@ SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, 
 
 ----------------------------------TRIGGER---------------------------------------
 Create trigger QUARTO_DIARIA 
-on DIARIA
+on DIARIA_QUARTO
 for insert 
 as 
 begin
 Declare 
-   @status int
-   select @status = 2 from inserted
+   @status int,
+   @codigo int 
+     SELECT @codigo= ID_QUARTO FROM inserted
 
-   update QUARTO set ID_STATUS = @status
+   
+ select @status = 2 from QUARTO
+   update QUARTO set ID_STATUS = @status where ID = @codigo
    end 
 ------------------------------APAGER A TRIGGER---------------------------------------
    Drop trigger QUARTO_DIARIA
