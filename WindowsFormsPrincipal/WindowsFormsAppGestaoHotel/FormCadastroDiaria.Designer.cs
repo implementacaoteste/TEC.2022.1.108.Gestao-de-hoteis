@@ -260,9 +260,11 @@
             this.data_EntradaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.data_EntradaDateTimePicker.Location = new System.Drawing.Point(721, 114);
             this.data_EntradaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.data_EntradaDateTimePicker.MinDate = new System.DateTime(2023, 5, 12, 15, 43, 29, 0);
             this.data_EntradaDateTimePicker.Name = "data_EntradaDateTimePicker";
             this.data_EntradaDateTimePicker.Size = new System.Drawing.Size(155, 22);
             this.data_EntradaDateTimePicker.TabIndex = 14;
+            this.data_EntradaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 15, 43, 29, 0);
             // 
             // data_SaidaDateTimePicker
             // 
@@ -270,9 +272,11 @@
             this.data_SaidaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.data_SaidaDateTimePicker.Location = new System.Drawing.Point(717, 183);
             this.data_SaidaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.data_SaidaDateTimePicker.MinDate = new System.DateTime(2023, 5, 12, 15, 43, 35, 0);
             this.data_SaidaDateTimePicker.Name = "data_SaidaDateTimePicker";
             this.data_SaidaDateTimePicker.Size = new System.Drawing.Size(159, 22);
             this.data_SaidaDateTimePicker.TabIndex = 16;
+            this.data_SaidaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 15, 43, 35, 0);
             // 
             // textBox1
             // 
@@ -282,11 +286,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 22);
             this.textBox1.TabIndex = 11;
-            // 
-            // quartosBindingSource
-            // 
-            this.quartosBindingSource.DataMember = "Quartos";
-            this.quartosBindingSource.DataSource = this.diariaBindingSource;
             // 
             // quartosBindingSource
             // 
