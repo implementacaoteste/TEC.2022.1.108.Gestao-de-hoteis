@@ -73,11 +73,6 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void clienteToolStripMenuItem1_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FormSobre frm = new FormSobre())
@@ -101,40 +96,6 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void quartoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using (FormCadastroQuarto frm = new FormCadastroQuarto())
-                {
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void grupoFuncionarioToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using (FormCadastroGrupoFuncionario frm = new FormCadastroGrupoFuncionario())
-                {
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void buscarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void grupoFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -148,11 +109,6 @@ namespace WindowsFormsPrincipal1
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void diariaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void pictureBoxUsu1_Click(object sender, EventArgs e)
@@ -239,11 +195,6 @@ namespace WindowsFormsPrincipal1
             {
                 pictureBoxSair_Click(null,null);
             }
-        }
-
-        private void diáriaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void reservasToolStripMenuItem1_Click(object sender, EventArgs e)
