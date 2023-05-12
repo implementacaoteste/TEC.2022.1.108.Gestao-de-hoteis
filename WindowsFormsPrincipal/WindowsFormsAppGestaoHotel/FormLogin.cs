@@ -81,5 +81,10 @@ namespace WindowsFormsPrincipal1
                 linkLabelsuporte_LinkClicked(null, null);
             }
         }
+
+        private void buttonsSuporte_Click(object sender, EventArgs e)
+        {
+            linkLabelsuporte_LinkClicked(null,null);
+        }
     }
 }

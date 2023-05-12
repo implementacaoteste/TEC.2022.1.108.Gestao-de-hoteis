@@ -35,7 +35,7 @@
             this.pictureBoxEntrar = new System.Windows.Forms.PictureBox();
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.linkLabelsuporte = new System.Windows.Forms.LinkLabel();
-            this.buttonSuporte = new System.Windows.Forms.Button();
+            this.buttonsSuporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEntrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
@@ -85,22 +85,21 @@
             this.linkLabelsuporte.TabStop = true;
             this.linkLabelsuporte.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelsuporte_LinkClicked);
             // 
-            // buttonSuporte
+            // buttonsSuporte
             // 
-            this.buttonSuporte.BackColor = System.Drawing.Color.Teal;
-            resources.ApplyResources(this.buttonSuporte, "buttonSuporte");
-            this.buttonSuporte.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonSuporte.Name = "buttonSuporte";
-            this.buttonSuporte.UseVisualStyleBackColor = false;
-            this.buttonSuporte.Click += new System.EventHandler(this.buttonSuporte_Click);
-            this.buttonSuporte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonSuporte_KeyDown);
+            this.buttonsSuporte.BackColor = System.Drawing.Color.Teal;
+            resources.ApplyResources(this.buttonsSuporte, "buttonsSuporte");
+            this.buttonsSuporte.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonsSuporte.Name = "buttonsSuporte";
+            this.buttonsSuporte.UseVisualStyleBackColor = false;
+            this.buttonsSuporte.Click += new System.EventHandler(this.buttonsSuporte_Click);
             // 
             // FormLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
-            this.Controls.Add(this.buttonSuporte);
+            this.Controls.Add(this.buttonsSuporte);
             this.Controls.Add(this.linkLabelsuporte);
             this.Controls.Add(this.pictureBoxClose);
             this.Controls.Add(this.textBoxSenha);
@@ -128,6 +127,6 @@
         private System.Windows.Forms.PictureBox pictureBoxEntrar;
         private System.Windows.Forms.PictureBox pictureBoxClose;
         private System.Windows.Forms.LinkLabel linkLabelsuporte;
-        private System.Windows.Forms.Button buttonSuporte;
+        private System.Windows.Forms.Button buttonsSuporte;
     }
 }

@@ -361,13 +361,10 @@
   <data name="&gt;&gt;linkLabelsuporte.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="buttonSuporte.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="buttonsSuporte.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 13.090909pt, style=Bold</value>
   </data>
-  <data name="buttonSuporte.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 13.7454548pt, style=Bold</value>
-  </data>
-  <data name="buttonSuporte.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonsSuporte.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAkCAYAAADLsGk3AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
         5wAAEOcBi+NnCwAACKZJREFUWEfNWWlQVNkVbikX1AF0nBpkFNAgpcYNXBCRHVERV1REREXZV4WKlla5
@@ -410,40 +407,37 @@
         OY5TBp8B4L/1CdGYfkZRkAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonSuporte.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="buttonsSuporte.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="buttonSuporte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>799, 539</value>
+  <data name="buttonsSuporte.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="buttonSuporte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="buttonsSuporte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>795, 535</value>
   </data>
-  <data name="buttonSuporte.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>98, 28</value>
-  </data>
-  <data name="buttonSuporte.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonsSuporte.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 43</value>
   </data>
-  <data name="buttonSuporte.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="buttonsSuporte.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="buttonSuporte.Text" xml:space="preserve">
+  <data name="buttonsSuporte.Text" xml:space="preserve">
     <value>Suporte</value>
   </data>
-  <data name="buttonSuporte.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="buttonsSuporte.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;buttonSuporte.Name" xml:space="preserve">
-    <value>buttonSuporte</value>
+  <data name="&gt;&gt;buttonsSuporte.Name" xml:space="preserve">
+    <value>buttonsSuporte</value>
   </data>
-  <data name="&gt;&gt;buttonSuporte.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonsSuporte.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;buttonSuporte.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonsSuporte.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;buttonSuporte.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonsSuporte.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

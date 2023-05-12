@@ -22,17 +22,17 @@ namespace WindowsFormsPrincipal1
             Close();
         }
 
-        private void buttonSuporte_Click(object sender, EventArgs e)
-        {
-            new FormLogin().linkLabelsuporte_LinkClicked(null,null);
-        }
-
         private void buttonSuporte_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if(e.KeyCode == Keys.F1)
             {
                 new FormLogin().linkLabelsuporte_LinkClicked(null, null);
             }
+        }
+
+        private void buttonSuporte_Click(object sender, EventArgs e)
+        {
+            new FormLogin().linkLabelsuporte_LinkClicked(null,null);
         }
     }
 }

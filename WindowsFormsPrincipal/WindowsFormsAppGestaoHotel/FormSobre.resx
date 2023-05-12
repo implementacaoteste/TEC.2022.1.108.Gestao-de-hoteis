@@ -4539,21 +4539,10 @@
         rkJggg==
 </value>
   </data>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>										HOTEL
-
-DESENVOLVEDORES: LUIZ FILIPI, RANGERSON, LUCAS, KLAUBER E ALANA
-
-VERSÃO: 1.0.0.0
-
-COPYRIGHT ©
-
-OBJETIVO:  ESTE SISTEMA É UMA APLICAÇÃO PARA UMA SOLUÇÃO COMPLETA EM APRIMORAR A GESTÃO DE UMA HOSPEDAGEM, TORNANDO-SE MAIS COMPREENSIVA, EFICIENTE E RENTÁVEL. </value>
-  </data>
   <data name="buttonSuporte.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAkCAYAAADLsGk3AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
-        5wAAEOcBi+NnCwAACKZJREFUWEfNWWlQVNkVbikX1AF0nBpkFNAgpcYNXBCRHVERV1REREXZV4WKlla5
+        6AAAEOgB/S3JEQAACKZJREFUWEfNWWlQVNkVbikX1AF0nBpkFNAgpcYNXBCRHVERV1REREXZV4WKlla5
         MoIbIIiYMi7jAqMRF0bNDxWXYbS0FBfUJJa4YTKJOkksIqhM1C/9Hd4jLXRDI9aQU3Xq3neXc893ttvv
         tQYN0KNHj1BWVoby8nLhx48f1/YbYq5T1xrao66pO//kyZN6/PDhQ+GGyCCQ4uJi9OzZExqN5v+CTUxM
         EBkZqWhXnwwCWb9+PTp27Ihp06YhJiYGs2fPxpw5c/S2c+fOlbbuWHhYGGKiIxAXHYmI8DCEhs41KEO3
@@ -4592,6 +4581,17 @@ OBJETIVO:  ESTE SISTEMA É UMA APLICAÇÃO PARA UMA SOLUÇÃO COMPLETA EM APRIMO
         Zcg3QrZqX+Xr16/X9jnHV+Bbt24J379/X17AOHfx4kVcunRJSjlZt6/LrFbq/tu3b0tLmWTds9Vz1TPV
         OY5TBp8B4L/1CdGYfkZRkAAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>
+
+DESENVOLVEDORES: LUIZ FILIPI, RANGERSON, LUCAS, KLAUBER E ALANA
+
+VERSÃO: 1.0.0.0
+
+COPYRIGHT ©
+
+OBJETIVO:  ESTE SISTEMA É UMA APLICAÇÃO PARA UMA SOLUÇÃO COMPLETA EM APRIMORAR A GESTÃO DE UMA HOSPEDAGEM, TORNANDO-SE MAIS COMPREENSIVA, EFICIENTE E RENTÁVEL. </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
