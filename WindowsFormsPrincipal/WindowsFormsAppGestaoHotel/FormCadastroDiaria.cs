@@ -30,8 +30,8 @@ namespace WindowsFormsAppGestaoHotel
 
         public FormCadastroDiaria(int _id = 0)
         {
+            InitializeComponent(); 
             Id = _id;
-            InitializeComponent();
         }
 
         private void FormCadastroDiaria_Load(object sender, EventArgs e)
@@ -120,14 +120,10 @@ namespace WindowsFormsAppGestaoHotel
                 DiariaBLL diariaBLL = new DiariaBLL();
                 diariaBindingSource.EndEdit();
                 if (Id == 0)
-                {
                     diariaBLL.Inserir((Diaria)diariaBindingSource.Current);
-                }
                 else
-                {
-
                     diariaBLL.Alterar((Diaria)diariaBindingSource.Current);
-                }
+                
                 MessageBox.Show("Diaria salvo com sucesso");
                 Close();
             }
