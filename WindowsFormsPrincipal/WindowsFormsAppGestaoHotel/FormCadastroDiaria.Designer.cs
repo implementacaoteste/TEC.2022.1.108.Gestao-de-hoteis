@@ -68,9 +68,10 @@
             // 
             data_EntradaLabel.AutoSize = true;
             data_EntradaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_EntradaLabel.Location = new System.Drawing.Point(521, 111);
+            data_EntradaLabel.Location = new System.Drawing.Point(391, 90);
+            data_EntradaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_EntradaLabel.Name = "data_EntradaLabel";
-            data_EntradaLabel.Size = new System.Drawing.Size(159, 25);
+            data_EntradaLabel.Size = new System.Drawing.Size(131, 20);
             data_EntradaLabel.TabIndex = 13;
             data_EntradaLabel.Text = "Data da Entrada:";
             // 
@@ -78,9 +79,10 @@
             // 
             data_SaidaLabel.AutoSize = true;
             data_SaidaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_SaidaLabel.Location = new System.Drawing.Point(544, 181);
+            data_SaidaLabel.Location = new System.Drawing.Point(408, 147);
+            data_SaidaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_SaidaLabel.Name = "data_SaidaLabel";
-            data_SaidaLabel.Size = new System.Drawing.Size(142, 25);
+            data_SaidaLabel.Size = new System.Drawing.Size(115, 20);
             data_SaidaLabel.TabIndex = 15;
             data_SaidaLabel.Text = "Data da Saida:";
             // 
@@ -88,9 +90,10 @@
             // 
             id_clienteLabel.AutoSize = true;
             id_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_clienteLabel.Location = new System.Drawing.Point(67, 177);
+            id_clienteLabel.Location = new System.Drawing.Point(50, 144);
+            id_clienteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_clienteLabel.Name = "id_clienteLabel";
-            id_clienteLabel.Size = new System.Drawing.Size(126, 25);
+            id_clienteLabel.Size = new System.Drawing.Size(99, 20);
             id_clienteLabel.TabIndex = 4;
             id_clienteLabel.Text = "Cód. Cliente:";
             // 
@@ -98,9 +101,10 @@
             // 
             id_funcionarioLabel.AutoSize = true;
             id_funcionarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_funcionarioLabel.Location = new System.Drawing.Point(16, 106);
+            id_funcionarioLabel.Location = new System.Drawing.Point(12, 86);
+            id_funcionarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_funcionarioLabel.Name = "id_funcionarioLabel";
-            id_funcionarioLabel.Size = new System.Drawing.Size(167, 25);
+            id_funcionarioLabel.Size = new System.Drawing.Size(133, 20);
             id_funcionarioLabel.TabIndex = 1;
             id_funcionarioLabel.Text = "Cód. Funcionario:";
             // 
@@ -108,9 +112,10 @@
             // 
             id_PagamentoLabel.AutoSize = true;
             id_PagamentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_PagamentoLabel.Location = new System.Drawing.Point(20, 246);
+            id_PagamentoLabel.Location = new System.Drawing.Point(15, 200);
+            id_PagamentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_PagamentoLabel.Name = "id_PagamentoLabel";
-            id_PagamentoLabel.Size = new System.Drawing.Size(165, 25);
+            id_PagamentoLabel.Size = new System.Drawing.Size(132, 20);
             id_PagamentoLabel.TabIndex = 7;
             id_PagamentoLabel.Text = "Cód. Pagamento:";
             // 
@@ -118,9 +123,10 @@
             // 
             valor_TotalLabel.AutoSize = true;
             valor_TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            valor_TotalLabel.Location = new System.Drawing.Point(579, 251);
+            valor_TotalLabel.Location = new System.Drawing.Point(434, 204);
+            valor_TotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             valor_TotalLabel.Name = "valor_TotalLabel";
-            valor_TotalLabel.Size = new System.Drawing.Size(113, 25);
+            valor_TotalLabel.Size = new System.Drawing.Size(89, 20);
             valor_TotalLabel.TabIndex = 17;
             valor_TotalLabel.Text = "Valor Total:";
             // 
@@ -128,9 +134,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(60, 313);
+            label1.Location = new System.Drawing.Point(45, 254);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(125, 25);
+            label1.Size = new System.Drawing.Size(99, 20);
             label1.TabIndex = 10;
             label1.Text = "Cód. Quarto:";
             // 
@@ -141,10 +148,10 @@
             // valor_TotalTextBox
             // 
             this.valor_TotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Valor_Total", true));
-            this.valor_TotalTextBox.Location = new System.Drawing.Point(721, 254);
-            this.valor_TotalTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.valor_TotalTextBox.Location = new System.Drawing.Point(541, 206);
+            this.valor_TotalTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.valor_TotalTextBox.Name = "valor_TotalTextBox";
-            this.valor_TotalTextBox.Size = new System.Drawing.Size(155, 22);
+            this.valor_TotalTextBox.Size = new System.Drawing.Size(117, 20);
             this.valor_TotalTextBox.TabIndex = 18;
             // 
             // tituloLabel
@@ -153,8 +160,9 @@
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tituloLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
+            this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(907, 68);
+            this.tituloLabel.Size = new System.Drawing.Size(682, 55);
             this.tituloLabel.TabIndex = 0;
             this.tituloLabel.Text = "Cadastro de Diária";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -162,10 +170,10 @@
             // buttonSelecionarFuncionario
             // 
             this.buttonSelecionarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionarFuncionario.Location = new System.Drawing.Point(371, 108);
-            this.buttonSelecionarFuncionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelecionarFuncionario.Location = new System.Drawing.Point(278, 88);
+            this.buttonSelecionarFuncionario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionarFuncionario.Name = "buttonSelecionarFuncionario";
-            this.buttonSelecionarFuncionario.Size = new System.Drawing.Size(117, 31);
+            this.buttonSelecionarFuncionario.Size = new System.Drawing.Size(88, 25);
             this.buttonSelecionarFuncionario.TabIndex = 3;
             this.buttonSelecionarFuncionario.Text = "Selecionar";
             this.buttonSelecionarFuncionario.UseVisualStyleBackColor = true;
@@ -174,10 +182,10 @@
             // buttonSelecionarCliente
             // 
             this.buttonSelecionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionarCliente.Location = new System.Drawing.Point(371, 181);
-            this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelecionarCliente.Location = new System.Drawing.Point(278, 147);
+            this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionarCliente.Name = "buttonSelecionarCliente";
-            this.buttonSelecionarCliente.Size = new System.Drawing.Size(117, 31);
+            this.buttonSelecionarCliente.Size = new System.Drawing.Size(88, 25);
             this.buttonSelecionarCliente.TabIndex = 6;
             this.buttonSelecionarCliente.Text = "Selecionar";
             this.buttonSelecionarCliente.UseVisualStyleBackColor = true;
@@ -186,10 +194,10 @@
             // buttonSelecionarPagamento
             // 
             this.buttonSelecionarPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionarPagamento.Location = new System.Drawing.Point(371, 249);
-            this.buttonSelecionarPagamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelecionarPagamento.Location = new System.Drawing.Point(278, 202);
+            this.buttonSelecionarPagamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionarPagamento.Name = "buttonSelecionarPagamento";
-            this.buttonSelecionarPagamento.Size = new System.Drawing.Size(117, 31);
+            this.buttonSelecionarPagamento.Size = new System.Drawing.Size(88, 25);
             this.buttonSelecionarPagamento.TabIndex = 9;
             this.buttonSelecionarPagamento.Text = "Selecionar";
             this.buttonSelecionarPagamento.UseVisualStyleBackColor = true;
@@ -201,10 +209,10 @@
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.save;
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(581, 396);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSalvar.Location = new System.Drawing.Point(436, 322);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(135, 41);
+            this.buttonSalvar.Size = new System.Drawing.Size(101, 33);
             this.buttonSalvar.TabIndex = 19;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -217,10 +225,10 @@
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(727, 396);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(545, 322);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(165, 41);
+            this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
             this.buttonCancelar.TabIndex = 20;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -230,61 +238,64 @@
             // funcionarioTextBox
             // 
             this.funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Funcionario", true));
-            this.funcionarioTextBox.Location = new System.Drawing.Point(224, 111);
-            this.funcionarioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.funcionarioTextBox.Location = new System.Drawing.Point(168, 90);
+            this.funcionarioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.funcionarioTextBox.Name = "funcionarioTextBox";
-            this.funcionarioTextBox.Size = new System.Drawing.Size(140, 22);
+            this.funcionarioTextBox.Size = new System.Drawing.Size(106, 20);
             this.funcionarioTextBox.TabIndex = 2;
             // 
             // id_ClienteTextBox
             // 
             this.id_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Nome_Cliente", true));
-            this.id_ClienteTextBox.Location = new System.Drawing.Point(224, 180);
-            this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.id_ClienteTextBox.Location = new System.Drawing.Point(168, 146);
+            this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id_ClienteTextBox.Name = "id_ClienteTextBox";
-            this.id_ClienteTextBox.Size = new System.Drawing.Size(140, 22);
+            this.id_ClienteTextBox.Size = new System.Drawing.Size(106, 20);
             this.id_ClienteTextBox.TabIndex = 5;
             // 
             // id_PagamentoTextBox
             // 
             this.id_PagamentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Pagamento", true));
-            this.id_PagamentoTextBox.Location = new System.Drawing.Point(224, 251);
-            this.id_PagamentoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.id_PagamentoTextBox.Location = new System.Drawing.Point(168, 204);
+            this.id_PagamentoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id_PagamentoTextBox.Name = "id_PagamentoTextBox";
-            this.id_PagamentoTextBox.Size = new System.Drawing.Size(140, 22);
+            this.id_PagamentoTextBox.Size = new System.Drawing.Size(106, 20);
             this.id_PagamentoTextBox.TabIndex = 8;
             // 
             // data_EntradaDateTimePicker
             // 
             this.data_EntradaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.diariaBindingSource, "Data_Entrada", true));
             this.data_EntradaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.data_EntradaDateTimePicker.Location = new System.Drawing.Point(721, 114);
-            this.data_EntradaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.data_EntradaDateTimePicker.MinDate = new System.DateTime(2023, 5, 12, 15, 43, 29, 0);
+            this.data_EntradaDateTimePicker.Location = new System.Drawing.Point(541, 93);
+            this.data_EntradaDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_EntradaDateTimePicker.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.data_EntradaDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.data_EntradaDateTimePicker.Name = "data_EntradaDateTimePicker";
-            this.data_EntradaDateTimePicker.Size = new System.Drawing.Size(155, 22);
+            this.data_EntradaDateTimePicker.Size = new System.Drawing.Size(117, 20);
             this.data_EntradaDateTimePicker.TabIndex = 14;
-            this.data_EntradaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 15, 43, 29, 0);
+            this.data_EntradaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 13, 0, 0, 0);
             // 
             // data_SaidaDateTimePicker
             // 
             this.data_SaidaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.diariaBindingSource, "Data_Saida", true));
             this.data_SaidaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.data_SaidaDateTimePicker.Location = new System.Drawing.Point(717, 183);
-            this.data_SaidaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.data_SaidaDateTimePicker.MinDate = new System.DateTime(2023, 5, 12, 15, 43, 35, 0);
+            this.data_SaidaDateTimePicker.Location = new System.Drawing.Point(538, 149);
+            this.data_SaidaDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_SaidaDateTimePicker.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.data_SaidaDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.data_SaidaDateTimePicker.Name = "data_SaidaDateTimePicker";
-            this.data_SaidaDateTimePicker.Size = new System.Drawing.Size(159, 22);
+            this.data_SaidaDateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.data_SaidaDateTimePicker.Size = new System.Drawing.Size(120, 20);
             this.data_SaidaDateTimePicker.TabIndex = 16;
-            this.data_SaidaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 15, 43, 35, 0);
+            this.data_SaidaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 12, 0, 0, 0);
             // 
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Numero", true));
-            this.textBox1.Location = new System.Drawing.Point(224, 316);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(168, 257);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 22);
+            this.textBox1.Size = new System.Drawing.Size(106, 20);
             this.textBox1.TabIndex = 11;
             // 
             // quartosBindingSource
@@ -295,10 +306,10 @@
             // buttonSelecionarQuarto
             // 
             this.buttonSelecionarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionarQuarto.Location = new System.Drawing.Point(371, 314);
-            this.buttonSelecionarQuarto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelecionarQuarto.Location = new System.Drawing.Point(278, 255);
+            this.buttonSelecionarQuarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionarQuarto.Name = "buttonSelecionarQuarto";
-            this.buttonSelecionarQuarto.Size = new System.Drawing.Size(117, 31);
+            this.buttonSelecionarQuarto.Size = new System.Drawing.Size(88, 25);
             this.buttonSelecionarQuarto.TabIndex = 12;
             this.buttonSelecionarQuarto.Text = "Selecionar";
             this.buttonSelecionarQuarto.UseVisualStyleBackColor = true;
@@ -306,11 +317,11 @@
             // 
             // FormCadastroDiaria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(907, 447);
+            this.ClientSize = new System.Drawing.Size(682, 370);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonSelecionarQuarto);
             this.Controls.Add(label1);
@@ -334,11 +345,11 @@
             this.Controls.Add(data_EntradaLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(925, 494);
+            this.MaximumSize = new System.Drawing.Size(698, 409);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(925, 494);
+            this.MinimumSize = new System.Drawing.Size(698, 409);
             this.Name = "FormCadastroDiaria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Diaria";
