@@ -230,7 +230,7 @@ namespace DAL
                 cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE, QUARTO.DESCRICAO, QUARTO.VALOR_DIARIA, QUARTO.ANDAR, QUARTO.ID_STATUS, CLASSE.CLASSE, STATUS.STATUS FROM QUARTO
                                     INNER JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
                                     INNER JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
-                                    INNER JOIN DIARIA_QUARTO ON QUARTO.ID = DIARIA_QUARTO.ID_QUARTO
+                                    LEFT JOIN DIARIA_QUARTO ON QUARTO.ID = DIARIA_QUARTO.ID_QUARTO
                                     WHERE DIARIA_QUARTO.ID_DIARIA = @IdDiaria";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@IdDiaria", _idDiaria);
@@ -238,7 +238,7 @@ namespace DAL
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (rd.Read())
+                    if (rd.Read())
                     {
                         quarto = new Quarto();
                         quarto.Id = Convert.ToInt32(rd["ID"]);
