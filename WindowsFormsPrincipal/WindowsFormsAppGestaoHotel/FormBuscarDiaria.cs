@@ -50,7 +50,7 @@ namespace WindowsFormsAppGestaoHotel
                 else if(radioButtonCPF.Checked)
                 {
                     diariaBindingSource.DataSource = new DiariaBLL().BuscarPorCPFCliente(textBoxBuscar.Text);
-                }
+                }else 
                 quartosBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
            }
            catch(Exception ex )

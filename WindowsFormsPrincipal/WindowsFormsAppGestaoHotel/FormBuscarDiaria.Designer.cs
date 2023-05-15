@@ -77,6 +77,7 @@
             this.cpf_ClienteMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.data_EntradaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.groupBoxQuarto = new System.Windows.Forms.GroupBox();
+            this.valor_DiariaTextBox = new System.Windows.Forms.TextBox();
             this.StatusTextBox = new System.Windows.Forms.TextBox();
             this.ClasseTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
@@ -95,7 +96,6 @@
             this.buttonExcluirDiaria = new System.Windows.Forms.Button();
             this.buttonAlterarDiaria = new System.Windows.Forms.Button();
             this.buttonAdicionarDiaria = new System.Windows.Forms.Button();
-            this.valor_DiariaTextBox = new System.Windows.Forms.TextBox();
             idLabel = new System.Windows.Forms.Label();
             data_EntradaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -611,6 +611,18 @@
             this.groupBoxQuarto.TabStop = false;
             this.groupBoxQuarto.Text = "Dados da Quarto";
             // 
+            // valor_DiariaTextBox
+            // 
+            this.valor_DiariaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
+            this.valor_DiariaTextBox.Location = new System.Drawing.Point(117, 200);
+            this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
+            this.valor_DiariaTextBox.ReadOnly = true;
+            this.valor_DiariaTextBox.Size = new System.Drawing.Size(101, 22);
+            this.valor_DiariaTextBox.TabIndex = 12;
+            this.valor_DiariaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valor_DiariaTextBox.TextChanged += new System.EventHandler(this.valor_DiariaTextBox_TextChanged);
+            // 
             // StatusTextBox
             // 
             this.StatusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -877,18 +889,6 @@
             this.buttonAdicionarDiaria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarDiaria.UseVisualStyleBackColor = false;
             this.buttonAdicionarDiaria.Click += new System.EventHandler(this.buttonAdicionarDiaria_Click);
-            // 
-            // valor_DiariaTextBox
-            // 
-            this.valor_DiariaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
-            this.valor_DiariaTextBox.Location = new System.Drawing.Point(117, 200);
-            this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
-            this.valor_DiariaTextBox.ReadOnly = true;
-            this.valor_DiariaTextBox.Size = new System.Drawing.Size(101, 22);
-            this.valor_DiariaTextBox.TabIndex = 12;
-            this.valor_DiariaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.valor_DiariaTextBox.TextChanged += new System.EventHandler(this.valor_DiariaTextBox_TextChanged);
             // 
             // FormBuscarDiaria
             // 
