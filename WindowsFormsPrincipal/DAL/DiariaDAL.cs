@@ -137,12 +137,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT DIARIA.ID, VALOR_TOTAL, DATA_ENTRADA, ID_CLIENTE, ID_FUNCIONARIO, ID_PAGAMENTO, DATA_SAIDA
-                                    FROM DIARIA 
-                                    INNER JOIN CLIENTE ON DIARIA.ID_CLIENTE = CLIENTE.ID
-                                    INNER JOIN FUNCIONARIO ON DIARIA.ID_FUNCIONARIO = FUNCIONARIO.ID
-                                    INNER JOIN PAGAMENTO ON DIARIA.ID_PAGAMENTO = PAGAMENTO.ID
-                                    WHERE DIARIA.ID=@ID";
+                cmd.CommandText = @"SELECT D.ID, VALOR_TOTAL, DATA_ENTRADA, ID_CLIENTE, C.NOME, ID_FUNCIONARIO, F.NOME NOME_FUNCIONARIO, ID_PAGAMENTO, P.FORMA_PAGAMENTO, DATA_SAIDA
+                                    FROM DIARIA D
+                                    INNER JOIN CLIENTE C ON D.ID_CLIENTE = C.ID
+                                    INNER JOIN FUNCIONARIO F ON D.ID_FUNCIONARIO = F.ID
+                                    INNER JOIN PAGAMENTO P ON D.ID_PAGAMENTO = P.ID
+                                    WHERE D.ID=@ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@ID", _id);
@@ -158,6 +158,10 @@ namespace DAL
                         diaria.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         diaria.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         diaria.Data_Saida = Convert.ToDateTime(rd["DATA_SAIDA"]);
+                        diaria.Nome_Cliente = rd["NOME"].ToString();
+                        diaria.Funcionario = rd["NOME_FUNCIONARIO"].ToString();
+                        diaria.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
+                        diaria.Quartos = new QuartoDAL().BuscarPorIdDiaria(diaria.Id);
                     }
                 }
                 return diaria;
