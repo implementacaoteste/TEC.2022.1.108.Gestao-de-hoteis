@@ -58,6 +58,7 @@
     <Compile Include="PermissaoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuartoBLL.cs" />
+    <Compile Include="RelatorioBLL.cs" />
     <Compile Include="SexoBLL.cs" />
     <Compile Include="StatusBLL.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -53,6 +53,7 @@
     <Compile Include="DiariaDAL.cs" />
     <Compile Include="PagamentoDAL.cs" />
     <Compile Include="QuartoDAL.cs" />
+    <Compile Include="RelatorioDAL.cs" />
     <Compile Include="SexoDAL.cs" />
     <Compile Include="StatusDAL.cs" />
     <Compile Include="ClienteDAL.cs" />
