@@ -23,9 +23,9 @@ namespace WindowsFormsPrincipal1
 
             try
             {
-                Cliente cliente = new Cliente();    
+                Hospede cliente = new Hospede();    
                 radioButtonTodos.Checked = true;
-                clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+                clienteBindingSource.DataSource = new HospedeBLL().BuscaPorTodos();
                 label1.Text = Convert.ToString(cliente.Data_nascimento);
             }
             catch(Exception ex)
@@ -42,15 +42,15 @@ namespace WindowsFormsPrincipal1
                 if (radioButtonTodos.Checked)
                 {
                     textBoxBuscar.Clear();
-                    clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+                    clienteBindingSource.DataSource = new HospedeBLL().BuscaPorTodos();
                 }
                 else if (radioButtonNome.Checked)
                 {
-                    clienteBindingSource.DataSource = new ClienteBLL().BuscaPorNome(textBoxBuscar.Text);
+                    clienteBindingSource.DataSource = new HospedeBLL().BuscaPorNome(textBoxBuscar.Text);
                 }
                 else if (radioButtonCPF.Checked) 
                 {
-                    clienteBindingSource.DataSource = new ClienteBLL().BuscaPorCPF(textBoxBuscar.Text);
+                    clienteBindingSource.DataSource = new HospedeBLL().BuscaPorCPF(textBoxBuscar.Text);
                 }
             }
             catch (Exception ex)
@@ -77,8 +77,8 @@ namespace WindowsFormsPrincipal1
                                 "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
 
-            int id = ((Cliente)clienteBindingSource.Current).Id;
-            new ClienteBLL().Excluir(id);
+            int id = ((Hospede)clienteBindingSource.Current).Id;
+            new HospedeBLL().Excluir(id);
             clienteBindingSource.RemoveCurrent();
             MessageBox.Show("Usuário removido com sucesso");
         }
@@ -91,7 +91,7 @@ namespace WindowsFormsPrincipal1
             }
             else
             {
-                int id = ((Cliente)clienteBindingSource.Current).Id;
+                int id = ((Hospede)clienteBindingSource.Current).Id;
                 using (FormCadastroCliente frm = new FormCadastroCliente(id))
                 {
                     frm.ShowDialog();

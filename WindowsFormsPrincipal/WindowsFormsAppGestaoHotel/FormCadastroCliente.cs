@@ -25,12 +25,12 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                ClienteBLL clienteBLL = new ClienteBLL();
+                HospedeBLL clienteBLL = new HospedeBLL();
                 clienteBindingSource.EndEdit();
                 if (Id == 0)
-                    clienteBLL.Inserir((Cliente)clienteBindingSource.Current);
+                    clienteBLL.Inserir((Hospede)clienteBindingSource.Current);
                 else
-                    clienteBLL.Alterar((Cliente)clienteBindingSource.Current);
+                    clienteBLL.Alterar((Hospede)clienteBindingSource.Current);
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 Close();
@@ -60,11 +60,11 @@ namespace WindowsFormsPrincipal1
                 else
                 {
                     tituloLabel.Text = "Editar Cliente";
-                    clienteBindingSource.DataSource = new ClienteBLL().BuscarPorId(Id);
+                    clienteBindingSource.DataSource = new HospedeBLL().BuscarPorId(Id);
                 }
 
                 sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
-                generoComboBox.Text = ((Cliente)clienteBindingSource.Current).Sexo;
+                generoComboBox.Text = ((Hospede)clienteBindingSource.Current).Sexo;
             }
             catch (Exception ex)
             {
@@ -85,12 +85,12 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                ClienteBLL clienteBLL = new ClienteBLL();
+                HospedeBLL clienteBLL = new HospedeBLL();
                 clienteBindingSource.EndEdit();
                 if (Id == 0)
-                    clienteBLL.Inserir((Cliente)clienteBindingSource.Current);
+                    clienteBLL.Inserir((Hospede)clienteBindingSource.Current);
                 else
-                    clienteBLL.Alterar((Cliente)clienteBindingSource.Current);
+                    clienteBLL.Alterar((Hospede)clienteBindingSource.Current);
 
                 MessageBox.Show("Registro salvo com sucesso!");
             }

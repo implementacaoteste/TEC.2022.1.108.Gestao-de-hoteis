@@ -2,7 +2,7 @@
 
 namespace Models
 {
-    public class Cliente
+    public class Hospede
     {
         public int Id { get; set; }
         public string Nome { get; set; }

@@ -132,7 +132,7 @@
             // 
             // clienteBindingSource
             // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
+            this.clienteBindingSource.DataSource = typeof(Models.Hospede);
             // 
             // sexoBindingSource
             // 

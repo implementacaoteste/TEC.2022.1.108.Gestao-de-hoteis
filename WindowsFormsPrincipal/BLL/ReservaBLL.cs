@@ -70,10 +70,10 @@ namespace BLL
                 throw new Exception("Data Inválida! Você não pode colocar uma data Retroativa!");
         }
 
-        public void SelecionarQuarto(int _idReserva, int _idQuarto)
+        /*public void SelecionarQuarto(int _idReserva, int _idQuarto)
         {
             if (!new ReservaDAL().ReservaPertenceQuarto(_idReserva, _idQuarto))
                 new ReservaDAL().SelecionarQuarto(_idReserva, _idQuarto);
-        }
+        }*/
     }
 }

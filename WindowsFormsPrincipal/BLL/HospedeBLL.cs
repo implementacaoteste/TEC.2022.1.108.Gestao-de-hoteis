@@ -10,52 +10,52 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class ClienteBLL
+    public class HospedeBLL
     {
-        public void Inserir(Cliente _cliente)
+        public void Inserir(Hospede _cliente)
         {
             ValidarPermissao(10);
             ValidarDados(_cliente);
-            new ClienteDAL().Inserir(_cliente);
+            new HospedeDAL().Inserir(_cliente);
         }
-        public void Alterar(Cliente _cliente)
+        public void Alterar(Hospede _cliente)
         {
             ValidarPermissao(11);
             ValidarDados(_cliente);
-            new ClienteDAL().Alterar(_cliente);
+            new HospedeDAL().Alterar(_cliente);
         }
         public void Excluir(int _id)
         {
             ValidarPermissao(12);
-            new ClienteDAL().Excluir(_id);
+            new HospedeDAL().Excluir(_id);
         }
-        public List<Cliente> BuscaPorTodos()
+        public List<Hospede> BuscaPorTodos()
         {
             ValidarPermissao(9);
-            return new ClienteDAL().BuscaPorTodos();
+            return new HospedeDAL().BuscaPorTodos();
         }
-        public Cliente BuscarPorId(int _id)
+        public Hospede BuscarPorId(int _id)
         {
             ValidarPermissao(9);
-            return new ClienteDAL().BuscarPorId(_id);
+            return new HospedeDAL().BuscarPorId(_id);
         }
-        public Cliente BuscaPorCPF(string _CPF)
+        public Hospede BuscaPorCPF(string _CPF)
         {
             ValidarPermissao(9);
-            return new ClienteDAL().BuscaPorCPF(_CPF);
+            return new HospedeDAL().BuscaPorCPF(_CPF);
         }
-        public List<Cliente> BuscaPorNome(string _nome)
+        public List<Hospede> BuscaPorNome(string _nome)
         {
             ValidarPermissao(9);
-            return new ClienteDAL().BuscaPorNome(_nome);
+            return new HospedeDAL().BuscaPorNome(_nome);
         }
         public void ValidarPermissao(int _idPermissao)
         {
-            if (!new ClienteDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
+            if (!new HospedeDAL().ValidarPermissao(Constante.IdLogado, _idPermissao))
                 throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
                 return;
         }
-        private void ValidarDados(Cliente _cliente)
+        private void ValidarDados(Hospede _cliente)
         {
             if (_cliente.Nome == null)
                 throw new Exception("Insira o nome do cliente");

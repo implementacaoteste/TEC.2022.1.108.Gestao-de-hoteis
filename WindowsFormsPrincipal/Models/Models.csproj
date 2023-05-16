@@ -52,7 +52,7 @@
     <Compile Include="Classe.cs" />
     <Compile Include="Relatorio.cs" />
     <Compile Include="Reserva.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="Hospede.cs" />
     <Compile Include="Constante.cs" />
     <Compile Include="Diaria.cs" />
     <Compile Include="Funcionario.cs" />

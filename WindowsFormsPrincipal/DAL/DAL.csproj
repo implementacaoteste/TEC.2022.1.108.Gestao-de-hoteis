@@ -54,9 +54,10 @@
     <Compile Include="PagamentoDAL.cs" />
     <Compile Include="QuartoDAL.cs" />
     <Compile Include="RelatorioDAL.cs" />
+    <Compile Include="ReservaDAL.cs" />
     <Compile Include="SexoDAL.cs" />
     <Compile Include="StatusDAL.cs" />
-    <Compile Include="ClienteDAL.cs" />
+    <Compile Include="HospedeDAL.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="FuncionarioDAL.cs" />
     <Compile Include="GrupoFuncionarioDAL.cs" />

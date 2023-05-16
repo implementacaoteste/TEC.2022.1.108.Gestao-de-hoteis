@@ -183,7 +183,7 @@
             // 
             // nome_HospedeBindingSource
             // 
-            this.nome_HospedeBindingSource.DataSource = typeof(Models.Cliente);
+            this.nome_HospedeBindingSource.DataSource = typeof(Models.Hospede);
             // 
             // nome_HospedeDataGridView
             // 

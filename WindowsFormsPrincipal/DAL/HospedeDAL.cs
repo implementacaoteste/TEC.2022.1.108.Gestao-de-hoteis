@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DALL
 {
-    public class ClienteDAL
+    public class HospedeDAL
     {
-        public void Inserir(Cliente _cliente)
+        public void Inserir(Hospede _cliente)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -67,7 +67,7 @@ namespace DALL
                 cn.Close();
             }
         }
-        public void Alterar(Cliente _cliente)
+        public void Alterar(Hospede _cliente)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -99,9 +99,9 @@ namespace DALL
                 cn.Close();
             }
         }
-        public Cliente BuscaPorCPF(string _CPF)
+        public Hospede BuscaPorCPF(string _CPF)
         {
-            Cliente cliente = new Cliente();
+            Hospede cliente = new Hospede();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -141,10 +141,10 @@ namespace DALL
                 cn.Close();
             }
         }
-        public List<Cliente> BuscaPorNome(string _nome)
+        public List<Hospede> BuscaPorNome(string _nome)
         {
-            List<Cliente> clientes = new List<Cliente>();
-            Cliente cliente;
+            List<Hospede> clientes = new List<Hospede>();
+            Hospede cliente;
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -162,7 +162,7 @@ namespace DALL
                 {
                     while(rd.Read())
                     {
-                        cliente = new Cliente();
+                        cliente = new Hospede();
                         cliente.Id = Convert.ToInt32(rd["ID"]);
                         cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         cliente.Sexo = rd["SEXO"].ToString();
@@ -186,10 +186,10 @@ namespace DALL
                 cn.Close();
             }
         }
-        public List<Cliente> BuscaPorTodos()
+        public List<Hospede> BuscaPorTodos()
         {
-            List<Cliente> clientes = new List<Cliente>();
-            Cliente cliente;
+            List<Hospede> clientes = new List<Hospede>();
+            Hospede cliente;
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -205,7 +205,7 @@ namespace DALL
                 {
                     while (rd.Read())
                     {
-                        cliente = new Cliente();
+                        cliente = new Hospede();
                         cliente.Id = Convert.ToInt32(rd["ID"]);
                         cliente.IdSexo = Convert.ToInt32(rd["ID_SEXO"]);
                         cliente.Sexo = rd["SEXO"].ToString();
@@ -229,9 +229,9 @@ namespace DALL
                 cn.Close();
             }
         }
-        public Cliente BuscarPorId(int _id)
+        public Hospede BuscarPorId(int _id)
         {
-            Cliente cliente = new Cliente();
+            Hospede cliente = new Hospede();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {

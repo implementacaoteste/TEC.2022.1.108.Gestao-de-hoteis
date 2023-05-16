@@ -30,7 +30,7 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                clienteBindingSource.DataSource = new ClienteBLL().BuscaPorTodos();
+                clienteBindingSource.DataSource = new HospedeBLL().BuscaPorTodos();
             }
             catch (Exception ex)
             {
@@ -43,8 +43,8 @@ namespace WindowsFormsAppGestaoHotel
             {
                 if (clienteBindingSource.Count > 0)
                 {
-                    Id = ((Cliente)clienteBindingSource.Current).Id;
-                    NomeCliente = ((Cliente)clienteBindingSource.Current).Nome;
+                    Id = ((Hospede)clienteBindingSource.Current).Id;
+                    NomeCliente = ((Hospede)clienteBindingSource.Current).Nome;
                     Close();
                         }
                 else
