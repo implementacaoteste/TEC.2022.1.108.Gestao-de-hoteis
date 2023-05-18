@@ -24,11 +24,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsAppGestaoHotel
 {
-    public partial class FormCadastroDiaria : Form
+    public partial class FormCadastroReserva : Form
     {
         public int Id;
 
-        public FormCadastroDiaria(int _id = 0)
+        public FormCadastroReserva(int _id = 0)
         {
             InitializeComponent(); 
             Id = _id;
@@ -51,6 +51,8 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
 
+            data_EntradaDateTimePicker.Value = DateTime.Now.Date;
+            data_SaidaDateTimePicker.Value = DateTime.Now.Date;
             //sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
             //comboBox1.Text = ((Funcionario)funcionarioBindingSource.Current).Sexo;
         }
@@ -68,7 +70,7 @@ namespace WindowsFormsAppGestaoHotel
                     frm.ShowDialog();
                     ((Diaria)diariaBindingSource.Current).Id_Funcionario = frm.Id;
                     ((Diaria)diariaBindingSource.Current).Funcionario = frm.NomeUsuario;
-                    funcionarioTextBox.Text = frm.NomeUsuario;
+                    //funcionarioTextBox.Text = frm.NomeUsuario;
                 }
             }
             catch (Exception ex)
