@@ -199,9 +199,24 @@ namespace WindowsFormsPrincipal1
 
         private void reservasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 using (FormBuscarDiaria frm = new FormBuscarDiaria())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }*/
+        }
+
+        private void filtrarReservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormBuscarReserva frm = new FormBuscarReserva())
                 {
                     frm.ShowDialog();
                 }

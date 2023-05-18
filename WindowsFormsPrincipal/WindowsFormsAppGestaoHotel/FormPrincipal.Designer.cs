@@ -55,6 +55,7 @@
             this.pictureBoxUsu1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
+            this.filtrarReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfundo)).BeginInit();
@@ -159,6 +160,7 @@
             this.reservasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.reservasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reservasToolStripMenuItem1,
+            this.filtrarReservasToolStripMenuItem,
             this.quartosDisponíveisToolStripMenuItem});
             this.reservasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reservasToolStripMenuItem.Image")));
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
@@ -231,7 +233,7 @@
             this.textBoxNomeUsuario.BackColor = System.Drawing.Color.PowderBlue;
             this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNomeUsuario.Location = new System.Drawing.Point(748, 93);
-            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomeUsuario.Multiline = true;
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
             this.textBoxNomeUsuario.ReadOnly = true;
@@ -245,7 +247,7 @@
             this.textBoxCargo.BackColor = System.Drawing.Color.PowderBlue;
             this.textBoxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCargo.Location = new System.Drawing.Point(748, 149);
-            this.textBoxCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCargo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCargo.Multiline = true;
             this.textBoxCargo.Name = "textBoxCargo";
             this.textBoxCargo.ReadOnly = true;
@@ -259,7 +261,7 @@
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
             this.pictureBoxSair.Location = new System.Drawing.Point(797, 182);
-            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSair.Name = "pictureBoxSair";
             this.pictureBoxSair.Size = new System.Drawing.Size(30, 30);
             this.pictureBoxSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,7 +286,7 @@
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
             this.pictureBoxUsu2.Location = new System.Drawing.Point(787, 40);
-            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
             this.pictureBoxUsu2.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxUsu2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -311,7 +313,7 @@
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
             this.pictureBoxUsu1.Location = new System.Drawing.Point(787, 40);
-            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
             this.pictureBoxUsu1.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxUsu1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,6 +342,13 @@
             this.pictureBoxCaixaLogin2.TabStop = false;
             this.pictureBoxCaixaLogin2.Visible = false;
             // 
+            // filtrarReservasToolStripMenuItem
+            // 
+            this.filtrarReservasToolStripMenuItem.Name = "filtrarReservasToolStripMenuItem";
+            this.filtrarReservasToolStripMenuItem.Size = new System.Drawing.Size(315, 24);
+            this.filtrarReservasToolStripMenuItem.Text = "Filtrar Reservas";
+            this.filtrarReservasToolStripMenuItem.Click += new System.EventHandler(this.filtrarReservasToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,7 +368,7 @@
             this.Controls.Add(this.pictureBoxUsu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 599);
             this.MinimizeBox = false;
@@ -416,5 +425,6 @@
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeQuartoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acessosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filtrarReservasToolStripMenuItem;
     }
 }
