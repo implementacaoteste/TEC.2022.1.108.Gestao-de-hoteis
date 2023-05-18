@@ -53,11 +53,11 @@
     <Compile Include="FormBuscarCliente.Designer.cs">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBuscarDiaria.cs">
+    <Compile Include="FormBuscarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBuscarDiaria.Designer.cs">
-      <DependentUpon>FormBuscarDiaria.cs</DependentUpon>
+    <Compile Include="FormBuscarReserva.Designer.cs">
+      <DependentUpon>FormBuscarReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBuscarFuncionario.cs">
       <SubType>Form</SubType>
@@ -190,8 +190,8 @@
     <EmbeddedResource Include="FormBuscarCliente.resx">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuscarDiaria.resx">
-      <DependentUpon>FormBuscarDiaria.cs</DependentUpon>
+    <EmbeddedResource Include="FormBuscarReserva.resx">
+      <DependentUpon>FormBuscarReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarFuncionario.resx">
       <DependentUpon>FormBuscarFuncionario.cs</DependentUpon>
