@@ -14,16 +14,16 @@ using WindowsFormsPrincipal1;
 
 namespace WindowsFormsAppGestaoHotel
 {
-    public partial class FormBuscarDiaria : Form
+    public partial class FormBuscarReserva : Form
     {
-        public FormBuscarDiaria()
+        public FormBuscarReserva()
         {
             InitializeComponent();
         }
 
         private void FormBuscarDiaria_Load(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 radioButtonTodos.Checked = true;
                 diariaBindingSource.DataSource = new DiariaBLL().BuscarPorTodos();
@@ -32,11 +32,11 @@ namespace WindowsFormsAppGestaoHotel
             {
                 MessageBox.Show(ex.Message);
                 Close();
-            }
+            }*/
         }
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-           try
+           /*try
            {
                 if (radioButtonTodos.Checked)
                 {
@@ -56,7 +56,7 @@ namespace WindowsFormsAppGestaoHotel
            catch(Exception ex )
            {
                MessageBox.Show(ex.Message);
-           }
+           }*/
         }
         private void buttonAdicionarDiaria_Click(object sender, EventArgs e)
         {
@@ -113,19 +113,6 @@ namespace WindowsFormsAppGestaoHotel
 
             MessageBox.Show("Registro excluído com sucesso!");
         }
-        private void buttonAdicionarQuarto_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using(FormCadastroQuarto frm = new FormCadastroQuarto())
-                    frm.ShowDialog();
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
         private void buttonExcluirQuarto_Click(object sender, EventArgs e)
         {
             if (quartosBindingSource.Count <= 0)
@@ -168,9 +155,9 @@ namespace WindowsFormsAppGestaoHotel
 
         private void valor_DiariaTextBox_TextChanged(object sender, EventArgs e)
         {
-            double value = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
+            /*double value = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
             if (Double.TryParse(valor_DiariaTextBox.Text, out value))
-                valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
+                valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);*/
         }
     }
 }
