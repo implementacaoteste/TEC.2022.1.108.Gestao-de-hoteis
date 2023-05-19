@@ -53,6 +53,12 @@
     <Compile Include="FormBuscarCliente.Designer.cs">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBuscarPermissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarPermissao.Designer.cs">
+      <DependentUpon>FormBuscarPermissao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </Compile>
     <Compile Include="FormCadastroGrupoFuncionario.Designer.cs">
       <DependentUpon>FormCadastroGrupoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroPermissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroPermissao.Designer.cs">
+      <DependentUpon>FormCadastroPermissao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCadastroQuarto.cs">
       <SubType>Form</SubType>
@@ -196,6 +208,9 @@
     <EmbeddedResource Include="FormBuscarCliente.resx">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarPermissao.resx">
+      <DependentUpon>FormBuscarPermissao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarReserva.resx">
       <DependentUpon>FormBuscarReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroGrupoFuncionario.resx">
       <DependentUpon>FormCadastroGrupoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroPermissao.resx">
+      <DependentUpon>FormCadastroPermissao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroQuarto.resx">
       <DependentUpon>FormCadastroQuarto.cs</DependentUpon>
