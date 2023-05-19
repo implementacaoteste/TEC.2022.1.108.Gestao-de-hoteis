@@ -16,8 +16,8 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO RESERVA (DT_ENT_RESERVA, DT_SAI_RESERVA, VALOR_TOTAL, ID_CLIENTE, QTD_HOSPEDES, ID_PAGAMENTO, ID_FUNCIONARIO, OBS_RESERVA, VALOR_ENTRADA, ID_QUARTO, DATA_CHECKIN, DATA_CHECKOUT, OBS_CHECKIN, OBS_CHECKOUT)
-                                       VALUES(@DT_ENT_RESERVA, @DT_SAI_RESERVA, @VALOR_TOTAL, @ID_CLIENTE, @QTD_HOSPEDES, @ID_PAGAMENTO, @ID_FUNCIONARIO, @OBS_RESERVA, @VALOR_ENTRADA, @ID_QUARTO, @DATA_CHECKIN, @DATA_CHECKOUT) SELECT SCOPE_IDENTITY() AS Id";
+                cmd.CommandText = @"INSERT INTO RESERVA (DT_ENT_RESERVA, DT_SAI_RESERVA, VALOR_TOTAL, ID_CLIENTE, QTD_HOSPEDES, ID_PAGAMENTO, ID_FUNCIONARIO, OBS_RESERVA, VALOR_ENTRADA, ID_QUARTO, DATA_CHECKIN, DATA_CHECKOUT, OBS_CHECKIN, OBS_CHECKOUT, GETDATE())
+                                       VALUES(@DT_ENT_RESERVA, @DT_SAI_RESERVA, @VALOR_TOTAL, @ID_CLIENTE, @QTD_HOSPEDES, @ID_PAGAMENTO, @ID_FUNCIONARIO, @OBS_RESERVA, @VALOR_ENTRADA, @ID_QUARTO, @DATA_CHECKIN, @DATA_CHECKOUT, @DATA_RESERVA) SELECT SCOPE_IDENTITY() AS Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DT_ENT_RESERVA", _reserva.Data_Ent_Reserva);
                 cmd.Parameters.AddWithValue("@DT_SAI_RESERVA", _reserva.Data_Sai_Reserva);
@@ -33,6 +33,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("DATA_CHECKOUT", _reserva.Data_Checkout);
                 cmd.Parameters.AddWithValue("@OBS_CHECKIN", _reserva.Obs_Checkin);
                 cmd.Parameters.AddWithValue("@OBS_CHECKOUT", _reserva.Obs_Checkout);
+                cmd.Parameters.AddWithValue("@DATA_RESERVA", _reserva);
                 cmd.Connection = cn;
                 cn.Open();
 
