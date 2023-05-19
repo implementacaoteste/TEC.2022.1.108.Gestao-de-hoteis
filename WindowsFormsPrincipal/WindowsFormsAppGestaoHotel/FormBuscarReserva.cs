@@ -25,7 +25,8 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorTodas();
+                comboBoxBuscarTipo.SelectedIndex= 0;
+                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(datePickerInicial.Value, datePickerFinal.Value);
             }
             catch (Exception ex)
             {
@@ -35,27 +36,27 @@ namespace WindowsFormsAppGestaoHotel
         }
         private void buttonBuscarTipo_Click(object sender, EventArgs e)
         {
-           /*try
+           try
            {
-                if (radioButtonTodos.Checked)
+                switch (comboBoxBuscarTipo.SelectedIndex) 
                 {
-                    textBoxBuscar.Clear();
-                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorTodos();
+                    case 0:
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(datePickerInicial.Value, datePickerFinal.Value);
+                        break;
+                    case 1:
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckout(datePickerInicial.Value, datePickerFinal.Value);
+                        break;
+                    case 2:
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorTodas();
+                        break;
+                    default:
+                        break;
                 }
-                else if (radioButtonNome.Checked)
-                {
-                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorNomeCliente(textBoxBuscar.Text);
-                }
-                else if(radioButtonCPF.Checked)
-                {
-                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorCPFCliente(textBoxBuscar.Text);
-                }else 
-                quartosBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
            }
            catch(Exception ex )
            {
                MessageBox.Show(ex.Message);
-           }*/
+           }
         }private void buttonBuscarIdReserva_Click(object sender, EventArgs e)
         {
            try
