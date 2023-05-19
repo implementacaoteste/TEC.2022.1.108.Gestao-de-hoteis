@@ -31,10 +31,25 @@ namespace BLL
             ValidarPermissao(16);
             new ReservaDAL().CancelarReserva(_id);
         }
-        public Reserva BuscarPorId(int _id)
+        public void CheckIn(Reserva _reserva)
+        {
+            ValidarPermissao(15);
+            new ReservaDAL().CheckIn(_reserva);
+        }
+        public void CheckOut(Reserva _reserva)
+        {
+            ValidarPermissao(15);
+            new ReservaDAL().CheckOut(_reserva);
+        }
+        /*public Reserva BuscarPorId(int _id)
         {
             ValidarPermissao(13);
             return new ReservaDAL().BuscarPorId(_id);
+        }*/
+        public Reserva BuscarPorIdReserva(string _idReserva)
+        {
+            ValidarPermissao(13);
+            return new ReservaDAL().BuscarPorIdReserva(_idReserva);
         }
         public List<Reserva> BuscarPorTodas()
         {
