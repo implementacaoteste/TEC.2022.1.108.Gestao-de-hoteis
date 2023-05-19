@@ -104,9 +104,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(628, 22);
+            this.label1.Location = new System.Drawing.Point(471, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(484, 46);
+            this.label1.Size = new System.Drawing.Size(452, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Relatório de Hospedagem";
             // 
@@ -140,12 +141,13 @@
             this.dataGridViewTextBoxColumn22,
             this.dataGridViewTextBoxColumn23});
             this.nome_FuncionarioDataGridView.DataSource = this.nome_FuncionarioBindingSource;
-            this.nome_FuncionarioDataGridView.Location = new System.Drawing.Point(1118, 185);
+            this.nome_FuncionarioDataGridView.Location = new System.Drawing.Point(838, 150);
+            this.nome_FuncionarioDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nome_FuncionarioDataGridView.Name = "nome_FuncionarioDataGridView";
             this.nome_FuncionarioDataGridView.ReadOnly = true;
             this.nome_FuncionarioDataGridView.RowHeadersWidth = 51;
             this.nome_FuncionarioDataGridView.RowTemplate.Height = 24;
-            this.nome_FuncionarioDataGridView.Size = new System.Drawing.Size(303, 220);
+            this.nome_FuncionarioDataGridView.Size = new System.Drawing.Size(227, 179);
             this.nome_FuncionarioDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn12
@@ -298,12 +300,13 @@
             this.dataGridViewTextBoxColumn31,
             this.dataGridViewTextBoxColumn32});
             this.nome_HospedeDataGridView.DataSource = this.nome_HospedeBindingSource;
-            this.nome_HospedeDataGridView.Location = new System.Drawing.Point(1430, 185);
+            this.nome_HospedeDataGridView.Location = new System.Drawing.Point(1072, 150);
+            this.nome_HospedeDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nome_HospedeDataGridView.Name = "nome_HospedeDataGridView";
             this.nome_HospedeDataGridView.ReadOnly = true;
             this.nome_HospedeDataGridView.RowHeadersWidth = 51;
             this.nome_HospedeDataGridView.RowTemplate.Height = 24;
-            this.nome_HospedeDataGridView.Size = new System.Drawing.Size(304, 220);
+            this.nome_HospedeDataGridView.Size = new System.Drawing.Size(228, 179);
             this.nome_HospedeDataGridView.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn24
@@ -409,12 +412,13 @@
             this.dataGridViewTextBoxColumn33,
             this.dataGridViewTextBoxColumn34});
             this.pagamentosDataGridView.DataSource = this.pagamentosBindingSource;
-            this.pagamentosDataGridView.Location = new System.Drawing.Point(496, 185);
+            this.pagamentosDataGridView.Location = new System.Drawing.Point(372, 150);
+            this.pagamentosDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pagamentosDataGridView.Name = "pagamentosDataGridView";
             this.pagamentosDataGridView.ReadOnly = true;
             this.pagamentosDataGridView.RowHeadersWidth = 51;
             this.pagamentosDataGridView.RowTemplate.Height = 24;
-            this.pagamentosDataGridView.Size = new System.Drawing.Size(180, 220);
+            this.pagamentosDataGridView.Size = new System.Drawing.Size(135, 179);
             this.pagamentosDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn33
@@ -458,12 +462,13 @@
             this.dataGridViewTextBoxColumn42,
             this.dataGridViewTextBoxColumn43});
             this.quartosDataGridView.DataSource = this.quartosBindingSource;
-            this.quartosDataGridView.Location = new System.Drawing.Point(682, 185);
+            this.quartosDataGridView.Location = new System.Drawing.Point(512, 150);
+            this.quartosDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quartosDataGridView.Name = "quartosDataGridView";
             this.quartosDataGridView.ReadOnly = true;
             this.quartosDataGridView.RowHeadersWidth = 51;
             this.quartosDataGridView.RowTemplate.Height = 24;
-            this.quartosDataGridView.Size = new System.Drawing.Size(430, 220);
+            this.quartosDataGridView.Size = new System.Drawing.Size(322, 179);
             this.quartosDataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn35
@@ -556,61 +561,68 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 166);
+            this.label2.Location = new System.Drawing.Point(9, 135);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Reserva";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(493, 166);
+            this.label3.Location = new System.Drawing.Point(370, 135);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Pagamento";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(679, 166);
+            this.label4.Location = new System.Drawing.Point(509, 135);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Quarto";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1118, 166);
+            this.label5.Location = new System.Drawing.Point(838, 135);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Funcionario";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1427, 166);
+            this.label6.Location = new System.Drawing.Point(1070, 135);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 16);
+            this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Hóspede";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(97, 121);
+            this.dateTimePicker1.Location = new System.Drawing.Point(73, 98);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 9;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(303, 120);
+            this.buttonBuscar.Location = new System.Drawing.Point(227, 98);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(56, 19);
             this.buttonBuscar.TabIndex = 10;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -632,12 +644,13 @@
             this.dataGridViewTextBoxColumn49,
             this.dataGridViewTextBoxColumn50});
             this.reservaDataGridView.DataSource = this.reservaBindingSource;
-            this.reservaDataGridView.Location = new System.Drawing.Point(9, 185);
+            this.reservaDataGridView.Location = new System.Drawing.Point(7, 150);
+            this.reservaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reservaDataGridView.Name = "reservaDataGridView";
             this.reservaDataGridView.ReadOnly = true;
             this.reservaDataGridView.RowHeadersWidth = 51;
             this.reservaDataGridView.RowTemplate.Height = 24;
-            this.reservaDataGridView.Size = new System.Drawing.Size(481, 220);
+            this.reservaDataGridView.Size = new System.Drawing.Size(361, 179);
             this.reservaDataGridView.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -678,9 +691,9 @@
             // 
             // FormRelatorio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1754, 577);
+            this.ClientSize = new System.Drawing.Size(1316, 469);
             this.Controls.Add(this.reservaDataGridView);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.dateTimePicker1);
@@ -695,6 +708,7 @@
             this.Controls.Add(this.nome_FuncionarioDataGridView);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRelatorio";
