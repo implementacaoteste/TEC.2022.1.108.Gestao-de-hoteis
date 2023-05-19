@@ -40,21 +40,27 @@ INSERT INTO CLIENTE VALUES('Larissa Silva','95586257412',2,'1994-12-19','larissa
 INSERT INTO CLIENTE VALUES('Larnivaldo Souza','48215974536',1,'1999-07-01','lsouza_23@hotmail.com','94982653415','Rua dos Jatobás')
 
 -- DIARIA  --12º
-INSERT INTO RESERVA VALUES('2023-05-18','2023-05-20',500.00,1,2,2,1,'Carro preto placa: JK59L3',250.00,1,'2023-05-18','2023-05-20','Nada','Nada',NEXT VALUE FOR CHECKIN.COUNTBY1,NEXT VALUE FOR CHECKOUT.COUNTBY1)
---INSERT INTO RESERVA VALUES('2023-05-18','2023-05-20',500.00,1,2,2,1,'Carro preto placa: JK59L3',250.00,1,'2023-05-18','2023-05-20')
---INSERT INTO RESERVA VALUES('2023-05-18','2023-05-20',500.00,1,2,2,1,'Carro preto placa: JK59L3',250.00,1,'2023-05-18','2023-05-20')
+INSERT INTO RESERVA VALUES('2023-05-18','2023-05-20',500.00,1,2,2,1,'Carro preto placa: JK59L3',250.00,1,'2023-05-18','2023-05-20','Nada','Nada')
+INSERT INTO RESERVA VALUES('2023-05-19','2023-05-23',500.00,1,2,2,1,'Carro branco placa: L05LPS',250.00,2,'2023-05-19','2023-05-23','Nada','Nada')
+INSERT INTO RESERVA VALUES('2023-05-22','2023-05-31',500.00,1,2,2,1,'Carro azul placa: 203KSO',250.00,3,'2023-05-22','2023-05-31','Nada','Nada')
+INSERT INTO RESERVA VALUES('2023-05-22','2023-05-31',500.00,1,2,2,1,'Carro vermelho placa: OJE493K',250.00,4,'2023-05-22','2023-05-31','Nada','Nada')
+INSERT INTO RESERVA VALUES('2023-06-01','2023-06-03',500.00,2,1,1,1,'Carro prata placa: KLJ829',250.00,4,'2023-06-01','2023-06-03','Nada','Nada')
+INSERT INTO RESERVA VALUES('2023-05-19','2023-05-22',500.00,1,3,3,1,'Carro prata placa: PS5LKO',250.00,5,'2023-05-19','2023-05-22','Nada','Nada')
 
 
 -- QUARTO  --11º
 INSERT INTO QUARTO VALUES('01',1,'Quarto de solteiro',90.00,'A1',1)
 INSERT INTO QUARTO VALUES('02',2,'Quarto de casal',150.00,'A1',1)
 INSERT INTO QUARTO VALUES('03',3,'Quarto de casal',300.00,'A1',1)
-INSERT INTO QUARTO VALUES('04',1,'Quarto de solteiro',100.00,'A1',2)
+INSERT INTO QUARTO VALUES('04',1,'Quarto de solteiro',100.00,'A1',1)
 INSERT INTO QUARTO VALUES('05',3,'Quarto de casal',300.00,'A1',1)
+INSERT INTO QUARTO VALUES('06',3,'Quarto de casal',200.00,'A1',1)
 
 --DIARIA_QUARTO  --13º
 INSERT INTO RESERVA_QUARTO VALUES(1,1)
 INSERT INTO RESERVA_QUARTO VALUES(2,2)
+INSERT INTO RESERVA_QUARTO VALUES(3,3)
+INSERT INTO RESERVA_QUARTO VALUES(4,4)
 
 -- STATUS  --8º
 INSERT INTO STATUS VALUES(1,'Disponível')
@@ -218,21 +224,23 @@ SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, 
                                     INNER JOIN STATUS S ON S.ID = Q.ID_STATUS
                                     WHERE S.STATUS LIKE 'Disponível'
 
-----------------------------------TRIGGER---------------------------------------
-Create trigger QUARTO_DIARIA 
-on DIARIA_QUARTO
-for insert 
-as 
-begin
-Declare 
-   @status int,
-   @codigo int 
+------------------------------TRIGGER---------------------------------------
+CREATE TRIGGER QUARTO_DIARIA
+ON RESERVA_QUARTO
+FOR INSERT 
+AS 
+BEGIN
+DECLARE 
+   @status INT,
+   @codigo INT 
      SELECT @codigo= ID_QUARTO FROM inserted
 
    
- select @status = 2 from QUARTO
-   update QUARTO set ID_STATUS = @status where ID = @codigo
-   end 
-------------------------------APAGER A TRIGGER---------------------------------------
-   Drop trigger QUARTO_DIARIA
-   --------------------------------------------------------------------------------
+ select @status = 2 FROM QUARTO
+ update QUARTO SET ID_STATUS = @status where ID = @codigo
+ END
+------------------------------DROP TRIGGER----------------------------------
+DROP TRIGGER QUARTO_DIARIA
+
+
+
