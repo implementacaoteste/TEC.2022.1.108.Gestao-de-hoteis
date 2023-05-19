@@ -76,7 +76,7 @@ INSERT INTO PAGAMENTO VALUES('PIX')
 
 --FUNCIONARIO  --2º
 INSERT INTO FUNCIONARIO VALUES('08432576522','Administrador','admin@gmail.com','63984581203','Rua A1, 010','admin','admin',2,1,GETDATE())
-INSERT INTO FUNCIONARIO VALUES('94587124563','Laila Silva','lailassantos@gmail.com','63991587425','Avenida dos Cedros, 45','laila_santos','wads135',1,1,GETDATE())
+INSERT INTO FUNCIONARIO VALUES('94587124563','Laila Silva','lailassantos@gmail.com','63991587425','Avenida dos Cedros, 45','Laila Santos','wads135',1,1,GETDATE())
 INSERT INTO FUNCIONARIO VALUES('62518745259','Roziane Alves Santos','rozialvess@hotelogix.com','98995632547','Rua das Capivaras, 915','Roziane Alves','rozi3142',2,1,GETDATE())
 
 --GRUPO_FUNCIONARIO  --3º
