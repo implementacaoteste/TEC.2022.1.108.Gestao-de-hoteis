@@ -218,7 +218,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        internal List<Quarto> BuscarPorIdDiaria(int _idDiaria)
+        internal List<Quarto> BuscarPorIdReserva(int _idReserva)
         {
             List<Quarto> quartos = new List<Quarto>();
             Quarto quarto;
@@ -230,10 +230,10 @@ namespace DAL
                 cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE, QUARTO.DESCRICAO, QUARTO.VALOR_DIARIA, QUARTO.ANDAR, QUARTO.ID_STATUS, CLASSE.CLASSE, STATUS.STATUS FROM QUARTO
                                     INNER JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
                                     INNER JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
-                                    LEFT JOIN DIARIA_QUARTO ON QUARTO.ID = DIARIA_QUARTO.ID_QUARTO
-                                    WHERE DIARIA_QUARTO.ID_DIARIA = @IdDiaria";
+                                    LEFT JOIN RESERVA_QUARTO ON QUARTO.ID = RESERVA_QUARTO.ID_QUARTO
+                                    WHERE RESERVA_QUARTO.ID_RESERVA = @IdReserva";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@IdDiaria", _idDiaria);
+                cmd.Parameters.AddWithValue("@IdReserva", _idReserva);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
