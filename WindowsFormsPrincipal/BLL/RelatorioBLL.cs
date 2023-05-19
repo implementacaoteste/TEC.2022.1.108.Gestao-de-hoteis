@@ -16,14 +16,14 @@ namespace BLL
             return new RelatorioDAL().BuscaPorTodos();
         }
 
-        public List<Relatorio> DataSaida(int _dataSaida)
+        public List<Relatorio> DataCheckout(string _dataCheckout)
         {
-            return new RelatorioDAL().DataSaida(_dataSaida);
+            return new RelatorioDAL().DataCheckout(_dataCheckout);
         }
 
-        public List<Relatorio> DataEntrada(int _dataEntrada)
+        public List<Relatorio> DataCheckin(string _dataCheckin)
         {
-            return new RelatorioDAL().DataEntrada(_dataEntrada);
+            return new RelatorioDAL().DataCheckin(_dataCheckin);
         }
         public List<Relatorio> Datas(int _data)
         {

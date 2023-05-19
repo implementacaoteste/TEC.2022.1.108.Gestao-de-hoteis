@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,33 @@ namespace WindowsFormsAppGestaoHotel
         private void FormRelatorio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+              switch(comboBoxBuscar.SelectedIndex)
+                {
+                    case 0:
+                        relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckin(dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                        break;
+                    case 1:
+                        relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckout(dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                        break ;
+                    case 2:
+                        relatorioBindingSource.DataSource = new RelatorioBLL().BuscarPortodos();
+                        break ;
+                    default:
+                        break;
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -21,8 +21,8 @@ namespace WindowsFormsPrincipal1
             InitializeComponent();
         }
 
-       private void FormPrincipal_Load(object sender, EventArgs e)
-       {
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
             try
             {
                 using (FormLogin frm = new FormLogin())
@@ -40,8 +40,8 @@ namespace WindowsFormsPrincipal1
             {
                 MessageBox.Show(ex.Message);
             }
-            
-       }
+
+        }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -113,7 +113,7 @@ namespace WindowsFormsPrincipal1
 
         private void pictureBoxUsu1_Click(object sender, EventArgs e)
         {
-            if(pictureBoxUsu2.Visible)
+            if (pictureBoxUsu2.Visible)
             {
                 pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
@@ -128,12 +128,12 @@ namespace WindowsFormsPrincipal1
                 pictureBoxSair.Visible = true;
                 pictureBoxCaixaLogin.Visible = true;
                 pictureBoxCaixaLogin2.Visible = true;
-                textBoxNomeUsuario.Visible=true;
+                textBoxNomeUsuario.Visible = true;
                 pictureBoxUsu2.Visible = true;
                 pictureBoxfundo.Visible = true;
                 textBoxCargo.Visible = true;
             }
-            
+
         }
 
         private void pictureBoxSair_Click(object sender, EventArgs e)
@@ -187,13 +187,13 @@ namespace WindowsFormsPrincipal1
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.U)
+            if (e.KeyCode == Keys.U)
             {
                 pictureBoxUsu1_Click(null, null);
             }
             if (e.KeyCode == Keys.Escape)
             {
-                pictureBoxSair_Click(null,null);
+                pictureBoxSair_Click(null, null);
             }
         }
 
@@ -226,5 +226,22 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormRelatorio frm = new FormRelatorio())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }
+        
+
