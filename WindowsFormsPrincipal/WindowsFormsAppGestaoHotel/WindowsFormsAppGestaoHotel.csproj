@@ -149,6 +149,12 @@
     <Compile Include="FormConsultaQuarto.Designer.cs">
       <DependentUpon>FormConsultaQuarto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultaQuartoDisponivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaQuartoDisponivel.Designer.cs">
+      <DependentUpon>FormConsultaQuartoDisponivel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultarPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaQuarto.resx">
       <DependentUpon>FormConsultaQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaQuartoDisponivel.resx">
+      <DependentUpon>FormConsultaQuartoDisponivel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultarPagamento.resx">
       <DependentUpon>FormConsultarPagamento.cs</DependentUpon>

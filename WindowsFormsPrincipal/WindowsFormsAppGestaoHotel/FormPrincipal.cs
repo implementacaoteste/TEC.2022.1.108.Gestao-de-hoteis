@@ -241,6 +241,21 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void quartosDisponíveisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormConsultaQuartoDisponivel frm = new FormConsultaQuartoDisponivel())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
         
