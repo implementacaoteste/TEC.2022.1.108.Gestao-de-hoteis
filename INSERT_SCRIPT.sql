@@ -40,12 +40,12 @@ INSERT INTO CLIENTE VALUES('Larissa Silva','95586257412',2,'1994-12-19','larissa
 INSERT INTO CLIENTE VALUES('Larnivaldo Souza','48215974536',1,'1999-07-01','lsouza_23@hotmail.com','94982653415','Rua dos Jatobás')
 
 -- DIARIA  --12º
-INSERT INTO RESERVA VALUES('2023-05-18','2023-05-20',500.00,1,2,2,1,'Carro preto placa: JK59L3',250.00,1,'2023-05-18','2023-05-20','Nada','Nada')
-INSERT INTO RESERVA VALUES('2023-05-19','2023-05-23',500.00,1,2,2,1,'Carro branco placa: L05LPS',250.00,2,'2023-05-19','2023-05-23','Nada','Nada')
-INSERT INTO RESERVA VALUES('2023-05-22','2023-05-31',500.00,1,2,2,1,'Carro azul placa: 203KSO',250.00,3,'2023-05-22','2023-05-31','Nada','Nada')
-INSERT INTO RESERVA VALUES('2023-05-22','2023-05-31',500.00,1,2,2,1,'Carro vermelho placa: OJE493K',250.00,4,'2023-05-22','2023-05-31','Nada','Nada')
-INSERT INTO RESERVA VALUES('2023-06-01','2023-06-03',500.00,2,1,1,1,'Carro prata placa: KLJ829',250.00,4,'2023-06-01','2023-06-03','Nada','Nada')
-INSERT INTO RESERVA VALUES('2023-05-19','2023-05-22',500.00,1,3,3,1,'Carro prata placa: PS5LKO',250.00,5,'2023-05-19','2023-05-22','Nada','Nada')
+INSERT INTO RESERVA VALUES('2023-05-18','2023-05-20',500.00,1,2,2,1,'Carro preto placa: JK59L3',250.00,1,'2023-05-18','2023-05-20','Nada','Nada',GETDATE())
+INSERT INTO RESERVA VALUES('2023-05-19','2023-05-23',500.00,1,2,2,1,'Carro branco placa: L05LPS',250.00,2,'2023-05-19','2023-05-23','Nada','Nada',GETDATE())
+INSERT INTO RESERVA VALUES('2023-05-22','2023-05-31',500.00,1,2,2,1,'Carro azul placa: 203KSO',250.00,3,'2023-05-22','2023-05-31','Nada','Nada',GETDATE())
+INSERT INTO RESERVA VALUES('2023-05-22','2023-05-31',500.00,1,2,2,1,'Carro vermelho placa: OJE493K',250.00,4,'2023-05-22','2023-05-31','Nada','Nada',GETDATE())
+INSERT INTO RESERVA VALUES('2023-06-01','2023-06-03',500.00,2,1,1,1,'Carro prata placa: KLJ829',250.00,4,'2023-06-01','2023-06-03','Nada','Nada',GETDATE())
+INSERT INTO RESERVA VALUES('2023-05-19','2023-05-22',500.00,1,3,3,1,'Carro prata placa: PS5LKO',250.00,5,'2023-05-19','2023-05-22','Nada','Nada',GETDATE())
 
 
 -- QUARTO  --11º
@@ -83,7 +83,7 @@ INSERT INTO PAGAMENTO VALUES('PIX')
 --FUNCIONARIO  --2º
 INSERT INTO FUNCIONARIO VALUES('08432576522','Administrador','admin@gmail.com','63984581203','Rua A1, 010','admin','admin',2,1,GETDATE())
 INSERT INTO FUNCIONARIO VALUES('94587124563','Laila Silva','lailassantos@gmail.com','63991587425','Avenida dos Cedros, 45','Laila Santos','wads135',1,1,GETDATE())
-INSERT INTO FUNCIONARIO VALUES('62518745259','Roziane Alves Santos','rozialvess@hotelogix.com','98995632547','Rua das Capivaras, 915','Roziane Alves','rozi3142',2,1,GETDATE())
+INSERT INTO FUNCIONARIO VALUES('62518745259','Roziane Alves Santos','rozialvess@hotelogix.com','98995632547','Rua das Capivaras, 915','Roziane Alves','rozi3142',1,1,GETDATE())
 
 --GRUPO_FUNCIONARIO  --3º
 INSERT INTO GRUPO_FUNCIONARIO(NOME_GRUPO)VALUES('Administrador')
@@ -233,12 +233,11 @@ BEGIN
 DECLARE 
    @status INT,
    @codigo INT 
-     SELECT @codigo= ID_QUARTO FROM inserted
+   SELECT @codigo= ID_QUARTO FROM inserted
 
-   
- select @status = 2 FROM QUARTO
- update QUARTO SET ID_STATUS = @status where ID = @codigo
- END
+ SELECT @status = 2 FROM QUARTO
+ UPDATE QUARTO SET ID_STATUS = @status WHERE ID = @codigo
+END
 ------------------------------DROP TRIGGER----------------------------------
 DROP TRIGGER QUARTO_DIARIA
 
