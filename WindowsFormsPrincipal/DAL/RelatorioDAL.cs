@@ -24,7 +24,7 @@ namespace DAL
                                                     RESERVA.DATA_CHECKIN,
                                                     CLIENTE.NOME,
                                                     CLIENTE.CPF,
-                                                    FUNCIONARIO.NOME,
+                                                    FUNCIONARIO.NOME NOME_FUNCIONARIO,
                                                     FUNCIONARIO.NOME_USUARIO,
                                                     PAGAMENTO.FORMA_PAGAMENTO,
                                                     RESERVA.VALOR_TOTAL,
@@ -54,9 +54,8 @@ namespace DAL
                         relatorio.CPF_Hopesde = rd["CPF"].ToString();
                         relatorio.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         relatorio.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
-                        relatorio.Valor_Diaria = (double)rd["VALOR_ENTRADA"];
+                        relatorio.Valor_Diaria = (double)rd["VALOR_DIARIA"];
                         relatorio.Numero_Quarto = rd["NUMERO"].ToString();
-                        relatorio.Descricao_Quarto = rd["NUMERO"].ToString();
                         relatorio.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
                         relatorio.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
 
@@ -67,7 +66,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuarios: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os relatorios ", ex);
             }
             finally
             {
@@ -89,14 +88,12 @@ namespace DAL
                                                     RESERVA.DATA_CHECKIN,
                                                     CLIENTE.NOME,
                                                     CLIENTE.CPF,
-                                                    FUNCIONARIO.NOME,
-                                                    FUNCIONARIO.NOME_USUARIO,
+                                                    FUNCIONARIO.NOME NOME_FUNCIONARIO,
                                                     PAGAMENTO.FORMA_PAGAMENTO,
                                                     RESERVA.VALOR_TOTAL,
                                                     RESERVA.ID,
                                                     RESERVA.DATA_CHECKOUT,
                                                     QUARTO.VALOR_DIARIA,
-                                                    QUARTO.DESCRICAO,
                                                     QUARTO.NUMERO,
                                                     FUNCIONARIO.NOME AS Funcionario
                                                     FROM RESERVA
@@ -104,7 +101,7 @@ namespace DAL
                                                     INNER JOIN FUNCIONARIO ON RESERVA.ID_FUNCIONARIO = FUNCIONARIO.ID
                                                     INNER JOIN PAGAMENTO ON RESERVA.ID_PAGAMENTO = PAGAMENTO.ID
                                                     INNER JOIN QUARTO ON RESERVA.ID_QUARTO = QUARTO.ID
-                                                     WHERE RESERVA.DATA_CHECKIN = @DATA_CHECKIN";
+                                                    WHERE RESERVA.DATA_CHECKIN = @DATA_CHECKIN";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DATA_CHECKIN", _dataCheckin.Date);
@@ -121,9 +118,8 @@ namespace DAL
                         relatorio.CPF_Hopesde = rd["CPF"].ToString();
                         relatorio.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         relatorio.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
-                        relatorio.Valor_Diaria = (double)rd["VALOR_ENTRADA"];
+                        relatorio.Valor_Diaria = (double)rd["VALOR_DIARIA"];
                         relatorio.Numero_Quarto = rd["NUMERO"].ToString();
-                        relatorio.Descricao_Quarto = rd["NUMERO"].ToString();
                         relatorio.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
                         relatorio.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
                        
@@ -134,7 +130,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuarios: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar os relatorio no CHECKIN: ", ex);
             }
             finally
             {
@@ -161,7 +157,7 @@ namespace DAL
                                                     RESERVA.DATA_CHECKIN,
                                                     CLIENTE.NOME,
                                                     CLIENTE.CPF,
-                                                    FUNCIONARIO.NOME,
+                                                    FUNCIONARIO.NOME NOME_FUNCIONARIO,
                                                     FUNCIONARIO.NOME_USUARIO,
                                                     PAGAMENTO.FORMA_PAGAMENTO,
                                                     RESERVA.VALOR_TOTAL,
@@ -193,9 +189,8 @@ namespace DAL
                         relatorio.CPF_Hopesde = rd["CPF"].ToString();
                         relatorio.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         relatorio.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
-                        relatorio.Valor_Diaria = (double)rd["VALOR_ENTRADA"];
+                        relatorio.Valor_Diaria = (double)rd["VALOR_DIARIA"];
                         relatorio.Numero_Quarto = rd["NUMERO"].ToString();
-                        relatorio.Descricao_Quarto = rd["NUMERO"].ToString();
                         relatorio.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
                         relatorio.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
 
@@ -206,7 +201,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuarios: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar relatorio no Checkout ", ex);
             }
             finally
             {

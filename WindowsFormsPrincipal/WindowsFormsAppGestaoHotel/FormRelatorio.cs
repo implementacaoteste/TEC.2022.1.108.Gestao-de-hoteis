@@ -30,10 +30,10 @@ namespace WindowsFormsAppGestaoHotel
               switch(comboBoxBuscar.SelectedIndex)
                 {
                     case 0:
-                        relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckin(dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                        relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckin(dateTimePicker1.Value);
                         break;
                     case 1:
-                        relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckout(dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                        relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckout(dateTimePicker1.Value);
                         break ;
                     case 2:
                         relatorioBindingSource.DataSource = new RelatorioBLL().BuscarPortodos();
