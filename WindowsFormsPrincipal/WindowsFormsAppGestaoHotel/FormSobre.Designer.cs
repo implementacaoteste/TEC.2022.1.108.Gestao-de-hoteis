@@ -103,6 +103,7 @@
             this.buttonSuporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSuporte.UseVisualStyleBackColor = false;
             this.buttonSuporte.Click += new System.EventHandler(this.buttonSuporte_Click);
+            this.buttonSuporte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonSuporte_KeyDown_1);
             // 
             // label1
             // 

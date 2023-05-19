@@ -86,5 +86,13 @@ namespace WindowsFormsPrincipal1
         {
             linkLabelsuporte_LinkClicked(null,null);
         }
+
+        private void buttonsSuporte_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Control && e.KeyCode == Keys.H)
+            {
+                linkLabelsuporte_LinkClicked(null, null);
+            }
+        }
     }
 }
