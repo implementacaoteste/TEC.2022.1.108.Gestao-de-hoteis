@@ -256,6 +256,21 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void acessosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormBuscarPermissao frm = new FormBuscarPermissao())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
         
