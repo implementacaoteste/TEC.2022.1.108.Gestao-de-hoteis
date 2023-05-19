@@ -95,11 +95,11 @@
     <Compile Include="FormCadastroDeFuncionario.Designer.cs">
       <DependentUpon>FormCadastroDeFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCadastroDiaria.cs">
+    <Compile Include="FormCadastroReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCadastroDiaria.Designer.cs">
-      <DependentUpon>FormCadastroDiaria.cs</DependentUpon>
+    <Compile Include="FormCadastroReserva.Designer.cs">
+      <DependentUpon>FormCadastroReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCadastroGrupoFuncionario.cs">
       <SubType>Form</SubType>
@@ -211,8 +211,8 @@
     <EmbeddedResource Include="FormCadastroDeFuncionario.resx">
       <DependentUpon>FormCadastroDeFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCadastroDiaria.resx">
-      <DependentUpon>FormCadastroDiaria.cs</DependentUpon>
+    <EmbeddedResource Include="FormCadastroReserva.resx">
+      <DependentUpon>FormCadastroReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroGrupoFuncionario.resx">
       <DependentUpon>FormCadastroGrupoFuncionario.cs</DependentUpon>
