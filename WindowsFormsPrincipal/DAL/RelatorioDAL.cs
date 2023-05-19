@@ -75,7 +75,7 @@ namespace DAL
             }
         }
 
-        public List<Relatorio> DataCheckin(string _dataCheckin)
+        public List<Relatorio> DataCheckin(DateTime _dataCheckin)
         {
             List<Relatorio> relatorios = new List<Relatorio>();
             Relatorio relatorio;
@@ -107,7 +107,7 @@ namespace DAL
                                                      WHERE RESERVA.DATA_CHECKIN = @DATA_CHECKIN";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@DATA_CHECKIN", _dataCheckin  );
+                cmd.Parameters.AddWithValue("@DATA_CHECKIN", _dataCheckin.Date);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -147,7 +147,7 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public List<Relatorio> DataCheckout(string _dataCheckout)
+        public List<Relatorio> DataCheckout(DateTime _dataCheckout)
         {
             List<Relatorio> relatorios = new List<Relatorio>();
             Relatorio relatorio;
@@ -179,7 +179,7 @@ namespace DAL
                                                      WHERE RESERVA.DATA_CHECKOUT = @DATA_CHECKOUT";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@DATA_CHECKOUT", _dataCheckout);
+                cmd.Parameters.AddWithValue("@DATA_CHECKOUT", _dataCheckout.Date);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
