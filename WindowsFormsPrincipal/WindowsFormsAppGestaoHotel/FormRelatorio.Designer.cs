@@ -86,6 +86,8 @@
             this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBoxCHECKIN = new System.Windows.Forms.CheckBox();
+            this.checkBoxCHECKOUT = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.diariasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nome_FuncionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nome_FuncionarioDataGridView)).BeginInit();
@@ -676,11 +678,33 @@
             this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
             this.dataGridViewTextBoxColumn50.ReadOnly = true;
             // 
+            // checkBoxCHECKIN
+            // 
+            this.checkBoxCHECKIN.AutoSize = true;
+            this.checkBoxCHECKIN.Location = new System.Drawing.Point(97, 94);
+            this.checkBoxCHECKIN.Name = "checkBoxCHECKIN";
+            this.checkBoxCHECKIN.Size = new System.Drawing.Size(87, 20);
+            this.checkBoxCHECKIN.TabIndex = 13;
+            this.checkBoxCHECKIN.Text = "CHECKIN";
+            this.checkBoxCHECKIN.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCHECKOUT
+            // 
+            this.checkBoxCHECKOUT.AutoSize = true;
+            this.checkBoxCHECKOUT.Location = new System.Drawing.Point(203, 94);
+            this.checkBoxCHECKOUT.Name = "checkBoxCHECKOUT";
+            this.checkBoxCHECKOUT.Size = new System.Drawing.Size(103, 20);
+            this.checkBoxCHECKOUT.TabIndex = 13;
+            this.checkBoxCHECKOUT.Text = "CHECKOUT";
+            this.checkBoxCHECKOUT.UseVisualStyleBackColor = true;
+            // 
             // FormRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1754, 577);
+            this.Controls.Add(this.checkBoxCHECKOUT);
+            this.Controls.Add(this.checkBoxCHECKIN);
             this.Controls.Add(this.reservaDataGridView);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.dateTimePicker1);
@@ -700,6 +724,7 @@
             this.Name = "FormRelatorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form: Relatório";
+            this.Load += new System.EventHandler(this.FormRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diariasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nome_FuncionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nome_FuncionarioDataGridView)).EndInit();
@@ -774,5 +799,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
+        private System.Windows.Forms.CheckBox checkBoxCHECKIN;
+        private System.Windows.Forms.CheckBox checkBoxCHECKOUT;
     }
 }

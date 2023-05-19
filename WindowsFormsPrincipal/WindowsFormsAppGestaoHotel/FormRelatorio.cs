@@ -16,5 +16,10 @@ namespace WindowsFormsAppGestaoHotel
         {
             InitializeComponent();
         }
+
+        private void FormRelatorio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
