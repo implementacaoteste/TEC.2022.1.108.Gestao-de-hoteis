@@ -34,15 +34,14 @@
             System.Windows.Forms.Button buttonBuscarIdReserva;
             this.groupBoxDiaria = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.reservaDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxBuscarIdReserva = new System.Windows.Forms.TextBox();
             this.data_FinalLabel = new System.Windows.Forms.Label();
             this.data_InicialLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reservaDataGridView = new System.Windows.Forms.DataGridView();
+            this.datePickerFinal = new System.Windows.Forms.DateTimePicker();
+            this.datePickerInicial = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxBuscarTipo = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,12 +60,13 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             buttonBuscarTipo = new System.Windows.Forms.Button();
             buttonBuscarIdReserva = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBuscarTipo
@@ -92,7 +92,7 @@
             buttonBuscarIdReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonBuscarIdReserva.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarIdReserva.Image")));
-            buttonBuscarIdReserva.Location = new System.Drawing.Point(826, 28);
+            buttonBuscarIdReserva.Location = new System.Drawing.Point(858, 28);
             buttonBuscarIdReserva.Margin = new System.Windows.Forms.Padding(2);
             buttonBuscarIdReserva.Name = "buttonBuscarIdReserva";
             buttonBuscarIdReserva.Size = new System.Drawing.Size(30, 30);
@@ -123,90 +123,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reservas";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBoxBuscarIdReserva);
-            this.groupBox2.Controls.Add(this.data_FinalLabel);
-            this.groupBox2.Controls.Add(this.data_InicialLabel);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(buttonBuscarIdReserva);
-            this.groupBox2.Controls.Add(buttonBuscarTipo);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(9, 9);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(920, 93);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Filtrar por";
-            // 
-            // textBoxBuscarIdReserva
-            // 
-            this.textBoxBuscarIdReserva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxBuscarIdReserva.Location = new System.Drawing.Point(753, 30);
-            this.textBoxBuscarIdReserva.Name = "textBoxBuscarIdReserva";
-            this.textBoxBuscarIdReserva.Size = new System.Drawing.Size(68, 26);
-            this.textBoxBuscarIdReserva.TabIndex = 8;
-            // 
-            // data_FinalLabel
-            // 
-            this.data_FinalLabel.AutoSize = true;
-            this.data_FinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.data_FinalLabel.Location = new System.Drawing.Point(486, 33);
-            this.data_FinalLabel.Name = "data_FinalLabel";
-            this.data_FinalLabel.Size = new System.Drawing.Size(82, 20);
-            this.data_FinalLabel.TabIndex = 7;
-            this.data_FinalLabel.Text = "Data Final";
-            // 
-            // data_InicialLabel
-            // 
-            this.data_InicialLabel.AutoSize = true;
-            this.data_InicialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.data_InicialLabel.Location = new System.Drawing.Point(238, 33);
-            this.data_InicialLabel.Name = "data_InicialLabel";
-            this.data_InicialLabel.Size = new System.Drawing.Size(88, 20);
-            this.data_InicialLabel.TabIndex = 7;
-            this.data_InicialLabel.Text = "Data Inicial";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(574, 30);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(130, 26);
-            this.dateTimePicker2.TabIndex = 6;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(332, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 26);
-            this.dateTimePicker1.TabIndex = 6;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Data Check In",
-            "Data Check Out",
-            "Data Lançamento"});
-            this.comboBox1.Location = new System.Drawing.Point(5, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 26);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // reservaBindingSource
-            // 
-            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
             // 
             // reservaDataGridView
             // 
@@ -242,6 +158,88 @@
             this.reservaDataGridView.RowHeadersVisible = false;
             this.reservaDataGridView.Size = new System.Drawing.Size(910, 268);
             this.reservaDataGridView.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBoxBuscarIdReserva);
+            this.groupBox2.Controls.Add(this.data_FinalLabel);
+            this.groupBox2.Controls.Add(this.data_InicialLabel);
+            this.groupBox2.Controls.Add(this.datePickerFinal);
+            this.groupBox2.Controls.Add(this.datePickerInicial);
+            this.groupBox2.Controls.Add(this.comboBoxBuscarTipo);
+            this.groupBox2.Controls.Add(buttonBuscarIdReserva);
+            this.groupBox2.Controls.Add(buttonBuscarTipo);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(9, 9);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(920, 83);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Filtrar por";
+            // 
+            // textBoxBuscarIdReserva
+            // 
+            this.textBoxBuscarIdReserva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxBuscarIdReserva.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBoxBuscarIdReserva.Location = new System.Drawing.Point(751, 30);
+            this.textBoxBuscarIdReserva.Name = "textBoxBuscarIdReserva";
+            this.textBoxBuscarIdReserva.Size = new System.Drawing.Size(102, 26);
+            this.textBoxBuscarIdReserva.TabIndex = 8;
+            this.textBoxBuscarIdReserva.Text = "Cód. Reserva";
+            // 
+            // data_FinalLabel
+            // 
+            this.data_FinalLabel.AutoSize = true;
+            this.data_FinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.data_FinalLabel.Location = new System.Drawing.Point(486, 33);
+            this.data_FinalLabel.Name = "data_FinalLabel";
+            this.data_FinalLabel.Size = new System.Drawing.Size(82, 20);
+            this.data_FinalLabel.TabIndex = 7;
+            this.data_FinalLabel.Text = "Data Final";
+            // 
+            // data_InicialLabel
+            // 
+            this.data_InicialLabel.AutoSize = true;
+            this.data_InicialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.data_InicialLabel.Location = new System.Drawing.Point(238, 33);
+            this.data_InicialLabel.Name = "data_InicialLabel";
+            this.data_InicialLabel.Size = new System.Drawing.Size(88, 20);
+            this.data_InicialLabel.TabIndex = 7;
+            this.data_InicialLabel.Text = "Data Inicial";
+            // 
+            // datePickerFinal
+            // 
+            this.datePickerFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.datePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datePickerFinal.Location = new System.Drawing.Point(574, 30);
+            this.datePickerFinal.Name = "datePickerFinal";
+            this.datePickerFinal.Size = new System.Drawing.Size(130, 26);
+            this.datePickerFinal.TabIndex = 6;
+            // 
+            // datePickerInicial
+            // 
+            this.datePickerInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.datePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datePickerInicial.Location = new System.Drawing.Point(332, 30);
+            this.datePickerInicial.Name = "datePickerInicial";
+            this.datePickerInicial.Size = new System.Drawing.Size(130, 26);
+            this.datePickerInicial.TabIndex = 6;
+            // 
+            // comboBoxBuscarTipo
+            // 
+            this.comboBoxBuscarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBoxBuscarTipo.FormattingEnabled = true;
+            this.comboBoxBuscarTipo.Items.AddRange(new object[] {
+            "Data Check In",
+            "Data Check Out",
+            "Data Lançamento"});
+            this.comboBoxBuscarTipo.Location = new System.Drawing.Point(5, 31);
+            this.comboBoxBuscarTipo.Name = "comboBoxBuscarTipo";
+            this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 26);
+            this.comboBoxBuscarTipo.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -378,6 +376,10 @@
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Visible = false;
             // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            // 
             // FormBuscarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,10 +402,10 @@
             this.Load += new System.EventHandler(this.FormBuscarReserva_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormBuscarReserva_KeyDown);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,12 +414,12 @@
         private System.Windows.Forms.GroupBox groupBoxDiaria;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxBuscarTipo;
         private System.Windows.Forms.TextBox textBoxBuscarIdReserva;
         private System.Windows.Forms.Label data_FinalLabel;
         private System.Windows.Forms.Label data_InicialLabel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datePickerFinal;
+        private System.Windows.Forms.DateTimePicker datePickerInicial;
         private System.Windows.Forms.DataGridView reservaDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
