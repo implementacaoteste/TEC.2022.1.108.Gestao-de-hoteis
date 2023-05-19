@@ -238,7 +238,7 @@ namespace WindowsFormsPrincipal1
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
     }
