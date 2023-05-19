@@ -77,6 +77,7 @@
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click_1);
             // 
             // buttonSalvar
             // 
@@ -94,6 +95,7 @@
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvar.UseVisualStyleBackColor = false;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click_1);
             // 
             // nomePermissaoTextBox
             // 

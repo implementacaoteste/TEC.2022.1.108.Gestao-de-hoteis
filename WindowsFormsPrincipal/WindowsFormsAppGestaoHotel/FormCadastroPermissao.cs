@@ -32,21 +32,23 @@ namespace WindowsFormsPrincipal1
             }
         }
 
-        private void buttonSalvar_Click(object sender, EventArgs e)
+        private void buttonSalvar_Click_1(object sender, EventArgs e)
         {
-            PermissaoBLL permissaoBLL = new PermissaoBLL();
-            permissaoBindingSource.EndEdit();
+            {
+                PermissaoBLL permissaoBLL = new PermissaoBLL();
+                permissaoBindingSource.EndEdit();
 
-            if (Id == 0)
-                permissaoBLL.Inserir((Permissao)permissaoBindingSource.Current);
-            else
-                permissaoBLL.Alterar((Permissao)permissaoBindingSource.Current);
+                if (Id == 0)
+                    permissaoBLL.Inserir((Permissao)permissaoBindingSource.Current);
+                else
+                    permissaoBLL.Alterar((Permissao)permissaoBindingSource.Current);
 
-            MessageBox.Show("Registro salvo com sucesso!");
-            Close();
+                MessageBox.Show("Registro salvo com sucesso!");
+                Close();
+            }
         }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click_1(object sender, EventArgs e)
         {
             Close();
         }

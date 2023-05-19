@@ -264,6 +264,7 @@
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
+            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
             this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
             this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
