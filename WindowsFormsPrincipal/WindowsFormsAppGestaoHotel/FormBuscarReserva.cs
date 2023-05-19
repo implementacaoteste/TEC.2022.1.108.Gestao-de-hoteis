@@ -21,20 +21,19 @@ namespace WindowsFormsAppGestaoHotel
             InitializeComponent();
         }
 
-        private void FormBuscarDiaria_Load(object sender, EventArgs e)
+        private void FormBuscarReserva_Load(object sender, EventArgs e)
         {
-            /*try
+            try
             {
-                radioButtonTodos.Checked = true;
-                diariaBindingSource.DataSource = new DiariaBLL().BuscarPorTodos();
+                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorTodas();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 Close();
-            }*/
+            }
         }
-        private void buttonBuscar_Click(object sender, EventArgs e)
+        private void buttonBuscarTipo_Click(object sender, EventArgs e)
         {
            /*try
            {
@@ -57,99 +56,23 @@ namespace WindowsFormsAppGestaoHotel
            {
                MessageBox.Show(ex.Message);
            }*/
-        }
-        private void buttonAdicionarDiaria_Click(object sender, EventArgs e)
+        }private void buttonBuscarIdReserva_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (FormCadastroDiaria frm = new FormCadastroDiaria())
-                {
-                    frm.ShowDialog();
-                }
-                buttonBuscar_Click(null, null);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void buttonAlterarDiaria_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (diariaBindingSource.Count <= 0)
-                {
-                    MessageBox.Show("Não há registro selecionado para ser alterado.");
-                    return;
-                }
-                else
-                {
-                    int id = ((Diaria)diariaBindingSource.Current).Id;
-                    using (FormCadastroDiaria frm = new FormCadastroDiaria(id))
-                    {
-                        frm.ShowDialog();
-                    }
-                    buttonBuscar_Click(null, null);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-        }
-        private void buttonExcluirDiaria_Click(object sender, EventArgs e)
-        {
-            if (diariaBindingSource.Count <= 0)
-            {
-                MessageBox.Show("Não existe registro para ser excluído.");
-                return;
-            }
-            if (MessageBox.Show("Deseja realmente excluir este registro?", "ATENÇÃO", MessageBoxButtons.YesNo) == DialogResult.No)
-                return;
-            int id = ((Diaria)diariaBindingSource.Current).Id;
-            new DiariaBLL().Excluir(id);
-            diariaBindingSource.RemoveCurrent();
-
-            MessageBox.Show("Registro excluído com sucesso!");
-        }
-        private void buttonExcluirQuarto_Click(object sender, EventArgs e)
-        {
-            if (quartosBindingSource.Count <= 0)
-            {
-                MessageBox.Show("Não há registro para ser excluido.");
-                return;
-            }
-            if (MessageBox.Show("Deseja realmente excluir o quarto","ATENÇÃO",MessageBoxButtons.YesNo) == DialogResult.No)
-                return;
-            int id = (((Diaria)quartosBindingSource.Current).Id);
-            new QuartoBLL().Excluir(id);
-            quartosBindingSource.RemoveCurrent();
-
-            MessageBox.Show("Registro excluido com sucesso!");
+           try
+           {
+                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorIdReserva(textBoxBuscarIdReserva.Text);
+           }
+           catch(Exception ex )
+           {
+               MessageBox.Show(ex.Message);
+           }
         }
 
-        private void FormBuscarDiaria_KeyDown(object sender, KeyEventArgs e)
+        private void FormBuscarReserva_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
                 Close();
-            }
-        }
-
-        private void buttonExcluirDiaria_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-            {
-                buttonExcluirDiaria_Click(null, null);
-            }
-        }
-
-        private void buttonExcluirQuarto_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-            {
-                buttonExcluirQuarto_Click(null, null);
             }
         }
 
