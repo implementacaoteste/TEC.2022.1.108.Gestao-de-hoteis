@@ -12,6 +12,7 @@ namespace Models
         public int Id_Hospede { get; set; }
         public int Id_Funcionario { get; set; }
         public int Id_Pagamento { get; set; }
+        public int Id_Quarto { get; set; }
         public int Qtd_Hospedes { get; set; }
         public string Nome_Hospede { get; set; }
         public string CPF_Hopesde { get; set; }
@@ -20,6 +21,7 @@ namespace Models
         public string Obs_Reserva { get; set; }
         public string Obs_Checkin { get; set; }
         public string Obs_Checkout { get; set; }
+        public string Numero_Quarto { get; set; }
         public double Valor_Total { get; set; }
         public double Valor_Entrada { get; set; }
         public DateTime Data_Ent_Reserva { get; set; }
