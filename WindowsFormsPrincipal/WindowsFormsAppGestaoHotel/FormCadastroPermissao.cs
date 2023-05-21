@@ -22,7 +22,7 @@ namespace WindowsFormsPrincipal1
                     permissaoBindingSource.AddNew();
                 else
                 {
-                    tituloLabel.Text = "Editar Grupo de Funcionário";
+                    tituloLabel.Text = "Editar Acesso";
                     permissaoBindingSource.DataSource = new PermissaoBLL().BuscarPorId(Id);
                 }
             }
