@@ -22,12 +22,15 @@ namespace Models
         public string Obs_Checkin { get; set; }
         public string Obs_Checkout { get; set; }
         public string Numero_Quarto { get; set; }
+        public string Tipo_Quarto { get; set; }
         public double Valor_Total { get; set; }
         public double Valor_Entrada { get; set; }
+        public double Valor_Restante { get; set; }
         public DateTime Data_Ent_Reserva { get; set; }
         public DateTime Data_Sai_Reserva { get; set; }
         public DateTime Data_Checkin { get; set; }
         public DateTime Data_Checkout { get; set; }
+        public DateTime Data_Reserva { get; set; }
         public List<Quarto> Quartos { get; set; }
         public Reserva()
         {
