@@ -41,11 +41,11 @@ namespace BLL
             ValidarPermissao(15);
             new ReservaDAL().CheckOut(_reserva);
         }
-        /*public Reserva BuscarPorId(int _id)
+        public Reserva BuscarPorId(int _id)
         {
             ValidarPermissao(13);
             return new ReservaDAL().BuscarPorId(_id);
-        }*/
+        }
         public Reserva BuscarPorIdReserva(int _idReserva)
         {
             ValidarPermissao(13);
