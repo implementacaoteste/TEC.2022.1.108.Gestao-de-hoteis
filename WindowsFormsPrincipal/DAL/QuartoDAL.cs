@@ -71,7 +71,6 @@ namespace DAL
             {
                 cn.Close();
             }
-
         }
         public void Excluir(int _id)
         {
@@ -108,8 +107,8 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, Q.ANDAR, Q.ID_STATUS, STATUS.STATUS
                                     FROM QUARTO Q
-                                    LEFT JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
-                                    LEFT JOIN STATUS ON STATUS.ID = Q.ID_STATUS";
+                                    INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
+                                    INNER JOIN STATUS ON STATUS.ID = Q.ID_STATUS";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -152,8 +151,8 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, Q.ANDAR, Q.ID_STATUS, STATUS.STATUS
                                     FROM QUARTO Q
-                                    LEFT JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
-                                    LEFT JOIN STATUS ON STATUS.ID = Q.ID_STATUS
+                                    INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
+                                    INNER JOIN STATUS ON STATUS.ID = Q.ID_STATUS
                                     WHERE NUMERO LIKE @Numero";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Numero", _numero);
@@ -274,9 +273,9 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE, QUARTO.DESCRICAO, QUARTO.VALOR_DIARIA, QUARTO.ANDAR, QUARTO.ID_STATUS, CLASSE.CLASSE, STATUS.STATUS FROM QUARTO
-                                    LEFT JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
-                                    LEFT JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
-                                    LEFT JOIN DIARIA_QUARTO ON QUARTO.ID = DIARIA_QUARTO.ID_QUARTO
+                                    INNER JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
+                                    INNER JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
+                                    LEFT JOIN RESERVA_QUARTO ON QUARTO.ID = RESERVA_QUARTO.ID_QUARTO
                                     WHERE QUARTO.ID = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -320,7 +319,7 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, Q.ANDAR, Q.ID_STATUS, S.STATUS
                                     FROM QUARTO Q
-                                    LEFT JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
+                                    INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
                                     INNER JOIN STATUS S ON S.ID = Q.ID_STATUS
                                     WHERE S.STATUS LIKE 'Disponível'";
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -366,7 +365,7 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE, CLASSE.CLASSE, Q.DESCRICAO, Q.VALOR_DIARIA, Q.ANDAR, Q.ID_STATUS, S.STATUS
                                     FROM QUARTO Q
-                                    LEFT JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
+                                    INNER JOIN CLASSE ON CLASSE.ID = Q.ID_CLASSE
                                     INNER JOIN STATUS S ON S.ID = Q.ID_STATUS
                                     WHERE S.STATUS LIKE @Status";
                 cmd.CommandType = System.Data.CommandType.Text;
