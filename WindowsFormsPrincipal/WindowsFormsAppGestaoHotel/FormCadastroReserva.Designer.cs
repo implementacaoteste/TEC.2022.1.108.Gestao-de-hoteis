@@ -48,18 +48,19 @@
             this.buttonSelecionarPagamento = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.id_ClienteTextBox = new System.Windows.Forms.TextBox();
+            this.id_HospedeTextBox = new System.Windows.Forms.TextBox();
             this.id_PagamentoTextBox = new System.Windows.Forms.TextBox();
-            this.data_EntradaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.data_Ent_ReservaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.data_SaidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSelecionarQuarto = new System.Windows.Forms.Button();
             this.classeTextBox = new System.Windows.Forms.TextBox();
             this.valor_DiariaTextBox = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.qtd_HospedesNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -73,7 +74,8 @@
             label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qtd_HospedesNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // data_EntradaLabel
@@ -252,14 +254,15 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonSalvar.BackColor = System.Drawing.Color.White;
+            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.save;
+            this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(363, 366);
+            this.buttonSalvar.Location = new System.Drawing.Point(342, 366);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(101, 33);
+            this.buttonSalvar.Size = new System.Drawing.Size(110, 33);
             this.buttonSalvar.TabIndex = 19;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -268,9 +271,10 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonCancelar.BackColor = System.Drawing.Color.White;
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(472, 366);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
@@ -282,16 +286,16 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // id_ClienteTextBox
+            // id_HospedeTextBox
             // 
-            this.id_ClienteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diariaBindingSource, "Nome_Cliente", true));
-            this.id_ClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.id_ClienteTextBox.Location = new System.Drawing.Point(16, 96);
-            this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.id_ClienteTextBox.Name = "id_ClienteTextBox";
-            this.id_ClienteTextBox.Size = new System.Drawing.Size(413, 26);
-            this.id_ClienteTextBox.TabIndex = 5;
+            this.id_HospedeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_HospedeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Id_Hospede", true));
+            this.id_HospedeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.id_HospedeTextBox.Location = new System.Drawing.Point(16, 96);
+            this.id_HospedeTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.id_HospedeTextBox.Name = "id_HospedeTextBox";
+            this.id_HospedeTextBox.Size = new System.Drawing.Size(413, 26);
+            this.id_HospedeTextBox.TabIndex = 5;
             // 
             // id_PagamentoTextBox
             // 
@@ -304,19 +308,19 @@
             this.id_PagamentoTextBox.Size = new System.Drawing.Size(119, 26);
             this.id_PagamentoTextBox.TabIndex = 8;
             // 
-            // data_EntradaDateTimePicker
+            // data_Ent_ReservaDateTimePicker
             // 
-            this.data_EntradaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.diariaBindingSource, "Data_Entrada", true));
-            this.data_EntradaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.data_EntradaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.data_EntradaDateTimePicker.Location = new System.Drawing.Point(342, 157);
-            this.data_EntradaDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
-            this.data_EntradaDateTimePicker.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.data_EntradaDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.data_EntradaDateTimePicker.Name = "data_EntradaDateTimePicker";
-            this.data_EntradaDateTimePicker.Size = new System.Drawing.Size(117, 26);
-            this.data_EntradaDateTimePicker.TabIndex = 14;
-            this.data_EntradaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 13, 0, 0, 0);
+            this.data_Ent_ReservaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reservaBindingSource, "Data_Ent_Reserva", true));
+            this.data_Ent_ReservaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.data_Ent_ReservaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.data_Ent_ReservaDateTimePicker.Location = new System.Drawing.Point(342, 157);
+            this.data_Ent_ReservaDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.data_Ent_ReservaDateTimePicker.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.data_Ent_ReservaDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.data_Ent_ReservaDateTimePicker.Name = "data_Ent_ReservaDateTimePicker";
+            this.data_Ent_ReservaDateTimePicker.Size = new System.Drawing.Size(117, 26);
+            this.data_Ent_ReservaDateTimePicker.TabIndex = 14;
+            this.data_Ent_ReservaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 13, 0, 0, 0);
             // 
             // data_SaidaDateTimePicker
             // 
@@ -383,14 +387,15 @@
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(117, 26);
             this.valor_DiariaTextBox.TabIndex = 24;
             // 
-            // numericUpDown1
+            // qtd_HospedesNumericUpDown
             // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(516, 95);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(80, 26);
-            this.numericUpDown1.TabIndex = 25;
+            this.qtd_HospedesNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qtd_HospedesNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reservaBindingSource, "Qtd_Hospedes", true));
+            this.qtd_HospedesNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qtd_HospedesNumericUpDown.Location = new System.Drawing.Point(516, 95);
+            this.qtd_HospedesNumericUpDown.Name = "qtd_HospedesNumericUpDown";
+            this.qtd_HospedesNumericUpDown.Size = new System.Drawing.Size(80, 26);
+            this.qtd_HospedesNumericUpDown.TabIndex = 25;
             // 
             // textBox2
             // 
@@ -412,14 +417,18 @@
             this.textBox3.Size = new System.Drawing.Size(106, 26);
             this.textBox3.TabIndex = 24;
             // 
-            // FormCadastroDiaria
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            // 
+            // FormCadastroReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(613, 410);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.qtd_HospedesNumericUpDown);
             this.Controls.Add(this.buttonSelecionarCliente);
             this.Controls.Add(label4);
             this.Controls.Add(this.textBox3);
@@ -431,10 +440,10 @@
             this.Controls.Add(this.buttonSelecionarQuarto);
             this.Controls.Add(label1);
             this.Controls.Add(this.data_SaidaDateTimePicker);
-            this.Controls.Add(this.data_EntradaDateTimePicker);
+            this.Controls.Add(this.data_Ent_ReservaDateTimePicker);
             this.Controls.Add(this.id_PagamentoTextBox);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.id_ClienteTextBox);
+            this.Controls.Add(this.id_HospedeTextBox);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonSelecionarPagamento);
@@ -454,14 +463,15 @@
             this.MaximumSize = new System.Drawing.Size(629, 449);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(629, 449);
-            this.Name = "FormCadastroDiaria";
+            this.Name = "FormCadastroReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Diaria";
-            this.Load += new System.EventHandler(this.FormCadastroDiaria_Load);
+            this.Load += new System.EventHandler(this.FormCadastroReserva_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroDiaria_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.diariaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qtd_HospedesNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,17 +486,18 @@
         private System.Windows.Forms.Button buttonSelecionarPagamento;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.TextBox id_ClienteTextBox;
+        private System.Windows.Forms.TextBox id_HospedeTextBox;
         private System.Windows.Forms.TextBox id_PagamentoTextBox;
-        private System.Windows.Forms.DateTimePicker data_EntradaDateTimePicker;
+        private System.Windows.Forms.DateTimePicker data_Ent_ReservaDateTimePicker;
         private System.Windows.Forms.DateTimePicker data_SaidaDateTimePicker;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonSelecionarQuarto;
         private System.Windows.Forms.BindingSource quartosBindingSource;
         private System.Windows.Forms.TextBox classeTextBox;
         private System.Windows.Forms.TextBox valor_DiariaTextBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown qtd_HospedesNumericUpDown;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.BindingSource reservaBindingSource;
     }
 }

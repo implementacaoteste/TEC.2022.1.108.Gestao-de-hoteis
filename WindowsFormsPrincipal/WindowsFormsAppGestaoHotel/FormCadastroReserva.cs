@@ -34,7 +34,7 @@ namespace WindowsFormsAppGestaoHotel
             Id = _id;
         }
 
-        private void FormCadastroDiaria_Load(object sender, EventArgs e)
+        private void FormCadastroReserva_Load(object sender, EventArgs e)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace WindowsFormsAppGestaoHotel
                 else
                 {
                     tituloLabel.Text = "Editar Diária";
-                    diariaBindingSource.DataSource = new DiariaBLL().BuscarPorId(Id);
+                    diariaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
                 }
             }
             catch (Exception ex)
@@ -51,32 +51,12 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
 
-            data_EntradaDateTimePicker.Value = DateTime.Now.Date;
+            data_Ent_ReservaDateTimePicker.Value = DateTime.Now.Date;
             data_SaidaDateTimePicker.Value = DateTime.Now.Date;
-            //sexoBindingSource.DataSource = new SexoBLL().BuscarPorTodos();
-            //comboBox1.Text = ((Funcionario)funcionarioBindingSource.Current).Sexo;
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void buttonSelecionarFuncionario_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using (FormConsultaFuncionario frm = new FormConsultaFuncionario())
-                {
-                    frm.ShowDialog();
-                    ((Diaria)diariaBindingSource.Current).Id_Funcionario = frm.Id;
-                    ((Diaria)diariaBindingSource.Current).Funcionario = frm.NomeUsuario;
-                    //funcionarioTextBox.Text = frm.NomeUsuario;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
         private void buttonSelecionarPagamento_Click(object sender, EventArgs e)
         {
@@ -105,7 +85,7 @@ namespace WindowsFormsAppGestaoHotel
                     frm.ShowDialog();
                     ((Diaria)diariaBindingSource.Current).Id_Cliente = frm.Id;
                     ((Diaria)diariaBindingSource.Current).Nome_Cliente = frm.NomeCliente;
-                    id_ClienteTextBox.Text = frm.NomeCliente;
+                    id_HospedeTextBox.Text = frm.NomeCliente;
                 }
             }
             catch (Exception ex)
@@ -119,23 +99,21 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                DiariaBLL diariaBLL = new DiariaBLL();
+                ReservaBLL reservaBLL = new ReservaBLL();
                 diariaBindingSource.EndEdit();
                 if (Id == 0)
-                    diariaBLL.Inserir((Diaria)diariaBindingSource.Current);
+                    reservaBLL.Inserir((Reserva)reservaBindingSource.Current);
                 else
-                    diariaBLL.Alterar((Diaria)diariaBindingSource.Current);
+                    reservaBLL.Alterar((Reserva)reservaBindingSource.Current);
                 
-                MessageBox.Show("Diaria salvo com sucesso");
+                MessageBox.Show("Reserva cadastrada com sucesso!");
                 Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
-
         private void buttonSelecionarQuarto_Click(object sender, EventArgs e)
         {
             try
