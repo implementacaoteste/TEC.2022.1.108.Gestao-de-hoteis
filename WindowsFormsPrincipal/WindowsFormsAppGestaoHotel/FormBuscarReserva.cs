@@ -47,7 +47,7 @@ namespace WindowsFormsAppGestaoHotel
                         reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckout(datePickerInicial.Value, datePickerFinal.Value);
                         break;
                     case 2:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorTodas();
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataLancamento(datePickerInicial.Value, datePickerFinal.Value);
                         break;
                     default:
                         break;
@@ -57,16 +57,17 @@ namespace WindowsFormsAppGestaoHotel
            {
                MessageBox.Show(ex.Message);
            }
-        }private void buttonBuscarIdReserva_Click(object sender, EventArgs e)
+        }
+        private void buttonBuscarIdReserva_Click(object sender, EventArgs e)
         {
-           try
+           /*try
            {
-                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorIdReserva(textBoxBuscarIdReserva.Text);
+                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorIdReserva(int);
            }
            catch(Exception ex )
            {
                MessageBox.Show(ex.Message);
-           }
+           }*/
         }
 
         private void FormBuscarReserva_KeyDown(object sender, KeyEventArgs e)

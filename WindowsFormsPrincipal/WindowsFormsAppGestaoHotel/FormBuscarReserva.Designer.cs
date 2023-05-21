@@ -29,12 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Button buttonBuscarTipo;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarReserva));
             System.Windows.Forms.Button buttonBuscarIdReserva;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarReserva));
+            System.Windows.Forms.Button buttonBuscarTipo;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDiaria = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.reservaDataGridView = new System.Windows.Forms.DataGridView();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxBuscarIdReserva = new System.Windows.Forms.TextBox();
             this.data_FinalLabel = new System.Windows.Forms.Label();
@@ -42,48 +49,22 @@
             this.datePickerFinal = new System.Windows.Forms.DateTimePicker();
             this.datePickerInicial = new System.Windows.Forms.DateTimePicker();
             this.comboBoxBuscarTipo = new System.Windows.Forms.ComboBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            buttonBuscarTipo = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeHospedeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_Quarto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroQuartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCheckinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCheckoutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data_Reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             buttonBuscarIdReserva = new System.Windows.Forms.Button();
+            buttonBuscarTipo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonBuscarTipo
-            // 
-            buttonBuscarTipo.BackColor = System.Drawing.SystemColors.Control;
-            buttonBuscarTipo.FlatAppearance.BorderSize = 0;
-            buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            buttonBuscarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            buttonBuscarTipo.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarTipo.Image")));
-            buttonBuscarTipo.Location = new System.Drawing.Point(167, 28);
-            buttonBuscarTipo.Margin = new System.Windows.Forms.Padding(2);
-            buttonBuscarTipo.Name = "buttonBuscarTipo";
-            buttonBuscarTipo.Size = new System.Drawing.Size(30, 30);
-            buttonBuscarTipo.TabIndex = 4;
-            buttonBuscarTipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            buttonBuscarTipo.UseVisualStyleBackColor = false;
-            buttonBuscarTipo.Click += new System.EventHandler(this.buttonBuscarTipo_Click);
             // 
             // buttonBuscarIdReserva
             // 
@@ -92,7 +73,7 @@
             buttonBuscarIdReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonBuscarIdReserva.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarIdReserva.Image")));
-            buttonBuscarIdReserva.Location = new System.Drawing.Point(858, 28);
+            buttonBuscarIdReserva.Location = new System.Drawing.Point(886, 21);
             buttonBuscarIdReserva.Margin = new System.Windows.Forms.Padding(2);
             buttonBuscarIdReserva.Name = "buttonBuscarIdReserva";
             buttonBuscarIdReserva.Size = new System.Drawing.Size(30, 30);
@@ -100,6 +81,22 @@
             buttonBuscarIdReserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             buttonBuscarIdReserva.UseVisualStyleBackColor = false;
             buttonBuscarIdReserva.Click += new System.EventHandler(this.buttonBuscarIdReserva_Click);
+            // 
+            // buttonBuscarTipo
+            // 
+            buttonBuscarTipo.BackColor = System.Drawing.SystemColors.Control;
+            buttonBuscarTipo.FlatAppearance.BorderSize = 0;
+            buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonBuscarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            buttonBuscarTipo.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarTipo.Image")));
+            buttonBuscarTipo.Location = new System.Drawing.Point(167, 21);
+            buttonBuscarTipo.Margin = new System.Windows.Forms.Padding(2);
+            buttonBuscarTipo.Name = "buttonBuscarTipo";
+            buttonBuscarTipo.Size = new System.Drawing.Size(30, 30);
+            buttonBuscarTipo.TabIndex = 4;
+            buttonBuscarTipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            buttonBuscarTipo.UseVisualStyleBackColor = false;
+            buttonBuscarTipo.Click += new System.EventHandler(this.buttonBuscarTipo_Click);
             // 
             // groupBoxDiaria
             // 
@@ -133,24 +130,15 @@
             this.reservaDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.reservaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.reservaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn10});
+            this.idDataGridViewTextBoxColumn,
+            this.nomeHospedeDataGridViewTextBoxColumn,
+            this.Tipo_Quarto,
+            this.numeroQuartoDataGridViewTextBoxColumn,
+            this.dataCheckinDataGridViewTextBoxColumn,
+            this.dataCheckoutDataGridViewTextBoxColumn,
+            this.Data_Reserva,
+            this.nomeFuncionarioDataGridViewTextBoxColumn,
+            this.valorTotalDataGridViewTextBoxColumn});
             this.reservaDataGridView.DataSource = this.reservaBindingSource;
             this.reservaDataGridView.Location = new System.Drawing.Point(5, 18);
             this.reservaDataGridView.Name = "reservaDataGridView";
@@ -158,6 +146,10 @@
             this.reservaDataGridView.RowHeadersVisible = false;
             this.reservaDataGridView.Size = new System.Drawing.Size(910, 268);
             this.reservaDataGridView.TabIndex = 0;
+            // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
             // 
             // groupBox2
             // 
@@ -174,7 +166,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(920, 83);
+            this.groupBox2.Size = new System.Drawing.Size(920, 68);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtrar por";
@@ -184,7 +176,7 @@
             this.textBoxBuscarIdReserva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxBuscarIdReserva.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxBuscarIdReserva.Location = new System.Drawing.Point(751, 30);
+            this.textBoxBuscarIdReserva.Location = new System.Drawing.Point(779, 23);
             this.textBoxBuscarIdReserva.Name = "textBoxBuscarIdReserva";
             this.textBoxBuscarIdReserva.Size = new System.Drawing.Size(102, 26);
             this.textBoxBuscarIdReserva.TabIndex = 8;
@@ -194,7 +186,7 @@
             // 
             this.data_FinalLabel.AutoSize = true;
             this.data_FinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.data_FinalLabel.Location = new System.Drawing.Point(486, 33);
+            this.data_FinalLabel.Location = new System.Drawing.Point(486, 26);
             this.data_FinalLabel.Name = "data_FinalLabel";
             this.data_FinalLabel.Size = new System.Drawing.Size(82, 20);
             this.data_FinalLabel.TabIndex = 7;
@@ -204,7 +196,7 @@
             // 
             this.data_InicialLabel.AutoSize = true;
             this.data_InicialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.data_InicialLabel.Location = new System.Drawing.Point(238, 33);
+            this.data_InicialLabel.Location = new System.Drawing.Point(238, 26);
             this.data_InicialLabel.Name = "data_InicialLabel";
             this.data_InicialLabel.Size = new System.Drawing.Size(88, 20);
             this.data_InicialLabel.TabIndex = 7;
@@ -214,7 +206,7 @@
             // 
             this.datePickerFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.datePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerFinal.Location = new System.Drawing.Point(574, 30);
+            this.datePickerFinal.Location = new System.Drawing.Point(574, 23);
             this.datePickerFinal.Name = "datePickerFinal";
             this.datePickerFinal.Size = new System.Drawing.Size(130, 26);
             this.datePickerFinal.TabIndex = 6;
@@ -223,7 +215,7 @@
             // 
             this.datePickerInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.datePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerInicial.Location = new System.Drawing.Point(332, 30);
+            this.datePickerInicial.Location = new System.Drawing.Point(332, 23);
             this.datePickerInicial.Name = "datePickerInicial";
             this.datePickerInicial.Size = new System.Drawing.Size(130, 26);
             this.datePickerInicial.TabIndex = 6;
@@ -236,149 +228,111 @@
             "Data Check In",
             "Data Check Out",
             "Data Lançamento"});
-            this.comboBoxBuscarTipo.Location = new System.Drawing.Point(5, 31);
+            this.comboBoxBuscarTipo.Location = new System.Drawing.Point(5, 24);
             this.comboBoxBuscarTipo.Name = "comboBoxBuscarTipo";
             this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 26);
             this.comboBoxBuscarTipo.TabIndex = 5;
             // 
-            // dataGridViewTextBoxColumn1
+            // idDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cód";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.idDataGridViewTextBoxColumn.FillWeight = 27F;
+            this.idDataGridViewTextBoxColumn.HeaderText = "Cód";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 67;
             // 
-            // dataGridViewTextBoxColumn6
+            // nomeHospedeDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Nome_Hospede";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Nome Hóspede";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.nomeHospedeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeHospedeDataGridViewTextBoxColumn.DataPropertyName = "Nome_Hospede";
+            this.nomeHospedeDataGridViewTextBoxColumn.FillWeight = 45.62093F;
+            this.nomeHospedeDataGridViewTextBoxColumn.HeaderText = "Hóspede";
+            this.nomeHospedeDataGridViewTextBoxColumn.Name = "nomeHospedeDataGridViewTextBoxColumn";
+            this.nomeHospedeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // Tipo_Quarto
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "CPF_Hopesde";
-            this.dataGridViewTextBoxColumn7.HeaderText = "CPF";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.Tipo_Quarto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Tipo_Quarto.DataPropertyName = "Tipo_Quarto";
+            this.Tipo_Quarto.FillWeight = 45.62093F;
+            this.Tipo_Quarto.HeaderText = "Tipo Quarto";
+            this.Tipo_Quarto.Name = "Tipo_Quarto";
+            this.Tipo_Quarto.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // numeroQuartoDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Qtd_Hospedes";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Qtd Hóspedes";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.numeroQuartoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numeroQuartoDataGridViewTextBoxColumn.DataPropertyName = "Numero_Quarto";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.numeroQuartoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.numeroQuartoDataGridViewTextBoxColumn.FillWeight = 30F;
+            this.numeroQuartoDataGridViewTextBoxColumn.HeaderText = "Nº Quarto";
+            this.numeroQuartoDataGridViewTextBoxColumn.Name = "numeroQuartoDataGridViewTextBoxColumn";
+            this.numeroQuartoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // dataCheckinDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nome_Funcionario";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Nome Funcionário";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataCheckinDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataCheckinDataGridViewTextBoxColumn.DataPropertyName = "Data_Checkin";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataCheckinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataCheckinDataGridViewTextBoxColumn.FillWeight = 45.62093F;
+            this.dataCheckinDataGridViewTextBoxColumn.HeaderText = "Check-In";
+            this.dataCheckinDataGridViewTextBoxColumn.Name = "dataCheckinDataGridViewTextBoxColumn";
+            this.dataCheckinDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn9
+            // dataCheckoutDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Pagamento";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Pagamento";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataCheckoutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataCheckoutDataGridViewTextBoxColumn.DataPropertyName = "Data_Checkout";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataCheckoutDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataCheckoutDataGridViewTextBoxColumn.FillWeight = 45.62093F;
+            this.dataCheckoutDataGridViewTextBoxColumn.HeaderText = "Check-Out";
+            this.dataCheckoutDataGridViewTextBoxColumn.Name = "dataCheckoutDataGridViewTextBoxColumn";
+            this.dataCheckoutDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn17
+            // Data_Reserva
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Data_Checkin";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Data Checkin";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.Data_Reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Data_Reserva.DataPropertyName = "Data_Reserva";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Data_Reserva.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Data_Reserva.FillWeight = 45.62093F;
+            this.Data_Reserva.HeaderText = "Data Reserva";
+            this.Data_Reserva.Name = "Data_Reserva";
+            this.Data_Reserva.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn18
+            // nomeFuncionarioDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Data_Checkout";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Data Checkout";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.nomeFuncionarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "Nome_Funcionario";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.FillWeight = 45.62093F;
+            this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Funcionário";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn13
+            // valorTotalDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Valor_Total";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Valor Total";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Id_Hospede";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Id_Hospede";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Id_Funcionario";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Id_Funcionario";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Id_Pagamento";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Id_Pagamento";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Data_Ent_Reserva";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Data_Ent_Reserva";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            this.dataGridViewTextBoxColumn15.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Data_Sai_Reserva";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Data_Sai_Reserva";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Valor_Entrada";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Valor_Entrada";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Obs_Checkin";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Obs_Checkin";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Obs_Checkout";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Obs_Checkout";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Obs_Reserva";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Obs_Reserva";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Visible = false;
-            // 
-            // reservaBindingSource
-            // 
-            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            this.valorTotalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.valorTotalDataGridViewTextBoxColumn.DataPropertyName = "Valor_Total";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.valorTotalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.valorTotalDataGridViewTextBoxColumn.FillWeight = 45.62093F;
+            this.valorTotalDataGridViewTextBoxColumn.HeaderText = "Valor Total";
+            this.valorTotalDataGridViewTextBoxColumn.Name = "valorTotalDataGridViewTextBoxColumn";
+            this.valorTotalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormBuscarReserva
             // 
@@ -403,9 +357,9 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormBuscarReserva_KeyDown);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,24 +375,15 @@
         private System.Windows.Forms.DateTimePicker datePickerFinal;
         private System.Windows.Forms.DateTimePicker datePickerInicial;
         private System.Windows.Forms.DataGridView reservaDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.BindingSource reservaBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeHospedeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Quarto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroQuartoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCheckinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCheckoutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data_Reserva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorTotalDataGridViewTextBoxColumn;
     }
 }
