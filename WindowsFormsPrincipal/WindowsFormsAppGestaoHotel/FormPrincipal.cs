@@ -271,6 +271,26 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void contasAPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormContaPagar frm = new FormContaPagar())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
         
