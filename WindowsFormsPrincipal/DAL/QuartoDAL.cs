@@ -400,6 +400,11 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime dataEntrada, DateTime dataSaida, string classe)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
