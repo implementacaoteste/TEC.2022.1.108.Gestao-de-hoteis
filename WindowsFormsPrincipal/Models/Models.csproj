@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classe.cs" />
+    <Compile Include="ContasPagar.cs" />
     <Compile Include="Relatorio.cs" />
     <Compile Include="Reserva.cs" />
     <Compile Include="Hospede.cs" />

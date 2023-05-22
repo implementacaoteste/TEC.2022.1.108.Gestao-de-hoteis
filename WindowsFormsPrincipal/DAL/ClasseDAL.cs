@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace DALL
 {
-    public class ClasseDAL
+    public class ContasPagarDAL
     {
         public void Inserir(Classe _classe)
         {

@@ -13,27 +13,27 @@ namespace BLL
     {
         public void Inserir(Classe _classe)
         {
-            new ClasseDAL().Inserir(_classe);
+            new ContasPagarDAL().Inserir(_classe);
         }
         public void Alterar(Classe _classe)
         {
-            new ClasseDAL().Alterar(_classe);
+            new ContasPagarDAL().Alterar(_classe);
         }
         public void Excluir(int _id)
         {
-            new ClasseDAL().Excluir(_id);
+            new ContasPagarDAL().Excluir(_id);
         }
         public List<Classe> BuscaPorTodos()
         {
-            return new ClasseDAL().BuscaPorTodos();
+            return new ContasPagarDAL().BuscaPorTodos();
         }
         public List<Classe> BuscaPorClasse(string _classe)
         {
-            return new ClasseDAL().BuscaPorClasse(_classe);
+            return new ContasPagarDAL().BuscaPorClasse(_classe);
         }
         public Classe BuscarPorId(int _id)
         {
-            return new ClasseDAL().BuscarPorId(_id);
+            return new ContasPagarDAL().BuscarPorId(_id);
         }
     }
 }
