@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ClasseBLL.cs" />
     <Compile Include="ContasPagarBLL.cs" />
+    <Compile Include="ContasPagarDLL.cs" />
     <Compile Include="HospedeBLL.cs" />
     <Compile Include="DiariaBLL.cs" />
     <Compile Include="FuncionarioBLL.cs" />

@@ -1,4 +1,5 @@
-﻿using DALL;
+﻿using DAL;
+
 using Models;
 using System;
 using System.Collections.Generic;
@@ -12,19 +13,24 @@ namespace BLL
     {
         public void Inserir(ContasPagar _contasPagar)
         {
-            new ContasPagarDLL().Inserir(_contasPagar);
+            new ContasPagarDAL().Inserir(_contasPagar);
         }
-        public void Alterar(Classe _classe)
+        public void Alterar(ContasPagar _contasPagar)
         {
-            new ClasseDAL().Alterar(_classe);
+            new ContasPagarDAL().Alterar(_contasPagar);
         }
         public void Excluir(int _id)
         {
-            new ClasseDAL().Excluir(_id);
+            new ContasPagarDAL().Excluir(_id);
         }
-        public List<Classe> BuscaPorTodos()
+        public List<ContasPagar> BuscaPorTodos()
         {
-            return new ClasseDAL().BuscaPorTodos();
-        }-
+            return new ContasPagarDAL().BuscaPorTodos();
+        }
+
+        public List<ContasPagar> BuscarPorData()
+        {
+            return new ContasPagarDAL().BuscarPorData();
+        }
     }
 }
