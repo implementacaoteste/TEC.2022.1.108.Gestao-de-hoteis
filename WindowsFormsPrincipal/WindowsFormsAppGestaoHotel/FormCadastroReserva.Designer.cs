@@ -83,7 +83,7 @@
             data_EntradaLabel.Location = new System.Drawing.Point(338, 133);
             data_EntradaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_EntradaLabel.Name = "data_EntradaLabel";
-            data_EntradaLabel.Size = new System.Drawing.Size(73, 20);
+            data_EntradaLabel.Size = new System.Drawing.Size(85, 24);
             data_EntradaLabel.TabIndex = 13;
             data_EntradaLabel.Text = "Check-In";
             // 
@@ -94,7 +94,7 @@
             data_SaidaLabel.Location = new System.Drawing.Point(472, 133);
             data_SaidaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_SaidaLabel.Name = "data_SaidaLabel";
-            data_SaidaLabel.Size = new System.Drawing.Size(85, 20);
+            data_SaidaLabel.Size = new System.Drawing.Size(100, 24);
             data_SaidaLabel.TabIndex = 15;
             data_SaidaLabel.Text = "Check-Out";
             // 
@@ -105,7 +105,7 @@
             id_clienteLabel.Location = new System.Drawing.Point(12, 72);
             id_clienteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_clienteLabel.Name = "id_clienteLabel";
-            id_clienteLabel.Size = new System.Drawing.Size(74, 20);
+            id_clienteLabel.Size = new System.Drawing.Size(88, 24);
             id_clienteLabel.TabIndex = 4;
             id_clienteLabel.Text = "Hóspede";
             // 
@@ -116,7 +116,7 @@
             id_PagamentoLabel.Location = new System.Drawing.Point(167, 196);
             id_PagamentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_PagamentoLabel.Name = "id_PagamentoLabel";
-            id_PagamentoLabel.Size = new System.Drawing.Size(103, 20);
+            id_PagamentoLabel.Size = new System.Drawing.Size(123, 24);
             id_PagamentoLabel.TabIndex = 7;
             id_PagamentoLabel.Text = "Forma PGTO";
             // 
@@ -127,7 +127,7 @@
             label1.Location = new System.Drawing.Point(12, 133);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(58, 20);
+            label1.Size = new System.Drawing.Size(67, 24);
             label1.TabIndex = 10;
             label1.Text = "Quarto";
             // 
@@ -138,7 +138,7 @@
             valor_TotalLabel.Location = new System.Drawing.Point(472, 194);
             valor_TotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             valor_TotalLabel.Name = "valor_TotalLabel";
-            valor_TotalLabel.Size = new System.Drawing.Size(85, 20);
+            valor_TotalLabel.Size = new System.Drawing.Size(100, 24);
             valor_TotalLabel.TabIndex = 17;
             valor_TotalLabel.Text = "Valor Total";
             // 
@@ -148,7 +148,7 @@
             classeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             classeLabel.Location = new System.Drawing.Point(167, 133);
             classeLabel.Name = "classeLabel";
-            classeLabel.Size = new System.Drawing.Size(92, 20);
+            classeLabel.Size = new System.Drawing.Size(110, 24);
             classeLabel.TabIndex = 21;
             classeLabel.Text = "Tipo Quarto";
             // 
@@ -158,7 +158,7 @@
             valor_DiariaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             valor_DiariaLabel.Location = new System.Drawing.Point(338, 194);
             valor_DiariaLabel.Name = "valor_DiariaLabel";
-            valor_DiariaLabel.Size = new System.Drawing.Size(91, 20);
+            valor_DiariaLabel.Size = new System.Drawing.Size(106, 24);
             valor_DiariaLabel.TabIndex = 23;
             valor_DiariaLabel.Text = "Valor Diária";
             // 
@@ -169,7 +169,7 @@
             label2.Location = new System.Drawing.Point(512, 72);
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(82, 20);
+            label2.Size = new System.Drawing.Size(97, 24);
             label2.TabIndex = 4;
             label2.Text = "Hóspedes";
             // 
@@ -180,7 +180,7 @@
             label3.Location = new System.Drawing.Point(12, 259);
             label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(94, 20);
+            label3.Size = new System.Drawing.Size(112, 24);
             label3.TabIndex = 4;
             label3.Text = "Observação";
             // 
@@ -190,7 +190,7 @@
             label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label4.Location = new System.Drawing.Point(12, 194);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(107, 20);
+            label4.Size = new System.Drawing.Size(124, 24);
             label4.TabIndex = 23;
             label4.Text = "Valor Entrada";
             // 
@@ -202,7 +202,7 @@
             this.valor_TotalTextBox.Location = new System.Drawing.Point(476, 218);
             this.valor_TotalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.valor_TotalTextBox.Name = "valor_TotalTextBox";
-            this.valor_TotalTextBox.Size = new System.Drawing.Size(120, 26);
+            this.valor_TotalTextBox.Size = new System.Drawing.Size(120, 28);
             this.valor_TotalTextBox.TabIndex = 18;
             // 
             // reservaBindingSource
@@ -217,7 +217,7 @@
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(613, 55);
+            this.tituloLabel.Size = new System.Drawing.Size(611, 55);
             this.tituloLabel.TabIndex = 0;
             this.tituloLabel.Text = "Cadastro de Reserva";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -292,7 +292,7 @@
             this.id_HospedeTextBox.Location = new System.Drawing.Point(16, 96);
             this.id_HospedeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_HospedeTextBox.Name = "id_HospedeTextBox";
-            this.id_HospedeTextBox.Size = new System.Drawing.Size(413, 26);
+            this.id_HospedeTextBox.Size = new System.Drawing.Size(413, 28);
             this.id_HospedeTextBox.TabIndex = 5;
             // 
             // id_PagamentoTextBox
@@ -303,7 +303,7 @@
             this.id_PagamentoTextBox.Location = new System.Drawing.Point(171, 218);
             this.id_PagamentoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_PagamentoTextBox.Name = "id_PagamentoTextBox";
-            this.id_PagamentoTextBox.Size = new System.Drawing.Size(119, 26);
+            this.id_PagamentoTextBox.Size = new System.Drawing.Size(119, 28);
             this.id_PagamentoTextBox.TabIndex = 8;
             // 
             // data_Ent_ReservaDateTimePicker
@@ -316,7 +316,7 @@
             this.data_Ent_ReservaDateTimePicker.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.data_Ent_ReservaDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.data_Ent_ReservaDateTimePicker.Name = "data_Ent_ReservaDateTimePicker";
-            this.data_Ent_ReservaDateTimePicker.Size = new System.Drawing.Size(117, 26);
+            this.data_Ent_ReservaDateTimePicker.Size = new System.Drawing.Size(117, 28);
             this.data_Ent_ReservaDateTimePicker.TabIndex = 14;
             this.data_Ent_ReservaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 0, 0, 0, 0);
             // 
@@ -331,7 +331,7 @@
             this.data_SaidaDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.data_SaidaDateTimePicker.Name = "data_SaidaDateTimePicker";
             this.data_SaidaDateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.data_SaidaDateTimePicker.Size = new System.Drawing.Size(120, 26);
+            this.data_SaidaDateTimePicker.Size = new System.Drawing.Size(120, 28);
             this.data_SaidaDateTimePicker.TabIndex = 16;
             this.data_SaidaDateTimePicker.Value = new System.DateTime(2023, 5, 13, 0, 0, 0, 0);
             // 
@@ -356,7 +356,7 @@
             this.tipo_QuartoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipo_QuartoTextBox.Location = new System.Drawing.Point(171, 157);
             this.tipo_QuartoTextBox.Name = "tipo_QuartoTextBox";
-            this.tipo_QuartoTextBox.Size = new System.Drawing.Size(119, 26);
+            this.tipo_QuartoTextBox.Size = new System.Drawing.Size(119, 28);
             this.tipo_QuartoTextBox.TabIndex = 22;
             // 
             // qtd_HospedesNumericUpDown
@@ -366,7 +366,7 @@
             this.qtd_HospedesNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qtd_HospedesNumericUpDown.Location = new System.Drawing.Point(516, 96);
             this.qtd_HospedesNumericUpDown.Name = "qtd_HospedesNumericUpDown";
-            this.qtd_HospedesNumericUpDown.Size = new System.Drawing.Size(80, 26);
+            this.qtd_HospedesNumericUpDown.Size = new System.Drawing.Size(80, 28);
             this.qtd_HospedesNumericUpDown.TabIndex = 25;
             // 
             // obs_ReservaTextBox
@@ -387,7 +387,7 @@
             this.valor_EntradaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.valor_EntradaTextBox.Location = new System.Drawing.Point(16, 218);
             this.valor_EntradaTextBox.Name = "valor_EntradaTextBox";
-            this.valor_EntradaTextBox.Size = new System.Drawing.Size(106, 26);
+            this.valor_EntradaTextBox.Size = new System.Drawing.Size(106, 28);
             this.valor_EntradaTextBox.TabIndex = 28;
             // 
             // numero_QuartoTextBox
@@ -396,7 +396,7 @@
             this.numero_QuartoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.numero_QuartoTextBox.Location = new System.Drawing.Point(16, 157);
             this.numero_QuartoTextBox.Name = "numero_QuartoTextBox";
-            this.numero_QuartoTextBox.Size = new System.Drawing.Size(106, 26);
+            this.numero_QuartoTextBox.Size = new System.Drawing.Size(106, 28);
             this.numero_QuartoTextBox.TabIndex = 29;
             // 
             // quartosBindingSource
@@ -410,7 +410,7 @@
             this.valor_DiariaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.valor_DiariaTextBox.Location = new System.Drawing.Point(342, 218);
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
-            this.valor_DiariaTextBox.Size = new System.Drawing.Size(117, 26);
+            this.valor_DiariaTextBox.Size = new System.Drawing.Size(117, 28);
             this.valor_DiariaTextBox.TabIndex = 30;
             // 
             // FormCadastroReserva
@@ -419,7 +419,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(613, 410);
+            this.ClientSize = new System.Drawing.Size(611, 405);
             this.Controls.Add(this.valor_DiariaTextBox);
             this.Controls.Add(this.numero_QuartoTextBox);
             this.Controls.Add(this.valor_EntradaTextBox);
