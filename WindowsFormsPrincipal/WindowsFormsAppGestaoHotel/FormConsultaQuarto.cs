@@ -16,6 +16,8 @@ namespace WindowsFormsPrincipal1
     {
         public int Id;
         public string Numero;
+        public string Tipo_Quarto;
+        public double Valor_Diaria;
 
         public FormConsultaQuarto()
         {
@@ -42,6 +44,8 @@ namespace WindowsFormsPrincipal1
                 {
                     Id = ((Quarto)quartoBindingSource.Current).Id;
                     Numero = ((Quarto)quartoBindingSource.Current).Numero;
+                    Tipo_Quarto = ((Quarto)quartoBindingSource.Current).Classe;
+                    Valor_Diaria = ((Quarto)quartoBindingSource.Current).Valor_Diaria;
                     Close();
                 }
                 else
