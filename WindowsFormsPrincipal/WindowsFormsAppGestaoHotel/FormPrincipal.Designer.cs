@@ -370,13 +370,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(900, 596);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 596);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Gestão de Hotéis";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.menuStrip.ResumeLayout(false);
