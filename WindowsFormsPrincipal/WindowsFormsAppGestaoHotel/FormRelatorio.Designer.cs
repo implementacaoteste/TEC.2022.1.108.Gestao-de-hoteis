@@ -113,7 +113,7 @@
             this.relatorioDataGridView.ReadOnly = true;
             this.relatorioDataGridView.RowHeadersWidth = 51;
             this.relatorioDataGridView.RowTemplate.Height = 24;
-            this.relatorioDataGridView.Size = new System.Drawing.Size(1304, 311);
+            this.relatorioDataGridView.Size = new System.Drawing.Size(1413, 311);
             this.relatorioDataGridView.TabIndex = 13;
             // 
             // relatorioBindingSource
@@ -179,48 +179,48 @@
             // 
             // dataGridViewTextBoxColumn10
             // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Numero_Quarto";
             this.dataGridViewTextBoxColumn10.HeaderText = "Numero Quarto";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 125;
             // 
             // dataGridViewTextBoxColumn11
             // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Valor_Total";
             this.dataGridViewTextBoxColumn11.HeaderText = "Valor Total";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 125;
             // 
             // dataGridViewTextBoxColumn12
             // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Valor_Diaria";
             this.dataGridViewTextBoxColumn12.HeaderText = "Valor Diaria";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 125;
             // 
             // dataGridViewTextBoxColumn13
             // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn13.DataPropertyName = "Data_Checkin";
             this.dataGridViewTextBoxColumn13.HeaderText = "Data Checkin";
             this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 125;
             // 
             // dataGridViewTextBoxColumn14
             // 
+            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn14.DataPropertyName = "Data_Checkout";
             this.dataGridViewTextBoxColumn14.HeaderText = "Data Checkout";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Width = 125;
             // 
             // FormRelatorio
             // 
