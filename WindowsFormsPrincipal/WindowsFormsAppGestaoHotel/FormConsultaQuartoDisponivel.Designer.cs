@@ -116,7 +116,7 @@
             // 
             this.radioButtonTodos.AutoSize = true;
             this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTodos.Location = new System.Drawing.Point(12, 98);
+            this.radioButtonTodos.Location = new System.Drawing.Point(17, 98);
             this.radioButtonTodos.Name = "radioButtonTodos";
             this.radioButtonTodos.Size = new System.Drawing.Size(71, 24);
             this.radioButtonTodos.TabIndex = 5;
@@ -129,7 +129,7 @@
             // 
             this.radioButtonPeriodo.AutoSize = true;
             this.radioButtonPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonPeriodo.Location = new System.Drawing.Point(89, 98);
+            this.radioButtonPeriodo.Location = new System.Drawing.Point(94, 98);
             this.radioButtonPeriodo.Name = "radioButtonPeriodo";
             this.radioButtonPeriodo.Size = new System.Drawing.Size(81, 24);
             this.radioButtonPeriodo.TabIndex = 6;
