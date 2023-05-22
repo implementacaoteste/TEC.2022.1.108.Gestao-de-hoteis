@@ -84,11 +84,10 @@ namespace BLL
             if (_reserva.Data_Sai_Reserva < DateTime.Now.Date)
                 throw new Exception("Data Inválida! Você não pode colocar uma data Retroativa!");
         }
-
-        /*public void SelecionarQuarto(int _idReserva, int _idQuarto)
+        public void SelecionarQuarto(int _idReserva, int _idQuarto)
         {
             if (!new ReservaDAL().ReservaPertenceQuarto(_idReserva, _idQuarto))
                 new ReservaDAL().SelecionarQuarto(_idReserva, _idQuarto);
-        }*/
+        }
     }
 }

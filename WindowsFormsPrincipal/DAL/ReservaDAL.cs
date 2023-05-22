@@ -473,5 +473,35 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public void SelecionarQuarto(int _idReserva, int _idQuarto)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO DIARIA_QUARTO(ID_DIARIA, ID_QUARTO)
+                                    VALUES(@ID_DIARIA, @ID_QUARTO)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@ID_DIARIA", _idReserva);
+                cmd.Parameters.AddWithValue("@ID_QUARTO", _idQuarto);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar vincular uma Quarto em uma diaria no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public bool ReservaPertenceQuarto(int idReserva, int idQuarto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
