@@ -39,11 +39,11 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 if (Id == 0)
-                    diariaBindingSource.AddNew();
+                    reservaBindingSource.AddNew();
                 else
                 {
-                    tituloLabel.Text = "Editar Diária";
-                    diariaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
+                    tituloLabel.Text = "Editar Reserva";
+                    reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
                 }
             }
             catch (Exception ex)
@@ -65,8 +65,8 @@ namespace WindowsFormsAppGestaoHotel
                 using (FormConsultarPagamento frm = new FormConsultarPagamento())
                 {
                     frm.ShowDialog();
-                    ((Diaria)diariaBindingSource.Current).Id_Pagamento = frm.Id;
-                    ((Diaria)diariaBindingSource.Current).Pagamento = frm.TipoPagamento;
+                    ((Reserva)reservaBindingSource.Current).Id_Pagamento = frm.Id;
+                    ((Reserva)reservaBindingSource.Current).Pagamento = frm.TipoPagamento;
                     id_PagamentoTextBox.Text = frm.TipoPagamento;
 
                 }
@@ -83,9 +83,9 @@ namespace WindowsFormsAppGestaoHotel
                 using (FormConsultaCliente frm = new FormConsultaCliente())
                 {
                     frm.ShowDialog();
-                    ((Diaria)diariaBindingSource.Current).Id_Cliente = frm.Id;
-                    ((Diaria)diariaBindingSource.Current).Nome_Cliente = frm.NomeCliente;
-                    id_HospedeTextBox.Text = frm.NomeCliente;
+                    ((Reserva)reservaBindingSource.Current).Id_Hospede = frm.Id;
+                    ((Reserva)reservaBindingSource.Current).Nome_Hospede = frm.NomeHospede;
+                    id_HospedeTextBox.Text = frm.NomeHospede;
                 }
             }
             catch (Exception ex)
@@ -100,7 +100,7 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 ReservaBLL reservaBLL = new ReservaBLL();
-                diariaBindingSource.EndEdit();
+                reservaBindingSource.EndEdit();
                 if (Id == 0)
                     reservaBLL.Inserir((Reserva)reservaBindingSource.Current);
                 else
@@ -118,16 +118,18 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                if (diariaBindingSource.Count == 0)
-                    throw new Exception("Não existe um grupo selecionado para adicionar uma permissão.");
+                if (reservaBindingSource.Count == 0)
+                    throw new Exception("Não existe nenhum Quarto selecionado para efetuar uma Reserva.");
 
                 using (FormConsultaQuarto frm = new FormConsultaQuarto())
                 {
                     frm.ShowDialog();
                     if (frm.Id != 0)
                     {
-                        int idDiaria = ((Diaria)diariaBindingSource.Current).Id;
-                        new DiariaBLL().SelecionarQuarto(idDiaria, frm.Id);
+                        ((Reserva)reservaBindingSource.Current).Quartos.Add(new Quarto() { Id = frm.Id, Numero = frm.Numero, Classe = frm.Tipo_Quarto, Valor_Diaria = frm.Valor_Diaria });
+                        numero_QuartoTextBox.Text = frm.Numero.ToString();
+                        tipo_QuartoTextBox.Text = frm.Tipo_Quarto.ToString();
+                        valor_DiariaTextBox.Text = frm.Valor_Diaria.ToString();
                     }
                 }
             }
@@ -136,35 +138,11 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void FormCadastroDiaria_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
                 buttonCancelar_Click(null, null);
-            }
-        }
-
-        private void buttonSelecionarQuarto_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                if (diariaBindingSource.Count == 0)
-                    throw new Exception("Não existe um grupo selecionado para adicionar uma permissão.");
-
-                using (FormConsultaQuarto frm = new FormConsultaQuarto())
-                {
-                    frm.ShowDialog();
-                    if (frm.Id != 0)
-                    {
-                        ((Diaria)diariaBindingSource.Current).Quartos.Add(new Quarto() { Id = frm.Id, Numero = frm.Numero});
-                        textBox1.Text = frm.Numero.ToString();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
     }

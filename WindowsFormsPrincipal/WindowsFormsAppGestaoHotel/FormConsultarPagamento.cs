@@ -44,11 +44,11 @@ namespace WindowsFormsAppGestaoHotel
                 if (pagamentoBindingSource.Count > 0)
                 { 
                     Id = ((Pagamento)pagamentoBindingSource.Current).Id;
-                TipoPagamento = ((Pagamento)pagamentoBindingSource.Current).Forma_pagamento;
+                    TipoPagamento = ((Pagamento)pagamentoBindingSource.Current).Forma_pagamento;
                 Close();
                 }
                 else
-                    MessageBox.Show("Não existe registro para ser Selecionador");
+                    MessageBox.Show("Não existe registro para ser selecionado!");
             }
             catch(Exception ex)
             {
