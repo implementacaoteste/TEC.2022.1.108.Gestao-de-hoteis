@@ -33,8 +33,8 @@ namespace WindowsFormsPrincipal1
                         Application.Exit();
                     }
                 }
-                textBoxNomeUsuario.Text = Constante.NomeUsuario;
-                textBoxCargo.Text = Constante.Cargo;
+                labelNomeFuncionario.Text = Constante.NomeUsuario;
+                labelCargoFuncionario.Text = Constante.Cargo;
             }
             catch (Exception ex)
             {
@@ -118,20 +118,20 @@ namespace WindowsFormsPrincipal1
                 pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
                 pictureBoxCaixaLogin2.Visible = false;
-                textBoxNomeUsuario.Visible = false;
+                labelNomeFuncionario.Visible = false;
                 pictureBoxUsu2.Visible = false;
                 pictureBoxfundo.Visible = false;
-                textBoxCargo.Visible = false;
+                labelCargoFuncionario.Visible = false;
             }
             else
             {
                 pictureBoxSair.Visible = true;
                 pictureBoxCaixaLogin.Visible = true;
                 pictureBoxCaixaLogin2.Visible = true;
-                textBoxNomeUsuario.Visible = true;
+                labelNomeFuncionario.Visible = true;
                 pictureBoxUsu2.Visible = true;
                 pictureBoxfundo.Visible = true;
-                textBoxCargo.Visible = true;
+                labelCargoFuncionario.Visible = true;
             }
 
         }
@@ -168,20 +168,20 @@ namespace WindowsFormsPrincipal1
                 pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
                 pictureBoxCaixaLogin2.Visible = false;
-                textBoxNomeUsuario.Visible = false;
+                labelNomeFuncionario.Visible = false;
                 pictureBoxUsu2.Visible = false;
                 pictureBoxfundo.Visible = false;
-                textBoxCargo.Visible = false;
+                labelCargoFuncionario.Visible = false;
             }
             else
             {
                 pictureBoxSair.Visible = true;
                 pictureBoxCaixaLogin.Visible = true;
                 pictureBoxCaixaLogin2.Visible = true;
-                textBoxNomeUsuario.Visible = true;
+                labelNomeFuncionario.Visible = true;
                 pictureBoxUsu2.Visible = true;
                 pictureBoxfundo.Visible = true;
-                textBoxCargo.Visible = true;
+                labelCargoFuncionario.Visible = true;
             }
         }
 
@@ -199,9 +199,9 @@ namespace WindowsFormsPrincipal1
 
         private void reservasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
-                using (FormBuscarDiaria frm = new FormBuscarDiaria())
+                using (FormReserva frm = new FormReserva())
                 {
                     frm.ShowDialog();
                 }
@@ -209,7 +209,7 @@ namespace WindowsFormsPrincipal1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
+            }
         }
 
         private void filtrarReservasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -232,6 +232,36 @@ namespace WindowsFormsPrincipal1
             try
             {
                 using (FormRelatorio frm = new FormRelatorio())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void quartosDisponíveisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormConsultaQuartoDisponivel frm = new FormConsultaQuartoDisponivel())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void acessosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormBuscarPermissao frm = new FormBuscarPermissao())
                 {
                     frm.ShowDialog();
                 }

@@ -15,7 +15,7 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormConsultaCliente : Form
     {
         public int Id;
-        public string NomeCliente;
+        public string NomeHospede;
         public FormConsultaCliente()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                clienteBindingSource.DataSource = new HospedeBLL().BuscaPorTodos();
+                hospedeBindingSource.DataSource = new HospedeBLL().BuscaPorTodos();
             }
             catch (Exception ex)
             {
@@ -41,14 +41,14 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                if (clienteBindingSource.Count > 0)
+                if (hospedeBindingSource.Count > 0)
                 {
-                    Id = ((Hospede)clienteBindingSource.Current).Id;
-                    NomeCliente = ((Hospede)clienteBindingSource.Current).Nome;
+                    Id = ((Hospede)hospedeBindingSource.Current).Id;
+                    NomeHospede = ((Hospede)hospedeBindingSource.Current).Nome;
                     Close();
-                        }
+                }
                 else
-                    MessageBox.Show("Não existe registro para ser Selecionado");
+                    MessageBox.Show("Não existe registro para ser Selecionado!");
             }
             catch (Exception ex)
             {

@@ -47,8 +47,6 @@
             this.contasAReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBoxNomeUsuario = new System.Windows.Forms.TextBox();
-            this.textBoxCargo = new System.Windows.Forms.TextBox();
             this.pictureBoxSair = new System.Windows.Forms.PictureBox();
             this.pictureBoxfundo = new System.Windows.Forms.PictureBox();
             this.pictureBoxUsu2 = new System.Windows.Forms.PictureBox();
@@ -56,6 +54,8 @@
             this.pictureBoxUsu1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
+            this.labelCargoFuncionario = new System.Windows.Forms.Label();
+            this.labelNomeFuncionario = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfundo)).BeginInit();
@@ -79,8 +79,8 @@
             this.sobreToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(1176, 33);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(884, 28);
             this.menuStrip.Stretch = false;
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
@@ -93,14 +93,14 @@
             this.funcionarioToolStripMenuItem});
             this.cadastroToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cadastroToolStripMenuItem.Image")));
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(120, 29);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.cadastroToolStripMenuItem.Text = "Pessoas";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(276, 30);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
             this.clienteToolStripMenuItem.Text = "Hóspedes";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
@@ -108,7 +108,7 @@
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(276, 30);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
             this.funcionarioToolStripMenuItem.Text = "Funcionários";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
@@ -122,21 +122,21 @@
             this.acessosToolStripMenuItem});
             this.consultaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaToolStripMenuItem.Image")));
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(134, 29);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.consultaToolStripMenuItem.Text = "Cadastros";
             // 
             // tipoDeQuartoToolStripMenuItem
             // 
             this.tipoDeQuartoToolStripMenuItem.Name = "tipoDeQuartoToolStripMenuItem";
             this.tipoDeQuartoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.tipoDeQuartoToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
+            this.tipoDeQuartoToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.tipoDeQuartoToolStripMenuItem.Text = "Tipo de Quarto";
             // 
             // quartoToolStripMenuItem
             // 
             this.quartoToolStripMenuItem.Name = "quartoToolStripMenuItem";
             this.quartoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.quartoToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
+            this.quartoToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.quartoToolStripMenuItem.Text = "Quartos";
             this.quartoToolStripMenuItem.Click += new System.EventHandler(this.quartoToolStripMenuItem_Click);
             // 
@@ -144,7 +144,7 @@
             // 
             this.grupoFuncionarioToolStripMenuItem.Name = "grupoFuncionarioToolStripMenuItem";
             this.grupoFuncionarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.grupoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
+            this.grupoFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.grupoFuncionarioToolStripMenuItem.Text = "Cargos";
             this.grupoFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.grupoFuncionarioToolStripMenuItem_Click);
             // 
@@ -152,8 +152,9 @@
             // 
             this.acessosToolStripMenuItem.Name = "acessosToolStripMenuItem";
             this.acessosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.acessosToolStripMenuItem.Size = new System.Drawing.Size(296, 30);
+            this.acessosToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.acessosToolStripMenuItem.Text = "Acessos";
+            this.acessosToolStripMenuItem.Click += new System.EventHandler(this.acessosToolStripMenuItem_Click);
             // 
             // reservasToolStripMenuItem
             // 
@@ -164,21 +165,21 @@
             this.quartosDisponíveisToolStripMenuItem});
             this.reservasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reservasToolStripMenuItem.Image")));
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(126, 29);
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.reservasToolStripMenuItem.Text = "Reservas";
             // 
             // reservasToolStripMenuItem1
             // 
             this.reservasToolStripMenuItem1.Name = "reservasToolStripMenuItem1";
             this.reservasToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(394, 30);
+            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(315, 24);
             this.reservasToolStripMenuItem1.Text = "Reservas";
             this.reservasToolStripMenuItem1.Click += new System.EventHandler(this.reservasToolStripMenuItem1_Click);
             // 
             // filtrarReservasToolStripMenuItem
             // 
             this.filtrarReservasToolStripMenuItem.Name = "filtrarReservasToolStripMenuItem";
-            this.filtrarReservasToolStripMenuItem.Size = new System.Drawing.Size(394, 30);
+            this.filtrarReservasToolStripMenuItem.Size = new System.Drawing.Size(315, 24);
             this.filtrarReservasToolStripMenuItem.Text = "Filtrar Reservas";
             this.filtrarReservasToolStripMenuItem.Click += new System.EventHandler(this.filtrarReservasToolStripMenuItem_Click);
             // 
@@ -187,8 +188,9 @@
             this.quartosDisponíveisToolStripMenuItem.Name = "quartosDisponíveisToolStripMenuItem";
             this.quartosDisponíveisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.Q)));
-            this.quartosDisponíveisToolStripMenuItem.Size = new System.Drawing.Size(394, 30);
+            this.quartosDisponíveisToolStripMenuItem.Size = new System.Drawing.Size(315, 24);
             this.quartosDisponíveisToolStripMenuItem.Text = "Quartos Disponíveis";
+            this.quartosDisponíveisToolStripMenuItem.Click += new System.EventHandler(this.quartosDisponíveisToolStripMenuItem_Click);
             // 
             // financeiroToolStripMenuItem
             // 
@@ -199,14 +201,14 @@
             this.relatóriosToolStripMenuItem});
             this.financeiroToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("financeiroToolStripMenuItem.Image")));
             this.financeiroToolStripMenuItem.Name = "financeiroToolStripMenuItem";
-            this.financeiroToolStripMenuItem.Size = new System.Drawing.Size(135, 29);
+            this.financeiroToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.financeiroToolStripMenuItem.Text = "Financeiro";
             // 
             // contasAPagarToolStripMenuItem
             // 
             this.contasAPagarToolStripMenuItem.Name = "contasAPagarToolStripMenuItem";
             this.contasAPagarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(372, 30);
+            this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(301, 24);
             this.contasAPagarToolStripMenuItem.Text = "Contas a Pagar";
             // 
             // contasAReceberToolStripMenuItem
@@ -214,7 +216,7 @@
             this.contasAReceberToolStripMenuItem.Name = "contasAReceberToolStripMenuItem";
             this.contasAReceberToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.F)));
-            this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(372, 30);
+            this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(301, 24);
             this.contasAReceberToolStripMenuItem.Text = "Contas a Receber";
             // 
             // relatóriosToolStripMenuItem
@@ -222,7 +224,7 @@
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.R)));
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(372, 30);
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(301, 24);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
             this.relatóriosToolStripMenuItem.Click += new System.EventHandler(this.relatóriosToolStripMenuItem_Click);
             // 
@@ -232,46 +234,19 @@
             this.sobreToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sobreToolStripMenuItem.Image")));
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
-            // 
-            // textBoxNomeUsuario
-            // 
-            this.textBoxNomeUsuario.BackColor = System.Drawing.Color.PowderBlue;
-            this.textBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeUsuario.Location = new System.Drawing.Point(997, 114);
-            this.textBoxNomeUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNomeUsuario.Multiline = true;
-            this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
-            this.textBoxNomeUsuario.ReadOnly = true;
-            this.textBoxNomeUsuario.Size = new System.Drawing.Size(169, 63);
-            this.textBoxNomeUsuario.TabIndex = 1;
-            this.textBoxNomeUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxNomeUsuario.Visible = false;
-            // 
-            // textBoxCargo
-            // 
-            this.textBoxCargo.BackColor = System.Drawing.Color.PowderBlue;
-            this.textBoxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCargo.Location = new System.Drawing.Point(997, 183);
-            this.textBoxCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxCargo.Multiline = true;
-            this.textBoxCargo.Name = "textBoxCargo";
-            this.textBoxCargo.ReadOnly = true;
-            this.textBoxCargo.Size = new System.Drawing.Size(169, 30);
-            this.textBoxCargo.TabIndex = 2;
-            this.textBoxCargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxCargo.Visible = false;
             // 
             // pictureBoxSair
             // 
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
+            this.pictureBoxSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
-            this.pictureBoxSair.Location = new System.Drawing.Point(1063, 224);
-            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxSair.Location = new System.Drawing.Point(797, 182);
+            this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSair.Name = "pictureBoxSair";
-            this.pictureBoxSair.Size = new System.Drawing.Size(40, 37);
+            this.pictureBoxSair.Size = new System.Drawing.Size(30, 30);
             this.pictureBoxSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSair.TabIndex = 14;
             this.pictureBoxSair.TabStop = false;
@@ -281,10 +256,9 @@
             // pictureBoxfundo
             // 
             this.pictureBoxfundo.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxfundo.Location = new System.Drawing.Point(1060, 222);
-            this.pictureBoxfundo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxfundo.Location = new System.Drawing.Point(795, 180);
             this.pictureBoxfundo.Name = "pictureBoxfundo";
-            this.pictureBoxfundo.Size = new System.Drawing.Size(45, 42);
+            this.pictureBoxfundo.Size = new System.Drawing.Size(34, 34);
             this.pictureBoxfundo.TabIndex = 16;
             this.pictureBoxfundo.TabStop = false;
             this.pictureBoxfundo.Visible = false;
@@ -294,10 +268,10 @@
             this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
-            this.pictureBoxUsu2.Location = new System.Drawing.Point(1049, 49);
-            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxUsu2.Location = new System.Drawing.Point(787, 40);
+            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
-            this.pictureBoxUsu2.Size = new System.Drawing.Size(67, 62);
+            this.pictureBoxUsu2.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxUsu2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsu2.TabIndex = 15;
             this.pictureBoxUsu2.TabStop = false;
@@ -309,10 +283,9 @@
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(353, 49);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(265, 40);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(467, 431);
+            this.pictureBox1.Size = new System.Drawing.Size(350, 350);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -322,10 +295,10 @@
             this.pictureBoxUsu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
-            this.pictureBoxUsu1.Location = new System.Drawing.Point(1049, 49);
-            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxUsu1.Location = new System.Drawing.Point(787, 40);
+            this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
-            this.pictureBoxUsu1.Size = new System.Drawing.Size(67, 62);
+            this.pictureBoxUsu1.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxUsu1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsu1.TabIndex = 15;
             this.pictureBoxUsu1.TabStop = false;
@@ -335,10 +308,9 @@
             // pictureBoxCaixaLogin
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(995, 44);
-            this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(746, 36);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
-            this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(176, 225);
+            this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(132, 183);
             this.pictureBoxCaixaLogin.TabIndex = 8;
             this.pictureBoxCaixaLogin.TabStop = false;
             this.pictureBoxCaixaLogin.Visible = false;
@@ -346,25 +318,49 @@
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(992, 42);
-            this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(744, 34);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
-            this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(181, 230);
+            this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(136, 187);
             this.pictureBoxCaixaLogin2.TabIndex = 7;
             this.pictureBoxCaixaLogin2.TabStop = false;
             this.pictureBoxCaixaLogin2.Visible = false;
             // 
+            // labelCargoFuncionario
+            // 
+            this.labelCargoFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(203)))), ((int)(((byte)(254)))));
+            this.labelCargoFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelCargoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.labelCargoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCargoFuncionario.Location = new System.Drawing.Point(748, 149);
+            this.labelCargoFuncionario.Name = "labelCargoFuncionario";
+            this.labelCargoFuncionario.Size = new System.Drawing.Size(128, 25);
+            this.labelCargoFuncionario.TabIndex = 17;
+            this.labelCargoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCargoFuncionario.Visible = false;
+            // 
+            // labelNomeFuncionario
+            // 
+            this.labelNomeFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(203)))), ((int)(((byte)(254)))));
+            this.labelNomeFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNomeFuncionario.Location = new System.Drawing.Point(748, 94);
+            this.labelNomeFuncionario.Name = "labelNomeFuncionario";
+            this.labelNomeFuncionario.Size = new System.Drawing.Size(128, 48);
+            this.labelNomeFuncionario.TabIndex = 18;
+            this.labelNomeFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNomeFuncionario.Visible = false;
+            // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(1176, 679);
-            this.Controls.Add(this.textBoxCargo);
+            this.ClientSize = new System.Drawing.Size(884, 557);
+            this.Controls.Add(this.labelNomeFuncionario);
+            this.Controls.Add(this.labelCargoFuncionario);
             this.Controls.Add(this.pictureBoxSair);
             this.Controls.Add(this.pictureBoxfundo);
-            this.Controls.Add(this.textBoxNomeUsuario);
             this.Controls.Add(this.pictureBoxUsu2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip);
@@ -373,11 +369,11 @@
             this.Controls.Add(this.pictureBoxUsu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1194, 726);
+            this.MaximumSize = new System.Drawing.Size(900, 596);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1194, 726);
+            this.MinimumSize = new System.Drawing.Size(900, 596);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Gestão de Hotéis";
@@ -415,12 +411,10 @@
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin2;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin;
-        private System.Windows.Forms.TextBox textBoxNomeUsuario;
         private System.Windows.Forms.PictureBox pictureBoxSair;
         private System.Windows.Forms.PictureBox pictureBoxUsu2;
         private System.Windows.Forms.PictureBox pictureBoxfundo;
         private System.Windows.Forms.PictureBox pictureBoxUsu1;
-        private System.Windows.Forms.TextBox textBoxCargo;
         private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem quartosDisponíveisToolStripMenuItem;
@@ -431,5 +425,7 @@
         private System.Windows.Forms.ToolStripMenuItem tipoDeQuartoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filtrarReservasToolStripMenuItem;
+        private System.Windows.Forms.Label labelCargoFuncionario;
+        private System.Windows.Forms.Label labelNomeFuncionario;
     }
 }

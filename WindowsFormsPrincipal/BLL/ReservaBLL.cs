@@ -41,12 +41,12 @@ namespace BLL
             ValidarPermissao(15);
             new ReservaDAL().CheckOut(_reserva);
         }
-        /*public Reserva BuscarPorId(int _id)
+        public Reserva BuscarPorId(int _id)
         {
             ValidarPermissao(13);
             return new ReservaDAL().BuscarPorId(_id);
-        }*/
-        public Reserva BuscarPorIdReserva(string _idReserva)
+        }
+        public Reserva BuscarPorIdReserva(int _idReserva)
         {
             ValidarPermissao(13);
             return new ReservaDAL().BuscarPorIdReserva(_idReserva);
@@ -66,10 +66,10 @@ namespace BLL
             ValidarPermissao(13);
             return new ReservaDAL().BuscarPorDataCheckout(_dataInicial, _dataFinal);
         }
-        public List<Reserva> BuscarPorDataLancamento(string _dataLancamento)
+        public List<Reserva> BuscarPorDataLancamento(DateTime _dataInicial, DateTime _dataFinal)
         {
             ValidarPermissao(13);
-            return new ReservaDAL().BuscarPorDataLancamento(_dataLancamento);
+            return new ReservaDAL().BuscarPorDataLancamento(_dataInicial, _dataFinal);
         }
         public void ValidarPermissao(int _idPermissao)
         {
@@ -84,11 +84,10 @@ namespace BLL
             if (_reserva.Data_Sai_Reserva < DateTime.Now.Date)
                 throw new Exception("Data Inválida! Você não pode colocar uma data Retroativa!");
         }
-
-        /*public void SelecionarQuarto(int _idReserva, int _idQuarto)
+        public void SelecionarQuarto(int _idReserva, int _idQuarto)
         {
             if (!new ReservaDAL().ReservaPertenceQuarto(_idReserva, _idQuarto))
                 new ReservaDAL().SelecionarQuarto(_idReserva, _idQuarto);
-        }*/
+        }
     }
 }

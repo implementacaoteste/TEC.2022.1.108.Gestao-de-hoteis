@@ -40,6 +40,10 @@ namespace BLL
         {
             return new QuartoDAL().BuscarPorQuartoDisponivel();
         }
+        public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime _dataEntrada, DateTime _dataSaida,  string _classe)
+        {
+            return new QuartoDAL().BuscarQuartoDisponivelPorPeriodo(_dataEntrada,_dataSaida,_classe);
+        }
         public List<Quarto> BuscarPorStatus(string _status)
         {
             ValidarPermissao(17);
