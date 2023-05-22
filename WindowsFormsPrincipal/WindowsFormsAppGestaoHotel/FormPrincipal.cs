@@ -33,8 +33,8 @@ namespace WindowsFormsPrincipal1
                         Application.Exit();
                     }
                 }
-                textBoxNomeUsuario.Text = Constante.NomeUsuario;
-                textBoxCargo.Text = Constante.Cargo;
+                labelNomeFuncionario.Text = Constante.NomeUsuario;
+                labelCargoFuncionario.Text = Constante.Cargo;
             }
             catch (Exception ex)
             {
@@ -118,20 +118,20 @@ namespace WindowsFormsPrincipal1
                 pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
                 pictureBoxCaixaLogin2.Visible = false;
-                textBoxNomeUsuario.Visible = false;
+                labelNomeFuncionario.Visible = false;
                 pictureBoxUsu2.Visible = false;
                 pictureBoxfundo.Visible = false;
-                textBoxCargo.Visible = false;
+                labelCargoFuncionario.Visible = false;
             }
             else
             {
                 pictureBoxSair.Visible = true;
                 pictureBoxCaixaLogin.Visible = true;
                 pictureBoxCaixaLogin2.Visible = true;
-                textBoxNomeUsuario.Visible = true;
+                labelNomeFuncionario.Visible = true;
                 pictureBoxUsu2.Visible = true;
                 pictureBoxfundo.Visible = true;
-                textBoxCargo.Visible = true;
+                labelCargoFuncionario.Visible = true;
             }
 
         }
@@ -168,20 +168,20 @@ namespace WindowsFormsPrincipal1
                 pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
                 pictureBoxCaixaLogin2.Visible = false;
-                textBoxNomeUsuario.Visible = false;
+                labelNomeFuncionario.Visible = false;
                 pictureBoxUsu2.Visible = false;
                 pictureBoxfundo.Visible = false;
-                textBoxCargo.Visible = false;
+                labelCargoFuncionario.Visible = false;
             }
             else
             {
                 pictureBoxSair.Visible = true;
                 pictureBoxCaixaLogin.Visible = true;
                 pictureBoxCaixaLogin2.Visible = true;
-                textBoxNomeUsuario.Visible = true;
+                labelNomeFuncionario.Visible = true;
                 pictureBoxUsu2.Visible = true;
                 pictureBoxfundo.Visible = true;
-                textBoxCargo.Visible = true;
+                labelCargoFuncionario.Visible = true;
             }
         }
 
