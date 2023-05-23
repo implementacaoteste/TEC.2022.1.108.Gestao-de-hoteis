@@ -368,11 +368,6 @@
             this.qtd_HospedesNumericUpDown.Name = "qtd_HospedesNumericUpDown";
             this.qtd_HospedesNumericUpDown.Size = new System.Drawing.Size(80, 26);
             this.qtd_HospedesNumericUpDown.TabIndex = 25;
-            this.qtd_HospedesNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // obs_ReservaTextBox
             // 
