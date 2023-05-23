@@ -286,6 +286,21 @@ namespace WindowsFormsPrincipal1
             labelNomeFuncionario.Location = new Point((this.ClientSize.Width - labelNomeFuncionario.Width) - 7,95);
             labelCargoFuncionario.Location = new Point((this.ClientSize.Width - labelNomeFuncionario.Width) - 7, 150);
         }
+
+        private void contasAPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormContaPagar frm = new FormContaPagar())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
         
