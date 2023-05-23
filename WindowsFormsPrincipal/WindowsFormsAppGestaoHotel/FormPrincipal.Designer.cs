@@ -80,7 +80,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(1478, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1424, 28);
             this.menuStrip.Stretch = false;
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
@@ -243,7 +243,7 @@
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
             this.pictureBoxSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
-            this.pictureBoxSair.Location = new System.Drawing.Point(1363, 215);
+            this.pictureBoxSair.Location = new System.Drawing.Point(1310, 212);
             this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxSair.Name = "pictureBoxSair";
             this.pictureBoxSair.Size = new System.Drawing.Size(40, 37);
@@ -256,7 +256,7 @@
             // pictureBoxfundo
             // 
             this.pictureBoxfundo.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxfundo.Location = new System.Drawing.Point(1360, 213);
+            this.pictureBoxfundo.Location = new System.Drawing.Point(1307, 210);
             this.pictureBoxfundo.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxfundo.Name = "pictureBoxfundo";
             this.pictureBoxfundo.Size = new System.Drawing.Size(45, 42);
@@ -269,7 +269,7 @@
             this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
-            this.pictureBoxUsu2.Location = new System.Drawing.Point(1349, 40);
+            this.pictureBoxUsu2.Location = new System.Drawing.Point(1296, 37);
             this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
             this.pictureBoxUsu2.Size = new System.Drawing.Size(67, 62);
@@ -284,11 +284,11 @@
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(411, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(523, 32);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(563, 538);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(470, 450);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(563, 538);
+            this.pictureBox1.Size = new System.Drawing.Size(470, 450);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -298,7 +298,7 @@
             this.pictureBoxUsu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
-            this.pictureBoxUsu1.Location = new System.Drawing.Point(1349, 40);
+            this.pictureBoxUsu1.Location = new System.Drawing.Point(1296, 37);
             this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
             this.pictureBoxUsu1.Size = new System.Drawing.Size(67, 62);
@@ -311,7 +311,7 @@
             // pictureBoxCaixaLogin
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(1295, 35);
+            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(1242, 32);
             this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
             this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(176, 225);
@@ -322,7 +322,7 @@
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(1292, 33);
+            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(1239, 30);
             this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
             this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(181, 230);
@@ -336,7 +336,7 @@
             this.labelCargoFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelCargoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.labelCargoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCargoFuncionario.Location = new System.Drawing.Point(1297, 174);
+            this.labelCargoFuncionario.Location = new System.Drawing.Point(1244, 171);
             this.labelCargoFuncionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCargoFuncionario.Name = "labelCargoFuncionario";
             this.labelCargoFuncionario.Size = new System.Drawing.Size(171, 31);
@@ -349,7 +349,7 @@
             this.labelNomeFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(203)))), ((int)(((byte)(254)))));
             this.labelNomeFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNomeFuncionario.Location = new System.Drawing.Point(1297, 107);
+            this.labelNomeFuncionario.Location = new System.Drawing.Point(1244, 104);
             this.labelNomeFuncionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNomeFuncionario.Name = "labelNomeFuncionario";
             this.labelNomeFuncionario.Size = new System.Drawing.Size(171, 59);
@@ -363,7 +363,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(1478, 869);
+            this.ClientSize = new System.Drawing.Size(1424, 861);
             this.Controls.Add(this.labelNomeFuncionario);
             this.Controls.Add(this.labelCargoFuncionario);
             this.Controls.Add(this.pictureBoxSair);

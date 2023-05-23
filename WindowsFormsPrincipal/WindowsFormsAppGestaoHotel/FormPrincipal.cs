@@ -41,6 +41,7 @@ namespace WindowsFormsPrincipal1
             {
                 MessageBox.Show(ex.Message);
             }
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
         }
 
@@ -276,6 +277,14 @@ namespace WindowsFormsPrincipal1
         private void FormPrincipal_Resize(object sender, EventArgs e)
         {
             pictureBox1.Location = new Point(((this.ClientSize.Width - pictureBox1.Width) / 2),(40));
+            pictureBoxUsu1.Location = new Point((this.ClientSize.Width - pictureBoxUsu1.Width) - 46, 38);
+            pictureBoxUsu2.Location = new Point((this.ClientSize.Width - pictureBoxUsu2.Width) - 46,38);
+            pictureBoxSair.Location = new Point((this.ClientSize.Width - pictureBoxSair.Width)-55, 182);
+            pictureBoxfundo.Location = new Point((this.ClientSize.Width - pictureBoxSair.Width) - 57, 180);
+            pictureBoxCaixaLogin.Location = new Point((this.ClientSize.Width - pictureBoxCaixaLogin.Width) - 5, 35);
+            pictureBoxCaixaLogin2.Location = new Point((this.ClientSize.Width - pictureBoxCaixaLogin.Width) - 7, 33);
+            labelNomeFuncionario.Location = new Point((this.ClientSize.Width - labelNomeFuncionario.Width) - 7,95);
+            labelCargoFuncionario.Location = new Point((this.ClientSize.Width - labelNomeFuncionario.Width) - 7, 150);
         }
     }
 }
