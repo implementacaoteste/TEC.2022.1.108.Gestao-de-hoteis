@@ -12,8 +12,10 @@ namespace Models
         public int Id_Cliente { get; set; }
         public int Id_Funcionario { get; set; }
         public string Descricao { get; set; }
-        public float Valor { get; set; }
+        public double Valor { get; set; }
         public DateTime  Data_Vencimento { get; set; }
         public bool Pagar { get; set; }
+        public string Nome_Hospede { get; set; }
+        public string Nome_funcionario { get; set; }
     }
 }

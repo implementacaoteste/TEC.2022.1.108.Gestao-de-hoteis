@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultaContasPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaContasPagar.Designer.cs">
+      <DependentUpon>ConsultaContasPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConsultaContasPagar.resx">
+      <DependentUpon>ConsultaContasPagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarCliente.resx">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +327,7 @@
     <None Include="Properties\DataSources\Models.Classe.datasource" />
     <None Include="Properties\DataSources\Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Models.Constante.datasource" />
+    <None Include="Properties\DataSources\Models.ContasPagar.datasource" />
     <None Include="Properties\DataSources\Models.Diaria.datasource" />
     <None Include="Properties\DataSources\Models.Funcionario.datasource" />
     <None Include="Properties\DataSources\Models.GrupoFuncionario.datasource" />
