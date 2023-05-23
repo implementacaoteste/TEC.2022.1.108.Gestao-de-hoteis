@@ -35,6 +35,8 @@ namespace WindowsFormsPrincipal1
                 }
                 labelNomeFuncionario.Text = Constante.NomeUsuario;
                 labelCargoFuncionario.Text = Constante.Cargo;
+                label1.Text = Convert.ToString(this.ClientSize.Width);
+                label2.Text = Convert.ToString(this.ClientSize.Height);
                 this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             }
             catch (Exception ex)
@@ -271,6 +273,11 @@ namespace WindowsFormsPrincipal1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FormPrincipal_Resize(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(((this.ClientSize.Width - pictureBox1.Width) / 2),(40));
         }
     }
 }
