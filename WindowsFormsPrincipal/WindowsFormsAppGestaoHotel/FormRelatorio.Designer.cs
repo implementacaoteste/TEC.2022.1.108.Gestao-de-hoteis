@@ -49,6 +49,8 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.relatorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxBuscar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.relatorioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.relatorioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,16 +60,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(478, 9);
+            this.label1.Location = new System.Drawing.Point(358, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(484, 46);
+            this.label1.Size = new System.Drawing.Size(452, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Relatório de Hospedagem";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 166);
+            this.label2.Location = new System.Drawing.Point(9, 135);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 7;
@@ -76,16 +80,18 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(97, 121);
+            this.dateTimePicker1.Location = new System.Drawing.Point(73, 98);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 9;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(303, 120);
+            this.buttonBuscar.Location = new System.Drawing.Point(227, 98);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(56, 19);
             this.buttonBuscar.TabIndex = 10;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -110,31 +116,17 @@
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
             this.relatorioDataGridView.DataSource = this.relatorioBindingSource;
-            this.relatorioDataGridView.Location = new System.Drawing.Point(10, 185);
+            this.relatorioDataGridView.Location = new System.Drawing.Point(11, 150);
+            this.relatorioDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.relatorioDataGridView.Name = "relatorioDataGridView";
             this.relatorioDataGridView.ReadOnly = true;
             this.relatorioDataGridView.RowHeadersVisible = false;
             this.relatorioDataGridView.RowHeadersWidth = 51;
             this.relatorioDataGridView.RowTemplate.Height = 24;
-            this.relatorioDataGridView.Size = new System.Drawing.Size(1541, 311);
+            this.relatorioDataGridView.Size = new System.Drawing.Size(978, 253);
             this.relatorioDataGridView.TabIndex = 13;
             // 
-            // comboBoxBuscar
-            // 
-            this.comboBoxBuscar.FormattingEnabled = true;
-            this.comboBoxBuscar.Items.AddRange(new object[] {
-            "Data Check In",
-            "Data Check Out",
-            "Data Laçamento"});
-            this.comboBoxBuscar.Location = new System.Drawing.Point(97, 81);
-            this.comboBoxBuscar.Name = "comboBoxBuscar";
-            this.comboBoxBuscar.Size = new System.Drawing.Size(200, 24);
-            this.comboBoxBuscar.TabIndex = 14;
-            // 
-            // relatorioBindingSource
-            // 
-            this.relatorioBindingSource.DataSource = typeof(Models.Relatorio);
-            // 
+
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -232,9 +224,27 @@
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
             this.dataGridViewTextBoxColumn14.Width = 125;
             // 
+            // relatorioBindingSource
+            // 
+            this.relatorioBindingSource.DataSource = typeof(Models.Relatorio);
+            // 
+            // comboBoxBuscar
+            // 
+            this.comboBoxBuscar.FormattingEnabled = true;
+            this.comboBoxBuscar.Items.AddRange(new object[] {
+            "Data Check In",
+            "Data Check Out",
+            "Data Laçamento"});
+            this.comboBoxBuscar.Location = new System.Drawing.Point(73, 66);
+            this.comboBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBuscar.Name = "comboBoxBuscar";
+            this.comboBoxBuscar.Size = new System.Drawing.Size(151, 21);
+            this.comboBoxBuscar.TabIndex = 14;
+            this.comboBoxBuscar.SelectedIndexChanged += new System.EventHandler(this.comboBoxBuscar_SelectedIndexChanged);
+            // 
             // FormRelatorio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1563, 590);
             this.Controls.Add(this.comboBoxBuscar);
@@ -244,6 +254,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRelatorio";

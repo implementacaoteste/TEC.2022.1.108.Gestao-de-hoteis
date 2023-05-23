@@ -49,5 +49,10 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void comboBoxBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

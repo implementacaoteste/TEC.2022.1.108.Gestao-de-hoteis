@@ -287,7 +287,7 @@
             // id_HospedeTextBox
             // 
             this.id_HospedeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_HospedeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Id_Hospede", true));
+            this.id_HospedeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Nome_Hospede", true));
             this.id_HospedeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.id_HospedeTextBox.Location = new System.Drawing.Point(16, 96);
             this.id_HospedeTextBox.Margin = new System.Windows.Forms.Padding(2);
@@ -383,6 +383,7 @@
             // 
             // valor_EntradaTextBox
             // 
+            this.valor_EntradaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.valor_EntradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Valor_Entrada", true));
             this.valor_EntradaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.valor_EntradaTextBox.Location = new System.Drawing.Point(16, 218);
@@ -392,6 +393,7 @@
             // 
             // numero_QuartoTextBox
             // 
+            this.numero_QuartoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numero_QuartoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Numero_Quarto", true));
             this.numero_QuartoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.numero_QuartoTextBox.Location = new System.Drawing.Point(16, 157);
@@ -406,6 +408,7 @@
             // 
             // valor_DiariaTextBox
             // 
+            this.valor_DiariaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartosBindingSource, "Valor_Diaria", true));
             this.valor_DiariaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.valor_DiariaTextBox.Location = new System.Drawing.Point(342, 218);

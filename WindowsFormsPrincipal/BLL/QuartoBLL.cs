@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DAL;
 using Models;
 
@@ -42,8 +43,38 @@ namespace BLL
         }
         public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime _dataEntrada, DateTime _dataSaida,  string _classe)
         {
+            ValidarDados(_dataEntrada,_dataSaida);
             return new QuartoDAL().BuscarQuartoDisponivelPorPeriodo(_dataEntrada,_dataSaida,_classe);
         }
+
+        private void ValidarDados(DateTime dataEntrada, DateTime dataSaida)
+        {
+            if (dataEntrada.Year < DateTime.Now.Year)
+                throw new Exception("Parametro inválido. Data válida a partir da atual");
+
+            if (dataEntrada.Year == DateTime.Now.Year)
+            {
+                if (dataEntrada.Month < DateTime.Now.Month)
+                {
+                    throw new Exception("Parametro inválido. Data válida a partir da atual");
+                }
+
+                if (dataEntrada.Month == DateTime.Now.Month)
+                {
+                    if (dataEntrada.Day < DateTime.Now.Day)
+                    {
+                        throw new Exception("Parametro inválido. Data válida a partir da atual");
+                    }
+                }
+            }
+            if (dataSaida < dataEntrada)
+            {
+                throw new Exception("Parametro inválido. Data de 'Entrada' não deve ser maior que de 'Saida'");
+            }
+
+
+        }
+
         public List<Quarto> BuscarPorStatus(string _status)
         {
             ValidarPermissao(17);

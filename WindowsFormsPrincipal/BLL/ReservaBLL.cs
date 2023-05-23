@@ -3,6 +3,7 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,20 @@ namespace BLL
     {
         public void Inserir(Reserva _reserva)
         {
+            _reserva.Data_Checkin = DateTime.Now;
+            _reserva.Data_Checkout = DateTime.Now;
+            _reserva.Data_Reserva = DateTime.Now;
+
+            if (_reserva.Obs_Reserva == null)
+                _reserva.Obs_Reserva = "";
+
+            if (_reserva.Obs_Checkin == null)
+                _reserva.Obs_Checkin = "";
+
+            if (_reserva.Obs_Checkout == null)
+                _reserva.Obs_Checkout = "";
+
+
             ValidarPermissao(14);
             ValidarDados(_reserva);
             new ReservaDAL().Inserir(_reserva);
