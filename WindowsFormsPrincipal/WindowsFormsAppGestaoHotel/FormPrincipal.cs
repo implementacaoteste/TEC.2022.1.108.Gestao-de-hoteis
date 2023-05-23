@@ -35,6 +35,7 @@ namespace WindowsFormsPrincipal1
                 }
                 labelNomeFuncionario.Text = Constante.NomeUsuario;
                 labelCargoFuncionario.Text = Constante.Cargo;
+                this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             }
             catch (Exception ex)
             {
