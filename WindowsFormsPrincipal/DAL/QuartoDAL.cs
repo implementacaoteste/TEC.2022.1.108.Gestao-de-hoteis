@@ -367,8 +367,8 @@ namespace DAL
                                     INNER JOIN CLASSE C ON Q.ID_CLASSE = C.ID
                                     WHERE DT_ENT_RESERVA != @dataEntrada AND DT_SAI_RESERVA != @dataSaida AND C.CLASSE = @classe";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@dataEntrada", _dataEntrada);
-                cmd.Parameters.AddWithValue("@dataSaida", _dataSaida);
+                cmd.Parameters.AddWithValue("@dataEntrada", Convert.ToDateTime(_dataEntrada));
+                cmd.Parameters.AddWithValue("@dataSaida", Convert.ToDateTime(_dataSaida));
                 cmd.Parameters.AddWithValue("@classe",_classe);
                 cn.Open();
 

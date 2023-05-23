@@ -14,9 +14,6 @@ namespace WindowsFormsAppGestaoHotel
 {
     public partial class FormConsultaQuartoDisponivel : Form
     {
-        DateTime dataEntrada;
-        DateTime dataSaida;
-
         public FormConsultaQuartoDisponivel()
         {
             InitializeComponent();
@@ -24,20 +21,14 @@ namespace WindowsFormsAppGestaoHotel
 
         private void FormConsultaQuartoDisponivel_Load(object sender, EventArgs e)
         {
-            classeBindingSource.DataSource = new ClasseBLL().BuscaPorTodos();
-            classeComboBox.Text = ((Classe)classeBindingSource.Current).Descricao;
-            dateTimeQEntrar.Value = DateTime.Now;
-            dateTimeQSair.Value = DateTime.Now;
+            comboBoxclass.DataSource = new ClasseBLL().BuscaPorTodos();
         }
+
         private void buttonBuscarQuartoDisp_Click(object sender, EventArgs e)
         {
             try
             {
-                dataEntrada = dateTimeQEntrar.Value;
-                dataSaida = dateTimeQSair.Value;
-
-                new QuartoBLL().BuscarQuartoDisponivelPorPeriodo(dataEntrada, dataSaida, classeComboBox.Text);
-
+                quartoBindingSource.DataSource = new QuartoBLL().BuscarQuartoDisponivelPorPeriodo(dateTimeQEntrar.Value,dateTimeQSair.Value,comboBoxclass.SelectedText);
             }
             catch(Exception ex)
             {
