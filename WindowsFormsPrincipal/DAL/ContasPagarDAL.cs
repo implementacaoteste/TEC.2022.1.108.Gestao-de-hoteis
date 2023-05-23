@@ -11,29 +11,155 @@ namespace DAL
 {
     public class ContasPagarDAL
     {
-        public void Alterar(ContasPagar contasPagar)
+        public void Alterar(ContasPagar _contasPagar)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"UPDATE CONTAS_A_PAGAR SET DESCRICAO = @DESCRICAO, VALOR = @VALOR, ID_CLIENTE = @ID_CLIENTE, ID_FUNCIONARIO = @ID_FUNCIONARIO
+                                        @DATA_VENCIMENTO = DATA_VENCIMENTO, @PAGAR = PAGAR
+                                        WHERE ID = @ID";
+               
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@DESCRICAO", _contasPagar.Descricao);
+                cmd.Parameters.AddWithValue("@VALOR", _contasPagar.Valor);
+                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasPagar.Id_Cliente);
+                cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _contasPagar.Id_Funcionario);
+                cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _contasPagar.Data_Vencimento);
+                cmd.Parameters.AddWithValue("@PAGAR", _contasPagar.Pagar);
+                cmd.Parameters.AddWithValue("@ID", _contasPagar.Id);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar inserir uma contas a pagar no Banco de Dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         public List<ContasPagar> BuscaPorTodos()
         {
-            throw new NotImplementedException();
+            List<ContasPagar> contasPagas = new List<ContasPagar>();
+            ContasPagar contasPagar;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT CONTAS_A_PAGAR.ID, DESCRICAO, VALOR, ID_CLIENTE, ID_FUNCIONARIO, DATA_VENCIMENTO, PAGAR
+                                    FROM CONTAS_A_PAGAR                                    
+                                    INNER JOIN FUNCIONARIO ON CONTAS_A_PAGAR.ID_FUNCIONARIO = FUNCIONARIO.ID
+                                    INNER JOIN CLIENTE ON CONTAS_A_PAGAR.ID_CLIENTE = CLIENTE.ID";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        contasPagar = new ContasPagar();
+                        contasPagar.Id = Convert.ToInt32(rd["ID"]);
+                        contasPagar.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        contasPagar.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
+                        contasPagar.Descricao = rd["DESCRICAO"].ToString();
+                        contasPagar.Valor = Convert.ToInt32(rd["VALOR"]);
+                        contasPagar.Pagar = Convert.ToBoolean(rd["PAGAR"]);
+                        contasPagar.Data_Vencimento = Convert.ToDateTime(rd["DATA_VENCIMENTO"]);
+                        contasPagas.Add(contasPagar);
+                    }
+                }
+                return contasPagas;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as contas a pagar.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         public List<ContasPagar> BuscarPorData(DateTime _data)
         {
-            throw new NotImplementedException();
+            List<ContasPagar> contasPagas = new List<ContasPagar>();
+            ContasPagar contasPagar;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT CONTAS_A_PAGAR.ID, DESCRICAO, VALOR, ID_CLIENTE, ID_FUNCIONARIO, DATA_VENCIMENTO, PAGAR
+                                    FROM CONTAS_A_PAGAR                                    
+                                    INNER JOIN FUNCIONARIO ON CONTAS_A_PAGAR.ID_FUNCIONARIO = FUNCIONARIO.ID
+                                    INNER JOIN CLIENTE ON CONTAS_A_PAGAR.ID_CLIENTE = CLIENTE.ID
+                                     WHERE CONTAS_A_PAGAR.DATA_VENCIMENTO = @DATA_VENCIMENTO";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _data);
+                
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        contasPagar = new ContasPagar();
+                        contasPagar.Id = Convert.ToInt32(rd["ID"]);
+                        contasPagar.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        contasPagar.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
+                        contasPagar.Descricao = rd["DESCRICAO"].ToString();
+                        contasPagar.Valor = Convert.ToInt32(rd["VALOR"]);
+                        contasPagar.Pagar = Convert.ToBoolean(rd["PAGAR"]);
+                        contasPagar.Data_Vencimento = Convert.ToDateTime(rd["DATA_VENCIMENTO"]);
+                        contasPagas.Add(contasPagar);
+                    }
+                }
+                return contasPagas;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as contas a pagar.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        public List<ContasPagar> BuscarPorPagar(bool pagar)
+        public List<ContasPagar> BuscarPorPagar(bool _pagar)
         {
             throw new NotImplementedException();
         }
 
         public void Excluir(int _id)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM CONTAS_A_PAGAR 
+                                    WHERE ID=@Id";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@Id", _id);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar excluir um CONTAS a PAGAR no Banco de Dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         public void Inserir(ContasPagar _contasPagar)
