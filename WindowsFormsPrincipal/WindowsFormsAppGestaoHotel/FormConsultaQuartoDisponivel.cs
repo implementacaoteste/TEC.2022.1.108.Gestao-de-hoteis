@@ -28,7 +28,7 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                quartoBindingSource.DataSource = new QuartoBLL().BuscarQuartoDisponivelPorPeriodo(dateTimeQEntrar.Value,dateTimeQSair.Value,comboBoxclass.SelectedText);
+                quartoBindingSource.DataSource = new QuartoBLL().BuscarQuartoDisponivelPorPeriodo(dateTimeQEntrar.Value,dateTimeQSair.Value,comboBoxclass.Text);
             }
             catch(Exception ex)
             {
