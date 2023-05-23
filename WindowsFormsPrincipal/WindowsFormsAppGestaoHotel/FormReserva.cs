@@ -46,11 +46,6 @@ namespace WindowsFormsAppGestaoHotel
             {
                 comboBoxBuscarTipo.SelectedIndex = 0;
                 reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
-
-                if (reservaBindingSource.Count == 0)
-                    labelRegistro.Visible = true;
-                else
-                    labelRegistro.Visible = false;
             }
             catch (Exception ex)
             {
@@ -77,12 +72,6 @@ namespace WindowsFormsAppGestaoHotel
                     default:
                         break;
                 }
-
-                if( reservaBindingSource.Count == 0 )
-                    labelRegistro.Visible = true;
-                else
-                    labelRegistro.Visible = false;
-
             }
             catch (Exception ex)
             {
@@ -96,7 +85,6 @@ namespace WindowsFormsAppGestaoHotel
             {
                 frm.ShowDialog();
             }
-            buttonBuscarTipo_Click(sender, e);
         }
 
         private void FormReserva_KeyDown(object sender, KeyEventArgs e)
@@ -104,37 +92,6 @@ namespace WindowsFormsAppGestaoHotel
             if (e.KeyCode == Keys.Escape)
             {
                 Close();
-            }
-        }
-
-        private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            try
-            {
-                switch (comboBoxBuscarTipo.SelectedIndex)
-                {
-                    case 0:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
-                        break;
-                    case 1:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckout(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
-                        break;
-                    case 2:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataLancamento(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
-                        break;
-                    default:
-                        break;
-                }
-
-                if (reservaBindingSource.Count == 0)
-                    labelRegistro.Visible = true;
-                else
-                    labelRegistro.Visible = false;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
     }

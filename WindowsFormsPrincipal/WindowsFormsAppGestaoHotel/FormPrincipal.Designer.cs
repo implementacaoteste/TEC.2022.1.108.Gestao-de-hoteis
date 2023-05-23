@@ -79,7 +79,6 @@
             this.sobreToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-
             this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip.Size = new System.Drawing.Size(1176, 33);
             this.menuStrip.Stretch = false;
@@ -246,7 +245,6 @@
             this.pictureBoxSair.BackColor = System.Drawing.Color.Red;
             this.pictureBoxSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
-
             this.pictureBoxSair.Location = new System.Drawing.Point(1063, 224);
             this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxSair.Name = "pictureBoxSair";
@@ -260,7 +258,6 @@
             // pictureBoxfundo
             // 
             this.pictureBoxfundo.BackColor = System.Drawing.Color.Black;
-
             this.pictureBoxfundo.Location = new System.Drawing.Point(1060, 222);
             this.pictureBoxfundo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxfundo.Name = "pictureBoxfundo";
@@ -274,7 +271,6 @@
             this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
-
             this.pictureBoxUsu2.Location = new System.Drawing.Point(1049, 49);
             this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
@@ -290,7 +286,6 @@
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-
             this.pictureBox1.Location = new System.Drawing.Point(353, 49);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
@@ -304,7 +299,6 @@
             this.pictureBoxUsu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
-
             this.pictureBoxUsu1.Location = new System.Drawing.Point(1049, 49);
             this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
@@ -318,7 +312,6 @@
             // pictureBoxCaixaLogin
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
-
             this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(995, 44);
             this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
@@ -330,7 +323,6 @@
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-
             this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(992, 42);
             this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
@@ -345,7 +337,6 @@
             this.labelCargoFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelCargoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.labelCargoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.labelCargoFuncionario.Location = new System.Drawing.Point(997, 183);
             this.labelCargoFuncionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCargoFuncionario.Name = "labelCargoFuncionario";
@@ -359,7 +350,6 @@
             this.labelNomeFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(203)))), ((int)(((byte)(254)))));
             this.labelNomeFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.labelNomeFuncionario.Location = new System.Drawing.Point(997, 116);
             this.labelNomeFuncionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNomeFuncionario.Name = "labelNomeFuncionario";
@@ -374,7 +364,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-
             this.ClientSize = new System.Drawing.Size(1176, 676);
             this.Controls.Add(this.labelNomeFuncionario);
             this.Controls.Add(this.labelCargoFuncionario);
@@ -388,7 +377,6 @@
             this.Controls.Add(this.pictureBoxUsu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1194, 723);
@@ -397,10 +385,8 @@
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Gestão de Hotéis";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
-            this.Resize += new System.EventHandler(this.FormPrincipal_Resize);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).EndInit();

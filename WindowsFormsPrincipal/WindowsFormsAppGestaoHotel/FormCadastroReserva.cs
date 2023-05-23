@@ -33,7 +33,7 @@ namespace WindowsFormsAppGestaoHotel
             InitializeComponent(); 
             Id = _id;
         }
-        
+
         private void FormCadastroReserva_Load(object sender, EventArgs e)
         {
             try
@@ -87,7 +87,6 @@ namespace WindowsFormsAppGestaoHotel
                     ((Reserva)reservaBindingSource.Current).Nome_Hospede = frm.NomeHospede;
                     id_HospedeTextBox.Text = frm.NomeHospede;
                 }
-                qtd_HospedesNumericUpDown.Value = 1;
             }
             catch (Exception ex)
             {
@@ -131,7 +130,6 @@ namespace WindowsFormsAppGestaoHotel
                         numero_QuartoTextBox.Text = frm.Numero.ToString();
                         tipo_QuartoTextBox.Text = frm.Tipo_Quarto.ToString();
                         valor_DiariaTextBox.Text = frm.Valor_Diaria.ToString();
-                        ((Reserva)reservaBindingSource.Current).Id_Quarto = frm.Id;
                     }
                 }
             }

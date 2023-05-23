@@ -22,14 +22,9 @@ namespace WindowsFormsPrincipal1
             Close();
         }
 
-        private void FormSobre_KeyDown(object sender, KeyEventArgs e)
+        private void buttonSuporte_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Escape)
-            {
-                Close();
-            }
-
-            if (e.Control && e.KeyCode == Keys.H)
+            if(e.KeyCode == Keys.F1)
             {
                 new FormLogin().linkLabelsuporte_LinkClicked(null, null);
             }
@@ -37,12 +32,15 @@ namespace WindowsFormsPrincipal1
 
         private void buttonSuporte_Click(object sender, EventArgs e)
         {
-            new FormLogin().linkLabelsuporte_LinkClicked(null, null);
+            new FormLogin().linkLabelsuporte_LinkClicked(null,null);
         }
 
-        private void FormSobre_Load(object sender, EventArgs e)
+        private void buttonSuporte_KeyDown_1(object sender, KeyEventArgs e)
         {
-
+            if(e.KeyCode == Keys.F1)
+            {
+                new FormLogin().linkLabelsuporte_LinkClicked(null, null);
+            }
         }
     }
 }

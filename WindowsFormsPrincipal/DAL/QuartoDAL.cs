@@ -353,53 +353,6 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime _dataEntrada, DateTime _dataSaida, string _classe)
-        {
-            List<Quarto> quartos = new List<Quarto>();
-            Quarto quarto;
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE,Q.DESCRICAO,Q.VALOR_DIARIA,Q.ANDAR,Q.ID_STATUS,C.CLASSE FROM QUARTO Q
-                                    INNER JOIN RESERVA R ON Q.ID = R.ID_QUARTO
-                                    INNER JOIN CLASSE C ON Q.ID_CLASSE = C.ID
-                                    WHERE (DT_ENT_RESERVA !> @dataEntrada OR DT_ENT_RESERVA != @dataEntrada)
-                                    AND (DT_SAI_RESERVA !< @dataSaida OR DT_SAI_RESERVA != @dataSaida) 
-                                    AND C.CLASSE = @classe";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@dataEntrada", _dataEntrada.Date);
-                cmd.Parameters.AddWithValue("@dataSaida", _dataSaida.Date);
-                cmd.Parameters.AddWithValue("@classe",_classe);
-                cn.Open();
-
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        quarto = new Quarto();
-                        quarto.Id = Convert.ToInt32(rd["ID"]);
-                        quarto.Numero = rd["NUMERO"].ToString();
-                        quarto.Classe = rd["CLASSE"].ToString();
-                        quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
-                        quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
-                        quarto.Andar = rd["ANDAR"].ToString();
-                        quartos.Add(quarto);
-                    }
-                }
-                return quartos;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar buscar um Quarto disponível.", ex);
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
 
         public List<Quarto> BuscarPorStatus(string _status)
         {
@@ -448,6 +401,10 @@ namespace DAL
             }
         }
 
+        public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime dataEntrada, DateTime dataSaida, string classe)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
