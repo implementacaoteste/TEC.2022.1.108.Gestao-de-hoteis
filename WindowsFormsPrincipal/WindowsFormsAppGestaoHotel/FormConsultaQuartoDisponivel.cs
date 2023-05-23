@@ -35,5 +35,18 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FormConsultaQuartoDisponivel_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                buttonBuscarQuartoDisp_Click(null, null);
+            }
+
+            if(e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

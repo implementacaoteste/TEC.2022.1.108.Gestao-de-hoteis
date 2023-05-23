@@ -49,11 +49,30 @@ namespace BLL
 
         private void ValidarDados(DateTime dataEntrada, DateTime dataSaida)
         {
-            if (dataEntrada < DateTime.Now)
+            if (dataEntrada.Year < DateTime.Now.Year)
                 throw new Exception("Parametro inválido. Data válida a partir da atual");
 
+            if (dataEntrada.Year == DateTime.Now.Year)
+            {
+                if (dataEntrada.Month < DateTime.Now.Month)
+                {
+                    throw new Exception("Parametro inválido. Data válida a partir da atual");
+                }
+
+                if (dataEntrada.Month == DateTime.Now.Month)
+                {
+                    if (dataEntrada.Day < DateTime.Now.Day)
+                    {
+                        throw new Exception("Parametro inválido. Data válida a partir da atual");
+                    }
+                }
+            }
             if (dataSaida < dataEntrada)
-                throw new Exception("Parametro inválido. Data de 'Saida' não deve ser maior que de 'Entrada'");
+            {
+                throw new Exception("Parametro inválido. Data de 'Entrada' não deve ser maior que de 'Saida'");
+            }
+
+
         }
 
         public List<Quarto> BuscarPorStatus(string _status)
