@@ -56,8 +56,6 @@
             this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
             this.labelCargoFuncionario = new System.Windows.Forms.Label();
             this.labelNomeFuncionario = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfundo)).BeginInit();
@@ -359,24 +357,6 @@
             this.labelNomeFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelNomeFuncionario.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 204);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 35);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 271);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 37);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "label2";
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -384,8 +364,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1478, 869);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelNomeFuncionario);
             this.Controls.Add(this.labelCargoFuncionario);
             this.Controls.Add(this.pictureBoxSair);
@@ -402,7 +380,7 @@
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Gestão de Hotéis";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.Resize += new System.EventHandler(this.FormPrincipal_Resize);
@@ -454,7 +432,5 @@
         private System.Windows.Forms.ToolStripMenuItem filtrarReservasToolStripMenuItem;
         private System.Windows.Forms.Label labelCargoFuncionario;
         private System.Windows.Forms.Label labelNomeFuncionario;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
