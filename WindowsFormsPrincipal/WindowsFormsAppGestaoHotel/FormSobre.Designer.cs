@@ -103,7 +103,6 @@
             this.buttonSuporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSuporte.UseVisualStyleBackColor = false;
             this.buttonSuporte.Click += new System.EventHandler(this.buttonSuporte_Click);
-            this.buttonSuporte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonSuporte_KeyDown_1);
             // 
             // label1
             // 
@@ -145,6 +144,8 @@
             this.MinimumSize = new System.Drawing.Size(468, 329);
             this.Name = "FormSobre";
             this.Text = "Sobre";
+            this.Load += new System.EventHandler(this.FormSobre_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormSobre_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

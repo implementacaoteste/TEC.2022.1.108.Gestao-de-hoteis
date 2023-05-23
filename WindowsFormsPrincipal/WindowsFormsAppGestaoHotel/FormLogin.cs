@@ -62,6 +62,11 @@ namespace WindowsFormsPrincipal1
             {
                 Application.Exit();
             }
+
+            if (e.Control && e.KeyCode == Keys.H)
+            {
+                linkLabelsuporte_LinkClicked(null, null);
+            }
         }
 
         public void linkLabelsuporte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -74,25 +79,9 @@ namespace WindowsFormsPrincipal1
             linkLabelsuporte_LinkClicked(null, null);
         }
 
-        private void buttonSuporte_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.F1)
-            {
-                linkLabelsuporte_LinkClicked(null, null);
-            }
-        }
-
         private void buttonsSuporte_Click(object sender, EventArgs e)
         {
             linkLabelsuporte_LinkClicked(null,null);
-        }
-
-        private void buttonsSuporte_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.F1)
-            {
-                linkLabelsuporte_LinkClicked(null, null);
-            }
         }
     }
 }

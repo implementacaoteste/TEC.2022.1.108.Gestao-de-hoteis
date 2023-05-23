@@ -93,7 +93,6 @@
             this.buttonsSuporte.Name = "buttonsSuporte";
             this.buttonsSuporte.UseVisualStyleBackColor = false;
             this.buttonsSuporte.Click += new System.EventHandler(this.buttonsSuporte_Click);
-            this.buttonsSuporte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonsSuporte_KeyDown);
             // 
             // FormLogin
             // 

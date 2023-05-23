@@ -35,7 +35,7 @@
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.comboBoxBuscarTipo = new System.Windows.Forms.ComboBox();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRegistro = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -83,6 +83,7 @@
             this.monthCalendar.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 3;
+            this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateChanged);
             // 
             // comboBoxBuscarTipo
             // 
@@ -101,15 +102,16 @@
             // 
             this.reservaBindingSource.DataSource = typeof(Models.Reserva);
             // 
-            // label1
+            // labelRegistro
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(276, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nenhum registro Cadastrado!";
+            this.labelRegistro.AutoSize = true;
+            this.labelRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelRegistro.Location = new System.Drawing.Point(276, 57);
+            this.labelRegistro.Name = "labelRegistro";
+            this.labelRegistro.Size = new System.Drawing.Size(217, 20);
+            this.labelRegistro.TabIndex = 5;
+            this.labelRegistro.Text = "Nenhum registro Cadastrado!";
+            this.labelRegistro.Visible = false;
             // 
             // flowLayoutPanel1
             // 
@@ -142,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelRegistro);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.comboBoxBuscarTipo);
             this.Controls.Add(this.monthCalendar);
@@ -170,7 +172,7 @@
         private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.ComboBox comboBoxBuscarTipo;
         private System.Windows.Forms.BindingSource reservaBindingSource;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRegistro;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;

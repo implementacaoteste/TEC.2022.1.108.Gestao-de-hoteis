@@ -153,14 +153,11 @@
   <metadata name="reservaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>21, 12</value>
   </metadata>
-  <metadata name="reservaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>21, 12</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonSelecionarCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAV9JREFUSEvtlettg0AQhCkBiefPlOASKMEluAR3EDqwO0g6iDtIOnAJpAOXkMyg
+        DAAACwwBP0AiyAAAAV9JREFUSEvtlettg0AQhCkBiefPlOASKMEluAR3EDqwO0g6iDtIOnAJpAOXkMyg
         2dMJEcMd5CGFT1oJDXs791iOZOPPkabpQ57nDQPPqeTvgQYweizL8ob4GERXFMVBqevBlaH4mOEwOu6G
         hi0jy7K9X7yqqjfEsa7rhsFnGno5y81ZwC96bzvxvvXyXiXHgQLPVgzbfZT8Jcg/e/mN5HBQoF8tt1fS
         XdiAyLdeuEgOA7PfqcCs1RrIt13qJIWhTu6N2USSJ0G+O2tJYfjGiL3kSZC7zBirZEebcSt5Ena0xlwl
@@ -172,7 +169,7 @@
   <data name="buttonSelecionarPagamento.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAV9JREFUSEvtlettg0AQhCkBiefPlOASKMEluAR3EDqwO0g6iDtIOnAJpAOXkMyg
+        DAAACwwBP0AiyAAAAV9JREFUSEvtlettg0AQhCkBiefPlOASKMEluAR3EDqwO0g6iDtIOnAJpAOXkMyg
         2dMJEcMd5CGFT1oJDXs791iOZOPPkabpQ57nDQPPqeTvgQYweizL8ob4GERXFMVBqevBlaH4mOEwOu6G
         hi0jy7K9X7yqqjfEsa7rhsFnGno5y81ZwC96bzvxvvXyXiXHgQLPVgzbfZT8Jcg/e/mN5HBQoF8tt1fS
         XdiAyLdeuEgOA7PfqcCs1RrIt13qJIWhTu6N2USSJ0G+O2tJYfjGiL3kSZC7zBirZEebcSt5Ena0xlwl
@@ -184,7 +181,7 @@
   <data name="buttonSalvar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAASpJREFUSEvtlt0RgjAQhCmBB/4eLYVSLMEOpAQ7sAU60E4owRL0ltkwgUQJ4Rgd
+        DgAACw4BQL7hQQAAASpJREFUSEvtlt0RgjAQhCmBB/4eLYVSLMEOpAQ7sAU60E4owRL0ltkwgUQJ4Rgd
         h53ZUe4u+2kkarLrq0rT9JBlWR1rrGdUuGThuSiK50p3i+AY9oTEOhyObTILy7I8VVVVL7WsbUyGOAxu
         gxHCawTNOs/zI2MS1sLhU7A82gEfLTt0Z0wvqU3hKVuuNMGQ7MLF9JHHsitt8DSPZVc/A+Y14LO2by6j
         aDDL0foPMM6kbOtNZh6Yk+fXd+dUDQyA9DozY9l7TtXA9rn0uOHYIE0wttiGDVY9TiwPknpr+h63HBuk
@@ -195,7 +192,7 @@
   <data name="buttonCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAJxJREFUSEvtk8ENgCAMRdmBwBxupPtfHEGpoQYJAVoLibEv6YHD/y+BYhTlX1hr
+        DgAACw4BQL7hQQAAAJxJREFUSEvtk8ENgCAMRdmBwBxupPtfHEGpoQYJAVoLibEv6YHD/y+BYhTlX1hr
         V+fcEo/dcHMXEPbeH6Fgp5RwczchtEEBpQSlcXhigCIXkyI9cnEpUpMPkyIl+XApksunSJFUPk0KZNfb
         3HYR8jedIi8tUpjmV3tFbXuHyXu+jLi8R4qIySlSRESelJAKuLkHUMIJc3OK8mWMOQFwEo2cQc8jKwAA
         AABJRU5ErkJggg==
@@ -204,7 +201,7 @@
   <data name="buttonSelecionarQuarto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAV9JREFUSEvtlettg0AQhCkBiefPlOASKMEluAR3EDqwO0g6iDtIOnAJpAOXkMyg
+        DAAACwwBP0AiyAAAAV9JREFUSEvtlettg0AQhCkBiefPlOASKMEluAR3EDqwO0g6iDtIOnAJpAOXkMyg
         2dMJEcMd5CGFT1oJDXs791iOZOPPkabpQ57nDQPPqeTvgQYweizL8ob4GERXFMVBqevBlaH4mOEwOu6G
         hi0jy7K9X7yqqjfEsa7rhsFnGno5y81ZwC96bzvxvvXyXiXHgQLPVgzbfZT8Jcg/e/mN5HBQoF8tt1fS
         XdiAyLdeuEgOA7PfqcCs1RrIt13qJIWhTu6N2USSJ0G+O2tJYfjGiL3kSZC7zBirZEebcSt5Ena0xlwl
