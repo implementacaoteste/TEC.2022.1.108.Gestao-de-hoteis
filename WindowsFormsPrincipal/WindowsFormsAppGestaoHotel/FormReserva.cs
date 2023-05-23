@@ -23,25 +23,6 @@ namespace WindowsFormsAppGestaoHotel
         int Y = 1;
         private void FormReserva_Load(object sender, EventArgs e)
         {
-            for (int i = 1; i <= X; i++)
-            {
-                Button btn = new Button();
-                btn.Text = count.ToString();
-                btn.Name = count.ToString();
-                btn.Size = new Size(30, 30);
-                btn.Location = new Point(18*(i+1), 227*Y);
-                Controls.Add(btn);
-
-            }
-            while (X == 5)
-            {
-                X = 0;
-                Y++;
-            }
-            count++;
-            X++;
-
-
             try
             {
                 comboBoxBuscarTipo.SelectedIndex = 0;
@@ -61,6 +42,24 @@ namespace WindowsFormsAppGestaoHotel
 
         private void buttonBuscarTipo_Click(object sender, EventArgs e)
         {
+            for (int i = 1; i <= X; i++)
+            {
+                Button btn = new Button();
+                btn.Text = count.ToString();
+                btn.Name = count.ToString();
+                btn.Size = new Size(30, 30);
+                btn.Location = new Point(18 * (i + 1), 227 * Y);
+                Controls.Add(btn);
+
+            }
+            while (X == 10)
+            {
+                X = 0;
+                Y++;
+            }
+            count++;
+            X++;
+
             try
             {
                 switch (comboBoxBuscarTipo.SelectedIndex)
@@ -109,6 +108,24 @@ namespace WindowsFormsAppGestaoHotel
 
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
+            for (int i = 1; i <= X; i++)
+            {
+                Button btn = new Button();
+                btn.Text = count.ToString();
+                btn.Name = count.ToString();
+                btn.Size = new Size(30, 30);
+                btn.Location = new Point(18 * (i + 1), 40 * Y);
+                Controls.Add(btn);
+
+            }
+            while (X == 5)
+            {
+                X = 0;
+                Y++;
+            }
+            count++;
+            X++;
+
             try
             {
                 switch (comboBoxBuscarTipo.SelectedIndex)

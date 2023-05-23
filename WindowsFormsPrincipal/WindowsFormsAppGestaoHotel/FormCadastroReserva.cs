@@ -27,6 +27,9 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormCadastroReserva : Form
     {
         public int Id;
+        public double Vlr_Diaria;
+        public double Vlr_Total;
+        public double Vlr_Entrada;
 
         public FormCadastroReserva(int _id = 0)
         {
