@@ -35,12 +35,6 @@
             this.buttonBuscarQuartoDisp = new System.Windows.Forms.Button();
             this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quartoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dateTimeQSair = new System.Windows.Forms.DateTimePicker();
-            this.labelEntrada = new System.Windows.Forms.Label();
-            this.labelSair = new System.Windows.Forms.Label();
-            this.dateTimeQEntrar = new System.Windows.Forms.DateTimePicker();
-            this.labelClasse = new System.Windows.Forms.Label();
-            this.comboBoxclass = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +42,12 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimeQSair = new System.Windows.Forms.DateTimePicker();
+            this.labelEntrada = new System.Windows.Forms.Label();
+            this.labelSair = new System.Windows.Forms.Label();
+            this.dateTimeQEntrar = new System.Windows.Forms.DateTimePicker();
+            this.labelClasse = new System.Windows.Forms.Label();
+            this.comboBoxclass = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoDataGridView)).BeginInit();
@@ -76,7 +76,7 @@
             this.buttonBuscarQuartoDisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarQuartoDisp.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search;
             this.buttonBuscarQuartoDisp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscarQuartoDisp.Location = new System.Drawing.Point(646, 89);
+            this.buttonBuscarQuartoDisp.Location = new System.Drawing.Point(653, 91);
             this.buttonBuscarQuartoDisp.Name = "buttonBuscarQuartoDisp";
             this.buttonBuscarQuartoDisp.Size = new System.Drawing.Size(101, 33);
             this.buttonBuscarQuartoDisp.TabIndex = 7;
@@ -111,66 +111,6 @@
             this.quartoDataGridView.RowHeadersWidth = 47;
             this.quartoDataGridView.Size = new System.Drawing.Size(746, 297);
             this.quartoDataGridView.TabIndex = 8;
-            // 
-            // dateTimeQSair
-            // 
-            this.dateTimeQSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeQSair.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeQSair.Location = new System.Drawing.Point(289, 93);
-            this.dateTimeQSair.Name = "dateTimeQSair";
-            this.dateTimeQSair.Size = new System.Drawing.Size(110, 24);
-            this.dateTimeQSair.TabIndex = 4;
-            // 
-            // labelEntrada
-            // 
-            this.labelEntrada.AutoSize = true;
-            this.labelEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEntrada.Location = new System.Drawing.Point(29, 95);
-            this.labelEntrada.Name = "labelEntrada";
-            this.labelEntrada.Size = new System.Drawing.Size(63, 18);
-            this.labelEntrada.TabIndex = 1;
-            this.labelEntrada.Text = "Entrada:";
-            // 
-            // labelSair
-            // 
-            this.labelSair.AutoSize = true;
-            this.labelSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSair.Location = new System.Drawing.Point(237, 95);
-            this.labelSair.Name = "labelSair";
-            this.labelSair.Size = new System.Drawing.Size(49, 18);
-            this.labelSair.TabIndex = 3;
-            this.labelSair.Text = "Saída:";
-            // 
-            // dateTimeQEntrar
-            // 
-            this.dateTimeQEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeQEntrar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeQEntrar.Location = new System.Drawing.Point(95, 93);
-            this.dateTimeQEntrar.Name = "dateTimeQEntrar";
-            this.dateTimeQEntrar.Size = new System.Drawing.Size(109, 24);
-            this.dateTimeQEntrar.TabIndex = 2;
-            // 
-            // labelClasse
-            // 
-            this.labelClasse.AutoSize = true;
-            this.labelClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClasse.Location = new System.Drawing.Point(423, 95);
-            this.labelClasse.Name = "labelClasse";
-            this.labelClasse.Size = new System.Drawing.Size(58, 18);
-            this.labelClasse.TabIndex = 5;
-            this.labelClasse.Text = "Classe:";
-            // 
-            // comboBoxclass
-            // 
-            this.comboBoxclass.DataSource = this.classeBindingSource;
-            this.comboBoxclass.DisplayMember = "Descricao";
-            this.comboBoxclass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxclass.FormattingEnabled = true;
-            this.comboBoxclass.Location = new System.Drawing.Point(482, 92);
-            this.comboBoxclass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxclass.Name = "comboBoxclass";
-            this.comboBoxclass.Size = new System.Drawing.Size(109, 25);
-            this.comboBoxclass.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -234,6 +174,66 @@
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dateTimeQSair
+            // 
+            this.dateTimeQSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeQSair.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeQSair.Location = new System.Drawing.Point(296, 93);
+            this.dateTimeQSair.Name = "dateTimeQSair";
+            this.dateTimeQSair.Size = new System.Drawing.Size(110, 27);
+            this.dateTimeQSair.TabIndex = 4;
+            // 
+            // labelEntrada
+            // 
+            this.labelEntrada.AutoSize = true;
+            this.labelEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEntrada.Location = new System.Drawing.Point(29, 95);
+            this.labelEntrada.Name = "labelEntrada";
+            this.labelEntrada.Size = new System.Drawing.Size(78, 22);
+            this.labelEntrada.TabIndex = 1;
+            this.labelEntrada.Text = "Entrada:";
+            // 
+            // labelSair
+            // 
+            this.labelSair.AutoSize = true;
+            this.labelSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSair.Location = new System.Drawing.Point(232, 95);
+            this.labelSair.Name = "labelSair";
+            this.labelSair.Size = new System.Drawing.Size(61, 22);
+            this.labelSair.TabIndex = 3;
+            this.labelSair.Text = "Saída:";
+            // 
+            // dateTimeQEntrar
+            // 
+            this.dateTimeQEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeQEntrar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeQEntrar.Location = new System.Drawing.Point(110, 93);
+            this.dateTimeQEntrar.Name = "dateTimeQEntrar";
+            this.dateTimeQEntrar.Size = new System.Drawing.Size(109, 27);
+            this.dateTimeQEntrar.TabIndex = 2;
+            // 
+            // labelClasse
+            // 
+            this.labelClasse.AutoSize = true;
+            this.labelClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClasse.Location = new System.Drawing.Point(423, 95);
+            this.labelClasse.Name = "labelClasse";
+            this.labelClasse.Size = new System.Drawing.Size(70, 22);
+            this.labelClasse.TabIndex = 5;
+            this.labelClasse.Text = "Classe:";
+            // 
+            // comboBoxclass
+            // 
+            this.comboBoxclass.DataSource = this.classeBindingSource;
+            this.comboBoxclass.DisplayMember = "Descricao";
+            this.comboBoxclass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxclass.FormattingEnabled = true;
+            this.comboBoxclass.Location = new System.Drawing.Point(492, 93);
+            this.comboBoxclass.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxclass.Name = "comboBoxclass";
+            this.comboBoxclass.Size = new System.Drawing.Size(109, 28);
+            this.comboBoxclass.TabIndex = 6;
             // 
             // FormConsultaQuartoDisponivel
             // 
