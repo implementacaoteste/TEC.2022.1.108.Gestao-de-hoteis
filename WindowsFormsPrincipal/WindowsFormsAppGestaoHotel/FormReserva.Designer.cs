@@ -40,8 +40,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanelQuartos = new System.Windows.Forms.FlowLayoutPanel();
+            this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBuscarTipo
@@ -81,6 +83,7 @@
             // 
             this.monthCalendar.Location = new System.Drawing.Point(12, 57);
             this.monthCalendar.MaxDate = new System.DateTime(2033, 12, 31, 0, 0, 0, 0);
+            this.monthCalendar.MaxSelectionCount = 1;
             this.monthCalendar.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 3;
@@ -106,7 +109,7 @@
             // labelRegistro
             // 
             this.labelRegistro.AutoSize = true;
-            this.labelRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegistro.Location = new System.Drawing.Point(276, 57);
             this.labelRegistro.Name = "labelRegistro";
             this.labelRegistro.Size = new System.Drawing.Size(217, 20);
@@ -142,10 +145,14 @@
             // 
             // flowLayoutPanelQuartos
             // 
-            this.flowLayoutPanelQuartos.Location = new System.Drawing.Point(12, 231);
+            this.flowLayoutPanelQuartos.Location = new System.Drawing.Point(15, 231);
             this.flowLayoutPanelQuartos.Name = "flowLayoutPanelQuartos";
-            this.flowLayoutPanelQuartos.Size = new System.Drawing.Size(227, 248);
+            this.flowLayoutPanelQuartos.Size = new System.Drawing.Size(216, 248);
             this.flowLayoutPanelQuartos.TabIndex = 7;
+            // 
+            // quartoBindingSource
+            // 
+            this.quartoBindingSource.DataSource = typeof(Models.Quarto);
             // 
             // FormReserva
             // 
@@ -170,6 +177,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormReserva_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +194,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelQuartos;
+        private System.Windows.Forms.BindingSource quartoBindingSource;
     }
 }

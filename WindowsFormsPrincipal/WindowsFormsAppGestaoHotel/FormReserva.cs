@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsPrincipal1;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsAppGestaoHotel
 {
@@ -19,14 +20,14 @@ namespace WindowsFormsAppGestaoHotel
         {
             InitializeComponent();
         }
-        
+
         private void FormReserva_Load(object sender, EventArgs e)
         {
-            for (int i = 1; i <= 4; i++)
-            {
-                Label _quarto = addLabel(i);
-                flowLayoutPanelQuartos.Controls.Add(_quarto);
-            }
+            int qtd_quartos;
+            quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
+            qtd_quartos = quartoBindingSource.Count;
+
+            addLabel();
 
             try
             {
@@ -45,19 +46,34 @@ namespace WindowsFormsAppGestaoHotel
             }
         }
 
-        Label addLabel(int i)
+        void addLabel()
         {
-            Label _quarto = new Label();
-            _quarto.Name = i.ToString();
-            _quarto.Text = i.ToString();
-            _quarto.ForeColor = Color.White;
-            _quarto.BackColor = Color.Green;
-            _quarto.Width = 40;
-            _quarto.Height = 40;
-            _quarto.TextAlign = ContentAlignment.MiddleCenter;
-            _quarto.Margin = new Padding(5);
+            Label _quarto;
+            flowLayoutPanelQuartos.Controls.Clear();
 
-            return _quarto;
+            foreach (Quarto item in quartoBindingSource)
+            {
+                _quarto = new Label();
+                _quarto.Name = "quarto" + item.Numero.ToString();
+                _quarto.Text = item.Numero.ToString();
+                _quarto.ForeColor = Color.White;
+                _quarto.BackColor = Color.Green;
+
+                if (item.Id_Status == 2)
+                    _quarto.BackColor = Color.Red;
+                else if (item.Id_Status == 3)
+                    _quarto.BackColor = Color.FromArgb(219,161,0);
+                else if (item.Id_Status == 4)
+                    _quarto.BackColor = Color.Blue;
+
+                _quarto.Width = 30;
+                _quarto.Height = 30;
+                _quarto.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
+                _quarto.TextAlign = ContentAlignment.MiddleCenter;
+                _quarto.Margin = new Padding(3);
+
+                flowLayoutPanelQuartos.Controls.Add(_quarto);
+            }
         }
 
         private void buttonBuscarTipo_Click(object sender, EventArgs e)
@@ -79,7 +95,7 @@ namespace WindowsFormsAppGestaoHotel
                         break;
                 }
 
-                if( reservaBindingSource.Count == 0 )
+                if (reservaBindingSource.Count == 0)
                     labelRegistro.Visible = true;
                 else
                     labelRegistro.Visible = false;
@@ -112,6 +128,9 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
+                quartoBindingSource.DataSource = new QuartoBLL().BuscarPorDia(monthCalendar.SelectionRange.Start);
+                addLabel();
+
                 switch (comboBoxBuscarTipo.SelectedIndex)
                 {
                     case 0:
