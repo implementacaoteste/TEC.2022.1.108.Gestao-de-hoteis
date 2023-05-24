@@ -16,8 +16,8 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO RESERVA (DT_ENT_RESERVA, DT_SAI_RESERVA, VALOR_TOTAL, ID_CLIENTE, QTD_HOSPEDES, ID_PAGAMENTO, ID_FUNCIONARIO, OBS_RESERVA, VALOR_ENTRADA, ID_QUARTO, DATA_CHECKIN, DATA_CHECKOUT, OBS_CHECKIN, OBS_CHECKOUT, DATA_RESERVA)
-                                       VALUES(@DT_ENT_RESERVA, @DT_SAI_RESERVA, @VALOR_TOTAL, @ID_CLIENTE, @QTD_HOSPEDES, @ID_PAGAMENTO, @ID_FUNCIONARIO, @OBS_RESERVA, @VALOR_ENTRADA, @ID_QUARTO, @DATA_CHECKIN, @DATA_CHECKOUT, @OBS_CHECKIN, @OBS_CHECKOUT, @DATA_RESERVA) SELECT SCOPE_IDENTITY() AS Id";
+                cmd.CommandText = @"INSERT INTO RESERVA (DT_ENT_RESERVA, DT_SAI_RESERVA, VALOR_TOTAL, ID_CLIENTE, QTD_HOSPEDES, ID_PAGAMENTO, ID_FUNCIONARIO, OBS_RESERVA, VALOR_ENTRADA, DATA_CHECKIN, DATA_CHECKOUT, OBS_CHECKIN, OBS_CHECKOUT, DATA_RESERVA)
+                                       VALUES(@DT_ENT_RESERVA, @DT_SAI_RESERVA, @VALOR_TOTAL, @ID_CLIENTE, @QTD_HOSPEDES, @ID_PAGAMENTO, @ID_FUNCIONARIO, @OBS_RESERVA, @VALOR_ENTRADA, @DATA_CHECKIN, @DATA_CHECKOUT, @OBS_CHECKIN, @OBS_CHECKOUT, @DATA_RESERVA) SELECT SCOPE_IDENTITY() AS Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DT_ENT_RESERVA", _reserva.Data_Ent_Reserva);
                 cmd.Parameters.AddWithValue("@DT_SAI_RESERVA", _reserva.Data_Sai_Reserva);
@@ -28,7 +28,6 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", Constante.IdLogado);
                 cmd.Parameters.AddWithValue("@OBS_RESERVA", _reserva.Obs_Reserva);
                 cmd.Parameters.AddWithValue("@VALOR_ENTRADA", _reserva.Valor_Entrada);
-                cmd.Parameters.AddWithValue("@ID_QUARTO", _reserva.Id_Quarto);
                 cmd.Parameters.AddWithValue("@DATA_CHECKIN", _reserva.Data_Checkin);
                 cmd.Parameters.AddWithValue("DATA_CHECKOUT", _reserva.Data_Checkout);
                 cmd.Parameters.AddWithValue("@OBS_CHECKIN", _reserva.Obs_Checkin);
@@ -257,11 +256,12 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
-                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, R.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
+                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
                                     FROM RESERVA R
+                                    INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
                                     INNER JOIN CLIENTE C ON R.ID_CLIENTE = C.ID
+                                    INNER JOIN QUARTO Q ON RQ.ID_QUARTO = Q.ID
 									INNER JOIN FUNCIONARIO F ON R.ID_FUNCIONARIO = F.ID
-									INNER JOIN QUARTO Q ON R.ID_QUARTO = Q.ID
 									INNER JOIN CLASSE CL ON Q.ID_CLASSE = CL.ID
 									INNER JOIN PAGAMENTO P ON R.ID_PAGAMENTO = P.ID
                                     WHERE R.DATA_CHECKIN BETWEEN @DATA_INICIAL AND @DATA_FINAL";
@@ -322,11 +322,12 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
-                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, R.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
+                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
                                     FROM RESERVA R
+                                    INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
                                     INNER JOIN CLIENTE C ON R.ID_CLIENTE = C.ID
 									INNER JOIN FUNCIONARIO F ON R.ID_FUNCIONARIO = F.ID
-									INNER JOIN QUARTO Q ON R.ID_QUARTO = Q.ID
+									INNER JOIN QUARTO Q ON RQ.ID_QUARTO = Q.ID
 									INNER JOIN CLASSE CL ON Q.ID_CLASSE = CL.ID
 									INNER JOIN PAGAMENTO P ON R.ID_PAGAMENTO = P.ID
                                     WHERE R.DATA_CHECKOUT BETWEEN @DATA_INICIAL AND @DATA_FINAL";
@@ -387,11 +388,12 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
-                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, R.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
+                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
                                     FROM RESERVA R
+                                    INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
                                     INNER JOIN CLIENTE C ON R.ID_CLIENTE = C.ID
 									INNER JOIN FUNCIONARIO F ON R.ID_FUNCIONARIO = F.ID
-									INNER JOIN QUARTO Q ON R.ID_QUARTO = Q.ID
+									INNER JOIN QUARTO Q ON RQ.ID_QUARTO = Q.ID
 									INNER JOIN CLASSE CL ON Q.ID_CLASSE = CL.ID
 									INNER JOIN PAGAMENTO P ON R.ID_PAGAMENTO = P.ID
                                     WHERE R.DATA_RESERVA BETWEEN @DATA_INICIAL AND @DATA_FINAL";
