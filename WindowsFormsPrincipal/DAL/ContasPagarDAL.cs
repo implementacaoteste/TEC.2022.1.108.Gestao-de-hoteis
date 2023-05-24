@@ -72,7 +72,7 @@ namespace DAL
                         contasPagar.Descricao = rd["DESCRICAO"].ToString();
                         contasPagar.Nome_funcionario = rd["FUNCIONARIO_NOME"].ToString();
                         contasPagar.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
-                        contasPagar.Valor = Convert.ToInt32(rd["VALOR"]);
+                        contasPagar.Valor = (double)rd["VALOR"];
                         contasPagar.Pagar = Convert.ToBoolean(rd["PAGAR"]);
                         contasPagar.Data_Vencimento = Convert.ToDateTime(rd["DATA_VENCIMENTO"]);
                         contasPagas.Add(contasPagar);
@@ -122,7 +122,7 @@ namespace DAL
                         contasPagar.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
                         contasPagar.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         contasPagar.Descricao = rd["DESCRICAO"].ToString();
-                        contasPagar.Valor = Convert.ToInt32(rd["VALOR"]);
+                        contasPagar.Valor = (double)rd["VALOR"];
                         contasPagar.Pagar = Convert.ToBoolean(rd["PAGAR"]);
                         contasPagar.Data_Vencimento = Convert.ToDateTime(rd["DATA_VENCIMENTO"]);
                         contasPagas.Add(contasPagar);
@@ -172,7 +172,7 @@ namespace DAL
                         contasPagar.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
                         contasPagar.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         contasPagar.Descricao = rd["DESCRICAO"].ToString();
-                        contasPagar.Valor = Convert.ToInt32(rd["VALOR"]);
+                        contasPagar.Valor = (double)rd["VALOR"];
                         contasPagar.Pagar = Convert.ToBoolean(rd["PAGAR"]);
                         contasPagar.Data_Vencimento = Convert.ToDateTime(rd["DATA_VENCIMENTO"]);
                         contasPagas.Add(contasPagar);
