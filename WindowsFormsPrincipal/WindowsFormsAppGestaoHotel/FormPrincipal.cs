@@ -291,7 +291,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                using (FormContaPagar frm = new FormContaPagar())
+                using (ConsultaContasPagar frm = new ConsultaContasPagar())
                 {
                     frm.ShowDialog();
                 }
