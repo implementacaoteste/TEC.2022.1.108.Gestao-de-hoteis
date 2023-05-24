@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,11 +19,15 @@ namespace WindowsFormsAppGestaoHotel
         {
             InitializeComponent();
         }
-        int count = 1;
-        int X = 1;
-        int Y = 1;
+        
         private void FormReserva_Load(object sender, EventArgs e)
         {
+            for (int i = 1; i <= 4; i++)
+            {
+                Label _quarto = addLabel(i);
+                flowLayoutPanelQuartos.Controls.Add(_quarto);
+            }
+
             try
             {
                 comboBoxBuscarTipo.SelectedIndex = 0;
@@ -40,26 +45,23 @@ namespace WindowsFormsAppGestaoHotel
             }
         }
 
+        Label addLabel(int i)
+        {
+            Label _quarto = new Label();
+            _quarto.Name = i.ToString();
+            _quarto.Text = i.ToString();
+            _quarto.ForeColor = Color.White;
+            _quarto.BackColor = Color.Green;
+            _quarto.Width = 40;
+            _quarto.Height = 40;
+            _quarto.TextAlign = ContentAlignment.MiddleCenter;
+            _quarto.Margin = new Padding(5);
+
+            return _quarto;
+        }
+
         private void buttonBuscarTipo_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i <= X; i++)
-            {
-                Button btn = new Button();
-                btn.Text = count.ToString();
-                btn.Name = count.ToString();
-                btn.Size = new Size(30, 30);
-                btn.Location = new Point(18 * (i + 1), 227 * Y);
-                Controls.Add(btn);
-
-            }
-            while (X == 10)
-            {
-                X = 0;
-                Y++;
-            }
-            count++;
-            X++;
-
             try
             {
                 switch (comboBoxBuscarTipo.SelectedIndex)
@@ -108,24 +110,6 @@ namespace WindowsFormsAppGestaoHotel
 
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            for (int i = 1; i <= X; i++)
-            {
-                Button btn = new Button();
-                btn.Text = count.ToString();
-                btn.Name = count.ToString();
-                btn.Size = new Size(30, 30);
-                btn.Location = new Point(18 * (i + 1), 40 * Y);
-                Controls.Add(btn);
-
-            }
-            while (X == 5)
-            {
-                X = 0;
-                Y++;
-            }
-            count++;
-            X++;
-
             try
             {
                 switch (comboBoxBuscarTipo.SelectedIndex)

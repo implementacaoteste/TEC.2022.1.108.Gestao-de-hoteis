@@ -39,6 +39,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanelQuartos = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -139,11 +140,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox1";
             // 
+            // flowLayoutPanelQuartos
+            // 
+            this.flowLayoutPanelQuartos.Location = new System.Drawing.Point(12, 231);
+            this.flowLayoutPanelQuartos.Name = "flowLayoutPanelQuartos";
+            this.flowLayoutPanelQuartos.Size = new System.Drawing.Size(227, 248);
+            this.flowLayoutPanelQuartos.TabIndex = 7;
+            // 
             // FormReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.flowLayoutPanelQuartos);
             this.Controls.Add(this.labelRegistro);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.comboBoxBuscarTipo);
@@ -176,5 +185,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelQuartos;
     }
 }
