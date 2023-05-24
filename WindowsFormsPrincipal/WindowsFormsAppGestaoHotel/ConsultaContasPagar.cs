@@ -47,5 +47,20 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonAdicionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormContaPagar frm = new FormContaPagar())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -224,8 +224,8 @@ namespace DAL
                 cmd.CommandText = @"INSERT INTO CONTAS_A_PAGAR (DESCRICAO, VALOR, ID_CLIENTE, ID_FUNCIONARIO, DATA_VENCIMENTO, PAGAR)
                                       VALUES(@DESCRICAO, @VALOR, @ID_CLIENTE, @ID_FUNCIONARIO, @DATA_VENCIMENTO, @PAGAR)";
                 cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@VALOR", _contasPagar.Valor);  
                 cmd.Parameters.AddWithValue("@DESCRICAO", _contasPagar.Descricao);
-                cmd.Parameters.AddWithValue("@VALOR", _contasPagar.Valor);
                 cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasPagar.Id_Cliente);
                 cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _contasPagar.Id_Funcionario);
                 cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _contasPagar.Data_Vencimento);
