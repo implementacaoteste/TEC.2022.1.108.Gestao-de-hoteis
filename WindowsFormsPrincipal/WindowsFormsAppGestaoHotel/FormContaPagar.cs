@@ -25,12 +25,12 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                PagamentoBLL pagamentoBLL = new PagamentoBLL();
-                pagamentoBindingSource.EndEdit();
+                ContasPagarBLL contasPagarBLL = new ContasPagarBLL();
+                contasPagarBindingSource.EndEdit();
                 if (Id == 0)
-                    pagamentoBLL.Inserir((Pagamento)pagamentoBindingSource.Current);
+                    contasPagarBLL.Inserir((ContasPagar)contasPagarBindingSource.Current);
                 else
-                    pagamentoBLL.Alterar((Pagamento)pagamentoBindingSource.Current);
+                    contasPagarBLL.Alterar((ContasPagar)contasPagarBindingSource.Current);
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 Close();

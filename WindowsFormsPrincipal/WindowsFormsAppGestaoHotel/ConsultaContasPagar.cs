@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,51 @@ namespace WindowsFormsAppGestaoHotel
         public ConsultaContasPagar()
         {
             InitializeComponent();
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (comboBoxBuscar.SelectedIndex)
+                {
+                    case 0:
+                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscaPorTodos();
+                        break;
+                    case 1:
+                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorData(dateTimePickerBuscar.Value);
+                        break;
+                    case 2:
+                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorPagar(true);
+                        break;
+                    case 3:
+                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorPagar(false);
+                        break;
+                    default:
+                        break;
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonAdicionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormContaPagar frm = new FormContaPagar())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
