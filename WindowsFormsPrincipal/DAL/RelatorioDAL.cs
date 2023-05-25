@@ -35,10 +35,11 @@ namespace DAL
                                                     QUARTO.NUMERO,
                                                     FUNCIONARIO.NOME AS Funcionario
                                                     FROM RESERVA
+                                                    INNER JOIN RESERVA_QUARTO RQ ON RESERVA.ID = RQ.ID_RESERVA
                                                     INNER JOIN CLIENTE ON RESERVA.ID_CLIENTE = CLIENTE.ID
                                                     INNER JOIN FUNCIONARIO ON RESERVA.ID_FUNCIONARIO = FUNCIONARIO.ID
                                                     INNER JOIN PAGAMENTO ON RESERVA.ID_PAGAMENTO = PAGAMENTO.ID
-                                                    INNER JOIN QUARTO ON RESERVA.ID_QUARTO = QUARTO.ID";
+                                                    INNER JOIN QUARTO ON RQ.ID_QUARTO = QUARTO.ID";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
@@ -97,10 +98,11 @@ namespace DAL
                                                     QUARTO.NUMERO,
                                                     FUNCIONARIO.NOME AS Funcionario
                                                     FROM RESERVA
+                                                    INNER JOIN RESERVA_QUARTO RQ ON RESERVA.ID = RQ.ID_RESERVA
                                                     INNER JOIN CLIENTE ON RESERVA.ID_CLIENTE = CLIENTE.ID
                                                     INNER JOIN FUNCIONARIO ON RESERVA.ID_FUNCIONARIO = FUNCIONARIO.ID
                                                     INNER JOIN PAGAMENTO ON RESERVA.ID_PAGAMENTO = PAGAMENTO.ID
-                                                    INNER JOIN QUARTO ON RESERVA.ID_QUARTO = QUARTO.ID
+                                                    INNER JOIN QUARTO ON RQ.ID_QUARTO = QUARTO.ID
                                                     WHERE RESERVA.DATA_CHECKIN = @DATA_CHECKIN";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -168,11 +170,12 @@ namespace DAL
                                                     QUARTO.NUMERO,
                                                     FUNCIONARIO.NOME AS Funcionario
                                                     FROM RESERVA
+                                                    INNER JOIN RESERVA_QUARTO RQ ON RESERVA.ID = RQ.ID_RESERVA
                                                     INNER JOIN CLIENTE ON RESERVA.ID_CLIENTE = CLIENTE.ID
                                                     INNER JOIN FUNCIONARIO ON RESERVA.ID_FUNCIONARIO = FUNCIONARIO.ID
                                                     INNER JOIN PAGAMENTO ON RESERVA.ID_PAGAMENTO = PAGAMENTO.ID
-                                                    INNER JOIN QUARTO ON RESERVA.ID_QUARTO = QUARTO.ID
-                                                     WHERE RESERVA.DATA_CHECKOUT = @DATA_CHECKOUT";
+                                                    INNER JOIN QUARTO ON RQ.ID_QUARTO = QUARTO.ID
+                                                    WHERE RESERVA.DATA_CHECKOUT = @DATA_CHECKOUT";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DATA_CHECKOUT", _dataCheckout.Date);
