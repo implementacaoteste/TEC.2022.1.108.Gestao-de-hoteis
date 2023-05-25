@@ -25,12 +25,12 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                ContasPagarBLL contasPagarBLL = new ContasPagarBLL();
+                ContasPagarBLL _contasPagarBLL = new ContasPagarBLL();
                 contasPagarBindingSource.EndEdit();
                 if (Id == 0)
-                    contasPagarBLL.Inserir((ContasPagar)contasPagarBindingSource.Current);
+                    _contasPagarBLL.Inserir((ContasPagar)contasPagarBindingSource.Current);
                 else
-                    contasPagarBLL.Alterar((ContasPagar)contasPagarBindingSource.Current);
+                    _contasPagarBLL.Alterar((ContasPagar)contasPagarBindingSource.Current);
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 Close();
@@ -44,6 +44,47 @@ namespace WindowsFormsAppGestaoHotel
         private void buttonCancelarCadastro_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void buttonSelecionar_cliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using(FormConsultaCliente frm = new FormConsultaCliente())
+                {
+                    frm.ShowDialog();
+                    ((ContasPagar)contasPagarBindingSource.Current).Id_Cliente = frm.Id;
+                    ((ContasPagar)contasPagarBindingSource.Current).Nome_Hospede = frm.NomeHospede;
+                    id_ClienteTextBox.Text = frm.NomeHospede;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonSelecionar_funcionario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using(FormConsultaFuncionario frm =new FormConsultaFuncionario())
+                {
+                    frm.ShowDialog();
+                    ((ContasPagar)contasPagarBindingSource.Current).Id_Funcionario = frm.Id;
+                    ((ContasPagar)contasPagarBindingSource.Current).Nome_funcionario = frm.NomeUsuario;
+                    id_FuncionarioTextBox.Text = frm.NomeUsuario;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FormContaPagar_Load(object sender, EventArgs e)
+        {
+            contasPagarBindingSource.AddNew();
         }
     }
 }
