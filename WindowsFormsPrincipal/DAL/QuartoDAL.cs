@@ -363,12 +363,17 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE,QUARTO.DESCRICAO,QUARTO.VALOR_DIARIA,QUARTO.ANDAR,
-                                    CASE WHEN RESERVA.ID IS NULL THEN '1' ELSE '3' END AS ID_STATUS
+                                    CASE
+	                                    WHEN RESERVA.ID IS NULL THEN '1'
+	                                    WHEN RESERVA.DATA_CHECKIN <= @Data AND RESERVA.DATA_CHECKOUT >= @Data THEN '2'
+	                                    WHEN RESERVA.DT_ENT_RESERVA <= @Data AND RESERVA.DT_SAI_RESERVA >= @Data THEN '3'
+	                                    ELSE '5'
+	                                    END AS ID_STATUS
                                     ,CLASSE.CLASSE FROM QUARTO
-                                    LEFT JOIN RESERVA_QUARTO ON QUARTO.ID = RESERVA_QUARTO.ID_QUARTO
-                                    LEFT JOIN  RESERVA ON RESERVA_QUARTO.ID_RESERVA = RESERVA.ID AND RESERVA.DT_ENT_RESERVA <= @Data AND RESERVA.DT_SAI_RESERVA >= @Data
                                     LEFT JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
-                                    
+                                    LEFT JOIN RESERVA_QUARTO ON QUARTO.ID = RESERVA_QUARTO.ID_QUARTO
+                                    LEFT JOIN  RESERVA ON RESERVA_QUARTO.ID_RESERVA = RESERVA.ID
+                                    LEFT JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
                                     WHERE QUARTO.ID_STATUS <> 4";
 
                 cmd.CommandType = System.Data.CommandType.Text;
