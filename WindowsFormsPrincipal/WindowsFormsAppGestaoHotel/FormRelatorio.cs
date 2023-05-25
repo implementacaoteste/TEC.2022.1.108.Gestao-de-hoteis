@@ -20,7 +20,16 @@ namespace WindowsFormsAppGestaoHotel
 
         private void FormRelatorio_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                comboBoxBuscar.SelectedIndex = 0;
+                relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckin(dateTimePicker1.Value.Date);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Close();
+            }
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
