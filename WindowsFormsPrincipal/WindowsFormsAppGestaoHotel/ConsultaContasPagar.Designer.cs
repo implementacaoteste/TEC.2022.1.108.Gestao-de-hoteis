@@ -336,6 +336,7 @@
             // pagarCheckBox
             // 
             this.pagarCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.contasPagarBindingSource, "Pagar", true));
+            this.pagarCheckBox.Enabled = false;
             this.pagarCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pagarCheckBox.Location = new System.Drawing.Point(730, 23);
             this.pagarCheckBox.Name = "pagarCheckBox";
