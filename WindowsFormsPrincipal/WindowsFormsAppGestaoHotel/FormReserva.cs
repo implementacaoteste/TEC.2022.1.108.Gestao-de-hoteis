@@ -35,9 +35,15 @@ namespace WindowsFormsAppGestaoHotel
                 reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
 
                 if (reservaBindingSource.Count == 0)
+                {
                     labelRegistro.Visible = true;
+                    listReserva1.Visible = false;
+                }
                 else
+                {
+                    listReserva1.Visible = true;
                     labelRegistro.Visible = false;
+                }
             }
             catch (Exception ex)
             {
@@ -96,9 +102,15 @@ namespace WindowsFormsAppGestaoHotel
                 }
 
                 if (reservaBindingSource.Count == 0)
+                {
                     labelRegistro.Visible = true;
+                    listReserva1.Visible = false;
+                }
                 else
+                {
+                    listReserva1.Visible = true;
                     labelRegistro.Visible = false;
+                }
 
             }
             catch (Exception ex)
@@ -147,9 +159,15 @@ namespace WindowsFormsAppGestaoHotel
                 }
 
                 if (reservaBindingSource.Count == 0)
+                {
                     labelRegistro.Visible = true;
+                    listReserva1.Visible = false;
+                }
                 else
+                {
+                    listReserva1.Visible = true;
                     labelRegistro.Visible = false;
+                }
 
             }
             catch (Exception ex)

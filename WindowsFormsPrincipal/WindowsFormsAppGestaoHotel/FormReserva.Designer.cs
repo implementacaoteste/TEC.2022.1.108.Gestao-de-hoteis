@@ -40,13 +40,7 @@
             this.buttonCadastrarReserva = new System.Windows.Forms.Button();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.listReserva1 = new WindowsFormsAppGestaoHotel.ListReserva();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
@@ -79,7 +73,7 @@
             // 
             this.labelRegistro.AutoSize = true;
             this.labelRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistro.Location = new System.Drawing.Point(276, 57);
+            this.labelRegistro.Location = new System.Drawing.Point(3, 0);
             this.labelRegistro.Name = "labelRegistro";
             this.labelRegistro.Size = new System.Drawing.Size(217, 20);
             this.labelRegistro.TabIndex = 5;
@@ -88,22 +82,17 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.groupBox1);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox4);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox3);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox5);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox7);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox6);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox8);
+            this.flowLayoutPanel1.Controls.Add(this.labelRegistro);
+            this.flowLayoutPanel1.Controls.Add(this.listReserva1);
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(280, 80);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(280, 57);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(618, 475);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(772, 475);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(209, 315);
+            this.groupBox2.Location = new System.Drawing.Point(482, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(0, 0);
             this.groupBox2.TabIndex = 0;
@@ -114,7 +103,7 @@
             // 
             this.flowLayoutPanelQuartos.Location = new System.Drawing.Point(15, 231);
             this.flowLayoutPanelQuartos.Name = "flowLayoutPanelQuartos";
-            this.flowLayoutPanelQuartos.Size = new System.Drawing.Size(216, 248);
+            this.flowLayoutPanelQuartos.Size = new System.Drawing.Size(216, 301);
             this.flowLayoutPanelQuartos.TabIndex = 7;
             // 
             // buttonBuscarTipo
@@ -158,76 +147,20 @@
             // 
             this.quartoBindingSource.DataSource = typeof(Models.Quarto);
             // 
-            // groupBox1
+            // listReserva1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 150);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "RESERVA 1";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(415, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 150);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "RESERVA 3";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Location = new System.Drawing.Point(209, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 150);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "RESERVA 2";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Location = new System.Drawing.Point(3, 159);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 150);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "RESERVA 4";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Location = new System.Drawing.Point(415, 159);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(200, 150);
-            this.groupBox6.TabIndex = 1;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "RESERVA 6";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Location = new System.Drawing.Point(209, 159);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(200, 150);
-            this.groupBox7.TabIndex = 1;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "RESERVA 5";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Location = new System.Drawing.Point(3, 315);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(200, 150);
-            this.groupBox8.TabIndex = 1;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "RESERVA 7";
+            this.listReserva1.BackColor = System.Drawing.Color.White;
+            this.listReserva1.Location = new System.Drawing.Point(226, 3);
+            this.listReserva1.Name = "listReserva1";
+            this.listReserva1.Size = new System.Drawing.Size(250, 150);
+            this.listReserva1.TabIndex = 0;
             // 
             // FormReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 567);
+            this.ClientSize = new System.Drawing.Size(1064, 567);
             this.Controls.Add(this.flowLayoutPanelQuartos);
-            this.Controls.Add(this.labelRegistro);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.comboBoxBuscarTipo);
             this.Controls.Add(this.monthCalendar);
@@ -237,7 +170,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(937, 606);
+            this.MinimumSize = new System.Drawing.Size(1080, 606);
             this.Name = "FormReserva";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -245,10 +178,10 @@
             this.Load += new System.EventHandler(this.FormReserva_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormReserva_KeyDown);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -263,12 +196,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelQuartos;
         private System.Windows.Forms.BindingSource quartoBindingSource;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.GroupBox groupBox8;
+        private ListReserva listReserva1;
     }
 }
