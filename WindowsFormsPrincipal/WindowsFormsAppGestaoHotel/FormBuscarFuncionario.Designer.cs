@@ -849,6 +849,7 @@
 
         #endregion
 
+
         private System.Windows.Forms.Button buttonBuscarFuncionario;
         private System.Windows.Forms.Button buttonAdicionarFuncionario;
         private System.Windows.Forms.Button buttonExcluirFuncionario;
