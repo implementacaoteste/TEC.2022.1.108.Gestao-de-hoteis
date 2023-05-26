@@ -144,12 +144,10 @@
             this.MinimumSize = new System.Drawing.Size(468, 329);
             this.Name = "FormSobre";
             this.Text = "Sobre";
-            this.Load += new System.EventHandler(this.FormSobre_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormSobre_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

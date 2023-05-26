@@ -62,5 +62,23 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ConsultaContasPagar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonBuscar_Click(null, null);
+            }
+
+            if(e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+
+            if(e.Control && e.KeyCode == Keys.A)
+            {
+                buttonAdicionar_Click(null, null);
+            }
+        }
     }
 }

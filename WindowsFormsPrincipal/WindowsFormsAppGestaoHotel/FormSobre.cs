@@ -29,7 +29,7 @@ namespace WindowsFormsPrincipal1
                 Close();
             }
 
-            if (e.Control && e.KeyCode == Keys.H)
+            if (e.KeyCode == Keys.F1)
             {
                 new FormLogin().linkLabelsuporte_LinkClicked(null, null);
             }
@@ -38,11 +38,6 @@ namespace WindowsFormsPrincipal1
         private void buttonSuporte_Click(object sender, EventArgs e)
         {
             new FormLogin().linkLabelsuporte_LinkClicked(null, null);
-        }
-
-        private void FormSobre_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

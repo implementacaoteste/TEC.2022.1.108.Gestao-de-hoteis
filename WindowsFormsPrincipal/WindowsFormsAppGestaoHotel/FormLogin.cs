@@ -63,7 +63,7 @@ namespace WindowsFormsPrincipal1
                 Application.Exit();
             }
 
-            if (e.Control && e.KeyCode == Keys.H)
+            if (e.KeyCode == Keys.F1)
             {
                 linkLabelsuporte_LinkClicked(null, null);
             }
@@ -72,11 +72,6 @@ namespace WindowsFormsPrincipal1
         public void linkLabelsuporte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://rangersonti.github.io/hotelogix-suporte/index.html");
-        }
-
-        private void buttonSuporte_Click(object sender, EventArgs e)
-        {
-            linkLabelsuporte_LinkClicked(null, null);
         }
 
         private void buttonsSuporte_Click(object sender, EventArgs e)
