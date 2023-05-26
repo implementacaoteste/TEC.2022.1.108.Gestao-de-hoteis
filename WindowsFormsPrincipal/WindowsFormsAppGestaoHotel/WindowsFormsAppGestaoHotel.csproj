@@ -378,6 +378,10 @@
       <Project>{61de0591-d0ba-4ba3-a567-e6db3fcf5981}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Infra\Infra.csproj">
+      <Project>{21d3a15d-fcd0-4586-a1f8-f8a2f25a07e0}</Project>
+      <Name>Infra</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{794f5b7f-8322-4a16-9ef2-e359a1c722ba}</Project>
       <Name>Models</Name>
