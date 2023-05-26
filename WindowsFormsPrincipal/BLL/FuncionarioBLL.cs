@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Infra;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,10 @@ namespace BLL
     {
         public void Inserir(Funcionario _funcionario, string _confirmacaoSenha)
         {
+           
             ValidarPermissao(2);
             ValidarDados(_funcionario, _confirmacaoSenha);
+            _funcionario.Senha = new Criptografia().CriptografarSenha(_funcionario.Senha);
             new FuncionarioDAL().Inserir(_funcionario);
         }
         public void Alterar(Funcionario _funcionario, string _confirmacaoSenha)
@@ -96,7 +99,7 @@ namespace BLL
         public void Autenticar(string _NomeUsuario, string _Senha)
         {
             Funcionario funcionario = new FuncionarioDAL().BuscarPorNomeUsuario(_NomeUsuario);
-            if (_Senha==funcionario.Senha && funcionario.Ativo)
+            if (new Criptografia().CriptografarSenha(_Senha) == funcionario.Senha && funcionario.Ativo)
             {
                 Constante.IdLogado = funcionario.Id;
                 Constante.NomeUsuario = funcionario.NomeUsuario;
