@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppGestaoHotel", "WindowsFormsAppGestaoHotel\WindowsFormsAppGestaoHotel.csproj", "{F553A28C-B657-4ADB-9BB1-DCDF67E1C9F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F553A28C-B657-4ADB-9BB1-DCDF67E1C9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F553A28C-B657-4ADB-9BB1-DCDF67E1C9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F553A28C-B657-4ADB-9BB1-DCDF67E1C9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
