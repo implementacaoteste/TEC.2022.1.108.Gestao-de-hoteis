@@ -219,6 +219,7 @@
             | System.Windows.Forms.Keys.F)));
             this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(372, 30);
             this.contasAReceberToolStripMenuItem.Text = "Contas a Receber";
+            this.contasAReceberToolStripMenuItem.Click += new System.EventHandler(this.contasAReceberToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -258,7 +259,7 @@
             // 
             this.pictureBoxfundo.BackColor = System.Drawing.Color.Black;
             this.pictureBoxfundo.Location = new System.Drawing.Point(1303, 220);
-            this.pictureBoxfundo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxfundo.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxfundo.Name = "pictureBoxfundo";
             this.pictureBoxfundo.Size = new System.Drawing.Size(45, 42);
             this.pictureBoxfundo.TabIndex = 16;
@@ -286,7 +287,7 @@
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(523, 39);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(469, 450);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(469, 450);
@@ -313,7 +314,7 @@
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(1239, 42);
-            this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
             this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(176, 225);
             this.pictureBoxCaixaLogin.TabIndex = 8;
@@ -324,7 +325,7 @@
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(1236, 39);
-            this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxCaixaLogin2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
             this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(181, 230);
             this.pictureBoxCaixaLogin2.TabIndex = 7;
