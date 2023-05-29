@@ -54,7 +54,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @" SELECT CONTAS_A_RECEBER.ID,  CONTAS_A_RECEBER.DESCRICAO,  CONTAS_A_RECEBER.VALOR,  CONTAS_A_RECEBER.ID_CLIENTE,  
-                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME, CLIENTE.NOME
+                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME FUNCIONARIO_NOME, CLIENTE.NOME CLIENTE_NOME
                                     FROM CONTAS_A_RECEBER                                    
                                     INNER JOIN FUNCIONARIO ON CONTAS_A_RECEBER.ID_FUNCIONARIO = FUNCIONARIO.ID
                                     INNER JOIN CLIENTE ON CONTAS_A_RECEBER.ID_CLIENTE = CLIENTE.ID";
@@ -82,7 +82,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos as contas a pagar.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as contas a receber.", ex);
             }
             finally
             {
@@ -100,7 +100,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @" SELECT CONTAS_A_RECEBER.ID,  CONTAS_A_RECEBER.DESCRICAO,  CONTAS_A_RECEBER.VALOR,  CONTAS_A_RECEBER.ID_CLIENTE,  
-                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME, CLIENTE.NOME
+                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME FUNCIONARIO_NOME , CLIENTE.NOME CLIENTE_NOME
                                     FROM CONTAS_A_RECEBER                                    
                                     INNER JOIN FUNCIONARIO ON CONTAS_A_RECEBER.ID_FUNCIONARIO = FUNCIONARIO.ID
                                     INNER JOIN CLIENTE ON CONTAS_A_RECEBER.ID_CLIENTE = CLIENTE.ID
@@ -149,7 +149,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @" SELECT CONTAS_A_RECEBER.ID,  CONTAS_A_RECEBER.DESCRICAO,  CONTAS_A_RECEBER.VALOR,  CONTAS_A_RECEBER.ID_CLIENTE,  
-                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME, CLIENTE.NOME
+                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME FUNCIONARIO_NOME, CLIENTE.NOME CLIENTE_NOME
                                     FROM CONTAS_A_RECEBER                                    
                                     INNER JOIN FUNCIONARIO ON CONTAS_A_RECEBER.ID_FUNCIONARIO = FUNCIONARIO.ID
                                     INNER JOIN CLIENTE ON CONTAS_A_RECEBER.ID_CLIENTE = CLIENTE.ID
