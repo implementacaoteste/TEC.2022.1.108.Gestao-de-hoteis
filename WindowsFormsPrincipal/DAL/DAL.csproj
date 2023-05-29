@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ClasseDAL.cs" />
     <Compile Include="ContasPagarDAL.cs" />
+    <Compile Include="ContasReceberDAL.cs" />
     <Compile Include="DiariaDAL.cs" />
     <Compile Include="PagamentoDAL.cs" />
     <Compile Include="QuartoDAL.cs" />
