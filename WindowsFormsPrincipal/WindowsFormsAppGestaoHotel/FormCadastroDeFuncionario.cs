@@ -28,7 +28,7 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show("Registro salvo com sucesso!");
                 //Close();
             }
-            catch (Exception ex)
+           catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

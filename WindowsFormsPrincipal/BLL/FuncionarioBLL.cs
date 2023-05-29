@@ -20,6 +20,7 @@ namespace BLL
         {
             ValidarPermissao(3);
             ValidarDados(_funcionario,_confirmacaoSenha);
+            _funcionario.Senha = new Criptografia().CriptografarSenha(_funcionario.Senha);
             new FuncionarioDAL().Alterar(_funcionario);
         }
         public void Excluir(int _Id)
