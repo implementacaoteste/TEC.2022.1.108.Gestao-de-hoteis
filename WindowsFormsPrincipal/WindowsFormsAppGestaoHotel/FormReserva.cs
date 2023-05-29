@@ -23,9 +23,9 @@ namespace WindowsFormsAppGestaoHotel
 
         private void FormReserva_Load(object sender, EventArgs e)
         {
-            int qtd_quartos;
+            //int qtd_quartos;
             quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
-            qtd_quartos = quartoBindingSource.Count;
+            //qtd_quartos = quartoBindingSource.Count;
 
             addLabel();
 
@@ -37,11 +37,10 @@ namespace WindowsFormsAppGestaoHotel
                 if (reservaBindingSource.Count == 0)
                 {
                     labelRegistro.Visible = true;
-                    listReserva1.Visible = false;
                 }
                 else
                 {
-                    listReserva1.Visible = true;
+                    popularItems();
                     labelRegistro.Visible = false;
                 }
             }
@@ -49,6 +48,24 @@ namespace WindowsFormsAppGestaoHotel
             {
                 MessageBox.Show(ex.Message);
                 Close();
+            }
+        }
+
+        void popularItems()
+        {
+            ListReserva _listReserva;
+            flowLayoutPanelReserva.Controls.Clear();
+
+            foreach (Reserva item in reservaBindingSource)
+            {
+                _listReserva = new ListReserva();
+                _listReserva.Numero = item.Numero_Quarto.ToString();
+                _listReserva.Classe = item.Tipo_Quarto.ToString();
+                _listReserva.Hospede = item.Nome_Hospede.ToString();
+                _listReserva.DataCheckin = item.Data_Checkin.ToShortDateString();
+                _listReserva.DataCheckout = item.Data_Checkout.ToShortDateString();
+
+                flowLayoutPanelReserva.Controls.Add(_listReserva);
             }
         }
 
@@ -103,12 +120,12 @@ namespace WindowsFormsAppGestaoHotel
 
                 if (reservaBindingSource.Count == 0)
                 {
+                    flowLayoutPanelReserva.Controls.Clear();
                     labelRegistro.Visible = true;
-                    listReserva1.Visible = false;
                 }
                 else
                 {
-                    listReserva1.Visible = true;
+                    popularItems();
                     labelRegistro.Visible = false;
                 }
 
@@ -160,12 +177,12 @@ namespace WindowsFormsAppGestaoHotel
 
                 if (reservaBindingSource.Count == 0)
                 {
+                    flowLayoutPanelReserva.Controls.Clear();
                     labelRegistro.Visible = true;
-                    listReserva1.Visible = false;
                 }
                 else
                 {
-                    listReserva1.Visible = true;
+                    popularItems();
                     labelRegistro.Visible = false;
                 }
 
