@@ -288,6 +288,8 @@ DECLARE
 END
 ------------------------------DROP TRIGGER----------------------------------
 DROP TRIGGER QUARTO_DIARIA
+----------------------------------------------------------------------------
 
+UPDATE FUNCIONARIO SET SENHA = 'ojDVM0EvoL5YPCtqczyc7jZbhkcJPAPSOBW2t1Mjmqo=' WHERE ID = 1
 
 
