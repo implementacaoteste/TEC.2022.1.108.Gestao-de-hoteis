@@ -16,5 +16,61 @@ namespace WindowsFormsAppGestaoHotel
         {
             InitializeComponent();
         }
+
+        private void pictureBoxClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja cancelar esta reserva?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                return;
+
+            ListReserva _listReserva = this;
+            _listReserva.Visible = false;
+            
+        }
+
+
+        #region Getter & Setter For Labels
+
+        private string _numero;
+        private string _classe;
+        private string _hospede;
+        private string _dataCheckin;
+        private string _dataCheckout;
+
+        [Category("Custom Props")]
+        public string Numero
+        { 
+            get { return _numero; }
+            set { _numero = value; labelNumeroQuarto.Text = value; }
+        }
+
+        [Category("Custom Props")]
+        public string Classe
+        {
+            get { return _classe; }
+            set { _classe = value; labelTipoQuarto.Text = value; }
+        }
+
+        [Category("Custom Props")]
+        public string Hospede
+        {
+            get { return _hospede; }
+            set { _hospede = value; labelNomeHospede.Text = value; }
+        }
+
+        [Category("Custom Props")]
+        public string DataCheckin
+        {
+            get { return _dataCheckin; }
+            set { _dataCheckin = value; labelDataCheckIn.Text = value; }
+        }
+
+        [Category("Custom Props")]
+        public string DataCheckout
+        {
+            get { return _dataCheckout; }
+            set { _dataCheckout = value; labelDataCheckOut.Text = value; }
+        }
+
+        #endregion
     }
 }

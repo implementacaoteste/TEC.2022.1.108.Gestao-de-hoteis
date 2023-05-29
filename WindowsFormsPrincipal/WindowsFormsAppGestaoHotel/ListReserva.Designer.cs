@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListReserva));
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.labelQuarto_Classe = new System.Windows.Forms.Label();
+            this.labelNumeroQuarto = new System.Windows.Forms.Label();
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.labelNomeHospede = new System.Windows.Forms.Label();
             this.labelDataCheckIn = new System.Windows.Forms.Label();
@@ -38,6 +38,7 @@
             this.pictureBoxCheckIn = new System.Windows.Forms.PictureBox();
             this.pictureBoxCheckOut = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelTipoQuarto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckIn)).BeginInit();
@@ -55,15 +56,15 @@
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
-            // labelQuarto_Classe
+            // labelNumeroQuarto
             // 
-            this.labelQuarto_Classe.AutoSize = true;
-            this.labelQuarto_Classe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelQuarto_Classe.Location = new System.Drawing.Point(74, 42);
-            this.labelQuarto_Classe.Name = "labelQuarto_Classe";
-            this.labelQuarto_Classe.Size = new System.Drawing.Size(107, 20);
-            this.labelQuarto_Classe.TabIndex = 1;
-            this.labelQuarto_Classe.Text = "01 (Standard)";
+            this.labelNumeroQuarto.AutoSize = true;
+            this.labelNumeroQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelNumeroQuarto.Location = new System.Drawing.Point(74, 42);
+            this.labelNumeroQuarto.Name = "labelNumeroQuarto";
+            this.labelNumeroQuarto.Size = new System.Drawing.Size(27, 20);
+            this.labelNumeroQuarto.TabIndex = 1;
+            this.labelNumeroQuarto.Text = "01";
             // 
             // pictureBoxClose
             // 
@@ -80,6 +81,7 @@
             this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxClose.TabIndex = 7;
             this.pictureBoxClose.TabStop = false;
+            this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
             // 
             // labelNomeHospede
             // 
@@ -149,7 +151,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(200, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(200, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(22, 24);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(22, 24);
@@ -159,6 +161,16 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // labelTipoQuarto
+            // 
+            this.labelTipoQuarto.AutoSize = true;
+            this.labelTipoQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelTipoQuarto.Location = new System.Drawing.Point(107, 42);
+            this.labelTipoQuarto.Name = "labelTipoQuarto";
+            this.labelTipoQuarto.Size = new System.Drawing.Size(85, 20);
+            this.labelTipoQuarto.TabIndex = 1;
+            this.labelTipoQuarto.Text = "(Standard)";
+            // 
             // ListReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,7 +178,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.labelDataCheckOut);
             this.Controls.Add(this.labelDataCheckIn);
-            this.Controls.Add(this.labelQuarto_Classe);
+            this.Controls.Add(this.labelTipoQuarto);
+            this.Controls.Add(this.labelNumeroQuarto);
             this.Controls.Add(this.labelNomeHospede);
             this.Controls.Add(this.pictureBoxCheckOut);
             this.Controls.Add(this.pictureBoxCheckIn);
@@ -188,7 +201,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Label labelQuarto_Classe;
+        private System.Windows.Forms.Label labelNumeroQuarto;
         private System.Windows.Forms.PictureBox pictureBoxClose;
         private System.Windows.Forms.Label labelNomeHospede;
         private System.Windows.Forms.Label labelDataCheckIn;
@@ -196,5 +209,6 @@
         private System.Windows.Forms.PictureBox pictureBoxCheckIn;
         private System.Windows.Forms.PictureBox pictureBoxCheckOut;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelTipoQuarto;
     }
 }
