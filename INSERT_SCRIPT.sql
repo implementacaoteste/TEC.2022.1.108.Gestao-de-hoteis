@@ -58,7 +58,7 @@ INSERT INTO PAGAMENTO VALUES('Dinheiro')
 INSERT INTO PAGAMENTO VALUES('PIX')
 
 --FUNCIONARIO  --2º
-INSERT INTO FUNCIONARIO VALUES('08432576522','Administrador','admin@gmail.com','63984581203','Rua A1, 010','admin','admin',2,1,'1992-01-03')
+INSERT INTO FUNCIONARIO VALUES('08432576522','Administrador','admin@gmail.com','63984581203','Rua A1, 010','admin','ojDVM0EvoL5YPCtqczyc7jZbhkcJPAPSOBW2t1Mjmqo=',2,1,'1992-01-03')
 INSERT INTO FUNCIONARIO VALUES('94587124563','Laila Silva','lailassantos@gmail.com','63991587425','Avenida dos Cedros, 45','Laila Santos','5wOuJNB/JeBYF0NW1ItnN6f15UF5Ksz7hgkksA36snI=',1,1,'1994-04-19')
 INSERT INTO FUNCIONARIO VALUES('62518745259','Roziane Alves Santos','rozialvess@hotelogix.com','98995632547','Rua das Capivaras, 915','Roziane Alves','rozi3142',1,1,'1999-08-29')
 
@@ -288,8 +288,6 @@ DECLARE
 END
 ------------------------------DROP TRIGGER----------------------------------
 DROP TRIGGER QUARTO_DIARIA
-----------------------------------------------------------------------------
 
-UPDATE FUNCIONARIO SET SENHA = 'ojDVM0EvoL5YPCtqczyc7jZbhkcJPAPSOBW2t1Mjmqo=' WHERE ID = 1
 
 
