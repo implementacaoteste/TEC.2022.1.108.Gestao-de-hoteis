@@ -23,7 +23,7 @@ namespace WindowsFormsPrincipal1
                 if (Id == 0)
                     funcionarioBLL.Inserir((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
                 else
-                    funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
+                    funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text, senhaTextBox.Text);
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 //Close();

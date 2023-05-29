@@ -75,7 +75,7 @@
             descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             descricaoLabel.Location = new System.Drawing.Point(202, 69);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(72, 16);
+            descricaoLabel.Size = new System.Drawing.Size(80, 18);
             descricaoLabel.TabIndex = 0;
             descricaoLabel.Text = "Descrição:";
             // 
@@ -85,7 +85,7 @@
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idLabel.Location = new System.Drawing.Point(1, 26);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(54, 16);
+            idLabel.Size = new System.Drawing.Size(60, 18);
             idLabel.TabIndex = 2;
             idLabel.Text = "Código:";
             // 
@@ -95,7 +95,7 @@
             nome_funcionarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nome_funcionarioLabel.Location = new System.Drawing.Point(397, 26);
             nome_funcionarioLabel.Name = "nome_funcionarioLabel";
-            nome_funcionarioLabel.Size = new System.Drawing.Size(115, 16);
+            nome_funcionarioLabel.Size = new System.Drawing.Size(130, 18);
             nome_funcionarioLabel.TabIndex = 4;
             nome_funcionarioLabel.Text = "Nome funcionario:";
             // 
@@ -105,7 +105,7 @@
             nome_HospedeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nome_HospedeLabel.Location = new System.Drawing.Point(134, 26);
             nome_HospedeLabel.Name = "nome_HospedeLabel";
-            nome_HospedeLabel.Size = new System.Drawing.Size(67, 16);
+            nome_HospedeLabel.Size = new System.Drawing.Size(72, 18);
             nome_HospedeLabel.TabIndex = 6;
             nome_HospedeLabel.Text = "Hospede:";
             // 
@@ -115,7 +115,7 @@
             valorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             valorLabel.Location = new System.Drawing.Point(615, 69);
             valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(42, 16);
+            valorLabel.Size = new System.Drawing.Size(46, 18);
             valorLabel.TabIndex = 13;
             valorLabel.Text = "Valor:";
             // 
@@ -125,7 +125,7 @@
             data_VencimentoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             data_VencimentoLabel1.Location = new System.Drawing.Point(1, 69);
             data_VencimentoLabel1.Name = "data_VencimentoLabel1";
-            data_VencimentoLabel1.Size = new System.Drawing.Size(81, 16);
+            data_VencimentoLabel1.Size = new System.Drawing.Size(90, 18);
             data_VencimentoLabel1.TabIndex = 15;
             data_VencimentoLabel1.Text = "Vencimento:";
             // 
@@ -201,6 +201,7 @@
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 115;
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -232,7 +233,7 @@
             this.comboBoxBuscar.Location = new System.Drawing.Point(34, 101);
             this.comboBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBuscar.Name = "comboBoxBuscar";
-            this.comboBoxBuscar.Size = new System.Drawing.Size(138, 26);
+            this.comboBoxBuscar.Size = new System.Drawing.Size(138, 28);
             this.comboBoxBuscar.TabIndex = 2;
             // 
             // dateTimePickerBuscar
@@ -243,7 +244,7 @@
             this.dateTimePickerBuscar.Location = new System.Drawing.Point(34, 68);
             this.dateTimePickerBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerBuscar.Name = "dateTimePickerBuscar";
-            this.dateTimePickerBuscar.Size = new System.Drawing.Size(109, 26);
+            this.dateTimePickerBuscar.Size = new System.Drawing.Size(109, 28);
             this.dateTimePickerBuscar.TabIndex = 1;
             // 
             // buttonBuscar
@@ -252,7 +253,7 @@
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscar.Image")));
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(598, 97);
+            this.buttonBuscar.Location = new System.Drawing.Point(592, 97);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(101, 33);
@@ -268,10 +269,10 @@
             this.buttonAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionar.Image")));
             this.buttonAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdicionar.Location = new System.Drawing.Point(703, 97);
+            this.buttonAdicionar.Location = new System.Drawing.Point(697, 97);
             this.buttonAdicionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionar.Name = "buttonAdicionar";
-            this.buttonAdicionar.Size = new System.Drawing.Size(116, 33);
+            this.buttonAdicionar.Size = new System.Drawing.Size(124, 33);
             this.buttonAdicionar.TabIndex = 4;
             this.buttonAdicionar.Text = "Adicionar";
             this.buttonAdicionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -320,7 +321,7 @@
             this.data_VencimentoTextBox.Location = new System.Drawing.Point(88, 66);
             this.data_VencimentoTextBox.Name = "data_VencimentoTextBox";
             this.data_VencimentoTextBox.ReadOnly = true;
-            this.data_VencimentoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.data_VencimentoTextBox.Size = new System.Drawing.Size(100, 24);
             this.data_VencimentoTextBox.TabIndex = 16;
             // 
             // valorTextBox
@@ -330,7 +331,7 @@
             this.valorTextBox.Location = new System.Drawing.Point(663, 66);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.ReadOnly = true;
-            this.valorTextBox.Size = new System.Drawing.Size(100, 22);
+            this.valorTextBox.Size = new System.Drawing.Size(100, 24);
             this.valorTextBox.TabIndex = 14;
             // 
             // pagarCheckBox
@@ -352,7 +353,7 @@
             this.nome_HospedeTextBox.Location = new System.Drawing.Point(207, 23);
             this.nome_HospedeTextBox.Name = "nome_HospedeTextBox";
             this.nome_HospedeTextBox.ReadOnly = true;
-            this.nome_HospedeTextBox.Size = new System.Drawing.Size(167, 22);
+            this.nome_HospedeTextBox.Size = new System.Drawing.Size(167, 24);
             this.nome_HospedeTextBox.TabIndex = 7;
             // 
             // nome_funcionarioTextBox
@@ -362,7 +363,7 @@
             this.nome_funcionarioTextBox.Location = new System.Drawing.Point(518, 23);
             this.nome_funcionarioTextBox.Name = "nome_funcionarioTextBox";
             this.nome_funcionarioTextBox.ReadOnly = true;
-            this.nome_funcionarioTextBox.Size = new System.Drawing.Size(176, 22);
+            this.nome_funcionarioTextBox.Size = new System.Drawing.Size(176, 24);
             this.nome_funcionarioTextBox.TabIndex = 5;
             // 
             // idTextBox
@@ -372,7 +373,7 @@
             this.idTextBox.Location = new System.Drawing.Point(61, 23);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(53, 22);
+            this.idTextBox.Size = new System.Drawing.Size(53, 24);
             this.idTextBox.TabIndex = 3;
             // 
             // descricaoTextBox
@@ -382,7 +383,7 @@
             this.descricaoTextBox.Location = new System.Drawing.Point(280, 66);
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.ReadOnly = true;
-            this.descricaoTextBox.Size = new System.Drawing.Size(315, 22);
+            this.descricaoTextBox.Size = new System.Drawing.Size(315, 24);
             this.descricaoTextBox.TabIndex = 1;
             // 
             // ConsultaContasPagar

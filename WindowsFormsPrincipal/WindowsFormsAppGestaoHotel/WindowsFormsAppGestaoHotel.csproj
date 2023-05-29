@@ -373,6 +373,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hotelogix.ico" />
+    <None Include="Resources\search_bk1.png" />
+    <None Include="Resources\search_bk.png" />
+    <None Include="Resources\delete_bk.png" />
+    <None Include="Resources\add_bk.png" />
     <None Include="Resources\check1.png" />
     <None Include="Resources\check.png" />
     <None Include="Resources\select1.png" />

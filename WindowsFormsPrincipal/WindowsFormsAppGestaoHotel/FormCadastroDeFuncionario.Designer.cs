@@ -250,6 +250,7 @@
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.senhaTextBox.MinimumSize = new System.Drawing.Size(154, 30);
             this.senhaTextBox.Name = "senhaTextBox";
+            this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.Size = new System.Drawing.Size(154, 27);
             this.senhaTextBox.TabIndex = 19;
             // 
@@ -304,6 +305,7 @@
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxConfirmarSenha.MinimumSize = new System.Drawing.Size(154, 30);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
+            this.textBoxConfirmarSenha.PasswordChar = '*';
             this.textBoxConfirmarSenha.Size = new System.Drawing.Size(154, 27);
             this.textBoxConfirmarSenha.TabIndex = 21;
             // 
@@ -336,7 +338,7 @@
             this.cPFMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "CPF", true));
             this.cPFMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cPFMaskedTextBox.Location = new System.Drawing.Point(332, 94);
-            this.cPFMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cPFMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cPFMaskedTextBox.Mask = "000,000,000-00";
             this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
             this.cPFMaskedTextBox.Size = new System.Drawing.Size(134, 27);
@@ -348,7 +350,7 @@
             this.celularMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Celular", true));
             this.celularMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.celularMaskedTextBox.Location = new System.Drawing.Point(477, 94);
-            this.celularMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.celularMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.celularMaskedTextBox.Mask = "(99) 00000-0000";
             this.celularMaskedTextBox.Name = "celularMaskedTextBox";
             this.celularMaskedTextBox.Size = new System.Drawing.Size(138, 27);
@@ -360,7 +362,7 @@
             this.data_nascimentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.data_nascimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(620, 94);
-            this.data_nascimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_nascimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(146, 27);
             this.data_nascimentoDateTimePicker.TabIndex = 8;
@@ -397,7 +399,7 @@
             this.Controls.Add(this.buttonSalvarFuncionario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(819, 396);
             this.MinimizeBox = false;
