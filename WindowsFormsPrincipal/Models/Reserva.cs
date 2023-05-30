@@ -28,8 +28,8 @@ namespace Models
         public double Valor_Restante { get; set; }
         public DateTime Data_Ent_Reserva { get; set; }
         public DateTime Data_Sai_Reserva { get; set; }
-        public DateTime Data_Checkin { get; set; }
-        public DateTime Data_Checkout { get; set; }
+        public DateTime? Data_Checkin { get; set; }
+        public DateTime? Data_Checkout { get; set; }
         public DateTime Data_Reserva { get; set; }
         public List<Quarto> Quartos { get; set; }
         public Reserva()
