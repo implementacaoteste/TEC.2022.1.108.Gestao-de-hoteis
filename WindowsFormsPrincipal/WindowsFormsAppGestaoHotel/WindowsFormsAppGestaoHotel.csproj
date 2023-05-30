@@ -215,6 +215,18 @@
     <Compile Include="FormReserva.Designer.cs">
       <DependentUpon>FormReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReservaCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReservaCheckIn.Designer.cs">
+      <DependentUpon>FormReservaCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReservaCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReservaCheckOut.Designer.cs">
+      <DependentUpon>FormReservaCheckOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSobre.cs">
       <SubType>Form</SubType>
     </Compile>
