@@ -28,8 +28,8 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", Constante.IdLogado);
                 cmd.Parameters.AddWithValue("@OBS_RESERVA", _reserva.Obs_Reserva);
                 cmd.Parameters.AddWithValue("@VALOR_ENTRADA", _reserva.Valor_Entrada);
-                cmd.Parameters.AddWithValue("@DATA_CHECKIN", _reserva.Data_Checkin);
-                cmd.Parameters.AddWithValue("DATA_CHECKOUT", _reserva.Data_Checkout);
+                cmd.Parameters.AddWithValue("@DATA_CHECKIN", DBNull.Value);
+                cmd.Parameters.AddWithValue("DATA_CHECKOUT", DBNull.Value);
                 cmd.Parameters.AddWithValue("@OBS_CHECKIN", _reserva.Obs_Checkin);
                 cmd.Parameters.AddWithValue("@OBS_CHECKOUT", _reserva.Obs_Checkout);
                 cmd.Parameters.AddWithValue("@DATA_RESERVA", _reserva.Data_Reserva);
@@ -264,7 +264,7 @@ namespace DAL
 									INNER JOIN FUNCIONARIO F ON R.ID_FUNCIONARIO = F.ID
 									INNER JOIN CLASSE CL ON Q.ID_CLASSE = CL.ID
 									INNER JOIN PAGAMENTO P ON R.ID_PAGAMENTO = P.ID
-                                    WHERE R.DATA_CHECKIN BETWEEN @DATA_INICIAL AND @DATA_FINAL";
+                                    WHERE R.DT_ENT_RESERVA BETWEEN @DATA_INICIAL AND @DATA_FINAL";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DATA_INICIAL", _dataInicial.Date);
                 cmd.Parameters.AddWithValue("@DATA_FINAL", _dataFinal.Date);
@@ -293,8 +293,8 @@ namespace DAL
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
                         //reserva.Quartos = new QuartoDAL().BuscarPorIdReserva(reserva.Id);
-                        reserva.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
-                        reserva.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
+                        //reserva.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
+                        //reserva.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
@@ -330,7 +330,7 @@ namespace DAL
 									INNER JOIN QUARTO Q ON RQ.ID_QUARTO = Q.ID
 									INNER JOIN CLASSE CL ON Q.ID_CLASSE = CL.ID
 									INNER JOIN PAGAMENTO P ON R.ID_PAGAMENTO = P.ID
-                                    WHERE R.DATA_CHECKOUT BETWEEN @DATA_INICIAL AND @DATA_FINAL";
+                                    WHERE R.DT_SAI_RESERVA BETWEEN @DATA_INICIAL AND @DATA_FINAL";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DATA_INICIAL", _dataInicial.Date);
                 cmd.Parameters.AddWithValue("@DATA_FINAL", _dataFinal.Date);
@@ -359,8 +359,8 @@ namespace DAL
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
                         //reserva.Quartos = new QuartoDAL().BuscarPorIdReserva(reserva.Id);
-                        reserva.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
-                        reserva.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
+                        //reserva.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
+                        //reserva.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
@@ -425,8 +425,8 @@ namespace DAL
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
                         //reserva.Quartos = new QuartoDAL().BuscarPorIdReserva(reserva.Id);
-                        reserva.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
-                        reserva.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
+                        //reserva.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
+                        //wreserva.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
