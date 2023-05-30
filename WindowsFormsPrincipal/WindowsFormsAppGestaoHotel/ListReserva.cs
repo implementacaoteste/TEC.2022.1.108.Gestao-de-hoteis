@@ -84,10 +84,17 @@ namespace WindowsFormsAppGestaoHotel
 
         private void pictureBoxCheckIn_Click(object sender, EventArgs e)
         {
-            using (FormReservaCheckIn frm = new FormReservaCheckIn())
+            int id = this.Id;
+            bool _checkin = false;
+            using (FormReservaCheckIn frm = new FormReservaCheckIn(id))
             {
                 frm.ShowDialog();
+                ((Reserva)reservaBindingSource.Current).Data_Checkin = frm.Data_CheckIn;
+                if (frm.Data_CheckIn != null)
+                    _checkin = true;
             }
+            if (_checkin != true)
+                pictureBoxCheckIn.Image = Properties.Resources.calendar_month_gray;
         }
 
         private void pictureBoxCheckOut_Click(object sender, EventArgs e)
@@ -96,6 +103,7 @@ namespace WindowsFormsAppGestaoHotel
             {
                 frm.ShowDialog();
             }
+            pictureBoxCheckIn.Image = Properties.Resources.calendar_month_gray;
         }
 
         private void pictureBoxAlterar_Click(object sender, EventArgs e)

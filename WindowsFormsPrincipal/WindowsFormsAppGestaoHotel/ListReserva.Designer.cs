@@ -30,34 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListReserva));
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.labelNumeroQuarto = new System.Windows.Forms.Label();
-            this.pictureBoxCancelar = new System.Windows.Forms.PictureBox();
             this.labelNomeHospede = new System.Windows.Forms.Label();
             this.labelDataCheckIn = new System.Windows.Forms.Label();
             this.labelDataCheckOut = new System.Windows.Forms.Label();
-            this.pictureBoxCheckIn = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCheckOut = new System.Windows.Forms.PictureBox();
-            this.pictureBoxAlterar = new System.Windows.Forms.PictureBox();
             this.labelTipoQuarto = new System.Windows.Forms.Label();
+            this.pictureBoxCheckOut = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCheckIn = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAlterar = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCancelar = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancelar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancelar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
-            this.pictureBox.Location = new System.Drawing.Point(7, 9);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(61, 102);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
             // 
             // labelNumeroQuarto
             // 
@@ -68,23 +58,6 @@
             this.labelNumeroQuarto.Size = new System.Drawing.Size(27, 20);
             this.labelNumeroQuarto.TabIndex = 1;
             this.labelNumeroQuarto.Text = "01";
-            // 
-            // pictureBoxCancelar
-            // 
-            this.pictureBoxCancelar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCancelar.ErrorImage")));
-            this.pictureBoxCancelar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCancelar.Image")));
-            this.pictureBoxCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBoxCancelar.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCancelar.InitialImage")));
-            this.pictureBoxCancelar.Location = new System.Drawing.Point(226, 2);
-            this.pictureBoxCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxCancelar.MaximumSize = new System.Drawing.Size(22, 24);
-            this.pictureBoxCancelar.MinimumSize = new System.Drawing.Size(22, 24);
-            this.pictureBoxCancelar.Name = "pictureBoxCancelar";
-            this.pictureBoxCancelar.Size = new System.Drawing.Size(22, 24);
-            this.pictureBoxCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCancelar.TabIndex = 7;
-            this.pictureBoxCancelar.TabStop = false;
-            this.pictureBoxCancelar.Click += new System.EventHandler(this.pictureBoxCancelar_Click);
             // 
             // labelNomeHospede
             // 
@@ -116,22 +89,15 @@
             this.labelDataCheckOut.TabIndex = 8;
             this.labelDataCheckOut.Text = "31/05/2023";
             // 
-            // pictureBoxCheckIn
+            // labelTipoQuarto
             // 
-            this.pictureBoxCheckIn.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCheckIn.ErrorImage")));
-            this.pictureBoxCheckIn.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCheckIn.Image")));
-            this.pictureBoxCheckIn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBoxCheckIn.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCheckIn.InitialImage")));
-            this.pictureBoxCheckIn.Location = new System.Drawing.Point(7, 116);
-            this.pictureBoxCheckIn.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxCheckIn.MaximumSize = new System.Drawing.Size(30, 30);
-            this.pictureBoxCheckIn.MinimumSize = new System.Drawing.Size(30, 30);
-            this.pictureBoxCheckIn.Name = "pictureBoxCheckIn";
-            this.pictureBoxCheckIn.Size = new System.Drawing.Size(30, 30);
-            this.pictureBoxCheckIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCheckIn.TabIndex = 7;
-            this.pictureBoxCheckIn.TabStop = false;
-            this.pictureBoxCheckIn.Click += new System.EventHandler(this.pictureBoxCheckIn_Click);
+            this.labelTipoQuarto.AutoSize = true;
+            this.labelTipoQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelTipoQuarto.Location = new System.Drawing.Point(107, 42);
+            this.labelTipoQuarto.Name = "labelTipoQuarto";
+            this.labelTipoQuarto.Size = new System.Drawing.Size(85, 20);
+            this.labelTipoQuarto.TabIndex = 1;
+            this.labelTipoQuarto.Text = "(Standard)";
             // 
             // pictureBoxCheckOut
             // 
@@ -150,6 +116,23 @@
             this.pictureBoxCheckOut.TabStop = false;
             this.pictureBoxCheckOut.Click += new System.EventHandler(this.pictureBoxCheckOut_Click);
             // 
+            // pictureBoxCheckIn
+            // 
+            this.pictureBoxCheckIn.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCheckIn.ErrorImage")));
+            this.pictureBoxCheckIn.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCheckIn.Image")));
+            this.pictureBoxCheckIn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBoxCheckIn.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCheckIn.InitialImage")));
+            this.pictureBoxCheckIn.Location = new System.Drawing.Point(7, 116);
+            this.pictureBoxCheckIn.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxCheckIn.MaximumSize = new System.Drawing.Size(30, 30);
+            this.pictureBoxCheckIn.MinimumSize = new System.Drawing.Size(30, 30);
+            this.pictureBoxCheckIn.Name = "pictureBoxCheckIn";
+            this.pictureBoxCheckIn.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxCheckIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCheckIn.TabIndex = 7;
+            this.pictureBoxCheckIn.TabStop = false;
+            this.pictureBoxCheckIn.Click += new System.EventHandler(this.pictureBoxCheckIn_Click);
+            // 
             // pictureBoxAlterar
             // 
             this.pictureBoxAlterar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxAlterar.ErrorImage")));
@@ -167,15 +150,32 @@
             this.pictureBoxAlterar.TabStop = false;
             this.pictureBoxAlterar.Click += new System.EventHandler(this.pictureBoxAlterar_Click);
             // 
-            // labelTipoQuarto
+            // pictureBoxCancelar
             // 
-            this.labelTipoQuarto.AutoSize = true;
-            this.labelTipoQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelTipoQuarto.Location = new System.Drawing.Point(107, 42);
-            this.labelTipoQuarto.Name = "labelTipoQuarto";
-            this.labelTipoQuarto.Size = new System.Drawing.Size(85, 20);
-            this.labelTipoQuarto.TabIndex = 1;
-            this.labelTipoQuarto.Text = "(Standard)";
+            this.pictureBoxCancelar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCancelar.ErrorImage")));
+            this.pictureBoxCancelar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCancelar.Image")));
+            this.pictureBoxCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBoxCancelar.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCancelar.InitialImage")));
+            this.pictureBoxCancelar.Location = new System.Drawing.Point(226, 2);
+            this.pictureBoxCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxCancelar.MaximumSize = new System.Drawing.Size(22, 24);
+            this.pictureBoxCancelar.MinimumSize = new System.Drawing.Size(22, 24);
+            this.pictureBoxCancelar.Name = "pictureBoxCancelar";
+            this.pictureBoxCancelar.Size = new System.Drawing.Size(22, 24);
+            this.pictureBoxCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCancelar.TabIndex = 7;
+            this.pictureBoxCancelar.TabStop = false;
+            this.pictureBoxCancelar.Click += new System.EventHandler(this.pictureBoxCancelar_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
+            this.pictureBox.Location = new System.Drawing.Point(7, 9);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(61, 102);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
             // 
             // reservaBindingSource
             // 
@@ -198,11 +198,11 @@
             this.Controls.Add(this.pictureBox);
             this.Name = "ListReserva";
             this.Size = new System.Drawing.Size(250, 150);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancelar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancelar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
