@@ -328,6 +328,9 @@
     <EmbeddedResource Include="FormReserva.resx">
       <DependentUpon>FormReserva.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReservaCheckIn.resx">
+      <DependentUpon>FormReservaCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSobre.resx">
       <DependentUpon>FormSobre.cs</DependentUpon>
     </EmbeddedResource>
