@@ -128,6 +128,7 @@
             this.pictureBoxCheckIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCheckIn.TabIndex = 7;
             this.pictureBoxCheckIn.TabStop = false;
+            this.pictureBoxCheckIn.Click += new System.EventHandler(this.pictureBoxCheckIn_Click);
             // 
             // pictureBoxCheckOut
             // 
@@ -144,6 +145,7 @@
             this.pictureBoxCheckOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCheckOut.TabIndex = 7;
             this.pictureBoxCheckOut.TabStop = false;
+            this.pictureBoxCheckOut.Click += new System.EventHandler(this.pictureBoxCheckOut_Click);
             // 
             // pictureBox1
             // 

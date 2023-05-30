@@ -72,5 +72,21 @@ namespace WindowsFormsAppGestaoHotel
         }
 
         #endregion
+
+        private void pictureBoxCheckIn_Click(object sender, EventArgs e)
+        {
+            using (FormReservaCheckIn frm = new FormReservaCheckIn())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void pictureBoxCheckOut_Click(object sender, EventArgs e)
+        {
+            using (FormReservaCheckOut frm = new FormReservaCheckOut())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
