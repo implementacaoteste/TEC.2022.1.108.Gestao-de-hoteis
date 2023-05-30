@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsPrincipal1;
 
 namespace WindowsFormsAppGestaoHotel
 {
@@ -17,7 +19,7 @@ namespace WindowsFormsAppGestaoHotel
             InitializeComponent();
         }
 
-        private void pictureBoxClose_Click(object sender, EventArgs e)
+        private void pictureBoxCancelar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja cancelar esta reserva?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
@@ -30,11 +32,18 @@ namespace WindowsFormsAppGestaoHotel
 
         #region Getter & Setter For Labels
 
+        private int _id;
         private string _numero;
         private string _classe;
         private string _hospede;
         private string _dataCheckin;
         private string _dataCheckout;
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 
         [Category("Custom Props")]
         public string Numero
@@ -84,6 +93,15 @@ namespace WindowsFormsAppGestaoHotel
         private void pictureBoxCheckOut_Click(object sender, EventArgs e)
         {
             using (FormReservaCheckOut frm = new FormReservaCheckOut())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void pictureBoxAlterar_Click(object sender, EventArgs e)
+        {
+            int id = this.Id;
+            using (FormCadastroReserva frm = new FormCadastroReserva(id))
             {
                 frm.ShowDialog();
             }
