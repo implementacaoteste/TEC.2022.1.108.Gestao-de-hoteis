@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReserva));
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.comboBoxBuscarTipo = new System.Windows.Forms.ComboBox();
-            this.labelRegistro = new System.Windows.Forms.Label();
             this.flowLayoutPanelReserva = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanelQuartos = new System.Windows.Forms.FlowLayoutPanel();
@@ -68,21 +67,9 @@
             this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 26);
             this.comboBoxBuscarTipo.TabIndex = 4;
             // 
-            // labelRegistro
-            // 
-            this.labelRegistro.AutoSize = true;
-            this.labelRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistro.Location = new System.Drawing.Point(3, 0);
-            this.labelRegistro.Name = "labelRegistro";
-            this.labelRegistro.Size = new System.Drawing.Size(217, 20);
-            this.labelRegistro.TabIndex = 5;
-            this.labelRegistro.Text = "Nenhum registro Cadastrado!";
-            this.labelRegistro.Visible = false;
-            // 
             // flowLayoutPanelReserva
             // 
             this.flowLayoutPanelReserva.AutoScroll = true;
-            this.flowLayoutPanelReserva.Controls.Add(this.labelRegistro);
             this.flowLayoutPanelReserva.Controls.Add(this.groupBox2);
             this.flowLayoutPanelReserva.Location = new System.Drawing.Point(280, 57);
             this.flowLayoutPanelReserva.Name = "flowLayoutPanelReserva";
@@ -91,7 +78,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(226, 3);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(0, 0);
             this.groupBox2.TabIndex = 0;
@@ -170,7 +157,6 @@
             this.Load += new System.EventHandler(this.FormReserva_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormReserva_KeyDown);
             this.flowLayoutPanelReserva.ResumeLayout(false);
-            this.flowLayoutPanelReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -183,7 +169,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.ComboBox comboBoxBuscarTipo;
         private System.Windows.Forms.BindingSource reservaBindingSource;
-        private System.Windows.Forms.Label labelRegistro;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelReserva;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelQuartos;
