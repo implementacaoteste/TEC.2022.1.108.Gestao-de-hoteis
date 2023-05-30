@@ -49,21 +49,21 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxSair = new System.Windows.Forms.PictureBox();
             this.pictureBoxfundo = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUsu2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxUsu1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin = new System.Windows.Forms.PictureBox();
             this.pictureBoxCaixaLogin2 = new System.Windows.Forms.PictureBox();
             this.labelCargoFuncionario = new System.Windows.Forms.Label();
             this.labelNomeFuncionario = new System.Windows.Forms.Label();
+            this.pictureBoxUsu2 = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfundo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -266,22 +266,6 @@
             this.pictureBoxfundo.TabStop = false;
             this.pictureBoxfundo.Visible = false;
             // 
-            // pictureBoxUsu2
-            // 
-            this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
-            this.pictureBoxUsu2.Location = new System.Drawing.Point(1292, 47);
-            this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxUsu2.Name = "pictureBoxUsu2";
-            this.pictureBoxUsu2.Size = new System.Drawing.Size(67, 62);
-            this.pictureBoxUsu2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUsu2.TabIndex = 15;
-            this.pictureBoxUsu2.TabStop = false;
-            this.pictureBoxUsu2.UseWaitCursor = true;
-            this.pictureBoxUsu2.Visible = false;
-            this.pictureBoxUsu2.Click += new System.EventHandler(this.pictureBoxUsu2_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
@@ -359,6 +343,19 @@
             this.labelNomeFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelNomeFuncionario.Visible = false;
             // 
+            // pictureBoxUsu2
+            // 
+            this.pictureBoxUsu2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxUsu2.BackColor = System.Drawing.Color.PowderBlue;
+            this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
+            this.pictureBoxUsu2.Location = new System.Drawing.Point(1292, 42);
+            this.pictureBoxUsu2.Name = "pictureBoxUsu2";
+            this.pictureBoxUsu2.Size = new System.Drawing.Size(67, 68);
+            this.pictureBoxUsu2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUsu2.TabIndex = 19;
+            this.pictureBoxUsu2.TabStop = false;
+            this.pictureBoxUsu2.Click += new System.EventHandler(this.pictureBoxUsu2_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -366,11 +363,11 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1424, 862);
+            this.Controls.Add(this.pictureBoxUsu2);
             this.Controls.Add(this.labelNomeFuncionario);
             this.Controls.Add(this.labelCargoFuncionario);
             this.Controls.Add(this.pictureBoxSair);
             this.Controls.Add(this.pictureBoxfundo);
-            this.Controls.Add(this.pictureBoxUsu2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.pictureBoxCaixaLogin);
@@ -390,11 +387,11 @@
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxfundo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +416,6 @@
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin2;
         private System.Windows.Forms.PictureBox pictureBoxCaixaLogin;
         private System.Windows.Forms.PictureBox pictureBoxSair;
-        private System.Windows.Forms.PictureBox pictureBoxUsu2;
         private System.Windows.Forms.PictureBox pictureBoxfundo;
         private System.Windows.Forms.PictureBox pictureBoxUsu1;
         private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
@@ -434,5 +430,6 @@
         private System.Windows.Forms.ToolStripMenuItem filtrarReservasToolStripMenuItem;
         private System.Windows.Forms.Label labelCargoFuncionario;
         private System.Windows.Forms.Label labelNomeFuncionario;
+        private System.Windows.Forms.PictureBox pictureBoxUsu2;
     }
 }
