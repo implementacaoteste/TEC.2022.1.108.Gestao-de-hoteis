@@ -72,6 +72,7 @@ namespace WindowsFormsAppGestaoHotel
             foreach (Reserva item in reservaBindingSource)
             {
                 _listReserva = new ListReserva();
+                _listReserva.Id= item.Id;
                 _listReserva.Numero = item.Numero_Quarto.ToString();
                 _listReserva.Classe = item.Tipo_Quarto.ToString();
                 _listReserva.Hospede = item.Nome_Hospede.ToString();
@@ -152,6 +153,8 @@ namespace WindowsFormsAppGestaoHotel
                 frm.ShowDialog();
             }
             buttonBuscarTipo_Click(null, null);
+            quartoBindingSource.DataSource = new QuartoBLL().BuscarPorDia(monthCalendar.SelectionRange.Start);
+            addLabel();
         }
 
         private void FormReserva_KeyDown(object sender, KeyEventArgs e)
@@ -164,13 +167,6 @@ namespace WindowsFormsAppGestaoHotel
 
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            Label _registro;
-            _registro = new Label();
-            _registro.Name = "labelRegistro";
-            _registro.Text = "Nenhum registro Cadastrado!";
-            _registro.Font = new Font("Microsoft Sans Serif", 12);
-            flowLayoutPanelReserva.Controls.Add(_registro);
-
             try
             {
                 quartoBindingSource.DataSource = new QuartoBLL().BuscarPorDia(monthCalendar.SelectionRange.Start);
