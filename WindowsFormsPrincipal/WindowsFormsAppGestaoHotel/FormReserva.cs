@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Microsoft.Win32;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace WindowsFormsAppGestaoHotel
 {
     public partial class FormReserva : Form
     {
+        
         public FormReserva()
         {
             InitializeComponent();
@@ -34,21 +36,32 @@ namespace WindowsFormsAppGestaoHotel
                 comboBoxBuscarTipo.SelectedIndex = 0;
                 reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
 
-                if (reservaBindingSource.Count == 0)
-                {
-                    labelRegistro.Visible = true;
-                }
-                else
-                {
+                if (reservaBindingSource.Count > 0)
                     popularItems();
-                    labelRegistro.Visible = false;
-                }
+                else
+                    flowLayoutPanelReserva.Controls.Clear();
+
+                if (flowLayoutPanelReserva.Controls.Count == 0)
+                    lblRegistro();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 Close();
             }
+        }
+
+        public void lblRegistro()
+        {
+            Label _registro;
+            _registro = new Label();
+            _registro.Name = "labelRegistro";
+            _registro.Text = "Nenhum registro Cadastrado!";
+            _registro.AutoSize = true;
+            _registro.Font = new Font("Microsoft Sans Serif", 12);
+            _registro.TextAlign = ContentAlignment.MiddleCenter;
+            _registro.Margin = new Padding(3);
+            flowLayoutPanelReserva.Controls.Add(_registro);
         }
 
         void popularItems()
@@ -62,8 +75,8 @@ namespace WindowsFormsAppGestaoHotel
                 _listReserva.Numero = item.Numero_Quarto.ToString();
                 _listReserva.Classe = item.Tipo_Quarto.ToString();
                 _listReserva.Hospede = item.Nome_Hospede.ToString();
-                _listReserva.DataCheckin = item.Data_Checkin.ToShortDateString();
-                _listReserva.DataCheckout = item.Data_Checkout.ToShortDateString();
+                _listReserva.DataCheckin = item.Data_Ent_Reserva.ToShortDateString();
+                _listReserva.DataCheckout = item.Data_Sai_Reserva.ToShortDateString();
 
                 flowLayoutPanelReserva.Controls.Add(_listReserva);
             }
@@ -118,17 +131,13 @@ namespace WindowsFormsAppGestaoHotel
                         break;
                 }
 
-                if (reservaBindingSource.Count == 0)
-                {
-                    flowLayoutPanelReserva.Controls.Clear();
-                    labelRegistro.Visible = true;
-                }
-                else
-                {
+                if (reservaBindingSource.Count > 0)
                     popularItems();
-                    labelRegistro.Visible = false;
-                }
+                else
+                    flowLayoutPanelReserva.Controls.Clear();
 
+                if (flowLayoutPanelReserva.Controls.Count == 0)
+                    lblRegistro();
             }
             catch (Exception ex)
             {
@@ -142,7 +151,7 @@ namespace WindowsFormsAppGestaoHotel
             {
                 frm.ShowDialog();
             }
-            buttonBuscarTipo_Click(sender, e);
+            buttonBuscarTipo_Click(null, null);
         }
 
         private void FormReserva_KeyDown(object sender, KeyEventArgs e)
@@ -155,6 +164,13 @@ namespace WindowsFormsAppGestaoHotel
 
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
+            Label _registro;
+            _registro = new Label();
+            _registro.Name = "labelRegistro";
+            _registro.Text = "Nenhum registro Cadastrado!";
+            _registro.Font = new Font("Microsoft Sans Serif", 12);
+            flowLayoutPanelReserva.Controls.Add(_registro);
+
             try
             {
                 quartoBindingSource.DataSource = new QuartoBLL().BuscarPorDia(monthCalendar.SelectionRange.Start);
@@ -175,17 +191,13 @@ namespace WindowsFormsAppGestaoHotel
                         break;
                 }
 
-                if (reservaBindingSource.Count == 0)
-                {
-                    flowLayoutPanelReserva.Controls.Clear();
-                    labelRegistro.Visible = true;
-                }
-                else
-                {
+                if (reservaBindingSource.Count > 0)
                     popularItems();
-                    labelRegistro.Visible = false;
-                }
+                else
+                    flowLayoutPanelReserva.Controls.Clear();
 
+                if (flowLayoutPanelReserva.Controls.Count == 0)
+                    lblRegistro();
             }
             catch (Exception ex)
             {
