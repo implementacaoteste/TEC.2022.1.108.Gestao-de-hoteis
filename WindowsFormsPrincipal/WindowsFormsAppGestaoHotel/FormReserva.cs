@@ -204,5 +204,40 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void comboBoxBuscarTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (comboBoxBuscarTipo.SelectedIndex)
+                {
+                    case 0:
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        break;
+                    case 1:
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckout(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        break;
+                    case 2:
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataLancamento(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        break;
+                    default:
+                        break;
+                }
+
+                if (reservaBindingSource.Count > 0)
+                    popularItems();
+                else
+                    flowLayoutPanelReserva.Controls.Clear();
+
+                if (flowLayoutPanelReserva.Controls.Count == 0)
+                    lblRegistro();
+
+                buttonBuscarTipo.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -39,6 +39,12 @@
             this.buttonCadastrarReserva = new System.Windows.Forms.Button();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cor_verde = new System.Windows.Forms.Label();
+            this.disponivel = new System.Windows.Forms.Label();
+            this.reservado = new System.Windows.Forms.Label();
+            this.ocupado = new System.Windows.Forms.Label();
+            this.cor_amarela = new System.Windows.Forms.Label();
+            this.cor_vermelha = new System.Windows.Forms.Label();
             this.flowLayoutPanelReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
@@ -66,6 +72,7 @@
             this.comboBoxBuscarTipo.Name = "comboBoxBuscarTipo";
             this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 26);
             this.comboBoxBuscarTipo.TabIndex = 4;
+            this.comboBoxBuscarTipo.SelectedIndexChanged += new System.EventHandler(this.comboBoxBuscarTipo_SelectedIndexChanged);
             // 
             // flowLayoutPanelReserva
             // 
@@ -90,7 +97,7 @@
             this.flowLayoutPanelQuartos.AutoScroll = true;
             this.flowLayoutPanelQuartos.Location = new System.Drawing.Point(15, 231);
             this.flowLayoutPanelQuartos.Name = "flowLayoutPanelQuartos";
-            this.flowLayoutPanelQuartos.Size = new System.Drawing.Size(216, 301);
+            this.flowLayoutPanelQuartos.Size = new System.Drawing.Size(216, 278);
             this.flowLayoutPanelQuartos.TabIndex = 7;
             // 
             // buttonBuscarTipo
@@ -134,11 +141,68 @@
             // 
             this.quartoBindingSource.DataSource = typeof(Models.Quarto);
             // 
+            // cor_verde
+            // 
+            this.cor_verde.BackColor = System.Drawing.Color.Green;
+            this.cor_verde.Location = new System.Drawing.Point(12, 522);
+            this.cor_verde.Name = "cor_verde";
+            this.cor_verde.Size = new System.Drawing.Size(10, 10);
+            this.cor_verde.TabIndex = 8;
+            // 
+            // disponivel
+            // 
+            this.disponivel.AutoSize = true;
+            this.disponivel.Location = new System.Drawing.Point(28, 521);
+            this.disponivel.Name = "disponivel";
+            this.disponivel.Size = new System.Drawing.Size(58, 13);
+            this.disponivel.TabIndex = 8;
+            this.disponivel.Text = "Disponível";
+            // 
+            // reservado
+            // 
+            this.reservado.AutoSize = true;
+            this.reservado.Location = new System.Drawing.Point(110, 521);
+            this.reservado.Name = "reservado";
+            this.reservado.Size = new System.Drawing.Size(59, 13);
+            this.reservado.TabIndex = 8;
+            this.reservado.Text = "Reservado";
+            // 
+            // ocupado
+            // 
+            this.ocupado.AutoSize = true;
+            this.ocupado.Location = new System.Drawing.Point(197, 521);
+            this.ocupado.Name = "ocupado";
+            this.ocupado.Size = new System.Drawing.Size(51, 13);
+            this.ocupado.TabIndex = 8;
+            this.ocupado.Text = "Ocupado";
+            // 
+            // cor_amarela
+            // 
+            this.cor_amarela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(161)))), ((int)(((byte)(0)))));
+            this.cor_amarela.Location = new System.Drawing.Point(94, 522);
+            this.cor_amarela.Name = "cor_amarela";
+            this.cor_amarela.Size = new System.Drawing.Size(10, 10);
+            this.cor_amarela.TabIndex = 8;
+            // 
+            // cor_vermelha
+            // 
+            this.cor_vermelha.BackColor = System.Drawing.Color.Red;
+            this.cor_vermelha.Location = new System.Drawing.Point(181, 522);
+            this.cor_vermelha.Name = "cor_vermelha";
+            this.cor_vermelha.Size = new System.Drawing.Size(10, 10);
+            this.cor_vermelha.TabIndex = 8;
+            // 
             // FormReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 567);
+            this.Controls.Add(this.ocupado);
+            this.Controls.Add(this.reservado);
+            this.Controls.Add(this.disponivel);
+            this.Controls.Add(this.cor_vermelha);
+            this.Controls.Add(this.cor_amarela);
+            this.Controls.Add(this.cor_verde);
             this.Controls.Add(this.flowLayoutPanelQuartos);
             this.Controls.Add(this.flowLayoutPanelReserva);
             this.Controls.Add(this.comboBoxBuscarTipo);
@@ -160,6 +224,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -173,5 +238,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelQuartos;
         private System.Windows.Forms.BindingSource quartoBindingSource;
+        private System.Windows.Forms.Label cor_verde;
+        private System.Windows.Forms.Label disponivel;
+        private System.Windows.Forms.Label reservado;
+        private System.Windows.Forms.Label ocupado;
+        private System.Windows.Forms.Label cor_amarela;
+        private System.Windows.Forms.Label cor_vermelha;
     }
 }
