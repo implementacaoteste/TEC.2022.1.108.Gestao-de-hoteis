@@ -10,7 +10,7 @@ namespace Infra
     {
         public static void Gravar(string _texto)
         {
-            new Arquivo().GravarLinhaNoFinalDoArquivo(Constante.CaminhoArquivoLog,DateTime.Now + ":" + _texto);  
+            new Arquivo().GravarLinhaNoFinalDoArquivo(Constante.CaminhoArquivoLog, new Criptografia().Criptografar(DateTime.Now + ":" + _texto)); 
         }
     }
 }
