@@ -36,6 +36,8 @@
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.linkLabelsuporte = new System.Windows.Forms.LinkLabel();
             this.buttonsSuporte = new System.Windows.Forms.Button();
+            this.labelCadastro = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEntrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
@@ -63,6 +65,7 @@
             this.pictureBox2.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.Form_Login;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBoxEntrar
             // 
@@ -94,11 +97,25 @@
             this.buttonsSuporte.UseVisualStyleBackColor = false;
             this.buttonsSuporte.Click += new System.EventHandler(this.buttonsSuporte_Click);
             // 
+            // labelCadastro
+            // 
+            resources.ApplyResources(this.labelCadastro, "labelCadastro");
+            this.labelCadastro.Name = "labelCadastro";
+            // 
+            // linkLabel1
+            // 
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FormLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.labelCadastro);
             this.Controls.Add(this.buttonsSuporte);
             this.Controls.Add(this.linkLabelsuporte);
             this.Controls.Add(this.pictureBoxClose);
@@ -128,5 +145,7 @@
         private System.Windows.Forms.PictureBox pictureBoxClose;
         private System.Windows.Forms.LinkLabel linkLabelsuporte;
         private System.Windows.Forms.Button buttonsSuporte;
+        private System.Windows.Forms.Label labelCadastro;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

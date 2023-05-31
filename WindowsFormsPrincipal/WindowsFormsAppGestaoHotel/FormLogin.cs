@@ -78,5 +78,25 @@ namespace WindowsFormsPrincipal1
         {
             linkLabelsuporte_LinkClicked(null,null);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                using (FormCadastroCliente frm = new FormCadastroCliente())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
