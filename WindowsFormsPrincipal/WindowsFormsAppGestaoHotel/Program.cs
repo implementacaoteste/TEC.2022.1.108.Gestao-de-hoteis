@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infra;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,14 @@ namespace WindowsFormsAppGestaoHotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+             
+           // new Arquivo().GravarLinhaNoFinalDoArquivo(Environment.CurrentDirectory + "\\ArquivoTeste.txt", "Texto a ser gravado no arquivo");
+            //new Arquivo().GravarLinhaNoFinalDoArquivo(Environment.CurrentDirectory + "\\ArquivoTeste.txt", "usuario a ser gravado no arquivo");
+
+
             Application.Run(new FormPrincipal());
+
+           
         }
     }
 }

@@ -12,16 +12,16 @@ namespace BLL
         {
            
             ValidarPermissao(2);
+            ValidarDados(_funcionario, _confirmacaoSenha);
             _funcionario.Senha = new Criptografia().CriptografarSenha(_funcionario.Senha);
             _confirmacaoSenha = new Criptografia().CriptografarSenha(_confirmacaoSenha);
-            ValidarDados(_funcionario, _confirmacaoSenha);
             new FuncionarioDAL().Inserir(_funcionario);
         }
         public void Alterar(Funcionario _funcionario, string _confirmacaoSenha, string _senha)
         {
             ValidarPermissao(3);
-            _confirmacaoSenha = new Criptografia().CriptografarSenha(_confirmacaoSenha);
             ValidarDados(_funcionario,_confirmacaoSenha);
+            _confirmacaoSenha = new Criptografia().CriptografarSenha(_confirmacaoSenha);
             new FuncionarioDAL().Alterar(_funcionario);
         }
         public void Excluir(int _Id)
@@ -68,6 +68,18 @@ namespace BLL
             if (_funcionario.IdSexo == 0)
                 throw new Exception("Selecione o sexo do funcionário");
 
+            if (_funcionario.Endereco.Length < 10)
+                throw new Exception("Informe o endereço, detalhadamente");
+
+            if (_funcionario.Endereco.Length > 150)
+                throw new Exception("O campo 'Endereço' deve ter o maximo de 150 caracteres");
+
+            if (_funcionario.Email.Length < 10)
+                throw new Exception("Insira um email válido");
+
+            if (_funcionario.Email.Length > 50)
+                throw new Exception("O campo 'Email' deve ter maximo de 50 caracters");
+
             if (_funcionario.NomeUsuario == null)
                 throw new Exception("Insira o nome de usuario do funcionario");
 
@@ -106,6 +118,7 @@ namespace BLL
                 Constante.IdLogado = funcionario.Id;
                 Constante.NomeUsuario = funcionario.NomeUsuario;
                 Constante.Cargo = funcionario.CargoFuncionario;
+                Log.Gravar("O usuario autenticou como: "+ funcionario.NomeUsuario);
             }
             else
             {

@@ -2,6 +2,7 @@
 using BLL;
 using System.Windows.Forms;
 using Models;
+using Infra;
 
 namespace WindowsFormsPrincipal1
 {
@@ -23,6 +24,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
+                Log.Gravar("Abrir a tela de login");
                 new FuncionarioBLL().Autenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
                 Close();

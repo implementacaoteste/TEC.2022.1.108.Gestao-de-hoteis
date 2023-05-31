@@ -191,6 +191,12 @@
     <Compile Include="FormContaPagar.Designer.cs">
       <DependentUpon>FormContaPagar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormContasReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContasReceber.Designer.cs">
+      <DependentUpon>FormContasReceber.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormContaPagar.resx">
       <DependentUpon>FormContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormContasReceber.resx">
+      <DependentUpon>FormContasReceber.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.pt-BR.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

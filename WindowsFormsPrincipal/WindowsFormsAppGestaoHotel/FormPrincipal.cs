@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Infra;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,17 +20,20 @@ namespace WindowsFormsPrincipal1
         public FormPrincipal()
         {
             InitializeComponent();
+            Log.Gravar("Foi chamada a tela Principal.");
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             try
             {
+                Log.Gravar("Abrir a tela de login");
                 using (FormLogin frm = new FormLogin())
                 {
                     frm.ShowDialog();
                     if (!frm.Logou)
                     {
+                        Log.Gravar("Fechar a tela de login");
                         Application.Exit();
                     }
                 }

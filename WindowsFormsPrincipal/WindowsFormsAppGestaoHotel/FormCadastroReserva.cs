@@ -42,7 +42,11 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 if (Id == 0)
+                {
                     reservaBindingSource.AddNew();
+                    data_Ent_ReservaDateTimePicker.Value = DateTime.Now.Date;
+                    data_SaidaDateTimePicker.Value = DateTime.Now.Date;
+                }
                 else
                 {
                     tituloLabel.Text = "Editar Reserva";
@@ -53,9 +57,6 @@ namespace WindowsFormsAppGestaoHotel
             {
                 MessageBox.Show(ex.Message);
             }
-
-            data_Ent_ReservaDateTimePicker.Value = DateTime.Now.Date;
-            data_SaidaDateTimePicker.Value = DateTime.Now.Date;
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
