@@ -20,7 +20,7 @@ namespace Infra
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar linha no final do arquivo", ex) { Data = { { "id", 3 } } };
+                throw new Exception("Ocorreu um erro ao tentar linha no final do arquivo", ex) { Data = { { "id", 1 } } };
             }
         }
     }

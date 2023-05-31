@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Models
 {
@@ -18,5 +19,15 @@ namespace Models
         public static bool Ativo;
         public static int IdSexo;
         public static string Sexo;
+
+        public static string CaminhoArquivoLog
+        {
+            get
+            {
+                string diretorio = Environment.CurrentDirectory + "\\Logs\\";
+                Directory.CreateDirectory(diretorio);
+                return diretorio + "Log.Log";
+            }
+        }
     }
 }
