@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -9,6 +10,38 @@ namespace Infra
 {
     public class Criptografia
     {
+        private RSA rsa;
+
+        public Criptografia()
+        {
+            rsa = RSA.Create();
+        }
+        public void GravarChaves()
+        {
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                rsa.ImportParameters(GetPublicKey());
+                byte[] chavePublicaBytes = rsa.ExportCspBlob(false);
+                new Arquivo().GravarBytesNoFinalDoArquivo(Constante.CaminhaChavePublica, chavePublicaBytes);
+            }
+            
+            using(RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                rsa.ImportParameters(GetPrivateKey());
+                byte[] chavePrivadaBytes = rsa.ExportCspBlob(true);
+                new Arquivo().GravarBytesNoFinalDoArquivo(Constante.CaminhaChavePrivada, chavePrivadaBytes);
+            }
+        }
+
+        public RSAParameters GetPublicKey()
+        {
+            return rsa.ExportParameters(false);
+        }
+
+        public RSAParameters GetPrivateKey()
+        {
+            return rsa.ExportParameters(true);
+        }
         public string CriptografarSenha(string _senha)
         {
             string retorno = _senha;
