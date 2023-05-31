@@ -62,6 +62,30 @@ namespace Infra
             byte[] bytesCriptografados = rsa.Encrypt(Encoding.UTF8.GetBytes(_texto), RSAEncryptionPadding.Pkcs1);
             return Convert.ToBase64String(bytesCriptografados);
         }
+
+        public string Descriptografar(string _texto)
+        {
+            if (!File.Exists(Constante.CaminhaChavePrivada))
+                throw new Exception("A chave privada não existe") { Data = { { "Id", 4 } } };
+
+            byte[] chavePrivadaBytes = File.ReadAllBytes(Constante.CaminhaChavePrivada);
+
+            RSAParameters chavePrivada;
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                rsa.ImportCspBlob(chavePrivadaBytes);
+                chavePrivada = rsa.ExportParameters(false);
+
+            }
+            
+            rsa.ImportParameters(chavePrivada);
+
+            byte[] bytesCriptografados = Convert.FromBase64String(_texto);
+
+            byte[] bytesDescriptografados = rsa.Decrypt(bytesCriptografados, RSAEncryptionPadding.Pkcs1);
+
+            return Encoding.UTF8.GetString(bytesDescriptografados);
+        }
         public string CriptografarSenha(string _senha)
         {
             string retorno = _senha;
