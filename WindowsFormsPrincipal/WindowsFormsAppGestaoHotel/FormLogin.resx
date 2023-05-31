@@ -125,10 +125,14 @@
     <value>Segoe UI, 13.8pt</value>
   </data>
   <data name="textBoxUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 276</value>
+    <value>817, 340</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBoxUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 29</value>
+    <value>355, 31</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxUsuario.TabIndex" type="System.Int32, mscorlib">
@@ -150,13 +154,16 @@
     <value>Segoe UI, 13.8pt</value>
   </data>
   <data name="textBoxSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 365</value>
+    <value>817, 449</value>
+  </data>
+  <data name="textBoxSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxSenha.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 29</value>
+    <value>355, 31</value>
   </data>
   <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -173,7 +180,6 @@
   <data name="&gt;&gt;textBoxSenha.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -181,16 +187,16 @@
     <value>0, 0</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBox2.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1280, 720</value>
   </data>
   <data name="pictureBox2.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1280, 720</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1280, 720</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -242,13 +248,13 @@
 </value>
   </data>
   <data name="pictureBoxEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 446</value>
+    <value>811, 549</value>
   </data>
   <data name="pictureBoxEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBoxEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 49</value>
+    <value>380, 60</value>
   </data>
   <data name="pictureBoxEntrar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -299,19 +305,19 @@
 </value>
   </data>
   <data name="pictureBoxClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>925, 11</value>
+    <value>1233, 14</value>
   </data>
   <data name="pictureBoxClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBoxClose.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+    <value>29, 30</value>
   </data>
   <data name="pictureBoxClose.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+    <value>29, 30</value>
   </data>
   <data name="pictureBoxClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+    <value>29, 30</value>
   </data>
   <data name="pictureBoxClose.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -335,10 +341,13 @@
     <value>True</value>
   </data>
   <data name="linkLabelsuporte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>902, 561</value>
+    <value>1203, 690</value>
+  </data>
+  <data name="linkLabelsuporte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="linkLabelsuporte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
+    <value>54, 16</value>
   </data>
   <data name="linkLabelsuporte.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -414,10 +423,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonsSuporte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>795, 535</value>
+    <value>1060, 658</value>
+  </data>
+  <data name="buttonsSuporte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonsSuporte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 43</value>
+    <value>211, 53</value>
   </data>
   <data name="buttonsSuporte.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -444,10 +456,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>958, 583</value>
+    <value>1277, 718</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -525,11 +537,14 @@
         AAAAAAAAAAAAAAAAAACAAAABgAAAAeAAAAc=
 </value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1279, 720</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 585</value>
+    <value>1279, 720</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

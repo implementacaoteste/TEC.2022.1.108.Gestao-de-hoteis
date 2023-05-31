@@ -2,6 +2,7 @@
 using BLL;
 using System.Windows.Forms;
 using Models;
+using Infra;
 
 namespace WindowsFormsPrincipal1
 {
@@ -23,6 +24,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
+                Log.Gravar("Abrir a tela de login");
                 new FuncionarioBLL().Autenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
                 Close();
@@ -77,6 +79,11 @@ namespace WindowsFormsPrincipal1
         private void buttonsSuporte_Click(object sender, EventArgs e)
         {
             linkLabelsuporte_LinkClicked(null,null);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

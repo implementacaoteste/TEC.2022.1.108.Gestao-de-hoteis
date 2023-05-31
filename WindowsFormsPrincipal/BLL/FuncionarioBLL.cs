@@ -118,6 +118,7 @@ namespace BLL
                 Constante.IdLogado = funcionario.Id;
                 Constante.NomeUsuario = funcionario.NomeUsuario;
                 Constante.Cargo = funcionario.CargoFuncionario;
+                Log.Gravar("O usuario autenticou como: "+ funcionario.NomeUsuario);
             }
             else
             {
