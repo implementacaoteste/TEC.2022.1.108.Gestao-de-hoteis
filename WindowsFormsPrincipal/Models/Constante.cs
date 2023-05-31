@@ -26,7 +26,7 @@ namespace Models
             {
                 string diretorio = Environment.CurrentDirectory + "\\Logs\\";
                 Directory.CreateDirectory(diretorio);
-                return diretorio + "Log.Log";
+                return diretorio + "Log"+ DateTime.Now.Year.ToString()+ DateTime.Now.Month.ToString("00")+ DateTime.Now.Day.ToString("00")+"Log";
             }
         }
     }
