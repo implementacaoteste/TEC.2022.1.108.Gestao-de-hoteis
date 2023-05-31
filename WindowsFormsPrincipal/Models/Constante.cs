@@ -20,6 +20,9 @@ namespace Models
         public static int IdSexo;
         public static string Sexo;
 
+        public static string CaminhaChavePublica = "C:\\ Configuracao\\ChavePublica.txt";
+        public static string CaminhaChavePrivada = "C:\\ Configuracao\\ChavePrivada.txt";
+
         public static string CaminhoArquivoLog
         {
             get
