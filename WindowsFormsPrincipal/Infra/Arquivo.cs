@@ -22,6 +22,26 @@ namespace Infra
             {
                 throw new Exception("Ocorreu um erro ao tentar linha no final do arquivo", ex) { Data = { { "id", 1 } } };
             }
+
+        }
+        public void GravarBytesNoFinalDoArquivo(string _caminhoArquivo, byte[] _bytes)
+        {
+            ExcluirArquivo(_caminhoArquivo);
+            using (FileStream arquivo = new FileStream(_caminhoArquivo, FileMode.Append))
+            {
+                if(!File.Exists(_caminhoArquivo))
+                {
+                    byte[] novalinhaBytes = Encoding.UTF8.GetBytes(Environment.NewLine);
+                    arquivo.Write(novalinhaBytes, 0, novalinhaBytes.Length);
+                }
+                arquivo.Write(_bytes, 0, _bytes.Length);
+            }
+        }
+
+        public void ExcluirArquivo(string _arquivo)
+        {
+            if(File.Exists(_arquivo))
+                File.Delete(_arquivo);
         }
     }
 }
