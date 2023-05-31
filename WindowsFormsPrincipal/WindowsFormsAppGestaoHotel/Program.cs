@@ -21,7 +21,8 @@ namespace WindowsFormsAppGestaoHotel
              
            // new Arquivo().GravarLinhaNoFinalDoArquivo(Environment.CurrentDirectory + "\\ArquivoTeste.txt", "Texto a ser gravado no arquivo");
             //new Arquivo().GravarLinhaNoFinalDoArquivo(Environment.CurrentDirectory + "\\ArquivoTeste.txt", "usuario a ser gravado no arquivo");
-
+            new Criptografia().GravarChaves();
+            Log.Gravar("Usuario abriu o sistema");
 
             Application.Run(new FormPrincipal());
 

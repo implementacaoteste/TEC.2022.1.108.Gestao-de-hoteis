@@ -1,6 +1,7 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -41,6 +42,25 @@ namespace Infra
         public RSAParameters GetPrivateKey()
         {
             return rsa.ExportParameters(true);
+        }
+
+        public string Criptografar(string _texto)
+        {
+            if (!File.Exists(Constante.CaminhaChavePublica))
+                throw new Exception("A chave publica não existe") { Data = { { "Id", 4 } } };
+
+            byte[] chavePublicaBytes = File.ReadAllBytes(Constante.CaminhaChavePublica);
+
+            RSAParameters chavePublica;
+            using(RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                rsa.ImportCspBlob(chavePublicaBytes);
+                chavePublica = rsa.ExportParameters(false);
+
+            }
+            rsa.ImportParameters(chavePublica);
+            byte[] bytesCriptografados = rsa.Encrypt(Encoding.UTF8.GetBytes(_texto), RSAEncryptionPadding.Pkcs1);
+            return Convert.ToBase64String(bytesCriptografados);
         }
         public string CriptografarSenha(string _senha)
         {
