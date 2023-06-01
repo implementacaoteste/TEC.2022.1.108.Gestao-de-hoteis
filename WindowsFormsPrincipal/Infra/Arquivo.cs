@@ -43,5 +43,22 @@ namespace Infra
             if(File.Exists(_arquivo))
                 File.Delete(_arquivo);
         }
+
+        public List<string> LerLinhasArquivo(string _caminhoArquivo, bool _criptografado = false)
+        {
+            List<string> linhas = new List<string>();
+            using(StreamReader sr = new StreamReader(_caminhoArquivo))
+            {
+                string linha;
+                while ((linha = sr.ReadLine()) != null)
+                {
+                    if(_criptografado)
+                        linhas.Add(new Criptografia().Descriptografar(linha));
+                    else 
+                        linhas.Add(linha);
+                }
+            }
+            return linhas;
+        }
     }
 }
