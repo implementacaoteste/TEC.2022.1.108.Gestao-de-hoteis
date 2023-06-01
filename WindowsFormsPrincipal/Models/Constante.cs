@@ -20,8 +20,11 @@ namespace Models
         public static int IdSexo;
         public static string Sexo;
 
+        public static string StringDeConexao;
+        public static string DiretorioStringDeConexao = "C:\\Configuracao\\";
         public static string CaminhaChavePublica = "C:\\Configuracao\\ChavePublica.txt";
         public static string CaminhaChavePrivada = "C:\\Configuracao\\ChavePrivada.txt";
+        public static string NomeArquivoConexao = "Conexao.config";
 
         public static string CaminhoArquivoLog
         {
