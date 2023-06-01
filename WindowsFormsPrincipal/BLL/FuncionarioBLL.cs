@@ -10,7 +10,6 @@ namespace BLL
     {
         public void Inserir(Funcionario _funcionario, string _confirmacaoSenha)
         {
-           
             ValidarPermissao(2);
             ValidarDados(_funcionario, _confirmacaoSenha);
             _funcionario.Senha = new Criptografia().CriptografarSenha(_funcionario.Senha);
