@@ -137,6 +137,12 @@
     <Compile Include="FormCadastroQuarto.Designer.cs">
       <DependentUpon>FormCadastroQuarto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConexao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConexao.Designer.cs">
+      <DependentUpon>FormConexao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultaClasse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroQuarto.resx">
       <DependentUpon>FormCadastroQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConexao.resx">
+      <DependentUpon>FormConexao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaClasse.resx">
       <DependentUpon>FormConsultaClasse.cs</DependentUpon>
