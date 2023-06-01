@@ -1,21 +1,22 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.IO;
 
 namespace DAL
 {
     public static class Conexao
     {
-        private static string stringDeConexao;
         public static string StringDeConexao
         {
             get
             {
-                if (string.IsNullOrEmpty(stringDeConexao))
-                    if (File.Exists("C:\\Configuracao\\Conexao.config"))
-                        stringDeConexao = File.ReadAllText("C:\\Configuracao\\Conexao.config");
-                    else throw new Exception("Você precisa criar a conexão com o Banco de Dados");
-
-                return stringDeConexao;
+                if (String.IsNullOrEmpty(Constante.StringDeConexao))
+                {
+                    if (File.Exists(Constante.DiretorioStringDeConexao + Constante.NomeArquivoConexao))
+                        Constante.StringDeConexao = File.ReadAllText(Constante.DiretorioStringDeConexao + Constante.NomeArquivoConexao);
+                    else throw new Exception("É preciso criar a string de conexão") { Data = { {  "Id", 1 } } };
+                }
+                return Constante.StringDeConexao;
             }
         }   
     }
