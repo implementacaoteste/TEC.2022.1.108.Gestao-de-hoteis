@@ -90,7 +90,7 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
-                using (FormCadastroCliente frm = new FormCadastroCliente())
+                using (FormCadastroDeFuncionario frm = new FormCadastroDeFuncionario())
                 {
                     frm.ShowDialog();
                 }
