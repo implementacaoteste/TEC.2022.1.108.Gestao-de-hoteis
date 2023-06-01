@@ -125,14 +125,10 @@
     <value>Segoe UI, 13.8pt</value>
   </data>
   <data name="textBoxUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>817, 340</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBoxUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>613, 276</value>
   </data>
   <data name="textBoxUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 31</value>
+    <value>266, 29</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxUsuario.TabIndex" type="System.Int32, mscorlib">
@@ -148,22 +144,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxUsuario.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="textBoxSenha.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.8pt</value>
   </data>
   <data name="textBoxSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>817, 449</value>
-  </data>
-  <data name="textBoxSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>613, 365</value>
   </data>
   <data name="textBoxSenha.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 31</value>
+    <value>266, 29</value>
   </data>
   <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -178,8 +171,9 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxSenha.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -187,16 +181,16 @@
     <value>0, 0</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox2.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1280, 720</value>
+    <value>960, 585</value>
   </data>
   <data name="pictureBox2.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1280, 720</value>
+    <value>960, 585</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1280, 720</value>
+    <value>960, 585</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -214,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="pictureBoxEntrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -248,13 +242,13 @@
 </value>
   </data>
   <data name="pictureBoxEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>811, 549</value>
+    <value>608, 446</value>
   </data>
   <data name="pictureBoxEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBoxEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 60</value>
+    <value>285, 49</value>
   </data>
   <data name="pictureBoxEntrar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -272,7 +266,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxEntrar.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="pictureBoxClose.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -305,19 +299,19 @@
 </value>
   </data>
   <data name="pictureBoxClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1233, 14</value>
+    <value>925, 11</value>
   </data>
   <data name="pictureBoxClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBoxClose.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>29, 30</value>
+    <value>22, 24</value>
   </data>
   <data name="pictureBoxClose.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>29, 30</value>
+    <value>22, 24</value>
   </data>
   <data name="pictureBoxClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 30</value>
+    <value>22, 24</value>
   </data>
   <data name="pictureBoxClose.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -335,19 +329,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxClose.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="linkLabelsuporte.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="linkLabelsuporte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1203, 690</value>
-  </data>
-  <data name="linkLabelsuporte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>902, 561</value>
   </data>
   <data name="linkLabelsuporte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 16</value>
+    <value>44, 13</value>
   </data>
   <data name="linkLabelsuporte.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -368,7 +359,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabelsuporte.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="buttonsSuporte.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 13.090909pt, style=Bold</value>
@@ -423,13 +414,10 @@
     <value>NoControl</value>
   </data>
   <data name="buttonsSuporte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1060, 658</value>
-  </data>
-  <data name="buttonsSuporte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>795, 535</value>
   </data>
   <data name="buttonsSuporte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 53</value>
+    <value>158, 43</value>
   </data>
   <data name="buttonsSuporte.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -450,7 +438,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonsSuporte.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="labelCadastro.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -459,10 +447,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="labelCadastro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>813, 499</value>
+    <value>625, 409</value>
+  </data>
+  <data name="labelCadastro.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="labelCadastro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 20</value>
+    <value>149, 20</value>
   </data>
   <data name="labelCadastro.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -480,7 +471,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelCadastro.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -489,10 +480,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1005, 499</value>
+    <value>780, 409</value>
+  </data>
+  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 20</value>
+    <value>96, 20</value>
   </data>
   <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -510,16 +504,43 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>577, 535</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1277, 718</value>
+    <value>958, 583</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -597,14 +618,11 @@
         AAAAAAAAAAAAAAAAAACAAAABgAAAAeAAAAc=
 </value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1279, 720</value>
+    <value>960, 585</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1279, 720</value>
+    <value>960, 585</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
