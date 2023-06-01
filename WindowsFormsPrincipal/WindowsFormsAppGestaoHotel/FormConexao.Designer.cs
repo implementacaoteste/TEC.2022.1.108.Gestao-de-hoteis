@@ -84,9 +84,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.Location = new System.Drawing.Point(42, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
+            this.label3.Size = new System.Drawing.Size(101, 20);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Data Source";
+            this.label3.Text = "Server Name";
             // 
             // textBox3
             // 
@@ -113,6 +113,7 @@
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox4.Location = new System.Drawing.Point(46, 284);
             this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(314, 26);
             this.textBox4.TabIndex = 4;
             // 
@@ -122,10 +123,10 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(409, 55);
+            this.label5.Size = new System.Drawing.Size(409, 65);
             this.label5.TabIndex = 0;
             this.label5.Text = "Conexão";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvar
             // 
@@ -135,7 +136,7 @@
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.ForeColor = System.Drawing.Color.White;
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(46, 334);
+            this.buttonSalvar.Location = new System.Drawing.Point(46, 343);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(314, 33);
             this.buttonSalvar.TabIndex = 5;
