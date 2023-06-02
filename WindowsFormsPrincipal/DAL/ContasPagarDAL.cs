@@ -207,7 +207,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir um CONTAS a PAGAR no Banco de Dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar excluir um contas a pagar no Banco de Dados.", ex);
             }
             finally
             {
