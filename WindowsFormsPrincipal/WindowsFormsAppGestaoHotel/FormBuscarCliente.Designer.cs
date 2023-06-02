@@ -37,7 +37,7 @@
             System.Windows.Forms.Label cPFLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label idLabel1;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarCliente));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
@@ -190,7 +190,7 @@
             this.radioButtonTodos.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonTodos.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonTodos.Location = new System.Drawing.Point(4, 18);
+            this.radioButtonTodos.Location = new System.Drawing.Point(4, 17);
             this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonTodos.Name = "radioButtonTodos";
             this.radioButtonTodos.Size = new System.Drawing.Size(72, 22);
@@ -204,7 +204,7 @@
             this.radioButtonCPF.AutoSize = true;
             this.radioButtonCPF.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButtonCPF.Location = new System.Drawing.Point(159, 17);
+            this.radioButtonCPF.Location = new System.Drawing.Point(162, 17);
             this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCPF.Name = "radioButtonCPF";
             this.radioButtonCPF.Size = new System.Drawing.Size(58, 22);
@@ -263,7 +263,7 @@
             this.groupBox2.Size = new System.Drawing.Size(409, 240);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Clientes cadastrados";
+            this.groupBox2.Text = "Hóspedes cadastrados";
             // 
             // funcionarioDataGridView
             // 
@@ -319,8 +319,8 @@
             // 
             this.cPFDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.cPFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.NullValue = "0";
+            this.cPFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
             this.cPFDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
@@ -520,17 +520,15 @@
             // buttonAlterarCliente
             // 
             this.buttonAlterarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
-            this.buttonAlterarCliente.FlatAppearance.BorderSize = 0;
             this.buttonAlterarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAlterarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAlterarCliente.ForeColor = System.Drawing.Color.White;
+            this.buttonAlterarCliente.ForeColor = System.Drawing.Color.Black;
             this.buttonAlterarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarCliente.Image")));
             this.buttonAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarCliente.Location = new System.Drawing.Point(172, 575);
+            this.buttonAlterarCliente.Location = new System.Drawing.Point(159, 578);
             this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAlterarCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonAlterarCliente.Name = "buttonAlterarCliente";
-            this.buttonAlterarCliente.Size = new System.Drawing.Size(109, 33);
+            this.buttonAlterarCliente.Size = new System.Drawing.Size(120, 33);
             this.buttonAlterarCliente.TabIndex = 4;
             this.buttonAlterarCliente.Text = "Alterar";
             this.buttonAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -540,17 +538,15 @@
             // buttonExcluirCliente
             // 
             this.buttonExcluirCliente.BackColor = System.Drawing.Color.IndianRed;
-            this.buttonExcluirCliente.FlatAppearance.BorderSize = 0;
             this.buttonExcluirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirCliente.ForeColor = System.Drawing.Color.White;
+            this.buttonExcluirCliente.ForeColor = System.Drawing.Color.Black;
             this.buttonExcluirCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirCliente.Image")));
             this.buttonExcluirCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirCliente.Location = new System.Drawing.Point(313, 575);
+            this.buttonExcluirCliente.Location = new System.Drawing.Point(302, 578);
             this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonExcluirCliente.MinimumSize = new System.Drawing.Size(109, 32);
             this.buttonExcluirCliente.Name = "buttonExcluirCliente";
-            this.buttonExcluirCliente.Size = new System.Drawing.Size(109, 33);
+            this.buttonExcluirCliente.Size = new System.Drawing.Size(120, 33);
             this.buttonExcluirCliente.TabIndex = 5;
             this.buttonExcluirCliente.Text = "Excluir";
             this.buttonExcluirCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -561,16 +557,15 @@
             // buttonAdicionarCliente
             // 
             this.buttonAdicionarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(210)))), ((int)(((byte)(156)))));
-            this.buttonAdicionarCliente.FlatAppearance.BorderSize = 0;
             this.buttonAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdicionarCliente.ForeColor = System.Drawing.Color.White;
+            this.buttonAdicionarCliente.ForeColor = System.Drawing.Color.Black;
             this.buttonAdicionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarCliente.Image")));
             this.buttonAdicionarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdicionarCliente.Location = new System.Drawing.Point(13, 575);
+            this.buttonAdicionarCliente.Location = new System.Drawing.Point(13, 578);
             this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
-            this.buttonAdicionarCliente.Size = new System.Drawing.Size(124, 33);
+            this.buttonAdicionarCliente.Size = new System.Drawing.Size(120, 33);
             this.buttonAdicionarCliente.TabIndex = 3;
             this.buttonAdicionarCliente.Text = "Adicionar";
             this.buttonAdicionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -596,12 +591,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(842, 661);
+            this.MaximumSize = new System.Drawing.Size(450, 661);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(450, 661);
             this.Name = "FormBuscarCliente";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HOTELOGIX - Consulta de Clientes";
+            this.Text = "HOTELOGIX - Consulta de Hóspedes";
             this.Load += new System.EventHandler(this.FormBuscarCliente_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormBuscarCliente_KeyDown);
             this.groupBox1.ResumeLayout(false);

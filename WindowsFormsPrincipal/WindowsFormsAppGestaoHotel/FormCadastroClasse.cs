@@ -48,7 +48,7 @@ namespace WindowsFormsPrincipal1
                 classeBindingSource.AddNew();
             else
             {
-                tituloLabel.Text = "Editar Classe";
+                tituloLabel.Text = "Editar Tipo de Quarto";
                 classeBindingSource.DataSource = new ClasseBLL().BuscarPorId(Id);
             }
                 

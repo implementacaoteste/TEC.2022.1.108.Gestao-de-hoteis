@@ -149,6 +149,7 @@ namespace WindowsFormsPrincipal1
             {
                 buttonExcluirFuncionário_Click(null, null);
             }
+            buttonBuscarFuncionario_Click(null, null);
         }
 
         private void buttonExcluirGrupoFuncionario_KeyDown(object sender, KeyEventArgs e)
@@ -157,7 +158,7 @@ namespace WindowsFormsPrincipal1
             {
                 buttonExcluirGrupoFuncionario_Click(null, null);
             }
-            
+            buttonBuscarFuncionario_Click(null, null);
         }
     }
 }

@@ -114,6 +114,7 @@ namespace WindowsFormsPrincipal1
             {
                 buttonExcluirCliente_Click(null, null);
             }
+            buttonBuscarCliente_Click(null, null);
         }
     }
 }

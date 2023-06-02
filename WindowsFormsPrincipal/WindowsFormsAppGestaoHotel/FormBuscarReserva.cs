@@ -84,5 +84,10 @@ namespace WindowsFormsAppGestaoHotel
             if (Double.TryParse(valor_DiariaTextBox.Text, out value))
                 valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);*/
         }
+
+        private void textBoxBuscarIdReserva_Click(object sender, EventArgs e)
+        {
+            textBoxBuscarIdReserva.Clear();
+        }
     }
 }
