@@ -131,7 +131,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos as contas a pagar.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as contas a receber.", ex);
             }
             finally
             {
@@ -205,7 +205,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir um CONTAS a receber no Banco de Dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar excluir um contas a receber no Banco de Dados.", ex);
             }
             finally
             {
@@ -233,7 +233,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir uma contas a pagar no Banco de Dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir uma contas a receber no Banco de Dados.", ex);
             }
             finally
             {
