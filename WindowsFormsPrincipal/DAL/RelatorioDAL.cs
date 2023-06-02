@@ -132,7 +132,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar os relatorio no CHECKIN: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar os relatorio no checkin: ", ex);
             }
             finally
             {
@@ -204,7 +204,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar relatorio no Checkout ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar relatorio no checkout ", ex);
             }
             finally
             {
