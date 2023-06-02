@@ -163,6 +163,7 @@
             this.Name = "FormConexao";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.FormConexao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
