@@ -159,15 +159,6 @@
   <metadata name="funcionarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>18, 1</value>
   </metadata>
-  <metadata name="Senha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="funcionarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>18, 1</value>
-  </metadata>
-  <metadata name="grupoFuncionariosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>244, 2</value>
-  </metadata>
   <metadata name="grupoFuncionariosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>244, 2</value>
   </metadata>
@@ -175,7 +166,7 @@
   <data name="buttonAlterarFuncionario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAANBJREFUSEvtlo0JwjAQRjOC0PyN4wiO4AhuYDexG3UkzScXiB+kQtIrKHlw0LsL
+        DAAACwwBP0AiyAAAANBJREFUSEvtlo0JwjAQRjOC0PyN4wiO4AhuYDexG3UkzScXiB+kQtIrKHlw0LsL
         9+BKSc3gZzklQgg37/08TdNFyrpA6pxbk/SZw1p7l7YeLD1MniQzS3Mk+VmO7QPWCyTdkj/kSD8QYr2I
         b/J05irtPrK0GFyVoyflPlhaCljOtWYwhKRLypecs6h8bgZDWCotfEpVeRdbUu7tJubBQzqkTfDg/5UC
         XF2HS0EpjjG+7091KSjF+G9Cri4FtOqPUJOCmlhVCjAc75ZDVTrQxZgX63TOIClamlgAAAAASUVORK5C

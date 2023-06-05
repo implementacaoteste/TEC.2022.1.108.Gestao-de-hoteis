@@ -233,7 +233,7 @@
             this.comboBoxBuscar.Location = new System.Drawing.Point(34, 101);
             this.comboBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBuscar.Name = "comboBoxBuscar";
-            this.comboBoxBuscar.Size = new System.Drawing.Size(138, 28);
+            this.comboBoxBuscar.Size = new System.Drawing.Size(152, 28);
             this.comboBoxBuscar.TabIndex = 2;
             // 
             // dateTimePickerBuscar
@@ -244,7 +244,7 @@
             this.dateTimePickerBuscar.Location = new System.Drawing.Point(34, 68);
             this.dateTimePickerBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerBuscar.Name = "dateTimePickerBuscar";
-            this.dateTimePickerBuscar.Size = new System.Drawing.Size(109, 28);
+            this.dateTimePickerBuscar.Size = new System.Drawing.Size(152, 28);
             this.dateTimePickerBuscar.TabIndex = 1;
             // 
             // buttonBuscar
