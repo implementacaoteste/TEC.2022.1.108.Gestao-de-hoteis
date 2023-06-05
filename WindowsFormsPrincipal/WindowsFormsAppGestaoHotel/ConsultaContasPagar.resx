@@ -139,6 +139,14 @@
     <value>17, 6</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonAdicionar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAIlJREFUSEvtk90JgDAQgztE/8boCB3JDXUzbSB9KBwixUPU+yBQQmnKHXGGYYAQ
+        QmlaqUJbH+99jTHuUM650tbHgmnr881g1AQBklJKSw/GWboDTVUNHe2Pz6p9auNz13kyuGB/ktoYh1FL
+        d6CpUZ+B/fVgBNDWx4Jp6/O/YNQEHYVur4xhvBTnDuATceyuGZ5JAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="buttonBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -149,14 +157,6 @@
         hYPB7yoy67z0+dlknySHg8H+t3mSPAo7GjlXy+eO6VUcKOKK0Zyr0isHNd90apKz0Fn7VyK/0xdEC4Mz
         ws7UBbQbYqcS8dB8zGAQnJC76VYzJyh0QNGLTHoD3GpswNbOVDnrm89hM//f5oi4v1YsMv/ZFRu8VvW4
         8RskySdifbZYMT7Q0gAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="buttonAdicionar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAIlJREFUSEvtk90JgDAQgztE/8boCB3JDXUzbSB9KBwixUPU+yBQQmnKHXGGYYAQ
-        QmlaqUJbH+99jTHuUM650tbHgmnr881g1AQBklJKSw/GWboDTVUNHe2Pz6p9auNz13kyuGB/ktoYh1FL
-        d6CpUZ+B/fVgBNDWx4Jp6/O/YNQEHYVur4xhvBTnDuATceyuGZ5JAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -1,11 +1,11 @@
 ﻿using DAL;
-
 using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BLL
 {
@@ -13,8 +13,17 @@ namespace BLL
     {
         public void Inserir(ContasPagar _contasPagar)
         {
+            ValidarDados(_contasPagar.Data_Vencimento);
             new ContasPagarDAL().Inserir(_contasPagar);
         }
+
+        private void ValidarDados(DateTime _dataVencimento)
+        {
+            if (_dataVencimento.Year < DateTime.Now.Year)
+                throw new Exception("Ano não reconecido") ;
+                return;
+        }
+
         public void Alterar(ContasPagar _contasPagar)
         {
             new ContasPagarDAL().Alterar(_contasPagar);

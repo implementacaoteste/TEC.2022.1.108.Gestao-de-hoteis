@@ -144,6 +144,7 @@
             this.reservaDataGridView.Name = "reservaDataGridView";
             this.reservaDataGridView.ReadOnly = true;
             this.reservaDataGridView.RowHeadersVisible = false;
+            this.reservaDataGridView.RowHeadersWidth = 47;
             this.reservaDataGridView.Size = new System.Drawing.Size(910, 268);
             this.reservaDataGridView.TabIndex = 0;
             // 
@@ -154,6 +155,7 @@
             this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.idDataGridViewTextBoxColumn.FillWeight = 27F;
             this.idDataGridViewTextBoxColumn.HeaderText = "Cód";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 67;
@@ -164,6 +166,7 @@
             this.nomeHospedeDataGridViewTextBoxColumn.DataPropertyName = "Nome_Hospede";
             this.nomeHospedeDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.nomeHospedeDataGridViewTextBoxColumn.HeaderText = "Hóspede";
+            this.nomeHospedeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomeHospedeDataGridViewTextBoxColumn.Name = "nomeHospedeDataGridViewTextBoxColumn";
             this.nomeHospedeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -173,6 +176,7 @@
             this.Tipo_Quarto.DataPropertyName = "Tipo_Quarto";
             this.Tipo_Quarto.FillWeight = 45.62093F;
             this.Tipo_Quarto.HeaderText = "Tipo Quarto";
+            this.Tipo_Quarto.MinimumWidth = 6;
             this.Tipo_Quarto.Name = "Tipo_Quarto";
             this.Tipo_Quarto.ReadOnly = true;
             // 
@@ -184,6 +188,7 @@
             this.numeroQuartoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.numeroQuartoDataGridViewTextBoxColumn.FillWeight = 30F;
             this.numeroQuartoDataGridViewTextBoxColumn.HeaderText = "Nº Quarto";
+            this.numeroQuartoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.numeroQuartoDataGridViewTextBoxColumn.Name = "numeroQuartoDataGridViewTextBoxColumn";
             this.numeroQuartoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -197,6 +202,7 @@
             this.dataCheckinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataCheckinDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.dataCheckinDataGridViewTextBoxColumn.HeaderText = "Check-In";
+            this.dataCheckinDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dataCheckinDataGridViewTextBoxColumn.Name = "dataCheckinDataGridViewTextBoxColumn";
             this.dataCheckinDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -210,6 +216,7 @@
             this.dataCheckoutDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataCheckoutDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.dataCheckoutDataGridViewTextBoxColumn.HeaderText = "Check-Out";
+            this.dataCheckoutDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dataCheckoutDataGridViewTextBoxColumn.Name = "dataCheckoutDataGridViewTextBoxColumn";
             this.dataCheckoutDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -223,6 +230,7 @@
             this.Data_Reserva.DefaultCellStyle = dataGridViewCellStyle5;
             this.Data_Reserva.FillWeight = 45.62093F;
             this.Data_Reserva.HeaderText = "Data Reserva";
+            this.Data_Reserva.MinimumWidth = 6;
             this.Data_Reserva.Name = "Data_Reserva";
             this.Data_Reserva.ReadOnly = true;
             // 
@@ -232,6 +240,7 @@
             this.nomeFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "Nome_Funcionario";
             this.nomeFuncionarioDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.nomeFuncionarioDataGridViewTextBoxColumn.HeaderText = "Funcionário";
+            this.nomeFuncionarioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomeFuncionarioDataGridViewTextBoxColumn.Name = "nomeFuncionarioDataGridViewTextBoxColumn";
             this.nomeFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -245,6 +254,7 @@
             this.valorTotalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.valorTotalDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.valorTotalDataGridViewTextBoxColumn.HeaderText = "Valor Total";
+            this.valorTotalDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valorTotalDataGridViewTextBoxColumn.Name = "valorTotalDataGridViewTextBoxColumn";
             this.valorTotalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -279,7 +289,7 @@
             this.textBoxBuscarIdReserva.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBoxBuscarIdReserva.Location = new System.Drawing.Point(779, 23);
             this.textBoxBuscarIdReserva.Name = "textBoxBuscarIdReserva";
-            this.textBoxBuscarIdReserva.Size = new System.Drawing.Size(102, 26);
+            this.textBoxBuscarIdReserva.Size = new System.Drawing.Size(102, 28);
             this.textBoxBuscarIdReserva.TabIndex = 8;
             this.textBoxBuscarIdReserva.Text = "Cód. Reserva";
             this.textBoxBuscarIdReserva.Click += new System.EventHandler(this.textBoxBuscarIdReserva_Click);
@@ -290,7 +300,7 @@
             this.data_FinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.data_FinalLabel.Location = new System.Drawing.Point(486, 26);
             this.data_FinalLabel.Name = "data_FinalLabel";
-            this.data_FinalLabel.Size = new System.Drawing.Size(82, 20);
+            this.data_FinalLabel.Size = new System.Drawing.Size(93, 24);
             this.data_FinalLabel.TabIndex = 7;
             this.data_FinalLabel.Text = "Data Final";
             // 
@@ -300,7 +310,7 @@
             this.data_InicialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.data_InicialLabel.Location = new System.Drawing.Point(238, 26);
             this.data_InicialLabel.Name = "data_InicialLabel";
-            this.data_InicialLabel.Size = new System.Drawing.Size(88, 20);
+            this.data_InicialLabel.Size = new System.Drawing.Size(99, 24);
             this.data_InicialLabel.TabIndex = 7;
             this.data_InicialLabel.Text = "Data Inicial";
             // 
@@ -308,18 +318,18 @@
             // 
             this.datePickerFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.datePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerFinal.Location = new System.Drawing.Point(574, 23);
+            this.datePickerFinal.Location = new System.Drawing.Point(585, 24);
             this.datePickerFinal.Name = "datePickerFinal";
-            this.datePickerFinal.Size = new System.Drawing.Size(130, 26);
+            this.datePickerFinal.Size = new System.Drawing.Size(130, 28);
             this.datePickerFinal.TabIndex = 6;
             // 
             // datePickerInicial
             // 
             this.datePickerInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.datePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerInicial.Location = new System.Drawing.Point(332, 23);
+            this.datePickerInicial.Location = new System.Drawing.Point(343, 24);
             this.datePickerInicial.Name = "datePickerInicial";
-            this.datePickerInicial.Size = new System.Drawing.Size(130, 26);
+            this.datePickerInicial.Size = new System.Drawing.Size(130, 28);
             this.datePickerInicial.TabIndex = 6;
             // 
             // comboBoxBuscarTipo
@@ -332,7 +342,7 @@
             "Data Lançamento"});
             this.comboBoxBuscarTipo.Location = new System.Drawing.Point(5, 24);
             this.comboBoxBuscarTipo.Name = "comboBoxBuscarTipo";
-            this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 26);
+            this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 28);
             this.comboBoxBuscarTipo.TabIndex = 5;
             // 
             // FormBuscarReserva
@@ -340,7 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(940, 644);
+            this.ClientSize = new System.Drawing.Size(938, 639);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxDiaria);

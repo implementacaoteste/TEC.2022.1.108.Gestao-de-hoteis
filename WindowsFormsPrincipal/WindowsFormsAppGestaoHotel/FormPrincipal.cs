@@ -293,23 +293,23 @@ namespace WindowsFormsPrincipal1
 
         private void contasAPagarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 using (ConsultaContasPagar frm = new ConsultaContasPagar())
                 {
                     frm.ShowDialog();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           // }
+           // catch (Exception ex)
+           // {
+           //     MessageBox.Show(ex.Message);
+           // }
         }
 
         private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-                try
+            try
             {
                 using (ConsultaContaReceber frm = new ConsultaContaReceber())
                 {

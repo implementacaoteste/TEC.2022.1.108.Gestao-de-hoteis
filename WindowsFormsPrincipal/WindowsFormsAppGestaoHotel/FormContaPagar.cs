@@ -24,7 +24,7 @@ namespace WindowsFormsAppGestaoHotel
         private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
         {
             try
-            {
+           {
                 ContasPagarBLL _contasPagarBLL = new ContasPagarBLL();
                 contasPagarBindingSource.EndEdit();
                 if (Id == 0)
@@ -37,7 +37,7 @@ namespace WindowsFormsAppGestaoHotel
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -85,6 +85,7 @@ namespace WindowsFormsAppGestaoHotel
         private void FormContaPagar_Load(object sender, EventArgs e)
         {
             contasPagarBindingSource.AddNew();
+            label1.Text = Convert.ToString(data_VencimentoDateTimePicker.Value);
         }
     }
 }

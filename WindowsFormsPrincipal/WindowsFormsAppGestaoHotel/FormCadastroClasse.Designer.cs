@@ -33,9 +33,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroClasse));
             this.tituloLabel = new System.Windows.Forms.Label();
             this.classTextBox = new System.Windows.Forms.TextBox();
-            this.classeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
+            this.classeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             classLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -44,10 +44,10 @@
             // 
             classLabel.AutoSize = true;
             classLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            classLabel.Location = new System.Drawing.Point(50, 72);
+            classLabel.Location = new System.Drawing.Point(50, 73);
             classLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             classLabel.Name = "classLabel";
-            classLabel.Size = new System.Drawing.Size(114, 20);
+            classLabel.Size = new System.Drawing.Size(137, 24);
             classLabel.TabIndex = 2;
             classLabel.Text = "Tipo de Quarto";
             // 
@@ -59,7 +59,7 @@
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(444, 63);
+            this.tituloLabel.Size = new System.Drawing.Size(444, 60);
             this.tituloLabel.TabIndex = 0;
             this.tituloLabel.Text = "Cadastro de Tipo de Quarto";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,22 +69,18 @@
             this.classTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.classTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.classeBindingSource, "Class", true));
             this.classTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.classTextBox.Location = new System.Drawing.Point(54, 98);
+            this.classTextBox.Location = new System.Drawing.Point(54, 99);
             this.classTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.classTextBox.Name = "classTextBox";
-            this.classTextBox.Size = new System.Drawing.Size(332, 26);
+            this.classTextBox.Size = new System.Drawing.Size(332, 28);
             this.classTextBox.TabIndex = 3;
-            // 
-            // classeBindingSource
-            // 
-            this.classeBindingSource.DataSource = typeof(Models.Classe);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.Color.IndianRed;
             this.buttonCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.ForeColor = System.Drawing.Color.Black;
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,6 +111,10 @@
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            // 
+            // classeBindingSource
+            // 
+            this.classeBindingSource.DataSource = typeof(Models.Classe);
             // 
             // FormCadastroClasse
             // 

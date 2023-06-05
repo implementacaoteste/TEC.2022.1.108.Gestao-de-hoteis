@@ -73,6 +73,16 @@ namespace WindowsFormsAppGestaoHotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_bk1 {
+            get {
+                object obj = ResourceManager.GetObject("add_bk1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_month_gray {
             get {
                 object obj = ResourceManager.GetObject("calendar_month_gray", resourceCulture);
@@ -93,6 +103,16 @@ namespace WindowsFormsAppGestaoHotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_bk {
+            get {
+                object obj = ResourceManager.GetObject("check_bk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap check1 {
             get {
                 object obj = ResourceManager.GetObject("check1", resourceCulture);
@@ -106,6 +126,16 @@ namespace WindowsFormsAppGestaoHotel.Properties {
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_bk {
+            get {
+                object obj = ResourceManager.GetObject("close_bk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +176,16 @@ namespace WindowsFormsAppGestaoHotel.Properties {
         internal static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_bk {
+            get {
+                object obj = ResourceManager.GetObject("save_bk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
