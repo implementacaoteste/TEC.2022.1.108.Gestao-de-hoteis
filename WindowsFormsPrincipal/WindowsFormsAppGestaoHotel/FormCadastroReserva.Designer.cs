@@ -42,7 +42,6 @@
             System.Windows.Forms.Label label4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroReserva));
             this.valor_TotalTextBox = new System.Windows.Forms.TextBox();
-            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tituloLabel = new System.Windows.Forms.Label();
             this.buttonSelecionarCliente = new System.Windows.Forms.Button();
             this.buttonSelecionarPagamento = new System.Windows.Forms.Button();
@@ -60,6 +59,7 @@
             this.numero_QuartoTextBox = new System.Windows.Forms.TextBox();
             this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.valor_DiariaTextBox = new System.Windows.Forms.TextBox();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -71,9 +71,9 @@
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qtd_HospedesNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // data_EntradaLabel
@@ -205,10 +205,6 @@
             this.valor_TotalTextBox.Size = new System.Drawing.Size(120, 26);
             this.valor_TotalTextBox.TabIndex = 18;
             // 
-            // reservaBindingSource
-            // 
-            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
-            // 
             // tituloLabel
             // 
             this.tituloLabel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -217,10 +213,10 @@
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(613, 55);
+            this.tituloLabel.Size = new System.Drawing.Size(613, 60);
             this.tituloLabel.TabIndex = 0;
             this.tituloLabel.Text = "Cadastro de Reserva";
-            this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSelecionarCliente
             // 
@@ -319,6 +315,7 @@
             this.data_Ent_ReservaDateTimePicker.Size = new System.Drawing.Size(117, 26);
             this.data_Ent_ReservaDateTimePicker.TabIndex = 14;
             this.data_Ent_ReservaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 0, 0, 0, 0);
+            this.data_Ent_ReservaDateTimePicker.ValueChanged += new System.EventHandler(this.data_Ent_ReservaDateTimePicker_ValueChanged);
             // 
             // data_SaidaDateTimePicker
             // 
@@ -334,6 +331,7 @@
             this.data_SaidaDateTimePicker.Size = new System.Drawing.Size(120, 26);
             this.data_SaidaDateTimePicker.TabIndex = 16;
             this.data_SaidaDateTimePicker.Value = new System.DateTime(2023, 5, 13, 0, 0, 0, 0);
+            this.data_SaidaDateTimePicker.ValueChanged += new System.EventHandler(this.data_SaidaDateTimePicker_ValueChanged);
             // 
             // buttonSelecionarQuarto
             // 
@@ -416,6 +414,10 @@
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(117, 26);
             this.valor_DiariaTextBox.TabIndex = 30;
             // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            // 
             // FormCadastroReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,9 +465,9 @@
             this.Text = "HOTELOGIX - Cadastro de Reserva";
             this.Load += new System.EventHandler(this.FormCadastroReserva_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroDiaria_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qtd_HospedesNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

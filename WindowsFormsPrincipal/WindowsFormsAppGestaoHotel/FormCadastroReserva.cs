@@ -21,6 +21,7 @@ using System.Windows.Forms;
 using WindowsFormsPrincipal1;
 using Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Globalization;
 
 namespace WindowsFormsAppGestaoHotel
 {
@@ -90,8 +91,8 @@ namespace WindowsFormsAppGestaoHotel
                     ((Reserva)reservaBindingSource.Current).Id_Hospede = frm.Id;
                     ((Reserva)reservaBindingSource.Current).Nome_Hospede = frm.NomeHospede;
                     id_HospedeTextBox.Text = frm.NomeHospede;
+                    qtd_HospedesNumericUpDown.Value = reservaBindingSource.Count;
                 }
-                qtd_HospedesNumericUpDown.Value = 1;
             }
             catch (Exception ex)
             {
@@ -136,8 +137,13 @@ namespace WindowsFormsAppGestaoHotel
                         tipo_QuartoTextBox.Text = frm.Tipo_Quarto.ToString();
                         valor_DiariaTextBox.Text = frm.Valor_Diaria.ToString();
                         ((Reserva)reservaBindingSource.Current).Id_Quarto = frm.Id;
+
+                        double value = frm.Valor_Diaria;
+                        if (Double.TryParse(valor_DiariaTextBox.Text, out value))
+                            valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
                     }
                 }
+                //CalcularValorReserva();
             }
             catch (Exception ex)
             {
@@ -150,6 +156,33 @@ namespace WindowsFormsAppGestaoHotel
             {
                 buttonCancelar_Click(null, null);
             }
+        }
+
+        public void CalcularValorReserva()
+        {
+            DateTime data_ent = data_Ent_ReservaDateTimePicker.Value;
+            DateTime data_sai = data_SaidaDateTimePicker.Value;
+            double TotalDays = (data_sai.Date - data_ent.Date).Days;
+            double valor_total = 0;
+            double valor_quarto = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
+
+            double value = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
+            if (Double.TryParse(valor_DiariaTextBox.Text, out value))
+                valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
+
+            if (valor_quarto > 0)
+                valor_total = TotalDays * valor_quarto;
+
+        }
+
+        private void data_Ent_ReservaDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            //CalcularValorReserva();
+        }
+
+        private void data_SaidaDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            //CalcularValorReserva();
         }
     }
 }
