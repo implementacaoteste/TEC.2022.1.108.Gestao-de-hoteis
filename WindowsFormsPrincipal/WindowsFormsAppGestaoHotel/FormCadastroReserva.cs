@@ -22,6 +22,7 @@ using WindowsFormsPrincipal1;
 using Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Globalization;
+using System.Threading;
 
 namespace WindowsFormsAppGestaoHotel
 {
@@ -34,10 +35,10 @@ namespace WindowsFormsAppGestaoHotel
 
         public FormCadastroReserva(int _id = 0)
         {
-            InitializeComponent(); 
+            InitializeComponent();
             Id = _id;
         }
-        
+
         private void FormCadastroReserva_Load(object sender, EventArgs e)
         {
             try
@@ -111,7 +112,7 @@ namespace WindowsFormsAppGestaoHotel
                     reservaBLL.Inserir((Reserva)reservaBindingSource.Current);
                 else
                     reservaBLL.Alterar((Reserva)reservaBindingSource.Current);
-                
+
                 MessageBox.Show("Reserva cadastrada com sucesso!");
                 Close();
             }
@@ -143,7 +144,7 @@ namespace WindowsFormsAppGestaoHotel
                             valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
                     }
                 }
-                //CalcularValorReserva();
+                CalcularValorReserva();
             }
             catch (Exception ex)
             {
@@ -160,27 +161,48 @@ namespace WindowsFormsAppGestaoHotel
 
         public void CalcularValorReserva()
         {
+            if (data_SaidaDateTimePicker.Value < data_Ent_ReservaDateTimePicker.Value)
+                return;
+
             DateTime data_ent = data_Ent_ReservaDateTimePicker.Value;
             DateTime data_sai = data_SaidaDateTimePicker.Value;
-            double TotalDays = (data_sai.Date - data_ent.Date).Days;
+            int TotalDays = (data_sai.Date - data_ent.Date).Days;
             double valor_total = 0;
-            double valor_quarto = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
+            //double valor_total_reserva = ((Reserva)reservaBindingSource.Current).Valor_Total;
+            double valor_diaria = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
 
-            double value = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
-            if (Double.TryParse(valor_DiariaTextBox.Text, out value))
-                valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
+            
 
-            if (valor_quarto > 0)
-                valor_total = TotalDays * valor_quarto;
+            if (valor_diaria > 0)
+                valor_total = TotalDays * valor_diaria;
 
+            valor_EntradaTextBox.Text = (valor_total / 2).ToString();
+
+            valor_TotalTextBox.Text = valor_total.ToString();
+
+            if (Double.TryParse(valor_DiariaTextBox.Text, out valor_diaria))
+                valor_DiariaTextBox.Text = valor_diaria.ToString("C", CultureInfo.CurrentCulture);
+
+            if (Double.TryParse(valor_TotalTextBox.Text, out valor_total))
+                valor_TotalTextBox.Text = valor_total.ToString("C", CultureInfo.CurrentCulture);
+
+            if (Double.TryParse(valor_EntradaTextBox.Text, out Vlr_Entrada))
+                valor_EntradaTextBox.Text = Vlr_Entrada.ToString("C", CultureInfo.CurrentCulture);
         }
 
         private void data_Ent_ReservaDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            //CalcularValorReserva();
+            //valor_EntradaTextBox.Focus();
+            //data_Ent_ReservaDateTimePicker.Focus();
         }
 
         private void data_SaidaDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            //valor_EntradaTextBox.Focus();
+            //data_Ent_ReservaDateTimePicker.Focus();
+        }
+
+        private void valor_EntradaTextBox_Enter(object sender, EventArgs e)
         {
             //CalcularValorReserva();
         }
