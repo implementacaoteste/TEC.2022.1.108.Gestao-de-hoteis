@@ -141,6 +141,31 @@ namespace WindowsFormsPrincipal1
             {
                 Close();
             }
+
+            if(e.Control && e.KeyCode == Keys.A)
+            {
+                buttonAdicionarFuncionario_Click(null,null);
+            }
+
+            if(e.Control && e.KeyCode == Keys.D)
+            {
+                buttonExcluirFuncionário_Click(null, null);
+            }
+
+            if(e.Control && e.KeyCode == Keys.M)
+            {
+                buttonAlterarFuncionario_Click(null,null);
+            }
+
+            if (e.Shift && e.KeyCode == Keys.A)
+            {
+                buttonAdicionarGrupoFuncionario_Click(null, null);
+            }
+
+            if (e.Shift && e.KeyCode == Keys.M)
+            {
+                buttonExcluirGrupoFuncionario_Click(null, null);
+            }
         }
 
         private void buttonExcluirFuncionario_KeyDown(object sender, KeyEventArgs e)

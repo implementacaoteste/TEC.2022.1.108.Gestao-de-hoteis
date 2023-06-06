@@ -106,6 +106,21 @@ namespace WindowsFormsPrincipal1
             {
                 Close();
             }
+
+            if(e.Control && e.KeyCode == Keys.A)
+            {
+                buttonAdicionarCliente_Click(null, null);
+            }
+
+            if(e.Control && e.KeyCode == Keys.M)
+            {
+                buttonAlterarCliente_Click(null, null);
+            }
+
+            if (e.Control && e.KeyCode == Keys.D)
+            {
+                buttonExcluirCliente_Click(null, null);
+            }
         }
 
         private void buttonExcluirCliente_KeyDown(object sender, KeyEventArgs e)
