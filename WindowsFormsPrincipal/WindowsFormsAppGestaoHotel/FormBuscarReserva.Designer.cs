@@ -45,12 +45,12 @@
             System.Windows.Forms.Label valor_RestanteLabel;
             System.Windows.Forms.Label data_CheckinLabel;
             System.Windows.Forms.Label data_CheckoutLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDiaria = new System.Windows.Forms.GroupBox();
             this.data_CheckoutMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -358,6 +358,7 @@
             this.valor_RestanteTextBox.Size = new System.Drawing.Size(100, 26);
             this.valor_RestanteTextBox.TabIndex = 21;
             this.valor_RestanteTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valor_RestanteTextBox.TextChanged += new System.EventHandler(this.valor_RestanteTextBox_TextChanged);
             // 
             // data_ReservaMaskedTextBox
             // 
@@ -510,8 +511,8 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
             this.idDataGridViewTextBoxColumn.FillWeight = 27F;
             this.idDataGridViewTextBoxColumn.HeaderText = "Cód";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -543,8 +544,8 @@
             // 
             this.numeroQuartoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numeroQuartoDataGridViewTextBoxColumn.DataPropertyName = "Numero_Quarto";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.numeroQuartoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.numeroQuartoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
             this.numeroQuartoDataGridViewTextBoxColumn.FillWeight = 30F;
             this.numeroQuartoDataGridViewTextBoxColumn.HeaderText = "Nº Quarto";
             this.numeroQuartoDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -555,10 +556,10 @@
             // 
             this.dataCheckinDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataCheckinDataGridViewTextBoxColumn.DataPropertyName = "Data_Checkin";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataCheckinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.Format = "d";
+            dataGridViewCellStyle21.NullValue = null;
+            this.dataCheckinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
             this.dataCheckinDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.dataCheckinDataGridViewTextBoxColumn.HeaderText = "Check-In";
             this.dataCheckinDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -569,10 +570,10 @@
             // 
             this.dataCheckoutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataCheckoutDataGridViewTextBoxColumn.DataPropertyName = "Data_Checkout";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dataCheckoutDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.Format = "d";
+            dataGridViewCellStyle22.NullValue = null;
+            this.dataCheckoutDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataCheckoutDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.dataCheckoutDataGridViewTextBoxColumn.HeaderText = "Check-Out";
             this.dataCheckoutDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -583,10 +584,10 @@
             // 
             this.Data_Reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Data_Reserva.DataPropertyName = "Data_Reserva";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Data_Reserva.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.Format = "d";
+            dataGridViewCellStyle23.NullValue = null;
+            this.Data_Reserva.DefaultCellStyle = dataGridViewCellStyle23;
             this.Data_Reserva.FillWeight = 45.62093F;
             this.Data_Reserva.HeaderText = "Data Reserva";
             this.Data_Reserva.MinimumWidth = 6;
@@ -607,10 +608,10 @@
             // 
             this.valorTotalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.valorTotalDataGridViewTextBoxColumn.DataPropertyName = "Valor_Total";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.valorTotalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle24.Format = "C2";
+            dataGridViewCellStyle24.NullValue = null;
+            this.valorTotalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle24;
             this.valorTotalDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.valorTotalDataGridViewTextBoxColumn.HeaderText = "Valor Total";
             this.valorTotalDataGridViewTextBoxColumn.MinimumWidth = 6;

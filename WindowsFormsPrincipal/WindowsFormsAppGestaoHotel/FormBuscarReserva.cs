@@ -103,5 +103,17 @@ namespace WindowsFormsAppGestaoHotel
             if (Double.TryParse(valor_TotalTextBox.Text, out value))
                 valor_TotalTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
         }
+
+        private void valor_RestanteTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double value = ((Reserva)reservaBindingSource.Current).Valor_Restante;
+            if (Double.TryParse(valor_RestanteTextBox.Text, out value))
+                valor_RestanteTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
+
+            if (value > 0)
+                valor_RestanteTextBox.ForeColor = Color.Red;
+            else
+                valor_RestanteTextBox.ForeColor = Color.Green;
+        }
     }
 }
