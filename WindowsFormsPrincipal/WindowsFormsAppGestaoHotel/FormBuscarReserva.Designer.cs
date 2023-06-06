@@ -32,6 +32,19 @@
             System.Windows.Forms.Button buttonBuscarIdReserva;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarReserva));
             System.Windows.Forms.Button buttonBuscarTipo;
+            System.Windows.Forms.Label cPF_HopesdeLabel;
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label nome_FuncionarioLabel;
+            System.Windows.Forms.Label nome_HospedeLabel;
+            System.Windows.Forms.Label numero_QuartoLabel;
+            System.Windows.Forms.Label obs_ReservaLabel;
+            System.Windows.Forms.Label qtd_HospedesLabel;
+            System.Windows.Forms.Label valor_EntradaLabel;
+            System.Windows.Forms.Label valor_TotalLabel;
+            System.Windows.Forms.Label data_ReservaLabel;
+            System.Windows.Forms.Label valor_RestanteLabel;
+            System.Windows.Forms.Label data_CheckinLabel;
+            System.Windows.Forms.Label data_CheckoutLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,6 +52,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDiaria = new System.Windows.Forms.GroupBox();
+            this.data_CheckoutMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.data_CheckinMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cPF_HopesdeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.valor_RestanteTextBox = new System.Windows.Forms.TextBox();
+            this.data_ReservaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.valor_TotalTextBox = new System.Windows.Forms.TextBox();
+            this.valor_EntradaTextBox = new System.Windows.Forms.TextBox();
+            this.qtd_HospedesTextBox = new System.Windows.Forms.TextBox();
+            this.obs_ReservaTextBox = new System.Windows.Forms.TextBox();
+            this.numero_QuartoTextBox = new System.Windows.Forms.TextBox();
+            this.nome_HospedeTextBox = new System.Windows.Forms.TextBox();
+            this.nome_FuncionarioTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.reservaDataGridView = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +77,6 @@
             this.Data_Reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxBuscarIdReserva = new System.Windows.Forms.TextBox();
             this.data_FinalLabel = new System.Windows.Forms.Label();
@@ -60,9 +86,23 @@
             this.comboBoxBuscarTipo = new System.Windows.Forms.ComboBox();
             buttonBuscarIdReserva = new System.Windows.Forms.Button();
             buttonBuscarTipo = new System.Windows.Forms.Button();
+            cPF_HopesdeLabel = new System.Windows.Forms.Label();
+            idLabel = new System.Windows.Forms.Label();
+            nome_FuncionarioLabel = new System.Windows.Forms.Label();
+            nome_HospedeLabel = new System.Windows.Forms.Label();
+            numero_QuartoLabel = new System.Windows.Forms.Label();
+            obs_ReservaLabel = new System.Windows.Forms.Label();
+            qtd_HospedesLabel = new System.Windows.Forms.Label();
+            valor_EntradaLabel = new System.Windows.Forms.Label();
+            valor_TotalLabel = new System.Windows.Forms.Label();
+            data_ReservaLabel = new System.Windows.Forms.Label();
+            valor_RestanteLabel = new System.Windows.Forms.Label();
+            data_CheckinLabel = new System.Windows.Forms.Label();
+            data_CheckoutLabel = new System.Windows.Forms.Label();
+            this.groupBoxDiaria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,16 +138,335 @@
             buttonBuscarTipo.UseVisualStyleBackColor = false;
             buttonBuscarTipo.Click += new System.EventHandler(this.buttonBuscarTipo_Click);
             // 
+            // cPF_HopesdeLabel
+            // 
+            cPF_HopesdeLabel.AutoSize = true;
+            cPF_HopesdeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            cPF_HopesdeLabel.Location = new System.Drawing.Point(13, 93);
+            cPF_HopesdeLabel.Name = "cPF_HopesdeLabel";
+            cPF_HopesdeLabel.Size = new System.Drawing.Size(113, 20);
+            cPF_HopesdeLabel.TabIndex = 0;
+            cPF_HopesdeLabel.Text = "CPF Hópesde:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            idLabel.Location = new System.Drawing.Point(80, 29);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(46, 20);
+            idLabel.TabIndex = 2;
+            idLabel.Text = "Cód.:";
+            // 
+            // nome_FuncionarioLabel
+            // 
+            nome_FuncionarioLabel.AutoSize = true;
+            nome_FuncionarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            nome_FuncionarioLabel.Location = new System.Drawing.Point(503, 57);
+            nome_FuncionarioLabel.Name = "nome_FuncionarioLabel";
+            nome_FuncionarioLabel.Size = new System.Drawing.Size(96, 20);
+            nome_FuncionarioLabel.TabIndex = 4;
+            nome_FuncionarioLabel.Text = "Funcionário:";
+            // 
+            // nome_HospedeLabel
+            // 
+            nome_HospedeLabel.AutoSize = true;
+            nome_HospedeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            nome_HospedeLabel.Location = new System.Drawing.Point(48, 60);
+            nome_HospedeLabel.Name = "nome_HospedeLabel";
+            nome_HospedeLabel.Size = new System.Drawing.Size(78, 20);
+            nome_HospedeLabel.TabIndex = 6;
+            nome_HospedeLabel.Text = "Hóspede:";
+            // 
+            // numero_QuartoLabel
+            // 
+            numero_QuartoLabel.AutoSize = true;
+            numero_QuartoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            numero_QuartoLabel.Location = new System.Drawing.Point(516, 93);
+            numero_QuartoLabel.Name = "numero_QuartoLabel";
+            numero_QuartoLabel.Size = new System.Drawing.Size(83, 20);
+            numero_QuartoLabel.TabIndex = 8;
+            numero_QuartoLabel.Text = "Nº Quarto:";
+            // 
+            // obs_ReservaLabel
+            // 
+            obs_ReservaLabel.AutoSize = true;
+            obs_ReservaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            obs_ReservaLabel.Location = new System.Drawing.Point(490, 124);
+            obs_ReservaLabel.Name = "obs_ReservaLabel";
+            obs_ReservaLabel.Size = new System.Drawing.Size(109, 20);
+            obs_ReservaLabel.TabIndex = 10;
+            obs_ReservaLabel.Text = "Obs. Reserva:";
+            // 
+            // qtd_HospedesLabel
+            // 
+            qtd_HospedesLabel.AutoSize = true;
+            qtd_HospedesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            qtd_HospedesLabel.Location = new System.Drawing.Point(258, 93);
+            qtd_HospedesLabel.Name = "qtd_HospedesLabel";
+            qtd_HospedesLabel.Size = new System.Drawing.Size(116, 20);
+            qtd_HospedesLabel.TabIndex = 12;
+            qtd_HospedesLabel.Text = "Qtd Hóspedes:";
+            // 
+            // valor_EntradaLabel
+            // 
+            valor_EntradaLabel.AutoSize = true;
+            valor_EntradaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            valor_EntradaLabel.Location = new System.Drawing.Point(263, 125);
+            valor_EntradaLabel.Name = "valor_EntradaLabel";
+            valor_EntradaLabel.Size = new System.Drawing.Size(111, 20);
+            valor_EntradaLabel.TabIndex = 14;
+            valor_EntradaLabel.Text = "Valor Entrada:";
+            // 
+            // valor_TotalLabel
+            // 
+            valor_TotalLabel.AutoSize = true;
+            valor_TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            valor_TotalLabel.Location = new System.Drawing.Point(285, 158);
+            valor_TotalLabel.Name = "valor_TotalLabel";
+            valor_TotalLabel.Size = new System.Drawing.Size(89, 20);
+            valor_TotalLabel.TabIndex = 16;
+            valor_TotalLabel.Text = "Valor Total:";
+            // 
+            // data_ReservaLabel
+            // 
+            data_ReservaLabel.AutoSize = true;
+            data_ReservaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            data_ReservaLabel.Location = new System.Drawing.Point(15, 190);
+            data_ReservaLabel.Name = "data_ReservaLabel";
+            data_ReservaLabel.Size = new System.Drawing.Size(111, 20);
+            data_ReservaLabel.TabIndex = 18;
+            data_ReservaLabel.Text = "Data Reserva:";
+            // 
+            // valor_RestanteLabel
+            // 
+            valor_RestanteLabel.AutoSize = true;
+            valor_RestanteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            valor_RestanteLabel.Location = new System.Drawing.Point(254, 190);
+            valor_RestanteLabel.Name = "valor_RestanteLabel";
+            valor_RestanteLabel.Size = new System.Drawing.Size(120, 20);
+            valor_RestanteLabel.TabIndex = 20;
+            valor_RestanteLabel.Text = "Valor Restante:";
+            // 
+            // data_CheckinLabel
+            // 
+            data_CheckinLabel.AutoSize = true;
+            data_CheckinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            data_CheckinLabel.Location = new System.Drawing.Point(17, 125);
+            data_CheckinLabel.Name = "data_CheckinLabel";
+            data_CheckinLabel.Size = new System.Drawing.Size(109, 20);
+            data_CheckinLabel.TabIndex = 22;
+            data_CheckinLabel.Text = "Data Checkin:";
+            // 
+            // data_CheckoutLabel
+            // 
+            data_CheckoutLabel.AutoSize = true;
+            data_CheckoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            data_CheckoutLabel.Location = new System.Drawing.Point(6, 158);
+            data_CheckoutLabel.Name = "data_CheckoutLabel";
+            data_CheckoutLabel.Size = new System.Drawing.Size(120, 20);
+            data_CheckoutLabel.TabIndex = 24;
+            data_CheckoutLabel.Text = "Data Checkout:";
+            // 
             // groupBoxDiaria
             // 
-            this.groupBoxDiaria.Location = new System.Drawing.Point(9, 410);
+            this.groupBoxDiaria.Controls.Add(this.data_CheckoutMaskedTextBox);
+            this.groupBoxDiaria.Controls.Add(this.data_CheckinMaskedTextBox);
+            this.groupBoxDiaria.Controls.Add(data_CheckoutLabel);
+            this.groupBoxDiaria.Controls.Add(data_CheckinLabel);
+            this.groupBoxDiaria.Controls.Add(this.cPF_HopesdeMaskedTextBox);
+            this.groupBoxDiaria.Controls.Add(valor_RestanteLabel);
+            this.groupBoxDiaria.Controls.Add(this.valor_RestanteTextBox);
+            this.groupBoxDiaria.Controls.Add(data_ReservaLabel);
+            this.groupBoxDiaria.Controls.Add(this.data_ReservaMaskedTextBox);
+            this.groupBoxDiaria.Controls.Add(valor_TotalLabel);
+            this.groupBoxDiaria.Controls.Add(this.valor_TotalTextBox);
+            this.groupBoxDiaria.Controls.Add(valor_EntradaLabel);
+            this.groupBoxDiaria.Controls.Add(this.valor_EntradaTextBox);
+            this.groupBoxDiaria.Controls.Add(qtd_HospedesLabel);
+            this.groupBoxDiaria.Controls.Add(this.qtd_HospedesTextBox);
+            this.groupBoxDiaria.Controls.Add(obs_ReservaLabel);
+            this.groupBoxDiaria.Controls.Add(this.obs_ReservaTextBox);
+            this.groupBoxDiaria.Controls.Add(numero_QuartoLabel);
+            this.groupBoxDiaria.Controls.Add(this.numero_QuartoTextBox);
+            this.groupBoxDiaria.Controls.Add(nome_HospedeLabel);
+            this.groupBoxDiaria.Controls.Add(this.nome_HospedeTextBox);
+            this.groupBoxDiaria.Controls.Add(nome_FuncionarioLabel);
+            this.groupBoxDiaria.Controls.Add(this.nome_FuncionarioTextBox);
+            this.groupBoxDiaria.Controls.Add(idLabel);
+            this.groupBoxDiaria.Controls.Add(this.idTextBox);
+            this.groupBoxDiaria.Controls.Add(cPF_HopesdeLabel);
+            this.groupBoxDiaria.Location = new System.Drawing.Point(9, 405);
             this.groupBoxDiaria.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxDiaria.Name = "groupBoxDiaria";
             this.groupBoxDiaria.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxDiaria.Size = new System.Drawing.Size(920, 193);
+            this.groupBoxDiaria.Size = new System.Drawing.Size(920, 225);
             this.groupBoxDiaria.TabIndex = 3;
             this.groupBoxDiaria.TabStop = false;
             this.groupBoxDiaria.Text = "Dados da Reserva";
+            // 
+            // data_CheckoutMaskedTextBox
+            // 
+            this.data_CheckoutMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_CheckoutMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Data_Checkout", true));
+            this.data_CheckoutMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.data_CheckoutMaskedTextBox.Location = new System.Drawing.Point(131, 155);
+            this.data_CheckoutMaskedTextBox.Mask = "00/00/0000";
+            this.data_CheckoutMaskedTextBox.Name = "data_CheckoutMaskedTextBox";
+            this.data_CheckoutMaskedTextBox.ReadOnly = true;
+            this.data_CheckoutMaskedTextBox.Size = new System.Drawing.Size(85, 26);
+            this.data_CheckoutMaskedTextBox.TabIndex = 26;
+            this.data_CheckoutMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            // 
+            // data_CheckinMaskedTextBox
+            // 
+            this.data_CheckinMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_CheckinMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Data_Checkin", true));
+            this.data_CheckinMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.data_CheckinMaskedTextBox.Location = new System.Drawing.Point(131, 122);
+            this.data_CheckinMaskedTextBox.Mask = "00/00/0000";
+            this.data_CheckinMaskedTextBox.Name = "data_CheckinMaskedTextBox";
+            this.data_CheckinMaskedTextBox.ReadOnly = true;
+            this.data_CheckinMaskedTextBox.Size = new System.Drawing.Size(85, 26);
+            this.data_CheckinMaskedTextBox.TabIndex = 25;
+            this.data_CheckinMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // cPF_HopesdeMaskedTextBox
+            // 
+            this.cPF_HopesdeMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cPF_HopesdeMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "CPF_Hopesde", true));
+            this.cPF_HopesdeMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cPF_HopesdeMaskedTextBox.Location = new System.Drawing.Point(131, 90);
+            this.cPF_HopesdeMaskedTextBox.Mask = "000,000,000-00";
+            this.cPF_HopesdeMaskedTextBox.Name = "cPF_HopesdeMaskedTextBox";
+            this.cPF_HopesdeMaskedTextBox.ReadOnly = true;
+            this.cPF_HopesdeMaskedTextBox.Size = new System.Drawing.Size(120, 26);
+            this.cPF_HopesdeMaskedTextBox.TabIndex = 22;
+            // 
+            // valor_RestanteTextBox
+            // 
+            this.valor_RestanteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_RestanteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Valor_Restante", true));
+            this.valor_RestanteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.valor_RestanteTextBox.Location = new System.Drawing.Point(382, 187);
+            this.valor_RestanteTextBox.Name = "valor_RestanteTextBox";
+            this.valor_RestanteTextBox.ReadOnly = true;
+            this.valor_RestanteTextBox.Size = new System.Drawing.Size(100, 26);
+            this.valor_RestanteTextBox.TabIndex = 21;
+            this.valor_RestanteTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // data_ReservaMaskedTextBox
+            // 
+            this.data_ReservaMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_ReservaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Data_Reserva", true));
+            this.data_ReservaMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.data_ReservaMaskedTextBox.Location = new System.Drawing.Point(131, 187);
+            this.data_ReservaMaskedTextBox.Mask = "00/00/0000";
+            this.data_ReservaMaskedTextBox.Name = "data_ReservaMaskedTextBox";
+            this.data_ReservaMaskedTextBox.ReadOnly = true;
+            this.data_ReservaMaskedTextBox.Size = new System.Drawing.Size(85, 26);
+            this.data_ReservaMaskedTextBox.TabIndex = 19;
+            this.data_ReservaMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // valor_TotalTextBox
+            // 
+            this.valor_TotalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_TotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Valor_Total", true));
+            this.valor_TotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.valor_TotalTextBox.Location = new System.Drawing.Point(382, 155);
+            this.valor_TotalTextBox.Name = "valor_TotalTextBox";
+            this.valor_TotalTextBox.ReadOnly = true;
+            this.valor_TotalTextBox.Size = new System.Drawing.Size(100, 26);
+            this.valor_TotalTextBox.TabIndex = 17;
+            this.valor_TotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valor_TotalTextBox.TextChanged += new System.EventHandler(this.valor_TotalTextBox_TextChanged);
+            // 
+            // valor_EntradaTextBox
+            // 
+            this.valor_EntradaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_EntradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Valor_Entrada", true));
+            this.valor_EntradaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.valor_EntradaTextBox.Location = new System.Drawing.Point(382, 122);
+            this.valor_EntradaTextBox.Name = "valor_EntradaTextBox";
+            this.valor_EntradaTextBox.ReadOnly = true;
+            this.valor_EntradaTextBox.Size = new System.Drawing.Size(100, 26);
+            this.valor_EntradaTextBox.TabIndex = 15;
+            this.valor_EntradaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valor_EntradaTextBox.TextChanged += new System.EventHandler(this.valor_EntradaTextBox_TextChanged);
+            // 
+            // qtd_HospedesTextBox
+            // 
+            this.qtd_HospedesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qtd_HospedesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Qtd_Hospedes", true));
+            this.qtd_HospedesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.qtd_HospedesTextBox.Location = new System.Drawing.Point(382, 90);
+            this.qtd_HospedesTextBox.Name = "qtd_HospedesTextBox";
+            this.qtd_HospedesTextBox.ReadOnly = true;
+            this.qtd_HospedesTextBox.Size = new System.Drawing.Size(52, 26);
+            this.qtd_HospedesTextBox.TabIndex = 13;
+            this.qtd_HospedesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // obs_ReservaTextBox
+            // 
+            this.obs_ReservaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.obs_ReservaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Obs_Reserva", true));
+            this.obs_ReservaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.obs_ReservaTextBox.Location = new System.Drawing.Point(603, 121);
+            this.obs_ReservaTextBox.Multiline = true;
+            this.obs_ReservaTextBox.Name = "obs_ReservaTextBox";
+            this.obs_ReservaTextBox.ReadOnly = true;
+            this.obs_ReservaTextBox.Size = new System.Drawing.Size(303, 92);
+            this.obs_ReservaTextBox.TabIndex = 11;
+            // 
+            // numero_QuartoTextBox
+            // 
+            this.numero_QuartoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numero_QuartoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Numero_Quarto", true));
+            this.numero_QuartoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.numero_QuartoTextBox.Location = new System.Drawing.Point(603, 90);
+            this.numero_QuartoTextBox.Name = "numero_QuartoTextBox";
+            this.numero_QuartoTextBox.ReadOnly = true;
+            this.numero_QuartoTextBox.Size = new System.Drawing.Size(52, 26);
+            this.numero_QuartoTextBox.TabIndex = 9;
+            this.numero_QuartoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nome_HospedeTextBox
+            // 
+            this.nome_HospedeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nome_HospedeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Nome_Hospede", true));
+            this.nome_HospedeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nome_HospedeTextBox.Location = new System.Drawing.Point(131, 57);
+            this.nome_HospedeTextBox.Name = "nome_HospedeTextBox";
+            this.nome_HospedeTextBox.ReadOnly = true;
+            this.nome_HospedeTextBox.Size = new System.Drawing.Size(303, 26);
+            this.nome_HospedeTextBox.TabIndex = 7;
+            // 
+            // nome_FuncionarioTextBox
+            // 
+            this.nome_FuncionarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nome_FuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Nome_Funcionario", true));
+            this.nome_FuncionarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nome_FuncionarioTextBox.Location = new System.Drawing.Point(603, 54);
+            this.nome_FuncionarioTextBox.Name = "nome_FuncionarioTextBox";
+            this.nome_FuncionarioTextBox.ReadOnly = true;
+            this.nome_FuncionarioTextBox.Size = new System.Drawing.Size(303, 26);
+            this.nome_FuncionarioTextBox.TabIndex = 5;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Id", true));
+            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.idTextBox.Location = new System.Drawing.Point(131, 26);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(50, 26);
+            this.idTextBox.TabIndex = 3;
+            this.idTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // groupBox1
             // 
@@ -258,10 +617,6 @@
             this.valorTotalDataGridViewTextBoxColumn.Name = "valorTotalDataGridViewTextBoxColumn";
             this.valorTotalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // reservaBindingSource
-            // 
-            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBoxBuscarIdReserva);
@@ -366,9 +721,11 @@
             this.Text = "HOTELOGIX - Consulta de Reservas";
             this.Load += new System.EventHandler(this.FormBuscarReserva_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormBuscarReserva_KeyDown);
+            this.groupBoxDiaria.ResumeLayout(false);
+            this.groupBoxDiaria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reservaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -396,5 +753,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Data_Reserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorTotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.MaskedTextBox data_CheckoutMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox data_CheckinMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cPF_HopesdeMaskedTextBox;
+        private System.Windows.Forms.TextBox valor_RestanteTextBox;
+        private System.Windows.Forms.MaskedTextBox data_ReservaMaskedTextBox;
+        private System.Windows.Forms.TextBox valor_TotalTextBox;
+        private System.Windows.Forms.TextBox valor_EntradaTextBox;
+        private System.Windows.Forms.TextBox qtd_HospedesTextBox;
+        private System.Windows.Forms.TextBox obs_ReservaTextBox;
+        private System.Windows.Forms.TextBox numero_QuartoTextBox;
+        private System.Windows.Forms.TextBox nome_HospedeTextBox;
+        private System.Windows.Forms.TextBox nome_FuncionarioTextBox;
+        private System.Windows.Forms.TextBox idTextBox;
     }
 }

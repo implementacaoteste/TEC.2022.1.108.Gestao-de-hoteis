@@ -89,5 +89,19 @@ namespace WindowsFormsAppGestaoHotel
         {
             textBoxBuscarIdReserva.Clear();
         }
+
+        private void valor_EntradaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double value = ((Reserva)reservaBindingSource.Current).Valor_Entrada;
+            if (Double.TryParse(valor_EntradaTextBox.Text, out value))
+                valor_EntradaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
+        }
+
+        private void valor_TotalTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double value = ((Reserva)reservaBindingSource.Current).Valor_Total;
+            if (Double.TryParse(valor_TotalTextBox.Text, out value))
+                valor_TotalTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
+        }
     }
 }
