@@ -89,9 +89,9 @@ namespace WindowsFormsAppGestaoHotel
             using (FormReservaCheckIn frm = new FormReservaCheckIn(id))
             {
                 frm.ShowDialog();
-                ((Reserva)reservaBindingSource.Current).Data_Checkin = frm.Data_CheckIn;
+                /*((Reserva)reservaBindingSource.Current).Data_Checkin = frm.Data_CheckIn;
                 if (frm.Data_CheckIn != null)
-                    _checkin = true;
+                    _checkin = true;*/
             }
             if (_checkin != true)
                 pictureBoxCheckIn.Image = Properties.Resources.calendar_month_gray;
