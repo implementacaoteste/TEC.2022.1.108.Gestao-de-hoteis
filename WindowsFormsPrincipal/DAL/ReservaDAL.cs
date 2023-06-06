@@ -16,8 +16,8 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO RESERVA (DT_ENT_RESERVA, DT_SAI_RESERVA, VALOR_TOTAL, ID_CLIENTE, QTD_HOSPEDES, ID_PAGAMENTO, ID_FUNCIONARIO, OBS_RESERVA, VALOR_ENTRADA, DATA_CHECKIN, DATA_CHECKOUT, OBS_CHECKIN, OBS_CHECKOUT, DATA_RESERVA)
-                                       VALUES(@DT_ENT_RESERVA, @DT_SAI_RESERVA, @VALOR_TOTAL, @ID_CLIENTE, @QTD_HOSPEDES, @ID_PAGAMENTO, @ID_FUNCIONARIO, @OBS_RESERVA, @VALOR_ENTRADA, @DATA_CHECKIN, @DATA_CHECKOUT, @OBS_CHECKIN, @OBS_CHECKOUT, @DATA_RESERVA) SELECT SCOPE_IDENTITY() AS Id";
+                cmd.CommandText = @"INSERT INTO RESERVA (DT_ENT_RESERVA, DT_SAI_RESERVA, VALOR_TOTAL, ID_CLIENTE, QTD_HOSPEDES, ID_PAGAMENTO, ID_FUNCIONARIO, OBS_RESERVA, VALOR_ENTRADA, DATA_CHECKIN, DATA_CHECKOUT, OBS_CHECKIN, OBS_CHECKOUT, DATA_RESERVA, VALOR_RESTANTE)
+                                       VALUES(@DT_ENT_RESERVA, @DT_SAI_RESERVA, @VALOR_TOTAL, @ID_CLIENTE, @QTD_HOSPEDES, @ID_PAGAMENTO, @ID_FUNCIONARIO, @OBS_RESERVA, @VALOR_ENTRADA, @DATA_CHECKIN, @DATA_CHECKOUT, @OBS_CHECKIN, @OBS_CHECKOUT, @DATA_RESERVA, @VALOR_RESTANTE) SELECT SCOPE_IDENTITY() AS Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DT_ENT_RESERVA", _reserva.Data_Ent_Reserva);
                 cmd.Parameters.AddWithValue("@DT_SAI_RESERVA", _reserva.Data_Sai_Reserva);
@@ -33,6 +33,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@OBS_CHECKIN", _reserva.Obs_Checkin);
                 cmd.Parameters.AddWithValue("@OBS_CHECKOUT", _reserva.Obs_Checkout);
                 cmd.Parameters.AddWithValue("@DATA_RESERVA", _reserva.Data_Reserva);
+                cmd.Parameters.AddWithValue("@VALOR_RESTANTE", _reserva.Valor_Restante);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -172,7 +173,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
-                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
+                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
                                     INNER JOIN CLIENTE C ON R.ID_CLIENTE = C.ID
@@ -217,6 +218,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
+                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
                         reserva.Quartos = new QuartoDAL().BuscarPorIdReserva(reserva.Id);
                     }
                 }
@@ -311,7 +313,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
-                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
+                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, R.VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
                                     INNER JOIN CLIENTE C ON R.ID_CLIENTE = C.ID
@@ -357,6 +359,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
+                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
                         reservas.Add(reserva);
                     }
                 }
@@ -381,7 +384,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
-                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
+                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, R.VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
                                     INNER JOIN CLIENTE C ON R.ID_CLIENTE = C.ID
@@ -427,6 +430,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
+                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
                         reservas.Add(reserva);
                     }
                 }
@@ -451,7 +455,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
-                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA
+                                    F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, R.VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
                                     INNER JOIN CLIENTE C ON R.ID_CLIENTE = C.ID
@@ -497,6 +501,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
+                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
                         reservas.Add(reserva);
                     }
                 }

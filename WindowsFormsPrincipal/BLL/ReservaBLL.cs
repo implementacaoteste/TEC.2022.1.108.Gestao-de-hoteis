@@ -13,9 +13,11 @@ namespace BLL
     {
         public void Inserir(Reserva _reserva)
         {
-            _reserva.Data_Checkin = null;
-            _reserva.Data_Checkout = null;
+            //_reserva.Data_Checkin = null;
+            //_reserva.Data_Checkout = null;
             _reserva.Data_Reserva = DateTime.Now;
+
+            _reserva.Valor_Restante = _reserva.Valor_Entrada;
 
             if (_reserva.Obs_Reserva == null)
                 _reserva.Obs_Reserva = "";
