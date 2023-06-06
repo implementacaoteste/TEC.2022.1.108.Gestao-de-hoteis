@@ -35,7 +35,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um Cliente no Banco de Dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir um hóspede no Banco de Dados.", ex);
             }
             finally
             {
@@ -60,7 +60,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir um Cliente no Banco de Dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar excluir um hóspede no Banco de Dados.", ex);
             }
             finally
             {
@@ -92,7 +92,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um Cliente no Banco de Dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar um hóspede no Banco de Dados.", ex);
             }
             finally
             {
@@ -134,7 +134,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o cliente por CPF: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o hóspede por CPF: ", ex);
             }
             finally
             {
@@ -179,7 +179,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuarios: ", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os hóspedes: ", ex);
             }
             finally
             {
@@ -222,7 +222,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Clientes.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os hóspedes.", ex);
             }
             finally
             {
@@ -264,7 +264,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o ID no Banco de Dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o ID do hóspede no Banco de Dados.", ex);
             }
             finally
             {
