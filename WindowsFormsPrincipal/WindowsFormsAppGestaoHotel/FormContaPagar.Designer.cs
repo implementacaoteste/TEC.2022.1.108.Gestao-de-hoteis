@@ -65,7 +65,7 @@
             data_VencimentoLabel.Location = new System.Drawing.Point(11, 87);
             data_VencimentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_VencimentoLabel.Name = "data_VencimentoLabel";
-            data_VencimentoLabel.Size = new System.Drawing.Size(143, 20);
+            data_VencimentoLabel.Size = new System.Drawing.Size(125, 18);
             data_VencimentoLabel.TabIndex = 40;
             data_VencimentoLabel.Text = "Data Vencimento:";
             // 
@@ -76,7 +76,7 @@
             descricaoLabel.Location = new System.Drawing.Point(63, 122);
             descricaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(91, 20);
+            descricaoLabel.Size = new System.Drawing.Size(80, 18);
             descricaoLabel.TabIndex = 41;
             descricaoLabel.Text = "Descrição:";
             // 
@@ -87,7 +87,7 @@
             id_ClienteLabel.Location = new System.Drawing.Point(24, 165);
             id_ClienteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_ClienteLabel.Name = "id_ClienteLabel";
-            id_ClienteLabel.Size = new System.Drawing.Size(130, 20);
+            id_ClienteLabel.Size = new System.Drawing.Size(117, 18);
             id_ClienteLabel.TabIndex = 42;
             id_ClienteLabel.Text = "Nome Hospede:";
             // 
@@ -98,7 +98,7 @@
             id_FuncionarioLabel.Location = new System.Drawing.Point(4, 210);
             id_FuncionarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_FuncionarioLabel.Name = "id_FuncionarioLabel";
-            id_FuncionarioLabel.Size = new System.Drawing.Size(150, 20);
+            id_FuncionarioLabel.Size = new System.Drawing.Size(135, 18);
             id_FuncionarioLabel.TabIndex = 43;
             id_FuncionarioLabel.Text = "Nome Funcionario:";
             // 
@@ -109,7 +109,7 @@
             pagarLabel.Location = new System.Drawing.Point(430, 96);
             pagarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             pagarLabel.Name = "pagarLabel";
-            pagarLabel.Size = new System.Drawing.Size(47, 18);
+            pagarLabel.Size = new System.Drawing.Size(45, 17);
             pagarLabel.TabIndex = 44;
             pagarLabel.Text = "Pago:";
             // 
@@ -120,7 +120,7 @@
             valorLabel.Location = new System.Drawing.Point(434, 135);
             valorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(46, 18);
+            valorLabel.Size = new System.Drawing.Size(45, 17);
             valorLabel.TabIndex = 45;
             valorLabel.Text = "Valor:";
             // 
@@ -144,7 +144,7 @@
             this.data_VencimentoDateTimePicker.Location = new System.Drawing.Point(163, 83);
             this.data_VencimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.data_VencimentoDateTimePicker.Name = "data_VencimentoDateTimePicker";
-            this.data_VencimentoDateTimePicker.Size = new System.Drawing.Size(119, 24);
+            this.data_VencimentoDateTimePicker.Size = new System.Drawing.Size(119, 22);
             this.data_VencimentoDateTimePicker.TabIndex = 41;
             // 
             // contasPagarBindingSource
@@ -158,7 +158,7 @@
             this.descricaoTextBox.Location = new System.Drawing.Point(163, 122);
             this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(212, 23);
+            this.descricaoTextBox.Size = new System.Drawing.Size(212, 21);
             this.descricaoTextBox.TabIndex = 42;
             // 
             // id_ClienteTextBox
@@ -168,7 +168,7 @@
             this.id_ClienteTextBox.Location = new System.Drawing.Point(163, 164);
             this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_ClienteTextBox.Name = "id_ClienteTextBox";
-            this.id_ClienteTextBox.Size = new System.Drawing.Size(119, 23);
+            this.id_ClienteTextBox.Size = new System.Drawing.Size(119, 21);
             this.id_ClienteTextBox.TabIndex = 43;
             // 
             // id_FuncionarioTextBox
@@ -178,7 +178,7 @@
             this.id_FuncionarioTextBox.Location = new System.Drawing.Point(163, 207);
             this.id_FuncionarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_FuncionarioTextBox.Name = "id_FuncionarioTextBox";
-            this.id_FuncionarioTextBox.Size = new System.Drawing.Size(119, 23);
+            this.id_FuncionarioTextBox.Size = new System.Drawing.Size(119, 21);
             this.id_FuncionarioTextBox.TabIndex = 44;
             // 
             // pagarCheckBox
@@ -198,53 +198,55 @@
             this.valorTextBox.Location = new System.Drawing.Point(484, 133);
             this.valorTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.valorTextBox.Name = "valorTextBox";
-            this.valorTextBox.Size = new System.Drawing.Size(76, 23);
+            this.valorTextBox.Size = new System.Drawing.Size(76, 21);
             this.valorTextBox.TabIndex = 46;
             // 
             // buttonSelecionar_funcionario
             // 
+            this.buttonSelecionar_funcionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(234)))), ((int)(((byte)(205)))));
             this.buttonSelecionar_funcionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelecionar_funcionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionar_funcionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionar_funcionario.Image")));
             this.buttonSelecionar_funcionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSelecionar_funcionario.Location = new System.Drawing.Point(295, 205);
+            this.buttonSelecionar_funcionario.Location = new System.Drawing.Point(290, 205);
             this.buttonSelecionar_funcionario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar_funcionario.Name = "buttonSelecionar_funcionario";
             this.buttonSelecionar_funcionario.Size = new System.Drawing.Size(115, 26);
             this.buttonSelecionar_funcionario.TabIndex = 39;
             this.buttonSelecionar_funcionario.Text = "Selecionar";
             this.buttonSelecionar_funcionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSelecionar_funcionario.UseVisualStyleBackColor = true;
+            this.buttonSelecionar_funcionario.UseVisualStyleBackColor = false;
             this.buttonSelecionar_funcionario.Click += new System.EventHandler(this.buttonSelecionar_funcionario_Click);
             // 
             // buttonSelecionar_cliente
             // 
+            this.buttonSelecionar_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(234)))), ((int)(((byte)(205)))));
             this.buttonSelecionar_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelecionar_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionar_cliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionar_cliente.Image")));
             this.buttonSelecionar_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSelecionar_cliente.Location = new System.Drawing.Point(295, 162);
+            this.buttonSelecionar_cliente.Location = new System.Drawing.Point(290, 162);
             this.buttonSelecionar_cliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar_cliente.Name = "buttonSelecionar_cliente";
             this.buttonSelecionar_cliente.Size = new System.Drawing.Size(115, 26);
             this.buttonSelecionar_cliente.TabIndex = 39;
             this.buttonSelecionar_cliente.Text = "Selecionar";
             this.buttonSelecionar_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSelecionar_cliente.UseVisualStyleBackColor = true;
+            this.buttonSelecionar_cliente.UseVisualStyleBackColor = false;
             this.buttonSelecionar_cliente.Click += new System.EventHandler(this.buttonSelecionar_cliente_Click);
             // 
             // buttonCancelarCadastro
             // 
             this.buttonCancelarCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonCancelarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelarCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonCancelarCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelarCadastro.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close_bk;
             this.buttonCancelarCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelarCadastro.Location = new System.Drawing.Point(543, 243);
+            this.buttonCancelarCadastro.Location = new System.Drawing.Point(547, 242);
             this.buttonCancelarCadastro.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCancelarCadastro.MinimumSize = new System.Drawing.Size(98, 28);
             this.buttonCancelarCadastro.Name = "buttonCancelarCadastro";
-            this.buttonCancelarCadastro.Size = new System.Drawing.Size(124, 32);
+            this.buttonCancelarCadastro.Size = new System.Drawing.Size(120, 33);
             this.buttonCancelarCadastro.TabIndex = 32;
             this.buttonCancelarCadastro.Text = "Cancelar";
             this.buttonCancelarCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -253,15 +255,15 @@
             // 
             // buttonSalvarFuncionario
             // 
-            this.buttonSalvarFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonSalvarFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.buttonSalvarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonSalvarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvarFuncionario.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.save_bk;
             this.buttonSalvarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvarFuncionario.Location = new System.Drawing.Point(433, 243);
+            this.buttonSalvarFuncionario.Location = new System.Drawing.Point(429, 242);
             this.buttonSalvarFuncionario.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvarFuncionario.Name = "buttonSalvarFuncionario";
-            this.buttonSalvarFuncionario.Size = new System.Drawing.Size(101, 32);
+            this.buttonSalvarFuncionario.Size = new System.Drawing.Size(110, 33);
             this.buttonSalvarFuncionario.TabIndex = 31;
             this.buttonSalvarFuncionario.Text = "Salvar";
             this.buttonSalvarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

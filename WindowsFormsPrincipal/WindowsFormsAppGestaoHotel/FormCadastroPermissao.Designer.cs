@@ -66,13 +66,13 @@
             // buttonCancelar
             // 
             this.buttonCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonCancelar.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(175, 156);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
             this.buttonCancelar.TabIndex = 9;
@@ -90,7 +90,7 @@
             this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSalvar.Location = new System.Drawing.Point(34, 156);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(110, 33);
             this.buttonSalvar.TabIndex = 8;
@@ -104,7 +104,7 @@
             this.nomePermissaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomePermissaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.nomePermissaoTextBox.Location = new System.Drawing.Point(11, 85);
-            this.nomePermissaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomePermissaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomePermissaoTextBox.Multiline = true;
             this.nomePermissaoTextBox.Name = "nomePermissaoTextBox";
             this.nomePermissaoTextBox.Size = new System.Drawing.Size(308, 51);
@@ -125,7 +125,7 @@
             this.Controls.Add(this.nomePermissaoTextBox);
             this.Controls.Add(this.tituloLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(345, 237);
             this.MinimizeBox = false;

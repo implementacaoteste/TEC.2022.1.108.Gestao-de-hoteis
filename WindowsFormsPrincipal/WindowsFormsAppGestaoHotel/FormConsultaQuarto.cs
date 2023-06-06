@@ -56,12 +56,6 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void FormConsultaQuarto_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Escape)
