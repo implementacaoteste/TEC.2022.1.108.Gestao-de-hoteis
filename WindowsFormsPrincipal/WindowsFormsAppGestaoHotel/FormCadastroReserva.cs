@@ -192,19 +192,19 @@ namespace WindowsFormsAppGestaoHotel
 
         private void data_Ent_ReservaDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            //valor_EntradaTextBox.Focus();
-            //data_Ent_ReservaDateTimePicker.Focus();
+            valor_EntradaTextBox.Focus();
+            data_Ent_ReservaDateTimePicker.Focus();
         }
 
         private void data_SaidaDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            //valor_EntradaTextBox.Focus();
-            //data_Ent_ReservaDateTimePicker.Focus();
+            valor_EntradaTextBox.Focus();
+            data_Ent_ReservaDateTimePicker.Focus();
         }
 
         private void valor_EntradaTextBox_Enter(object sender, EventArgs e)
         {
-            //CalcularValorReserva();
+            CalcularValorReserva();
         }
     }
 }
