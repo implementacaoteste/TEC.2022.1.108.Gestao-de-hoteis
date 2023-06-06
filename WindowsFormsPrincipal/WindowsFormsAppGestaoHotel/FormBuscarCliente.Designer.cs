@@ -193,7 +193,7 @@
             this.radioButtonTodos.Location = new System.Drawing.Point(4, 17);
             this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonTodos.Name = "radioButtonTodos";
-            this.radioButtonTodos.Size = new System.Drawing.Size(81, 25);
+            this.radioButtonTodos.Size = new System.Drawing.Size(72, 22);
             this.radioButtonTodos.TabIndex = 0;
             this.radioButtonTodos.TabStop = true;
             this.radioButtonTodos.Text = "Todos";
@@ -207,7 +207,7 @@
             this.radioButtonCPF.Location = new System.Drawing.Point(162, 17);
             this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCPF.Name = "radioButtonCPF";
-            this.radioButtonCPF.Size = new System.Drawing.Size(68, 25);
+            this.radioButtonCPF.Size = new System.Drawing.Size(58, 22);
             this.radioButtonCPF.TabIndex = 2;
             this.radioButtonCPF.TabStop = true;
             this.radioButtonCPF.Text = "CPF";
@@ -221,7 +221,7 @@
             this.radioButtonNome.Location = new System.Drawing.Point(89, 17);
             this.radioButtonNome.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonNome.Name = "radioButtonNome";
-            this.radioButtonNome.Size = new System.Drawing.Size(79, 25);
+            this.radioButtonNome.Size = new System.Drawing.Size(69, 22);
             this.radioButtonNome.TabIndex = 1;
             this.radioButtonNome.TabStop = true;
             this.radioButtonNome.Text = "Nome";
@@ -234,7 +234,7 @@
             this.textBoxBuscar.Location = new System.Drawing.Point(4, 44);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(367, 28);
+            this.textBoxBuscar.Size = new System.Drawing.Size(367, 26);
             this.textBoxBuscar.TabIndex = 3;
             // 
             // buttonBuscarCliente
@@ -525,7 +525,7 @@
             this.buttonAlterarCliente.ForeColor = System.Drawing.Color.Black;
             this.buttonAlterarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarCliente.Image")));
             this.buttonAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarCliente.Location = new System.Drawing.Point(163, 578);
+            this.buttonAlterarCliente.Location = new System.Drawing.Point(165, 578);
             this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterarCliente.Name = "buttonAlterarCliente";
             this.buttonAlterarCliente.Size = new System.Drawing.Size(120, 33);
@@ -562,10 +562,10 @@
             this.buttonAdicionarCliente.ForeColor = System.Drawing.Color.Black;
             this.buttonAdicionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarCliente.Image")));
             this.buttonAdicionarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdicionarCliente.Location = new System.Drawing.Point(13, 578);
+            this.buttonAdicionarCliente.Location = new System.Drawing.Point(17, 578);
             this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
-            this.buttonAdicionarCliente.Size = new System.Drawing.Size(134, 33);
+            this.buttonAdicionarCliente.Size = new System.Drawing.Size(128, 33);
             this.buttonAdicionarCliente.TabIndex = 3;
             this.buttonAdicionarCliente.Text = "Adicionar";
             this.buttonAdicionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -581,7 +581,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(432, 617);
+            this.ClientSize = new System.Drawing.Size(434, 622);
             this.Controls.Add(this.buttonAlterarCliente);
             this.Controls.Add(this.buttonExcluirCliente);
             this.Controls.Add(this.buttonAdicionarCliente);

@@ -49,8 +49,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(808, 71);
+            this.label1.Size = new System.Drawing.Size(608, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "Consultar Permissões";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,34 +60,35 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 82);
+            this.label2.Location = new System.Drawing.Point(7, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 20);
+            this.label2.Size = new System.Drawing.Size(190, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Infome o nome da permissão";
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(9, 110);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxBuscar.Location = new System.Drawing.Point(10, 83);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxBuscar.Multiline = true;
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(448, 30);
+            this.textBoxBuscar.Size = new System.Drawing.Size(334, 25);
             this.textBoxBuscar.TabIndex = 2;
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.AllowDrop = true;
-            this.buttonBuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search;
+            this.buttonBuscar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(548, 108);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuscar.Location = new System.Drawing.Point(348, 75);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(105, 33);
+            this.buttonBuscar.Size = new System.Drawing.Size(40, 33);
             this.buttonBuscar.TabIndex = 3;
-            this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
@@ -101,13 +103,13 @@
             this.permissaoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
             this.permissaoDataGridView.DataSource = this.permissaoBindingSource;
-            this.permissaoDataGridView.Location = new System.Drawing.Point(13, 153);
-            this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.permissaoDataGridView.Location = new System.Drawing.Point(10, 117);
+            this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.permissaoDataGridView.Name = "permissaoDataGridView";
             this.permissaoDataGridView.ReadOnly = true;
             this.permissaoDataGridView.RowHeadersWidth = 51;
             this.permissaoDataGridView.RowTemplate.Height = 24;
-            this.permissaoDataGridView.Size = new System.Drawing.Size(780, 256);
+            this.permissaoDataGridView.Size = new System.Drawing.Size(585, 208);
             this.permissaoDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn2
@@ -128,13 +130,13 @@
             this.buttonCancelar.AllowDrop = true;
             this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close_bk;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(659, 417);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(471, 343);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(134, 41);
+            this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
             this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -145,14 +147,15 @@
             // buttonSelecionar
             // 
             this.buttonSelecionar.AllowDrop = true;
-            this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.check1;
+            this.buttonSelecionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(234)))), ((int)(((byte)(205)))));
+            this.buttonSelecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.check_bk;
             this.buttonSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSelecionar.Location = new System.Drawing.Point(659, 107);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelecionar.Location = new System.Drawing.Point(467, 75);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(134, 33);
+            this.buttonSelecionar.Size = new System.Drawing.Size(128, 33);
             this.buttonSelecionar.TabIndex = 4;
             this.buttonSelecionar.Text = "Selecionar";
             this.buttonSelecionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -161,10 +164,10 @@
             // 
             // FormConsultaPermissao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(808, 468);
+            this.ClientSize = new System.Drawing.Size(608, 387);
             this.Controls.Add(this.permissaoDataGridView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxBuscar);
@@ -174,11 +177,11 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(826, 515);
+            this.MaximumSize = new System.Drawing.Size(624, 426);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(826, 515);
+            this.MinimumSize = new System.Drawing.Size(624, 426);
             this.Name = "FormConsultaPermissao";
             this.Text = "Consulta de Permissão";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaPermissao_KeyDown);

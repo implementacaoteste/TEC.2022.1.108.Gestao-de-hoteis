@@ -51,7 +51,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(541, 57);
+            this.label1.Size = new System.Drawing.Size(543, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "Consultar Classe";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,10 +60,10 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(11, 76);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 27);
+            this.textBox1.Size = new System.Drawing.Size(273, 27);
             this.textBox1.TabIndex = 1;
             // 
             // classeDataGridView1
@@ -78,7 +78,7 @@
             this.dataGridViewTextBoxColumn4});
             this.classeDataGridView1.DataSource = this.classeBindingSource;
             this.classeDataGridView1.Location = new System.Drawing.Point(7, 115);
-            this.classeDataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.classeDataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.classeDataGridView1.Name = "classeDataGridView1";
             this.classeDataGridView1.ReadOnly = true;
             this.classeDataGridView1.RowHeadersWidth = 51;
@@ -111,13 +111,14 @@
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close;
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close_bk;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(410, 308);
+            this.buttonCancelar.Location = new System.Drawing.Point(412, 313);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
+            this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,9 +128,10 @@
             // 
             // Selecionar
             // 
-            this.Selecionar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Selecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Selecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.check;
+            this.Selecionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(234)))), ((int)(((byte)(205)))));
+            this.Selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Selecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Selecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.check_bk1;
             this.Selecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Selecionar.Location = new System.Drawing.Point(406, 74);
             this.Selecionar.Margin = new System.Windows.Forms.Padding(2);
@@ -142,11 +144,12 @@
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search;
+            this.buttonBuscar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(301, 74);
+            this.buttonBuscar.Location = new System.Drawing.Point(297, 74);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(101, 33);
@@ -161,7 +164,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(541, 352);
+            this.ClientSize = new System.Drawing.Size(543, 357);
             this.Controls.Add(this.classeDataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonCancelar);
@@ -170,7 +173,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(559, 396);
             this.MinimizeBox = false;

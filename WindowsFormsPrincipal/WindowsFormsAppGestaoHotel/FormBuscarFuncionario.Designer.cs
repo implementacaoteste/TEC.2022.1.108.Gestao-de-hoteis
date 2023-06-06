@@ -237,7 +237,7 @@
             this.textBoxBuscar.Location = new System.Drawing.Point(4, 47);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(367, 28);
+            this.textBoxBuscar.Size = new System.Drawing.Size(367, 26);
             this.textBoxBuscar.TabIndex = 3;
             // 
             // funcionarioDataGridView
@@ -402,7 +402,7 @@
             this.radioButtonTodos.Location = new System.Drawing.Point(4, 18);
             this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonTodos.Name = "radioButtonTodos";
-            this.radioButtonTodos.Size = new System.Drawing.Size(81, 25);
+            this.radioButtonTodos.Size = new System.Drawing.Size(72, 22);
             this.radioButtonTodos.TabIndex = 0;
             this.radioButtonTodos.TabStop = true;
             this.radioButtonTodos.Text = "Todos";
@@ -416,7 +416,7 @@
             this.radioButtonCPF.Location = new System.Drawing.Point(159, 18);
             this.radioButtonCPF.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCPF.Name = "radioButtonCPF";
-            this.radioButtonCPF.Size = new System.Drawing.Size(68, 25);
+            this.radioButtonCPF.Size = new System.Drawing.Size(58, 22);
             this.radioButtonCPF.TabIndex = 2;
             this.radioButtonCPF.TabStop = true;
             this.radioButtonCPF.Text = "CPF";
@@ -430,7 +430,7 @@
             this.radioButtonNome.Location = new System.Drawing.Point(86, 18);
             this.radioButtonNome.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonNome.Name = "radioButtonNome";
-            this.radioButtonNome.Size = new System.Drawing.Size(79, 25);
+            this.radioButtonNome.Size = new System.Drawing.Size(69, 22);
             this.radioButtonNome.TabIndex = 1;
             this.radioButtonNome.TabStop = true;
             this.radioButtonNome.Text = "Nome";
@@ -765,7 +765,7 @@
             this.buttonAdicionarGrupoFuncionario.Location = new System.Drawing.Point(494, 631);
             this.buttonAdicionarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarGrupoFuncionario.Name = "buttonAdicionarGrupoFuncionario";
-            this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(131, 33);
+            this.buttonAdicionarGrupoFuncionario.Size = new System.Drawing.Size(128, 33);
             this.buttonAdicionarGrupoFuncionario.TabIndex = 10;
             this.buttonAdicionarGrupoFuncionario.Text = "Adicionar";
             this.buttonAdicionarGrupoFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -799,10 +799,10 @@
             this.buttonAdicionarFuncionario.ForeColor = System.Drawing.Color.Black;
             this.buttonAdicionarFuncionario.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.add_bk;
             this.buttonAdicionarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdicionarFuncionario.Location = new System.Drawing.Point(9, 631);
+            this.buttonAdicionarFuncionario.Location = new System.Drawing.Point(13, 631);
             this.buttonAdicionarFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarFuncionario.Name = "buttonAdicionarFuncionario";
-            this.buttonAdicionarFuncionario.Size = new System.Drawing.Size(131, 33);
+            this.buttonAdicionarFuncionario.Size = new System.Drawing.Size(128, 33);
             this.buttonAdicionarFuncionario.TabIndex = 5;
             this.buttonAdicionarFuncionario.Text = "Adicionar";
             this.buttonAdicionarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -814,7 +814,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(769, 670);
+            this.ClientSize = new System.Drawing.Size(771, 675);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);

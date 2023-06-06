@@ -37,9 +37,9 @@
             System.Windows.Forms.Label valor_DiariaLabel;
             System.Windows.Forms.Label andarLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarQuarto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             this.radioButtonStatus = new System.Windows.Forms.RadioButton();
@@ -160,9 +160,9 @@
             this.groupBox1.Controls.Add(this.buttonBuscarQuarto);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(472, 89);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -175,7 +175,7 @@
             this.radioButtonTodos.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radioButtonTodos.Location = new System.Drawing.Point(10, 17);
-            this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonTodos.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonTodos.Name = "radioButtonTodos";
             this.radioButtonTodos.Size = new System.Drawing.Size(72, 22);
             this.radioButtonTodos.TabIndex = 0;
@@ -189,7 +189,7 @@
             this.radioButtonStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radioButtonStatus.Location = new System.Drawing.Point(189, 17);
-            this.radioButtonStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonStatus.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonStatus.Name = "radioButtonStatus";
             this.radioButtonStatus.Size = new System.Drawing.Size(72, 22);
             this.radioButtonStatus.TabIndex = 2;
@@ -203,7 +203,7 @@
             this.radioButtonNumero.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioButtonNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radioButtonNumero.Location = new System.Drawing.Point(95, 17);
-            this.radioButtonNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonNumero.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonNumero.Name = "radioButtonNumero";
             this.radioButtonNumero.Size = new System.Drawing.Size(82, 22);
             this.radioButtonNumero.TabIndex = 1;
@@ -216,7 +216,7 @@
             this.textBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxBuscar.Location = new System.Drawing.Point(4, 53);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(430, 26);
             this.textBoxBuscar.TabIndex = 3;
@@ -229,7 +229,7 @@
             this.buttonBuscarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarQuarto.Image")));
             this.buttonBuscarQuarto.Location = new System.Drawing.Point(438, 51);
-            this.buttonBuscarQuarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarQuarto.Name = "buttonBuscarQuarto";
             this.buttonBuscarQuarto.Size = new System.Drawing.Size(30, 30);
             this.buttonBuscarQuarto.TabIndex = 4;
@@ -241,9 +241,9 @@
             this.groupBox2.Controls.Add(this.funcionarioDataGridView);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.groupBox2.Location = new System.Drawing.Point(9, 109);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(472, 240);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -268,7 +268,7 @@
             this.funcionarioDataGridView.DataSource = this.quartoBindingSource;
             this.funcionarioDataGridView.GridColor = System.Drawing.SystemColors.ControlLight;
             this.funcionarioDataGridView.Location = new System.Drawing.Point(4, 16);
-            this.funcionarioDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.funcionarioDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.funcionarioDataGridView.Name = "funcionarioDataGridView";
             this.funcionarioDataGridView.ReadOnly = true;
             this.funcionarioDataGridView.RowHeadersVisible = false;
@@ -292,8 +292,8 @@
             // 
             this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.numeroDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.numeroDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.numeroDataGridViewTextBoxColumn.HeaderText = "Número";
             this.numeroDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
@@ -302,8 +302,8 @@
             // Andar
             // 
             this.Andar.DataPropertyName = "Andar";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Andar.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Andar.DefaultCellStyle = dataGridViewCellStyle2;
             this.Andar.HeaderText = "Andar";
             this.Andar.MinimumWidth = 6;
             this.Andar.Name = "Andar";
@@ -333,10 +333,10 @@
             // 
             this.valorDiariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.valorDiariaDataGridViewTextBoxColumn.DataPropertyName = "Valor_Diaria";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "C2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.valorDiariaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.valorDiariaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.valorDiariaDataGridViewTextBoxColumn.HeaderText = "Valor da diária";
             this.valorDiariaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valorDiariaDataGridViewTextBoxColumn.Name = "valorDiariaDataGridViewTextBoxColumn";
@@ -360,7 +360,7 @@
             this.descricaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Descricao", true));
             this.descricaoTextBox.Location = new System.Drawing.Point(250, 45);
-            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.ReadOnly = true;
@@ -372,7 +372,7 @@
             this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(64, 24);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -384,7 +384,7 @@
             this.ClasseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ClasseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Classe", true));
             this.ClasseTextBox.Location = new System.Drawing.Point(64, 90);
-            this.ClasseTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClasseTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ClasseTextBox.Name = "ClasseTextBox";
             this.ClasseTextBox.ReadOnly = true;
             this.ClasseTextBox.Size = new System.Drawing.Size(94, 20);
@@ -395,7 +395,7 @@
             this.StatusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.StatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Status", true));
             this.StatusTextBox.Location = new System.Drawing.Point(250, 89);
-            this.StatusTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StatusTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.StatusTextBox.Name = "StatusTextBox";
             this.StatusTextBox.ReadOnly = true;
             this.StatusTextBox.Size = new System.Drawing.Size(94, 20);
@@ -406,7 +406,7 @@
             this.numeroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Numero", true));
             this.numeroTextBox.Location = new System.Drawing.Point(64, 46);
-            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.ReadOnly = true;
             this.numeroTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -430,9 +430,9 @@
             this.groupBox4.Controls.Add(this.ClasseTextBox);
             this.groupBox4.Controls.Add(idLabel);
             this.groupBox4.Location = new System.Drawing.Point(9, 364);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(472, 118);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
@@ -443,7 +443,7 @@
             this.valor_DiariaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.valor_DiariaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Valor_Diaria", true));
             this.valor_DiariaTextBox.Location = new System.Drawing.Point(250, 20);
-            this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.valor_DiariaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
             this.valor_DiariaTextBox.ReadOnly = true;
             this.valor_DiariaTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -456,7 +456,7 @@
             this.andarTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.andarTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Andar", true));
             this.andarTextBox.Location = new System.Drawing.Point(64, 68);
-            this.andarTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.andarTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.andarTextBox.Name = "andarTextBox";
             this.andarTextBox.ReadOnly = true;
             this.andarTextBox.Size = new System.Drawing.Size(38, 20);
@@ -470,8 +470,8 @@
             this.buttonAlterarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAlterarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarQuarto.Image")));
             this.buttonAlterarQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarQuarto.Location = new System.Drawing.Point(179, 499);
-            this.buttonAlterarQuarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAlterarQuarto.Location = new System.Drawing.Point(188, 499);
+            this.buttonAlterarQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterarQuarto.Name = "buttonAlterarQuarto";
             this.buttonAlterarQuarto.Size = new System.Drawing.Size(120, 33);
             this.buttonAlterarQuarto.TabIndex = 4;
@@ -488,7 +488,7 @@
             this.buttonExcluirQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirQuarto.Image")));
             this.buttonExcluirQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExcluirQuarto.Location = new System.Drawing.Point(361, 499);
-            this.buttonExcluirQuarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluirQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirQuarto.Name = "buttonExcluirQuarto";
             this.buttonExcluirQuarto.Size = new System.Drawing.Size(120, 33);
             this.buttonExcluirQuarto.TabIndex = 5;
@@ -506,9 +506,9 @@
             this.buttonAdicionarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarQuarto.Image")));
             this.buttonAdicionarQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAdicionarQuarto.Location = new System.Drawing.Point(9, 499);
-            this.buttonAdicionarQuarto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdicionarQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarQuarto.Name = "buttonAdicionarQuarto";
-            this.buttonAdicionarQuarto.Size = new System.Drawing.Size(120, 33);
+            this.buttonAdicionarQuarto.Size = new System.Drawing.Size(128, 33);
             this.buttonAdicionarQuarto.TabIndex = 3;
             this.buttonAdicionarQuarto.Text = "Adicionar";
             this.buttonAdicionarQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -530,7 +530,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormBuscarQuarto";
             this.ShowInTaskbar = false;

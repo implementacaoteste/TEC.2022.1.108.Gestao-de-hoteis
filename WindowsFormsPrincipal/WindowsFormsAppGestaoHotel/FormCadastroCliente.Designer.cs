@@ -174,12 +174,12 @@
             // 
             // buttonCancelarCadastroCliente
             // 
-            this.buttonCancelarCadastroCliente.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonCancelarCadastroCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonCancelarCadastroCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelarCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelarCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelarCadastroCliente.Image")));
             this.buttonCancelarCadastroCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelarCadastroCliente.Location = new System.Drawing.Point(634, 263);
+            this.buttonCancelarCadastroCliente.Location = new System.Drawing.Point(641, 272);
             this.buttonCancelarCadastroCliente.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCancelarCadastroCliente.Name = "buttonCancelarCadastroCliente";
             this.buttonCancelarCadastroCliente.Size = new System.Drawing.Size(120, 33);
@@ -191,15 +191,15 @@
             // 
             // buttonSalvarCadastroCliente
             // 
-            this.buttonSalvarCadastroCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(210)))), ((int)(((byte)(156)))));
+            this.buttonSalvarCadastroCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.buttonSalvarCadastroCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalvarCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvarCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvarCadastroCliente.Image")));
             this.buttonSalvarCadastroCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvarCadastroCliente.Location = new System.Drawing.Point(491, 263);
+            this.buttonSalvarCadastroCliente.Location = new System.Drawing.Point(524, 272);
             this.buttonSalvarCadastroCliente.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSalvarCadastroCliente.Name = "buttonSalvarCadastroCliente";
-            this.buttonSalvarCadastroCliente.Size = new System.Drawing.Size(120, 33);
+            this.buttonSalvarCadastroCliente.Size = new System.Drawing.Size(110, 33);
             this.buttonSalvarCadastroCliente.TabIndex = 15;
             this.buttonSalvarCadastroCliente.Text = "Salvar";
             this.buttonSalvarCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -212,7 +212,7 @@
             this.cPFMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
             this.cPFMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cPFMaskedTextBox.Location = new System.Drawing.Point(293, 108);
-            this.cPFMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cPFMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cPFMaskedTextBox.Mask = "000,000,000-00";
             this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
             this.cPFMaskedTextBox.Size = new System.Drawing.Size(143, 26);
@@ -224,7 +224,7 @@
             this.celularMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Celular", true));
             this.celularMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.celularMaskedTextBox.Location = new System.Drawing.Point(440, 108);
-            this.celularMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.celularMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.celularMaskedTextBox.Mask = "(99) 00000-0000";
             this.celularMaskedTextBox.Name = "celularMaskedTextBox";
             this.celularMaskedTextBox.Size = new System.Drawing.Size(152, 26);
@@ -236,7 +236,7 @@
             this.data_nascimentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.data_nascimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(598, 108);
-            this.data_nascimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_nascimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(156, 26);
             this.data_nascimentoDateTimePicker.TabIndex = 8;
@@ -247,7 +247,7 @@
             this.emailTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Email", true));
             this.emailTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.emailTextBox1.Location = new System.Drawing.Point(415, 184);
-            this.emailTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.emailTextBox1.Name = "emailTextBox1";
             this.emailTextBox1.Size = new System.Drawing.Size(339, 26);
             this.emailTextBox1.TabIndex = 14;
@@ -258,7 +258,7 @@
             this.enderecoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
             this.enderecoTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.enderecoTextBox1.Location = new System.Drawing.Point(143, 184);
-            this.enderecoTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enderecoTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.enderecoTextBox1.Name = "enderecoTextBox1";
             this.enderecoTextBox1.Size = new System.Drawing.Size(267, 26);
             this.enderecoTextBox1.TabIndex = 12;
@@ -269,7 +269,7 @@
             this.nomeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
             this.nomeTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.nomeTextBox1.Location = new System.Drawing.Point(25, 108);
-            this.nomeTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox1.Name = "nomeTextBox1";
             this.nomeTextBox1.Size = new System.Drawing.Size(263, 26);
             this.nomeTextBox1.TabIndex = 2;
@@ -299,7 +299,7 @@
             this.Controls.Add(this.tituloLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(786, 353);
             this.MinimizeBox = false;

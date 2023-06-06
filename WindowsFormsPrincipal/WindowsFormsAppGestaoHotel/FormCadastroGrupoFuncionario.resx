@@ -124,26 +124,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonSalvar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAATBJREFUSEvtVtsNwjAQ6wiM0FEYhRHYgI7ABqzABmWD/vX10xEYAXzRJUqTCK7p
-        VSCEJX9wvtgljzbFHx9F13UluF/Bkq3kGIbhBD5WcloUTs0Jk1zKw2ma7MC+74/0eykxtrIeoCycB5pB
-        nlkl5IFtaLmWhaMhDPYNXhIzdGMbA9Rm4U3T7FiKoRlMGMfxbHXy43IM7eDQj8sxvinYhAvpNpcFannB
-        XM7GbwSjXmI9a+zYO/deqMbyDBI/g3eNFABtsj0ek+dULRj/1J3LkOivuM1BM7i2ekjV48RlB5hfrR6S
-        NG5zUAv29ZDQtj3H0FJvs2h9CarBBGh0NaowveabzeUIUr9ZY9u2WRcBn/Rg0mDNq8+M5M0xaaBJ/EVa
-        wOQeiEBPR1OjRNmF749tUBRPPXtbHlrxlJMAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="buttonCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAALRJREFUSEvtkwEKgzAMRXskbzQPXSjtJTyC+x39om7TGFNB7IOgVfMflcY1Gs8i
-        xvjy3ndlKUbb9yE3o0bUcCRE2zcRQuhLgDgE31E6ppQGlG7XR+R4byMlEjme20rJlhzrOlLyS45rXSlZ
-        yy+RkpX8GmkGsun3lhKN2inm0rxT3qPqyRH+dZAko3YKhP49vdXkCNsdGXM5QnalxEyOZrGUmMgZIpUS
-        bd+CHKJp1vY1GnfGuTd4l+ldy9jDxAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAJg6AACYOgAAAAAAAAAA

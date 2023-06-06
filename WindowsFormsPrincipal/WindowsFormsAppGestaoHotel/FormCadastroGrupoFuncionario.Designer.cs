@@ -47,7 +47,7 @@
             nomeGrupoLabel.Location = new System.Drawing.Point(45, 87);
             nomeGrupoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeGrupoLabel.Name = "nomeGrupoLabel";
-            nomeGrupoLabel.Size = new System.Drawing.Size(147, 24);
+            nomeGrupoLabel.Size = new System.Drawing.Size(122, 20);
             nomeGrupoLabel.TabIndex = 0;
             nomeGrupoLabel.Text = "Nome do Grupo";
             // 
@@ -63,21 +63,21 @@
             this.nomeGrupoTextBox.Location = new System.Drawing.Point(49, 114);
             this.nomeGrupoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
-            this.nomeGrupoTextBox.Size = new System.Drawing.Size(240, 28);
+            this.nomeGrupoTextBox.Size = new System.Drawing.Size(256, 26);
             this.nomeGrupoTextBox.TabIndex = 1;
             // 
             // buttonSalvar
             // 
             this.buttonSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.save_bk;
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(118, 164);
+            this.buttonSalvar.Location = new System.Drawing.Point(49, 164);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(101, 33);
+            this.buttonSalvar.Size = new System.Drawing.Size(110, 33);
             this.buttonSalvar.TabIndex = 2;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -89,10 +89,10 @@
             this.buttonCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close_bk;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(223, 164);
+            this.buttonCancelar.Location = new System.Drawing.Point(185, 164);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
@@ -110,7 +110,7 @@
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(354, 73);
+            this.tituloLabel.Size = new System.Drawing.Size(356, 73);
             this.tituloLabel.TabIndex = 4;
             this.tituloLabel.Text = "Cadastro de Grupo de Funcionário";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(354, 208);
+            this.ClientSize = new System.Drawing.Size(356, 213);
             this.Controls.Add(this.tituloLabel);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);

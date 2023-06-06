@@ -44,9 +44,10 @@
             // 
             nomePermissaoLabel.AutoSize = true;
             nomePermissaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            nomePermissaoLabel.Location = new System.Drawing.Point(15, 75);
+            nomePermissaoLabel.Location = new System.Drawing.Point(11, 61);
+            nomePermissaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomePermissaoLabel.Name = "nomePermissaoLabel";
-            nomePermissaoLabel.Size = new System.Drawing.Size(197, 25);
+            nomePermissaoLabel.Size = new System.Drawing.Size(159, 20);
             nomePermissaoLabel.TabIndex = 6;
             nomePermissaoLabel.Text = "Descrição do Acesso";
             // 
@@ -55,24 +56,25 @@
             this.tituloLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.tituloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
+            this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(437, 75);
+            this.tituloLabel.Size = new System.Drawing.Size(329, 53);
             this.tituloLabel.TabIndex = 5;
             this.tituloLabel.Text = "Cadastro de Acesso";
-            this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonCancelar.BackColor = System.Drawing.Color.IndianRed;
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(265, 192);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(175, 156);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(160, 41);
+            this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
             this.buttonCancelar.TabIndex = 9;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -82,15 +84,15 @@
             // buttonSalvar
             // 
             this.buttonSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(15, 192);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSalvar.Location = new System.Drawing.Point(34, 156);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(160, 41);
+            this.buttonSalvar.Size = new System.Drawing.Size(110, 33);
             this.buttonSalvar.TabIndex = 8;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,11 +103,11 @@
             // 
             this.nomePermissaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomePermissaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nomePermissaoTextBox.Location = new System.Drawing.Point(15, 102);
-            this.nomePermissaoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nomePermissaoTextBox.Location = new System.Drawing.Point(11, 85);
+            this.nomePermissaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nomePermissaoTextBox.Multiline = true;
             this.nomePermissaoTextBox.Name = "nomePermissaoTextBox";
-            this.nomePermissaoTextBox.Size = new System.Drawing.Size(410, 62);
+            this.nomePermissaoTextBox.Size = new System.Drawing.Size(308, 51);
             this.nomePermissaoTextBox.TabIndex = 7;
             // 
             // permissaoBindingSource
@@ -114,20 +116,20 @@
             // 
             // FormCadastroPermissao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 236);
+            this.ClientSize = new System.Drawing.Size(329, 198);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(nomePermissaoLabel);
             this.Controls.Add(this.nomePermissaoTextBox);
             this.Controls.Add(this.tituloLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(455, 283);
+            this.MaximumSize = new System.Drawing.Size(345, 237);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(455, 283);
+            this.MinimumSize = new System.Drawing.Size(345, 237);
             this.Name = "FormCadastroPermissao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Cadastro de Acesso";

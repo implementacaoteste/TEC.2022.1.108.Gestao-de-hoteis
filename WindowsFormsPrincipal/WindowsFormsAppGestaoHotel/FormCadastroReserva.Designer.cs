@@ -44,22 +44,22 @@
             this.valor_TotalTextBox = new System.Windows.Forms.TextBox();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tituloLabel = new System.Windows.Forms.Label();
-            this.buttonSelecionarCliente = new System.Windows.Forms.Button();
-            this.buttonSelecionarPagamento = new System.Windows.Forms.Button();
-            this.buttonSalvar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
             this.id_HospedeTextBox = new System.Windows.Forms.TextBox();
             this.id_PagamentoTextBox = new System.Windows.Forms.TextBox();
             this.data_Ent_ReservaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.data_SaidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.buttonSelecionarQuarto = new System.Windows.Forms.Button();
             this.tipo_QuartoTextBox = new System.Windows.Forms.TextBox();
             this.qtd_HospedesNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.obs_ReservaTextBox = new System.Windows.Forms.TextBox();
             this.valor_EntradaTextBox = new System.Windows.Forms.TextBox();
             this.numero_QuartoTextBox = new System.Windows.Forms.TextBox();
-            this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.valor_DiariaTextBox = new System.Windows.Forms.TextBox();
+            this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonSelecionarCliente = new System.Windows.Forms.Button();
+            this.buttonSelecionarQuarto = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.buttonSelecionarPagamento = new System.Windows.Forms.Button();
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -222,68 +222,6 @@
             this.tituloLabel.Text = "Cadastro de Reserva";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonSelecionarCliente
-            // 
-            this.buttonSelecionarCliente.FlatAppearance.BorderSize = 0;
-            this.buttonSelecionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelecionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarCliente.Image")));
-            this.buttonSelecionarCliente.Location = new System.Drawing.Point(434, 96);
-            this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonSelecionarCliente.Name = "buttonSelecionarCliente";
-            this.buttonSelecionarCliente.Size = new System.Drawing.Size(30, 26);
-            this.buttonSelecionarCliente.TabIndex = 6;
-            this.buttonSelecionarCliente.UseVisualStyleBackColor = true;
-            this.buttonSelecionarCliente.Click += new System.EventHandler(this.buttonSelecionarCliente_Click);
-            // 
-            // buttonSelecionarPagamento
-            // 
-            this.buttonSelecionarPagamento.FlatAppearance.BorderSize = 0;
-            this.buttonSelecionarPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelecionarPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionarPagamento.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarPagamento.Image")));
-            this.buttonSelecionarPagamento.Location = new System.Drawing.Point(292, 218);
-            this.buttonSelecionarPagamento.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSelecionarPagamento.Name = "buttonSelecionarPagamento";
-            this.buttonSelecionarPagamento.Size = new System.Drawing.Size(30, 26);
-            this.buttonSelecionarPagamento.TabIndex = 9;
-            this.buttonSelecionarPagamento.UseVisualStyleBackColor = true;
-            this.buttonSelecionarPagamento.Click += new System.EventHandler(this.buttonSelecionarPagamento_Click);
-            // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.BackColor = System.Drawing.Color.White;
-            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
-            this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(342, 366);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(110, 33);
-            this.buttonSalvar.TabIndex = 19;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSalvar.UseVisualStyleBackColor = false;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.White;
-            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
-            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(472, 366);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
-            this.buttonCancelar.TabIndex = 20;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCancelar.UseVisualStyleBackColor = false;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
             // id_HospedeTextBox
             // 
             this.id_HospedeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -336,20 +274,6 @@
             this.data_SaidaDateTimePicker.TabIndex = 16;
             this.data_SaidaDateTimePicker.Value = new System.DateTime(2023, 5, 13, 0, 0, 0, 0);
             this.data_SaidaDateTimePicker.ValueChanged += new System.EventHandler(this.data_SaidaDateTimePicker_ValueChanged);
-            // 
-            // buttonSelecionarQuarto
-            // 
-            this.buttonSelecionarQuarto.FlatAppearance.BorderSize = 0;
-            this.buttonSelecionarQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelecionarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelecionarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarQuarto.Image")));
-            this.buttonSelecionarQuarto.Location = new System.Drawing.Point(126, 157);
-            this.buttonSelecionarQuarto.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSelecionarQuarto.Name = "buttonSelecionarQuarto";
-            this.buttonSelecionarQuarto.Size = new System.Drawing.Size(30, 26);
-            this.buttonSelecionarQuarto.TabIndex = 12;
-            this.buttonSelecionarQuarto.UseVisualStyleBackColor = true;
-            this.buttonSelecionarQuarto.Click += new System.EventHandler(this.buttonSelecionarQuarto_Click);
             // 
             // tipo_QuartoTextBox
             // 
@@ -404,11 +328,6 @@
             this.numero_QuartoTextBox.Size = new System.Drawing.Size(106, 26);
             this.numero_QuartoTextBox.TabIndex = 29;
             // 
-            // quartosBindingSource
-            // 
-            this.quartosBindingSource.DataMember = "Quartos";
-            this.quartosBindingSource.DataSource = this.reservaBindingSource;
-            // 
             // valor_DiariaTextBox
             // 
             this.valor_DiariaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -418,6 +337,87 @@
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(117, 26);
             this.valor_DiariaTextBox.TabIndex = 30;
+            // 
+            // quartosBindingSource
+            // 
+            this.quartosBindingSource.DataMember = "Quartos";
+            this.quartosBindingSource.DataSource = this.reservaBindingSource;
+            // 
+            // buttonSelecionarCliente
+            // 
+            this.buttonSelecionarCliente.FlatAppearance.BorderSize = 0;
+            this.buttonSelecionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelecionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelecionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarCliente.Image")));
+            this.buttonSelecionarCliente.Location = new System.Drawing.Point(434, 96);
+            this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonSelecionarCliente.Name = "buttonSelecionarCliente";
+            this.buttonSelecionarCliente.Size = new System.Drawing.Size(30, 26);
+            this.buttonSelecionarCliente.TabIndex = 6;
+            this.buttonSelecionarCliente.UseVisualStyleBackColor = true;
+            this.buttonSelecionarCliente.Click += new System.EventHandler(this.buttonSelecionarCliente_Click);
+            // 
+            // buttonSelecionarQuarto
+            // 
+            this.buttonSelecionarQuarto.FlatAppearance.BorderSize = 0;
+            this.buttonSelecionarQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelecionarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelecionarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarQuarto.Image")));
+            this.buttonSelecionarQuarto.Location = new System.Drawing.Point(126, 157);
+            this.buttonSelecionarQuarto.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSelecionarQuarto.Name = "buttonSelecionarQuarto";
+            this.buttonSelecionarQuarto.Size = new System.Drawing.Size(30, 26);
+            this.buttonSelecionarQuarto.TabIndex = 12;
+            this.buttonSelecionarQuarto.UseVisualStyleBackColor = true;
+            this.buttonSelecionarQuarto.Click += new System.EventHandler(this.buttonSelecionarQuarto_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelar.Location = new System.Drawing.Point(482, 366);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
+            this.buttonCancelar.TabIndex = 20;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
+            this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSalvar.Location = new System.Drawing.Point(364, 366);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(110, 33);
+            this.buttonSalvar.TabIndex = 19;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSalvar.UseVisualStyleBackColor = false;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            // 
+            // buttonSelecionarPagamento
+            // 
+            this.buttonSelecionarPagamento.FlatAppearance.BorderSize = 0;
+            this.buttonSelecionarPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelecionarPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelecionarPagamento.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarPagamento.Image")));
+            this.buttonSelecionarPagamento.Location = new System.Drawing.Point(292, 218);
+            this.buttonSelecionarPagamento.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSelecionarPagamento.Name = "buttonSelecionarPagamento";
+            this.buttonSelecionarPagamento.Size = new System.Drawing.Size(30, 26);
+            this.buttonSelecionarPagamento.TabIndex = 9;
+            this.buttonSelecionarPagamento.UseVisualStyleBackColor = true;
+            this.buttonSelecionarPagamento.Click += new System.EventHandler(this.buttonSelecionarPagamento_Click);
             // 
             // FormCadastroReserva
             // 

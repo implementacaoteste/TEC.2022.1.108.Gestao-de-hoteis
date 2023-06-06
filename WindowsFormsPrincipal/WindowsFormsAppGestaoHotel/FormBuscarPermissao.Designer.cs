@@ -244,7 +244,7 @@
             this.buttonAlterarPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAlterarPermissao.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarPermissao.Image")));
             this.buttonAlterarPermissao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarPermissao.Location = new System.Drawing.Point(162, 459);
+            this.buttonAlterarPermissao.Location = new System.Drawing.Point(167, 459);
             this.buttonAlterarPermissao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterarPermissao.Name = "buttonAlterarPermissao";
             this.buttonAlterarPermissao.Size = new System.Drawing.Size(120, 33);
@@ -261,10 +261,10 @@
             this.buttonAdicionarPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdicionarPermissao.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarPermissao.Image")));
             this.buttonAdicionarPermissao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdicionarPermissao.Location = new System.Drawing.Point(11, 459);
+            this.buttonAdicionarPermissao.Location = new System.Drawing.Point(15, 459);
             this.buttonAdicionarPermissao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarPermissao.Name = "buttonAdicionarPermissao";
-            this.buttonAdicionarPermissao.Size = new System.Drawing.Size(120, 33);
+            this.buttonAdicionarPermissao.Size = new System.Drawing.Size(128, 33);
             this.buttonAdicionarPermissao.TabIndex = 10;
             this.buttonAdicionarPermissao.Text = "Adicionar";
             this.buttonAdicionarPermissao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

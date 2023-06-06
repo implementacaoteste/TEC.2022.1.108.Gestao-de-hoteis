@@ -184,9 +184,9 @@
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonSelecionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(234)))), ((int)(((byte)(205)))));
             this.buttonSelecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonSelecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionar.Image")));
             this.buttonSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSelecionar.Location = new System.Drawing.Point(542, 72);
@@ -196,20 +196,20 @@
             this.buttonSelecionar.TabIndex = 3;
             this.buttonSelecionar.Text = "Selecionar";
             this.buttonSelecionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSelecionar.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.UseVisualStyleBackColor = false;
             this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.White;
+            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(542, 309);
+            this.buttonCancelar.Location = new System.Drawing.Point(552, 326);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(124, 33);
+            this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -222,7 +222,7 @@
             this.textBoxBuscar.Location = new System.Drawing.Point(11, 75);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(360, 28);
+            this.textBoxBuscar.Size = new System.Drawing.Size(360, 26);
             this.textBoxBuscar.TabIndex = 1;
             // 
             // label1
@@ -233,7 +233,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(681, 59);
+            this.label1.Size = new System.Drawing.Size(683, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Consultar Hóspede";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(681, 365);
+            this.ClientSize = new System.Drawing.Size(683, 370);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.buttonCancelar);

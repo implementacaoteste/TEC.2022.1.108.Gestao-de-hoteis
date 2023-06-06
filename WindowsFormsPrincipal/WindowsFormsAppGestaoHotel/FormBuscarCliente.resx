@@ -148,7 +148,7 @@
   <data name="buttonAlterarCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAANBJREFUSEvtlo0JwjAQRjOC0PyN4wiO4AhuYDexG3UkzScXiB+kQtIrKHlw0LsL
+        EAAACxABrSO9dQAAANBJREFUSEvtlo0JwjAQRjOC0PyN4wiO4AhuYDexG3UkzScXiB+kQtIrKHlw0LsL
         9+BKSc3gZzklQgg37/08TdNFyrpA6pxbk/SZw1p7l7YeLD1MniQzS3Mk+VmO7QPWCyTdkj/kSD8QYr2I
         b/J05irtPrK0GFyVoyflPlhaCljOtWYwhKRLypecs6h8bgZDWCotfEpVeRdbUu7tJubBQzqkTfDg/5UC
         XF2HS0EpjjG+7091KSjF+G9Cri4FtOqPUJOCmlhVCjAc75ZDVTrQxZgX63TOIClamlgAAAAASUVORK5C
@@ -158,7 +158,7 @@
   <data name="buttonExcluirCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAALZJREFUSEvtlssNwjAQRF0CB/+OlJASKI1OoBPogBJSCuxIk0MkQ2yvJXzYJ40i
+        EAAACxABrSO9dQAAALZJREFUSEvtlssNwjAQRF0CB/+OlJASKI1OoBPogBJSCuxIk0MkQ2yvJXzYJ40i
         O56Zw/pgZ0xJCGHx3l9Kwj8eG4+EP2KM75JSSk8e66cUrBFjjymZNWLsMXL4KlppxBfrFu28jK1jm2fP
         7DTeuYo1e9VYMbBiYMXAipuYrXjJOe9eG1/2xhbXMqRY9Cq9sX4Jnu5iMd5ZrNGNcfXI3M5i3F4SPVqR
         wbh2cHFahYt2Ehhh/BPnPnWlPEYk6+qyAAAAAElFTkSuQmCC
@@ -167,7 +167,7 @@
   <data name="buttonAdicionarCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAIlJREFUSEvtk90JgDAQgztE/8boCB3JDXUzbSB9KBwixUPU+yBQQmnKHXGGYYAQ
+        EAAACxABrSO9dQAAAIlJREFUSEvtk90JgDAQgztE/8boCB3JDXUzbSB9KBwixUPU+yBQQmnKHXGGYYAQ
         QmlaqUJbH+99jTHuUM650tbHgmnr881g1AQBklJKSw/GWboDTVUNHe2Pz6p9auNz13kyuGB/ktoYh1FL
         d6CpUZ+B/fVgBNDWx4Jp6/O/YNQEHYVur4xhvBTnDuATceyuGZ5JAAAAAElFTkSuQmCC
 </value>

@@ -289,7 +289,7 @@
             this.textBoxBuscarIdReserva.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBoxBuscarIdReserva.Location = new System.Drawing.Point(779, 23);
             this.textBoxBuscarIdReserva.Name = "textBoxBuscarIdReserva";
-            this.textBoxBuscarIdReserva.Size = new System.Drawing.Size(102, 28);
+            this.textBoxBuscarIdReserva.Size = new System.Drawing.Size(102, 26);
             this.textBoxBuscarIdReserva.TabIndex = 8;
             this.textBoxBuscarIdReserva.Text = "Cód. Reserva";
             this.textBoxBuscarIdReserva.Click += new System.EventHandler(this.textBoxBuscarIdReserva_Click);
@@ -300,7 +300,7 @@
             this.data_FinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.data_FinalLabel.Location = new System.Drawing.Point(486, 26);
             this.data_FinalLabel.Name = "data_FinalLabel";
-            this.data_FinalLabel.Size = new System.Drawing.Size(93, 24);
+            this.data_FinalLabel.Size = new System.Drawing.Size(82, 20);
             this.data_FinalLabel.TabIndex = 7;
             this.data_FinalLabel.Text = "Data Final";
             // 
@@ -310,7 +310,7 @@
             this.data_InicialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.data_InicialLabel.Location = new System.Drawing.Point(238, 26);
             this.data_InicialLabel.Name = "data_InicialLabel";
-            this.data_InicialLabel.Size = new System.Drawing.Size(99, 24);
+            this.data_InicialLabel.Size = new System.Drawing.Size(88, 20);
             this.data_InicialLabel.TabIndex = 7;
             this.data_InicialLabel.Text = "Data Inicial";
             // 
@@ -320,7 +320,7 @@
             this.datePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerFinal.Location = new System.Drawing.Point(585, 24);
             this.datePickerFinal.Name = "datePickerFinal";
-            this.datePickerFinal.Size = new System.Drawing.Size(130, 28);
+            this.datePickerFinal.Size = new System.Drawing.Size(130, 26);
             this.datePickerFinal.TabIndex = 6;
             // 
             // datePickerInicial
@@ -329,7 +329,7 @@
             this.datePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerInicial.Location = new System.Drawing.Point(343, 24);
             this.datePickerInicial.Name = "datePickerInicial";
-            this.datePickerInicial.Size = new System.Drawing.Size(130, 28);
+            this.datePickerInicial.Size = new System.Drawing.Size(130, 26);
             this.datePickerInicial.TabIndex = 6;
             // 
             // comboBoxBuscarTipo
@@ -342,7 +342,7 @@
             "Data Lançamento"});
             this.comboBoxBuscarTipo.Location = new System.Drawing.Point(5, 24);
             this.comboBoxBuscarTipo.Name = "comboBoxBuscarTipo";
-            this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 28);
+            this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 26);
             this.comboBoxBuscarTipo.TabIndex = 5;
             // 
             // FormBuscarReserva
@@ -350,7 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(938, 639);
+            this.ClientSize = new System.Drawing.Size(939, 641);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxDiaria);
@@ -358,9 +358,9 @@
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(956, 683);
+            this.MaximumSize = new System.Drawing.Size(955, 680);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(956, 683);
+            this.MinimumSize = new System.Drawing.Size(955, 680);
             this.Name = "FormBuscarReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Consulta de Reservas";
