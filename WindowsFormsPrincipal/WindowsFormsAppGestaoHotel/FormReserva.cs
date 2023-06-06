@@ -29,6 +29,8 @@ namespace WindowsFormsAppGestaoHotel
             quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
             //qtd_quartos = quartoBindingSource.Count;
 
+            quartoBindingSource.DataSource = new QuartoBLL().BuscarPorDia(monthCalendar.SelectionRange.Start);
+
             addLabel();
 
             try
