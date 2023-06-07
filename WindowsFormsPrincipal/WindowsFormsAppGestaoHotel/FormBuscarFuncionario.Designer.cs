@@ -193,40 +193,44 @@
             // nomeUsuarioLabel
             // 
             nomeUsuarioLabel.AutoSize = true;
-            nomeUsuarioLabel.Location = new System.Drawing.Point(8, 24);
+            nomeUsuarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            nomeUsuarioLabel.Location = new System.Drawing.Point(14, 19);
             nomeUsuarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeUsuarioLabel.Name = "nomeUsuarioLabel";
-            nomeUsuarioLabel.Size = new System.Drawing.Size(92, 13);
+            nomeUsuarioLabel.Size = new System.Drawing.Size(68, 20);
             nomeUsuarioLabel.TabIndex = 0;
-            nomeUsuarioLabel.Text = "Nome de Usuário:";
+            nomeUsuarioLabel.Text = "Usuário:";
             // 
             // senhaLabel
             // 
             senhaLabel.AutoSize = true;
-            senhaLabel.Location = new System.Drawing.Point(58, 48);
+            senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            senhaLabel.Location = new System.Drawing.Point(22, 50);
             senhaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             senhaLabel.Name = "senhaLabel";
-            senhaLabel.Size = new System.Drawing.Size(41, 13);
+            senhaLabel.Size = new System.Drawing.Size(60, 20);
             senhaLabel.TabIndex = 2;
             senhaLabel.Text = "Senha:";
             // 
             // idLabel1
             // 
             idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(60, 26);
+            idLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            idLabel1.Location = new System.Drawing.Point(92, 20);
             idLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(32, 13);
+            idLabel1.Size = new System.Drawing.Size(46, 20);
             idLabel1.TabIndex = 0;
             idLabel1.Text = "Cód.:";
             // 
             // nomeGrupoLabel
             // 
             nomeGrupoLabel.AutoSize = true;
-            nomeGrupoLabel.Location = new System.Drawing.Point(9, 53);
+            nomeGrupoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            nomeGrupoLabel.Location = new System.Drawing.Point(14, 50);
             nomeGrupoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeGrupoLabel.Name = "nomeGrupoLabel";
-            nomeGrupoLabel.Size = new System.Drawing.Size(84, 13);
+            nomeGrupoLabel.Size = new System.Drawing.Size(124, 20);
             nomeGrupoLabel.TabIndex = 2;
             nomeGrupoLabel.Text = "Nome do Cargo:";
             // 
@@ -661,22 +665,24 @@
             // 
             this.nomeGrupoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeGrupoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionariosBindingSource, "NomeGrupo", true));
-            this.nomeGrupoTextBox.Location = new System.Drawing.Point(95, 49);
+            this.nomeGrupoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nomeGrupoTextBox.Location = new System.Drawing.Point(141, 47);
             this.nomeGrupoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeGrupoTextBox.Name = "nomeGrupoTextBox";
             this.nomeGrupoTextBox.ReadOnly = true;
-            this.nomeGrupoTextBox.Size = new System.Drawing.Size(150, 20);
+            this.nomeGrupoTextBox.Size = new System.Drawing.Size(163, 26);
             this.nomeGrupoTextBox.TabIndex = 3;
             // 
             // idTextBox1
             // 
             this.idTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.grupoFuncionariosBindingSource, "Id", true));
-            this.idTextBox1.Location = new System.Drawing.Point(95, 22);
+            this.idTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.idTextBox1.Location = new System.Drawing.Point(141, 17);
             this.idTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox1.Name = "idTextBox1";
             this.idTextBox1.ReadOnly = true;
-            this.idTextBox1.Size = new System.Drawing.Size(38, 20);
+            this.idTextBox1.Size = new System.Drawing.Size(38, 26);
             this.idTextBox1.TabIndex = 1;
             // 
             // groupBox6
@@ -689,7 +695,7 @@
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(409, 75);
+            this.groupBox6.Size = new System.Drawing.Size(409, 81);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Dados Usuário";
@@ -698,23 +704,25 @@
             // 
             this.senhaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "Senha", true));
-            this.senhaTextBox.Location = new System.Drawing.Point(100, 46);
+            this.senhaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.senhaTextBox.Location = new System.Drawing.Point(83, 47);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.ReadOnly = true;
-            this.senhaTextBox.Size = new System.Drawing.Size(113, 20);
+            this.senhaTextBox.Size = new System.Drawing.Size(125, 26);
             this.senhaTextBox.TabIndex = 3;
             // 
             // nomeUsuarioTextBox
             // 
             this.nomeUsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "NomeUsuario", true));
-            this.nomeUsuarioTextBox.Location = new System.Drawing.Point(100, 22);
+            this.nomeUsuarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nomeUsuarioTextBox.Location = new System.Drawing.Point(83, 16);
             this.nomeUsuarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
             this.nomeUsuarioTextBox.ReadOnly = true;
-            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(113, 20);
+            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(125, 26);
             this.nomeUsuarioTextBox.TabIndex = 1;
             // 
             // buttonAlterarFuncionario
