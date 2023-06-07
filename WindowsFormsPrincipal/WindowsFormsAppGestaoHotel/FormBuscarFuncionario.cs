@@ -70,7 +70,7 @@ namespace WindowsFormsPrincipal1
                 MessageBox.Show("Não existe registro para ser excluído");
                 return;
             }
-            if (MessageBox.Show("Deseja realmente excluir este registro?", "ATENÇÃO", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show("Deseja realmente excluir este registro?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
                 return;
 
             int id = ((Funcionario)funcionarioBindingSource.Current).Id;
@@ -124,10 +124,24 @@ namespace WindowsFormsPrincipal1
         {
             try
             {
+
                 int idGrupoFuncionario = ((GrupoFuncionario)grupoFuncionariosBindingSource.Current).Id;
                 int idFuncionario = ((Funcionario)funcionarioBindingSource.Current).Id;
-                new FuncionarioBLL().RemoverGrupoUsuario(idFuncionario, idGrupoFuncionario);
-                grupoFuncionariosBindingSource.RemoveCurrent();
+
+                if (MessageBox.Show("Deseja realmente excluir o cargo para este usuário?", "Cuidado", MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    if (idFuncionario == Constante.IdLogado)
+                    {
+                        MessageBox.Show("Este usuário está em uso","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    new FuncionarioBLL().RemoverGrupoUsuario(idFuncionario, idGrupoFuncionario);
+                    grupoFuncionariosBindingSource.RemoveCurrent();
+                }
+                else
+                    return;
             }
             catch (Exception ex)
             {
@@ -157,12 +171,12 @@ namespace WindowsFormsPrincipal1
                 buttonAlterarFuncionario_Click(null,null);
             }
 
-            if (e.Shift && e.KeyCode == Keys.A)
+            if (e.Alt && e.KeyCode == Keys.A)
             {
                 buttonAdicionarGrupoFuncionario_Click(null, null);
             }
 
-            if (e.Shift && e.KeyCode == Keys.M)
+            if (e.Alt && e.KeyCode == Keys.D)
             {
                 buttonExcluirGrupoFuncionario_Click(null, null);
             }
