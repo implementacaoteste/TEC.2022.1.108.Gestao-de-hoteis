@@ -198,6 +198,7 @@
             this.Controls.Add(this.pictureBox);
             this.Name = "ListReserva";
             this.Size = new System.Drawing.Size(250, 150);
+            this.Load += new System.EventHandler(this.ListReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).EndInit();
