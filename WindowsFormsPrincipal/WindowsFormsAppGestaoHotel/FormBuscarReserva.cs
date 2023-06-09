@@ -26,7 +26,7 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 comboBoxBuscarTipo.SelectedIndex= 0;
-                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(datePickerInicial.Value, datePickerFinal.Value);
+                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataEntCheckin(datePickerInicial.Value, datePickerFinal.Value);
             }
             catch (Exception ex)
             {
@@ -41,10 +41,10 @@ namespace WindowsFormsAppGestaoHotel
                 switch (comboBoxBuscarTipo.SelectedIndex) 
                 {
                     case 0:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(datePickerInicial.Value, datePickerFinal.Value);
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataEntCheckin(datePickerInicial.Value, datePickerFinal.Value);
                         break;
                     case 1:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckout(datePickerInicial.Value, datePickerFinal.Value);
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataSaiCheckout(datePickerInicial.Value, datePickerFinal.Value);
                         break;
                     case 2:
                         reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataLancamento(datePickerInicial.Value, datePickerFinal.Value);

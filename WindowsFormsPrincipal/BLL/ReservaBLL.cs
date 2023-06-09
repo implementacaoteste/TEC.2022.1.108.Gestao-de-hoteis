@@ -73,15 +73,25 @@ namespace BLL
             ValidarPermissao(13);
             return new ReservaDAL().BuscarPorTodas();
         }
-        public List<Reserva> BuscarPorDataCheckin(DateTime _dataInicial, DateTime _dataFinal)
+        public List<Reserva> BuscarPorDataEntCheckin(DateTime _dataInicial, DateTime _dataFinal)
         {
             ValidarPermissao(13);
-            return new ReservaDAL().BuscarPorDataCheckin(_dataInicial, _dataFinal);
+            return new ReservaDAL().BuscarPorDataEntCheckin(_dataInicial, _dataFinal);
         }
-        public List<Reserva> BuscarPorDataCheckout(DateTime _dataInicial, DateTime _dataFinal)
+        public List<Reserva> BuscarPorDataCheckin(DateTime _dataCheckin)
         {
             ValidarPermissao(13);
-            return new ReservaDAL().BuscarPorDataCheckout(_dataInicial, _dataFinal);
+            return new ReservaDAL().BuscarPorDataCheckin(_dataCheckin);
+        }
+        public List<Reserva> BuscarPorDataSaiCheckout(DateTime _dataInicial, DateTime _dataFinal)
+        {
+            ValidarPermissao(13);
+            return new ReservaDAL().BuscarPorDataSaiCheckout(_dataInicial, _dataFinal);
+        }
+        public List<Reserva> BuscarPorDataCheckout(DateTime _dataCheckout)
+        {
+            ValidarPermissao(13);
+            return new ReservaDAL().BuscarPorDataCheckout(_dataCheckout);
         }
         public List<Reserva> BuscarPorDataLancamento(DateTime _dataInicial, DateTime _dataFinal)
         {

@@ -36,7 +36,7 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 comboBoxBuscarTipo.SelectedIndex = 0;
-                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataEntCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
 
                 if (reservaBindingSource.Count > 0)
                     popularItems();
@@ -122,10 +122,10 @@ namespace WindowsFormsAppGestaoHotel
                 switch (comboBoxBuscarTipo.SelectedIndex)
                 {
                     case 0:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataEntCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
                         break;
                     case 1:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckout(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataSaiCheckout(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
                         break;
                     case 2:
                         reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataLancamento(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
@@ -177,10 +177,10 @@ namespace WindowsFormsAppGestaoHotel
                 switch (comboBoxBuscarTipo.SelectedIndex)
                 {
                     case 0:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataEntCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
                         break;
                     case 1:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckout(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataSaiCheckout(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
                         break;
                     case 2:
                         reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataLancamento(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
@@ -210,10 +210,10 @@ namespace WindowsFormsAppGestaoHotel
                 switch (comboBoxBuscarTipo.SelectedIndex)
                 {
                     case 0:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataEntCheckin(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
                         break;
                     case 1:
-                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataCheckout(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
+                        reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataSaiCheckout(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
                         break;
                     case 2:
                         reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataLancamento(monthCalendar.SelectionStart, monthCalendar.SelectionEnd);
