@@ -48,6 +48,7 @@
             this.numeroTextBox = new System.Windows.Forms.TextBox();
             this.andarTextBox = new System.Windows.Forms.TextBox();
             this.ClasseComboBox = new System.Windows.Forms.ComboBox();
+            this.textBoxDinheiro1 = new ComponentesDesktop.TextBoxDinheiro();
             descricaoLabel = new System.Windows.Forms.Label();
             id_StatusLabel = new System.Windows.Forms.Label();
             id_ClasseLabel = new System.Windows.Forms.Label();
@@ -262,12 +263,24 @@
             this.ClasseComboBox.TabIndex = 8;
             this.ClasseComboBox.ValueMember = "Id";
             // 
+            // textBoxDinheiro1
+            // 
+            this.textBoxDinheiro1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDinheiro1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.quartoBindingSource, "Valor_Diaria", true));
+            this.textBoxDinheiro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxDinheiro1.Location = new System.Drawing.Point(319, 64);
+            this.textBoxDinheiro1.Name = "textBoxDinheiro1";
+            this.textBoxDinheiro1.Size = new System.Drawing.Size(122, 26);
+            this.textBoxDinheiro1.TabIndex = 15;
+            this.textBoxDinheiro1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FormCadastroQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(468, 326);
+            this.Controls.Add(this.textBoxDinheiro1);
             this.Controls.Add(this.ClasseComboBox);
             this.Controls.Add(andarLabel);
             this.Controls.Add(this.andarTextBox);
@@ -316,5 +329,6 @@
         private System.Windows.Forms.TextBox numeroTextBox;
         private System.Windows.Forms.TextBox andarTextBox;
         private System.Windows.Forms.ComboBox ClasseComboBox;
+        private ComponentesDesktop.TextBoxDinheiro textBoxDinheiro1;
     }
 }

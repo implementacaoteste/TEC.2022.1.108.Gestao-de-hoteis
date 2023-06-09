@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppGestaoHotel"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentesDesktop", "ComponentesDesktop\ComponentesDesktop.csproj", "{ED23EB53-5F1F-4D47-9107-4F29FA46BB8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21D3A15D-FCD0-4586-A1F8-F8A2F25A07E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED23EB53-5F1F-4D47-9107-4F29FA46BB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED23EB53-5F1F-4D47-9107-4F29FA46BB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED23EB53-5F1F-4D47-9107-4F29FA46BB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED23EB53-5F1F-4D47-9107-4F29FA46BB8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
