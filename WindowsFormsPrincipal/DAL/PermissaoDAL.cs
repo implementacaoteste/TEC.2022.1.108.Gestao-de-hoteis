@@ -25,7 +25,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao 'Inserir' um dado no banco. Favor, verificar conexão", ex);
+                throw new Exception("Ocorreu um erro ao Inserir uma permissão um dado no banco. Favor, verificar conexão", ex);
             }
             finally 
             {
@@ -48,7 +48,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao atulizar os dados.", ex);
+                throw new Exception("Ocorreu um erro ao atulizar uma permissão os dados.", ex);
             }
             finally 
             {
@@ -71,7 +71,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao 'Excluir' um dado do banco.", ex);
+                throw new Exception("Ocorreu um erro ao Excluir uma permissão um dado do banco.", ex);
             }
             finally 
             {
@@ -106,7 +106,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro na busca de dados em 'Permissão'.", ex);
+                throw new Exception("Ocorreu um erro na busca de dados na permissão.", ex);
             }
             finally
             {
@@ -141,7 +141,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao buscar os dados no banco. favor, verificar conexao", ex);
+                throw new Exception("Ocorreu um erro ao buscar o código da permissaõ no banco de dados . favor, verificar conexao", ex);
             }
             finally
             {
@@ -175,7 +175,7 @@ namespace DAL
             }
             catch(Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar os dados no banco. Favor verificar conexão", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar pela descrição da permissão. Favor verificar conexão", ex);
             }
             finally
             {
@@ -214,7 +214,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar permissoes por Id no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar permissoes por código mo grupo funcionario no banco de dados.", ex);
             }
             finally
             {
