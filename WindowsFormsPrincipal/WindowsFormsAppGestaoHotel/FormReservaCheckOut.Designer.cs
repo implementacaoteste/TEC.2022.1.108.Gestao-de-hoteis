@@ -38,14 +38,14 @@
             System.Windows.Forms.Label valor_TotalLabel;
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pagamentoComboBox = new System.Windows.Forms.ComboBox();
+            this.obs_CheckoutTextBox = new System.Windows.Forms.TextBox();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pagamentoComboBox = new System.Windows.Forms.ComboBox();
             this.buttonCheckin = new System.Windows.Forms.Button();
             this.valor_RestanteTextBox = new System.Windows.Forms.TextBox();
             this.numero_QuartoTextBox = new System.Windows.Forms.TextBox();
             this.qtd_HospedesTextBox = new System.Windows.Forms.TextBox();
             this.valor_TotalTextBox = new System.Windows.Forms.TextBox();
-            this.obs_CheckoutTextBox = new System.Windows.Forms.TextBox();
             labelNomeHospedes = new System.Windows.Forms.Label();
             obs_CheckinLabel = new System.Windows.Forms.Label();
             pagamentoLabel = new System.Windows.Forms.Label();
@@ -155,10 +155,23 @@
             this.groupBox1.Controls.Add(this.valor_TotalTextBox);
             this.groupBox1.Location = new System.Drawing.Point(10, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(628, 186);
+            this.groupBox1.Size = new System.Drawing.Size(623, 186);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reserva";
+            // 
+            // obs_CheckoutTextBox
+            // 
+            this.obs_CheckoutTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Obs_Checkout", true));
+            this.obs_CheckoutTextBox.Location = new System.Drawing.Point(8, 107);
+            this.obs_CheckoutTextBox.Multiline = true;
+            this.obs_CheckoutTextBox.Name = "obs_CheckoutTextBox";
+            this.obs_CheckoutTextBox.Size = new System.Drawing.Size(317, 60);
+            this.obs_CheckoutTextBox.TabIndex = 16;
+            // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
             // 
             // pagamentoComboBox
             // 
@@ -169,10 +182,6 @@
             this.pagamentoComboBox.Name = "pagamentoComboBox";
             this.pagamentoComboBox.Size = new System.Drawing.Size(121, 26);
             this.pagamentoComboBox.TabIndex = 15;
-            // 
-            // reservaBindingSource
-            // 
-            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
             // 
             // buttonCheckin
             // 
@@ -188,10 +197,12 @@
             this.buttonCheckin.TabIndex = 14;
             this.buttonCheckin.Text = "Check Out";
             this.buttonCheckin.UseVisualStyleBackColor = false;
+            this.buttonCheckin.Click += new System.EventHandler(this.buttonCheckout_Click);
             // 
             // valor_RestanteTextBox
             // 
             this.valor_RestanteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_RestanteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Valor_Restante", true));
             this.valor_RestanteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.valor_RestanteTextBox.ForeColor = System.Drawing.Color.Red;
             this.valor_RestanteTextBox.Location = new System.Drawing.Point(375, 43);
@@ -203,6 +214,7 @@
             // numero_QuartoTextBox
             // 
             this.numero_QuartoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numero_QuartoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Numero_Quarto", true));
             this.numero_QuartoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.numero_QuartoTextBox.Location = new System.Drawing.Point(8, 43);
             this.numero_QuartoTextBox.Name = "numero_QuartoTextBox";
@@ -213,6 +225,7 @@
             // qtd_HospedesTextBox
             // 
             this.qtd_HospedesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qtd_HospedesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Qtd_Hospedes", true));
             this.qtd_HospedesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.qtd_HospedesTextBox.Location = new System.Drawing.Point(129, 43);
             this.qtd_HospedesTextBox.Name = "qtd_HospedesTextBox";
@@ -223,21 +236,13 @@
             // valor_TotalTextBox
             // 
             this.valor_TotalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_TotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Valor_Total", true));
             this.valor_TotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.valor_TotalTextBox.Location = new System.Drawing.Point(257, 43);
             this.valor_TotalTextBox.Name = "valor_TotalTextBox";
             this.valor_TotalTextBox.ReadOnly = true;
             this.valor_TotalTextBox.Size = new System.Drawing.Size(100, 26);
             this.valor_TotalTextBox.TabIndex = 5;
-            // 
-            // obs_CheckoutTextBox
-            // 
-            this.obs_CheckoutTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Obs_Checkout", true));
-            this.obs_CheckoutTextBox.Location = new System.Drawing.Point(8, 107);
-            this.obs_CheckoutTextBox.Multiline = true;
-            this.obs_CheckoutTextBox.Name = "obs_CheckoutTextBox";
-            this.obs_CheckoutTextBox.Size = new System.Drawing.Size(317, 60);
-            this.obs_CheckoutTextBox.TabIndex = 16;
             // 
             // FormReservaCheckOut
             // 
@@ -250,6 +255,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormReservaCheckOut_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
