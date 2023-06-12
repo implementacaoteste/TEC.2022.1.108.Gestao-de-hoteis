@@ -300,7 +300,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o ID.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar por código do quarto");
             }
             finally
             {
