@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace ComponentesDesktop
 {
@@ -10,6 +12,8 @@ namespace ComponentesDesktop
             InitializeTextBox();
             this.Text = "0,00";
             this.TextAlign = HorizontalAlignment.Right;
+            this.BorderStyle = BorderStyle.FixedSingle;
+            this.Font = new Font("Microsoft Sans Serif", 12);
         }
 
         private void InitializeTextBox()
@@ -26,11 +30,11 @@ namespace ComponentesDesktop
 
         private void TextBoxDinheiro_TextChanged(object sender, EventArgs e)
         {
-            if (decimal.TryParse(this.Text.Replace(",", ""), out decimal valorDigitado))
+            if (decimal.TryParse(this.Text.Replace(",", "").Replace("R$ ", ""), out decimal valorDigitado))
             {
                 this.TextChanged -= TextBoxDinheiro_TextChanged; // Remove o manipulador de eventos para evitar chamadas recursivas
                 valorDigitado = valorDigitado / 100;
-                this.Text = valorDigitado.ToString("0.00"); // Formata o texto com duas casas decimais
+                this.Text = valorDigitado.ToString("C", CultureInfo.CurrentCulture); // Formata o texto com duas casas decimais
                 this.SelectionStart = this.Text.Length; // Define o cursor no final do texto
 
                 this.TextChanged += TextBoxDinheiro_TextChanged; // Reatribui o manipulador de eventos

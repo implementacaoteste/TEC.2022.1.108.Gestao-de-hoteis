@@ -133,18 +133,16 @@ namespace WindowsFormsAppGestaoHotel
                     frm.ShowDialog();
                     if (frm.Id != 0)
                     {
+                        quartosBindingSource.DataSource = new Quarto() { Id = frm.Id, Numero = frm.Numero, Classe = frm.Tipo_Quarto, Valor_Diaria = frm.Valor_Diaria };
                         ((Reserva)reservaBindingSource.Current).Quartos.Add(new Quarto() { Id = frm.Id, Numero = frm.Numero, Classe = frm.Tipo_Quarto, Valor_Diaria = frm.Valor_Diaria });
                         numero_QuartoTextBox.Text = frm.Numero.ToString();
                         tipo_QuartoTextBox.Text = frm.Tipo_Quarto.ToString();
-                        valor_DiariaTextBox.Text = frm.Valor_Diaria.ToString();
+                        //valor_DiariaTextBox.Text = frm.Valor_Diaria.ToString("C", CultureInfo.CurrentCulture);
                         ((Reserva)reservaBindingSource.Current).Id_Quarto = frm.Id;
 
-                        double value = frm.Valor_Diaria;
-                        if (Double.TryParse(valor_DiariaTextBox.Text, out value))
-                            valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
                     }
                 }
-                CalcularValorReserva();
+                //CalcularValorReserva();
             }
             catch (Exception ex)
             {
@@ -180,14 +178,14 @@ namespace WindowsFormsAppGestaoHotel
 
             valor_TotalTextBox.Text = valor_total.ToString();
 
-            if (Double.TryParse(valor_DiariaTextBox.Text, out valor_diaria))
-                valor_DiariaTextBox.Text = valor_diaria.ToString("C", CultureInfo.CurrentCulture);
+            //if (Double.TryParse(valor_DiariaTextBox.Text, out valor_diaria))
+            //    valor_DiariaTextBox.Text = valor_diaria.ToString("C", CultureInfo.CurrentCulture);
 
-            if (Double.TryParse(valor_TotalTextBox.Text, out valor_total))
-                valor_TotalTextBox.Text = valor_total.ToString("C", CultureInfo.CurrentCulture);
+            //if (Double.TryParse(valor_TotalTextBox.Text, out valor_total))
+            //    valor_TotalTextBox.Text = valor_total.ToString("C", CultureInfo.CurrentCulture);
 
-            if (Double.TryParse(valor_EntradaTextBox.Text, out Vlr_Entrada))
-                valor_EntradaTextBox.Text = Vlr_Entrada.ToString("C", CultureInfo.CurrentCulture);
+            //if (Double.TryParse(valor_EntradaTextBox.Text, out Vlr_Entrada))
+            //    valor_EntradaTextBox.Text = Vlr_Entrada.ToString("C", CultureInfo.CurrentCulture);
         }
 
         //void mascaraMoeda()
@@ -227,22 +225,24 @@ namespace WindowsFormsAppGestaoHotel
 
         private void valor_EntradaTextBox_Enter(object sender, EventArgs e)
         {
-            CalcularValorReserva();
+            //CalcularValorReserva();
         }
 
         private void valor_EntradaTextBox_TextChanged(object sender, EventArgs e)
         {
-            CalcularValorReserva();
+            //CalcularValorReserva();
         }
 
         private void valor_DiariaTextBox_TextChanged(object sender, EventArgs e)
         {
-            CalcularValorReserva();
+            //CalcularValorReserva();
         }
 
         private void valor_TotalTextBox_TextChanged(object sender, EventArgs e)
         {
-            CalcularValorReserva();
+           //CalcularValorReserva();
         }
+
+       
     }
 }

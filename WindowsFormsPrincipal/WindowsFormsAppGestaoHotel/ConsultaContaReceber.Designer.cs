@@ -30,8 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaContaReceber));
-            this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contasReceberDataGridView = new System.Windows.Forms.DataGridView();
+            this.comboBoxBuscar = new System.Windows.Forms.ComboBox();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Adicionar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,17 +42,11 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.comboBoxBuscar = new System.Windows.Forms.ComboBox();
-            this.buttonBuscar = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Adicionar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).BeginInit();
+            this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.contasReceberDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // contasReceberBindingSource
-            // 
-            this.contasReceberBindingSource.DataSource = typeof(Models.ContasReceber);
             // 
             // contasReceberDataGridView
             // 
@@ -67,13 +64,56 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewCheckBoxColumn1});
             this.contasReceberDataGridView.DataSource = this.contasReceberBindingSource;
-            this.contasReceberDataGridView.Location = new System.Drawing.Point(12, 129);
+            this.contasReceberDataGridView.Location = new System.Drawing.Point(12, 152);
             this.contasReceberDataGridView.Name = "contasReceberDataGridView";
             this.contasReceberDataGridView.ReadOnly = true;
             this.contasReceberDataGridView.RowHeadersWidth = 51;
             this.contasReceberDataGridView.RowTemplate.Height = 24;
             this.contasReceberDataGridView.Size = new System.Drawing.Size(1090, 220);
             this.contasReceberDataGridView.TabIndex = 1;
+            // 
+            // comboBoxBuscar
+            // 
+            this.comboBoxBuscar.FormattingEnabled = true;
+            this.comboBoxBuscar.Items.AddRange(new object[] {
+            "Todos",
+            "Data do Vencimento",
+            "Contas Recebido",
+            "Contas à Receber"});
+            this.comboBoxBuscar.Location = new System.Drawing.Point(12, 118);
+            this.comboBoxBuscar.Name = "comboBoxBuscar";
+            this.comboBoxBuscar.Size = new System.Drawing.Size(155, 24);
+            this.comboBoxBuscar.TabIndex = 2;
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.BackColor = System.Drawing.Color.GreenYellow;
+            this.buttonBuscar.Location = new System.Drawing.Point(184, 119);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(94, 23);
+            this.buttonBuscar.TabIndex = 3;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 87);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(155, 22);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // Adicionar
+            // 
+            this.Adicionar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Adicionar.Location = new System.Drawing.Point(992, 118);
+            this.Adicionar.Name = "Adicionar";
+            this.Adicionar.Size = new System.Drawing.Size(88, 23);
+            this.Adicionar.TabIndex = 5;
+            this.Adicionar.Text = "Adicionar";
+            this.Adicionar.UseVisualStyleBackColor = false;
+            this.Adicionar.Click += new System.EventHandler(this.Adicionar_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -138,52 +178,26 @@
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
-            // comboBoxBuscar
+            // contasReceberBindingSource
             // 
-            this.comboBoxBuscar.FormattingEnabled = true;
-            this.comboBoxBuscar.Items.AddRange(new object[] {
-            "Todos",
-            "Data do Vencimento",
-            "Contas Recebido",
-            "Contas à Receber"});
-            this.comboBoxBuscar.Location = new System.Drawing.Point(12, 88);
-            this.comboBoxBuscar.Name = "comboBoxBuscar";
-            this.comboBoxBuscar.Size = new System.Drawing.Size(155, 24);
-            this.comboBoxBuscar.TabIndex = 2;
+            this.contasReceberBindingSource.DataSource = typeof(Models.ContasReceber);
             // 
-            // buttonBuscar
+            // label1
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(173, 89);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.buttonBuscar.TabIndex = 3;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 60);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(155, 22);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // Adicionar
-            // 
-            this.Adicionar.Location = new System.Drawing.Point(991, 89);
-            this.Adicionar.Name = "Adicionar";
-            this.Adicionar.Size = new System.Drawing.Size(88, 23);
-            this.Adicionar.TabIndex = 5;
-            this.Adicionar.Text = "Adicionar";
-            this.Adicionar.UseVisualStyleBackColor = true;
-            this.Adicionar.Click += new System.EventHandler(this.Adicionar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(350, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(335, 44);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Contas a Receber";
             // 
             // ConsultaContaReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 450);
+            this.ClientSize = new System.Drawing.Size(1114, 428);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Adicionar);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonBuscar);
@@ -194,9 +208,10 @@
             this.MinimizeBox = false;
             this.Name = "ConsultaContaReceber";
             this.Text = "Consulta Conta Receber";
-            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contasReceberDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -215,5 +230,6 @@
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button Adicionar;
+        private System.Windows.Forms.Label label1;
     }
 }
