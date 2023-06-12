@@ -204,6 +204,7 @@
             this.valor_TotalTextBox.Name = "valor_TotalTextBox";
             this.valor_TotalTextBox.Size = new System.Drawing.Size(120, 26);
             this.valor_TotalTextBox.TabIndex = 18;
+            this.valor_TotalTextBox.TextChanged += new System.EventHandler(this.valor_TotalTextBox_TextChanged);
             // 
             // reservaBindingSource
             // 
@@ -316,6 +317,7 @@
             this.valor_EntradaTextBox.Name = "valor_EntradaTextBox";
             this.valor_EntradaTextBox.Size = new System.Drawing.Size(106, 26);
             this.valor_EntradaTextBox.TabIndex = 28;
+            this.valor_EntradaTextBox.TextChanged += new System.EventHandler(this.valor_EntradaTextBox_TextChanged);
             this.valor_EntradaTextBox.Enter += new System.EventHandler(this.valor_EntradaTextBox_Enter);
             // 
             // numero_QuartoTextBox
@@ -337,6 +339,7 @@
             this.valor_DiariaTextBox.Name = "valor_DiariaTextBox";
             this.valor_DiariaTextBox.Size = new System.Drawing.Size(117, 26);
             this.valor_DiariaTextBox.TabIndex = 30;
+            this.valor_DiariaTextBox.TextChanged += new System.EventHandler(this.valor_DiariaTextBox_TextChanged);
             // 
             // quartosBindingSource
             // 

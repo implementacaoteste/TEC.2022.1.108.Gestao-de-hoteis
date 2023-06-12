@@ -190,6 +190,29 @@ namespace WindowsFormsAppGestaoHotel
                 valor_EntradaTextBox.Text = Vlr_Entrada.ToString("C", CultureInfo.CurrentCulture);
         }
 
+        void mascaraMoeda()
+        {
+            Vlr_Total = ((Reserva)reservaBindingSource.Current).Valor_Total;
+            Vlr_Entrada = ((Reserva)reservaBindingSource.Current).Valor_Entrada;
+            Vlr_Restante = ((Reserva)reservaBindingSource.Current).Valor_Restante;
+
+
+            if (Double.TryParse(valor_RestanteTextBox.Text, out Vlr_Restante))
+            {
+                valor_RestanteTextBox.Text = Vlr_Restante.ToString("C", CultureInfo.CurrentCulture);
+                if (Vlr_Restante > 0)
+                    valor_RestanteTextBox.ForeColor = Color.Red;
+                else
+                    valor_RestanteTextBox.ForeColor = Color.Black;
+            }
+
+            if (Double.TryParse(valor_TotalTextBox.Text, out Vlr_Total))
+                valor_TotalTextBox.Text = Vlr_Total.ToString("C", CultureInfo.CurrentCulture);
+
+            if (Double.TryParse(valor_EntradaTextBox.Text, out Vlr_Entrada))
+                valor_EntradaTextBox.Text = Vlr_Entrada.ToString("C", CultureInfo.CurrentCulture);
+        }
+
         private void data_Ent_ReservaDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             valor_EntradaTextBox.Focus();
@@ -203,6 +226,21 @@ namespace WindowsFormsAppGestaoHotel
         }
 
         private void valor_EntradaTextBox_Enter(object sender, EventArgs e)
+        {
+            CalcularValorReserva();
+        }
+
+        private void valor_EntradaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            CalcularValorReserva();
+        }
+
+        private void valor_DiariaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            CalcularValorReserva();
+        }
+
+        private void valor_TotalTextBox_TextChanged(object sender, EventArgs e)
         {
             CalcularValorReserva();
         }
