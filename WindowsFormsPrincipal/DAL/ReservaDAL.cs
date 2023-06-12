@@ -71,7 +71,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar inserir uma Reserva no Banco de Dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar Vincular um Quarto em uma Reserva no Banco de Dados.", ex);
             }
             finally
             {
@@ -227,7 +227,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar buscar a Reserva na buscar por ID.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar a Reserva na buscar por código.", ex);
             }
             finally
             {
@@ -296,7 +296,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todas as Diárias.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todas as reservas.", ex);
             }
             finally
             {

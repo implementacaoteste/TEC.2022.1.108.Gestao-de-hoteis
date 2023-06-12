@@ -33,7 +33,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possível buscar o sexo por ID no banco. Favor, verificar a conexão", ex);
+                throw new Exception("Não foi possível buscar o sexo por código no banco. Favor, verificar a conexão", ex);
             }
             finally
             {
