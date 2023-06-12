@@ -1,28 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using BLL;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using BLL;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsPrincipal1;
 using Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Globalization;
-using System.Threading;
 
 namespace WindowsFormsAppGestaoHotel
 {
@@ -60,10 +40,7 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        
         private void buttonSelecionarPagamento_Click(object sender, EventArgs e)
         {
             try
@@ -82,6 +59,7 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void buttonSelecionarCliente_Click(object sender, EventArgs e)
         {
             try
@@ -121,6 +99,7 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void buttonSelecionarQuarto_Click(object sender, EventArgs e)
         {
             try
@@ -133,11 +112,11 @@ namespace WindowsFormsAppGestaoHotel
                     frm.ShowDialog();
                     if (frm.Id != 0)
                     {
-                        quartosBindingSource.DataSource = new Quarto() { Id = frm.Id, Numero = frm.Numero, Classe = frm.Tipo_Quarto, Valor_Diaria = frm.Valor_Diaria };
+                        //quartosBindingSource.DataSource = new Quarto() { Id = frm.Id, Numero = frm.Numero, Classe = frm.Tipo_Quarto, Valor_Diaria = frm.Valor_Diaria };
                         ((Reserva)reservaBindingSource.Current).Quartos.Add(new Quarto() { Id = frm.Id, Numero = frm.Numero, Classe = frm.Tipo_Quarto, Valor_Diaria = frm.Valor_Diaria });
                         numero_QuartoTextBox.Text = frm.Numero.ToString();
                         tipo_QuartoTextBox.Text = frm.Tipo_Quarto.ToString();
-                        //valor_DiariaTextBox.Text = frm.Valor_Diaria.ToString("C", CultureInfo.CurrentCulture);
+                        valor_DiariaTextBox.Text = frm.Valor_Diaria.ToString();
                         ((Reserva)reservaBindingSource.Current).Id_Quarto = frm.Id;
 
                     }
@@ -146,13 +125,6 @@ namespace WindowsFormsAppGestaoHotel
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        }
-        private void FormCadastroDiaria_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                buttonCancelar_Click(null, null);
             }
         }
 
@@ -242,6 +214,17 @@ namespace WindowsFormsAppGestaoHotel
            //CalcularValorReserva();
         }
 
-       
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FormCadastroDiaria_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                buttonCancelar_Click(null, null);
+            }
+        }
     }
 }
