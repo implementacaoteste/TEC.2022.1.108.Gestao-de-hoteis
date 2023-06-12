@@ -142,7 +142,6 @@ namespace WindowsFormsAppGestaoHotel
 
                     }
                 }
-                //CalcularValorReserva();
             }
             catch (Exception ex)
             {
@@ -165,18 +164,18 @@ namespace WindowsFormsAppGestaoHotel
             DateTime data_ent = data_Ent_ReservaDateTimePicker.Value;
             DateTime data_sai = data_SaidaDateTimePicker.Value;
             int TotalDays = (data_sai.Date - data_ent.Date).Days;
-            double valor_total = 0;
+            //double valor_total = 0;
             //double valor_total_reserva = ((Reserva)reservaBindingSource.Current).Valor_Total;
-            double valor_diaria = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
+            //double valor_diaria = ((Quarto)quartosBindingSource.Current).Valor_Diaria;
 
             
 
-            if (valor_diaria > 0)
+            /*if (valor_diaria > 0)
                 valor_total = TotalDays * valor_diaria;
 
             valor_EntradaTextBox.Text = (valor_total / 2).ToString();
 
-            valor_TotalTextBox.Text = valor_total.ToString();
+            valor_TotalTextBox.Text = valor_total.ToString();*/
 
             //if (Double.TryParse(valor_DiariaTextBox.Text, out valor_diaria))
             //    valor_DiariaTextBox.Text = valor_diaria.ToString("C", CultureInfo.CurrentCulture);
@@ -213,14 +212,14 @@ namespace WindowsFormsAppGestaoHotel
 
         private void data_Ent_ReservaDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            valor_EntradaTextBox.Focus();
-            data_Ent_ReservaDateTimePicker.Focus();
+            /*valor_EntradaTextBox.Focus();
+            data_Ent_ReservaDateTimePicker.Focus();*/
         }
 
         private void data_SaidaDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            valor_EntradaTextBox.Focus();
-            data_Ent_ReservaDateTimePicker.Focus();
+            /*valor_EntradaTextBox.Focus();
+            data_Ent_ReservaDateTimePicker.Focus();*/
         }
 
         private void valor_EntradaTextBox_Enter(object sender, EventArgs e)
