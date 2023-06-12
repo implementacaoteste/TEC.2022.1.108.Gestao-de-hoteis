@@ -32,9 +32,11 @@ namespace Models
         public DateTime? Data_Checkout { get; set; }
         public DateTime Data_Reserva { get; set; }
         public List<Quarto> Quartos { get; set; }
+        public List<Hospede> Hospedes { get; set; }
         public Reserva()
         {
             Quartos = new List<Quarto>();
+            Hospedes = new List<Hospede>();
         }
     }
 }
