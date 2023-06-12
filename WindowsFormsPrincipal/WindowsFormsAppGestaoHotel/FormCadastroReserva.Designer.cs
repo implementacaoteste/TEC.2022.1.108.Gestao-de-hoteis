@@ -60,6 +60,7 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonSelecionarPagamento = new System.Windows.Forms.Button();
+            this.textBoxDinheiro1 = new ComponentesDesktop.TextBoxDinheiro();
             data_EntradaLabel = new System.Windows.Forms.Label();
             data_SaidaLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
@@ -422,6 +423,17 @@
             this.buttonSelecionarPagamento.UseVisualStyleBackColor = true;
             this.buttonSelecionarPagamento.Click += new System.EventHandler(this.buttonSelecionarPagamento_Click);
             // 
+            // textBoxDinheiro1
+            // 
+            this.textBoxDinheiro1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDinheiro1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Valor_Entrada", true));
+            this.textBoxDinheiro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxDinheiro1.Location = new System.Drawing.Point(111, 250);
+            this.textBoxDinheiro1.Name = "textBoxDinheiro1";
+            this.textBoxDinheiro1.Size = new System.Drawing.Size(100, 26);
+            this.textBoxDinheiro1.TabIndex = 31;
+            this.textBoxDinheiro1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FormCadastroReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +441,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(613, 410);
+            this.Controls.Add(this.textBoxDinheiro1);
             this.Controls.Add(this.valor_DiariaTextBox);
             this.Controls.Add(this.numero_QuartoTextBox);
             this.Controls.Add(this.valor_EntradaTextBox);
@@ -497,5 +510,6 @@
         private System.Windows.Forms.TextBox numero_QuartoTextBox;
         private System.Windows.Forms.BindingSource quartosBindingSource;
         private System.Windows.Forms.TextBox valor_DiariaTextBox;
+        private ComponentesDesktop.TextBoxDinheiro textBoxDinheiro1;
     }
 }
