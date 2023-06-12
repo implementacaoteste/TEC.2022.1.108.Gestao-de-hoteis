@@ -126,11 +126,12 @@ namespace WindowsFormsAppGestaoHotel
 
         private void pictureBoxCheckOut_Click(object sender, EventArgs e)
         {
+            int id = this.Id;
             try
             {
                 if (pictureBoxCheckIn.Enabled == false)
                 {
-                    using (FormReservaCheckOut frm = new FormReservaCheckOut())
+                    using (FormReservaCheckOut frm = new FormReservaCheckOut(id))
                     {
                         frm.ShowDialog();
                     }
