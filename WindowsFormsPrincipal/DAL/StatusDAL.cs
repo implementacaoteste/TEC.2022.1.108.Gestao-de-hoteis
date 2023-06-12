@@ -26,7 +26,7 @@ namespace DALL
             }
             catch
             {
-                throw new Exception("Não foi possivel adicionar 'Status' no banco. Favor, verificar a conexão");
+                throw new Exception("Não foi possivel adicionar status no banco. Favor, verificar a conexão");
             }
             finally
             {
@@ -49,7 +49,7 @@ namespace DALL
             }
             catch
             {
-                throw new Exception("Não foi possivel alterar 'Status' no banco. Favor, verificar a conexão");
+                throw new Exception("Não foi possivel alterar status no banco. Favor, verificar a conexão");
             }
             finally
             {
@@ -71,7 +71,7 @@ namespace DALL
             }
             catch
             {
-                throw new Exception("Não foi possivel adicionar 'Status' no banco. Favor, verificar a conexão");
+                throw new Exception("Não foi possivel excluir status no banco. Favor, verificar a conexão");
             }
             finally
             {
@@ -106,7 +106,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possivel buscar 'Status' no banco. Favor, verificar a conexão", ex);
+                throw new Exception("Não foi possivel buscar todos status no banco. Favor, verificar a conexão", ex);
             }
             finally
             {
@@ -137,7 +137,7 @@ namespace DALL
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possivel buscar 'Status' no banco. Favor, verificar a conexão", ex);
+                throw new Exception("Não foi possivel buscar por descrição status no banco. Favor, verificar a conexão", ex);
             }
             finally
             {
