@@ -17,9 +17,9 @@ namespace WindowsFormsAppGestaoHotel
     {
         public int Id;
         public DateTime Data_CheckIn;
-        public double Vlr_Total;
-        public double Vlr_Entrada;
-        public double Vlr_Restante;
+        public decimal Vlr_Total;
+        public decimal Vlr_Entrada;
+        public decimal Vlr_Restante;
         public FormReservaCheckIn(int id)
         {
             InitializeComponent();
@@ -71,7 +71,7 @@ namespace WindowsFormsAppGestaoHotel
             Vlr_Restante = ((Reserva)reservaBindingSource.Current).Valor_Restante;
 
             
-            if (Double.TryParse(valor_RestanteTextBox.Text, out Vlr_Restante))
+            if (Decimal.TryParse(valor_RestanteTextBox.Text, out Vlr_Restante))
             {
                 valor_RestanteTextBox.Text = Vlr_Restante.ToString("C", CultureInfo.CurrentCulture);
                 if (Vlr_Restante > 0)
@@ -80,10 +80,10 @@ namespace WindowsFormsAppGestaoHotel
                     valor_RestanteTextBox.ForeColor = Color.Black;
             }   
 
-            if (Double.TryParse(valor_TotalTextBox.Text, out Vlr_Total))
+            if (Decimal.TryParse(valor_TotalTextBox.Text, out Vlr_Total))
                 valor_TotalTextBox.Text = Vlr_Total.ToString("C", CultureInfo.CurrentCulture);
 
-            if (Double.TryParse(valor_EntradaTextBox.Text, out Vlr_Entrada))
+            if (Decimal.TryParse(valor_EntradaTextBox.Text, out Vlr_Entrada))
                 valor_EntradaTextBox.Text = Vlr_Entrada.ToString("C", CultureInfo.CurrentCulture);
         }
 

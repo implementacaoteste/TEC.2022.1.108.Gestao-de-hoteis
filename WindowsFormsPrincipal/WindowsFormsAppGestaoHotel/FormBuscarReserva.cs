@@ -92,22 +92,22 @@ namespace WindowsFormsAppGestaoHotel
 
         private void valor_EntradaTextBox_TextChanged(object sender, EventArgs e)
         {
-            double value = ((Reserva)reservaBindingSource.Current).Valor_Entrada;
-            if (Double.TryParse(valor_EntradaTextBox.Text, out value))
+            decimal value = ((Reserva)reservaBindingSource.Current).Valor_Entrada;
+            if (Decimal.TryParse(valor_EntradaTextBox.Text, out value))
                 valor_EntradaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
         }
 
         private void valor_TotalTextBox_TextChanged(object sender, EventArgs e)
         {
-            double value = ((Reserva)reservaBindingSource.Current).Valor_Total;
-            if (Double.TryParse(valor_TotalTextBox.Text, out value))
+            decimal value = ((Reserva)reservaBindingSource.Current).Valor_Total;
+            if (Decimal.TryParse(valor_TotalTextBox.Text, out value))
                 valor_TotalTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
         }
 
         private void valor_RestanteTextBox_TextChanged(object sender, EventArgs e)
         {
-            double value = ((Reserva)reservaBindingSource.Current).Valor_Restante;
-            if (Double.TryParse(valor_RestanteTextBox.Text, out value))
+            decimal value = ((Reserva)reservaBindingSource.Current).Valor_Restante;
+            if (Decimal.TryParse(valor_RestanteTextBox.Text, out value))
                 valor_RestanteTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
 
             if (value > 0)

@@ -17,7 +17,7 @@ namespace WindowsFormsPrincipal1
         public int Id;
         public string Numero;
         public string Tipo_Quarto;
-        public double Valor_Diaria;
+        public decimal Valor_Diaria;
 
         public FormConsultaQuarto()
         {

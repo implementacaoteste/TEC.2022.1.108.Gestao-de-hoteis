@@ -122,7 +122,7 @@ namespace DAL
                         quarto.Classe = rd["CLASSE"].ToString();
                         quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
                         quarto.Status = rd["STATUS"].ToString();
@@ -168,7 +168,7 @@ namespace DAL
                         quarto.Classe = rd["CLASSE"].ToString();
                         quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
                         quarto.Status = rd["STATUS"].ToString();
@@ -300,7 +300,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar por código do quarto");
+                throw new Exception("Ocorreu um erro ao tentar buscar por código do quarto", ex);
             }
             finally
             {
@@ -335,7 +335,7 @@ namespace DAL
                         quarto.Classe = rd["CLASSE"].ToString();
                         quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
                         quarto.Status = rd["STATUS"].ToString();
@@ -390,7 +390,7 @@ namespace DAL
                         quarto.Classe = rd["CLASSE"].ToString();
                         quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
                         //quarto.Status = rd["STATUS"].ToString();
@@ -439,7 +439,7 @@ namespace DAL
                         quarto.Classe = rd["CLASSE"].ToString();
                         quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
                         quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         quarto.Andar = rd["ANDAR"].ToString();
                         quartos.Add(quarto);
                     }
@@ -484,7 +484,7 @@ namespace DAL
                         quarto.Classe = rd["CLASSE"].ToString();
                         quarto.Numero = rd["NUMERO"].ToString();
                         quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         quarto.Andar = rd["ANDAR"].ToString();
                         quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
                         quarto.Status = rd["STATUS"].ToString();

@@ -194,7 +194,7 @@ namespace DAL
                         reserva.Id = Convert.ToInt32(rd["ID"]);
                         reserva.Data_Ent_Reserva = Convert.ToDateTime(rd["DT_ENT_RESERVA"]);
                         reserva.Data_Sai_Reserva = Convert.ToDateTime(rd["DT_SAI_RESERVA"]);
-                        reserva.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        reserva.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         reserva.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
@@ -204,7 +204,7 @@ namespace DAL
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         reserva.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         reserva.Obs_Reserva = rd["OBS_RESERVA"].ToString();
-                        reserva.Valor_Entrada = (double)rd["VALOR_ENTRADA"];
+                        reserva.Valor_Entrada = (decimal)rd["VALOR_ENTRADA"];
                         reserva.Id_Quarto = Convert.ToInt32(rd["ID_QUARTO"]);
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
@@ -218,7 +218,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
-                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
+                        reserva.Valor_Restante = (decimal)rd["VALOR_RESTANTE"];
                         reserva.Quartos = new QuartoDAL().BuscarPorIdReserva(reserva.Id);
                     }
                 }
@@ -267,7 +267,7 @@ namespace DAL
                         reserva.Id = Convert.ToInt32(rd["ID"]);
                         reserva.Data_Ent_Reserva = Convert.ToDateTime(rd["DT_ENT_RESERVA"]);
                         reserva.Data_Sai_Reserva = Convert.ToDateTime(rd["DT_SAI_RESERVA"]);
-                        reserva.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        reserva.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         reserva.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
@@ -277,7 +277,7 @@ namespace DAL
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         reserva.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         reserva.Obs_Reserva = rd["OBS_RESERVA"].ToString();
-                        reserva.Valor_Entrada = (double)rd["VALOR_ENTRADA"];
+                        reserva.Valor_Entrada = (decimal)rd["VALOR_ENTRADA"];
                         reserva.Id_Quarto = Convert.ToInt32(rd["ID_QUARTO"]);
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
 
@@ -335,7 +335,7 @@ namespace DAL
                         reserva.Id = Convert.ToInt32(rd["ID"]);
                         reserva.Data_Ent_Reserva = Convert.ToDateTime(rd["DT_ENT_RESERVA"]);
                         reserva.Data_Sai_Reserva = Convert.ToDateTime(rd["DT_SAI_RESERVA"]);
-                        reserva.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        reserva.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         reserva.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
@@ -345,7 +345,7 @@ namespace DAL
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         reserva.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         reserva.Obs_Reserva = rd["OBS_RESERVA"].ToString();
-                        reserva.Valor_Entrada = (double)rd["VALOR_ENTRADA"];
+                        reserva.Valor_Entrada = (decimal)rd["VALOR_ENTRADA"];
                         reserva.Id_Quarto = Convert.ToInt32(rd["ID_QUARTO"]);
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
@@ -359,7 +359,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
-                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
+                        reserva.Valor_Restante = (decimal)rd["VALOR_RESTANTE"];
                         reservas.Add(reserva);
                     }
                 }
@@ -405,7 +405,7 @@ namespace DAL
                         reserva.Id = Convert.ToInt32(rd["ID"]);
                         reserva.Data_Ent_Reserva = Convert.ToDateTime(rd["DT_ENT_RESERVA"]);
                         reserva.Data_Sai_Reserva = Convert.ToDateTime(rd["DT_SAI_RESERVA"]);
-                        reserva.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        reserva.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         reserva.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
@@ -415,7 +415,7 @@ namespace DAL
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         reserva.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         reserva.Obs_Reserva = rd["OBS_RESERVA"].ToString();
-                        reserva.Valor_Entrada = (double)rd["VALOR_ENTRADA"];
+                        reserva.Valor_Entrada = (decimal)rd["VALOR_ENTRADA"];
                         reserva.Id_Quarto = Convert.ToInt32(rd["ID_QUARTO"]);
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
@@ -429,7 +429,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
-                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
+                        reserva.Valor_Restante = (decimal)rd["VALOR_RESTANTE"];
                         reservas.Add(reserva);
                     }
                 }
@@ -476,7 +476,7 @@ namespace DAL
                         reserva.Id = Convert.ToInt32(rd["ID"]);
                         reserva.Data_Ent_Reserva = Convert.ToDateTime(rd["DT_ENT_RESERVA"]);
                         reserva.Data_Sai_Reserva = Convert.ToDateTime(rd["DT_SAI_RESERVA"]);
-                        reserva.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        reserva.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         reserva.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
@@ -486,7 +486,7 @@ namespace DAL
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         reserva.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         reserva.Obs_Reserva = rd["OBS_RESERVA"].ToString();
-                        reserva.Valor_Entrada = (double)rd["VALOR_ENTRADA"];
+                        reserva.Valor_Entrada = (decimal)rd["VALOR_ENTRADA"];
                         reserva.Id_Quarto = Convert.ToInt32(rd["ID_QUARTO"]);
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
@@ -500,7 +500,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
-                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
+                        reserva.Valor_Restante = (decimal)rd["VALOR_RESTANTE"];
                         reservas.Add(reserva);
                     }
                 }
@@ -546,7 +546,7 @@ namespace DAL
                         reserva.Id = Convert.ToInt32(rd["ID"]);
                         reserva.Data_Ent_Reserva = Convert.ToDateTime(rd["DT_ENT_RESERVA"]);
                         reserva.Data_Sai_Reserva = Convert.ToDateTime(rd["DT_SAI_RESERVA"]);
-                        reserva.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        reserva.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         reserva.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
@@ -556,7 +556,7 @@ namespace DAL
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         reserva.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         reserva.Obs_Reserva = rd["OBS_RESERVA"].ToString();
-                        reserva.Valor_Entrada = (double)rd["VALOR_ENTRADA"];
+                        reserva.Valor_Entrada = (decimal)rd["VALOR_ENTRADA"];
                         reserva.Id_Quarto = Convert.ToInt32(rd["ID_QUARTO"]);
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
@@ -570,7 +570,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
-                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
+                        reserva.Valor_Restante = (decimal)rd["VALOR_RESTANTE"];
                         reservas.Add(reserva);
                     }
                 }
@@ -617,7 +617,7 @@ namespace DAL
                         reserva.Id = Convert.ToInt32(rd["ID"]);
                         reserva.Data_Ent_Reserva = Convert.ToDateTime(rd["DT_ENT_RESERVA"]);
                         reserva.Data_Sai_Reserva = Convert.ToDateTime(rd["DT_SAI_RESERVA"]);
-                        reserva.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        reserva.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         reserva.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
@@ -627,7 +627,7 @@ namespace DAL
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         reserva.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
                         reserva.Obs_Reserva = rd["OBS_RESERVA"].ToString();
-                        reserva.Valor_Entrada = (double)rd["VALOR_ENTRADA"];
+                        reserva.Valor_Entrada = (decimal)rd["VALOR_ENTRADA"];
                         reserva.Id_Quarto = Convert.ToInt32(rd["ID_QUARTO"]);
                         reserva.Numero_Quarto = rd["NUMERO"].ToString();
                         reserva.Tipo_Quarto = rd["CLASSE"].ToString();
@@ -641,7 +641,7 @@ namespace DAL
                         reserva.Data_Reserva = Convert.ToDateTime(rd["DATA_RESERVA"]);
                         reserva.Obs_Checkin = rd["OBS_CHECKIN"].ToString();
                         reserva.Obs_Checkout = rd["OBS_CHECKOUT"].ToString();
-                        reserva.Valor_Restante = (double)rd["VALOR_RESTANTE"];
+                        reserva.Valor_Restante = (decimal)rd["VALOR_RESTANTE"];
                         reservas.Add(reserva);
                     }
                 }

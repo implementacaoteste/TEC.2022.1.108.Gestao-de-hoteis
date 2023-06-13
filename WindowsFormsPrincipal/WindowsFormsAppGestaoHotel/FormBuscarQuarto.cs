@@ -126,8 +126,8 @@ namespace WindowsFormsAppGestaoHotel
 
         private void valor_DiariaTextBox_TextChanged(object sender, EventArgs e)
         {
-            double value = ((Quarto)quartoBindingSource.Current).Valor_Diaria;
-            if (Double.TryParse(valor_DiariaTextBox.Text, out value))
+            decimal value = ((Quarto)quartoBindingSource.Current).Valor_Diaria;
+            if (Decimal.TryParse(valor_DiariaTextBox.Text, out value))
                 valor_DiariaTextBox.Text = value.ToString("C", CultureInfo.CurrentCulture);
         }
     }
