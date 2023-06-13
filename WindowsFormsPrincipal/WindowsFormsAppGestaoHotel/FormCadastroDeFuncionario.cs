@@ -27,8 +27,9 @@ namespace WindowsFormsPrincipal1
                         funcionarioBLL.AlteraracaoComSenha((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
                     else
                         funcionarioBLL.Alterar((Funcionario)funcionarioBindingSource.Current, textBoxConfirmarSenha.Text);
+
                 MessageBox.Show("Registro salvo com sucesso!");
-                //Close();
+                Close();
             }
            catch (Exception ex)
             {
