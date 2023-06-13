@@ -28,8 +28,13 @@ namespace ComponentesDesktop
                 e.Handled = true; // Ignora o caractere digitado se não for um número ou uma tecla de controle
         }
 
-        private void TextBoxDinheiro_TextChanged(object sender, EventArgs e)
+         private void TextBoxDinheiro_TextChanged(object sender, EventArgs e)
         {
+            this.TextChanged -= TextBoxDinheiro_TextChanged; // Remove o manipulador de eventos para evitar chamadas recursivas
+
+            if (!this.Text.Contains(","))
+                this.Text += "00";
+
             if (decimal.TryParse(this.Text.Replace(",", "").Replace("R$ ", ""), out decimal valorDigitado))
             {
                 this.TextChanged -= TextBoxDinheiro_TextChanged; // Remove o manipulador de eventos para evitar chamadas recursivas
@@ -39,6 +44,8 @@ namespace ComponentesDesktop
 
                 this.TextChanged += TextBoxDinheiro_TextChanged; // Reatribui o manipulador de eventos
             }
+
+            this.TextChanged += TextBoxDinheiro_TextChanged; // Reatribui o manipulador de eventos
         }
     }
 }
