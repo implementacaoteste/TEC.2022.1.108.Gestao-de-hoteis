@@ -19,9 +19,16 @@ namespace BLL
         public void Alterar(Funcionario _funcionario, string _confirmacaoSenha)
         {
             ValidarPermissao(3);
-            ValidarDados(_funcionario,_confirmacaoSenha);
-            _funcionario.Senha = new Criptografia().CriptografarSenha(_funcionario.Senha);
             _confirmacaoSenha = new Criptografia().CriptografarSenha(_confirmacaoSenha);
+            ValidarDados(_funcionario,_confirmacaoSenha);
+            new FuncionarioDAL().Alterar(_funcionario);
+        }
+        public void AlteraracaoComSenha(Funcionario _funcionario, string _confirmacaoSenha)
+        {
+            ValidarPermissao(3);
+            ValidarDados(_funcionario, _confirmacaoSenha);
+            _funcionario.Senha = new Criptografia().CriptografarSenha(_funcionario.Senha);
+            //_confirmacaoSenha = new Criptografia().CriptografarSenha(_confirmacaoSenha);
             new FuncionarioDAL().Alterar(_funcionario);
         }
         public void Excluir(int _Id)
