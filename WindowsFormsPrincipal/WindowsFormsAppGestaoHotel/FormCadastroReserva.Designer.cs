@@ -246,7 +246,6 @@
             this.data_Ent_ReservaDateTimePicker.Size = new System.Drawing.Size(117, 26);
             this.data_Ent_ReservaDateTimePicker.TabIndex = 14;
             this.data_Ent_ReservaDateTimePicker.Value = new System.DateTime(2023, 5, 12, 0, 0, 0, 0);
-            this.data_Ent_ReservaDateTimePicker.ValueChanged += new System.EventHandler(this.data_Ent_ReservaDateTimePicker_ValueChanged);
             // 
             // data_SaidaDateTimePicker
             // 
@@ -262,7 +261,7 @@
             this.data_SaidaDateTimePicker.Size = new System.Drawing.Size(120, 26);
             this.data_SaidaDateTimePicker.TabIndex = 16;
             this.data_SaidaDateTimePicker.Value = new System.DateTime(2023, 5, 13, 0, 0, 0, 0);
-            this.data_SaidaDateTimePicker.ValueChanged += new System.EventHandler(this.data_SaidaDateTimePicker_ValueChanged);
+            this.data_SaidaDateTimePicker.CloseUp += new System.EventHandler(this.data_SaidaDateTimePicker_CloseUp);
             // 
             // tipo_QuartoTextBox
             // 
@@ -405,6 +404,7 @@
             // valor_EntradaTextBox
             // 
             this.valor_EntradaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.valor_EntradaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Valor_Entrada", true));
             this.valor_EntradaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.valor_EntradaTextBox.Location = new System.Drawing.Point(16, 218);
             this.valor_EntradaTextBox.Name = "valor_EntradaTextBox";
@@ -412,8 +412,6 @@
             this.valor_EntradaTextBox.TabIndex = 31;
             this.valor_EntradaTextBox.Text = "R$ 0,00";
             this.valor_EntradaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.valor_EntradaTextBox.TextChanged += new System.EventHandler(this.valor_EntradaTextBox_TextChanged);
-            this.valor_EntradaTextBox.Enter += new System.EventHandler(this.valor_EntradaTextBox_Enter);
             // 
             // valor_TotalTextBox
             // 
