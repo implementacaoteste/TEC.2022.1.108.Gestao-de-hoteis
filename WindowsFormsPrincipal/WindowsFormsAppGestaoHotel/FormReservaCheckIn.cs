@@ -20,6 +20,7 @@ namespace WindowsFormsAppGestaoHotel
         public decimal Vlr_Total;
         public decimal Vlr_Entrada;
         public decimal Vlr_Restante;
+        public int Qtd_Hospedes;
         public FormReservaCheckIn(int id)
         {
             InitializeComponent();
@@ -44,24 +45,42 @@ namespace WindowsFormsAppGestaoHotel
             }
         }
 
+        private void buttonCheckin_Click(object sender, EventArgs e)
+        {
+
+        }
+
         void addLabel()
         {
+            reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
             Label _hospede;
-            flowLayoutPanelHospedes.Controls.Clear();
+            Qtd_Hospedes = ((Reserva)reservaBindingSource.Current).Qtd_Hospedes;
+            List<Reserva> Hospedes = new List<Reserva>();
+            int i = 0;
 
-            foreach (Reserva item in reservaBindingSource)
+            while (i < Qtd_Hospedes)
             {
+                Hospedes.Add(new Reserva() { Id = Id, Nome_Hospede = nome_HospedeTextBox.Text, CPF_Hopesde = cPF_HopesdeMaskedTextBox.Text, Celular_Hospede = celular_HospedeMaskedTextBox.Text });
+
                 _hospede = new Label();
-                _hospede.Name = "hospede" + item.Hospedes;
-                _hospede.Text = item.Hospedes.ToString();
+                _hospede.Name = "hospede" + Hospedes[i].Id;
+                _hospede.Text = Hospedes[i].Nome_Hospede + " - " + Hospedes[i].CPF_Hopesde + " - " + Hospedes[i].Celular_Hospede;
                 _hospede.ForeColor = Color.Black;
                 _hospede.AutoSize = true;
-                _hospede.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
-                _hospede.TextAlign = ContentAlignment.MiddleCenter;
+                _hospede.Font = new Font("Microsoft Sans Serif", 10);
+                _hospede.TextAlign = ContentAlignment.TopLeft;
                 _hospede.Margin = new Padding(3);
 
-                flowLayoutPanelHospedes.Controls.Add(_hospede);
+                if (flowLayoutPanelHospedes.Controls.Count < 0)
+                    flowLayoutPanelHospedes.Controls.Clear();
+                else
+                    flowLayoutPanelHospedes.Controls.Add(_hospede);
+
+                i++;
             }
+            if (flowLayoutPanelHospedes.Controls.Count == Qtd_Hospedes)
+                return;
+                    
         }
 
         void mascaraMoeda()
@@ -87,9 +106,12 @@ namespace WindowsFormsAppGestaoHotel
                 valor_EntradaTextBox.Text = Vlr_Entrada.ToString("C", CultureInfo.CurrentCulture);
         }
 
-        private void buttonCheckin_Click(object sender, EventArgs e)
+        private void buttonSalvarHospede_Click(object sender, EventArgs e)
         {
             addLabel();
+            nome_HospedeTextBox.Clear();
+            cPF_HopesdeMaskedTextBox.Clear();
+            celular_HospedeMaskedTextBox.Clear();
         }
 
         private void valor_TotalTextBox_TextChanged(object sender, EventArgs e)

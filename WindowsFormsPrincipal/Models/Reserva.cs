@@ -16,6 +16,7 @@ namespace Models
         public int Qtd_Hospedes { get; set; }
         public string Nome_Hospede { get; set; }
         public string CPF_Hopesde { get; set; }
+        public string Celular_Hospede { get; set; }
         public string Nome_Funcionario { get; set; }
         public string Pagamento { get; set; }
         public string Obs_Reserva { get; set; }

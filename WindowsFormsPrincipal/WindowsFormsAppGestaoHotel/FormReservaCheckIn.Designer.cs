@@ -40,6 +40,7 @@
             System.Windows.Forms.Label nome_HospedeLabel;
             System.Windows.Forms.Label label1;
             this.numero_QuartoTextBox = new System.Windows.Forms.TextBox();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qtd_HospedesTextBox = new System.Windows.Forms.TextBox();
             this.valor_TotalTextBox = new System.Windows.Forms.TextBox();
             this.valor_RestanteTextBox = new System.Windows.Forms.TextBox();
@@ -49,12 +50,11 @@
             this.obs_CheckinTextBox = new System.Windows.Forms.TextBox();
             this.pagamentoComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.nome_HospedeTextBox = new System.Windows.Forms.TextBox();
-            this.cPF_HopesdeTextBox = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanelHospedes = new System.Windows.Forms.FlowLayoutPanel();
+            this.cPF_HopesdeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.celular_HospedeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.buttonSalvarHospede = new System.Windows.Forms.Button();
-            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flowLayoutPanelHospedes = new System.Windows.Forms.FlowLayoutPanel();
+            this.nome_HospedeTextBox = new System.Windows.Forms.TextBox();
             numero_QuartoLabel = new System.Windows.Forms.Label();
             qtd_HospedesLabel = new System.Windows.Forms.Label();
             valor_TotalLabel = new System.Windows.Forms.Label();
@@ -65,9 +65,9 @@
             cPF_HopesdeLabel = new System.Windows.Forms.Label();
             nome_HospedeLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // numero_QuartoLabel
@@ -181,6 +181,10 @@
             this.numero_QuartoTextBox.Size = new System.Drawing.Size(100, 26);
             this.numero_QuartoTextBox.TabIndex = 2;
             this.numero_QuartoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
             // 
             // qtd_HospedesTextBox
             // 
@@ -297,57 +301,40 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cPF_HopesdeMaskedTextBox);
+            this.groupBox2.Controls.Add(this.celular_HospedeMaskedTextBox);
             this.groupBox2.Controls.Add(this.buttonSalvarHospede);
             this.groupBox2.Controls.Add(this.flowLayoutPanelHospedes);
             this.groupBox2.Controls.Add(label1);
-            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(nome_HospedeLabel);
             this.groupBox2.Controls.Add(this.nome_HospedeTextBox);
             this.groupBox2.Controls.Add(cPF_HopesdeLabel);
-            this.groupBox2.Controls.Add(this.cPF_HopesdeTextBox);
             this.groupBox2.Location = new System.Drawing.Point(12, 199);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(623, 142);
+            this.groupBox2.Size = new System.Drawing.Size(623, 144);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hóspedes";
             // 
-            // textBox1
+            // cPF_HopesdeMaskedTextBox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(212, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 26);
-            this.textBox1.TabIndex = 3;
+            this.cPF_HopesdeMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "CPF_Hopesde", true));
+            this.cPF_HopesdeMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cPF_HopesdeMaskedTextBox.Location = new System.Drawing.Point(10, 97);
+            this.cPF_HopesdeMaskedTextBox.Mask = "000,000,000-00";
+            this.cPF_HopesdeMaskedTextBox.Name = "cPF_HopesdeMaskedTextBox";
+            this.cPF_HopesdeMaskedTextBox.Size = new System.Drawing.Size(180, 26);
+            this.cPF_HopesdeMaskedTextBox.TabIndex = 16;
             // 
-            // nome_HospedeTextBox
+            // celular_HospedeMaskedTextBox
             // 
-            this.nome_HospedeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nome_HospedeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Nome_Hospede", true));
-            this.nome_HospedeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nome_HospedeTextBox.Location = new System.Drawing.Point(10, 39);
-            this.nome_HospedeTextBox.Name = "nome_HospedeTextBox";
-            this.nome_HospedeTextBox.Size = new System.Drawing.Size(180, 26);
-            this.nome_HospedeTextBox.TabIndex = 3;
-            // 
-            // cPF_HopesdeTextBox
-            // 
-            this.cPF_HopesdeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cPF_HopesdeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "CPF_Hopesde", true));
-            this.cPF_HopesdeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cPF_HopesdeTextBox.Location = new System.Drawing.Point(10, 100);
-            this.cPF_HopesdeTextBox.Name = "cPF_HopesdeTextBox";
-            this.cPF_HopesdeTextBox.Size = new System.Drawing.Size(180, 26);
-            this.cPF_HopesdeTextBox.TabIndex = 1;
-            // 
-            // flowLayoutPanelHospedes
-            // 
-            this.flowLayoutPanelHospedes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelHospedes.Location = new System.Drawing.Point(355, 16);
-            this.flowLayoutPanelHospedes.Name = "flowLayoutPanelHospedes";
-            this.flowLayoutPanelHospedes.Size = new System.Drawing.Size(259, 120);
-            this.flowLayoutPanelHospedes.TabIndex = 4;
+            this.celular_HospedeMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Celular_Hospede", true));
+            this.celular_HospedeMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.celular_HospedeMaskedTextBox.Location = new System.Drawing.Point(212, 39);
+            this.celular_HospedeMaskedTextBox.Mask = "(99) 00000-0000";
+            this.celular_HospedeMaskedTextBox.Name = "celular_HospedeMaskedTextBox";
+            this.celular_HospedeMaskedTextBox.Size = new System.Drawing.Size(126, 26);
+            this.celular_HospedeMaskedTextBox.TabIndex = 15;
             // 
             // buttonSalvarHospede
             // 
@@ -359,21 +346,35 @@
             this.buttonSalvarHospede.ForeColor = System.Drawing.Color.White;
             this.buttonSalvarHospede.Location = new System.Drawing.Point(212, 94);
             this.buttonSalvarHospede.Name = "buttonSalvarHospede";
-            this.buttonSalvarHospede.Size = new System.Drawing.Size(120, 32);
+            this.buttonSalvarHospede.Size = new System.Drawing.Size(126, 32);
             this.buttonSalvarHospede.TabIndex = 14;
             this.buttonSalvarHospede.Text = "Salvar";
             this.buttonSalvarHospede.UseVisualStyleBackColor = false;
-            this.buttonSalvarHospede.Click += new System.EventHandler(this.buttonCheckin_Click);
+            this.buttonSalvarHospede.Click += new System.EventHandler(this.buttonSalvarHospede_Click);
             // 
-            // reservaBindingSource
+            // flowLayoutPanelHospedes
             // 
-            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            this.flowLayoutPanelHospedes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelHospedes.Location = new System.Drawing.Point(355, 16);
+            this.flowLayoutPanelHospedes.Name = "flowLayoutPanelHospedes";
+            this.flowLayoutPanelHospedes.Size = new System.Drawing.Size(259, 120);
+            this.flowLayoutPanelHospedes.TabIndex = 4;
+            // 
+            // nome_HospedeTextBox
+            // 
+            this.nome_HospedeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nome_HospedeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Nome_Hospede", true));
+            this.nome_HospedeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nome_HospedeTextBox.Location = new System.Drawing.Point(10, 39);
+            this.nome_HospedeTextBox.Name = "nome_HospedeTextBox";
+            this.nome_HospedeTextBox.Size = new System.Drawing.Size(180, 26);
+            this.nome_HospedeTextBox.TabIndex = 3;
             // 
             // FormReservaCheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 353);
+            this.ClientSize = new System.Drawing.Size(646, 355);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -383,11 +384,11 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormReservaCheckIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,10 +406,10 @@
         private System.Windows.Forms.ComboBox pagamentoComboBox;
         private System.Windows.Forms.Button buttonCheckin;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox nome_HospedeTextBox;
-        private System.Windows.Forms.TextBox cPF_HopesdeTextBox;
         private System.Windows.Forms.Button buttonSalvarHospede;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHospedes;
+        private System.Windows.Forms.MaskedTextBox cPF_HopesdeMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox celular_HospedeMaskedTextBox;
     }
 }

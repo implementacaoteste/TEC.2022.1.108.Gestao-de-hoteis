@@ -172,7 +172,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
+                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, C.CELULAR, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
                                     F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
@@ -199,6 +199,7 @@ namespace DAL
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
                         reserva.Qtd_Hospedes = Convert.ToInt32(rd["QTD_HOSPEDES"]);
+                        reserva.Celular_Hospede = rd["CELULAR"].ToString();
                         reserva.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         reserva.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
@@ -247,7 +248,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
+                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, C.CELULAR, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
                                     F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
@@ -272,6 +273,7 @@ namespace DAL
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
                         reserva.Qtd_Hospedes = Convert.ToInt32(rd["QTD_HOSPEDES"]);
+                        reserva.Celular_Hospede = rd["CELULAR"].ToString();
                         reserva.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         reserva.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
@@ -312,7 +314,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
+                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, C.CELULAR, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
                                     F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, R.VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
@@ -340,6 +342,7 @@ namespace DAL
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
                         reserva.Qtd_Hospedes = Convert.ToInt32(rd["QTD_HOSPEDES"]);
+                        reserva.Celular_Hospede = rd["CELULAR"].ToString();
                         reserva.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         reserva.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
@@ -383,7 +386,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
+                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, C.CELULAR, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
                                     F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, R.VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
@@ -410,6 +413,7 @@ namespace DAL
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
                         reserva.Qtd_Hospedes = Convert.ToInt32(rd["QTD_HOSPEDES"]);
+                        reserva.Celular_Hospede = rd["CELULAR"].ToString();
                         reserva.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         reserva.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
@@ -453,7 +457,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
+                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, C.CELULAR, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
                                     F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, R.VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
@@ -481,6 +485,7 @@ namespace DAL
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
                         reserva.Qtd_Hospedes = Convert.ToInt32(rd["QTD_HOSPEDES"]);
+                        reserva.Celular_Hospede = rd["CELULAR"].ToString();
                         reserva.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         reserva.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
@@ -524,7 +529,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
+                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, C.CELULAR, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
                                     F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, R.VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
@@ -551,6 +556,7 @@ namespace DAL
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
                         reserva.Qtd_Hospedes = Convert.ToInt32(rd["QTD_HOSPEDES"]);
+                        reserva.Celular_Hospede = rd["CELULAR"].ToString();
                         reserva.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         reserva.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
@@ -594,7 +600,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
+                cmd.CommandText = @"SELECT R.ID, R.DT_ENT_RESERVA, R.DT_SAI_RESERVA, R.VALOR_TOTAL, R.ID_CLIENTE, C.NOME, C.CPF, C.CELULAR,R.QTD_HOSPEDES, R.ID_PAGAMENTO, P.FORMA_PAGAMENTO, R.ID_FUNCIONARIO, 
                                     F.NOME NOME_FUNCIONARIO, R.OBS_RESERVA, R.VALOR_ENTRADA, RQ.ID_QUARTO, Q.NUMERO, CL.CLASSE, R.DATA_CHECKIN, R.DATA_CHECKOUT, R.OBS_CHECKIN, R.OBS_CHECKOUT, R.DATA_RESERVA, R.VALOR_RESTANTE
                                     FROM RESERVA R
                                     INNER JOIN RESERVA_QUARTO RQ ON R.ID = RQ.ID_RESERVA
@@ -622,6 +628,7 @@ namespace DAL
                         reserva.Nome_Hospede = rd["NOME"].ToString();
                         reserva.CPF_Hopesde = rd["CPF"].ToString();
                         reserva.Qtd_Hospedes = Convert.ToInt32(rd["QTD_HOSPEDES"]);
+                        reserva.Celular_Hospede = rd["CELULAR"].ToString();
                         reserva.Id_Pagamento = Convert.ToInt32(rd["ID_PAGAMENTO"]);
                         reserva.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         reserva.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
