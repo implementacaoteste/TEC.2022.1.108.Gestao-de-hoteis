@@ -354,6 +354,7 @@
             // 
             // flowLayoutPanelHospedes
             // 
+            this.flowLayoutPanelHospedes.AutoScroll = true;
             this.flowLayoutPanelHospedes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelHospedes.Location = new System.Drawing.Point(355, 16);
             this.flowLayoutPanelHospedes.Name = "flowLayoutPanelHospedes";

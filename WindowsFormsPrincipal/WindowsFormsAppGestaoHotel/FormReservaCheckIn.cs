@@ -56,9 +56,8 @@ namespace WindowsFormsAppGestaoHotel
             Label _hospede;
             Qtd_Hospedes = ((Reserva)reservaBindingSource.Current).Qtd_Hospedes;
             List<Reserva> Hospedes = new List<Reserva>();
-            int i = 0;
 
-            while (i < Qtd_Hospedes)
+            for (int i = 0; i < Qtd_Hospedes; i++)
             {
                 Hospedes.Add(new Reserva() { Id = Id, Nome_Hospede = nome_HospedeTextBox.Text, CPF_Hopesde = cPF_HopesdeMaskedTextBox.Text, Celular_Hospede = celular_HospedeMaskedTextBox.Text });
 
@@ -73,13 +72,12 @@ namespace WindowsFormsAppGestaoHotel
 
                 if (flowLayoutPanelHospedes.Controls.Count < 0)
                     flowLayoutPanelHospedes.Controls.Clear();
-                else
-                    flowLayoutPanelHospedes.Controls.Add(_hospede);
-
-                i++;
+                else 
+                    if (flowLayoutPanelHospedes.Controls.Count == Qtd_Hospedes)
+                        return;
+                    else 
+                        flowLayoutPanelHospedes.Controls.Add(_hospede);
             }
-            if (flowLayoutPanelHospedes.Controls.Count == Qtd_Hospedes)
-                return;
                     
         }
 
