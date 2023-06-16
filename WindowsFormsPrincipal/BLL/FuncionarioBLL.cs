@@ -69,17 +69,30 @@ namespace BLL
             if (_funcionario.Nome.Length <= 2)
                 throw new Exception("O nome deve ter mais de 2 caracteres");
 
+            if (_funcionario.CPF == null || _funcionario.CPF.Length != 14)
+                throw new Exception("Numero de CPF inválido");
+
+            if (_funcionario.Celular == null)
+                throw new Exception("Campo 'Celular' preenchida incorretamente");
+
+            
+            if (_funcionario.Celular.Length != 14 && _funcionario.Celular.Length != 15)
+                throw new Exception("Campo 'Celular' preenchida incorretamente");
+
             if (_funcionario.Data_nascimento.Year < 1900)
                 throw new Exception("Selecione a data de nascimento válida para o funcionário");
 
             if (_funcionario.IdSexo == 0)
                 throw new Exception("Selecione o sexo do funcionário");
 
-            if (_funcionario.Endereco.Length < 10)
+            if (_funcionario.Endereco == null || _funcionario.Endereco.Length < 10)
                 throw new Exception("Informe o endereço, detalhadamente");
 
             if (_funcionario.Endereco.Length > 150)
                 throw new Exception("O campo 'Endereço' deve ter o maximo de 150 caracteres");
+
+            if (_funcionario.Email == null)
+                throw new Exception("Insira um email válido");
 
             if (_funcionario.Email.Length < 10)
                 throw new Exception("Insira um email válido");

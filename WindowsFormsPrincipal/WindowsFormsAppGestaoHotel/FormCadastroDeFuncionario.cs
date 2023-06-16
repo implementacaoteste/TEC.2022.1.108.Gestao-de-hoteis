@@ -69,6 +69,11 @@ namespace WindowsFormsPrincipal1
             {
                 buttonCancelarCadastro_Click(null, null);
             }
+
+            if(e.KeyCode  == Keys.Enter)
+            {
+                buttonSalvarFuncionario_Click(null,null);
+            }
         }
     }
 }
