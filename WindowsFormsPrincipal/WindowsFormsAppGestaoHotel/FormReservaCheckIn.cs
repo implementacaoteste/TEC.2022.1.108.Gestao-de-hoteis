@@ -52,33 +52,33 @@ namespace WindowsFormsAppGestaoHotel
 
         void addLabel()
         {
-            reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
+            int i = 0;
+            //reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
             Label _hospede;
             Qtd_Hospedes = ((Reserva)reservaBindingSource.Current).Qtd_Hospedes;
-            List<Reserva> Hospedes = new List<Reserva>();
+            List<Hospede> Hospedes = new List<Hospede>();
+            Hospedes.Clear();
+            
+            Hospedes.Add(new Hospede() { Id = Id, Nome = nome_HospedeTextBox.Text, CPF = cPF_HopesdeMaskedTextBox.Text, Celular = celular_HospedeMaskedTextBox.Text });
 
-            for (int i = 0; i < Qtd_Hospedes; i++)
-            {
-                Hospedes.Add(new Reserva() { Id = Id, Nome_Hospede = nome_HospedeTextBox.Text, CPF_Hopesde = cPF_HopesdeMaskedTextBox.Text, Celular_Hospede = celular_HospedeMaskedTextBox.Text });
+            _hospede = new Label();
+            _hospede.Name = "hospede" + Hospedes[i].Id;
+            _hospede.Text = Hospedes[i].Nome + " - " + Hospedes[i].CPF + " - " + Hospedes[i].Celular;
+            _hospede.ForeColor = Color.Black;
+            _hospede.AutoSize = true;
+            _hospede.Font = new Font("Microsoft Sans Serif", 10);
+            _hospede.TextAlign = ContentAlignment.TopLeft;
+            _hospede.Margin = new Padding(3);
 
-                _hospede = new Label();
-                _hospede.Name = "hospede" + Hospedes[i].Id;
-                _hospede.Text = Hospedes[i].Nome_Hospede + " - " + Hospedes[i].CPF_Hopesde + " - " + Hospedes[i].Celular_Hospede;
-                _hospede.ForeColor = Color.Black;
-                _hospede.AutoSize = true;
-                _hospede.Font = new Font("Microsoft Sans Serif", 10);
-                _hospede.TextAlign = ContentAlignment.TopLeft;
-                _hospede.Margin = new Padding(3);
-
-                if (flowLayoutPanelHospedes.Controls.Count < 0)
-                    flowLayoutPanelHospedes.Controls.Clear();
+            if (flowLayoutPanelHospedes.Controls.Count < 0)
+                flowLayoutPanelHospedes.Controls.Clear();
+            else 
+                if (flowLayoutPanelHospedes.Controls.Count == Qtd_Hospedes)
+                    return;
                 else 
-                    if (flowLayoutPanelHospedes.Controls.Count == Qtd_Hospedes)
-                        return;
-                    else 
-                        flowLayoutPanelHospedes.Controls.Add(_hospede);
-            }
-                    
+                    flowLayoutPanelHospedes.Controls.Add(_hospede);
+
+            i++;
         }
 
         void mascaraMoeda()
