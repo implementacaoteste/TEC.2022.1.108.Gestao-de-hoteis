@@ -64,7 +64,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewCheckBoxColumn1});
             this.contasReceberDataGridView.DataSource = this.contasReceberBindingSource;
-            this.contasReceberDataGridView.Location = new System.Drawing.Point(9, 124);
+            this.contasReceberDataGridView.Location = new System.Drawing.Point(9, 134);
             this.contasReceberDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.contasReceberDataGridView.Name = "contasReceberDataGridView";
             this.contasReceberDataGridView.ReadOnly = true;
@@ -162,7 +162,7 @@
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(602, 83);
+            this.buttonBuscar.Location = new System.Drawing.Point(600, 83);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(101, 33);
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 348);
+            this.ClientSize = new System.Drawing.Size(836, 324);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Adicionar);
             this.Controls.Add(this.dateTimePicker1);
