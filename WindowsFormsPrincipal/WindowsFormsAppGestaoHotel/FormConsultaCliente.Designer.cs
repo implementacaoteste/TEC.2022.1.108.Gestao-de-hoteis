@@ -221,6 +221,7 @@
             // 
             // textBoxBuscar
             // 
+            this.textBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxBuscar.Location = new System.Drawing.Point(11, 75);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);

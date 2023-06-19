@@ -27,6 +27,15 @@ namespace WindowsFormsAppGestaoHotel
 
         private void pictureBoxCancelar_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
             if (MessageBox.Show("Deseja cancelar esta reserva?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
 
@@ -153,6 +162,10 @@ namespace WindowsFormsAppGestaoHotel
             using (FormCadastroReserva frm = new FormCadastroReserva(id))
             {
                 frm.ShowDialog();
+            }
+            using (FormReserva frm = new FormReserva())
+            {
+                frm.buttonBuscarTipo_Click(null, null);
             }
         }
     }

@@ -115,7 +115,7 @@ namespace WindowsFormsAppGestaoHotel
             }
         }
 
-        private void buttonBuscarTipo_Click(object sender, EventArgs e)
+        public void buttonBuscarTipo_Click(object sender, EventArgs e)
         {
             try
             {
