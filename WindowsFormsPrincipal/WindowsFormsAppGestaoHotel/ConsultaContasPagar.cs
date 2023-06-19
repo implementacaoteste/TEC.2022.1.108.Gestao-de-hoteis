@@ -50,17 +50,17 @@ namespace WindowsFormsAppGestaoHotel
 
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
-            //try
-          // {
+            try
+           {
                 using (FormContaPagar frm = new FormContaPagar())
                 {
                     frm.ShowDialog();
                 }
-           // }
-           // catch(Exception ex)
-          //  {
-          //      MessageBox.Show(ex.Message);
-          //  }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ConsultaContasPagar_KeyDown(object sender, KeyEventArgs e)
