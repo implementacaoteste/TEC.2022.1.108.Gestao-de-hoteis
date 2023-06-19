@@ -127,34 +127,107 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Excluir(int _id)
+        public void Excluir(int _id, SqlTransaction _transaction = null)
         {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM RESERVA
-                                    WHERE ID= @ID";
-                cmd.CommandType = System.Data.CommandType.Text;
-                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM RESERVA WHERE ID = @ID", cn))
+                {
+                    try
+                    {
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        cmd.Parameters.AddWithValue("@ID", _id);
 
-                cmd.Connection = cn;
-                cn.Open();
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
 
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu erro ao tentar excluir uma Reserva no Banco de Dados.", ex);
-            }
-            finally
-            {
-                cn.Close();
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        RemoverReservaQuarto(_id, transaction);
+                        cmd.ExecuteNonQuery();
+
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Ocorreu erro ao tentar excluir uma Reserva no Banco de Dados.", ex);
+                    }
+                }
             }
         }
-        public void CancelarReserva(int _id)
+        public void CancelarReserva(int _id, SqlTransaction _transaction = null)
         {
-            throw new NotImplementedException();
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            {
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM RESERVA WHERE ID = @ID", cn))
+                {
+                    try
+                    {
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        cmd.Parameters.AddWithValue("@ID", _id);
+
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
+
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        RemoverReservaQuarto(_id, transaction);
+                        cmd.ExecuteNonQuery();
+
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Ocorreu erro ao tentar excluir uma Reserva no Banco de Dados.", ex);
+                    }
+                }
+            }
+        }
+        private void RemoverReservaQuarto(int _id, SqlTransaction _transaction)
+        {
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            {
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM RESERVA_QUARTO WHERE ID_RESERVA = @ID_RESERVA", cn))
+                {
+                    cmd.Parameters.AddWithValue("@ID_RESERVA", _id);
+
+                    if (transaction == null)
+                    {
+                        cn.Open();
+                        transaction = cn.BeginTransaction();
+                    }
+
+                    cmd.Transaction = transaction;
+                    cmd.Connection = transaction.Connection;
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Ocorreu erro ao tentar excluir uma Reserva no Banco de Dados.", ex);
+                    }
+                }
+            }
         }
         public void CheckIn(Reserva reserva)
         {
