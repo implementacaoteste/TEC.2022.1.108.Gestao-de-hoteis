@@ -40,8 +40,8 @@ namespace WindowsFormsAppGestaoHotel
 
                 if (reservaBindingSource.Count > 0)
                     popularItems();
-                else
-                    flowLayoutPanelReserva.Controls.Clear();
+                /*else
+                    flowLayoutPanelReserva.Controls.Clear();*/
 
                 if (flowLayoutPanelReserva.Controls.Count == 0)
                     lblRegistro();
@@ -237,5 +237,12 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+
+        /*private void flowLayoutPanelReserva_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            quartoBindingSource.DataSource = new QuartoBLL().BuscarPorTodos();
+            quartoBindingSource.DataSource = new QuartoBLL().BuscarPorDia(monthCalendar.SelectionRange.Start);
+            buttonBuscarTipo_Click(null, null);
+        }*/
     }
 }
