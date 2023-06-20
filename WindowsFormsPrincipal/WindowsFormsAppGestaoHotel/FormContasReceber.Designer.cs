@@ -126,7 +126,7 @@
             this.data_VencimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.contasReceberBindingSource, "Data_Vencimento", true));
             this.data_VencimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.data_VencimentoDateTimePicker.Location = new System.Drawing.Point(386, 121);
-            this.data_VencimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data_VencimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.data_VencimentoDateTimePicker.Name = "data_VencimentoDateTimePicker";
             this.data_VencimentoDateTimePicker.Size = new System.Drawing.Size(118, 20);
             this.data_VencimentoDateTimePicker.TabIndex = 2;
@@ -135,7 +135,7 @@
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Descricao", true));
             this.descricaoTextBox.Location = new System.Drawing.Point(386, 154);
-            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(178, 20);
             this.descricaoTextBox.TabIndex = 3;
@@ -144,7 +144,7 @@
             // 
             this.id_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Id_Cliente", true));
             this.id_ClienteTextBox.Location = new System.Drawing.Point(82, 124);
-            this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_ClienteTextBox.Name = "id_ClienteTextBox";
             this.id_ClienteTextBox.Size = new System.Drawing.Size(76, 20);
             this.id_ClienteTextBox.TabIndex = 5;
@@ -153,7 +153,7 @@
             // 
             this.id_FuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Id_Funcionario", true));
             this.id_FuncionarioTextBox.Location = new System.Drawing.Point(82, 156);
-            this.id_FuncionarioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id_FuncionarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_FuncionarioTextBox.Name = "id_FuncionarioTextBox";
             this.id_FuncionarioTextBox.Size = new System.Drawing.Size(76, 20);
             this.id_FuncionarioTextBox.TabIndex = 7;
@@ -162,7 +162,7 @@
             // 
             this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Valor", true));
             this.valorTextBox.Location = new System.Drawing.Point(82, 195);
-            this.valorTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.valorTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(76, 20);
             this.valorTextBox.TabIndex = 9;
@@ -171,7 +171,7 @@
             // 
             this.receberCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.contasReceberBindingSource, "Receber", true));
             this.receberCheckBox.Location = new System.Drawing.Point(386, 191);
-            this.receberCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.receberCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.receberCheckBox.Name = "receberCheckBox";
             this.receberCheckBox.Size = new System.Drawing.Size(78, 20);
             this.receberCheckBox.TabIndex = 11;
@@ -185,7 +185,7 @@
             this.buttonSelecionarCli.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarCli.Image")));
             this.buttonSelecionarCli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSelecionarCli.Location = new System.Drawing.Point(170, 124);
-            this.buttonSelecionarCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionarCli.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarCli.Name = "buttonSelecionarCli";
             this.buttonSelecionarCli.Size = new System.Drawing.Size(115, 26);
             this.buttonSelecionarCli.TabIndex = 12;
@@ -202,7 +202,7 @@
             this.buttonSelecionarFun.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarFun.Image")));
             this.buttonSelecionarFun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSelecionarFun.Location = new System.Drawing.Point(170, 154);
-            this.buttonSelecionarFun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionarFun.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarFun.Name = "buttonSelecionarFun";
             this.buttonSelecionarFun.Size = new System.Drawing.Size(115, 26);
             this.buttonSelecionarFun.TabIndex = 12;
@@ -231,7 +231,7 @@
             this.buttonSalvar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.save_bk;
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSalvar.Location = new System.Drawing.Point(351, 322);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(110, 33);
             this.buttonSalvar.TabIndex = 14;
@@ -248,7 +248,7 @@
             this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close_bk;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(469, 322);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
             this.buttonCancelar.TabIndex = 15;
@@ -261,6 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
@@ -280,7 +281,7 @@
             this.Controls.Add(data_VencimentoLabel);
             this.Controls.Add(this.data_VencimentoDateTimePicker);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormContasReceber";

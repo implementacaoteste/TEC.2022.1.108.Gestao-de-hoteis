@@ -48,7 +48,6 @@
             this.buttonSelecionar_cliente = new System.Windows.Forms.Button();
             this.buttonCancelarCadastro = new System.Windows.Forms.Button();
             this.buttonSalvarFuncionario = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             data_VencimentoLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             id_ClienteLabel = new System.Windows.Forms.Label();
@@ -62,7 +61,7 @@
             // 
             data_VencimentoLabel.AutoSize = true;
             data_VencimentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_VencimentoLabel.Location = new System.Drawing.Point(11, 87);
+            data_VencimentoLabel.Location = new System.Drawing.Point(14, 87);
             data_VencimentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_VencimentoLabel.Name = "data_VencimentoLabel";
             data_VencimentoLabel.Size = new System.Drawing.Size(125, 18);
@@ -73,7 +72,7 @@
             // 
             descricaoLabel.AutoSize = true;
             descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.Location = new System.Drawing.Point(63, 122);
+            descricaoLabel.Location = new System.Drawing.Point(59, 123);
             descricaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(80, 18);
@@ -270,20 +269,12 @@
             this.buttonSalvarFuncionario.UseVisualStyleBackColor = false;
             this.buttonSalvarFuncionario.Click += new System.EventHandler(this.buttonSalvarFuncionario_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(430, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 47;
-            // 
             // FormContaPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(676, 284);
-            this.Controls.Add(this.label1);
             this.Controls.Add(valorLabel);
             this.Controls.Add(this.valorTextBox);
             this.Controls.Add(pagarLabel);
@@ -327,6 +318,5 @@
         private System.Windows.Forms.TextBox id_FuncionarioTextBox;
         private System.Windows.Forms.CheckBox pagarCheckBox;
         private System.Windows.Forms.TextBox valorTextBox;
-        private System.Windows.Forms.Label label1;
     }
 }

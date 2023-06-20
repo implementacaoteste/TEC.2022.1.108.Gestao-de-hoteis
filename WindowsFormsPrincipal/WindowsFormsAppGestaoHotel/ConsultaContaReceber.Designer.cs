@@ -65,7 +65,7 @@
             this.dataGridViewCheckBoxColumn1});
             this.contasReceberDataGridView.DataSource = this.contasReceberBindingSource;
             this.contasReceberDataGridView.Location = new System.Drawing.Point(9, 134);
-            this.contasReceberDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.contasReceberDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.contasReceberDataGridView.Name = "contasReceberDataGridView";
             this.contasReceberDataGridView.ReadOnly = true;
             this.contasReceberDataGridView.RowHeadersWidth = 51;
@@ -150,7 +150,7 @@
             "Contas Recebido",
             "Contas à Receber"});
             this.comboBoxBuscar.Location = new System.Drawing.Point(38, 83);
-            this.comboBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBuscar.Name = "comboBoxBuscar";
             this.comboBoxBuscar.Size = new System.Drawing.Size(150, 26);
             this.comboBoxBuscar.TabIndex = 2;
@@ -163,7 +163,7 @@
             this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBuscar.Location = new System.Drawing.Point(600, 83);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(101, 33);
             this.buttonBuscar.TabIndex = 3;
@@ -177,7 +177,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(38, 53);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(150, 26);
             this.dateTimePicker1.TabIndex = 4;
@@ -190,7 +190,7 @@
             this.Adicionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.add_bk;
             this.Adicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Adicionar.Location = new System.Drawing.Point(707, 83);
-            this.Adicionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Adicionar.Margin = new System.Windows.Forms.Padding(2);
             this.Adicionar.Name = "Adicionar";
             this.Adicionar.Size = new System.Drawing.Size(120, 33);
             this.Adicionar.TabIndex = 5;
@@ -215,6 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(836, 324);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Adicionar);
@@ -223,7 +224,7 @@
             this.Controls.Add(this.comboBoxBuscar);
             this.Controls.Add(this.contasReceberDataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultaContaReceber";

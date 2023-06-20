@@ -37,7 +37,7 @@
             System.Windows.Forms.Label cPFLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label idLabel1;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarCliente));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
@@ -179,7 +179,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(409, 82);
+            this.groupBox1.Size = new System.Drawing.Size(422, 82);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por";
@@ -239,12 +239,12 @@
             // 
             // buttonBuscarCliente
             // 
-            this.buttonBuscarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscarCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonBuscarCliente.FlatAppearance.BorderSize = 0;
             this.buttonBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarCliente.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk1;
-            this.buttonBuscarCliente.Location = new System.Drawing.Point(375, 42);
+            this.buttonBuscarCliente.Location = new System.Drawing.Point(380, 41);
             this.buttonBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarCliente.Name = "buttonBuscarCliente";
             this.buttonBuscarCliente.Size = new System.Drawing.Size(30, 30);
@@ -319,8 +319,8 @@
             // 
             this.cPFDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.cPFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.NullValue = "0";
+            this.cPFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
             this.cPFDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
@@ -580,7 +580,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(434, 622);
             this.Controls.Add(this.buttonAlterarCliente);
             this.Controls.Add(this.buttonExcluirCliente);

@@ -45,12 +45,12 @@
             System.Windows.Forms.Label valor_RestanteLabel;
             System.Windows.Forms.Label data_CheckinLabel;
             System.Windows.Forms.Label data_CheckoutLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDiaria = new System.Windows.Forms.GroupBox();
             this.data_CheckoutMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -108,12 +108,12 @@
             // 
             // buttonBuscarIdReserva
             // 
-            buttonBuscarIdReserva.BackColor = System.Drawing.Color.Transparent;
+            buttonBuscarIdReserva.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             buttonBuscarIdReserva.FlatAppearance.BorderSize = 0;
             buttonBuscarIdReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonBuscarIdReserva.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarIdReserva.Image")));
-            buttonBuscarIdReserva.Location = new System.Drawing.Point(886, 21);
+            buttonBuscarIdReserva.Location = new System.Drawing.Point(885, 24);
             buttonBuscarIdReserva.Margin = new System.Windows.Forms.Padding(2);
             buttonBuscarIdReserva.Name = "buttonBuscarIdReserva";
             buttonBuscarIdReserva.Size = new System.Drawing.Size(30, 30);
@@ -124,7 +124,7 @@
             // 
             // buttonBuscarTipo
             // 
-            buttonBuscarTipo.BackColor = System.Drawing.Color.Transparent;
+            buttonBuscarTipo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             buttonBuscarTipo.FlatAppearance.BorderSize = 0;
             buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -511,8 +511,8 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.idDataGridViewTextBoxColumn.FillWeight = 27F;
             this.idDataGridViewTextBoxColumn.HeaderText = "Cód";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -544,8 +544,8 @@
             // 
             this.numeroQuartoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numeroQuartoDataGridViewTextBoxColumn.DataPropertyName = "Numero_Quarto";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.numeroQuartoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.numeroQuartoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.numeroQuartoDataGridViewTextBoxColumn.FillWeight = 30F;
             this.numeroQuartoDataGridViewTextBoxColumn.HeaderText = "Nº Quarto";
             this.numeroQuartoDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -556,10 +556,10 @@
             // 
             this.dataCheckinDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataCheckinDataGridViewTextBoxColumn.DataPropertyName = "Data_Checkin";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.Format = "d";
-            dataGridViewCellStyle21.NullValue = null;
-            this.dataCheckinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "d";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dataCheckinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataCheckinDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.dataCheckinDataGridViewTextBoxColumn.HeaderText = "Check-In";
             this.dataCheckinDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -570,10 +570,10 @@
             // 
             this.dataCheckoutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataCheckoutDataGridViewTextBoxColumn.DataPropertyName = "Data_Checkout";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.Format = "d";
-            dataGridViewCellStyle22.NullValue = null;
-            this.dataCheckoutDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Format = "d";
+            dataGridViewCellStyle10.NullValue = null;
+            this.dataCheckoutDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataCheckoutDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.dataCheckoutDataGridViewTextBoxColumn.HeaderText = "Check-Out";
             this.dataCheckoutDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -584,10 +584,10 @@
             // 
             this.Data_Reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Data_Reserva.DataPropertyName = "Data_Reserva";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.Format = "d";
-            dataGridViewCellStyle23.NullValue = null;
-            this.Data_Reserva.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Format = "d";
+            dataGridViewCellStyle11.NullValue = null;
+            this.Data_Reserva.DefaultCellStyle = dataGridViewCellStyle11;
             this.Data_Reserva.FillWeight = 45.62093F;
             this.Data_Reserva.HeaderText = "Data Reserva";
             this.Data_Reserva.MinimumWidth = 6;
@@ -608,10 +608,10 @@
             // 
             this.valorTotalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.valorTotalDataGridViewTextBoxColumn.DataPropertyName = "Valor_Total";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle24.Format = "C2";
-            dataGridViewCellStyle24.NullValue = null;
-            this.valorTotalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "C2";
+            dataGridViewCellStyle12.NullValue = null;
+            this.valorTotalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.valorTotalDataGridViewTextBoxColumn.FillWeight = 45.62093F;
             this.valorTotalDataGridViewTextBoxColumn.HeaderText = "Valor Total";
             this.valorTotalDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -620,6 +620,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.textBoxBuscarIdReserva);
             this.groupBox2.Controls.Add(this.data_FinalLabel);
             this.groupBox2.Controls.Add(this.data_InicialLabel);
@@ -643,7 +644,7 @@
             this.textBoxBuscarIdReserva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxBuscarIdReserva.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxBuscarIdReserva.Location = new System.Drawing.Point(779, 23);
+            this.textBoxBuscarIdReserva.Location = new System.Drawing.Point(767, 24);
             this.textBoxBuscarIdReserva.Name = "textBoxBuscarIdReserva";
             this.textBoxBuscarIdReserva.Size = new System.Drawing.Size(102, 26);
             this.textBoxBuscarIdReserva.TabIndex = 8;
@@ -706,6 +707,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(939, 641);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
