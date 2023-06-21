@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label data_VencimentoLabel1;
             System.Windows.Forms.Label valorLabel;
             System.Windows.Forms.Label nome_HospedeLabel;
@@ -59,7 +58,6 @@
             this.nome_funcionarioTextBox = new System.Windows.Forms.TextBox();
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            idLabel = new System.Windows.Forms.Label();
             data_VencimentoLabel1 = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
             nome_HospedeLabel = new System.Windows.Forms.Label();
@@ -232,15 +230,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Contas a Receber";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(181, 421);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 16);
-            idLabel.TabIndex = 6;
-            idLabel.Text = "Id:";
             // 
             // groupBox1
             // 
@@ -419,7 +408,6 @@
             this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(1123, 666);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(idLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Adicionar);
             this.Controls.Add(this.dateTimePicker1);
@@ -438,7 +426,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

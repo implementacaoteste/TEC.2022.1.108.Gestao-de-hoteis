@@ -50,12 +50,12 @@ namespace DAL
                     {
                         relatorio = new Relatorio();
                         relatorio.Id = Convert.ToInt32(rd["ID"]);
-                        relatorio.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        relatorio.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         relatorio.Nome_Hospede = rd["NOME"].ToString();
                         relatorio.CPF_Hopesde = rd["CPF"].ToString();
                         relatorio.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         relatorio.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
-                        relatorio.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        relatorio.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         relatorio.Numero_Quarto = rd["NUMERO"].ToString();
                         relatorio.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
                         relatorio.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
@@ -115,12 +115,12 @@ namespace DAL
                     {
                         relatorio = new Relatorio();
                         relatorio.Id = Convert.ToInt32(rd["ID"]);
-                        relatorio.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        relatorio.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         relatorio.Nome_Hospede = rd["NOME"].ToString();
                         relatorio.CPF_Hopesde = rd["CPF"].ToString();
                         relatorio.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         relatorio.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
-                        relatorio.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        relatorio.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         relatorio.Numero_Quarto = rd["NUMERO"].ToString();
                         relatorio.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
                         relatorio.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
@@ -187,12 +187,12 @@ namespace DAL
                     {
                         relatorio = new Relatorio();
                         relatorio.Id = Convert.ToInt32(rd["ID"]);
-                        relatorio.Valor_Total = (double)rd["VALOR_TOTAL"];
+                        relatorio.Valor_Total = (decimal)rd["VALOR_TOTAL"];
                         relatorio.Nome_Hospede = rd["NOME"].ToString();
                         relatorio.CPF_Hopesde = rd["CPF"].ToString();
                         relatorio.Pagamento = rd["FORMA_PAGAMENTO"].ToString();
                         relatorio.Nome_Funcionario = rd["NOME_FUNCIONARIO"].ToString();
-                        relatorio.Valor_Diaria = (double)rd["VALOR_DIARIA"];
+                        relatorio.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
                         relatorio.Numero_Quarto = rd["NUMERO"].ToString();
                         relatorio.Data_Checkin = Convert.ToDateTime(rd["DATA_CHECKIN"]);
                         relatorio.Data_Checkout = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
