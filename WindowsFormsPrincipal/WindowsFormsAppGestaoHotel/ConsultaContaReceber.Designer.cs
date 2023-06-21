@@ -35,15 +35,9 @@
             System.Windows.Forms.Label nome_funcionarioLabel;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label descricaoLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaContaReceber));
             this.contasReceberDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxBuscar = new System.Windows.Forms.ComboBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -56,8 +50,15 @@
             this.pagarCheckBox = new System.Windows.Forms.CheckBox();
             this.nome_HospedeTextBox = new System.Windows.Forms.TextBox();
             this.nome_funcionarioTextBox = new System.Windows.Forms.TextBox();
-            this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.descricaoTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             data_VencimentoLabel1 = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
             nome_HospedeLabel = new System.Windows.Forms.Label();
@@ -68,6 +69,72 @@
             ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // data_VencimentoLabel1
+            // 
+            data_VencimentoLabel1.AutoSize = true;
+            data_VencimentoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            data_VencimentoLabel1.Location = new System.Drawing.Point(1, 85);
+            data_VencimentoLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            data_VencimentoLabel1.Name = "data_VencimentoLabel1";
+            data_VencimentoLabel1.Size = new System.Drawing.Size(102, 20);
+            data_VencimentoLabel1.TabIndex = 15;
+            data_VencimentoLabel1.Text = "Vencimento:";
+            // 
+            // valorLabel
+            // 
+            valorLabel.AutoSize = true;
+            valorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            valorLabel.Location = new System.Drawing.Point(820, 85);
+            valorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            valorLabel.Name = "valorLabel";
+            valorLabel.Size = new System.Drawing.Size(53, 20);
+            valorLabel.TabIndex = 13;
+            valorLabel.Text = "Valor:";
+            // 
+            // nome_HospedeLabel
+            // 
+            nome_HospedeLabel.AutoSize = true;
+            nome_HospedeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nome_HospedeLabel.Location = new System.Drawing.Point(179, 32);
+            nome_HospedeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nome_HospedeLabel.Name = "nome_HospedeLabel";
+            nome_HospedeLabel.Size = new System.Drawing.Size(81, 20);
+            nome_HospedeLabel.TabIndex = 6;
+            nome_HospedeLabel.Text = "Hospede:";
+            // 
+            // nome_funcionarioLabel
+            // 
+            nome_funcionarioLabel.AutoSize = true;
+            nome_funcionarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nome_funcionarioLabel.Location = new System.Drawing.Point(529, 32);
+            nome_funcionarioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nome_funcionarioLabel.Name = "nome_funcionarioLabel";
+            nome_funcionarioLabel.Size = new System.Drawing.Size(145, 20);
+            nome_funcionarioLabel.TabIndex = 4;
+            nome_funcionarioLabel.Text = "Nome funcionario:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(1, 32);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(66, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Código:";
+            // 
+            // descricaoLabel
+            // 
+            descricaoLabel.AutoSize = true;
+            descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            descricaoLabel.Location = new System.Drawing.Point(269, 85);
+            descricaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            descricaoLabel.Name = "descricaoLabel";
+            descricaoLabel.Size = new System.Drawing.Size(91, 20);
+            descricaoLabel.TabIndex = 0;
+            descricaoLabel.Text = "Descrição:";
             // 
             // contasReceberDataGridView
             // 
@@ -93,69 +160,6 @@
             this.contasReceberDataGridView.RowTemplate.Height = 24;
             this.contasReceberDataGridView.Size = new System.Drawing.Size(1091, 220);
             this.contasReceberDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cód";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Nome_Hospede";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Nome Hospede";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nome_funcionario";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Nome funcionario";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Descricao";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Valor";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Data_Vencimento";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Data Vencimento";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Receber";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Receber";
-            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
             // contasReceberBindingSource
             // 
@@ -256,17 +260,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados";
             // 
-            // data_VencimentoLabel1
-            // 
-            data_VencimentoLabel1.AutoSize = true;
-            data_VencimentoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_VencimentoLabel1.Location = new System.Drawing.Point(1, 85);
-            data_VencimentoLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            data_VencimentoLabel1.Name = "data_VencimentoLabel1";
-            data_VencimentoLabel1.Size = new System.Drawing.Size(102, 20);
-            data_VencimentoLabel1.TabIndex = 15;
-            data_VencimentoLabel1.Text = "Vencimento:";
-            // 
             // data_VencimentoTextBox
             // 
             this.data_VencimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Data_Vencimento", true));
@@ -277,17 +270,6 @@
             this.data_VencimentoTextBox.ReadOnly = true;
             this.data_VencimentoTextBox.Size = new System.Drawing.Size(132, 26);
             this.data_VencimentoTextBox.TabIndex = 16;
-            // 
-            // valorLabel
-            // 
-            valorLabel.AutoSize = true;
-            valorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            valorLabel.Location = new System.Drawing.Point(820, 85);
-            valorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(53, 20);
-            valorLabel.TabIndex = 13;
-            valorLabel.Text = "Valor:";
             // 
             // valorTextBox
             // 
@@ -305,24 +287,13 @@
             this.pagarCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.contasReceberBindingSource, "Receber", true));
             this.pagarCheckBox.Enabled = false;
             this.pagarCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pagarCheckBox.Location = new System.Drawing.Point(973, 28);
+            this.pagarCheckBox.Location = new System.Drawing.Point(930, 28);
             this.pagarCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.pagarCheckBox.Name = "pagarCheckBox";
-            this.pagarCheckBox.Size = new System.Drawing.Size(95, 30);
+            this.pagarCheckBox.Size = new System.Drawing.Size(150, 30);
             this.pagarCheckBox.TabIndex = 13;
             this.pagarCheckBox.Text = "Receber";
             this.pagarCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // nome_HospedeLabel
-            // 
-            nome_HospedeLabel.AutoSize = true;
-            nome_HospedeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_HospedeLabel.Location = new System.Drawing.Point(179, 32);
-            nome_HospedeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            nome_HospedeLabel.Name = "nome_HospedeLabel";
-            nome_HospedeLabel.Size = new System.Drawing.Size(81, 20);
-            nome_HospedeLabel.TabIndex = 6;
-            nome_HospedeLabel.Text = "Hospede:";
             // 
             // nome_HospedeTextBox
             // 
@@ -335,17 +306,6 @@
             this.nome_HospedeTextBox.Size = new System.Drawing.Size(221, 26);
             this.nome_HospedeTextBox.TabIndex = 7;
             // 
-            // nome_funcionarioLabel
-            // 
-            nome_funcionarioLabel.AutoSize = true;
-            nome_funcionarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_funcionarioLabel.Location = new System.Drawing.Point(529, 32);
-            nome_funcionarioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            nome_funcionarioLabel.Name = "nome_funcionarioLabel";
-            nome_funcionarioLabel.Size = new System.Drawing.Size(145, 20);
-            nome_funcionarioLabel.TabIndex = 4;
-            nome_funcionarioLabel.Text = "Nome funcionario:";
-            // 
             // nome_funcionarioTextBox
             // 
             this.nome_funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Nome_funcionario", true));
@@ -357,27 +317,16 @@
             this.nome_funcionarioTextBox.Size = new System.Drawing.Size(233, 26);
             this.nome_funcionarioTextBox.TabIndex = 5;
             // 
-            // label2
+            // textBox1
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(1, 32);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(66, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Código:";
-            // 
-            // descricaoLabel
-            // 
-            descricaoLabel.AutoSize = true;
-            descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.Location = new System.Drawing.Point(269, 85);
-            descricaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(91, 20);
-            descricaoLabel.TabIndex = 0;
-            descricaoLabel.Text = "Descrição:";
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Id", true));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(81, 28);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(69, 26);
+            this.textBox1.TabIndex = 3;
             // 
             // descricaoTextBox
             // 
@@ -390,16 +339,72 @@
             this.descricaoTextBox.Size = new System.Drawing.Size(419, 26);
             this.descricaoTextBox.TabIndex = 1;
             // 
-            // textBox1
+            // dataGridViewTextBoxColumn1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Id", true));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(81, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(69, 26);
-            this.textBox1.TabIndex = 3;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cód";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Nome_Hospede";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Nome Hospede";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nome_funcionario";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Nome funcionario";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Valor";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Data_Vencimento";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Data Vencimento";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Receber";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Receber";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
             // ConsultaContaReceber
             // 
@@ -433,13 +438,6 @@
 
         private System.Windows.Forms.BindingSource contasReceberBindingSource;
         private System.Windows.Forms.DataGridView contasReceberDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.ComboBox comboBoxBuscar;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -453,5 +451,12 @@
         private System.Windows.Forms.TextBox nome_funcionarioTextBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox descricaoTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }
