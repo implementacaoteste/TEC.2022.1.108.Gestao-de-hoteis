@@ -36,14 +36,15 @@
             this.flowLayoutPanelQuartos = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonBuscarTipo = new System.Windows.Forms.Button();
             this.buttonCadastrarReserva = new System.Windows.Forms.Button();
-            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cor_verde = new System.Windows.Forms.Label();
             this.disponivel = new System.Windows.Forms.Label();
             this.reservado = new System.Windows.Forms.Label();
             this.ocupado = new System.Windows.Forms.Label();
             this.cor_amarela = new System.Windows.Forms.Label();
             this.cor_vermelha = new System.Windows.Forms.Label();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +80,8 @@
             this.flowLayoutPanelReserva.Name = "flowLayoutPanelReserva";
             this.flowLayoutPanelReserva.Size = new System.Drawing.Size(772, 475);
             this.flowLayoutPanelReserva.TabIndex = 6;
+            this.flowLayoutPanelReserva.BindingContextChanged += new System.EventHandler(this.flowLayoutPanelReserva_BindingContextChanged);
+            this.flowLayoutPanelReserva.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.flowLayoutPanelReserva_ControlRemoved);
             // 
             // flowLayoutPanelQuartos
             // 
@@ -120,14 +123,6 @@
             this.buttonCadastrarReserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCadastrarReserva.UseVisualStyleBackColor = false;
             this.buttonCadastrarReserva.Click += new System.EventHandler(this.buttonCadastrarReserva_Click);
-            // 
-            // reservaBindingSource
-            // 
-            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
-            // 
-            // quartoBindingSource
-            // 
-            this.quartoBindingSource.DataSource = typeof(Models.Quarto);
             // 
             // cor_verde
             // 
@@ -180,6 +175,19 @@
             this.cor_vermelha.Size = new System.Drawing.Size(10, 10);
             this.cor_vermelha.TabIndex = 8;
             // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            // 
+            // quartoBindingSource
+            // 
+            this.quartoBindingSource.DataSource = typeof(Models.Quarto);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,5 +239,6 @@
         private System.Windows.Forms.Label ocupado;
         private System.Windows.Forms.Label cor_amarela;
         private System.Windows.Forms.Label cor_vermelha;
+        private System.Windows.Forms.Timer timer1;
     }
 }

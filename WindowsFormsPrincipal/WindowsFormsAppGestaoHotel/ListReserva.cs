@@ -42,9 +42,10 @@ namespace WindowsFormsAppGestaoHotel
 
             MessageBox.Show("Reserva cancelada com sucesso!");
 
-            FormReserva frm = new FormReserva();
-            frm.buttonBuscarTipo_Click(null, null);
-            
+            this.Dispose();
+            //FormReserva frm = new FormReserva();
+            //frm.buttonBuscarTipo_Click(null, null);
+
         }
 
         public void BuscaReserva()
