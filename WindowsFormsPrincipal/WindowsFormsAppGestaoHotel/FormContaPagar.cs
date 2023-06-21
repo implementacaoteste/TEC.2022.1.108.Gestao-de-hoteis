@@ -85,7 +85,6 @@ namespace WindowsFormsAppGestaoHotel
         private void FormContaPagar_Load(object sender, EventArgs e)
         {
             contasPagarBindingSource.AddNew();
-            label1.Text = Convert.ToString(data_VencimentoDateTimePicker.Value);
         }
     }
 }
