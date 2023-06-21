@@ -104,17 +104,17 @@ namespace WindowsFormsPrincipal1
 
         private void grupoFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
+          //  try
+          //  {
                 using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
                 {
                     frm.ShowDialog();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+          //  }
+          //  catch (Exception ex)
+          //  {
+          //      MessageBox.Show(ex.Message);
+         //   }
         }
 
         private void pictureBoxUsu1_Click(object sender, EventArgs e)
