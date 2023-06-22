@@ -24,7 +24,7 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DESCRICAO", _contasPagar.Descricao);
                 cmd.Parameters.AddWithValue("@VALOR", _contasPagar.Valor);
-                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasPagar.Id_Cliente);
+                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasPagar.Id_Hospede);
                 cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _contasPagar.Id_Funcionario);
                 cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _contasPagar.Data_Vencimento);
                 cmd.Parameters.AddWithValue("@PAGAR", _contasPagar.Pagar);
@@ -67,10 +67,10 @@ namespace DAL
                     {
                         contasPagar = new ContasPagar();
                         contasPagar.Id = Convert.ToInt32(rd["ID"]);
-                        contasPagar.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        contasPagar.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         contasPagar.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         contasPagar.Descricao = rd["DESCRICAO"].ToString();
-                        contasPagar.Nome_funcionario = rd["FUNCIONARIO_NOME"].ToString();
+                        contasPagar.Nome_Funcionario = rd["FUNCIONARIO_NOME"].ToString();
                         contasPagar.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
                         contasPagar.Valor = (double)rd["VALOR"];
                         contasPagar.Pagar = Convert.ToBoolean(rd["PAGAR"]);
@@ -117,8 +117,8 @@ namespace DAL
                     {
                         contasPagar = new ContasPagar();
                         contasPagar.Id = Convert.ToInt32(rd["ID"]);
-                        contasPagar.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
-                        contasPagar.Nome_funcionario = rd["FUNCIONARIO_NOME"].ToString();
+                        contasPagar.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        contasPagar.Nome_Funcionario = rd["FUNCIONARIO_NOME"].ToString();
                         contasPagar.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
                         contasPagar.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         contasPagar.Descricao = rd["DESCRICAO"].ToString();
@@ -167,8 +167,8 @@ namespace DAL
                     {
                         contasPagar = new ContasPagar();
                         contasPagar.Id = Convert.ToInt32(rd["ID"]);
-                        contasPagar.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
-                        contasPagar.Nome_funcionario = rd["FUNCIONARIO_NOME"].ToString();
+                        contasPagar.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        contasPagar.Nome_Funcionario = rd["FUNCIONARIO_NOME"].ToString();
                         contasPagar.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
                         contasPagar.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         contasPagar.Descricao = rd["DESCRICAO"].ToString();
@@ -226,7 +226,7 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@VALOR", _contasPagar.Valor);  
                 cmd.Parameters.AddWithValue("@DESCRICAO", _contasPagar.Descricao);
-                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasPagar.Id_Cliente);
+                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasPagar.Id_Hospede);
                 cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _contasPagar.Id_Funcionario);
                 cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _contasPagar.Data_Vencimento);
                 cmd.Parameters.AddWithValue("@PAGAR", _contasPagar.Pagar);

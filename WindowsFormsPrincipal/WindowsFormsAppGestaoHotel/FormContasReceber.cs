@@ -15,6 +15,7 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormContasReceber : Form
     {
         int Id;
+        string NomeHospede;
         public FormContasReceber(int _id = 0)
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace WindowsFormsAppGestaoHotel
 
         private void FormContasReceber_Load(object sender, EventArgs e)
         {
+            //FuncionarioTextBox.Text = Constante.Nome.ToString();
             contasReceberBindingSource.AddNew();
         }
 
@@ -34,8 +36,8 @@ namespace WindowsFormsAppGestaoHotel
                 {
                     frm.ShowDialog();
                     ((ContasReceber)contasReceberBindingSource.Current).Id_Funcionario = frm.Id;
-                    ((ContasReceber)contasReceberBindingSource.Current).Nome_funcionario = frm.NomeUsuario;
-                    id_FuncionarioTextBox.Text = frm.NomeUsuario;
+                    ((ContasReceber)contasReceberBindingSource.Current).Nome_Funcionario = frm.NomeUsuario;
+                    FuncionarioTextBox.Text = frm.NomeUsuario;
                 }
             }
             catch (Exception ex)
@@ -44,17 +46,18 @@ namespace WindowsFormsAppGestaoHotel
             }
         }
 
-        private void buttonSelecionarCli_Click(object sender, EventArgs e)
+        private void buttonSelecionarHospede_Click(object sender, EventArgs e)
         {
             try
             {
                 using (FormConsultaCliente frm = new FormConsultaCliente())
                 {
                     frm.ShowDialog();
-                    ((ContasReceber)contasReceberBindingSource.Current).Id_Cliente = frm.Id;
+                    ((ContasReceber)contasReceberBindingSource.Current).Id_Hospede = frm.Id;
                     ((ContasReceber)contasReceberBindingSource.Current).Nome_Hospede = frm.NomeHospede;
-                    id_ClienteTextBox.Text = frm.NomeHospede;
+                    NomeHospede = frm.NomeHospede;
                 }
+                id_ClienteTextBox.Text = NomeHospede;
             }
             catch (Exception ex)
             {
