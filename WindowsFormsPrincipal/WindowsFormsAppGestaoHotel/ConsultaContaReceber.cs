@@ -28,7 +28,7 @@ namespace WindowsFormsAppGestaoHotel
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
                         break;
                     case 1:
-                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(datePickerInicial.Value, datePickerFinal.Value);
+                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(datePickerInicial.Value);
                         break;
                     case 2:
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(true);
