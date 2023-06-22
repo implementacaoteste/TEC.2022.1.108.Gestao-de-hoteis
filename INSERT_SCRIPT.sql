@@ -286,6 +286,20 @@ DECLARE
  SELECT @status = 3 FROM QUARTO
  UPDATE QUARTO SET ID_STATUS = @status WHERE ID = @codigo
 END
+------------------------------TRIGGER---------------------------------------
+CREATE TRIGGER CANCELAR_RESERVA
+ON RESERVA_QUARTO
+AFTER DELETE 
+AS 
+BEGIN
+DECLARE 
+   @status INT,
+   @codigo INT 
+   SELECT @codigo= ID_QUARTO FROM deleted
+
+ SELECT @status = 1 FROM QUARTO
+ UPDATE QUARTO SET ID_STATUS = @status WHERE ID = @codigo
+END
 ------------------------------DROP TRIGGER----------------------------------
 DROP TRIGGER QUARTO_DIARIA
 
