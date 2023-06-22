@@ -93,7 +93,7 @@
             // 
             // buttonBuscarTipo
             // 
-            this.buttonBuscarTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonBuscarTipo.BackColor = System.Drawing.Color.Transparent;
             this.buttonBuscarTipo.FlatAppearance.BorderSize = 0;
             this.buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarTipo.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarTipo.Image")));
@@ -111,7 +111,7 @@
             this.buttonCadastrarReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.buttonCadastrarReserva.FlatAppearance.BorderSize = 0;
             this.buttonCadastrarReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCadastrarReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastrarReserva.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCadastrarReserva.ForeColor = System.Drawing.Color.White;
             this.buttonCadastrarReserva.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrarReserva.Image")));
             this.buttonCadastrarReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1064, 567);
             this.Controls.Add(this.ocupado);
             this.Controls.Add(this.reservado);

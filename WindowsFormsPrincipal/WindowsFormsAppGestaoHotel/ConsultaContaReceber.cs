@@ -18,7 +18,20 @@ namespace WindowsFormsAppGestaoHotel
             InitializeComponent();
         }
 
-        private void buttonBuscar_Click(object sender, EventArgs e)
+        private void ConsultaContaReceber_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                comboBoxBuscarTipo.SelectedIndex = 0;
+                contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonBuscarTipo_Click(object sender, EventArgs e)
         {
             try
             {
@@ -28,7 +41,7 @@ namespace WindowsFormsAppGestaoHotel
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
                         break;
                     case 1:
-                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(datePickerInicial.Value);
+                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(datePickerInicial.Value, datePickerFinal.Value);
                         break;
                     case 2:
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(true);
@@ -46,7 +59,7 @@ namespace WindowsFormsAppGestaoHotel
             }
         }
 
-        private void Adicionar_Click(object sender, EventArgs e)
+        private void buttonCadastrarContaReceber_Click(object sender, EventArgs e)
         {
             try
             {

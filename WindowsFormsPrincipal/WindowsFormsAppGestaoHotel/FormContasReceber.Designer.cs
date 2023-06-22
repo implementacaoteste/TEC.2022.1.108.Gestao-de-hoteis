@@ -36,6 +36,7 @@
             System.Windows.Forms.Label valorLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContasReceber));
             this.data_VencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.id_ClienteTextBox = new System.Windows.Forms.TextBox();
             this.FuncionarioTextBox = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.valorTextBox = new ComponentesDesktop.TextBoxDinheiro();
-            this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             data_VencimentoLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             id_ClienteLabel = new System.Windows.Forms.Label();
@@ -61,16 +61,16 @@
             data_VencimentoLabel.Location = new System.Drawing.Point(319, 139);
             data_VencimentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             data_VencimentoLabel.Name = "data_VencimentoLabel";
-            data_VencimentoLabel.Size = new System.Drawing.Size(133, 20);
+            data_VencimentoLabel.Size = new System.Drawing.Size(94, 20);
             data_VencimentoLabel.TabIndex = 1;
-            data_VencimentoLabel.Text = "Data Vencimento";
+            data_VencimentoLabel.Text = "Vencimento";
             data_VencimentoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
             descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            descricaoLabel.Location = new System.Drawing.Point(11, 74);
+            descricaoLabel.Location = new System.Drawing.Point(7, 74);
             descricaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(80, 20);
@@ -82,19 +82,19 @@
             // 
             id_ClienteLabel.AutoSize = true;
             id_ClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            id_ClienteLabel.Location = new System.Drawing.Point(11, 139);
+            id_ClienteLabel.Location = new System.Drawing.Point(7, 139);
             id_ClienteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_ClienteLabel.Name = "id_ClienteLabel";
-            id_ClienteLabel.Size = new System.Drawing.Size(58, 20);
+            id_ClienteLabel.Size = new System.Drawing.Size(74, 20);
             id_ClienteLabel.TabIndex = 4;
-            id_ClienteLabel.Text = "Cliente";
+            id_ClienteLabel.Text = "Hóspede";
             id_ClienteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // id_FuncionarioLabel
             // 
             id_FuncionarioLabel.AutoSize = true;
             id_FuncionarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            id_FuncionarioLabel.Location = new System.Drawing.Point(11, 204);
+            id_FuncionarioLabel.Location = new System.Drawing.Point(7, 204);
             id_FuncionarioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             id_FuncionarioLabel.Name = "id_FuncionarioLabel";
             id_FuncionarioLabel.Size = new System.Drawing.Size(92, 20);
@@ -123,7 +123,11 @@
             this.data_VencimentoDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.data_VencimentoDateTimePicker.Name = "data_VencimentoDateTimePicker";
             this.data_VencimentoDateTimePicker.Size = new System.Drawing.Size(140, 26);
-            this.data_VencimentoDateTimePicker.TabIndex = 2;
+            this.data_VencimentoDateTimePicker.TabIndex = 4;
+            // 
+            // contasReceberBindingSource
+            // 
+            this.contasReceberBindingSource.DataSource = typeof(Models.ContasReceber);
             // 
             // descricaoTextBox
             // 
@@ -134,7 +138,7 @@
             this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(210, 26);
-            this.descricaoTextBox.TabIndex = 3;
+            this.descricaoTextBox.TabIndex = 0;
             // 
             // id_ClienteTextBox
             // 
@@ -145,7 +149,7 @@
             this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_ClienteTextBox.Name = "id_ClienteTextBox";
             this.id_ClienteTextBox.Size = new System.Drawing.Size(210, 26);
-            this.id_ClienteTextBox.TabIndex = 5;
+            this.id_ClienteTextBox.TabIndex = 1;
             // 
             // FuncionarioTextBox
             // 
@@ -156,7 +160,7 @@
             this.FuncionarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FuncionarioTextBox.Name = "FuncionarioTextBox";
             this.FuncionarioTextBox.Size = new System.Drawing.Size(210, 26);
-            this.FuncionarioTextBox.TabIndex = 7;
+            this.FuncionarioTextBox.TabIndex = 2;
             // 
             // receberCheckBox
             // 
@@ -167,7 +171,7 @@
             this.receberCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.receberCheckBox.Name = "receberCheckBox";
             this.receberCheckBox.Size = new System.Drawing.Size(96, 24);
-            this.receberCheckBox.TabIndex = 11;
+            this.receberCheckBox.TabIndex = 5;
             this.receberCheckBox.Text = "Recebido";
             this.receberCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.receberCheckBox.UseVisualStyleBackColor = true;
@@ -204,15 +208,15 @@
             this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(122)))));
             this.buttonSalvar.FlatAppearance.BorderSize = 0;
             this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.ForeColor = System.Drawing.Color.White;
             this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(204, 307);
+            this.buttonSalvar.Location = new System.Drawing.Point(189, 286);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(120, 33);
-            this.buttonSalvar.TabIndex = 14;
+            this.buttonSalvar.TabIndex = 6;
             this.buttonSalvar.Text = "SALVAR";
             this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -222,15 +226,15 @@
             // 
             this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(77)))), ((int)(((byte)(87)))));
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.ForeColor = System.Drawing.Color.White;
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(328, 307);
+            this.buttonCancelar.Location = new System.Drawing.Point(313, 286);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(135, 33);
-            this.buttonCancelar.TabIndex = 15;
+            this.buttonCancelar.Size = new System.Drawing.Size(150, 33);
+            this.buttonCancelar.TabIndex = 7;
             this.buttonCancelar.Text = "CANCELAR";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -244,19 +248,16 @@
             this.valorTextBox.Location = new System.Drawing.Point(323, 96);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(140, 26);
-            this.valorTextBox.TabIndex = 16;
+            this.valorTextBox.TabIndex = 3;
+            this.valorTextBox.Text = "R$ 0,00";
             this.valorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // contasReceberBindingSource
-            // 
-            this.contasReceberBindingSource.DataSource = typeof(Models.ContasReceber);
             // 
             // FormContasReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(476, 351);
+            this.ClientSize = new System.Drawing.Size(476, 330);
             this.Controls.Add(this.valorTextBox);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
@@ -272,6 +273,7 @@
             this.Controls.Add(this.descricaoTextBox);
             this.Controls.Add(data_VencimentoLabel);
             this.Controls.Add(this.data_VencimentoDateTimePicker);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;

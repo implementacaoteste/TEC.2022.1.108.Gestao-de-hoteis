@@ -89,7 +89,7 @@ namespace DAL
             }
         }
 
-        public List<ContasReceber> BuscarPorData(DateTime _data)
+        public List<ContasReceber> BuscarPorData(DateTime _dataInicial, DateTime _dataFinal)
         {
             List<ContasReceber> contasRecebers = new List<ContasReceber>();
             ContasReceber contasReceber;
@@ -103,9 +103,10 @@ namespace DAL
                                     FROM CONTAS_A_RECEBER CA                                
                                     INNER JOIN FUNCIONARIO F ON CA.ID_FUNCIONARIO = F.ID
                                     INNER JOIN CLIENTE C ON CA.ID_CLIENTE = C.ID
-                                    WHERE CA.DATA_VENCIMENTO = @DATA_VENCIMENTO";
+                                    WHERE CA.DATA_VENCIMENTO BETWEEN @DATA_INICIAL AND @DATA_FINAL";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _data.Date);
+                cmd.Parameters.AddWithValue("@DATA_INICIAL", _dataInicial.Date);
+                cmd.Parameters.AddWithValue("@DATA_FINAL", _dataFinal.Date);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
