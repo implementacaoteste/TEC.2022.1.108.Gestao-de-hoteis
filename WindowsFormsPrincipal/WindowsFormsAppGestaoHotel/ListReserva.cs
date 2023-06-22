@@ -36,8 +36,10 @@ namespace WindowsFormsAppGestaoHotel
             if (MessageBox.Show("Deseja cancelar esta reserva?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
 
+            ReservaBLL reservaBLL = new ReservaBLL();
             int id = ((Reserva)reservaBindingSource.Current).Id;
-            new ReservaBLL().CancelarReserva(id);
+            int idHospede = ((Reserva)reservaBindingSource.Current).Id_Hospede;
+            new ReservaBLL().CancelarReserva(id, idHospede);
             reservaBindingSource.RemoveCurrent();
 
             MessageBox.Show("Reserva cancelada com sucesso!");
