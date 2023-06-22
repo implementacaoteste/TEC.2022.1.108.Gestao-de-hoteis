@@ -37,9 +37,9 @@
             System.Windows.Forms.Label descricaoLabel;
             System.Windows.Forms.Button buttonBuscarTipo;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaContaReceber));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contasReceberDataGridView = new System.Windows.Forms.DataGridView();
             this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonCadastrarContaReceber = new System.Windows.Forms.Button();
@@ -65,6 +65,10 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome_Funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelValorAReceber = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             data_VencimentoLabel1 = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
             nome_HospedeLabel = new System.Windows.Forms.Label();
@@ -146,7 +150,7 @@
             buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonBuscarTipo.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarTipo.Image")));
-            buttonBuscarTipo.Location = new System.Drawing.Point(167, 22);
+            buttonBuscarTipo.Location = new System.Drawing.Point(182, 22);
             buttonBuscarTipo.Margin = new System.Windows.Forms.Padding(2);
             buttonBuscarTipo.Name = "buttonBuscarTipo";
             buttonBuscarTipo.Size = new System.Drawing.Size(30, 30);
@@ -220,7 +224,7 @@
             this.groupBox1.Controls.Add(descricaoLabel);
             this.groupBox1.Controls.Add(this.descricaoTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 382);
+            this.groupBox1.Location = new System.Drawing.Point(11, 387);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(916, 137);
             this.groupBox1.TabIndex = 8;
@@ -359,12 +363,12 @@
             this.comboBoxBuscarTipo.FormattingEnabled = true;
             this.comboBoxBuscarTipo.Items.AddRange(new object[] {
             "Todas",
+            "Data do Vencimento",
             "Pendentes",
-            "Pagas",
-            "Data do Vencimento"});
+            "Pagas"});
             this.comboBoxBuscarTipo.Location = new System.Drawing.Point(5, 24);
             this.comboBoxBuscarTipo.Name = "comboBoxBuscarTipo";
-            this.comboBoxBuscarTipo.Size = new System.Drawing.Size(155, 26);
+            this.comboBoxBuscarTipo.Size = new System.Drawing.Size(172, 26);
             this.comboBoxBuscarTipo.TabIndex = 0;
             // 
             // data_VencimentoMaskedTextBox
@@ -396,8 +400,8 @@
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn1.FillWeight = 60F;
             this.dataGridViewTextBoxColumn1.HeaderText = "Cód.";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
@@ -427,10 +431,10 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Valor";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -440,8 +444,8 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Data_Vencimento";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn6.HeaderText = "Vencimento";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
@@ -466,12 +470,60 @@
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(519, 368);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "À Receber:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(736, 368);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Total Recebido:";
+            // 
+            // labelValorAReceber
+            // 
+            this.labelValorAReceber.AutoSize = true;
+            this.labelValorAReceber.BackColor = System.Drawing.Color.Transparent;
+            this.labelValorAReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorAReceber.ForeColor = System.Drawing.Color.Red;
+            this.labelValorAReceber.Location = new System.Drawing.Point(609, 368);
+            this.labelValorAReceber.Name = "labelValorAReceber";
+            this.labelValorAReceber.Size = new System.Drawing.Size(65, 20);
+            this.labelValorAReceber.TabIndex = 11;
+            this.labelValorAReceber.Text = "R$ 0,00";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label4.Location = new System.Drawing.Point(862, 368);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "R$ 0,00";
+            // 
             // ConsultaContaReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(939, 534);
+            this.ClientSize = new System.Drawing.Size(939, 540);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelValorAReceber);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -493,6 +545,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -524,5 +577,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome_Funcionario;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         public System.Windows.Forms.ComboBox comboBoxBuscarTipo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelValorAReceber;
+        private System.Windows.Forms.Label label4;
     }
 }

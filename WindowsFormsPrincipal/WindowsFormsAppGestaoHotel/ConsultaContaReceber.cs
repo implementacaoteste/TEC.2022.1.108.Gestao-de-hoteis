@@ -44,10 +44,10 @@ namespace WindowsFormsAppGestaoHotel
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(datePickerInicial.Value, datePickerFinal.Value);
                         break;
                     case 2:
-                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(true);
+                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(false);
                         break;
                     case 3:
-                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(false);
+                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(true);
                         break;
                     default:
                         break;
