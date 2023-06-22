@@ -22,13 +22,13 @@ namespace WindowsFormsAppGestaoHotel
         {
             try
             {
-                switch(comboBoxBuscar.SelectedIndex)
+                switch(comboBoxBuscarTipo.SelectedIndex)
                 {
                     case 0:
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
                         break;
                     case 1:
-                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(dateTimePicker1.Value);
+                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(datePickerInicial.Value, datePickerFinal.Value);
                         break;
                     case 2:
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(true);
@@ -36,9 +36,8 @@ namespace WindowsFormsAppGestaoHotel
                     case 3:
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(false);
                         break;
-                        default:
+                    default:
                         break;
-
                 }
             }
             catch (Exception ex)
@@ -49,8 +48,7 @@ namespace WindowsFormsAppGestaoHotel
 
         private void Adicionar_Click(object sender, EventArgs e)
         {
-            
-                try
+            try
             {
                 using(FormContasReceber frm= new FormContasReceber())
                 {
