@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,7 @@ namespace WindowsFormsAppGestaoHotel
             {
                 comboBoxBuscarTipo.SelectedIndex = 0;
                 contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
+                labelValorAReceber.Text = "R$ 0,01";
             }
             catch (Exception ex)
             {
@@ -72,6 +74,12 @@ namespace WindowsFormsAppGestaoHotel
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void labelValorAReceber_TextChanged(object sender, EventArgs e)
+        {
+            string ValorT = ((ContasReceber)contasReceberBindingSource.Current).Valor.ToString();
+            labelValorAReceber.Text = ValorT;
         }
     }
 }

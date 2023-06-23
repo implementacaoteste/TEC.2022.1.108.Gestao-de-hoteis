@@ -138,6 +138,7 @@
             // 
             // descricaoTextBox
             // 
+            this.descricaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasPagarBindingSource, "Descricao", true));
             this.descricaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descricaoTextBox.Location = new System.Drawing.Point(11, 98);
@@ -148,6 +149,7 @@
             // 
             // id_ClienteTextBox
             // 
+            this.id_ClienteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.id_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasPagarBindingSource, "Id_Hospede", true));
             this.id_ClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_ClienteTextBox.Location = new System.Drawing.Point(11, 158);
@@ -158,6 +160,7 @@
             // 
             // id_FuncionarioTextBox
             // 
+            this.id_FuncionarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.id_FuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasPagarBindingSource, "Id_Funcionario", true));
             this.id_FuncionarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_FuncionarioTextBox.Location = new System.Drawing.Point(11, 216);
@@ -240,6 +243,7 @@
             this.textBoxDinheiro.Name = "textBoxDinheiro";
             this.textBoxDinheiro.Size = new System.Drawing.Size(140, 26);
             this.textBoxDinheiro.TabIndex = 3;
+            this.textBoxDinheiro.Text = "R$ 0,00";
             this.textBoxDinheiro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FormContaPagar
