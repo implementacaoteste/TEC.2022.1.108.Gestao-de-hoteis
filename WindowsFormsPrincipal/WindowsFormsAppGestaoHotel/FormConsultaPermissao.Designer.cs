@@ -176,7 +176,8 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(624, 426);
             this.Name = "FormConsultaPermissao";
-            this.Text = "Consulta de Permissão";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HOTELOGIX - Consulta de Permissão";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaPermissao_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).EndInit();

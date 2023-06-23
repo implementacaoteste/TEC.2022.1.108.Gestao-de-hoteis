@@ -172,7 +172,8 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(618, 439);
             this.Name = "FormConsultaGrupoFuncionario";
-            this.Text = "Consulta de Grupo de Funcionário";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HOTELOGIX - Consulta de Grupo de Funcionário";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaGrupoFuncionario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionariosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupoFuncionariosBindingSource)).EndInit();

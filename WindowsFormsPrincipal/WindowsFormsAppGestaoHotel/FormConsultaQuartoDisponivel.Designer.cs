@@ -254,6 +254,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormConsultaQuartoDisponivel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Quartos disponíveis";
             this.Load += new System.EventHandler(this.FormConsultaQuartoDisponivel_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaQuartoDisponivel_KeyDown);
