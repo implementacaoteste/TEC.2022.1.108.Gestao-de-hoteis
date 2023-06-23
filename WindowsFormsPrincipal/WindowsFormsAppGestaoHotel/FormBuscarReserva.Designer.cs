@@ -108,7 +108,7 @@
             // 
             // buttonBuscarIdReserva
             // 
-            buttonBuscarIdReserva.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            buttonBuscarIdReserva.BackColor = System.Drawing.Color.Transparent;
             buttonBuscarIdReserva.FlatAppearance.BorderSize = 0;
             buttonBuscarIdReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,7 +124,7 @@
             // 
             // buttonBuscarTipo
             // 
-            buttonBuscarTipo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            buttonBuscarTipo.BackColor = System.Drawing.Color.Transparent;
             buttonBuscarTipo.FlatAppearance.BorderSize = 0;
             buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -707,7 +707,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(939, 641);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

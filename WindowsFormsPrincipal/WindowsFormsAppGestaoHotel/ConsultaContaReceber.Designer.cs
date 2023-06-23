@@ -41,9 +41,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contasReceberDataGridView = new System.Windows.Forms.DataGridView();
-            this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Nome_Funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonCadastrarContaReceber = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxDinheiro = new ComponentesDesktop.TextBoxDinheiro();
+            this.data_VencimentoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.pagarCheckBox = new System.Windows.Forms.CheckBox();
             this.nome_HospedeTextBox = new System.Windows.Forms.TextBox();
             this.nome_funcionarioTextBox = new System.Windows.Forms.TextBox();
@@ -56,19 +58,17 @@
             this.datePickerFinal = new System.Windows.Forms.DateTimePicker();
             this.datePickerInicial = new System.Windows.Forms.DateTimePicker();
             this.comboBoxBuscarTipo = new System.Windows.Forms.ComboBox();
-            this.data_VencimentoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.textBoxDinheiro = new ComponentesDesktop.TextBoxDinheiro();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelValorAReceber = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome_Funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelValorAReceber = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.contasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             data_VencimentoLabel1 = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
             nome_HospedeLabel = new System.Windows.Forms.Label();
@@ -77,10 +77,10 @@
             descricaoLabel = new System.Windows.Forms.Label();
             buttonBuscarTipo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.contasReceberDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // data_VencimentoLabel1
@@ -186,13 +186,18 @@
             this.contasReceberDataGridView.Size = new System.Drawing.Size(908, 248);
             this.contasReceberDataGridView.TabIndex = 1;
             // 
-            // contasReceberBindingSource
+            // Nome_Funcionario
             // 
-            this.contasReceberBindingSource.DataSource = typeof(Models.ContasReceber);
+            this.Nome_Funcionario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome_Funcionario.DataPropertyName = "Nome_Funcionario";
+            this.Nome_Funcionario.HeaderText = "Lançado Por";
+            this.Nome_Funcionario.Name = "Nome_Funcionario";
+            this.Nome_Funcionario.ReadOnly = true;
             // 
             // buttonCadastrarContaReceber
             // 
             this.buttonCadastrarContaReceber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.buttonCadastrarContaReceber.FlatAppearance.BorderSize = 0;
             this.buttonCadastrarContaReceber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCadastrarContaReceber.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCadastrarContaReceber.ForeColor = System.Drawing.Color.White;
@@ -230,6 +235,32 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados";
+            // 
+            // textBoxDinheiro
+            // 
+            this.textBoxDinheiro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDinheiro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Valor", true));
+            this.textBoxDinheiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxDinheiro.Location = new System.Drawing.Point(563, 55);
+            this.textBoxDinheiro.Name = "textBoxDinheiro";
+            this.textBoxDinheiro.ReadOnly = true;
+            this.textBoxDinheiro.Size = new System.Drawing.Size(100, 26);
+            this.textBoxDinheiro.TabIndex = 17;
+            this.textBoxDinheiro.Text = "R$ 0,00";
+            this.textBoxDinheiro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // data_VencimentoMaskedTextBox
+            // 
+            this.data_VencimentoMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.data_VencimentoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Data_Vencimento", true));
+            this.data_VencimentoMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.data_VencimentoMaskedTextBox.Location = new System.Drawing.Point(563, 22);
+            this.data_VencimentoMaskedTextBox.Mask = "00/00/0000";
+            this.data_VencimentoMaskedTextBox.Name = "data_VencimentoMaskedTextBox";
+            this.data_VencimentoMaskedTextBox.ReadOnly = true;
+            this.data_VencimentoMaskedTextBox.Size = new System.Drawing.Size(100, 26);
+            this.data_VencimentoMaskedTextBox.TabIndex = 16;
+            this.data_VencimentoMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // pagarCheckBox
             // 
@@ -371,30 +402,49 @@
             this.comboBoxBuscarTipo.Size = new System.Drawing.Size(172, 26);
             this.comboBoxBuscarTipo.TabIndex = 0;
             // 
-            // data_VencimentoMaskedTextBox
+            // label1
             // 
-            this.data_VencimentoMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.data_VencimentoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Data_Vencimento", true));
-            this.data_VencimentoMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_VencimentoMaskedTextBox.Location = new System.Drawing.Point(563, 22);
-            this.data_VencimentoMaskedTextBox.Mask = "00/00/0000";
-            this.data_VencimentoMaskedTextBox.Name = "data_VencimentoMaskedTextBox";
-            this.data_VencimentoMaskedTextBox.ReadOnly = true;
-            this.data_VencimentoMaskedTextBox.Size = new System.Drawing.Size(100, 26);
-            this.data_VencimentoMaskedTextBox.TabIndex = 16;
-            this.data_VencimentoMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(519, 368);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "À Receber:";
             // 
-            // textBoxDinheiro
+            // label3
             // 
-            this.textBoxDinheiro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDinheiro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasReceberBindingSource, "Valor", true));
-            this.textBoxDinheiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxDinheiro.Location = new System.Drawing.Point(563, 55);
-            this.textBoxDinheiro.Name = "textBoxDinheiro";
-            this.textBoxDinheiro.ReadOnly = true;
-            this.textBoxDinheiro.Size = new System.Drawing.Size(100, 26);
-            this.textBoxDinheiro.TabIndex = 17;
-            this.textBoxDinheiro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(736, 368);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Total Recebido:";
+            // 
+            // labelValorAReceber
+            // 
+            this.labelValorAReceber.AutoSize = true;
+            this.labelValorAReceber.BackColor = System.Drawing.Color.Transparent;
+            this.labelValorAReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorAReceber.ForeColor = System.Drawing.Color.Red;
+            this.labelValorAReceber.Location = new System.Drawing.Point(609, 368);
+            this.labelValorAReceber.Name = "labelValorAReceber";
+            this.labelValorAReceber.Size = new System.Drawing.Size(65, 20);
+            this.labelValorAReceber.TabIndex = 11;
+            this.labelValorAReceber.Text = "R$ 0,00";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label4.Location = new System.Drawing.Point(862, 368);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "R$ 0,00";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -452,14 +502,6 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
-            // Nome_Funcionario
-            // 
-            this.Nome_Funcionario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome_Funcionario.DataPropertyName = "Nome_Funcionario";
-            this.Nome_Funcionario.HeaderText = "Lançado Por";
-            this.Nome_Funcionario.Name = "Nome_Funcionario";
-            this.Nome_Funcionario.ReadOnly = true;
-            // 
             // dataGridViewCheckBoxColumn1
             // 
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Receber";
@@ -470,49 +512,9 @@
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
-            // label1
+            // contasReceberBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(519, 368);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "À Receber:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(736, 368);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Total Recebido:";
-            // 
-            // labelValorAReceber
-            // 
-            this.labelValorAReceber.AutoSize = true;
-            this.labelValorAReceber.BackColor = System.Drawing.Color.Transparent;
-            this.labelValorAReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValorAReceber.ForeColor = System.Drawing.Color.Red;
-            this.labelValorAReceber.Location = new System.Drawing.Point(609, 368);
-            this.labelValorAReceber.Name = "labelValorAReceber";
-            this.labelValorAReceber.Size = new System.Drawing.Size(65, 20);
-            this.labelValorAReceber.TabIndex = 11;
-            this.labelValorAReceber.Text = "R$ 0,00";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(862, 368);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "R$ 0,00";
+            this.contasReceberBindingSource.DataSource = typeof(Models.ContasReceber);
             // 
             // ConsultaContaReceber
             // 
@@ -538,12 +540,12 @@
             this.Text = "HOTELOGIX - Contas à Receber";
             this.Load += new System.EventHandler(this.ConsultaContaReceber_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contasReceberDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contasReceberBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
