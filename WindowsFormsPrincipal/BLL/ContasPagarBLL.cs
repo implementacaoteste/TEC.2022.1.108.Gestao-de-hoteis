@@ -37,9 +37,9 @@ namespace BLL
             return new ContasPagarDAL().BuscaPorTodos();
         }
 
-        public List<ContasPagar> BuscarPorData(DateTime _data)
+        public List<ContasPagar> BuscarPorData(DateTime _dataInicial, DateTime _dataFinal)
         {
-            return new ContasPagarDAL().BuscarPorData(_data);
+            return new ContasPagarDAL().BuscarPorData(_dataInicial, _dataFinal);
         }
         public List<ContasPagar> BuscarPorPagar(bool _pagar)
         {

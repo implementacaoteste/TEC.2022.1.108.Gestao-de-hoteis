@@ -98,12 +98,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT CA.ID,  CA.DESCRICAO,  CA.VALOR,  CA.ID_CLIENTE,  
-                                    CA.ID_FUNCIONARIO,  CA.DATA_VENCIMENTO,  CA.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
-                                    FROM CONTAS_A_RECEBER CA                                
-                                    INNER JOIN FUNCIONARIO F ON CA.ID_FUNCIONARIO = F.ID
-                                    INNER JOIN CLIENTE C ON CA.ID_CLIENTE = C.ID
-                                    WHERE CA.DATA_VENCIMENTO BETWEEN @DATA_INICIAL AND @DATA_FINAL";
+                cmd.CommandText = @"SELECT CR.ID,  CR.DESCRICAO,  CR.VALOR,  CR.ID_CLIENTE,  
+                                    CR.ID_FUNCIONARIO,  CR.DATA_VENCIMENTO,  CR.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
+                                    FROM CONTAS_A_RECEBER CR                               
+                                    INNER JOIN FUNCIONARIO F ON CR.ID_FUNCIONARIO = F.ID
+                                    INNER JOIN CLIENTE C ON CR.ID_CLIENTE = C.ID
+                                    WHERE CR.DATA_VENCIMENTO BETWEEN @DATA_INICIAL AND @DATA_FINAL";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DATA_INICIAL", _dataInicial.Date);
                 cmd.Parameters.AddWithValue("@DATA_FINAL", _dataFinal.Date);
