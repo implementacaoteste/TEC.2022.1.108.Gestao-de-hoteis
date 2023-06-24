@@ -27,12 +27,27 @@ namespace WindowsFormsAppGestaoHotel
 
         private void pictureBoxCancelar_Click(object sender, EventArgs e)
         {
+            if (reservaBindingSource.Count <= 0)
+            {
+                MessageBox.Show("Não existe uma reserva para ser cancelada!");
+                return;
+            }
+
             if (MessageBox.Show("Deseja cancelar esta reserva?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
 
-            ListReserva _listReserva = this;
-            _listReserva.Visible = false;
-            
+            ReservaBLL reservaBLL = new ReservaBLL();
+            int id = ((Reserva)reservaBindingSource.Current).Id;
+            int idHospede = ((Reserva)reservaBindingSource.Current).Id_Hospede;
+            new ReservaBLL().CancelarReserva(id, idHospede);
+            reservaBindingSource.RemoveCurrent();
+
+            MessageBox.Show("Reserva cancelada com sucesso!");
+
+            this.Dispose();
+            //FormReserva frm = new FormReserva();
+            //frm.buttonBuscarTipo_Click(null, null);
+
         }
 
         public void BuscaReserva()
@@ -153,6 +168,10 @@ namespace WindowsFormsAppGestaoHotel
             using (FormCadastroReserva frm = new FormCadastroReserva(id))
             {
                 frm.ShowDialog();
+            }
+            using (FormReserva frm = new FormReserva())
+            {
+                frm.buttonBuscarTipo_Click(null, null);
             }
         }
     }

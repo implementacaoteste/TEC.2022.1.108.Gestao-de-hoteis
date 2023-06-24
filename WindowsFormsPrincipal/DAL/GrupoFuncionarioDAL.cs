@@ -263,7 +263,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar excluir uma permissão do grupo de funcionário no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar excluir uma permissão do grupo de Funcionário no banco de dados.", ex);
             }
             finally
             {

@@ -53,7 +53,7 @@ namespace WindowsFormsAppGestaoHotel
                 using(FormConsultaCliente frm = new FormConsultaCliente())
                 {
                     frm.ShowDialog();
-                    ((ContasPagar)contasPagarBindingSource.Current).Id_Cliente = frm.Id;
+                    ((ContasPagar)contasPagarBindingSource.Current).Id_Hospede = frm.Id;
                     ((ContasPagar)contasPagarBindingSource.Current).Nome_Hospede = frm.NomeHospede;
                     id_ClienteTextBox.Text = frm.NomeHospede;
                 }
@@ -72,7 +72,7 @@ namespace WindowsFormsAppGestaoHotel
                 {
                     frm.ShowDialog();
                     ((ContasPagar)contasPagarBindingSource.Current).Id_Funcionario = frm.Id;
-                    ((ContasPagar)contasPagarBindingSource.Current).Nome_funcionario = frm.NomeUsuario;
+                    ((ContasPagar)contasPagarBindingSource.Current).Nome_Funcionario = frm.NomeUsuario;
                     id_FuncionarioTextBox.Text = frm.NomeUsuario;
                 }
             }
@@ -85,7 +85,6 @@ namespace WindowsFormsAppGestaoHotel
         private void FormContaPagar_Load(object sender, EventArgs e)
         {
             contasPagarBindingSource.AddNew();
-            label1.Text = Convert.ToString(data_VencimentoDateTimePicker.Value);
         }
     }
 }
