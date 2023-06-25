@@ -23,8 +23,8 @@ namespace WindowsFormsAppGestaoHotel
 
         private void buttonSalvarFuncionario_Click(object sender, EventArgs e)
         {
-            try
-           {
+            //try
+            //{
                 ContasPagarBLL _contasPagarBLL = new ContasPagarBLL();
                 contasPagarBindingSource.EndEdit();
                 if (Id == 0)
@@ -34,11 +34,11 @@ namespace WindowsFormsAppGestaoHotel
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message,"",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+            ///}
+            //catch (Exception ex)
+            ///{
+           //     MessageBox.Show(ex.Message,"",MessageBoxButtons.OK,MessageBoxIcon.Error);
+           // }
         }
 
         private void buttonCancelarCadastro_Click(object sender, EventArgs e)
@@ -55,7 +55,10 @@ namespace WindowsFormsAppGestaoHotel
                     frm.ShowDialog();
                     ((ContasPagar)contasPagarBindingSource.Current).Id_Cliente = frm.Id;
                     ((ContasPagar)contasPagarBindingSource.Current).Nome_Hospede = frm.NomeHospede;
-                    id_ClienteTextBox.Text = frm.NomeHospede;
+                    if (frm.NomeHospede == null)
+                        nome_HospedeLabelHosp.Text = null;
+                    else
+                        nome_HospedeLabelHosp.Text = frm.NomeHospede.ToString();
                 }
             }
             catch(Exception ex)
@@ -73,7 +76,10 @@ namespace WindowsFormsAppGestaoHotel
                     frm.ShowDialog();
                     ((ContasPagar)contasPagarBindingSource.Current).Id_Funcionario = frm.Id;
                     ((ContasPagar)contasPagarBindingSource.Current).Nome_funcionario = frm.NomeUsuario;
-                    id_FuncionarioTextBox.Text = frm.NomeUsuario;
+                    if (frm.NomeUsuario == null)
+                        nome_funcionarioLabelNome.Text = null;
+                    else
+                        nome_funcionarioLabelNome.Text = frm.NomeUsuario.ToString();
                 }
             }
             catch (Exception ex)
@@ -85,7 +91,16 @@ namespace WindowsFormsAppGestaoHotel
         private void FormContaPagar_Load(object sender, EventArgs e)
         {
             contasPagarBindingSource.AddNew();
-            label1.Text = Convert.ToString(data_VencimentoDateTimePicker.Value);
+        }
+
+        private void nome_HospedeLabelHosp_Click(object sender, EventArgs e)
+        {
+            buttonSelecionar_cliente_Click(null,null);
+        }
+
+        private void nome_funcionarioLabelNome_Click(object sender, EventArgs e)
+        {
+            buttonSelecionar_funcionario_Click(null,null);
         }
     }
 }

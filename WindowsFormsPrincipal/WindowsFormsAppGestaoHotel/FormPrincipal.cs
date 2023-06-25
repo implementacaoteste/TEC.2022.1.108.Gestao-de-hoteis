@@ -299,11 +299,11 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
-           // }
-           // catch (Exception ex)
-           // {
-           //     MessageBox.Show(ex.Message);
-           // }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)

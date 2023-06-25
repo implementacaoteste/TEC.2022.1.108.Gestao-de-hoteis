@@ -40,15 +40,14 @@
             this.data_VencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.contasPagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
-            this.id_ClienteTextBox = new System.Windows.Forms.TextBox();
-            this.id_FuncionarioTextBox = new System.Windows.Forms.TextBox();
             this.pagarCheckBox = new System.Windows.Forms.CheckBox();
             this.valorTextBox = new System.Windows.Forms.TextBox();
             this.buttonSelecionar_funcionario = new System.Windows.Forms.Button();
             this.buttonSelecionar_cliente = new System.Windows.Forms.Button();
             this.buttonCancelarCadastro = new System.Windows.Forms.Button();
             this.buttonSalvarFuncionario = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.nome_HospedeLabelHosp = new System.Windows.Forms.Label();
+            this.nome_funcionarioLabelNome = new System.Windows.Forms.Label();
             data_VencimentoLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             id_ClienteLabel = new System.Windows.Forms.Label();
@@ -106,7 +105,7 @@
             // 
             pagarLabel.AutoSize = true;
             pagarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pagarLabel.Location = new System.Drawing.Point(430, 96);
+            pagarLabel.Location = new System.Drawing.Point(444, 89);
             pagarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             pagarLabel.Name = "pagarLabel";
             pagarLabel.Size = new System.Drawing.Size(45, 17);
@@ -117,7 +116,7 @@
             // 
             valorLabel.AutoSize = true;
             valorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            valorLabel.Location = new System.Drawing.Point(434, 135);
+            valorLabel.Location = new System.Drawing.Point(444, 135);
             valorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             valorLabel.Name = "valorLabel";
             valorLabel.Size = new System.Drawing.Size(45, 17);
@@ -131,7 +130,7 @@
             this.tituloLabel.Location = new System.Drawing.Point(0, 0);
             this.tituloLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloLabel.Name = "tituloLabel";
-            this.tituloLabel.Size = new System.Drawing.Size(676, 55);
+            this.tituloLabel.Size = new System.Drawing.Size(687, 55);
             this.tituloLabel.TabIndex = 30;
             this.tituloLabel.Text = "Nova Conta";
             this.tituloLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,30 +160,10 @@
             this.descricaoTextBox.Size = new System.Drawing.Size(212, 21);
             this.descricaoTextBox.TabIndex = 42;
             // 
-            // id_ClienteTextBox
-            // 
-            this.id_ClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasPagarBindingSource, "Id_Cliente", true));
-            this.id_ClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_ClienteTextBox.Location = new System.Drawing.Point(163, 164);
-            this.id_ClienteTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.id_ClienteTextBox.Name = "id_ClienteTextBox";
-            this.id_ClienteTextBox.Size = new System.Drawing.Size(119, 21);
-            this.id_ClienteTextBox.TabIndex = 43;
-            // 
-            // id_FuncionarioTextBox
-            // 
-            this.id_FuncionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasPagarBindingSource, "Id_Funcionario", true));
-            this.id_FuncionarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_FuncionarioTextBox.Location = new System.Drawing.Point(163, 207);
-            this.id_FuncionarioTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.id_FuncionarioTextBox.Name = "id_FuncionarioTextBox";
-            this.id_FuncionarioTextBox.Size = new System.Drawing.Size(119, 21);
-            this.id_FuncionarioTextBox.TabIndex = 44;
-            // 
             // pagarCheckBox
             // 
             this.pagarCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.contasPagarBindingSource, "Pagar", true));
-            this.pagarCheckBox.Location = new System.Drawing.Point(484, 97);
+            this.pagarCheckBox.Location = new System.Drawing.Point(498, 90);
             this.pagarCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.pagarCheckBox.Name = "pagarCheckBox";
             this.pagarCheckBox.Size = new System.Drawing.Size(78, 20);
@@ -195,7 +174,7 @@
             // 
             this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasPagarBindingSource, "Valor", true));
             this.valorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valorTextBox.Location = new System.Drawing.Point(484, 133);
+            this.valorTextBox.Location = new System.Drawing.Point(494, 133);
             this.valorTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(76, 21);
@@ -208,7 +187,7 @@
             this.buttonSelecionar_funcionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionar_funcionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionar_funcionario.Image")));
             this.buttonSelecionar_funcionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSelecionar_funcionario.Location = new System.Drawing.Point(290, 205);
+            this.buttonSelecionar_funcionario.Location = new System.Drawing.Point(290, 207);
             this.buttonSelecionar_funcionario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar_funcionario.Name = "buttonSelecionar_funcionario";
             this.buttonSelecionar_funcionario.Size = new System.Drawing.Size(115, 26);
@@ -270,28 +249,43 @@
             this.buttonSalvarFuncionario.UseVisualStyleBackColor = false;
             this.buttonSalvarFuncionario.Click += new System.EventHandler(this.buttonSalvarFuncionario_Click);
             // 
-            // label1
+            // nome_HospedeLabelHosp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(430, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 47;
+            this.nome_HospedeLabelHosp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nome_HospedeLabelHosp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.nome_HospedeLabelHosp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasPagarBindingSource, "Nome_Hospede", true));
+            this.nome_HospedeLabelHosp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nome_HospedeLabelHosp.Location = new System.Drawing.Point(162, 166);
+            this.nome_HospedeLabelHosp.Name = "nome_HospedeLabelHosp";
+            this.nome_HospedeLabelHosp.Size = new System.Drawing.Size(120, 20);
+            this.nome_HospedeLabelHosp.TabIndex = 48;
+            this.nome_HospedeLabelHosp.Click += new System.EventHandler(this.nome_HospedeLabelHosp_Click);
+            // 
+            // nome_funcionarioLabelNome
+            // 
+            this.nome_funcionarioLabelNome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nome_funcionarioLabelNome.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.nome_funcionarioLabelNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contasPagarBindingSource, "Nome_funcionario", true));
+            this.nome_funcionarioLabelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nome_funcionarioLabelNome.Location = new System.Drawing.Point(162, 211);
+            this.nome_funcionarioLabelNome.Name = "nome_funcionarioLabelNome";
+            this.nome_funcionarioLabelNome.Size = new System.Drawing.Size(120, 20);
+            this.nome_funcionarioLabelNome.TabIndex = 49;
+            this.nome_funcionarioLabelNome.Click += new System.EventHandler(this.nome_funcionarioLabelNome_Click);
             // 
             // FormContaPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 284);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(687, 296);
+            this.Controls.Add(this.nome_funcionarioLabelNome);
+            this.Controls.Add(this.nome_HospedeLabelHosp);
             this.Controls.Add(valorLabel);
             this.Controls.Add(this.valorTextBox);
             this.Controls.Add(pagarLabel);
             this.Controls.Add(this.pagarCheckBox);
             this.Controls.Add(id_FuncionarioLabel);
-            this.Controls.Add(this.id_FuncionarioTextBox);
             this.Controls.Add(id_ClienteLabel);
-            this.Controls.Add(this.id_ClienteTextBox);
             this.Controls.Add(descricaoLabel);
             this.Controls.Add(this.descricaoTextBox);
             this.Controls.Add(data_VencimentoLabel);
@@ -323,10 +317,9 @@
         private System.Windows.Forms.BindingSource contasPagarBindingSource;
         private System.Windows.Forms.DateTimePicker data_VencimentoDateTimePicker;
         private System.Windows.Forms.TextBox descricaoTextBox;
-        private System.Windows.Forms.TextBox id_ClienteTextBox;
-        private System.Windows.Forms.TextBox id_FuncionarioTextBox;
         private System.Windows.Forms.CheckBox pagarCheckBox;
         private System.Windows.Forms.TextBox valorTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label nome_HospedeLabelHosp;
+        private System.Windows.Forms.Label nome_funcionarioLabelNome;
     }
 }

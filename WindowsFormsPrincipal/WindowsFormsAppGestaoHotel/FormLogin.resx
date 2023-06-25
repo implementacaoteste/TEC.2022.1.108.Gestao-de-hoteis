@@ -128,7 +128,7 @@
     <value>613, 276</value>
   </data>
   <data name="textBoxUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 29</value>
+    <value>266, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxUsuario.TabIndex" type="System.Int32, mscorlib">
@@ -156,7 +156,7 @@
     <value>*</value>
   </data>
   <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 29</value>
+    <value>266, 25</value>
   </data>
   <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -453,7 +453,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelCadastro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 20</value>
+    <value>133, 17</value>
   </data>
   <data name="labelCadastro.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -489,7 +489,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 20</value>
+    <value>85, 17</value>
   </data>
   <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
