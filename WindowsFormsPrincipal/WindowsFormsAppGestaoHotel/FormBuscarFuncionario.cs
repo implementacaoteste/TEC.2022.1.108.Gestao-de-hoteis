@@ -74,15 +74,10 @@ namespace WindowsFormsPrincipal1
                 return;
 
             int id = ((Funcionario)funcionarioBindingSource.Current).Id;
-            if (id == Constante.IdLogado)
-                MessageBox.Show("Este usuário está em uso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-
             new FuncionarioBLL().Excluir(id);
             funcionarioBindingSource.RemoveCurrent();
 
             MessageBox.Show("Registro excluído com sucesso!");
-
         }
 
         private void buttonAlterarFuncionario_Click(object sender, EventArgs e)

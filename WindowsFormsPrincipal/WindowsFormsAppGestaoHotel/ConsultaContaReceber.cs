@@ -1,5 +1,4 @@
 ﻿using BLL;
-using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,40 +18,27 @@ namespace WindowsFormsAppGestaoHotel
             InitializeComponent();
         }
 
-        private void ConsultaContaReceber_Load(object sender, EventArgs e)
+        private void buttonBuscar_Click(object sender, EventArgs e)
         {
             try
             {
-                comboBoxBuscarTipo.SelectedIndex = 0;
-                contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
-                labelValorAReceber.Text = "R$ 0,01";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void buttonBuscarTipo_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                switch(comboBoxBuscarTipo.SelectedIndex)
+                switch(comboBoxBuscar.SelectedIndex)
                 {
                     case 0:
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
                         break;
                     case 1:
-                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(datePickerInicial.Value, datePickerFinal.Value);
+                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorData(dateTimePicker1.Value);
                         break;
                     case 2:
-                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(false);
-                        break;
-                    case 3:
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(true);
                         break;
-                    default:
+                    case 3:
+                        contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscarPorPagar(false);
                         break;
+                        default:
+                        break;
+
                 }
             }
             catch (Exception ex)
@@ -61,9 +47,10 @@ namespace WindowsFormsAppGestaoHotel
             }
         }
 
-        private void buttonCadastrarContaReceber_Click(object sender, EventArgs e)
+        private void Adicionar_Click(object sender, EventArgs e)
         {
-            try
+            
+                try
             {
                 using(FormContasReceber frm= new FormContasReceber())
                 {
@@ -74,12 +61,6 @@ namespace WindowsFormsAppGestaoHotel
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void labelValorAReceber_TextChanged(object sender, EventArgs e)
-        {
-            string ValorT = ((ContasReceber)contasReceberBindingSource.Current).Valor.ToString();
-            labelValorAReceber.Text = ValorT;
         }
     }
 }

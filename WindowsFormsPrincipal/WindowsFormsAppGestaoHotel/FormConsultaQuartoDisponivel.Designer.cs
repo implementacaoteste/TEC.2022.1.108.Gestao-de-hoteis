@@ -71,11 +71,10 @@
             // 
             // buttonBuscarQuartoDisp
             // 
-            this.buttonBuscarQuartoDisp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonBuscarQuartoDisp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonBuscarQuartoDisp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBuscarQuartoDisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscarQuartoDisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarQuartoDisp.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk;
+            this.buttonBuscarQuartoDisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarQuartoDisp.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search;
             this.buttonBuscarQuartoDisp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBuscarQuartoDisp.Location = new System.Drawing.Point(653, 91);
             this.buttonBuscarQuartoDisp.Name = "buttonBuscarQuartoDisp";
@@ -182,7 +181,7 @@
             this.dateTimeQSair.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeQSair.Location = new System.Drawing.Point(296, 93);
             this.dateTimeQSair.Name = "dateTimeQSair";
-            this.dateTimeQSair.Size = new System.Drawing.Size(110, 24);
+            this.dateTimeQSair.Size = new System.Drawing.Size(110, 27);
             this.dateTimeQSair.TabIndex = 4;
             // 
             // labelEntrada
@@ -191,7 +190,7 @@
             this.labelEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEntrada.Location = new System.Drawing.Point(29, 95);
             this.labelEntrada.Name = "labelEntrada";
-            this.labelEntrada.Size = new System.Drawing.Size(63, 18);
+            this.labelEntrada.Size = new System.Drawing.Size(78, 22);
             this.labelEntrada.TabIndex = 1;
             this.labelEntrada.Text = "Entrada:";
             // 
@@ -201,7 +200,7 @@
             this.labelSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSair.Location = new System.Drawing.Point(232, 95);
             this.labelSair.Name = "labelSair";
-            this.labelSair.Size = new System.Drawing.Size(49, 18);
+            this.labelSair.Size = new System.Drawing.Size(61, 22);
             this.labelSair.TabIndex = 3;
             this.labelSair.Text = "Saída:";
             // 
@@ -211,7 +210,7 @@
             this.dateTimeQEntrar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeQEntrar.Location = new System.Drawing.Point(110, 93);
             this.dateTimeQEntrar.Name = "dateTimeQEntrar";
-            this.dateTimeQEntrar.Size = new System.Drawing.Size(109, 24);
+            this.dateTimeQEntrar.Size = new System.Drawing.Size(109, 27);
             this.dateTimeQEntrar.TabIndex = 2;
             // 
             // labelClasse
@@ -220,7 +219,7 @@
             this.labelClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClasse.Location = new System.Drawing.Point(423, 95);
             this.labelClasse.Name = "labelClasse";
-            this.labelClasse.Size = new System.Drawing.Size(58, 18);
+            this.labelClasse.Size = new System.Drawing.Size(70, 22);
             this.labelClasse.TabIndex = 5;
             this.labelClasse.Text = "Classe:";
             // 
@@ -233,14 +232,13 @@
             this.comboBoxclass.Location = new System.Drawing.Point(492, 93);
             this.comboBoxclass.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxclass.Name = "comboBoxclass";
-            this.comboBoxclass.Size = new System.Drawing.Size(109, 25);
+            this.comboBoxclass.Size = new System.Drawing.Size(109, 28);
             this.comboBoxclass.TabIndex = 6;
             // 
             // FormConsultaQuartoDisponivel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(766, 456);
             this.Controls.Add(this.comboBoxclass);
             this.Controls.Add(this.labelClasse);
@@ -254,7 +252,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormConsultaQuartoDisponivel";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Quartos disponíveis";
             this.Load += new System.EventHandler(this.FormConsultaQuartoDisponivel_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaQuartoDisponivel_KeyDown);

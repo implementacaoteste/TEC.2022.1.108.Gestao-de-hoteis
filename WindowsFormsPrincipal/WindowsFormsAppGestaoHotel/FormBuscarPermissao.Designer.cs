@@ -87,7 +87,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(431, 91);
+            this.groupBox1.Size = new System.Drawing.Size(424, 91);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por";
@@ -133,12 +133,12 @@
             // 
             // buttonBuscarPermissao
             // 
-            this.buttonBuscarPermissao.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonBuscarPermissao.BackColor = System.Drawing.Color.Transparent;
             this.buttonBuscarPermissao.FlatAppearance.BorderSize = 0;
             this.buttonBuscarPermissao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarPermissao.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarPermissao.Image")));
-            this.buttonBuscarPermissao.Location = new System.Drawing.Point(397, 52);
+            this.buttonBuscarPermissao.Location = new System.Drawing.Point(390, 53);
             this.buttonBuscarPermissao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarPermissao.MaximumSize = new System.Drawing.Size(30, 30);
             this.buttonBuscarPermissao.MinimumSize = new System.Drawing.Size(30, 30);
@@ -287,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(446, 503);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);

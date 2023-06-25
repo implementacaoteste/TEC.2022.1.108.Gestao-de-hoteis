@@ -47,18 +47,7 @@ namespace WindowsFormsAppGestaoHotel
 
         private void buttonCheckin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ReservaBLL reservaBLL = new ReservaBLL();
-                reservaBindingSource.EndEdit();
-                reservaBLL.CheckIn((Reserva)reservaBindingSource.Current);
-                MessageBox.Show("Reserva cadastrada com sucesso!");
-                Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
         void addLabel()

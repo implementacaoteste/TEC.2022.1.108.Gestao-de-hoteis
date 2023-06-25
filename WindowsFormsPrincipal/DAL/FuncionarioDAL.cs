@@ -78,170 +78,30 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Excluir(int _id, SqlTransaction _transaction = null)
+        public void Excluir(int _id)
         {
-            SqlTransaction transaction = _transaction;
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM FUNCIONARIO WHERE ID = @ID", cn))
-                {
-                    try
-                    {
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.Parameters.AddWithValue("@ID", _id);
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM FUNCIONARIO 
+                                    WHERE ID= @ID";
 
-                        if (transaction == null)
-                        {
-                            cn.Open();
-                            transaction = cn.BeginTransaction();
-                        }
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@ID", _id);
 
-                        cmd.Transaction = transaction;
-                        cmd.Connection = transaction.Connection;
+                cmd.Connection = cn;
+                cn.Open();
 
-                        RemoverGrupos(_id, transaction);
-                        RemoverReservas(_id, transaction);
-                        RemoverConstasPagar(_id, transaction);
-                        RemoverConstasReceber(_id, transaction);
-                        cmd.ExecuteNonQuery();
-
-                        if (_transaction == null)
-                            transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Ocorreu erro ao tentar excluir um Funcionário no Banco de Dados.", ex);
-                    }
-                }
+                cmd.ExecuteNonQuery();
             }
-        }
-        private void RemoverGrupos(int _id, SqlTransaction _transaction)
-        {
-            SqlTransaction transaction = _transaction;
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            catch (Exception ex)
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM FUNCIONARIO_GRUPO_FUNCIONARIO WHERE ID_FUNCIONARIO = @ID_FUNCIONARIO", cn))
-                {
-                    cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _id);
-
-                    if (transaction == null)
-                    {
-                        cn.Open();
-                        transaction = cn.BeginTransaction();
-                    }
-
-                    cmd.Transaction = transaction;
-                    cmd.Connection = transaction.Connection;
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        if (_transaction == null)
-                            transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Ocorreu erro ao tentar excluir um Funcionário no Banco de Dados.", ex);
-                    }
-                }
+                throw new Exception("Ocorreu erro ao tentar excluir um Funcionário no Banco de Dados.", ex);
             }
-        }
-        private void RemoverReservas(int _id, SqlTransaction _transaction)
-        {
-            SqlTransaction transaction = _transaction;
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            finally
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM RESERVA WHERE ID_FUNCIONARIO = @ID_FUNCIONARIO", cn))
-                {
-                    cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _id);
-
-                    if (transaction == null)
-                    {
-                        cn.Open();
-                        transaction = cn.BeginTransaction();
-                    }
-
-                    cmd.Transaction = transaction;
-                    cmd.Connection = transaction.Connection;
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        if (_transaction == null)
-                            transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Ocorreu erro ao tentar excluir um Funcionário no Banco de Dados.", ex);
-                    }
-                }
-            }
-        }
-        private void RemoverConstasPagar(int _id, SqlTransaction _transaction)
-        {
-            SqlTransaction transaction = _transaction;
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM CONTAS_A_PAGAR WHERE ID_FUNCIONARIO = @ID_FUNCIONARIO", cn))
-                {
-                    cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _id);
-
-                    if (transaction == null)
-                    {
-                        cn.Open();
-                        transaction = cn.BeginTransaction();
-                    }
-
-                    cmd.Transaction = transaction;
-                    cmd.Connection = transaction.Connection;
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        if (_transaction == null)
-                            transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Ocorreu erro ao tentar excluir um Funcionário no Banco de Dados.", ex);
-                    }
-                }
-            }
-        }
-        private void RemoverConstasReceber(int _id, SqlTransaction _transaction)
-        {
-            SqlTransaction transaction = _transaction;
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM CONTAS_A_RECEBER WHERE ID_FUNCIONARIO = @ID_FUNCIONARIO", cn))
-                {
-                    cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _id);
-
-                    if (transaction == null)
-                    {
-                        cn.Open();
-                        transaction = cn.BeginTransaction();
-                    }
-
-                    cmd.Transaction = transaction;
-                    cmd.Connection = transaction.Connection;
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        if (_transaction == null)
-                            transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Ocorreu erro ao tentar excluir um Funcionário no Banco de Dados.", ex);
-                    }
-                }
+                cn.Close();
             }
         }
         public Funcionario BuscarPorId(int _id)

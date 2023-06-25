@@ -19,8 +19,8 @@ namespace Models
         public string Pagamento { get; set; }
         public string Numero_Quarto { get; set; }
         public string Descricao_Quarto { get; set; }
-        public decimal Valor_Total { get; set; }
-        public decimal Valor_Diaria { get; set; }
+        public double Valor_Total { get; set; }
+        public double Valor_Diaria { get; set; }
         public DateTime Data_Checkin { get; set; }
         public DateTime Data_Checkout { get; set; }
     }

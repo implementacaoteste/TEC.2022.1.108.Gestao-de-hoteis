@@ -132,28 +132,29 @@
   <metadata name="valorLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="receberLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="contasReceberBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonSalvar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSelecionarCli.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAASlJREFUSEvtluENgjAQhRnBERyFURzBDWQEN3AFNtBNHMER8L322tS2yqUcISZ8
-        yfvhu+OeFortdjZlmqYj1C/QUUbpwUUXaClPSB/OZneZDfpwNHKZAmcoX0KNBiigC0cTLwykgzQ6yRjO
-        4efAfDga8uB0wBwPGePA5zz8IKUSFM2CCbyrLzl6sUtY9D0Oi+CPeWKXsOh7HJsGh3CN4sMVgNcWLHYz
-        nOFHOf40GD7fbnfoxSZwg6r7FL5NMDyGck/mVPcpPLPgdF/mDNIWgWcWzCX+ht12EjsCb/SlKqO0ReCZ
-        Baf1nHX3MXy+LHKK+0vg2wUT1Ph08wu4/2yxC1iDAurg1oNAKs4I/Ay2PPrkzB4GavdwKdVnoACN/OW1
-        pWuR7sC3sw5d9wYsHB3BHGdwxgAAAABJRU5ErkJggg==
+        EgAACxIB0t1+/AAAAJNJREFUSEvt0+8JgCAQh2FHCPyDHxuhUdqgURql0RqlPLgfiIj1wROEe0CQhHvB
+        yiilpmCt3Xk7jvf+CiE8zrmTH8lDlNe9JHwkp4zGGFc+kjN3NA3aePupWzT9BgcN+fNFdr1eGoBhrXj3
+        d0oDaBCG1uLdo9CKi0WhFhePQhnPllwUKnH5KGTxcVGg4PCoUqrNmBdohFuVYtG5FAAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
-  <data name="buttonCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSelecionarFun.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAALpJREFUSEvtk1sKwzAMBH2k3qi9/0+P4I7SbMmDYEWxCqUeMDi2d4e8ymDwX9Ra
-        74zbfOkmmpuYw8aT4S7hbCj3gdBjir9xlXBGUiMmNgi65ez1kQoKmnLW+koFRYdy5jlSQeFOzsiVCoq3
-        cpEnFQiWciNfaiBZPl7jK3e7faciT07x7kNiNH+1S1B4+PUyz5FT1PxlWOsrp6ApFez1kRN0SwVnrssJ
-        qeRUAWdDuRUEreR0OJobDH6ZUl4Tuy4PYpkeiQAAAABJRU5ErkJggg==
+        EgAACxIB0t1+/AAAAJNJREFUSEvt0+8JgCAQh2FHCPyDHxuhUdqgURql0RqlPLgfiIj1wROEe0CQhHvB
+        yiilpmCt3Xk7jvf+CiE8zrmTH8lDlNe9JHwkp4zGGFc+kjN3NA3aePupWzT9BgcN+fNFdr1eGoBhrXj3
+        d0oDaBCG1uLdo9CKi0WhFhePQhnPllwUKnH5KGTxcVGg4PCoUqrNmBdohFuVYtG5FAAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

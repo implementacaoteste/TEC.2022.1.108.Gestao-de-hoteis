@@ -71,8 +71,8 @@ namespace WindowsFormsAppGestaoHotel
                     ((Reserva)reservaBindingSource.Current).Id_Hospede = frm.Id;
                     ((Reserva)reservaBindingSource.Current).Nome_Hospede = frm.NomeHospede;
                     id_HospedeTextBox.Text = frm.NomeHospede;
+                    //qtd_HospedesNumericUpDown.Value = reservaBindingSource.Count;
                 }
-                qtd_HospedesNumericUpDown.Value = 1;
                 CalcularValorReserva();
             }
             catch (Exception ex)

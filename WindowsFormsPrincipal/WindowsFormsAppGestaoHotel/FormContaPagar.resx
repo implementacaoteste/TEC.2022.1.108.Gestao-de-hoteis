@@ -129,31 +129,35 @@
   <metadata name="id_FuncionarioLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="pagarLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="valorLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="contasPagarBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="contasPagarBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonCancelarCadastro.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSelecionar_funcionario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAALpJREFUSEvtk1sKwzAMBH2k3qi9/0+P4I7SbMmDYEWxCqUeMDi2d4e8ymDwX9Ra
-        74zbfOkmmpuYw8aT4S7hbCj3gdBjir9xlXBGUiMmNgi65ez1kQoKmnLW+koFRYdy5jlSQeFOzsiVCoq3
-        cpEnFQiWciNfaiBZPl7jK3e7faciT07x7kNiNH+1S1B4+PUyz5FT1PxlWOsrp6ApFez1kRN0SwVnrssJ
-        qeRUAWdDuRUEreR0OJobDH6ZUl4Tuy4PYpkeiQAAAABJRU5ErkJggg==
+        DQAACw0B7QfALAAAAJNJREFUSEvt0+8JgCAQh2FHCPyDHxuhUdqgURql0RqlPLgfiIj1wROEe0CQhHvB
+        yiilpmCt3Xk7jvf+CiE8zrmTH8lDlNe9JHwkp4zGGFc+kjN3NA3aePupWzT9BgcN+fNFdr1eGoBhrXj3
+        d0oDaBCG1uLdo9CKi0WhFhePQhnPllwUKnH5KGTxcVGg4PCoUqrNmBdohFuVYtG5FAAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
-  <data name="buttonSalvarFuncionario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSelecionar_cliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAASlJREFUSEvtluENgjAQhRnBERyFURzBDWQEN3AFNtBNHMER8L322tS2yqUcISZ8
-        yfvhu+OeFortdjZlmqYj1C/QUUbpwUUXaClPSB/OZneZDfpwNHKZAmcoX0KNBiigC0cTLwykgzQ6yRjO
-        4efAfDga8uB0wBwPGePA5zz8IKUSFM2CCbyrLzl6sUtY9D0Oi+CPeWKXsOh7HJsGh3CN4sMVgNcWLHYz
-        nOFHOf40GD7fbnfoxSZwg6r7FL5NMDyGck/mVPcpPLPgdF/mDNIWgWcWzCX+ht12EjsCb/SlKqO0ReCZ
-        Baf1nHX3MXy+LHKK+0vg2wUT1Ph08wu4/2yxC1iDAurg1oNAKs4I/Ay2PPrkzB4GavdwKdVnoACN/OW1
-        pWuR7sC3sw5d9wYsHB3BHGdwxgAAAABJRU5ErkJggg==
+        DQAACw0B7QfALAAAAJNJREFUSEvt0+8JgCAQh2FHCPyDHxuhUdqgURql0RqlPLgfiIj1wROEe0CQhHvB
+        yiilpmCt3Xk7jvf+CiE8zrmTH8lDlNe9JHwkp4zGGFc+kjN3NA3aePupWzT9BgcN+fNFdr1eGoBhrXj3
+        d0oDaBCG1uLdo9CKi0WhFhePQhnPllwUKnH5KGTxcVGg4PCoUqrNmBdohFuVYtG5FAAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

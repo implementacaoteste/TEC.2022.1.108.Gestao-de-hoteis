@@ -162,7 +162,6 @@
             // 
             // obs_CheckoutTextBox
             // 
-            this.obs_CheckoutTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.obs_CheckoutTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Obs_Checkout", true));
             this.obs_CheckoutTextBox.Location = new System.Drawing.Point(8, 107);
             this.obs_CheckoutTextBox.Multiline = true;
@@ -249,7 +248,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(644, 353);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

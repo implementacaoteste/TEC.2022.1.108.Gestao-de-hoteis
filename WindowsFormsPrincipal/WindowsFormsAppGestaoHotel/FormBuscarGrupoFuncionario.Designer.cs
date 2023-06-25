@@ -204,7 +204,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(415, 80);
+            this.groupBox1.Size = new System.Drawing.Size(406, 80);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por";
@@ -250,12 +250,12 @@
             // 
             // buttonBuscarGrupoFuncionario
             // 
-            this.buttonBuscarGrupoFuncionario.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonBuscarGrupoFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.buttonBuscarGrupoFuncionario.FlatAppearance.BorderSize = 0;
             this.buttonBuscarGrupoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarGrupoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarGrupoFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarGrupoFuncionario.Image")));
-            this.buttonBuscarGrupoFuncionario.Location = new System.Drawing.Point(381, 44);
+            this.buttonBuscarGrupoFuncionario.Location = new System.Drawing.Point(371, 45);
             this.buttonBuscarGrupoFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarGrupoFuncionario.Name = "buttonBuscarGrupoFuncionario";
             this.buttonBuscarGrupoFuncionario.Size = new System.Drawing.Size(30, 30);
@@ -453,7 +453,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(772, 506);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);

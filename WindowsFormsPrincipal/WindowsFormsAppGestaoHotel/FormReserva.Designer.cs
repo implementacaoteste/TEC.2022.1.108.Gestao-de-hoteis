@@ -33,18 +33,19 @@
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.comboBoxBuscarTipo = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelReserva = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanelQuartos = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonBuscarTipo = new System.Windows.Forms.Button();
             this.buttonCadastrarReserva = new System.Windows.Forms.Button();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cor_verde = new System.Windows.Forms.Label();
             this.disponivel = new System.Windows.Forms.Label();
             this.reservado = new System.Windows.Forms.Label();
             this.ocupado = new System.Windows.Forms.Label();
             this.cor_amarela = new System.Windows.Forms.Label();
             this.cor_vermelha = new System.Windows.Forms.Label();
-            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.flowLayoutPanelReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -76,12 +77,20 @@
             // flowLayoutPanelReserva
             // 
             this.flowLayoutPanelReserva.AutoScroll = true;
+            this.flowLayoutPanelReserva.Controls.Add(this.groupBox2);
             this.flowLayoutPanelReserva.Location = new System.Drawing.Point(280, 57);
             this.flowLayoutPanelReserva.Name = "flowLayoutPanelReserva";
             this.flowLayoutPanelReserva.Size = new System.Drawing.Size(772, 475);
             this.flowLayoutPanelReserva.TabIndex = 6;
-            this.flowLayoutPanelReserva.BindingContextChanged += new System.EventHandler(this.flowLayoutPanelReserva_BindingContextChanged);
-            this.flowLayoutPanelReserva.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.flowLayoutPanelReserva_ControlRemoved);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(0, 0);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox1";
             // 
             // flowLayoutPanelQuartos
             // 
@@ -93,7 +102,7 @@
             // 
             // buttonBuscarTipo
             // 
-            this.buttonBuscarTipo.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscarTipo.BackColor = System.Drawing.SystemColors.Control;
             this.buttonBuscarTipo.FlatAppearance.BorderSize = 0;
             this.buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarTipo.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarTipo.Image")));
@@ -111,7 +120,7 @@
             this.buttonCadastrarReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.buttonCadastrarReserva.FlatAppearance.BorderSize = 0;
             this.buttonCadastrarReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCadastrarReserva.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastrarReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCadastrarReserva.ForeColor = System.Drawing.Color.White;
             this.buttonCadastrarReserva.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrarReserva.Image")));
             this.buttonCadastrarReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,6 +132,14 @@
             this.buttonCadastrarReserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCadastrarReserva.UseVisualStyleBackColor = false;
             this.buttonCadastrarReserva.Click += new System.EventHandler(this.buttonCadastrarReserva_Click);
+            // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            // 
+            // quartoBindingSource
+            // 
+            this.quartoBindingSource.DataSource = typeof(Models.Quarto);
             // 
             // cor_verde
             // 
@@ -175,24 +192,10 @@
             this.cor_vermelha.Size = new System.Drawing.Size(10, 10);
             this.cor_vermelha.TabIndex = 8;
             // 
-            // reservaBindingSource
-            // 
-            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
-            // 
-            // quartoBindingSource
-            // 
-            this.quartoBindingSource.DataSource = typeof(Models.Quarto);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // FormReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1064, 567);
             this.Controls.Add(this.ocupado);
             this.Controls.Add(this.reservado);
@@ -217,6 +220,7 @@
             this.Text = "HOTELOGIX - Reservas";
             this.Load += new System.EventHandler(this.FormReserva_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormReserva_KeyDown);
+            this.flowLayoutPanelReserva.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -231,6 +235,7 @@
         private System.Windows.Forms.ComboBox comboBoxBuscarTipo;
         private System.Windows.Forms.BindingSource reservaBindingSource;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelReserva;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelQuartos;
         private System.Windows.Forms.BindingSource quartoBindingSource;
         private System.Windows.Forms.Label cor_verde;
@@ -239,6 +244,5 @@
         private System.Windows.Forms.Label ocupado;
         private System.Windows.Forms.Label cor_amarela;
         private System.Windows.Forms.Label cor_vermelha;
-        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -39,7 +39,7 @@ namespace WindowsFormsAppGestaoHotel
               switch(comboBoxBuscar.SelectedIndex)
                 {
                     case 0:
-                             relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckin(dateTimePicker1.Value);
+                        relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckin(dateTimePicker1.Value);
                         break;
                     case 1:
                         relatorioBindingSource.DataSource = new RelatorioBLL().DataCheckout(dateTimePicker1.Value);
