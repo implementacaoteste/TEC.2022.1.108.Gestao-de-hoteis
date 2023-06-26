@@ -17,6 +17,9 @@ namespace Models
         public int Id_Status { get; set; }
         public string Status { get; set; }
         public string Andar { get; set; }
-        public List<Diaria> Diarias { get; set; }
+        public DateTime Dt_Ent_Checkin { get; set; }
+        public DateTime Dt_Sai_Checkout { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
     }
 }
