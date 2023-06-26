@@ -33,12 +33,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.classeDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.Selecionar = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.classeDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(543, 57);
+            this.label1.Size = new System.Drawing.Size(543, 72);
             this.label1.TabIndex = 0;
             this.label1.Text = "Consultar Classe";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,7 +60,7 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(11, 76);
+            this.textBox1.Location = new System.Drawing.Point(11, 77);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -79,67 +79,15 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.classeDataGridView1.DataSource = this.classeBindingSource;
-            this.classeDataGridView1.Location = new System.Drawing.Point(7, 115);
+            this.classeDataGridView1.Location = new System.Drawing.Point(11, 115);
             this.classeDataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.classeDataGridView1.Name = "classeDataGridView1";
             this.classeDataGridView1.ReadOnly = true;
+            this.classeDataGridView1.RowHeadersVisible = false;
             this.classeDataGridView1.RowHeadersWidth = 51;
             this.classeDataGridView1.RowTemplate.Height = 24;
-            this.classeDataGridView1.Size = new System.Drawing.Size(527, 179);
+            this.classeDataGridView1.Size = new System.Drawing.Size(521, 179);
             this.classeDataGridView1.TabIndex = 4;
-            // 
-            // classeBindingSource
-            // 
-            this.classeBindingSource.DataSource = typeof(Models.Classe);
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.close_bk;
-            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(414, 313);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(120, 33);
-            this.buttonCancelar.TabIndex = 5;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCancelar.UseVisualStyleBackColor = false;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            this.buttonCancelar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonCancelar_KeyDown);
-            // 
-            // Selecionar
-            // 
-            this.Selecionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(234)))), ((int)(((byte)(205)))));
-            this.Selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Selecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Selecionar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.check_bk1;
-            this.Selecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Selecionar.Location = new System.Drawing.Point(406, 74);
-            this.Selecionar.Margin = new System.Windows.Forms.Padding(2);
-            this.Selecionar.Name = "Selecionar";
-            this.Selecionar.Size = new System.Drawing.Size(128, 33);
-            this.Selecionar.TabIndex = 3;
-            this.Selecionar.Text = "Selecionar";
-            this.Selecionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Selecionar.UseVisualStyleBackColor = false;
-            // 
-            // buttonBuscar
-            // 
-            this.buttonBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.buttonBuscar.FlatAppearance.BorderSize = 0;
-            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk;
-            this.buttonBuscar.Location = new System.Drawing.Point(288, 74);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(30, 30);
-            this.buttonBuscar.TabIndex = 2;
-            this.buttonBuscar.UseVisualStyleBackColor = false;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -159,6 +107,63 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // classeBindingSource
+            // 
+            this.classeBindingSource.DataSource = typeof(Models.Classe);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(77)))), ((int)(((byte)(87)))));
+            this.buttonCancelar.FlatAppearance.BorderSize = 0;
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.ForeColor = System.Drawing.Color.White;
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelar.Location = new System.Drawing.Point(382, 313);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(150, 33);
+            this.buttonCancelar.TabIndex = 5;
+            this.buttonCancelar.Text = "CANCELAR";
+            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            this.buttonCancelar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonCancelar_KeyDown);
+            // 
+            // Selecionar
+            // 
+            this.Selecionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(122)))));
+            this.Selecionar.FlatAppearance.BorderSize = 0;
+            this.Selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Selecionar.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Selecionar.ForeColor = System.Drawing.Color.White;
+            this.Selecionar.Image = ((System.Drawing.Image)(resources.GetObject("Selecionar.Image")));
+            this.Selecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Selecionar.Location = new System.Drawing.Point(372, 74);
+            this.Selecionar.Margin = new System.Windows.Forms.Padding(2);
+            this.Selecionar.Name = "Selecionar";
+            this.Selecionar.Size = new System.Drawing.Size(160, 33);
+            this.Selecionar.TabIndex = 3;
+            this.Selecionar.Text = "SELECIONAR";
+            this.Selecionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Selecionar.UseVisualStyleBackColor = false;
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscar.FlatAppearance.BorderSize = 0;
+            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk;
+            this.buttonBuscar.Location = new System.Drawing.Point(288, 75);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(30, 30);
+            this.buttonBuscar.TabIndex = 2;
+            this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // FormConsultaClasse
             // 
