@@ -86,5 +86,13 @@ namespace WindowsFormsAppGestaoHotel
         {
             contasPagarBindingSource.AddNew();
         }
+
+        private void FormContaPagar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }
