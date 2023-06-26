@@ -37,7 +37,7 @@
             System.Windows.Forms.Label cPFLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label idLabel1;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarCliente));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
@@ -239,7 +239,7 @@
             // 
             // buttonBuscarCliente
             // 
-            this.buttonBuscarCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonBuscarCliente.BackColor = System.Drawing.Color.Transparent;
             this.buttonBuscarCliente.FlatAppearance.BorderSize = 0;
             this.buttonBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,8 +319,8 @@
             // 
             this.cPFDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.cPFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.NullValue = "0";
+            this.cPFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
             this.cPFDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
@@ -527,36 +527,38 @@
             // 
             // buttonAlterarCliente
             // 
-            this.buttonAlterarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.buttonAlterarCliente.BackColor = System.Drawing.Color.Gold;
+            this.buttonAlterarCliente.FlatAppearance.BorderSize = 0;
             this.buttonAlterarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAlterarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAlterarCliente.ForeColor = System.Drawing.Color.Black;
+            this.buttonAlterarCliente.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAlterarCliente.ForeColor = System.Drawing.Color.White;
             this.buttonAlterarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarCliente.Image")));
             this.buttonAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAlterarCliente.Location = new System.Drawing.Point(214, 758);
+            this.buttonAlterarCliente.Location = new System.Drawing.Point(249, 758);
             this.buttonAlterarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterarCliente.Name = "buttonAlterarCliente";
-            this.buttonAlterarCliente.Size = new System.Drawing.Size(160, 41);
+            this.buttonAlterarCliente.Size = new System.Drawing.Size(176, 41);
             this.buttonAlterarCliente.TabIndex = 4;
-            this.buttonAlterarCliente.Text = "Alterar";
+            this.buttonAlterarCliente.Text = "ALTERAR";
             this.buttonAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAlterarCliente.UseVisualStyleBackColor = false;
             this.buttonAlterarCliente.Click += new System.EventHandler(this.buttonAlterarCliente_Click);
             // 
             // buttonExcluirCliente
             // 
-            this.buttonExcluirCliente.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonExcluirCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(77)))), ((int)(((byte)(87)))));
+            this.buttonExcluirCliente.FlatAppearance.BorderSize = 0;
             this.buttonExcluirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirCliente.ForeColor = System.Drawing.Color.Black;
+            this.buttonExcluirCliente.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluirCliente.ForeColor = System.Drawing.Color.White;
             this.buttonExcluirCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirCliente.Image")));
             this.buttonExcluirCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirCliente.Location = new System.Drawing.Point(416, 758);
+            this.buttonExcluirCliente.Location = new System.Drawing.Point(441, 758);
             this.buttonExcluirCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirCliente.Name = "buttonExcluirCliente";
-            this.buttonExcluirCliente.Size = new System.Drawing.Size(160, 41);
+            this.buttonExcluirCliente.Size = new System.Drawing.Size(200, 41);
             this.buttonExcluirCliente.TabIndex = 5;
-            this.buttonExcluirCliente.Text = "Excluir";
+            this.buttonExcluirCliente.Text = "EXCLUIR";
             this.buttonExcluirCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirCliente.UseVisualStyleBackColor = false;
             this.buttonExcluirCliente.Click += new System.EventHandler(this.buttonExcluirCliente_Click);
@@ -565,17 +567,18 @@
             // buttonAdicionarCliente
             // 
             this.buttonAdicionarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(210)))), ((int)(((byte)(156)))));
+            this.buttonAdicionarCliente.FlatAppearance.BorderSize = 0;
             this.buttonAdicionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdicionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdicionarCliente.ForeColor = System.Drawing.Color.Black;
+            this.buttonAdicionarCliente.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionarCliente.ForeColor = System.Drawing.Color.White;
             this.buttonAdicionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarCliente.Image")));
             this.buttonAdicionarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAdicionarCliente.Location = new System.Drawing.Point(22, 758);
             this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
-            this.buttonAdicionarCliente.Size = new System.Drawing.Size(171, 41);
+            this.buttonAdicionarCliente.Size = new System.Drawing.Size(200, 41);
             this.buttonAdicionarCliente.TabIndex = 3;
-            this.buttonAdicionarCliente.Text = "Adicionar";
+            this.buttonAdicionarCliente.Text = "ADICIONAR";
             this.buttonAdicionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarCliente.UseVisualStyleBackColor = false;
             this.buttonAdicionarCliente.Click += new System.EventHandler(this.buttonAdicionarCliente_Click);
@@ -588,7 +591,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(653, 810);
             this.Controls.Add(this.buttonAlterarCliente);
             this.Controls.Add(this.buttonExcluirCliente);
@@ -598,7 +601,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(594, 803);
