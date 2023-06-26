@@ -73,8 +73,8 @@ namespace WindowsFormsPrincipal1
 
         private void buttonExcluirGrupoFuncionario_Click(object sender, EventArgs e)
         {
-            try
-            {
+           // try
+           // {
                 if (grupoFuncionarioBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Não existe registro para ser excluído");
@@ -85,16 +85,15 @@ namespace WindowsFormsPrincipal1
                     return;
 
                 int id = ((GrupoFuncionario)grupoFuncionarioBindingSource.Current).Id;
-                new FuncionarioBLL().Excluir(id);
+                new GrupoFuncionarioBLL().Excluir(id);
                 grupoFuncionarioBindingSource.RemoveCurrent();
-
                 MessageBox.Show("Registro excluído com sucesso!");
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
+           // }
+          //  catch(Exception ex)
+          //  {
+          //      MessageBox.Show(ex.Message);
+          //  }
+
         }
 
         private void buttonAdicionarPermissão_Click(object sender, EventArgs e)

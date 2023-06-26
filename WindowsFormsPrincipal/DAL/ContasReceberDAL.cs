@@ -21,11 +21,10 @@ namespace DAL
                 cmd.CommandText = @"UPDATE CONTAS_A_RECEBER SET DESCRICAO = @DESCRICAO, VALOR = @VALOR, ID_CLIENTE = @ID_CLIENTE, ID_FUNCIONARIO = @ID_FUNCIONARIO
                                         @DATA_VENCIMENTO = DATA_VENCIMENTO, @RECEBIDO = RECEBIDO
                                         WHERE ID = @ID";
-
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DESCRICAO", _contasReceber.Descricao);
                 cmd.Parameters.AddWithValue("@VALOR", _contasReceber.Valor);
-                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasReceber.Id_Cliente);
+                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasReceber.Id_Hospede);
                 cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _contasReceber.Id_Funcionario);
                 cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _contasReceber.Data_Vencimento);
                 cmd.Parameters.AddWithValue("@PAGAR", _contasReceber.Receber);
@@ -53,11 +52,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @" SELECT CONTAS_A_RECEBER.ID,  CONTAS_A_RECEBER.DESCRICAO,  CONTAS_A_RECEBER.VALOR,  CONTAS_A_RECEBER.ID_CLIENTE,  
-                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME FUNCIONARIO_NOME, CLIENTE.NOME CLIENTE_NOME
-                                    FROM CONTAS_A_RECEBER                                    
-                                    INNER JOIN FUNCIONARIO ON CONTAS_A_RECEBER.ID_FUNCIONARIO = FUNCIONARIO.ID
-                                    INNER JOIN CLIENTE ON CONTAS_A_RECEBER.ID_CLIENTE = CLIENTE.ID";
+                cmd.CommandText = @"SELECT CA.ID,  CA.DESCRICAO,  CA.VALOR,  CA.ID_CLIENTE,  
+                                    CA.ID_FUNCIONARIO,  CA.DATA_VENCIMENTO,  CA.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
+                                    FROM CONTAS_A_RECEBER CA                                
+                                    INNER JOIN FUNCIONARIO F ON CA.ID_FUNCIONARIO = F.ID
+                                    INNER JOIN CLIENTE C ON CA.ID_CLIENTE = C.ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -67,12 +66,12 @@ namespace DAL
                     {
                         contasReceber = new ContasReceber();
                         contasReceber.Id = Convert.ToInt32(rd["ID"]);
-                        contasReceber.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        contasReceber.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         contasReceber.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         contasReceber.Descricao = rd["DESCRICAO"].ToString();
-                        contasReceber.Nome_funcionario = rd["FUNCIONARIO_NOME"].ToString();
+                        contasReceber.Nome_Funcionario = rd["FUNCIONARIO_NOME"].ToString();
                         contasReceber.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
-                        contasReceber.Valor = (double)rd["VALOR"];
+                        contasReceber.Valor = (decimal)rd["VALOR"];
                         contasReceber.Receber = Convert.ToBoolean(rd["RECEBIDO"]);
                         contasReceber.Data_Vencimento = Convert.ToDateTime(rd["DATA_VENCIMENTO"]);
                         contasRecebers.Add(contasReceber);
@@ -90,7 +89,7 @@ namespace DAL
             }
         }
 
-        public List<ContasReceber> BuscarPorData(DateTime _data)
+        public List<ContasReceber> BuscarPorData(DateTime _dataInicial, DateTime _dataFinal)
         {
             List<ContasReceber> contasRecebers = new List<ContasReceber>();
             ContasReceber contasReceber;
@@ -99,15 +98,15 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @" SELECT CONTAS_A_RECEBER.ID,  CONTAS_A_RECEBER.DESCRICAO,  CONTAS_A_RECEBER.VALOR,  CONTAS_A_RECEBER.ID_CLIENTE,  
-                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME FUNCIONARIO_NOME , CLIENTE.NOME CLIENTE_NOME
-                                    FROM CONTAS_A_RECEBER                                    
-                                    INNER JOIN FUNCIONARIO ON CONTAS_A_RECEBER.ID_FUNCIONARIO = FUNCIONARIO.ID
-                                    INNER JOIN CLIENTE ON CONTAS_A_RECEBER.ID_CLIENTE = CLIENTE.ID
-                                          WHERE CONTAS_A_RECEBER.DATA_VENCIMENTO = @DATA_VENCIMENTO";
-
+                cmd.CommandText = @"SELECT CR.ID,  CR.DESCRICAO,  CR.VALOR,  CR.ID_CLIENTE,  
+                                    CR.ID_FUNCIONARIO,  CR.DATA_VENCIMENTO,  CR.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
+                                    FROM CONTAS_A_RECEBER CR                               
+                                    INNER JOIN FUNCIONARIO F ON CR.ID_FUNCIONARIO = F.ID
+                                    INNER JOIN CLIENTE C ON CR.ID_CLIENTE = C.ID
+                                    WHERE CR.DATA_VENCIMENTO BETWEEN @DATA_INICIAL AND @DATA_FINAL";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _data.Date);
+                cmd.Parameters.AddWithValue("@DATA_INICIAL", _dataInicial.Date);
+                cmd.Parameters.AddWithValue("@DATA_FINAL", _dataFinal.Date);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -116,12 +115,12 @@ namespace DAL
                     {
                         contasReceber = new ContasReceber();
                         contasReceber.Id = Convert.ToInt32(rd["ID"]);
-                        contasReceber.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        contasReceber.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         contasReceber.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         contasReceber.Descricao = rd["DESCRICAO"].ToString();
-                        contasReceber.Nome_funcionario = rd["FUNCIONARIO_NOME"].ToString();
+                        contasReceber.Nome_Funcionario = rd["FUNCIONARIO_NOME"].ToString();
                         contasReceber.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
-                        contasReceber.Valor = (double)rd["VALOR"];
+                        contasReceber.Valor = (decimal)rd["VALOR"];
                         contasReceber.Receber = Convert.ToBoolean(rd["RECEBIDO"]);
                         contasReceber.Data_Vencimento = Convert.ToDateTime(rd["DATA_VENCIMENTO"]);
                         contasRecebers.Add(contasReceber);
@@ -148,13 +147,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @" SELECT CONTAS_A_RECEBER.ID,  CONTAS_A_RECEBER.DESCRICAO,  CONTAS_A_RECEBER.VALOR,  CONTAS_A_RECEBER.ID_CLIENTE,  
-                                     CONTAS_A_RECEBER.ID_FUNCIONARIO,  CONTAS_A_RECEBER.DATA_VENCIMENTO,  CONTAS_A_RECEBER.RECEBIDO, FUNCIONARIO.NOME FUNCIONARIO_NOME, CLIENTE.NOME CLIENTE_NOME
-                                    FROM CONTAS_A_RECEBER                                    
-                                    INNER JOIN FUNCIONARIO ON CONTAS_A_RECEBER.ID_FUNCIONARIO = FUNCIONARIO.ID
-                                    INNER JOIN CLIENTE ON CONTAS_A_RECEBER.ID_CLIENTE = CLIENTE.ID
-                                          WHERE CONTAS_A_RECEBER.RECEBIDO = @RECEBIDO";
-
+                cmd.CommandText = @"SELECT CA.ID,  CA.DESCRICAO,  CA.VALOR,  CA.ID_CLIENTE,  
+                                    CA.ID_FUNCIONARIO,  CA.DATA_VENCIMENTO,  CA.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
+                                    FROM CONTAS_A_RECEBER CA                                
+                                    INNER JOIN FUNCIONARIO F ON CA.ID_FUNCIONARIO = F.ID
+                                    INNER JOIN CLIENTE C ON CA.ID_CLIENTE = C.ID
+                                    WHERE CA.RECEBIDO = @RECEBIDO";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@RECEBIDO", _receber);
                 cn.Open();
@@ -165,12 +163,12 @@ namespace DAL
                     {
                         contasReceber = new ContasReceber();
                         contasReceber.Id = Convert.ToInt32(rd["ID"]);
-                        contasReceber.Id_Cliente = Convert.ToInt32(rd["ID_CLIENTE"]);
+                        contasReceber.Id_Hospede = Convert.ToInt32(rd["ID_CLIENTE"]);
                         contasReceber.Id_Funcionario = Convert.ToInt32(rd["ID_FUNCIONARIO"]);
                         contasReceber.Descricao = rd["DESCRICAO"].ToString();
-                        contasReceber.Nome_funcionario = rd["FUNCIONARIO_NOME"].ToString();
+                        contasReceber.Nome_Funcionario = rd["FUNCIONARIO_NOME"].ToString();
                         contasReceber.Nome_Hospede = rd["CLIENTE_NOME"].ToString();
-                        contasReceber.Valor = (double)rd["VALOR"];
+                        contasReceber.Valor = (decimal)rd["VALOR"];
                         contasReceber.Receber = Convert.ToBoolean(rd["RECEBIDO"]);
                         contasReceber.Data_Vencimento = Convert.ToDateTime(rd["DATA_VENCIMENTO"]);
                         contasRecebers.Add(contasReceber);
@@ -223,7 +221,7 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@VALOR", _contasReceber.Valor);
                 cmd.Parameters.AddWithValue("@DESCRICAO", _contasReceber.Descricao);
-                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasReceber.Id_Cliente);
+                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasReceber.Id_Hospede);
                 cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _contasReceber.Id_Funcionario);
                 cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _contasReceber.Data_Vencimento);
                 cmd.Parameters.AddWithValue("@RECEBIDO", _contasReceber.Receber);
@@ -237,7 +235,7 @@ namespace DAL
             }
             finally
             {
-
+                cn.Close();
             }
         }
     }

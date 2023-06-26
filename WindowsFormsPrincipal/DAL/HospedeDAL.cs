@@ -2,6 +2,7 @@
 using Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
@@ -42,29 +43,137 @@ namespace DALL
                 cn.Close();
             }
         }
-        public void Excluir(int _id)
+        public void Excluir(int _id, SqlTransaction _transaction = null)
         {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM CLIENTE 
-                                    WHERE ID= @Id";
-                cmd.CommandType = System.Data.CommandType.Text;
-                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@Id", _id);
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM CLIENTE WHERE ID = @ID", cn))
+                {
+                    try
+                    {
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        cmd.Parameters.AddWithValue("@ID", _id);
 
-                cmd.Connection = cn;
-                cn.Open();
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
 
-                cmd.ExecuteNonQuery();
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        RemoverReservas(_id, transaction);
+                        RemoverConstasPagar(_id, transaction);
+                        RemoverConstasReceber(_id, transaction);
+                        cmd.ExecuteNonQuery();
+
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Ocorreu erro ao tentar excluir um Hóspede no Banco de Dados.", ex);
+                    }
+                }
             }
-            catch (Exception ex)
+        }
+        private void RemoverReservas(int _id, SqlTransaction _transaction)
+        {
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                throw new Exception("Ocorreu erro ao tentar excluir um hóspede no Banco de Dados.", ex);
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM RESERVA WHERE ID_CLIENTE = @ID_CLIENTE", cn))
+                {
+                    cmd.Parameters.AddWithValue("@ID_CLIENTE", _id);
+
+                    if (transaction == null)
+                    {
+                        cn.Open();
+                        transaction = cn.BeginTransaction();
+                    }
+
+                    cmd.Transaction = transaction;
+                    cmd.Connection = transaction.Connection;
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Ocorreu erro ao tentar excluir um Hóspede no Banco de Dados.", ex);
+                    }
+                }
             }
-            finally
+        }
+        private void RemoverConstasPagar(int _id, SqlTransaction _transaction)
+        {
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                cn.Close();
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM CONTAS_A_PAGAR WHERE ID_CLIENTE = @ID_CLIENTE", cn))
+                {
+                    cmd.Parameters.AddWithValue("@ID_CLIENTE", _id);
+
+                    if (transaction == null)
+                    {
+                        cn.Open();
+                        transaction = cn.BeginTransaction();
+                    }
+
+                    cmd.Transaction = transaction;
+                    cmd.Connection = transaction.Connection;
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Ocorreu erro ao tentar excluir um Hóspede no Banco de Dados.", ex);
+                    }
+                }
+            }
+        }
+        private void RemoverConstasReceber(int _id, SqlTransaction _transaction)
+        {
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            {
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM CONTAS_A_RECEBER WHERE ID_CLIENTE = @ID_CLIENTE", cn))
+                {
+                    cmd.Parameters.AddWithValue("@ID_CLIENTE", _id);
+
+                    if (transaction == null)
+                    {
+                        cn.Open();
+                        transaction = cn.BeginTransaction();
+                    }
+
+                    cmd.Transaction = transaction;
+                    cmd.Connection = transaction.Connection;
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Ocorreu erro ao tentar excluir um Hóspede no Banco de Dados.", ex);
+                    }
+                }
             }
         }
         public void Alterar(Hospede _cliente)

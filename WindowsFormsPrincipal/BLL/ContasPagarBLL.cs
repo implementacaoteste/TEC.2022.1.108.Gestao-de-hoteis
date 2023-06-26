@@ -13,29 +13,15 @@ namespace BLL
     {
         public void Inserir(ContasPagar _contasPagar)
         {
-            ValidarDados(_contasPagar);
+            ValidarDados(_contasPagar.Data_Vencimento);
             new ContasPagarDAL().Inserir(_contasPagar);
         }
 
-        private void ValidarDados(ContasPagar _contasPagar)
+        private void ValidarDados(DateTime _dataVencimento)
         {
-            if (_contasPagar.Data_Vencimento.Year < DateTime.Now.Year)
-                throw new Exception("Ano não reconecido");
-
-            if (_contasPagar.Descricao == null)
-                throw new Exception("Informe a descrição");
-
-            if (_contasPagar.Descricao.Length < 5)
-                throw new Exception("A descrição deve ter pelo menos 5 caracteres");
-
-            if (_contasPagar.Valor <= 0)
-                throw new Exception("Valor deve ser maior que 0");
-
-            if (_contasPagar.Id_Cliente <= 0)
-                throw new Exception("Selecione o usuario de conta a pagar");
-
-            if (_contasPagar.Id_Funcionario <= 0)
-                throw new Exception("Selecione o funcionario");
+            if (_dataVencimento.Year < DateTime.Now.Year)
+                throw new Exception("Ano não reconecido") ;
+                return;
         }
 
         public void Alterar(ContasPagar _contasPagar)
@@ -51,9 +37,9 @@ namespace BLL
             return new ContasPagarDAL().BuscaPorTodos();
         }
 
-        public List<ContasPagar> BuscarPorData(DateTime _data)
+        public List<ContasPagar> BuscarPorData(DateTime _dataInicial, DateTime _dataFinal)
         {
-            return new ContasPagarDAL().BuscarPorData(_data);
+            return new ContasPagarDAL().BuscarPorData(_dataInicial, _dataFinal);
         }
         public List<ContasPagar> BuscarPorPagar(bool _pagar)
         {

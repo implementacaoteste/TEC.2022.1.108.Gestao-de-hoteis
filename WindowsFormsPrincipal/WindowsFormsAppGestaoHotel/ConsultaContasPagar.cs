@@ -16,26 +16,38 @@ namespace WindowsFormsAppGestaoHotel
         public ConsultaContasPagar()
         {
             InitializeComponent();
-            comboBoxBuscar.SelectedIndex = 0;
         }
 
-        private void buttonBuscar_Click(object sender, EventArgs e)
+        private void ConsultaContasPagar_Load(object sender, EventArgs e)
         {
             try
             {
-                switch (comboBoxBuscar.SelectedIndex)
+                comboBoxBuscarTipo.SelectedIndex = 0;
+                contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscaPorTodos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonBuscarTipo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (comboBoxBuscarTipo.SelectedIndex)
                 {
                     case 0:
                         contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscaPorTodos();
                         break;
                     case 1:
-                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorData(dateTimePickerBuscar.Value);
+                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorData(datePickerInicial.Value, datePickerFinal.Value);
                         break;
                     case 2:
-                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorPagar(true);
+                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorPagar(false);
                         break;
                     case 3:
-                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorPagar(false);
+                        contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscarPorPagar(true);
                         break;
                     default:
                         break;
@@ -66,7 +78,7 @@ namespace WindowsFormsAppGestaoHotel
         {
             if (e.KeyCode == Keys.Enter)
             {
-                buttonBuscar_Click(null, null);
+                buttonBuscarTipo_Click(null, null);
             }
 
             if(e.KeyCode == Keys.Escape)
