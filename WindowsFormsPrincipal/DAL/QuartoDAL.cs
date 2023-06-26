@@ -356,7 +356,7 @@ namespace DAL
         public List<Quarto> BuscarPorDia(DateTime _dia)
         {
             List<Quarto> quartos = new List<Quarto>();
-            Quarto quarto;
+            Quarto quarto = new Quarto();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -384,17 +384,20 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        quarto = new Quarto();
-                        quarto.Id = Convert.ToInt32(rd["ID"]);
-                        quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
-                        quarto.Classe = rd["CLASSE"].ToString();
-                        quarto.Numero = rd["NUMERO"].ToString();
-                        quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
-                        quarto.Andar = rd["ANDAR"].ToString();
-                        quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
-                        //quarto.Status = rd["STATUS"].ToString();
-                        quartos.Add(quarto);
+                        if (quarto.Numero != rd["NUMERO"].ToString())
+                        {
+                            quarto = new Quarto();
+                            quarto.Id = Convert.ToInt32(rd["ID"]);
+                            quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
+                            quarto.Classe = rd["CLASSE"].ToString();
+                            quarto.Numero = rd["NUMERO"].ToString();
+                            quarto.Descricao = rd["DESCRICAO"].ToString();
+                            quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
+                            quarto.Andar = rd["ANDAR"].ToString();
+                            quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
+                            //quarto.Status = rd["STATUS"].ToString();
+                            quartos.Add(quarto);
+                        }
                     }
                 }
                 return quartos;
@@ -408,24 +411,32 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime _dataEntrada, DateTime _dataSaida, string _classe)
+        public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime _dataEntrada, string _classe)
         {
             List<Quarto> quartos = new List<Quarto>();
-            Quarto quarto;
+            Quarto quarto = new Quarto();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Q.ID, Q.NUMERO, Q.ID_CLASSE,Q.DESCRICAO,Q.VALOR_DIARIA,Q.ANDAR,Q.ID_STATUS,C.CLASSE FROM QUARTO Q
-                                    INNER JOIN RESERVA R ON Q.ID = R.ID_QUARTO
-                                    INNER JOIN CLASSE C ON Q.ID_CLASSE = C.ID
-                                    WHERE (DT_ENT_RESERVA !> @dataEntrada OR DT_ENT_RESERVA != @dataEntrada)
-                                    AND (DT_SAI_RESERVA !< @dataSaida OR DT_SAI_RESERVA != @dataSaida) 
-                                    AND C.CLASSE = @classe";
+                cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, CLASSE.CLASSE, QUARTO.VALOR_DIARIA, QUARTO.ANDAR, RESERVA.DT_ENT_RESERVA, RESERVA.DT_SAI_RESERVA, RESERVA.DATA_CHECKIN, RESERVA.DATA_CHECKOUT,
+                                    CASE
+	                                    WHEN RESERVA.ID IS NULL OR RESERVA.DT_ENT_RESERVA > @Data THEN 'Disponível' 
+	                                    WHEN RESERVA.DATA_CHECKIN <= @Data AND RESERVA.DATA_CHECKOUT >= @Data THEN 'Ocupado'
+										WHEN RESERVA.DT_SAI_RESERVA <= @Data OR (RESERVA.DATA_CHECKOUT IS NOT NULL AND RESERVA.DATA_CHECKOUT <= @Data) THEN 'Disponível'
+	                                    --WHEN RESERVA.DATA_CHECKIN IS NULL THEN 'Reservado'
+	                                    WHEN RESERVA.DT_ENT_RESERVA <= @Data AND RESERVA.DT_SAI_RESERVA >= @Data AND DATA_CHECKIN IS NULL THEN 'Reservado'
+	                                    WHEN RESERVA.DT_ENT_RESERVA <= @Data AND RESERVA.DT_SAI_RESERVA >= @Data AND DATA_CHECKIN IS NOT NULL THEN 'Ocupado'
+	                                    END AS STATUS
+                                    FROM QUARTO
+                                    INNER JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
+                                    LEFT JOIN RESERVA_QUARTO ON QUARTO.ID = RESERVA_QUARTO.ID_QUARTO
+                                    LEFT JOIN  RESERVA ON RESERVA_QUARTO.ID_RESERVA = RESERVA.ID
+                                    LEFT JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
+                                    WHERE QUARTO.ID_STATUS <> 4 AND CLASSE.CLASSE = @Classe";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@dataEntrada", _dataEntrada.Date);
-                cmd.Parameters.AddWithValue("@dataSaida", _dataSaida.Date);
+                cmd.Parameters.AddWithValue("@Data", _dataEntrada.Date);
                 cmd.Parameters.AddWithValue("@classe", _classe);
                 cn.Open();
 
@@ -433,15 +444,33 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        quarto = new Quarto();
-                        quarto.Id = Convert.ToInt32(rd["ID"]);
-                        quarto.Numero = rd["NUMERO"].ToString();
-                        quarto.Classe = rd["CLASSE"].ToString();
-                        quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
-                        quarto.Descricao = rd["DESCRICAO"].ToString();
-                        quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
-                        quarto.Andar = rd["ANDAR"].ToString();
-                        quartos.Add(quarto);
+                        if (rd["NUMERO"].ToString() != quarto.Numero || rd["STATUS"].ToString() == "Reservado" || rd["STATUS"].ToString() == "Ocupado")
+                        {
+                            if (rd["NUMERO"].ToString() == quarto.Numero)
+                                quartos.Remove(quarto);
+
+                            quarto = new Quarto();
+                            quarto.Id = Convert.ToInt32(rd["ID"]);
+                            quarto.Numero = rd["NUMERO"].ToString();
+                            quarto.Classe = rd["CLASSE"].ToString();
+                            quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
+                            quarto.Andar = rd["ANDAR"].ToString();
+
+                            if (rd["DT_ENT_RESERVA"].ToString() != "")
+                                quarto.Dt_Ent_Checkin = Convert.ToDateTime(rd["DT_ENT_RESERVA"]);
+
+                            if (rd["DATA_CHECKIN"].ToString() != "")
+                                quarto.Dt_Sai_Checkout = Convert.ToDateTime(rd["DT_SAI_RESERVA"]);
+
+                            if (rd["DATA_CHECKIN"].ToString() != "")
+                                quarto.CheckIn = Convert.ToDateTime(rd["DATA_CHECKIN"]);
+
+                            if (rd["DATA_CHECKOUT"].ToString() != "")
+                                quarto.CheckOut = Convert.ToDateTime(rd["DATA_CHECKOUT"]);
+
+                            quarto.Status = rd["STATUS"].ToString();
+                            quartos.Add(quarto);
+                        }
                     }
                 }
                 return quartos;

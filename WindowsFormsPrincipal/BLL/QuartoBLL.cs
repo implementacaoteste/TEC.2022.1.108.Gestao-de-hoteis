@@ -45,10 +45,10 @@ namespace BLL
         {
             return new QuartoDAL().BuscarPorDia(_dia);
         }
-        public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime _dataEntrada, DateTime _dataSaida,  string _classe)
+        public List<Quarto> BuscarQuartoDisponivelPorPeriodo(DateTime _dataEntrada,  string _classe)
         {
-            ValidarDados(_dataEntrada,_dataSaida);
-            return new QuartoDAL().BuscarQuartoDisponivelPorPeriodo(_dataEntrada,_dataSaida,_classe);
+            //ValidarDados(_dataEntrada);
+            return new QuartoDAL().BuscarQuartoDisponivelPorPeriodo(_dataEntrada, _classe);
         }
 
         private void ValidarDados(DateTime dataEntrada, DateTime dataSaida)
