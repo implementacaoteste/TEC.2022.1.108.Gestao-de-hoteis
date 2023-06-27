@@ -82,7 +82,7 @@
             // 
             pagamentoLabel.AutoSize = true;
             pagamentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pagamentoLabel.Location = new System.Drawing.Point(485, 20);
+            pagamentoLabel.Location = new System.Drawing.Point(483, 20);
             pagamentoLabel.Name = "pagamentoLabel";
             pagamentoLabel.Size = new System.Drawing.Size(103, 20);
             pagamentoLabel.TabIndex = 10;
@@ -131,6 +131,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(labelNomeHospedes);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(10, 199);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(623, 142);
@@ -153,6 +154,7 @@
             this.groupBox1.Controls.Add(qtd_HospedesLabel);
             this.groupBox1.Controls.Add(valor_TotalLabel);
             this.groupBox1.Controls.Add(this.valor_TotalTextBox);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(10, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(623, 186);
@@ -187,16 +189,16 @@
             // buttonCheckin
             // 
             this.buttonCheckin.AutoSize = true;
-            this.buttonCheckin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.buttonCheckin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(177)))), ((int)(((byte)(229)))));
             this.buttonCheckin.FlatAppearance.BorderSize = 0;
             this.buttonCheckin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCheckin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCheckin.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCheckin.ForeColor = System.Drawing.Color.White;
-            this.buttonCheckin.Location = new System.Drawing.Point(505, 125);
+            this.buttonCheckin.Location = new System.Drawing.Point(487, 119);
             this.buttonCheckin.Name = "buttonCheckin";
-            this.buttonCheckin.Size = new System.Drawing.Size(103, 32);
+            this.buttonCheckin.Size = new System.Drawing.Size(121, 32);
             this.buttonCheckin.TabIndex = 14;
-            this.buttonCheckin.Text = "Check Out";
+            this.buttonCheckin.Text = "CHECK OUT";
             this.buttonCheckin.UseVisualStyleBackColor = false;
             this.buttonCheckin.Click += new System.EventHandler(this.buttonCheckout_Click);
             // 

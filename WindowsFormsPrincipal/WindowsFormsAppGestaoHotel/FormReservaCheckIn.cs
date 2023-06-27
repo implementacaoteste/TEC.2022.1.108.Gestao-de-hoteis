@@ -36,8 +36,6 @@ namespace WindowsFormsAppGestaoHotel
                 hospede = ((Reserva)reservaBindingSource.Current).Nome_Hospede;
                 this.Text = "Check In: " + hospede;
                 mascaraMoeda();
-
-                 //= hospede;
             }
             catch (Exception ex)
             {

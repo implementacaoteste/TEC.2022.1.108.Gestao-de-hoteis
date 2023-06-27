@@ -79,12 +79,12 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.buttonOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(177)))), ((int)(((byte)(229)))));
             this.buttonOK.FlatAppearance.BorderSize = 0;
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOK.ForeColor = System.Drawing.Color.White;
-            this.buttonOK.Location = new System.Drawing.Point(523, 364);
+            this.buttonOK.Location = new System.Drawing.Point(501, 361);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(103, 41);
             this.buttonOK.TabIndex = 0;
@@ -94,14 +94,16 @@
             // 
             // buttonSuporte
             // 
-            this.buttonSuporte.BackColor = System.Drawing.Color.Teal;
-            this.buttonSuporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.09091F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSuporte.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSuporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(177)))), ((int)(((byte)(229)))));
+            this.buttonSuporte.FlatAppearance.BorderSize = 0;
+            this.buttonSuporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSuporte.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSuporte.ForeColor = System.Drawing.Color.White;
             this.buttonSuporte.Image = ((System.Drawing.Image)(resources.GetObject("buttonSuporte.Image")));
             this.buttonSuporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSuporte.Location = new System.Drawing.Point(9, 364);
+            this.buttonSuporte.Location = new System.Drawing.Point(30, 361);
             this.buttonSuporte.Name = "buttonSuporte";
-            this.buttonSuporte.Size = new System.Drawing.Size(158, 41);
+            this.buttonSuporte.Size = new System.Drawing.Size(130, 33);
             this.buttonSuporte.TabIndex = 1;
             this.buttonSuporte.Text = "Suporte";
             this.buttonSuporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

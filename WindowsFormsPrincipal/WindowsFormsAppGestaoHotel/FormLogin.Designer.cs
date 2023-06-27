@@ -65,7 +65,6 @@
             this.pictureBox2.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.Form_Login;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBoxEntrar
             // 
@@ -90,9 +89,10 @@
             // 
             // buttonsSuporte
             // 
-            this.buttonsSuporte.BackColor = System.Drawing.Color.Teal;
+            this.buttonsSuporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(177)))), ((int)(((byte)(229)))));
+            this.buttonsSuporte.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonsSuporte, "buttonsSuporte");
-            this.buttonsSuporte.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonsSuporte.ForeColor = System.Drawing.Color.White;
             this.buttonsSuporte.Name = "buttonsSuporte";
             this.buttonsSuporte.UseVisualStyleBackColor = false;
             this.buttonsSuporte.Click += new System.EventHandler(this.buttonsSuporte_Click);

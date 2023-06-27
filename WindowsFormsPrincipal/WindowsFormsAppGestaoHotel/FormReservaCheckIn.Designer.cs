@@ -255,6 +255,7 @@
             this.groupBox1.Controls.Add(qtd_HospedesLabel);
             this.groupBox1.Controls.Add(valor_TotalLabel);
             this.groupBox1.Controls.Add(this.valor_TotalTextBox);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(623, 181);
@@ -265,14 +266,14 @@
             // buttonCheckin
             // 
             this.buttonCheckin.AutoSize = true;
-            this.buttonCheckin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.buttonCheckin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(177)))), ((int)(((byte)(229)))));
             this.buttonCheckin.FlatAppearance.BorderSize = 0;
             this.buttonCheckin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCheckin.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCheckin.ForeColor = System.Drawing.Color.White;
-            this.buttonCheckin.Location = new System.Drawing.Point(514, 126);
+            this.buttonCheckin.Location = new System.Drawing.Point(514, 125);
             this.buttonCheckin.Name = "buttonCheckin";
-            this.buttonCheckin.Size = new System.Drawing.Size(102, 32);
+            this.buttonCheckin.Size = new System.Drawing.Size(100, 32);
             this.buttonCheckin.TabIndex = 14;
             this.buttonCheckin.Text = "CHECK IN";
             this.buttonCheckin.UseVisualStyleBackColor = false;
@@ -309,6 +310,7 @@
             this.groupBox2.Controls.Add(nome_HospedeLabel);
             this.groupBox2.Controls.Add(this.nome_HospedeTextBox);
             this.groupBox2.Controls.Add(cPF_HopesdeLabel);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 199);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(623, 144);
@@ -339,7 +341,7 @@
             // buttonSalvarHospede
             // 
             this.buttonSalvarHospede.AutoSize = true;
-            this.buttonSalvarHospede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.buttonSalvarHospede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(122)))));
             this.buttonSalvarHospede.FlatAppearance.BorderSize = 0;
             this.buttonSalvarHospede.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalvarHospede.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -29,10 +29,7 @@ namespace WindowsFormsAppGestaoHotel
             {
                 reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
                 hospede = ((Reserva)reservaBindingSource.Current).Nome_Hospede;
-                this.Text = "Check In: " + hospede;
-
-
-
+                this.Text = "Check Out: " + hospede;
             }
             catch (Exception ex)
             {
