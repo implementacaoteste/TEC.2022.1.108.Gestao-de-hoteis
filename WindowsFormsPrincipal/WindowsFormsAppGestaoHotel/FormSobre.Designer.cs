@@ -148,6 +148,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(468, 329);
             this.Name = "FormSobre";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX ";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormSobre_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
