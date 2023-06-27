@@ -15,6 +15,9 @@ namespace WindowsFormsAppGestaoHotel
 {
     public partial class ListReserva : UserControl
     {
+        bool checkin;
+        bool checkout;
+
         public ListReserva()
         {
             InitializeComponent();
@@ -23,6 +26,8 @@ namespace WindowsFormsAppGestaoHotel
         private void ListReserva_Load(object sender, EventArgs e)
         {
             BuscaReserva();
+            checkin = false;
+            checkout = false;
         }
 
         private void pictureBoxCancelar_Click(object sender, EventArgs e)
@@ -127,16 +132,15 @@ namespace WindowsFormsAppGestaoHotel
         private void pictureBoxCheckIn_Click(object sender, EventArgs e)
         {
             int id = this.Id;
-            bool _checkin = false;
             using (FormReservaCheckIn frm = new FormReservaCheckIn(id))
             {
                 frm.ShowDialog();
-                /*((Reserva)reservaBindingSource.Current).Data_Checkin = frm.Data_CheckIn;
+                ((Reserva)reservaBindingSource.Current).Data_Checkin = frm.Data_CheckIn;
                 if (frm.Data_CheckIn != null)
-                    _checkin = true;*/
+                    checkin = true;
             }
             pictureBoxCheckIn.Enabled = false;
-            if (_checkin != true)
+            if (checkin)
                 pictureBoxCheckIn.Image = Properties.Resources.calendar_month_gray;
         }
 
@@ -150,9 +154,13 @@ namespace WindowsFormsAppGestaoHotel
                     using (FormReservaCheckOut frm = new FormReservaCheckOut(id))
                     {
                         frm.ShowDialog();
+                        ((Reserva)reservaBindingSource.Current).Data_Checkout = frm.Data_CheckOut;
+                        if (frm.Data_CheckOut != null)
+                            checkin = true;
                     }
                     pictureBoxCheckOut.Enabled = false;
-                    pictureBoxCheckOut.Image = Properties.Resources.calendar_month_gray;
+                    if (checkout)
+                        pictureBoxCheckOut.Image = Properties.Resources.calendar_month_gray;
                 }
                 else
                     throw new Exception("Faça primeiro o Check In!");

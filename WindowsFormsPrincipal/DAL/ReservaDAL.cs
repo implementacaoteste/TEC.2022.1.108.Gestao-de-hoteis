@@ -339,14 +339,57 @@ namespace DAL
             }
         }
 
-        public void CheckIn(Reserva reserva)
+        public void CheckIn(Reserva _reserva)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"UPDATE RESERVA SET ID_PAGAMENTO = @ID_PAGAMENTO, DATA_CHECKIN = @DATA_CHECKIN, OBS_CHECKIN = @OBS_CHECKIN WHERE ID = @ID";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@ID_PAGAMENTO", _reserva.Id_Pagamento);
+                cmd.Parameters.AddWithValue("@DATA_CHECKIN", DateTime.Now.Date);
+                cmd.Parameters.AddWithValue("@OBS_CHECKIN", _reserva.Obs_Checkin);
+                cmd.Parameters.AddWithValue("@ID", _reserva.Id);
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao realizar o Check In.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
-        public void CheckOut(Reserva reserva)
+        public void CheckOut(Reserva _reserva)
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"UPDATE RESERVA SET DATA_CHECKOUT = @DATA_CHECKOUT, OBS_CHECKOUT = @OBS_CHECKOUT WHERE ID = @ID";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@DATA_CHECKIN", DateTime.Now.Date);
+                cmd.Parameters.AddWithValue("@OBS_CHECKOUT", _reserva.Obs_Checkout);
+                cmd.Parameters.AddWithValue("@ID", _reserva.Id);
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao efetuar o Check Out.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         public Reserva BuscarPorId(int _id)
