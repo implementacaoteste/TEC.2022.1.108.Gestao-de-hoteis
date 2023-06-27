@@ -93,7 +93,7 @@
             // 
             // buttonBuscarTipo
             // 
-            this.buttonBuscarTipo.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscarTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(93)))), ((int)(((byte)(168)))));
             this.buttonBuscarTipo.FlatAppearance.BorderSize = 0;
             this.buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarTipo.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarTipo.Image")));

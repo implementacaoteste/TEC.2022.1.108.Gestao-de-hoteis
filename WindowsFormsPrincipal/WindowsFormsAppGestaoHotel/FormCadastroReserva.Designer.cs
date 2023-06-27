@@ -212,7 +212,7 @@
             this.id_HospedeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.id_HospedeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Nome_Hospede", true));
             this.id_HospedeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.id_HospedeTextBox.Location = new System.Drawing.Point(16, 96);
+            this.id_HospedeTextBox.Location = new System.Drawing.Point(16, 97);
             this.id_HospedeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.id_HospedeTextBox.Name = "id_HospedeTextBox";
             this.id_HospedeTextBox.Size = new System.Drawing.Size(413, 26);
@@ -301,7 +301,7 @@
             this.numero_QuartoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numero_QuartoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Numero_Quarto", true));
             this.numero_QuartoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.numero_QuartoTextBox.Location = new System.Drawing.Point(16, 157);
+            this.numero_QuartoTextBox.Location = new System.Drawing.Point(16, 158);
             this.numero_QuartoTextBox.Name = "numero_QuartoTextBox";
             this.numero_QuartoTextBox.Size = new System.Drawing.Size(106, 26);
             this.numero_QuartoTextBox.TabIndex = 29;
@@ -314,30 +314,32 @@
             // 
             // buttonSelecionarCliente
             // 
+            this.buttonSelecionarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(93)))), ((int)(((byte)(168)))));
             this.buttonSelecionarCliente.FlatAppearance.BorderSize = 0;
             this.buttonSelecionarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelecionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionarCliente.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarCliente.Image")));
-            this.buttonSelecionarCliente.Location = new System.Drawing.Point(434, 96);
+            this.buttonSelecionarCliente.Location = new System.Drawing.Point(434, 95);
             this.buttonSelecionarCliente.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSelecionarCliente.Name = "buttonSelecionarCliente";
-            this.buttonSelecionarCliente.Size = new System.Drawing.Size(30, 26);
+            this.buttonSelecionarCliente.Size = new System.Drawing.Size(30, 30);
             this.buttonSelecionarCliente.TabIndex = 6;
-            this.buttonSelecionarCliente.UseVisualStyleBackColor = true;
+            this.buttonSelecionarCliente.UseVisualStyleBackColor = false;
             this.buttonSelecionarCliente.Click += new System.EventHandler(this.buttonSelecionarCliente_Click);
             // 
             // buttonSelecionarQuarto
             // 
+            this.buttonSelecionarQuarto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(93)))), ((int)(((byte)(168)))));
             this.buttonSelecionarQuarto.FlatAppearance.BorderSize = 0;
             this.buttonSelecionarQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelecionarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarQuarto.Image")));
-            this.buttonSelecionarQuarto.Location = new System.Drawing.Point(126, 157);
+            this.buttonSelecionarQuarto.Location = new System.Drawing.Point(126, 156);
             this.buttonSelecionarQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarQuarto.Name = "buttonSelecionarQuarto";
-            this.buttonSelecionarQuarto.Size = new System.Drawing.Size(30, 26);
+            this.buttonSelecionarQuarto.Size = new System.Drawing.Size(30, 30);
             this.buttonSelecionarQuarto.TabIndex = 12;
-            this.buttonSelecionarQuarto.UseVisualStyleBackColor = true;
+            this.buttonSelecionarQuarto.UseVisualStyleBackColor = false;
             this.buttonSelecionarQuarto.Click += new System.EventHandler(this.buttonSelecionarQuarto_Click);
             // 
             // buttonCancelar
@@ -378,16 +380,17 @@
             // 
             // buttonSelecionarPagamento
             // 
+            this.buttonSelecionarPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(93)))), ((int)(((byte)(168)))));
             this.buttonSelecionarPagamento.FlatAppearance.BorderSize = 0;
             this.buttonSelecionarPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelecionarPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionarPagamento.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarPagamento.Image")));
-            this.buttonSelecionarPagamento.Location = new System.Drawing.Point(292, 218);
+            this.buttonSelecionarPagamento.Location = new System.Drawing.Point(294, 216);
             this.buttonSelecionarPagamento.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarPagamento.Name = "buttonSelecionarPagamento";
-            this.buttonSelecionarPagamento.Size = new System.Drawing.Size(30, 26);
+            this.buttonSelecionarPagamento.Size = new System.Drawing.Size(30, 30);
             this.buttonSelecionarPagamento.TabIndex = 9;
-            this.buttonSelecionarPagamento.UseVisualStyleBackColor = true;
+            this.buttonSelecionarPagamento.UseVisualStyleBackColor = false;
             this.buttonSelecionarPagamento.Click += new System.EventHandler(this.buttonSelecionarPagamento_Click);
             // 
             // valor_DiariaTextBox

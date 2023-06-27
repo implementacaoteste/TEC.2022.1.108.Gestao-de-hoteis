@@ -63,7 +63,7 @@
             // 
             // buttonBuscarIdReserva
             // 
-            buttonBuscarIdReserva.BackColor = System.Drawing.Color.Transparent;
+            buttonBuscarIdReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(93)))), ((int)(((byte)(168)))));
             buttonBuscarIdReserva.FlatAppearance.BorderSize = 0;
             buttonBuscarIdReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -86,13 +86,13 @@
             // 
             // buttonBuscarTipo
             // 
-            buttonBuscarTipo.BackColor = System.Drawing.Color.Transparent;
+            buttonBuscarTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(93)))), ((int)(((byte)(168)))));
             buttonBuscarTipo.FlatAppearance.BorderSize = 0;
             buttonBuscarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonBuscarTipo.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarTipo.Image")));
             buttonBuscarTipo.Location = new System.Drawing.Point(182, 22);
-            buttonBuscarTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            buttonBuscarTipo.Margin = new System.Windows.Forms.Padding(2);
             buttonBuscarTipo.Name = "buttonBuscarTipo";
             buttonBuscarTipo.Size = new System.Drawing.Size(30, 30);
             buttonBuscarTipo.TabIndex = 1;
@@ -178,7 +178,7 @@
             this.dataGridViewCheckBoxColumn1});
             this.contasPagarDataGridView.DataSource = this.contasPagarBindingSource;
             this.contasPagarDataGridView.Location = new System.Drawing.Point(4, 20);
-            this.contasPagarDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.contasPagarDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.contasPagarDataGridView.Name = "contasPagarDataGridView";
             this.contasPagarDataGridView.ReadOnly = true;
             this.contasPagarDataGridView.RowHeadersVisible = false;
@@ -278,11 +278,11 @@
             this.buttonCadastrarContaPagar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrarContaPagar.Image")));
             this.buttonCadastrarContaPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastrarContaPagar.Location = new System.Drawing.Point(11, 29);
-            this.buttonCadastrarContaPagar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCadastrarContaPagar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCadastrarContaPagar.Name = "buttonCadastrarContaPagar";
-            this.buttonCadastrarContaPagar.Size = new System.Drawing.Size(130, 33);
+            this.buttonCadastrarContaPagar.Size = new System.Drawing.Size(150, 33);
             this.buttonCadastrarContaPagar.TabIndex = 0;
-            this.buttonCadastrarContaPagar.Text = "Adicionar";
+            this.buttonCadastrarContaPagar.Text = "ADICIONAR";
             this.buttonCadastrarContaPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCadastrarContaPagar.UseVisualStyleBackColor = false;
             this.buttonCadastrarContaPagar.Click += new System.EventHandler(this.buttonAdicionar_Click);
@@ -298,9 +298,9 @@
             this.groupBox3.Controls.Add(buttonBuscarTipo);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(200, 11);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(728, 68);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -363,9 +363,9 @@
             this.groupBox2.Controls.Add(this.contasPagarDataGridView);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 95);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(916, 269);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -537,7 +537,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultaContasPagar";

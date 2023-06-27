@@ -178,11 +178,11 @@
             // 
             // buttonSelecionarHospede
             // 
-            this.buttonSelecionarHospede.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSelecionarHospede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(93)))), ((int)(((byte)(168)))));
             this.buttonSelecionarHospede.FlatAppearance.BorderSize = 0;
             this.buttonSelecionarHospede.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelecionarHospede.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonSelecionarHospede.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_bk;
+            this.buttonSelecionarHospede.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelecionarHospede.Image")));
             this.buttonSelecionarHospede.Location = new System.Drawing.Point(229, 159);
             this.buttonSelecionarHospede.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarHospede.Name = "buttonSelecionarHospede";
