@@ -43,10 +43,10 @@ namespace BLL
             ValidarPermissao(16);
             new ReservaDAL().Excluir(_id);
         }
-        public void CancelarReserva(int _id, int _idHospede)
+        public void CancelarReserva(Reserva _reserva, int _id, int _idHospede)
         {
             ValidarPermissao(16);
-            new ReservaDAL().CancelarReserva(_id, _idHospede);
+            new ReservaDAL().CancelarReserva(_reserva, _id, _idHospede);
         }
         public void CheckIn(Reserva _reserva)
         {

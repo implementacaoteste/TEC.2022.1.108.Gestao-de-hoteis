@@ -164,6 +164,7 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public void Excluir(int _id, SqlTransaction _transaction = null)
         {
             SqlTransaction transaction = _transaction;
@@ -199,7 +200,8 @@ namespace DAL
                 }
             }
         }
-        public void CancelarReserva(int _id, int _idHospede, SqlTransaction _transaction = null)
+
+        public void CancelarReserva(Reserva _reserva, int _id, int _idHospede, SqlTransaction _transaction = null)
         {
             SqlTransaction transaction = _transaction;
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
@@ -222,6 +224,7 @@ namespace DAL
 
                         RemoverReservaQuarto(_id, transaction);
                         RemoverContasReceber(_idHospede, transaction);
+                        EstornoReserva(_reserva, _idHospede);
                         cmd.ExecuteNonQuery();
 
                         if (_transaction == null)
@@ -269,6 +272,40 @@ namespace DAL
             }
         }
 
+        private void EstornoReserva(Reserva _reserva, int _idHospede)
+        {
+            if (_reserva.Valor_Entrada == 0)
+                return;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO CONTAS_A_PAGAR(DESCRICAO,VALOR, ID_CLIENTE, 
+                                    ID_FUNCIONARIO, DATA_VENCIMENTO, PAGAR)
+                                    VALUES(@DESCRICAO, @VALOR, @ID_CLIENTE, @ID_FUNCIONARIO, @DATA_VENCIMENTO, @PAGAR)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@DESCRICAO", "Estorno - Entrada Reserva - Quarto " + _reserva.Quartos[0].Numero);
+                cmd.Parameters.AddWithValue("@VALOR", _reserva.Valor_Entrada);
+                cmd.Parameters.AddWithValue("@ID_CLIENTE", _idHospede);
+                cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", Constante.IdLogado);
+                cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", DateTime.Now.Date);
+                cmd.Parameters.AddWithValue("@PAGAR", 0);
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar gerar uma Conta a Pagar no Banco de Dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         private void RemoverReservaQuarto(int _id, SqlTransaction _transaction)
         {
             SqlTransaction transaction = _transaction;
@@ -301,14 +338,17 @@ namespace DAL
                 }
             }
         }
+
         public void CheckIn(Reserva reserva)
         {
             throw new NotImplementedException();
         }
+
         public void CheckOut(Reserva reserva)
         {
             throw new NotImplementedException();
         }
+
         public Reserva BuscarPorId(int _id)
         {
             Reserva reserva = new Reserva();
@@ -380,10 +420,12 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public Reserva BuscarPorIdReserva(int _idReserva)
         {
             throw new NotImplementedException();
         }
+
         public List<Reserva> BuscarPorTodas()
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -450,6 +492,7 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public List<Reserva> BuscarPorDataEntCheckin(DateTime _dataInicial, DateTime _dataFinal)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -522,6 +565,7 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public List<Reserva> BuscarPorDataCheckin(DateTime _dataCheckin)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -593,6 +637,7 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public List<Reserva> BuscarPorDataSaiCheckout(DateTime _dataInicial, DateTime _dataFinal)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -665,6 +710,7 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public List<Reserva> BuscarPorDataCheckout(DateTime _dataCheckout)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -736,6 +782,7 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public List<Reserva> BuscarPorDataLancamento(DateTime _dataInicial, DateTime _dataFinal)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -808,6 +855,7 @@ namespace DAL
                 cn.Close();
             }
         }
+
         public bool ValidarPermissao(int _idFuncionario, int _idPermissao)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
