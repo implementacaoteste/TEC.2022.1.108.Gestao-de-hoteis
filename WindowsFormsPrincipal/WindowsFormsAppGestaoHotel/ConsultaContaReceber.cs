@@ -78,8 +78,8 @@ namespace WindowsFormsAppGestaoHotel
 
         private void labelValorAReceber_TextChanged(object sender, EventArgs e)
         {
-            string ValorT = ((ContasReceber)contasReceberBindingSource.Current).Valor.ToString();
-            labelValorAReceber.Text = ValorT;
+            /*string ValorT = ((ContasReceber)contasReceberBindingSource.Current).Valor.ToString();
+            labelValorAReceber.Text = ValorT;*/
         }
     }
 }

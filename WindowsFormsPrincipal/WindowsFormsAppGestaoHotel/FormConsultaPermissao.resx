@@ -120,14 +120,11 @@
   <metadata name="permissaoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>11, 10</value>
   </metadata>
-  <metadata name="permissaoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>11, 10</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAALpJREFUSEvtk1sKwzAMBH2k3qi9/0+P4I7SbMmDYEWxCqUeMDi2d4e8ymDwX9Ra
+        EAAACxABrSO9dQAAALpJREFUSEvtk1sKwzAMBH2k3qi9/0+P4I7SbMmDYEWxCqUeMDi2d4e8ymDwX9Ra
         74zbfOkmmpuYw8aT4S7hbCj3gdBjir9xlXBGUiMmNgi65ez1kQoKmnLW+koFRYdy5jlSQeFOzsiVCoq3
         cpEnFQiWciNfaiBZPl7jK3e7faciT07x7kNiNH+1S1B4+PUyz5FT1PxlWOsrp6ApFez1kRN0SwVnrssJ
         qeRUAWdDuRUEreR0OJobDH6ZUl4Tuy4PYpkeiQAAAABJRU5ErkJggg==
@@ -136,7 +133,7 @@
   <data name="buttonSelecionar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAJ1JREFUSEvtkt0JgDAMhDuCIziCo7iBoziKozlKvcidDxV/HppCIR8EQtPeB21T
+        EAAACxABrSO9dQAAAJ1JREFUSEvtkt0JgDAMhDuCIziCo7iBoziKozlKvcidDxV/HppCIR8EQtPeB21T
         EARdkHOe2bYD0g1lrFzyBzJJjR01cOQHJKV05MgPSDqW4uDE9hPsrSZdzogfPxJ76l0vA8SjHLO6b2oB
         DBI3OdZ8PpIFMVBccvQ+UmGBDBYrylcqLJiCEj+pMAFFwl8qTERhO6mgvK00CIJ3UjoAmupkc/jn9bUA
         AAAASUVORK5CYII=

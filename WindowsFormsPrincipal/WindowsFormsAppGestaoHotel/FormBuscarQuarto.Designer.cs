@@ -48,13 +48,6 @@
             this.buttonBuscarQuarto = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.funcionarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Andar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClasseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDiariaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
@@ -67,6 +60,13 @@
             this.buttonAlterarQuarto = new System.Windows.Forms.Button();
             this.buttonExcluirQuarto = new System.Windows.Forms.Button();
             this.buttonAdicionarQuarto = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Andar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClasseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDiariaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             id_ClasseLabel = new System.Windows.Forms.Label();
@@ -165,7 +165,7 @@
             this.groupBox1.Controls.Add(this.radioButtonNumero);
             this.groupBox1.Controls.Add(this.textBoxBuscar);
             this.groupBox1.Controls.Add(this.buttonBuscarQuarto);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -230,11 +230,11 @@
             // 
             // buttonBuscarQuarto
             // 
-            this.buttonBuscarQuarto.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBuscarQuarto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(93)))), ((int)(((byte)(168)))));
             this.buttonBuscarQuarto.FlatAppearance.BorderSize = 0;
             this.buttonBuscarQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarQuarto.Image")));
+            this.buttonBuscarQuarto.Image = global::WindowsFormsAppGestaoHotel.Properties.Resources.search_wh;
             this.buttonBuscarQuarto.Location = new System.Drawing.Point(438, 51);
             this.buttonBuscarQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarQuarto.Name = "buttonBuscarQuarto";
@@ -246,7 +246,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.funcionarioDataGridView);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox2.Location = new System.Drawing.Point(9, 109);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
@@ -284,79 +284,6 @@
             this.funcionarioDataGridView.RowTemplate.Height = 24;
             this.funcionarioDataGridView.Size = new System.Drawing.Size(464, 216);
             this.funcionarioDataGridView.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // numeroDataGridViewTextBoxColumn
-            // 
-            this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.numeroDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "Número";
-            this.numeroDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
-            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Andar
-            // 
-            this.Andar.DataPropertyName = "Andar";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Andar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Andar.HeaderText = "Andar";
-            this.Andar.MinimumWidth = 6;
-            this.Andar.Name = "Andar";
-            this.Andar.ReadOnly = true;
-            this.Andar.Width = 125;
-            // 
-            // idClasseDataGridViewTextBoxColumn
-            // 
-            this.idClasseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idClasseDataGridViewTextBoxColumn.DataPropertyName = "Classe";
-            this.idClasseDataGridViewTextBoxColumn.HeaderText = "Classe";
-            this.idClasseDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idClasseDataGridViewTextBoxColumn.Name = "idClasseDataGridViewTextBoxColumn";
-            this.idClasseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
-            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // valorDiariaDataGridViewTextBoxColumn
-            // 
-            this.valorDiariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.valorDiariaDataGridViewTextBoxColumn.DataPropertyName = "Valor_Diaria";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.valorDiariaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.valorDiariaDataGridViewTextBoxColumn.HeaderText = "Valor da diária";
-            this.valorDiariaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorDiariaDataGridViewTextBoxColumn.Name = "valorDiariaDataGridViewTextBoxColumn";
-            this.valorDiariaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idStatusDataGridViewTextBoxColumn
-            // 
-            this.idStatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idStatusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.idStatusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.idStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idStatusDataGridViewTextBoxColumn.Name = "idStatusDataGridViewTextBoxColumn";
-            this.idStatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // quartoBindingSource
             // 
@@ -441,11 +368,12 @@
             this.groupBox4.Controls.Add(this.idTextBox);
             this.groupBox4.Controls.Add(this.ClasseTextBox);
             this.groupBox4.Controls.Add(idLabel);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 364);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(472, 142);
+            this.groupBox4.Size = new System.Drawing.Size(472, 141);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Informações do Quarto";
@@ -479,34 +407,38 @@
             // 
             // buttonAlterarQuarto
             // 
-            this.buttonAlterarQuarto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
+            this.buttonAlterarQuarto.BackColor = System.Drawing.Color.Gold;
+            this.buttonAlterarQuarto.FlatAppearance.BorderSize = 0;
             this.buttonAlterarQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAlterarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAlterarQuarto.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAlterarQuarto.ForeColor = System.Drawing.Color.White;
             this.buttonAlterarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterarQuarto.Image")));
             this.buttonAlterarQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAlterarQuarto.Location = new System.Drawing.Point(188, 520);
             this.buttonAlterarQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterarQuarto.Name = "buttonAlterarQuarto";
-            this.buttonAlterarQuarto.Size = new System.Drawing.Size(120, 33);
+            this.buttonAlterarQuarto.Size = new System.Drawing.Size(130, 33);
             this.buttonAlterarQuarto.TabIndex = 4;
-            this.buttonAlterarQuarto.Text = "Alterar";
+            this.buttonAlterarQuarto.Text = "ALTERAR";
             this.buttonAlterarQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAlterarQuarto.UseVisualStyleBackColor = false;
             this.buttonAlterarQuarto.Click += new System.EventHandler(this.buttonAlterarQuarto_Click);
             // 
             // buttonExcluirQuarto
             // 
-            this.buttonExcluirQuarto.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonExcluirQuarto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(77)))), ((int)(((byte)(87)))));
+            this.buttonExcluirQuarto.FlatAppearance.BorderSize = 0;
             this.buttonExcluirQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcluirQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluirQuarto.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluirQuarto.ForeColor = System.Drawing.Color.White;
             this.buttonExcluirQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluirQuarto.Image")));
             this.buttonExcluirQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluirQuarto.Location = new System.Drawing.Point(361, 520);
+            this.buttonExcluirQuarto.Location = new System.Drawing.Point(351, 520);
             this.buttonExcluirQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirQuarto.Name = "buttonExcluirQuarto";
-            this.buttonExcluirQuarto.Size = new System.Drawing.Size(120, 33);
+            this.buttonExcluirQuarto.Size = new System.Drawing.Size(130, 33);
             this.buttonExcluirQuarto.TabIndex = 5;
-            this.buttonExcluirQuarto.Text = "Excluir";
+            this.buttonExcluirQuarto.Text = "EXCLUIR";
             this.buttonExcluirQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExcluirQuarto.UseVisualStyleBackColor = false;
             this.buttonExcluirQuarto.Click += new System.EventHandler(this.buttonExcluirQuarto_Click);
@@ -514,27 +446,102 @@
             // 
             // buttonAdicionarQuarto
             // 
-            this.buttonAdicionarQuarto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(210)))), ((int)(((byte)(156)))));
+            this.buttonAdicionarQuarto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(122)))));
+            this.buttonAdicionarQuarto.FlatAppearance.BorderSize = 0;
             this.buttonAdicionarQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdicionarQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionarQuarto.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionarQuarto.ForeColor = System.Drawing.Color.White;
             this.buttonAdicionarQuarto.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionarQuarto.Image")));
             this.buttonAdicionarQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAdicionarQuarto.Location = new System.Drawing.Point(9, 520);
             this.buttonAdicionarQuarto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarQuarto.Name = "buttonAdicionarQuarto";
-            this.buttonAdicionarQuarto.Size = new System.Drawing.Size(128, 33);
+            this.buttonAdicionarQuarto.Size = new System.Drawing.Size(150, 33);
             this.buttonAdicionarQuarto.TabIndex = 3;
-            this.buttonAdicionarQuarto.Text = "Adicionar";
+            this.buttonAdicionarQuarto.Text = "ADICIONAR";
             this.buttonAdicionarQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdicionarQuarto.UseVisualStyleBackColor = false;
             this.buttonAdicionarQuarto.Click += new System.EventHandler(this.buttonAdicionarQuarto_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.numeroDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Número";
+            this.numeroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Andar
+            // 
+            this.Andar.DataPropertyName = "Andar";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Andar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Andar.HeaderText = "Andar";
+            this.Andar.MinimumWidth = 6;
+            this.Andar.Name = "Andar";
+            this.Andar.ReadOnly = true;
+            this.Andar.Width = 125;
+            // 
+            // idClasseDataGridViewTextBoxColumn
+            // 
+            this.idClasseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idClasseDataGridViewTextBoxColumn.DataPropertyName = "Classe";
+            this.idClasseDataGridViewTextBoxColumn.HeaderText = "Classe";
+            this.idClasseDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idClasseDataGridViewTextBoxColumn.Name = "idClasseDataGridViewTextBoxColumn";
+            this.idClasseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // valorDiariaDataGridViewTextBoxColumn
+            // 
+            this.valorDiariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.valorDiariaDataGridViewTextBoxColumn.DataPropertyName = "Valor_Diaria";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.valorDiariaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.valorDiariaDataGridViewTextBoxColumn.HeaderText = "Diária";
+            this.valorDiariaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorDiariaDataGridViewTextBoxColumn.Name = "valorDiariaDataGridViewTextBoxColumn";
+            this.valorDiariaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idStatusDataGridViewTextBoxColumn
+            // 
+            this.idStatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idStatusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.idStatusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.idStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idStatusDataGridViewTextBoxColumn.Name = "idStatusDataGridViewTextBoxColumn";
+            this.idStatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormBuscarQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.Ivory;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(492, 564);
             this.Controls.Add(this.buttonAlterarQuarto);
             this.Controls.Add(this.buttonExcluirQuarto);
@@ -542,10 +549,12 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormBuscarQuarto";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

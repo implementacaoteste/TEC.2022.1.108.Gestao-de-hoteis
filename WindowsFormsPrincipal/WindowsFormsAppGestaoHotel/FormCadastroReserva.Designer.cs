@@ -462,6 +462,7 @@
             this.Controls.Add(id_clienteLabel);
             this.Controls.Add(data_SaidaLabel);
             this.Controls.Add(data_EntradaLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);

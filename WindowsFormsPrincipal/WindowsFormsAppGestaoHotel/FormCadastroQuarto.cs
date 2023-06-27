@@ -69,14 +69,5 @@ namespace WindowsFormsPrincipal1
                 buttonCancelar_Click(null, null);
             }
         }
-
-        private void valor_DiariaTextBox_Leave(object sender, EventArgs e)
-        {
-            Decimal value;
-            if (Decimal.TryParse(valor_DiariaTextBox.Text, out value))
-                valor_DiariaTextBox.Text = String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C2}", value);
-            else
-                valor_DiariaTextBox.Text = String.Empty;
-        }
     }
 }

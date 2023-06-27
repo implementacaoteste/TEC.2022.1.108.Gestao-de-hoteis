@@ -117,9 +117,9 @@
             this.buttonCadastrarReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastrarReserva.Location = new System.Drawing.Point(12, 12);
             this.buttonCadastrarReserva.Name = "buttonCadastrarReserva";
-            this.buttonCadastrarReserva.Size = new System.Drawing.Size(120, 33);
+            this.buttonCadastrarReserva.Size = new System.Drawing.Size(130, 33);
             this.buttonCadastrarReserva.TabIndex = 1;
-            this.buttonCadastrarReserva.Text = "Reserva";
+            this.buttonCadastrarReserva.Text = "RESERVA";
             this.buttonCadastrarReserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCadastrarReserva.UseVisualStyleBackColor = false;
             this.buttonCadastrarReserva.Click += new System.EventHandler(this.buttonCadastrarReserva_Click);
@@ -206,7 +206,7 @@
             this.Controls.Add(this.monthCalendar);
             this.Controls.Add(this.buttonBuscarTipo);
             this.Controls.Add(this.buttonCadastrarReserva);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

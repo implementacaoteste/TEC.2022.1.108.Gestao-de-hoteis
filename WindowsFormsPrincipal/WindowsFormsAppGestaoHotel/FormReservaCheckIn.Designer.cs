@@ -268,13 +268,13 @@
             this.buttonCheckin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.buttonCheckin.FlatAppearance.BorderSize = 0;
             this.buttonCheckin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCheckin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCheckin.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCheckin.ForeColor = System.Drawing.Color.White;
             this.buttonCheckin.Location = new System.Drawing.Point(514, 126);
             this.buttonCheckin.Name = "buttonCheckin";
-            this.buttonCheckin.Size = new System.Drawing.Size(100, 32);
+            this.buttonCheckin.Size = new System.Drawing.Size(102, 32);
             this.buttonCheckin.TabIndex = 14;
-            this.buttonCheckin.Text = "Check In";
+            this.buttonCheckin.Text = "CHECK IN";
             this.buttonCheckin.UseVisualStyleBackColor = false;
             this.buttonCheckin.Click += new System.EventHandler(this.buttonCheckin_Click);
             // 
@@ -342,13 +342,13 @@
             this.buttonSalvarHospede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(183)))), ((int)(((byte)(219)))));
             this.buttonSalvarHospede.FlatAppearance.BorderSize = 0;
             this.buttonSalvarHospede.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvarHospede.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvarHospede.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvarHospede.ForeColor = System.Drawing.Color.White;
             this.buttonSalvarHospede.Location = new System.Drawing.Point(212, 94);
             this.buttonSalvarHospede.Name = "buttonSalvarHospede";
             this.buttonSalvarHospede.Size = new System.Drawing.Size(126, 32);
             this.buttonSalvarHospede.TabIndex = 14;
-            this.buttonSalvarHospede.Text = "Salvar";
+            this.buttonSalvarHospede.Text = "SALVAR";
             this.buttonSalvarHospede.UseVisualStyleBackColor = false;
             this.buttonSalvarHospede.Click += new System.EventHandler(this.buttonSalvarHospede_Click);
             // 
@@ -379,6 +379,7 @@
             this.ClientSize = new System.Drawing.Size(646, 355);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormReservaCheckIn";

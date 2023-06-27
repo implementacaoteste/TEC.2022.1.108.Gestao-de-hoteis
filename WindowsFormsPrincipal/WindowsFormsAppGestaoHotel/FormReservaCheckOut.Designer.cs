@@ -253,6 +253,7 @@
             this.ClientSize = new System.Drawing.Size(644, 353);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormReservaCheckOut";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
