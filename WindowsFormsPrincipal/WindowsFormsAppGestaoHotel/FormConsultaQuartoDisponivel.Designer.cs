@@ -68,11 +68,11 @@
             buttonBuscarIdReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonBuscarIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonBuscarIdReserva.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscarIdReserva.Image")));
-            buttonBuscarIdReserva.Location = new System.Drawing.Point(785, 21);
-            buttonBuscarIdReserva.Margin = new System.Windows.Forms.Padding(2);
+            buttonBuscarIdReserva.Location = new System.Drawing.Point(1047, 26);
+            buttonBuscarIdReserva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             buttonBuscarIdReserva.Name = "buttonBuscarIdReserva";
-            buttonBuscarIdReserva.Size = new System.Drawing.Size(30, 30);
-            buttonBuscarIdReserva.TabIndex = 4;
+            buttonBuscarIdReserva.Size = new System.Drawing.Size(40, 37);
+            buttonBuscarIdReserva.TabIndex = 6;
             buttonBuscarIdReserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             buttonBuscarIdReserva.UseVisualStyleBackColor = false;
             buttonBuscarIdReserva.Click += new System.EventHandler(this.buttonBuscarQuartoDisp_Click);
@@ -102,13 +102,14 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn5});
             this.quartoDataGridView.DataSource = this.quartoBindingSource;
-            this.quartoDataGridView.Location = new System.Drawing.Point(5, 18);
+            this.quartoDataGridView.Location = new System.Drawing.Point(7, 22);
+            this.quartoDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.quartoDataGridView.Name = "quartoDataGridView";
             this.quartoDataGridView.ReadOnly = true;
             this.quartoDataGridView.RowHeadersVisible = false;
             this.quartoDataGridView.RowHeadersWidth = 51;
-            this.quartoDataGridView.Size = new System.Drawing.Size(821, 323);
-            this.quartoDataGridView.TabIndex = 8;
+            this.quartoDataGridView.Size = new System.Drawing.Size(1095, 398);
+            this.quartoDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -189,10 +190,11 @@
             // 
             this.labelClasse.AutoSize = true;
             this.labelClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClasse.Location = new System.Drawing.Point(7, 26);
+            this.labelClasse.Location = new System.Drawing.Point(9, 32);
+            this.labelClasse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelClasse.Name = "labelClasse";
-            this.labelClasse.Size = new System.Drawing.Size(114, 20);
-            this.labelClasse.TabIndex = 5;
+            this.labelClasse.Size = new System.Drawing.Size(143, 25);
+            this.labelClasse.TabIndex = 0;
             this.labelClasse.Text = "Tipo de Quarto";
             // 
             // comboBoxclass
@@ -201,11 +203,11 @@
             this.comboBoxclass.DisplayMember = "Descricao";
             this.comboBoxclass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxclass.FormattingEnabled = true;
-            this.comboBoxclass.Location = new System.Drawing.Point(123, 23);
-            this.comboBoxclass.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxclass.Location = new System.Drawing.Point(164, 28);
+            this.comboBoxclass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxclass.Name = "comboBoxclass";
-            this.comboBoxclass.Size = new System.Drawing.Size(130, 26);
-            this.comboBoxclass.TabIndex = 6;
+            this.comboBoxclass.Size = new System.Drawing.Size(172, 30);
+            this.comboBoxclass.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -218,12 +220,12 @@
             this.groupBox2.Controls.Add(this.datePickerInicial);
             this.groupBox2.Controls.Add(buttonBuscarIdReserva);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(11, 11);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(15, 14);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(829, 68);
-            this.groupBox2.TabIndex = 9;
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(1105, 84);
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtrar por";
             // 
@@ -231,64 +233,69 @@
             // 
             this.data_FinalLabel.AutoSize = true;
             this.data_FinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.data_FinalLabel.Location = new System.Drawing.Point(532, 26);
+            this.data_FinalLabel.Location = new System.Drawing.Point(709, 32);
+            this.data_FinalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.data_FinalLabel.Name = "data_FinalLabel";
-            this.data_FinalLabel.Size = new System.Drawing.Size(82, 20);
-            this.data_FinalLabel.TabIndex = 7;
+            this.data_FinalLabel.Size = new System.Drawing.Size(100, 25);
+            this.data_FinalLabel.TabIndex = 4;
             this.data_FinalLabel.Text = "Data Final";
             // 
             // data_InicialLabel
             // 
             this.data_InicialLabel.AutoSize = true;
             this.data_InicialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.data_InicialLabel.Location = new System.Drawing.Point(284, 26);
+            this.data_InicialLabel.Location = new System.Drawing.Point(379, 32);
+            this.data_InicialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.data_InicialLabel.Name = "data_InicialLabel";
-            this.data_InicialLabel.Size = new System.Drawing.Size(88, 20);
-            this.data_InicialLabel.TabIndex = 7;
+            this.data_InicialLabel.Size = new System.Drawing.Size(107, 25);
+            this.data_InicialLabel.TabIndex = 2;
             this.data_InicialLabel.Text = "Data Inicial";
             // 
             // datePickerFinal
             // 
             this.datePickerFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.datePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerFinal.Location = new System.Drawing.Point(631, 23);
+            this.datePickerFinal.Location = new System.Drawing.Point(841, 28);
+            this.datePickerFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datePickerFinal.Name = "datePickerFinal";
-            this.datePickerFinal.Size = new System.Drawing.Size(130, 26);
-            this.datePickerFinal.TabIndex = 6;
+            this.datePickerFinal.Size = new System.Drawing.Size(172, 30);
+            this.datePickerFinal.TabIndex = 5;
             // 
             // datePickerInicial
             // 
             this.datePickerInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.datePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerInicial.Location = new System.Drawing.Point(389, 23);
+            this.datePickerInicial.Location = new System.Drawing.Point(519, 28);
+            this.datePickerInicial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datePickerInicial.Name = "datePickerInicial";
-            this.datePickerInicial.Size = new System.Drawing.Size(130, 26);
-            this.datePickerInicial.TabIndex = 6;
+            this.datePickerInicial.Size = new System.Drawing.Size(172, 30);
+            this.datePickerInicial.TabIndex = 3;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.quartoDataGridView);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(11, 99);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(15, 122);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(831, 346);
-            this.groupBox1.TabIndex = 10;
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1108, 426);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quartos";
             // 
             // FormConsultaQuartoDisponivel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(853, 456);
+            this.ClientSize = new System.Drawing.Size(1137, 561);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormConsultaQuartoDisponivel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOTELOGIX - Consulta de Quartos Disponíveis";
