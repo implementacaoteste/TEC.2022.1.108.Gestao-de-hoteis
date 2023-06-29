@@ -15,7 +15,7 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormReservaCheckOut : Form
     {
         public int Id;
-        public DateTime Data_CheckOut;
+        public DateTime? Data_CheckOut;
         public FormReservaCheckOut(int id)
         {
             InitializeComponent();
@@ -45,6 +45,11 @@ namespace WindowsFormsAppGestaoHotel
                 reservaBindingSource.EndEdit();
                 reservaBLL.CheckOut((Reserva)reservaBindingSource.Current);
                 MessageBox.Show("Check Out efetuado com sucesso!");
+
+                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
+                if (((Reserva)reservaBindingSource.Current).Data_Checkout != null)
+                    Data_CheckOut = ((Reserva)reservaBindingSource.Current).Data_Checkout;
+
                 Close();
             }
             catch (Exception ex)

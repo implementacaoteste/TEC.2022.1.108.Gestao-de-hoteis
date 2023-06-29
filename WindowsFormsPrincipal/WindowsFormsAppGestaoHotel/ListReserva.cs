@@ -63,13 +63,15 @@ namespace WindowsFormsAppGestaoHotel
 
             reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(_id);
 
-            if (((Reserva)reservaBindingSource.Current).Data_Checkin == dt_checkin)
+            if (((Reserva)reservaBindingSource.Current).Data_Checkin == dt_checkin || ((Reserva)reservaBindingSource.Current).Data_Checkin != null)
             {
                 pictureBoxCheckIn.Enabled = false;
                 pictureBoxCheckIn.Image = Properties.Resources.calendar_month_gray;
+                pictureBoxAlterar.Visible = false;
+                pictureBoxCancelar.Visible = false;
             }
 
-            if (((Reserva)reservaBindingSource.Current).Data_Checkout == dt_checkout)
+            if (((Reserva)reservaBindingSource.Current).Data_Checkout == dt_checkout || ((Reserva)reservaBindingSource.Current).Data_Checkout != null)
             {
                 pictureBoxCheckOut.Enabled = false;
                 pictureBoxCheckOut.Image = Properties.Resources.calendar_month_gray;
@@ -135,13 +137,18 @@ namespace WindowsFormsAppGestaoHotel
             using (FormReservaCheckIn frm = new FormReservaCheckIn(id))
             {
                 frm.ShowDialog();
-                ((Reserva)reservaBindingSource.Current).Data_Checkin = frm.Data_CheckIn;
+
                 if (frm.Data_CheckIn != null)
                     checkin = true;
             }
-            pictureBoxCheckIn.Enabled = false;
+
             if (checkin)
+            {
+                pictureBoxCheckIn.Enabled = false;
                 pictureBoxCheckIn.Image = Properties.Resources.calendar_month_gray;
+                pictureBoxAlterar.Visible = false;
+                pictureBoxCancelar.Visible = false;
+            }
         }
 
         private void pictureBoxCheckOut_Click(object sender, EventArgs e)
@@ -154,13 +161,16 @@ namespace WindowsFormsAppGestaoHotel
                     using (FormReservaCheckOut frm = new FormReservaCheckOut(id))
                     {
                         frm.ShowDialog();
-                        ((Reserva)reservaBindingSource.Current).Data_Checkout = frm.Data_CheckOut;
+
                         if (frm.Data_CheckOut != null)
-                            checkin = true;
+                            checkout = true;
                     }
-                    pictureBoxCheckOut.Enabled = false;
+
                     if (checkout)
+                    {
+                        pictureBoxCheckOut.Enabled = false;
                         pictureBoxCheckOut.Image = Properties.Resources.calendar_month_gray;
+                    }
                 }
                 else
                     throw new Exception("Faça primeiro o Check In!");

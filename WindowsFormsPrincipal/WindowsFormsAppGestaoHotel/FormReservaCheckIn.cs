@@ -16,7 +16,7 @@ namespace WindowsFormsAppGestaoHotel
     public partial class FormReservaCheckIn : Form
     {
         public int Id;
-        public DateTime Data_CheckIn;
+        public DateTime? Data_CheckIn;
         public decimal Vlr_Total;
         public decimal Vlr_Entrada;
         public decimal Vlr_Restante;
@@ -51,6 +51,11 @@ namespace WindowsFormsAppGestaoHotel
                 reservaBindingSource.EndEdit();
                 reservaBLL.CheckIn((Reserva)reservaBindingSource.Current);
                 MessageBox.Show("Check In efetuado com sucesso!");
+
+                reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
+                if (((Reserva)reservaBindingSource.Current).Data_Checkin != null)
+                    Data_CheckIn = ((Reserva)reservaBindingSource.Current).Data_Checkin;
+
                 Close();
             }
             catch (Exception ex)
