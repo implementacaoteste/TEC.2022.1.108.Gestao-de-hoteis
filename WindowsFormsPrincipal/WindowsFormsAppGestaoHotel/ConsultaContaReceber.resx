@@ -142,7 +142,7 @@
   <data name="buttonBuscarTipo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAUpJREFUSEvtlo0RwUAQhVOCEpSgBCUoQQk6kA7ogA7ogA6UEB0oId67e8uJkNwl
+        EAAACxABrSO9dQAAAUpJREFUSEvtlo0RwUAQhVOCEpSgBCUoQQk6kA7ogA7ogA6UEB0oId67e8uJkNwl
         jBn5ZnaYvd33cj85soGfoyzLMWKqGCn9GWiAWCIuiCoFYq7S/oAoZ1ZnWIUPMFZbNyA0c5J3jogFwpaa
         32lodDengISMl8uJsdyXOA5KpwGBrddxLJR+CWrWvtQxVToeNNtsj0q9BXU8gHYW9krHgcaJ73c0ztZA
         ra1SoVQcaOTBMVovG2pve61UHOgLjWdKN4LazsY80UaudCOoPfiW8qRUPGg+e412+4W68GE3SseD5vDd
@@ -151,6 +151,12 @@
         rkJggg==
 </value>
   </data>
+  <metadata name="Nome_Funcionario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="contasReceberBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="Nome_Funcionario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

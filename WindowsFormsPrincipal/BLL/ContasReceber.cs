@@ -26,7 +26,6 @@ namespace BLL
         {
             return new ContasReceberDAL().BuscaPorTodos();
         }
-
         public List<ContasReceber> BuscarPorData(DateTime _dataInicial, DateTime _dataFinal)
         {
             return new ContasReceberDAL().BuscarPorData(_dataInicial, _dataFinal);
@@ -34,6 +33,14 @@ namespace BLL
         public List<ContasReceber> BuscarPorPagar(bool _receber)
         {
             return new ContasReceberDAL().BuscarPorPagar(_receber);
+        }
+        public ContasReceber ValorReceber(bool _receber)
+        {
+            return new ContasReceberDAL().ValorReceber(_receber);
+        }
+        public ContasReceber ValorRecebido(bool _receber)
+        {
+            return new ContasReceberDAL().ValorRecebido(_receber);
         }
     }
 }

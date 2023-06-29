@@ -12,6 +12,34 @@ namespace DAL
 {
     public class ContasReceberDAL
     {
+        public void Inserir(ContasReceber _contasReceber)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO CONTAS_A_RECEBER (DESCRICAO, VALOR, ID_CLIENTE, ID_FUNCIONARIO, DATA_VENCIMENTO, RECEBIDO)
+                                      VALUES(@DESCRICAO, @VALOR, @ID_CLIENTE, @ID_FUNCIONARIO, @DATA_VENCIMENTO, @RECEBIDO)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@VALOR", _contasReceber.Valor);
+                cmd.Parameters.AddWithValue("@DESCRICAO", _contasReceber.Descricao);
+                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasReceber.Id_Hospede);
+                cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _contasReceber.Id_Funcionario);
+                cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _contasReceber.Data_Vencimento);
+                cmd.Parameters.AddWithValue("@RECEBIDO", _contasReceber.Receber);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar inserir uma contas a receber no Banco de Dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public void Alterar(ContasReceber _contasReceber)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -42,7 +70,30 @@ namespace DAL
                 cn.Close();
             }
         }
+        public void Excluir(int _id)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM CONTAS_A_RECEBER 
+                                    WHERE ID=@Id";
 
+                cmd.CommandType = System.Data.CommandType.Text;
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@Id", _id);
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu erro ao tentar excluir um contas a receber no Banco de Dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public List<ContasReceber> BuscaPorTodos()
         {
             List<ContasReceber> contasRecebers = new List<ContasReceber>();
@@ -52,11 +103,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT CA.ID,  CA.DESCRICAO,  CA.VALOR,  CA.ID_CLIENTE,  
-                                    CA.ID_FUNCIONARIO,  CA.DATA_VENCIMENTO,  CA.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
-                                    FROM CONTAS_A_RECEBER CA                                
-                                    INNER JOIN FUNCIONARIO F ON CA.ID_FUNCIONARIO = F.ID
-                                    INNER JOIN CLIENTE C ON CA.ID_CLIENTE = C.ID";
+                cmd.CommandText = @"SELECT CR.ID,  CR.DESCRICAO,  CR.VALOR,  CR.ID_CLIENTE,  
+                                    CR.ID_FUNCIONARIO,  CR.DATA_VENCIMENTO,  CR.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
+                                    FROM CONTAS_A_RECEBER CR
+                                    INNER JOIN FUNCIONARIO F ON CR.ID_FUNCIONARIO = F.ID
+                                    INNER JOIN CLIENTE C ON CR.ID_CLIENTE = C.ID
+                                    ORDER BY CR.ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
@@ -88,7 +140,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<ContasReceber> BuscarPorData(DateTime _dataInicial, DateTime _dataFinal)
         {
             List<ContasReceber> contasRecebers = new List<ContasReceber>();
@@ -98,12 +149,13 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT CR.ID,  CR.DESCRICAO,  CR.VALOR,  CR.ID_CLIENTE,  
+                cmd.CommandText = @"SELECT CR.ID,  CR.DESCRICAO,  CR.VALOR,  CR.ID_CLIENTE,
                                     CR.ID_FUNCIONARIO,  CR.DATA_VENCIMENTO,  CR.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
-                                    FROM CONTAS_A_RECEBER CR                               
+                                    FROM CONTAS_A_RECEBER CR
                                     INNER JOIN FUNCIONARIO F ON CR.ID_FUNCIONARIO = F.ID
                                     INNER JOIN CLIENTE C ON CR.ID_CLIENTE = C.ID
-                                    WHERE CR.DATA_VENCIMENTO BETWEEN @DATA_INICIAL AND @DATA_FINAL";
+                                    WHERE CR.DATA_VENCIMENTO BETWEEN @DATA_INICIAL AND @DATA_FINAL
+                                    ORDER BY CR.ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@DATA_INICIAL", _dataInicial.Date);
                 cmd.Parameters.AddWithValue("@DATA_FINAL", _dataFinal.Date);
@@ -137,7 +189,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<ContasReceber> BuscarPorPagar(bool _receber)
         {
             List<ContasReceber> contasRecebers = new List<ContasReceber>();
@@ -147,12 +198,13 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT CA.ID,  CA.DESCRICAO,  CA.VALOR,  CA.ID_CLIENTE,  
-                                    CA.ID_FUNCIONARIO,  CA.DATA_VENCIMENTO,  CA.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
-                                    FROM CONTAS_A_RECEBER CA                                
-                                    INNER JOIN FUNCIONARIO F ON CA.ID_FUNCIONARIO = F.ID
-                                    INNER JOIN CLIENTE C ON CA.ID_CLIENTE = C.ID
-                                    WHERE CA.RECEBIDO = @RECEBIDO";
+                cmd.CommandText = @"SELECT CR.ID,  CR.DESCRICAO,  CR.VALOR,  CR.ID_CLIENTE,  
+                                    CR.ID_FUNCIONARIO,  CR.DATA_VENCIMENTO,  CR.RECEBIDO, F.NOME FUNCIONARIO_NOME, C.NOME CLIENTE_NOME
+                                    FROM CONTAS_A_RECEBER CR
+                                    INNER JOIN FUNCIONARIO F ON CR.ID_FUNCIONARIO = F.ID
+                                    INNER JOIN CLIENTE C ON CR.ID_CLIENTE = C.ID
+                                    WHERE CR.RECEBIDO = @RECEBIDO
+                                    ORDER BY CR.ID";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@RECEBIDO", _receber);
                 cn.Open();
@@ -185,53 +237,64 @@ namespace DAL
                 cn.Close();
             }
         }
-
-        public void Excluir(int _id)
+        public ContasReceber ValorReceber(bool _receber)
         {
+            ContasReceber contasReceber = new ContasReceber();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM CONTAS_A_RECEBER 
-                                    WHERE ID=@Id";
-
-                cmd.CommandType = System.Data.CommandType.Text;
-                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@Id", _id);
+                SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
+                cmd.CommandText = @"SELECT SUM(VALOR) AS VALOR_RECEBER FROM CONTAS_A_RECEBER WHERE RECEBIDO = @RECEBIDO";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@RECEBIDO", _receber);
                 cn.Open();
-                cmd.ExecuteNonQuery();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        contasReceber = new ContasReceber();
+                        contasReceber.Valor_Receber = (decimal)rd["VALOR_RECEBER"];
+                    }
+                }
+                return contasReceber;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir um contas a receber no Banco de Dados.", ex);
+                throw new Exception("Ocorreu um erro ao somar as contas a receber.", ex);
             }
             finally
             {
                 cn.Close();
             }
         }
-        public void Inserir(ContasReceber _contasReceber)
+        public ContasReceber ValorRecebido(bool _receber)
         {
+            ContasReceber contasReceber = new ContasReceber();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO CONTAS_A_RECEBER (DESCRICAO, VALOR, ID_CLIENTE, ID_FUNCIONARIO, DATA_VENCIMENTO, RECEBIDO)
-                                      VALUES(@DESCRICAO, @VALOR, @ID_CLIENTE, @ID_FUNCIONARIO, @DATA_VENCIMENTO, @RECEBIDO)";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@VALOR", _contasReceber.Valor);
-                cmd.Parameters.AddWithValue("@DESCRICAO", _contasReceber.Descricao);
-                cmd.Parameters.AddWithValue("@ID_CLIENTE", _contasReceber.Id_Hospede);
-                cmd.Parameters.AddWithValue("@ID_FUNCIONARIO", _contasReceber.Id_Funcionario);
-                cmd.Parameters.AddWithValue("@DATA_VENCIMENTO", _contasReceber.Data_Vencimento);
-                cmd.Parameters.AddWithValue("@RECEBIDO", _contasReceber.Receber);
+                SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
+                cmd.CommandText = @"SELECT SUM(VALOR) AS VALOR_RECEBIDO FROM CONTAS_A_RECEBER WHERE RECEBIDO = @RECEBIDO";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@RECEBIDO", _receber);
                 cn.Open();
-                cmd.ExecuteNonQuery();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        contasReceber = new ContasReceber();
+                        contasReceber.Valor_Recebido = (decimal)rd["VALOR_RECEBIDO"];
+                    }
+                }
+                return contasReceber;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir uma contas a receber no Banco de Dados.", ex);
+                throw new Exception("Ocorreu um erro ao somar as contas a receber.", ex);
             }
             finally
             {

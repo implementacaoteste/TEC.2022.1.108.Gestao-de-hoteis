@@ -14,6 +14,9 @@ namespace WindowsFormsAppGestaoHotel
 {
     public partial class ConsultaContaReceber : Form
     {
+        decimal ValorReceber;
+        decimal ValorRecebido;
+
         public ConsultaContaReceber()
         {
             InitializeComponent();
@@ -25,7 +28,14 @@ namespace WindowsFormsAppGestaoHotel
             {
                 comboBoxBuscarTipo.SelectedIndex = 0;
                 contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
-                labelValorAReceber.Text = "R$ 0,01";
+                contasReceberBindingSource.DataSource = new ContasReceberBLL().ValorRecebido(true);
+                contasReceberBindingSource.DataSource = new ContasReceberBLL().ValorReceber(false);
+
+                ValorReceber = ((ContasReceber)contasReceberBindingSource.Current).Valor_Receber;
+                ValorRecebido = ((ContasReceber)contasReceberBindingSource.Current).Valor_Recebido;
+
+                labelValorAReceber.Text = "R$ " + ValorReceber.ToString();
+                labelValorRecebido.Text = "R$ " + ValorRecebido.ToString();
             }
             catch (Exception ex)
             {
