@@ -374,7 +374,7 @@ namespace DAL
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE RESERVA SET DATA_CHECKOUT = @DATA_CHECKOUT, OBS_CHECKOUT = @OBS_CHECKOUT WHERE ID = @ID";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@DATA_CHECKIN", DateTime.Now.Date);
+                cmd.Parameters.AddWithValue("@DATA_CHECKOUT", DateTime.Now.Date);
                 cmd.Parameters.AddWithValue("@OBS_CHECKOUT", _reserva.Obs_Checkout);
                 cmd.Parameters.AddWithValue("@ID", _reserva.Id);
                 cmd.Connection = cn;
