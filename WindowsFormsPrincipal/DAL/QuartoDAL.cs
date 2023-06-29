@@ -263,7 +263,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public Quarto BuscarPorId(int _id)
         {
             Quarto quarto = new Quarto();
@@ -307,7 +306,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Quarto> BuscarPorQuartoDisponivel()
         {
             List<Quarto> quartos = new List<Quarto>();
@@ -362,19 +360,18 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, QUARTO.ID_CLASSE,QUARTO.DESCRICAO,QUARTO.VALOR_DIARIA,QUARTO.ANDAR,
-                                    CASE
-	                                    WHEN RESERVA.ID IS NULL THEN '1'
+                cmd.CommandText = @"SELECT QUARTO.ID, QUARTO.NUMERO, CASE
+	                                    WHEN RESERVA.ID IS NULL OR RESERVA.DT_ENT_RESERVA > @Data THEN '1' 
 	                                    WHEN RESERVA.DATA_CHECKIN <= @Data AND RESERVA.DATA_CHECKOUT >= @Data THEN '2'
-	                                    WHEN RESERVA.DT_ENT_RESERVA <= @Data AND RESERVA.DT_SAI_RESERVA >= @Data THEN '3'
-	                                    ELSE '5'
+										WHEN RESERVA.DT_SAI_RESERVA <= @Data OR (RESERVA.DATA_CHECKOUT IS NOT NULL AND RESERVA.DATA_CHECKOUT <= @Data) THEN '1'
+	                                    WHEN RESERVA.DT_ENT_RESERVA <= @Data AND RESERVA.DT_SAI_RESERVA >= @Data AND DATA_CHECKIN IS NULL THEN '3'
+	                                    WHEN RESERVA.DT_ENT_RESERVA <= @Data AND RESERVA.DT_SAI_RESERVA >= @Data AND DATA_CHECKIN IS NOT NULL THEN '2'
 	                                    END AS ID_STATUS
-                                    ,CLASSE.CLASSE FROM QUARTO
-                                    LEFT JOIN CLASSE ON QUARTO.ID_CLASSE = CLASSE.ID
-                                    LEFT JOIN RESERVA_QUARTO ON QUARTO.ID = RESERVA_QUARTO.ID_QUARTO
+                                    FROM QUARTO
+									LEFT JOIN RESERVA_QUARTO ON QUARTO.ID = RESERVA_QUARTO.ID_QUARTO
                                     LEFT JOIN  RESERVA ON RESERVA_QUARTO.ID_RESERVA = RESERVA.ID
                                     LEFT JOIN STATUS ON QUARTO.ID_STATUS = STATUS.ID
-                                    WHERE QUARTO.ID_STATUS <> 4";
+									WHERE QUARTO.ID_STATUS <> 4";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Data", _dia.Date);
@@ -388,14 +385,8 @@ namespace DAL
                         {
                             quarto = new Quarto();
                             quarto.Id = Convert.ToInt32(rd["ID"]);
-                            quarto.Id_Classe = Convert.ToInt32(rd["ID_CLASSE"]);
-                            quarto.Classe = rd["CLASSE"].ToString();
                             quarto.Numero = rd["NUMERO"].ToString();
-                            quarto.Descricao = rd["DESCRICAO"].ToString();
-                            quarto.Valor_Diaria = (decimal)rd["VALOR_DIARIA"];
-                            quarto.Andar = rd["ANDAR"].ToString();
                             quarto.Id_Status = Convert.ToInt32(rd["ID_STATUS"]);
-                            //quarto.Status = rd["STATUS"].ToString();
                             quartos.Add(quarto);
                         }
                     }
