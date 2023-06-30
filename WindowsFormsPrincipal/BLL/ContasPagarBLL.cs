@@ -45,5 +45,15 @@ namespace BLL
         {
             return new ContasPagarDAL().BuscarPorPagar(_pagar);
         }
+
+        public object ValorPagar(bool _pagar)
+        {
+            return new ContasPagarDAL().ValorPagar(_pagar);
+        }
+
+        public object ValorPago(bool _pagar)
+        {
+            return new ContasPagarDAL().ValorPago(_pagar);
+        }
     }
 }

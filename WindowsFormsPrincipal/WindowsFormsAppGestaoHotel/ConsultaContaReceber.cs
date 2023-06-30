@@ -14,8 +14,8 @@ namespace WindowsFormsAppGestaoHotel
 {
     public partial class ConsultaContaReceber : Form
     {
-        decimal ValorReceber;
-        decimal ValorRecebido;
+        decimal Valor_Receber;
+        decimal Valor_Recebido;
 
         public ConsultaContaReceber()
         {
@@ -27,27 +27,44 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 comboBoxBuscarTipo.SelectedIndex = 0;
+                ValorReceber();
+                ValorRecebido();
                 contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
-                contasReceberBindingSource.DataSource = new ContasReceberBLL().ValorRecebido(true);
-                contasReceberBindingSource.DataSource = new ContasReceberBLL().ValorReceber(false);
-
-                ValorReceber = ((ContasReceber)contasReceberBindingSource.Current).Valor_Receber;
-                ValorRecebido = ((ContasReceber)contasReceberBindingSource.Current).Valor_Recebido;
-
-                labelValorAReceber.Text = "R$ " + ValorReceber.ToString();
-                labelValorRecebido.Text = "R$ " + ValorRecebido.ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+        public void ValorReceber()
+        {
+            contasReceberBindingSource.DataSource = new ContasReceberBLL().ValorReceber(false);
+            Valor_Receber = ((ContasReceber)contasReceberBindingSource.Current).Valor_Receber;
+
+            if (Valor_Receber == 0)
+                labelValorAReceber.Text = "R$ 0,00";
+            else
+                labelValorAReceber.Text = "R$ " + Valor_Receber.ToString();
+        }
+        public void ValorRecebido()
+        {
+            contasReceberBindingSource.DataSource = new ContasReceberBLL().ValorRecebido(true);
+            Valor_Recebido = ((ContasReceber)contasReceberBindingSource.DataSource).Valor_Recebido;
+
+            if (Valor_Recebido == 0)
+                labelValorRecebido.Text = "R$ 0,00";
+            else
+                labelValorRecebido.Text = "R$ " + Valor_Recebido.ToString();
+        }
 
         private void buttonBuscarTipo_Click(object sender, EventArgs e)
         {
             try
             {
-                switch(comboBoxBuscarTipo.SelectedIndex)
+                ValorReceber();
+                ValorRecebido();
+
+                switch (comboBoxBuscarTipo.SelectedIndex)
                 {
                     case 0:
                         contasReceberBindingSource.DataSource = new ContasReceberBLL().BuscaPorTodos();
@@ -79,17 +96,12 @@ namespace WindowsFormsAppGestaoHotel
                 {
                     frm.ShowDialog();
                 }
+                buttonBuscarTipo_Click(sender, e);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void labelValorAReceber_TextChanged(object sender, EventArgs e)
-        {
-            /*string ValorT = ((ContasReceber)contasReceberBindingSource.Current).Valor.ToString();
-            labelValorAReceber.Text = ValorT;*/
         }
     }
 }

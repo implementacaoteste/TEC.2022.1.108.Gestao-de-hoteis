@@ -112,6 +112,9 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
 
+                //ValorReceber(false);
+                //ValorRecebido(true);
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
@@ -161,6 +164,9 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@DATA_FINAL", _dataFinal.Date);
                 cn.Open();
 
+                //ValorReceber(false);
+                //ValorRecebido(true);
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
@@ -209,6 +215,9 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@RECEBIDO", _receber);
                 cn.Open();
 
+                //ValorReceber(false);
+                //ValorRecebido(true);
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
@@ -255,7 +264,8 @@ namespace DAL
                     while (rd.Read())
                     {
                         contasReceber = new ContasReceber();
-                        contasReceber.Valor_Receber = (decimal)rd["VALOR_RECEBER"];
+                        if (rd["VALOR_RECEBER"].ToString() != "")
+                            contasReceber.Valor_Receber = (decimal)rd["VALOR_RECEBER"];
                     }
                 }
                 return contasReceber;
@@ -287,7 +297,8 @@ namespace DAL
                     while (rd.Read())
                     {
                         contasReceber = new ContasReceber();
-                        contasReceber.Valor_Recebido = (decimal)rd["VALOR_RECEBIDO"];
+                        if (rd["VALOR_RECEBIDO"].ToString() != "")
+                            contasReceber.Valor_Recebido = (decimal)rd["VALOR_RECEBIDO"];
                     }
                 }
                 return contasReceber;
