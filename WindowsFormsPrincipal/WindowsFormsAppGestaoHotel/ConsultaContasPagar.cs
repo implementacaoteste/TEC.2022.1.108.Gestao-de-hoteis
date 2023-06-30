@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,9 @@ namespace WindowsFormsAppGestaoHotel
 {
     public partial class ConsultaContasPagar : Form
     {
+        decimal Valor_Pagar;
+        decimal Valor_Pago;
+
         public ConsultaContasPagar()
         {
             InitializeComponent();
@@ -23,6 +27,8 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 comboBoxBuscarTipo.SelectedIndex = 0;
+                ValorPagar();
+                ValorPago();
                 contasPagarBindingSource.DataSource = new ContasPagarBLL().BuscaPorTodos();
             }
             catch (Exception ex)
@@ -30,11 +36,34 @@ namespace WindowsFormsAppGestaoHotel
                 MessageBox.Show(ex.Message);
             }
         }
+        public void ValorPagar()
+        {
+            contasPagarBindingSource.DataSource = new ContasPagarBLL().ValorPagar(false);
+            Valor_Pagar = ((ContasPagar)contasPagarBindingSource.Current).Valor_Pagar;
+
+            if (Valor_Pagar == 0)
+                labelValorAPagar.Text = "R$ 0,00";
+            else
+                labelValorAPagar.Text = "R$ " + Valor_Pagar.ToString();
+        }
+        public void ValorPago()
+        {
+            contasPagarBindingSource.DataSource = new ContasPagarBLL().ValorPago(true);
+            Valor_Pago = ((ContasPagar)contasPagarBindingSource.DataSource).Valor_Pago;
+
+            if (Valor_Pago == 0)
+                labelValorPago.Text = "R$ 0,00";
+            else
+                labelValorPago.Text = "R$ " + Valor_Pago.ToString();
+        }
 
         private void buttonBuscarTipo_Click(object sender, EventArgs e)
         {
             try
             {
+                ValorPagar();
+                ValorPago();
+
                 switch (comboBoxBuscarTipo.SelectedIndex)
                 {
                     case 0:

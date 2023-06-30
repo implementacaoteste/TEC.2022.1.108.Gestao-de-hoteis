@@ -244,5 +244,73 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public ContasPagar ValorPagar(bool _pagar)
+        {
+            ContasPagar contasPagar = new ContasPagar();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT SUM(VALOR) AS VALOR_PAGAR FROM CONTAS_A_PAGAR WHERE PAGAR = @PAGAR";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@PAGAR", _pagar);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        contasPagar = new ContasPagar();
+                        if (rd["VALOR_PAGAR"].ToString() != "")
+                            contasPagar.Valor_Pagar = (decimal)rd["VALOR_PAGAR"];
+                    }
+                }
+                return contasPagar;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao somar as contas à pagar.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public ContasPagar ValorPago(bool _pagar)
+        {
+            ContasPagar contasPagar = new ContasPagar();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT SUM(VALOR) AS VALOR_PAGO FROM CONTAS_A_PAGAR WHERE PAGAR = @PAGAR";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@PAGAR", _pagar);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        contasPagar = new ContasPagar();
+                        if (rd["VALOR_PAGO"].ToString() != "")
+                            contasPagar.Valor_Pago = (decimal)rd["VALOR_PAGO"];
+                    }
+                }
+                return contasPagar;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao somar as contas à pagar.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

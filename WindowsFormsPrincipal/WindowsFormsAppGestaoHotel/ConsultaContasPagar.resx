@@ -124,7 +124,7 @@
   <data name="buttonBuscarTipo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAUpJREFUSEvtlo0RwUAQhVOCEpSgBCUoQQk6kA7ogA7ogA6UEB0oId67e8uJkNwl
+        EAAACxABrSO9dQAAAUpJREFUSEvtlo0RwUAQhVOCEpSgBCUoQQk6kA7ogA7ogA6UEB0oId67e8uJkNwl
         jBn5ZnaYvd33cj85soGfoyzLMWKqGCn9GWiAWCIuiCoFYq7S/oAoZ1ZnWIUPMFZbNyA0c5J3jogFwpaa
         32lodDengISMl8uJsdyXOA5KpwGBrddxLJR+CWrWvtQxVToeNNtsj0q9BXU8gHYW9krHgcaJ73c0ztZA
         ra1SoVQcaOTBMVovG2pve61UHOgLjWdKN4LazsY80UaudCOoPfiW8qRUPGg+e412+4W68GE3SseD5vDd
@@ -160,17 +160,17 @@
   <metadata name="Nome_Funcionario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="contasPagarBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 6</value>
-  </metadata>
   <data name="buttonCadastrarContaPagar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAHtJREFUSEvtltEJwCAQQx3JERypG9bNbHKef1JaytVS8iAgovdACJiEEKS1lpHd
+        DQAACw0B7QfALAAAAHtJREFUSEvtltEJwCAQQx3JERypG9bNbHKef1JaytVS8iAgovdACJiEEKS1lpHd
         k307HsgKMii+HQ9l3WlIHAdl3Wn8RIyBrAwFs2zIgOvZGeZ+1XCJHX1K9XHXwaVl4jVPfYYPHahOcVDW
         nYbEcUDGqlXPex8BIT5MSgcwus+Qrsyh9AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="contasPagarBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 6</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>62</value>
   </metadata>
