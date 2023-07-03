@@ -38,7 +38,7 @@
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label idLabel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarCliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             this.radioButtonCPF = new System.Windows.Forms.RadioButton();
@@ -91,7 +91,7 @@
             // 
             celularLabel.AutoSize = true;
             celularLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            celularLabel.Location = new System.Drawing.Point(26, 172);
+            celularLabel.Location = new System.Drawing.Point(26, 175);
             celularLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             celularLabel.Name = "celularLabel";
             celularLabel.Size = new System.Drawing.Size(62, 20);
@@ -102,7 +102,7 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(36, 141);
+            emailLabel.Location = new System.Drawing.Point(36, 144);
             emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(52, 20);
@@ -113,7 +113,7 @@
             // 
             enderecoLabel.AutoSize = true;
             enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            enderecoLabel.Location = new System.Drawing.Point(6, 110);
+            enderecoLabel.Location = new System.Drawing.Point(6, 113);
             enderecoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             enderecoLabel.Name = "enderecoLabel";
             enderecoLabel.Size = new System.Drawing.Size(82, 20);
@@ -146,7 +146,7 @@
             // 
             cPFLabel.AutoSize = true;
             cPFLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cPFLabel.Location = new System.Drawing.Point(44, 79);
+            cPFLabel.Location = new System.Drawing.Point(44, 82);
             cPFLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(44, 20);
@@ -157,7 +157,7 @@
             // 
             nomeLabel.AutoSize = true;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(33, 48);
+            nomeLabel.Location = new System.Drawing.Point(33, 51);
             nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(55, 20);
@@ -168,7 +168,7 @@
             // 
             idLabel1.AutoSize = true;
             idLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel1.Location = new System.Drawing.Point(42, 18);
+            idLabel1.Location = new System.Drawing.Point(42, 21);
             idLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel1.Name = "idLabel1";
             idLabel1.Size = new System.Drawing.Size(46, 20);
@@ -327,8 +327,8 @@
             // 
             this.cPFDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.cPFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.NullValue = "0";
+            this.cPFDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
             this.cPFDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
@@ -415,6 +415,7 @@
             this.groupBox4.Controls.Add(sexoLabel);
             this.groupBox4.Controls.Add(cPFLabel);
             this.groupBox4.Controls.Add(nomeLabel);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(11, 354);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
@@ -455,7 +456,7 @@
             this.nomeTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
             this.nomeTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox1.Location = new System.Drawing.Point(91, 45);
+            this.nomeTextBox1.Location = new System.Drawing.Point(91, 48);
             this.nomeTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox1.Name = "nomeTextBox1";
             this.nomeTextBox1.ReadOnly = true;
@@ -467,7 +468,7 @@
             this.cPFMaskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cPFMaskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
             this.cPFMaskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cPFMaskedTextBox1.Location = new System.Drawing.Point(91, 76);
+            this.cPFMaskedTextBox1.Location = new System.Drawing.Point(91, 79);
             this.cPFMaskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.cPFMaskedTextBox1.Mask = "000,000,000-00";
             this.cPFMaskedTextBox1.Name = "cPFMaskedTextBox1";
@@ -480,7 +481,7 @@
             this.emailTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Email", true));
             this.emailTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox1.Location = new System.Drawing.Point(91, 138);
+            this.emailTextBox1.Location = new System.Drawing.Point(91, 141);
             this.emailTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.emailTextBox1.Name = "emailTextBox1";
             this.emailTextBox1.ReadOnly = true;
@@ -492,7 +493,7 @@
             this.enderecoTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.enderecoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Endereco", true));
             this.enderecoTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enderecoTextBox1.Location = new System.Drawing.Point(91, 107);
+            this.enderecoTextBox1.Location = new System.Drawing.Point(91, 110);
             this.enderecoTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.enderecoTextBox1.Name = "enderecoTextBox1";
             this.enderecoTextBox1.ReadOnly = true;
@@ -504,7 +505,7 @@
             this.idTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Id", true));
             this.idTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox1.Location = new System.Drawing.Point(91, 15);
+            this.idTextBox1.Location = new System.Drawing.Point(91, 18);
             this.idTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox1.Name = "idTextBox1";
             this.idTextBox1.ReadOnly = true;
@@ -517,7 +518,7 @@
             this.celularMaskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.celularMaskedTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Celular", true));
             this.celularMaskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.celularMaskedTextBox1.Location = new System.Drawing.Point(91, 169);
+            this.celularMaskedTextBox1.Location = new System.Drawing.Point(91, 172);
             this.celularMaskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.celularMaskedTextBox1.Mask = "(99) 00000-0000";
             this.celularMaskedTextBox1.Name = "celularMaskedTextBox1";
