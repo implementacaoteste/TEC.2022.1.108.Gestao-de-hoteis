@@ -296,7 +296,7 @@
             this.MinimizeBox = false;
             this.Name = "FormCadastroQuarto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Quarto";
+            this.Text = "HOTELOGIX - Cadastro de Quarto";
             this.Load += new System.EventHandler(this.FormCadastroQuarto_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroQuarto_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.quartoBindingSource)).EndInit();
