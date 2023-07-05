@@ -126,7 +126,7 @@ namespace WindowsFormsPrincipal1
                 pictureBoxCaixaLogin2.Visible = false;
                 labelNomeFuncionario.Visible = false;
                 pictureBoxUsu2.Visible = false;
-                pictureBoxfundo.Visible = false;
+                //pictureBoxfundo.Visible = false;
                 labelCargoFuncionario.Visible = false;
             }
             else
@@ -136,7 +136,7 @@ namespace WindowsFormsPrincipal1
                 pictureBoxCaixaLogin2.Visible = true;
                 labelNomeFuncionario.Visible = true;
                 pictureBoxUsu2.Visible = true;
-                pictureBoxfundo.Visible = true;
+                //pictureBoxfundo.Visible = true;
                 labelCargoFuncionario.Visible = true;
             }
 
@@ -173,20 +173,20 @@ namespace WindowsFormsPrincipal1
             {
                 pictureBoxSair.Visible = false;
                 pictureBoxCaixaLogin.Visible = false;
-                pictureBoxCaixaLogin2.Visible = false;
+                //pictureBoxCaixaLogin2.Visible = false;
                 labelNomeFuncionario.Visible = false;
                 pictureBoxUsu2.Visible = false;
-                pictureBoxfundo.Visible = false;
+                //pictureBoxfundo.Visible = false;
                 labelCargoFuncionario.Visible = false;
             }
             else
             {
                 pictureBoxSair.Visible = true;
                 pictureBoxCaixaLogin.Visible = true;
-                pictureBoxCaixaLogin2.Visible = true;
+                //pictureBoxCaixaLogin2.Visible = true;
                 labelNomeFuncionario.Visible = true;
                 pictureBoxUsu2.Visible = true;
-                pictureBoxfundo.Visible = true;
+                //pictureBoxfundo.Visible = true;
                 labelCargoFuncionario.Visible = true;
             }
         }
@@ -284,9 +284,9 @@ namespace WindowsFormsPrincipal1
             pictureBoxUsu1.Location = new Point((this.ClientSize.Width - pictureBoxUsu1.Width) - 46, 38);
             pictureBoxUsu2.Location = new Point((this.ClientSize.Width - pictureBoxUsu2.Width) - 46,38);
             pictureBoxSair.Location = new Point((this.ClientSize.Width - pictureBoxSair.Width)-55, 182);
-            pictureBoxfundo.Location = new Point((this.ClientSize.Width - pictureBoxSair.Width) - 57, 180);
+            //pictureBoxfundo.Location = new Point((this.ClientSize.Width - pictureBoxSair.Width) - 57, 180);
             pictureBoxCaixaLogin.Location = new Point((this.ClientSize.Width - pictureBoxCaixaLogin.Width) - 5, 35);
-            pictureBoxCaixaLogin2.Location = new Point((this.ClientSize.Width - pictureBoxCaixaLogin.Width) - 7, 33);
+            //pictureBoxCaixaLogin2.Location = new Point((this.ClientSize.Width - pictureBoxCaixaLogin.Width) - 7, 33);
             labelNomeFuncionario.Location = new Point((this.ClientSize.Width - labelNomeFuncionario.Width) - 7,95);
             labelCargoFuncionario.Location = new Point((this.ClientSize.Width - labelNomeFuncionario.Width) - 7, 150);
         }
