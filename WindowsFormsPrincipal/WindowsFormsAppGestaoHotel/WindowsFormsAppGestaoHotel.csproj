@@ -274,6 +274,18 @@
     <Compile Include="QuartosDisponiveis.Designer.cs">
       <DependentUpon>QuartosDisponiveis.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReservasHoje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReservasHoje.Designer.cs">
+      <DependentUpon>ReservasHoje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalHospedes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TotalHospedes.Designer.cs">
+      <DependentUpon>TotalHospedes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CheckInHoje.resx">
       <DependentUpon>CheckInHoje.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +409,12 @@
     </Compile>
     <EmbeddedResource Include="QuartosDisponiveis.resx">
       <DependentUpon>QuartosDisponiveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservasHoje.resx">
+      <DependentUpon>ReservasHoje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalHospedes.resx">
+      <DependentUpon>TotalHospedes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\BLL.ClasseBLL.datasource" />
     <None Include="Properties\DataSources\BLL.ClienteBLL.datasource" />
