@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +57,10 @@
             this.pictureBoxUsu1 = new System.Windows.Forms.PictureBox();
             this.checkOutHoje1 = new WindowsFormsAppGestaoHotel.CheckOutHoje();
             this.checkInHoje1 = new WindowsFormsAppGestaoHotel.CheckInHoje();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reservasHoje1 = new WindowsFormsAppGestaoHotel.ReservasHoje();
+            this.totalHospedes1 = new WindowsFormsAppGestaoHotel.TotalHospedes();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSair)).BeginInit();
@@ -63,6 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -236,7 +243,7 @@
             this.labelCargoFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(130)))), ((int)(((byte)(225)))));
             this.labelCargoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCargoFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCargoFuncionario.Location = new System.Drawing.Point(929, 151);
+            this.labelCargoFuncionario.Location = new System.Drawing.Point(924, 154);
             this.labelCargoFuncionario.Name = "labelCargoFuncionario";
             this.labelCargoFuncionario.Size = new System.Drawing.Size(128, 25);
             this.labelCargoFuncionario.TabIndex = 17;
@@ -248,7 +255,7 @@
             this.labelNomeFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(130)))), ((int)(((byte)(225)))));
             this.labelNomeFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNomeFuncionario.Location = new System.Drawing.Point(929, 96);
+            this.labelNomeFuncionario.Location = new System.Drawing.Point(924, 99);
             this.labelNomeFuncionario.Name = "labelNomeFuncionario";
             this.labelNomeFuncionario.Size = new System.Drawing.Size(128, 48);
             this.labelNomeFuncionario.TabIndex = 18;
@@ -261,7 +268,7 @@
             this.pictureBoxUsu2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxUsu2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxUsu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu2.Image")));
-            this.pictureBoxUsu2.Location = new System.Drawing.Point(968, 39);
+            this.pictureBoxUsu2.Location = new System.Drawing.Point(963, 42);
             this.pictureBoxUsu2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu2.Name = "pictureBoxUsu2";
             this.pictureBoxUsu2.Size = new System.Drawing.Size(50, 50);
@@ -277,7 +284,7 @@
             this.pictureBoxSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxSair.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSair.Image")));
-            this.pictureBoxSair.Location = new System.Drawing.Point(978, 185);
+            this.pictureBoxSair.Location = new System.Drawing.Point(973, 188);
             this.pictureBoxSair.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSair.Name = "pictureBoxSair";
             this.pictureBoxSair.Size = new System.Drawing.Size(30, 30);
@@ -291,7 +298,7 @@
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(385, 185);
+            this.pictureBox1.Location = new System.Drawing.Point(396, 185);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(352, 366);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(352, 366);
@@ -302,7 +309,7 @@
             // pictureBoxCaixaLogin
             // 
             this.pictureBoxCaixaLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(927, 38);
+            this.pictureBoxCaixaLogin.Location = new System.Drawing.Point(922, 41);
             this.pictureBoxCaixaLogin.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxCaixaLogin.Name = "pictureBoxCaixaLogin";
             this.pictureBoxCaixaLogin.Size = new System.Drawing.Size(132, 183);
@@ -313,7 +320,7 @@
             // pictureBoxCaixaLogin2
             // 
             this.pictureBoxCaixaLogin2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(925, 36);
+            this.pictureBoxCaixaLogin2.Location = new System.Drawing.Point(920, 39);
             this.pictureBoxCaixaLogin2.Name = "pictureBoxCaixaLogin2";
             this.pictureBoxCaixaLogin2.Size = new System.Drawing.Size(136, 187);
             this.pictureBoxCaixaLogin2.TabIndex = 7;
@@ -325,7 +332,7 @@
             this.pictureBoxUsu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.pictureBoxUsu1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxUsu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsu1.Image")));
-            this.pictureBoxUsu1.Location = new System.Drawing.Point(968, 41);
+            this.pictureBoxUsu1.Location = new System.Drawing.Point(963, 44);
             this.pictureBoxUsu1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsu1.Name = "pictureBoxUsu1";
             this.pictureBoxUsu1.Size = new System.Drawing.Size(50, 50);
@@ -337,8 +344,9 @@
             // checkOutHoje1
             // 
             this.checkOutHoje1.BackColor = System.Drawing.Color.White;
-            this.checkOutHoje1.Location = new System.Drawing.Point(227, 41);
+            this.checkOutHoje1.Location = new System.Drawing.Point(233, 41);
             this.checkOutHoje1.Name = "checkOutHoje1";
+            this.checkOutHoje1.qtdCheckOut = null;
             this.checkOutHoje1.Size = new System.Drawing.Size(200, 60);
             this.checkOutHoje1.TabIndex = 21;
             // 
@@ -347,8 +355,33 @@
             this.checkInHoje1.BackColor = System.Drawing.Color.White;
             this.checkInHoje1.Location = new System.Drawing.Point(12, 41);
             this.checkInHoje1.Name = "checkInHoje1";
+            this.checkInHoje1.qtdCheckIn = "0";
             this.checkInHoje1.Size = new System.Drawing.Size(200, 60);
             this.checkInHoje1.TabIndex = 20;
+            // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            // 
+            // reservasHoje1
+            // 
+            this.reservasHoje1.BackColor = System.Drawing.Color.White;
+            this.reservasHoje1.Location = new System.Drawing.Point(454, 41);
+            this.reservasHoje1.Name = "reservasHoje1";
+            this.reservasHoje1.Size = new System.Drawing.Size(200, 60);
+            this.reservasHoje1.TabIndex = 22;
+            // 
+            // totalHospedes1
+            // 
+            this.totalHospedes1.BackColor = System.Drawing.Color.White;
+            this.totalHospedes1.Location = new System.Drawing.Point(675, 41);
+            this.totalHospedes1.Name = "totalHospedes1";
+            this.totalHospedes1.Size = new System.Drawing.Size(200, 60);
+            this.totalHospedes1.TabIndex = 23;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(Models.Hospede);
             // 
             // FormPrincipal
             // 
@@ -357,6 +390,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1068, 700);
+            this.Controls.Add(this.totalHospedes1);
+            this.Controls.Add(this.reservasHoje1);
             this.Controls.Add(this.checkOutHoje1);
             this.Controls.Add(this.checkInHoje1);
             this.Controls.Add(this.pictureBoxUsu2);
@@ -386,6 +421,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCaixaLogin2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,5 +462,9 @@
         private System.Windows.Forms.PictureBox pictureBoxUsu2;
         private WindowsFormsAppGestaoHotel.CheckInHoje checkInHoje1;
         private WindowsFormsAppGestaoHotel.CheckOutHoje checkOutHoje1;
+        private System.Windows.Forms.BindingSource reservaBindingSource;
+        private WindowsFormsAppGestaoHotel.ReservasHoje reservasHoje1;
+        private WindowsFormsAppGestaoHotel.TotalHospedes totalHospedes1;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
     }
 }

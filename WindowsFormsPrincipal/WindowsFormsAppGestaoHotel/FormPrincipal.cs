@@ -1,4 +1,5 @@
-﻿using Infra;
+﻿using BLL;
+using Infra;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,10 @@ namespace WindowsFormsPrincipal1
                         Application.Exit();
                     }
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
                 labelNomeFuncionario.Text = Constante.NomeUsuario;
                 labelCargoFuncionario.Text = Constante.Cargo;
                 this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -49,6 +54,50 @@ namespace WindowsFormsPrincipal1
 
         }
 
+        void CheckInHoje()
+        {
+            CheckInHoje _checkinHoje;
+
+            reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataEntCheckin(DateTime.Now.Date, DateTime.Now.Date);
+
+            _checkinHoje = new CheckInHoje();
+            _checkinHoje.qtdCheckIn = reservaBindingSource.Count.ToString();
+            checkInHoje1.qtdCheckIn = reservaBindingSource.Count.ToString();
+        }
+
+        void CheckOutHoje()
+        {
+            CheckOutHoje _checkoutHoje;
+
+            reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataSaiCheckout(DateTime.Now.Date, DateTime.Now.Date);
+
+            _checkoutHoje = new CheckOutHoje();
+            _checkoutHoje.qtdCheckOut = reservaBindingSource.Count.ToString();
+            checkOutHoje1.qtdCheckOut = reservaBindingSource.Count.ToString();
+        }
+
+        void ReservasHoje()
+        {
+            ReservasHoje _reservasHoje;
+
+            reservaBindingSource.DataSource = new ReservaBLL().BuscarPorDataLancamento(DateTime.Now.Date, DateTime.Now.Date);
+
+            _reservasHoje = new ReservasHoje();
+            _reservasHoje.qtdReservas = reservaBindingSource.Count.ToString();
+            reservasHoje1.qtdReservas = reservaBindingSource.Count.ToString();
+        }
+
+        void TotalHospedes()
+        {
+            TotalHospedes _totalHospedes;
+
+            clienteBindingSource.DataSource = new HospedeBLL().BuscaPorTodos();
+
+            _totalHospedes = new TotalHospedes();
+            _totalHospedes.qtdHospedes = clienteBindingSource.Count.ToString();
+            totalHospedes1.qtdHospedes = clienteBindingSource.Count.ToString();
+        }
+
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -57,6 +106,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
@@ -72,6 +125,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
@@ -85,6 +142,10 @@ namespace WindowsFormsPrincipal1
             {
                 frm.ShowDialog();
             }
+            CheckInHoje();
+            CheckOutHoje();
+            ReservasHoje();
+            TotalHospedes();
         }
 
         private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,6 +156,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
@@ -104,17 +169,21 @@ namespace WindowsFormsPrincipal1
 
         private void grupoFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          //  try
-          //  {
+            try
+            {
                 using (FormBuscarGrupoFuncionario frm = new FormBuscarGrupoFuncionario())
                 {
                     frm.ShowDialog();
                 }
-          //  }
-          //  catch (Exception ex)
-          //  {
-          //      MessageBox.Show(ex.Message);
-         //   }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void pictureBoxUsu1_Click(object sender, EventArgs e)
@@ -211,6 +280,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
@@ -226,6 +299,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
@@ -241,6 +318,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
@@ -256,6 +337,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch(Exception ex)
             {
@@ -271,6 +356,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
@@ -280,7 +369,7 @@ namespace WindowsFormsPrincipal1
 
         private void FormPrincipal_Resize(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(((this.ClientSize.Width - pictureBox1.Width) / 2),(40));
+            pictureBox1.Location = new Point(((this.ClientSize.Width - pictureBox1.Width) / 2),(200));
             pictureBoxUsu1.Location = new Point((this.ClientSize.Width - pictureBoxUsu1.Width) - 46, 38);
             pictureBoxUsu2.Location = new Point((this.ClientSize.Width - pictureBoxUsu2.Width) - 46,38);
             pictureBoxSair.Location = new Point((this.ClientSize.Width - pictureBoxSair.Width)-55, 182);
@@ -299,6 +388,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
@@ -314,6 +407,10 @@ namespace WindowsFormsPrincipal1
                 {
                     frm.ShowDialog();
                 }
+                CheckInHoje();
+                CheckOutHoje();
+                ReservasHoje();
+                TotalHospedes();
             }
             catch (Exception ex)
             {
