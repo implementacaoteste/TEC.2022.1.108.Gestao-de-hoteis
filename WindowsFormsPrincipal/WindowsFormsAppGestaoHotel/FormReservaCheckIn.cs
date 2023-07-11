@@ -33,6 +33,8 @@ namespace WindowsFormsAppGestaoHotel
             try
             {
                 reservaBindingSource.DataSource = new ReservaBLL().BuscarPorId(Id);
+                pagamentoBindingSource.DataSource = new PagamentoBLL().BuscaPorTodos();
+                pagamentoComboBox.Text = ((Reserva)reservaBindingSource.Current).Pagamento;
                 hospede = ((Reserva)reservaBindingSource.Current).Nome_Hospede;
                 this.Text = "Check In: " + hospede;
                 mascaraMoeda();
@@ -124,6 +126,7 @@ namespace WindowsFormsAppGestaoHotel
             nome_HospedeTextBox.Clear();
             cPF_HopesdeMaskedTextBox.Clear();
             celular_HospedeMaskedTextBox.Clear();
+            pagamentoComboBox.Text = ((Reserva)reservaBindingSource.Current).Pagamento;
         }
 
         private void valor_TotalTextBox_TextChanged(object sender, EventArgs e)

@@ -49,6 +49,7 @@
             this.buttonCheckin = new System.Windows.Forms.Button();
             this.obs_CheckinTextBox = new System.Windows.Forms.TextBox();
             this.pagamentoComboBox = new System.Windows.Forms.ComboBox();
+            this.pagamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cPF_HopesdeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.celular_HospedeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -67,6 +68,7 @@
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pagamentoBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -293,12 +295,20 @@
             // pagamentoComboBox
             // 
             this.pagamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservaBindingSource, "Pagamento", true));
+            this.pagamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.reservaBindingSource, "Pagamento", true));
+            this.pagamentoComboBox.DataSource = this.pagamentoBindingSource;
+            this.pagamentoComboBox.DisplayMember = "Forma_pagamento";
             this.pagamentoComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.pagamentoComboBox.FormattingEnabled = true;
             this.pagamentoComboBox.Location = new System.Drawing.Point(10, 112);
             this.pagamentoComboBox.Name = "pagamentoComboBox";
             this.pagamentoComboBox.Size = new System.Drawing.Size(121, 26);
             this.pagamentoComboBox.TabIndex = 11;
+            this.pagamentoComboBox.ValueMember = "Id";
+            // 
+            // pagamentoBindingSource
+            // 
+            this.pagamentoBindingSource.DataSource = typeof(Models.Pagamento);
             // 
             // groupBox2
             // 
@@ -392,6 +402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pagamentoBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -416,5 +427,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHospedes;
         private System.Windows.Forms.MaskedTextBox cPF_HopesdeMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox celular_HospedeMaskedTextBox;
+        private System.Windows.Forms.BindingSource pagamentoBindingSource;
     }
 }
