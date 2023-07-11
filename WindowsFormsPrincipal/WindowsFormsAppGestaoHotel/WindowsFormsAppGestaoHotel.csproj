@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F553A28C-B657-4ADB-9BB1-DCDF67E1C9F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsAppGestaoHotel</RootNamespace>
+    <AssemblyName>WindowsFormsAppGestaoHotel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Hotelogix.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckInHoje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CheckInHoje.Designer.cs">
+      <DependentUpon>CheckInHoje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutHoje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CheckOutHoje.Designer.cs">
+      <DependentUpon>CheckOutHoje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaContaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaContaReceber.Designer.cs">
+      <DependentUpon>ConsultaContaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaContasPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaContasPagar.Designer.cs">
+      <DependentUpon>ConsultaContasPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarCliente.Designer.cs">
+      <DependentUpon>FormBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarPermissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarPermissao.Designer.cs">
+      <DependentUpon>FormBuscarPermissao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarReserva.Designer.cs">
+      <DependentUpon>FormBuscarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarFuncionario.Designer.cs">
+      <DependentUpon>FormBuscarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarGrupoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarGrupoFuncionario.Designer.cs">
+      <DependentUpon>FormBuscarGrupoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarQuarto.Designer.cs">
+      <DependentUpon>FormBuscarQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroClasse.Designer.cs">
+      <DependentUpon>FormCadastroClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroCliente.Designer.cs">
+      <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroDeFuncionario.Designer.cs">
+      <DependentUpon>FormCadastroDeFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroReserva.Designer.cs">
+      <DependentUpon>FormCadastroReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroGrupoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroGrupoFuncionario.Designer.cs">
+      <DependentUpon>FormCadastroGrupoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroPermissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroPermissao.Designer.cs">
+      <DependentUpon>FormCadastroPermissao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroQuarto.Designer.cs">
+      <DependentUpon>FormCadastroQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConexao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConexao.Designer.cs">
+      <DependentUpon>FormConexao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaClasse.Designer.cs">
+      <DependentUpon>FormConsultaClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaCliente.Designer.cs">
+      <DependentUpon>FormConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaFuncionario.Designer.cs">
+      <DependentUpon>FormConsultaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaGrupoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaGrupoFuncionario.Designer.cs">
+      <DependentUpon>FormConsultaGrupoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaPermissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaPermissao.Designer.cs">
+      <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaQuarto.Designer.cs">
+      <DependentUpon>FormConsultaQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultaQuartoDisponivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaQuartoDisponivel.Designer.cs">
+      <DependentUpon>FormConsultaQuartoDisponivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultarPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarPagamento.Designer.cs">
+      <DependentUpon>FormConsultarPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormContaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContaPagar.Designer.cs">
+      <DependentUpon>FormContaPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormContasReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContasReceber.Designer.cs">
+      <DependentUpon>FormContasReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelatorio.Designer.cs">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReserva.Designer.cs">
+      <DependentUpon>FormReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReservaCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReservaCheckIn.Designer.cs">
+      <DependentUpon>FormReservaCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReservaCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReservaCheckOut.Designer.cs">
+      <DependentUpon>FormReservaCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSobre.Designer.cs">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListReserva.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListReserva.Designer.cs">
+      <DependentUpon>ListReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuartosDisponiveis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuartosDisponiveis.Designer.cs">
+      <DependentUpon>QuartosDisponiveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReservasHoje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReservasHoje.Designer.cs">
+      <DependentUpon>ReservasHoje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalHospedes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TotalHospedes.Designer.cs">
+      <DependentUpon>TotalHospedes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CheckInHoje.resx">
+      <DependentUpon>CheckInHoje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOutHoje.resx">
+      <DependentUpon>CheckOutHoje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaContaReceber.resx">
+      <DependentUpon>ConsultaContaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaContasPagar.resx">
+      <DependentUpon>ConsultaContasPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarCliente.resx">
+      <DependentUpon>FormBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarPermissao.resx">
+      <DependentUpon>FormBuscarPermissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarReserva.resx">
+      <DependentUpon>FormBuscarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarFuncionario.resx">
+      <DependentUpon>FormBuscarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarGrupoFuncionario.resx">
+      <DependentUpon>FormBuscarGrupoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarQuarto.resx">
+      <DependentUpon>FormBuscarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroClasse.resx">
+      <DependentUpon>FormCadastroClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroCliente.resx">
+      <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroDeFuncionario.resx">
+      <DependentUpon>FormCadastroDeFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroReserva.resx">
+      <DependentUpon>FormCadastroReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroGrupoFuncionario.resx">
+      <DependentUpon>FormCadastroGrupoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroPermissao.resx">
+      <DependentUpon>FormCadastroPermissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroQuarto.resx">
+      <DependentUpon>FormCadastroQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConexao.resx">
+      <DependentUpon>FormConexao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaClasse.resx">
+      <DependentUpon>FormConsultaClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaCliente.resx">
+      <DependentUpon>FormConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaFuncionario.resx">
+      <DependentUpon>FormConsultaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaGrupoFuncionario.resx">
+      <DependentUpon>FormConsultaGrupoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaPermissao.resx">
+      <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaQuarto.resx">
+      <DependentUpon>FormConsultaQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaQuartoDisponivel.resx">
+      <DependentUpon>FormConsultaQuartoDisponivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarPagamento.resx">
+      <DependentUpon>FormConsultarPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormContaPagar.resx">
+      <DependentUpon>FormContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormContasReceber.resx">
+      <DependentUpon>FormContasReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.pt-BR.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRelatorio.resx">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReserva.resx">
+      <DependentUpon>FormReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReservaCheckIn.resx">
+      <DependentUpon>FormReservaCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReservaCheckOut.resx">
+      <DependentUpon>FormReservaCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSobre.resx">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListReserva.resx">
+      <DependentUpon>ListReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuartosDisponiveis.resx">
+      <DependentUpon>QuartosDisponiveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservasHoje.resx">
+      <DependentUpon>ReservasHoje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalHospedes.resx">
+      <DependentUpon>TotalHospedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\BLL.ClasseBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.ClienteBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.DiariaBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.FuncionarioBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.GrupoFuncionarioBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.PagamentoBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.PermissaoBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.QuartoBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.SexoBLL.datasource" />
+    <None Include="Properties\DataSources\BLL.StatusBLL.datasource" />
+    <None Include="Properties\DataSources\Models.Classe.datasource" />
+    <None Include="Properties\DataSources\Models.Cliente.datasource" />
+    <None Include="Properties\DataSources\Models.Constante.datasource" />
+    <None Include="Properties\DataSources\Models.ContasPagar.datasource" />
+    <None Include="Properties\DataSources\Models.ContasReceber.datasource" />
+    <None Include="Properties\DataSources\Models.Diaria.datasource" />
+    <None Include="Properties\DataSources\Models.Funcionario.datasource" />
+    <None Include="Properties\DataSources\Models.GrupoFuncionario.datasource" />
+    <None Include="Properties\DataSources\Models.Hospede.datasource" />
+    <None Include="Properties\DataSources\Models.Pagamento.datasource" />
+    <None Include="Properties\DataSources\Models.Permissao.datasource" />
+    <None Include="Properties\DataSources\Models.Quarto.datasource" />
+    <None Include="Properties\DataSources\Models.Relatorio.datasource" />
+    <None Include="Properties\DataSources\Models.Reserva.datasource" />
+    <None Include="Properties\DataSources\Models.Sexo.datasource" />
+    <None Include="Properties\DataSources\Models.Statuses.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hotelogix.ico" />
+    <None Include="Resources\search_wh.png" />
+    <None Include="Resources\check_bk1.png" />
+    <None Include="Resources\close_bk1.png" />
+    <None Include="Resources\close_bk.png" />
+    <None Include="Resources\save_bk.png" />
+    <None Include="Resources\add_bk1.png" />
+    <None Include="Resources\check_bk.png" />
+    <None Include="Resources\search_bk1.png" />
+    <None Include="Resources\search_bk.png" />
+    <None Include="Resources\delete_bk.png" />
+    <None Include="Resources\add_bk.png" />
+    <None Include="Resources\check1.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\select1.png" />
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\close1.png" />
+    <None Include="Resources\select.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\Form_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{61de0591-d0ba-4ba3-a567-e6db3fcf5981}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComponentesDesktop\ComponentesDesktop.csproj">
+      <Project>{48F2398A-FCEF-4A60-AA8F-4EE3C3310D9F}</Project>
+      <Name>ComponentesDesktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infra\Infra.csproj">
+      <Project>{21d3a15d-fcd0-4586-a1f8-f8a2f25a07e0}</Project>
+      <Name>Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{794f5b7f-8322-4a16-9ef2-e359a1c722ba}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
