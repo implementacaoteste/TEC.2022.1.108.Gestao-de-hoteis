@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADcAAAA3CAYAAACo29JGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAABEVJREFUaEPtWj1vE0EQ9U/IT8hPSYmCY7kg9pUOtChQEUFDkEJFJKjSpHAooEmB
+        DwAACw8BkvkDpQAABEVJREFUaEPtWj1vE0EQ9U/IT8hPSYmCY7kg9pUOtChQEUFDkEJFJKjSpHAooEmB
         KaBCIl2iUBy2iUCRgq1ERPkAQoQBgYKOees9e70e363Pd747iSc9RbrZ252Xmd3Z3XMmbNjZK1PVy8Wb
         tZliuZot2PS3QXQYNmrZ4utatvAM7fGe7CJZgGPkbJl4pjgfhHi/HLtQeyo/QZG5Kx3iHB2JVYqsPT1b
         ksONDzQw0i4SUTrHJtK+ZE2KecI4ETWFSBpfuhIuxhmtwSyc2bT4SJfCQT0n5hYzWDzEXJeujQbqDKsg
@@ -142,4 +142,7 @@
         6E92nSwIoZRGxArmyaB7Ufn8LcSgffiCMpl/9VVIePKbkpAAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="reservaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,24 @@ namespace WindowsFormsAppGestaoHotel
 {
     public partial class CheckOutHoje : UserControl
     {
+        int qtd_Checkout;
+
         public CheckOutHoje()
         {
             InitializeComponent();
         }
+
+        #region Getter & Setter For Labels
+
+        private string _qtdCheckOut;
+
+        [Category("Custom Props")]
+        public string qtdCheckOut
+        {
+            get { return _qtdCheckOut; }
+            set { _qtdCheckOut = value; qtd_CheckoutLabel.Text = value; }
+        }
+
+        #endregion
     }
 }

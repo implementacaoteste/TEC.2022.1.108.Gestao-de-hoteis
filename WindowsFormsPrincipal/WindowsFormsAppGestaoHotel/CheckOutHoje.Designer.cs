@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckOutHoje));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.qtd_CheckoutLabel = new System.Windows.Forms.Label();
             this.labelCheckOut = new System.Windows.Forms.Label();
+            this.reservaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -45,15 +48,15 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // qtd_CheckoutLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "0";
+            this.qtd_CheckoutLabel.AutoSize = true;
+            this.qtd_CheckoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qtd_CheckoutLabel.Location = new System.Drawing.Point(117, 7);
+            this.qtd_CheckoutLabel.Name = "qtd_CheckoutLabel";
+            this.qtd_CheckoutLabel.Size = new System.Drawing.Size(20, 24);
+            this.qtd_CheckoutLabel.TabIndex = 3;
+            this.qtd_CheckoutLabel.Text = "0";
             // 
             // labelCheckOut
             // 
@@ -65,17 +68,22 @@
             this.labelCheckOut.TabIndex = 4;
             this.labelCheckOut.Text = "Check Out Hoje";
             // 
+            // reservaBindingSource
+            // 
+            this.reservaBindingSource.DataSource = typeof(Models.Reserva);
+            // 
             // CheckOutHoje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.qtd_CheckoutLabel);
             this.Controls.Add(this.labelCheckOut);
             this.Name = "CheckOutHoje";
             this.Size = new System.Drawing.Size(200, 60);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,7 +92,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label qtd_CheckoutLabel;
         private System.Windows.Forms.Label labelCheckOut;
+        private System.Windows.Forms.BindingSource reservaBindingSource;
     }
 }

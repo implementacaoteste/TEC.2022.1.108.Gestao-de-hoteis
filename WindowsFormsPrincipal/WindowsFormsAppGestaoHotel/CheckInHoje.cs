@@ -16,5 +16,19 @@ namespace WindowsFormsAppGestaoHotel
         {
             InitializeComponent();
         }
+
+        #region Getter & Setter For Labels
+
+        private string _qtdCheckIn;
+
+        [Category("Custom Props")]
+        public string qtdCheckIn
+        {
+            get { return _qtdCheckIn; }
+            set { _qtdCheckIn = value; qtdCheckInLabel.Text = value; }
+        }
+
+        #endregion
+
     }
 }
