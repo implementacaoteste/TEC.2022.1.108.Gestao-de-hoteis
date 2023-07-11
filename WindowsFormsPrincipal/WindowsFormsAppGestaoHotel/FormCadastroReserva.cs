@@ -89,11 +89,16 @@ namespace WindowsFormsAppGestaoHotel
                 ReservaBLL reservaBLL = new ReservaBLL();
                 reservaBindingSource.EndEdit();
                 if (Id == 0)
+                {
                     reservaBLL.Inserir((Reserva)reservaBindingSource.Current);
+                    MessageBox.Show("Reserva cadastrada com sucesso!");
+                }
                 else
+                {
                     reservaBLL.Alterar((Reserva)reservaBindingSource.Current);
+                    MessageBox.Show("Reserva alterada com sucesso!");
+                }
 
-                MessageBox.Show("Reserva cadastrada com sucesso!");
                 Close();
             }
             catch (Exception ex)
